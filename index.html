@@ -697,6 +697,79 @@
             margin-top: 10px;
         }
 
+        /* === YOUTUBE SECTION === */
+        .yt-subsection-title {
+            color: #e2b714;
+            font-size: 1.2em;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(226, 183, 20, 0.2);
+        }
+        .yt-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .yt-card {
+            background: linear-gradient(135deg, #16213e, #1a1a3e);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(226, 183, 20, 0.1);
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: block;
+        }
+        .yt-card:hover {
+            transform: translateY(-5px);
+            border-color: #e2b714;
+            box-shadow: 0 10px 30px rgba(226, 183, 20, 0.15);
+        }
+        .yt-thumb {
+            background: linear-gradient(135deg, #0a0a1a, #16213e);
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .yt-play {
+            width: 50px;
+            height: 50px;
+            background: rgba(226, 183, 20, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            color: #0a0a1a;
+            transition: transform 0.3s;
+        }
+        .yt-card:hover .yt-play {
+            transform: scale(1.15);
+        }
+        .yt-info {
+            padding: 15px 18px;
+        }
+        .yt-info h4 {
+            color: #fff;
+            font-size: 1.05em;
+            margin-bottom: 6px;
+        }
+        .yt-info p {
+            color: #999;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+        .yt-badge {
+            display: inline-block;
+            background: rgba(226, 183, 20, 0.15);
+            color: #e2b714;
+            font-size: 0.7em;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+        }
+
         /* === COUNTER ANIMATION === */
         .stat-number {
             font-size: 2.5em;
@@ -721,6 +794,7 @@
             <li><a href="#timeline">ציר זמן</a></li>
             <li><a href="#psychology">הפסיכולוגיה</a></li>
             <li><a href="#regions">שנאה לפי עמים</a></li>
+            <li><a href="#youtube">צפה והתעדכן</a></li>
         </ul>
     </div>
 </nav>
@@ -1948,6 +2022,157 @@ function goOriginal() {
         <p><strong style="color:#e2b714;">הגרסה האסייתית:</strong> בניגוד לאנטישמיות האירופית (שנאה), הגרסה האסייתית לפעמים "חיובית" בצורה מעוותת: "יהודים חכמים, שולטים בכסף, אפשר ללמוד מהם". זה עדיין אנטישמיות &mdash; כי זה מבוסס על סטריאוטיפים, לא על מפגש עם יהודים אמיתיים. הוא הופך יהודים מבני אדם לדמויות מיתיות.</p>
 
         <div class="source-ref">מקורות: ADL Global 100 Survey; David Goodman &amp; Masanori Miyazawa, 'Jews in the Japanese Mind' (1995)</div>
+    </div>
+</section>
+
+<!-- YOUTUBE SECTION -->
+<section id="youtube">
+    <div class="section-header">
+        <h2>צפה והתעדכן</h2>
+        <div class="section-divider"></div>
+        <p>ערוצי יוטיוב מומלצים שנלחמים באנטישמיות ומפיצים את האמת &mdash; בעברית ובאנגלית</p>
+    </div>
+
+    <h3 class="yt-subsection-title">&#127470;&#127473; ערוצים בעברית</h3>
+    <div class="yt-grid">
+
+        <a class="yt-card" href="https://www.youtube.com/@EliahuYosian" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">עברית</div>
+                <h4>אליהו יוסיאן</h4>
+                <p>מומחה לאיראן ולמזרח התיכון, יוצא יחידה 8200, מרצה ופרשן ביטחוני בתקשורת הישראלית</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/channel/UC6TGQnuJRLA9frZlpKwx3JQ" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">עברית</div>
+                <h4>צבי יחזקאלי</h4>
+                <p>עיתונאי ופרשן ענייני ערבים, יוצר סדרות דוקומנטריות על האסלאם והמזרח התיכון, רשת 13</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/c/IsraelDefenseForces" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">עברית / English</div>
+                <h4>צה"ל &mdash; כוחות ההגנה לישראל</h4>
+                <p>הערוץ הרשמי של צה"ל &mdash; עדכונים צבאיים, תדרוכים של דובר צה"ל, הסברה ותיעוד פעילות</p>
+            </div>
+        </a>
+
+    </div>
+
+    <h3 class="yt-subsection-title">&#127468;&#127463; ערוצים באנגלית</h3>
+    <div class="yt-grid">
+
+        <a class="yt-card" href="https://www.youtube.com/@IsraelAdvocacyMovement" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>Israel Advocacy Movement</h4>
+                <p>ארגון בריטי שמייצר סרטוני הסברה פרו-ישראליים, ויכוחים ברחוב ותוכן חינוכי נגד שקרים על ישראל</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@benshapiro" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>Ben Shapiro</h4>
+                <p>פרשן שמרני אמריקאי, מנהל The Daily Wire, מגן על ישראל ונגד אנטישמיות מנקודת מבט ימנית</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@realcharliekirk" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>Charlie Kirk / Turning Point USA</h4>
+                <p>פעיל שמרני אמריקאי, מייסד Turning Point USA, מדבר בעד ישראל ונגד שמאל קיצוני בקמפוסים</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@PragerU" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>PragerU / Dennis Prager</h4>
+                <p>ארגון חינוכי שמרני שמפיק סרטונים של 5 דקות על ערכים מערביים, ישראל, ציונות ויהדות</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/standwithus" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>StandWithUs</h4>
+                <p>ארגון חינוכי פרו-ישראלי בינלאומי שנלחם באנטישמיות ומפיק תוכן הסברתי על ישראל</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@CAMERAorg" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>CAMERA</h4>
+                <p>ארגון ניטור תקשורת שבודק דיוק והוגנות בסיקור ישראל והמזרח התיכון בתקשורת המערבית</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/user/HonestReportingVideo" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>HonestReporting</h4>
+                <p>ארגון ישראלי שחושף הטיות אנטי-ישראליות בתקשורת הבינלאומית ומנתח סיקור של הסכסוך</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@Pulseofisrael" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>Pulse of Israel (Israel Video Network)</h4>
+                <p>ערוץ של אבי אבלוב שמפיץ סרטונים מעוררי השראה על ישראל, העם היהודי ומציאות המזרח התיכון</p>
+            </div>
+        </a>
+
+        <a class="yt-card" href="https://www.youtube.com/@ToviaSinger1" target="_blank" rel="noopener">
+            <div class="yt-thumb">
+                <div class="yt-play">&#9654;</div>
+            </div>
+            <div class="yt-info">
+                <div class="yt-badge">English</div>
+                <h4>Rabbi Tovia Singer</h4>
+                <p>רב ומרצה שמחזק זהות יהודית, מתמודד עם מיסיון נוצרי ומסביר תנ"ך מנקודת מבט יהודית</p>
+            </div>
+        </a>
+
     </div>
 </section>
 
