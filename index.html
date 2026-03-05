@@ -484,7 +484,7 @@
             border-radius: 15px;
             padding: 20px 30px;
             margin: 20px auto;
-            max-width: 500px;
+            max-width: 700px;
             text-align: center;
         }
         .language-bar h3 {
@@ -499,6 +499,28 @@
         }
         #google_translate_element {
             display: inline-block;
+        }
+        .lang-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin: 12px 0;
+        }
+        .lang-btn {
+            background: rgba(226, 183, 20, 0.15);
+            color: #e2b714;
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+        .lang-btn:hover {
+            background: #e2b714;
+            color: #0a0a1a;
         }
         /* Style Google Translate dropdown */
         .goog-te-gadget {
@@ -594,13 +616,41 @@
 
         <div class="language-bar">
             <h3>&#127760; קראו ב-120+ שפות / Read in 120+ Languages</h3>
-            <p>&#1576;&#1582;&#1608;&#1575;&#1606;&#1740;&#1583; | Lisez | Lesen | &#35501;&#12416; | &#1063;&#1080;&#1090;&#1072;&#1081;&#1090;&#1077; | Lea</p>
-            <div id="google_translate_element"></div>
+            <p>Select your language:</p>
+            <div class="lang-buttons">
+                <a class="lang-btn" onclick="translatePage('en')">English</a>
+                <a class="lang-btn" onclick="translatePage('ar')">العربية</a>
+                <a class="lang-btn" onclick="translatePage('fr')">Fran&ccedil;ais</a>
+                <a class="lang-btn" onclick="translatePage('de')">Deutsch</a>
+                <a class="lang-btn" onclick="translatePage('es')">Espa&ntilde;ol</a>
+                <a class="lang-btn" onclick="translatePage('ru')">Русский</a>
+                <a class="lang-btn" onclick="translatePage('pt')">Portugu&ecirc;s</a>
+                <a class="lang-btn" onclick="translatePage('zh-CN')">中文</a>
+                <a class="lang-btn" onclick="translatePage('ja')">日本語</a>
+                <a class="lang-btn" onclick="translatePage('ko')">한국어</a>
+                <a class="lang-btn" onclick="translatePage('hi')">हिन्दी</a>
+                <a class="lang-btn" onclick="translatePage('tr')">T&uuml;rk&ccedil;e</a>
+                <a class="lang-btn" onclick="translatePage('it')">Italiano</a>
+                <a class="lang-btn" onclick="translatePage('pl')">Polski</a>
+                <a class="lang-btn" onclick="translatePage('uk')">Українська</a>
+                <a class="lang-btn" onclick="translatePage('fa')">فارسی</a>
+                <a class="lang-btn" onclick="translatePage('id')">Indonesia</a>
+                <a class="lang-btn" onclick="translatePage('sv')">Svenska</a>
+                <a class="lang-btn" onclick="translatePage('no')">Norsk</a>
+                <a class="lang-btn" onclick="translatePage('da')">Dansk</a>
+            </div>
+            <p style="margin-top: 12px; font-size: 0.85em; color: #888;">+ 100 more languages available via Google Translate</p>
+            <div id="google_translate_element" style="margin-top:10px;"></div>
         </div>
     </div>
 </section>
 
 <script>
+function translatePage(lang) {
+    var url = 'https://translate.google.com/translate?sl=he&tl=' + lang + '&u=' + encodeURIComponent(window.location.href);
+    window.open(url, '_blank');
+}
+
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'he',
@@ -609,7 +659,7 @@ function googleTranslateElementInit() {
     });
 }
 </script>
-<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main>
 
