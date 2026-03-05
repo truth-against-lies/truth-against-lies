@@ -707,12 +707,18 @@
         }
         .yt-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 900px) {
+            .yt-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .yt-grid { grid-template-columns: 1fr; }
         }
         .yt-card {
             background: linear-gradient(135deg, #16213e, #1a1a3e);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
             border: 1px solid rgba(226, 183, 20, 0.1);
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
@@ -720,13 +726,13 @@
             display: block;
         }
         .yt-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-4px);
             border-color: #e2b714;
-            box-shadow: 0 10px 30px rgba(226, 183, 20, 0.15);
+            box-shadow: 0 8px 25px rgba(226, 183, 20, 0.15);
         }
         .yt-thumb {
             background: linear-gradient(135deg, #0a0a1a, #16213e);
-            height: 160px;
+            height: 130px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -744,8 +750,8 @@
         }
         .yt-play {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: rgba(226, 183, 20, 0.9);
             border-radius: 50%;
             display: flex;
@@ -760,17 +766,17 @@
             transform: scale(1.15);
         }
         .yt-info {
-            padding: 15px 18px;
+            padding: 10px 12px;
         }
         .yt-info h4 {
             color: #fff;
-            font-size: 1.05em;
-            margin-bottom: 6px;
+            font-size: 0.9em;
+            margin-bottom: 4px;
         }
         .yt-info p {
             color: #999;
-            font-size: 0.85em;
-            line-height: 1.5;
+            font-size: 0.75em;
+            line-height: 1.4;
         }
         .yt-badge {
             display: inline-block;
