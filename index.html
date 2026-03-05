@@ -562,6 +562,100 @@
             display: block;
         }
 
+        /* === LANGUAGE DROPDOWN IN NAV === */
+        .lang-dropdown {
+            position: relative;
+        }
+        .lang-toggle {
+            background: rgba(226, 183, 20, 0.2);
+            border: 1px solid #e2b714;
+            color: #e2b714;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95em;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        .lang-toggle:hover {
+            background: #e2b714;
+            color: #0a0a1a;
+        }
+        .lang-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 26, 0.97);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 30px 20px;
+        }
+        .lang-menu.open {
+            display: block;
+        }
+        .lang-menu-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .lang-menu-header h2 {
+            color: #e2b714;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+        .lang-menu-header p {
+            color: #888;
+        }
+        .lang-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: 1px solid #e2b714;
+            color: #e2b714;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .lang-close:hover {
+            background: #e2b714;
+            color: #0a0a1a;
+        }
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .lang-option {
+            background: rgba(226, 183, 20, 0.08);
+            border: 1px solid rgba(226, 183, 20, 0.15);
+            color: #e0e0e0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .lang-option:hover {
+            background: #e2b714;
+            color: #0a0a1a;
+            border-color: #e2b714;
+        }
+        @media (max-width: 768px) {
+            .lang-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+
         /* === COUNTER ANIMATION === */
         .stat-number {
             font-size: 2.5em;
@@ -577,6 +671,9 @@
     <div class="nav-inner">
         <a href="#" class="nav-logo">האמת נגד השקר</a>
         <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+        <div class="lang-dropdown">
+            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; שפה / Language</button>
+        </div>
         <ul class="nav-links">
             <li><a href="#about">מה זה אנטישמיות?</a></li>
             <li><a href="#claims">עלילות והפרכות</a></li>
@@ -585,6 +682,92 @@
         </ul>
     </div>
 </nav>
+
+<!-- LANGUAGE MENU (Full Screen) -->
+<div id="langMenu" class="lang-menu">
+    <button class="lang-close" onclick="document.getElementById('langMenu').classList.remove('open')">&#10005;</button>
+    <div class="lang-menu-header">
+        <h2>&#127760; Choose Your Language / בחרו שפה</h2>
+        <p>Click any language to read the entire site translated</p>
+    </div>
+    <div class="lang-grid">
+        <a class="lang-option" onclick="goTranslate('en')">&#127468;&#127463; English</a>
+        <a class="lang-option" onclick="goTranslate('ar')">&#127464;&#127462; العربية</a>
+        <a class="lang-option" onclick="goTranslate('fr')">&#127467;&#127479; Fran&ccedil;ais</a>
+        <a class="lang-option" onclick="goTranslate('de')">&#127465;&#127466; Deutsch</a>
+        <a class="lang-option" onclick="goTranslate('es')">&#127466;&#127480; Espa&ntilde;ol</a>
+        <a class="lang-option" onclick="goTranslate('ru')">&#127479;&#127482; Русский</a>
+        <a class="lang-option" onclick="goTranslate('pt')">&#127463;&#127479; Portugu&ecirc;s</a>
+        <a class="lang-option" onclick="goTranslate('zh-CN')">&#127464;&#127475; 中文</a>
+        <a class="lang-option" onclick="goTranslate('ja')">&#127471;&#127477; 日本語</a>
+        <a class="lang-option" onclick="goTranslate('ko')">&#127472;&#127479; 한국어</a>
+        <a class="lang-option" onclick="goTranslate('hi')">&#127470;&#127475; हिन्दी</a>
+        <a class="lang-option" onclick="goTranslate('tr')">&#127481;&#127479; T&uuml;rk&ccedil;e</a>
+        <a class="lang-option" onclick="goTranslate('it')">&#127470;&#127481; Italiano</a>
+        <a class="lang-option" onclick="goTranslate('pl')">&#127477;&#127473; Polski</a>
+        <a class="lang-option" onclick="goTranslate('uk')">&#127482;&#127462; Українська</a>
+        <a class="lang-option" onclick="goTranslate('fa')">&#127470;&#127479; فارسی</a>
+        <a class="lang-option" onclick="goTranslate('id')">&#127470;&#127465; Indonesia</a>
+        <a class="lang-option" onclick="goTranslate('sv')">&#127480;&#127466; Svenska</a>
+        <a class="lang-option" onclick="goTranslate('no')">&#127475;&#127476; Norsk</a>
+        <a class="lang-option" onclick="goTranslate('da')">&#127465;&#127472; Dansk</a>
+        <a class="lang-option" onclick="goTranslate('nl')">&#127475;&#127473; Nederlands</a>
+        <a class="lang-option" onclick="goTranslate('el')">&#127468;&#127479; &#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;</a>
+        <a class="lang-option" onclick="goTranslate('cs')">&#127464;&#127487; &#268;e&scaron;tina</a>
+        <a class="lang-option" onclick="goTranslate('ro')">&#127479;&#127476; Rom&acirc;n&#259;</a>
+        <a class="lang-option" onclick="goTranslate('hu')">&#127469;&#127482; Magyar</a>
+        <a class="lang-option" onclick="goTranslate('fi')">&#127467;&#127470; Suomi</a>
+        <a class="lang-option" onclick="goTranslate('th')">&#127481;&#127469; ไทย</a>
+        <a class="lang-option" onclick="goTranslate('vi')">&#127483;&#127475; Ti&#7871;ng Vi&#7879;t</a>
+        <a class="lang-option" onclick="goTranslate('bn')">&#127463;&#127465; বাংলা</a>
+        <a class="lang-option" onclick="goTranslate('ms')">&#127474;&#127486; Bahasa Melayu</a>
+        <a class="lang-option" onclick="goTranslate('sw')">&#127472;&#127466; Kiswahili</a>
+        <a class="lang-option" onclick="goTranslate('tl')">&#127477;&#127469; Filipino</a>
+        <a class="lang-option" onclick="goTranslate('am')">&#127466;&#127481; አማርኛ</a>
+        <a class="lang-option" onclick="goTranslate('bg')">&#127463;&#127468; Български</a>
+        <a class="lang-option" onclick="goTranslate('hr')">&#127469;&#127479; Hrvatski</a>
+        <a class="lang-option" onclick="goTranslate('sr')">&#127479;&#127480; Srpski</a>
+        <a class="lang-option" onclick="goTranslate('sk')">&#127480;&#127472; Sloven&#269;ina</a>
+        <a class="lang-option" onclick="goTranslate('sl')">&#127480;&#127470; Sloven&scaron;&#269;ina</a>
+        <a class="lang-option" onclick="goTranslate('lt')">&#127473;&#127481; Lietuvi&#371;</a>
+        <a class="lang-option" onclick="goTranslate('lv')">&#127473;&#127483; Latvie&scaron;u</a>
+        <a class="lang-option" onclick="goTranslate('et')">&#127466;&#127466; Eesti</a>
+        <a class="lang-option" onclick="goTranslate('ka')">&#127468;&#127466; ქართული</a>
+        <a class="lang-option" onclick="goTranslate('hy')">&#127462;&#127474; Հայերեն</a>
+        <a class="lang-option" onclick="goTranslate('ur')">&#127477;&#127472; اردو</a>
+        <a class="lang-option" onclick="goTranslate('ta')">&#127470;&#127475; தமிழ்</a>
+        <a class="lang-option" onclick="goTranslate('te')">&#127470;&#127475; తెలుగు</a>
+        <a class="lang-option" onclick="goTranslate('ml')">&#127470;&#127475; മലയാളം</a>
+        <a class="lang-option" onclick="goTranslate('kn')">&#127470;&#127475; ಕನ್ನಡ</a>
+        <a class="lang-option" onclick="goTranslate('gu')">&#127470;&#127475; ગુજરાતી</a>
+        <a class="lang-option" onclick="goTranslate('pa')">&#127470;&#127475; ਪੰਜਾਬੀ</a>
+        <a class="lang-option" onclick="goTranslate('mr')">&#127470;&#127475; मराठी</a>
+        <a class="lang-option" onclick="goTranslate('ne')">&#127475;&#127477; नेपाली</a>
+        <a class="lang-option" onclick="goTranslate('my')">&#127474;&#127474; မြန်မာ</a>
+        <a class="lang-option" onclick="goTranslate('km')">&#127472;&#127469; ខ្មែរ</a>
+        <a class="lang-option" onclick="goTranslate('lo')">&#127473;&#127462; ລາວ</a>
+        <a class="lang-option" onclick="goTranslate('mn')">&#127474;&#127475; Монгол</a>
+        <a class="lang-option" onclick="goTranslate('kk')">&#127472;&#127487; Қазақ</a>
+        <a class="lang-option" onclick="goTranslate('uz')">&#127482;&#127487; O&lsquo;zbek</a>
+        <a class="lang-option" onclick="goTranslate('az')">&#127462;&#127487; Az&#601;rbaycan</a>
+        <a class="lang-option" onclick="goTranslate('sq')">&#127462;&#127473; Shqip</a>
+        <a class="lang-option" onclick="goTranslate('mk')">&#127474;&#127472; Македонски</a>
+        <a class="lang-option" onclick="goTranslate('bs')">&#127463;&#127462; Bosanski</a>
+        <a class="lang-option" onclick="goTranslate('ga')">&#127470;&#127466; Gaeilge</a>
+        <a class="lang-option" onclick="goTranslate('cy')">&#127468;&#127463; Cymraeg</a>
+        <a class="lang-option" onclick="goTranslate('is')">&#127470;&#127480; &Iacute;slenska</a>
+        <a class="lang-option" onclick="goTranslate('mt')">&#127474;&#127481; Malti</a>
+        <a class="lang-option" onclick="goTranslate('lb')">&#127473;&#127482; L&euml;tzebuergesch</a>
+        <a class="lang-option" onclick="goTranslate('yi')">&#127470;&#127473; ייִדיש</a>
+        <a class="lang-option" onclick="goTranslate('af')">&#127487;&#127462; Afrikaans</a>
+        <a class="lang-option" onclick="goTranslate('zu')">&#127487;&#127462; isiZulu</a>
+        <a class="lang-option" onclick="goTranslate('yo')">&#127475;&#127468; Yor&ugrave;b&aacute;</a>
+        <a class="lang-option" onclick="goTranslate('ig')">&#127475;&#127468; Igbo</a>
+        <a class="lang-option" onclick="goTranslate('ha')">&#127475;&#127468; Hausa</a>
+        <a class="lang-option" onclick="goTranslate('so')">&#127480;&#127476; Soomaali</a>
+        <a class="lang-option" onclick="goTranslate('rw')">&#127479;&#127484; Kinyarwanda</a>
+    </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -614,52 +797,20 @@
 
         <a href="#claims" class="hero-cta">גלו את האמת &#x2193;</a>
 
-        <div class="language-bar">
-            <h3>&#127760; קראו ב-120+ שפות / Read in 120+ Languages</h3>
-            <p>Select your language:</p>
-            <div class="lang-buttons">
-                <a class="lang-btn" onclick="translatePage('en')">English</a>
-                <a class="lang-btn" onclick="translatePage('ar')">العربية</a>
-                <a class="lang-btn" onclick="translatePage('fr')">Fran&ccedil;ais</a>
-                <a class="lang-btn" onclick="translatePage('de')">Deutsch</a>
-                <a class="lang-btn" onclick="translatePage('es')">Espa&ntilde;ol</a>
-                <a class="lang-btn" onclick="translatePage('ru')">Русский</a>
-                <a class="lang-btn" onclick="translatePage('pt')">Portugu&ecirc;s</a>
-                <a class="lang-btn" onclick="translatePage('zh-CN')">中文</a>
-                <a class="lang-btn" onclick="translatePage('ja')">日本語</a>
-                <a class="lang-btn" onclick="translatePage('ko')">한국어</a>
-                <a class="lang-btn" onclick="translatePage('hi')">हिन्दी</a>
-                <a class="lang-btn" onclick="translatePage('tr')">T&uuml;rk&ccedil;e</a>
-                <a class="lang-btn" onclick="translatePage('it')">Italiano</a>
-                <a class="lang-btn" onclick="translatePage('pl')">Polski</a>
-                <a class="lang-btn" onclick="translatePage('uk')">Українська</a>
-                <a class="lang-btn" onclick="translatePage('fa')">فارسی</a>
-                <a class="lang-btn" onclick="translatePage('id')">Indonesia</a>
-                <a class="lang-btn" onclick="translatePage('sv')">Svenska</a>
-                <a class="lang-btn" onclick="translatePage('no')">Norsk</a>
-                <a class="lang-btn" onclick="translatePage('da')">Dansk</a>
-            </div>
-            <p style="margin-top: 12px; font-size: 0.85em; color: #888;">+ 100 more languages available via Google Translate</p>
-            <div id="google_translate_element" style="margin-top:10px;"></div>
+        <div style="margin-top: 20px;">
+            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')" style="font-size: 1em; padding: 10px 25px;">&#127760; Read in 75+ Languages / קראו ב-75+ שפות</button>
         </div>
     </div>
 </section>
 
 <script>
-function translatePage(lang) {
-    var url = 'https://translate.google.com/translate?sl=he&tl=' + lang + '&u=' + encodeURIComponent(window.location.href);
+var siteUrl = 'https://ethankinng666-coder.github.io/truth-against-lies/';
+function goTranslate(lang) {
+    var url = 'https://translate.google.com/translate?sl=he&tl=' + lang + '&u=' + encodeURIComponent(siteUrl);
     window.open(url, '_blank');
-}
-
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'he',
-        includedLanguages: 'af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,ny,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tl,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
-    });
+    document.getElementById('langMenu').classList.remove('open');
 }
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main>
 
