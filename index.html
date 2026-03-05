@@ -476,6 +476,76 @@
         .fade-in {
             animation: fadeIn 0.6s ease-out;
         }
+
+        /* === LANGUAGE SELECTOR === */
+        .language-bar {
+            background: linear-gradient(135deg, #16213e, #1a1a3e);
+            border: 2px solid #e2b714;
+            border-radius: 15px;
+            padding: 20px 30px;
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+        .language-bar h3 {
+            color: #e2b714;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .language-bar p {
+            color: #aaa;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        #google_translate_element {
+            display: inline-block;
+        }
+        /* Style Google Translate dropdown */
+        .goog-te-gadget {
+            font-family: inherit !important;
+        }
+        .goog-te-gadget-simple {
+            background-color: #0a0a1a !important;
+            border: 1px solid #e2b714 !important;
+            border-radius: 8px !important;
+            padding: 8px 15px !important;
+            font-size: 14px !important;
+        }
+        .goog-te-menu-value span {
+            color: #e0e0e0 !important;
+        }
+
+        /* === BACK TO TOP === */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top:hover {
+            transform: scale(1.1);
+        }
+        .back-to-top.visible {
+            display: block;
+        }
+
+        /* === COUNTER ANIMATION === */
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e2b714;
+        }
     </style>
 </head>
 <body>
@@ -497,7 +567,6 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <div id="google_translate_element" style="margin-bottom: 20px;"></div>
         <h1>האמת נגד השקר</h1>
         <p class="subtitle">חושפים את השקרים, מציגים את העובדות</p>
         <p class="subtitle-en">The Truth Against The Lie &mdash; Fighting Antisemitism</p>
@@ -522,6 +591,12 @@
         </div>
 
         <a href="#claims" class="hero-cta">גלו את האמת &#x2193;</a>
+
+        <div class="language-bar">
+            <h3>&#127760; קראו ב-120+ שפות / Read in 120+ Languages</h3>
+            <p>&#1576;&#1582;&#1608;&#1575;&#1606;&#1740;&#1583; | Lisez | Lesen | &#35501;&#12416; | &#1063;&#1080;&#1090;&#1072;&#1081;&#1090;&#1077; | Lea</p>
+            <div id="google_translate_element"></div>
+        </div>
     </div>
 </section>
 
@@ -633,6 +708,24 @@ function googleTranslateElementInit() {
                         <p>השלכה + אשמה מוסטת: עלילת הדם צמחה בתקופת מסעות הצלב, כשנוצרים עצמם ביצעו אלימות המונית ושפיכות דמים. האשמת יהודים בטקסי דם תפקדה כהשלכה פסיכולוגית: העברת אשמה על אלימות נוצרית אל ה"אחר" היהודי. בנוסף, ההאשמה נתנה הצדקה לתפוס רכוש יהודי ולגרש אוכלוסיות יהודיות.</p>
                     </div>
                     <div class="sources">מקורות: R. Po-chia Hsia, 'The Myth of Ritual Murder' (1988); Magda Teter, 'Blood Libel' (2020)</div>
+                </div>
+            </div>
+
+            <div class="claim-card" onclick="toggleClaim(this)">
+                <div class="claim-title">
+                    <h4>"חילול לחם הקודש: יהודים דוקרים רקיקי קומוניון"</h4>
+                    <span class="claim-arrow">&#9660;</span>
+                </div>
+                <div class="claim-body">
+                    <div class="refutation">
+                        <div class="refutation-label">&#10003; הפרכה עובדתית</div>
+                        <p>ההאשמה דרשה להאמין בשני דברים בלתי אפשריים בו-זמנית: שיהודים דוחים את התיאולוגיה הנוצרית (האמונה שהרקיק הופך לגוף ישו) וגם שיהודים תוקפים את הרקיק דווקא בגלל שהם מאמינים בקדושתו. זו סתירה לוגית. אם יהודים לא מאמינים שהרקיק הוא ישו, אין להם מוטיבציה "לענות" אותו. ההיסטוריונית מירי רובין תיעדה שהאשמות חילול לחם הקודש חלו בדיוק בתקופות של מתח כלכלי בין קהילות יהודיות ונוצריות &mdash; מה שמרמז שתחרות כלכלית, לא תיאולוגיה, הייתה המניע האמיתי. בטבחות רינדפלייש (1298), למעלה מ-100 קהילות יהודיות בגרמניה הושמדו על בסיס האשמות אלו.</p>
+                    </div>
+                    <div class="psychology">
+                        <div class="psychology-label">&#128300; למה אנשים מאמינים בזה?</div>
+                        <p>שגיאת ייחוס + שעיר לעזאזל כלכלי: קהילות שחוו קשיים כלכליים היו צריכות הצדקה לתפוס נכסים יהודיים. האשמה דתית סיפקה כיסוי מוסרי לגניבה כלכלית. דפוס זה &mdash; שימוש בהאשמות מוסריות להצדקת רווח חומרי &mdash; חוזר לאורך כל היסטוריית האנטישמיות.</p>
+                    </div>
+                    <div class="sources">מקורות: Miri Rubin, 'Gentile Tales: The Narrative Assault on Late Medieval Jews' (1999)</div>
                 </div>
             </div>
 
@@ -755,6 +848,24 @@ function googleTranslateElementInit() {
                     <div class="sources">מקורות: Gregory Stanton, '10 Stages of Genocide' (1996); Umberto Eco, 'Ur-Fascism' (1995); Albert Bandura (1999)</div>
                 </div>
             </div>
+
+            <div class="claim-card" onclick="toggleClaim(this)">
+                <div class="claim-title">
+                    <h4>"יהודים מקדמים ערבוב גזעי כדי להחליש גזעים אחרים"</h4>
+                    <span class="claim-arrow">&#9660;</span>
+                </div>
+                <div class="claim-body">
+                    <div class="refutation">
+                        <div class="refutation-label">&#10003; הפרכה עובדתית</div>
+                        <p>ההאשמה היא השלכה טהורה. הנאצים עצמם ביצעו אאוגניקה בקנה מידה עצום: תוכנית T4 הרגה 70,000+ נכים, תוכנית לבנסבורן הרביתה ילדים "טהורי גזע", עיקורים כפויים פגעו ב-400,000 אנשים, והשואה רצחה 6 מיליון יהודים ומיליוני אחרים. להאשים יהודים בדיוק במעשה שהמאשימים עצמם ביצעו הוא השלכה קלאסית. גרסאות מודרניות (תיאוריית "ההחלפה הגדולה") טוענות שיהודים מתזמרים הגירה להחלפת אוכלוסיות לבנות. הגירה מונעת על ידי כוחות כלכליים, מלחמות, שינויי אקלים, ומדיניות ממשלות דמוקרטיות עם הנהגה מגוונת.</p>
+                    </div>
+                    <div class="psychology">
+                        <div class="psychology-label">&#128300; למה אנשים מאמינים בזה?</div>
+                        <p>השלכה בקנה מידה: כאשר משטר שלם משליך את הפשעים שלו על קורבנותיו, זה משרת שתי מטרות: (1) מצדיק את פעולות המשטר עצמו ("אנחנו חייבים לעשות את זה כי הם עושים את זה לנו") ו-(2) מחסן את האוכלוסייה נגד אהדה לקורבנות ("הם היו עושים לנו גרוע יותר אם יכלו"). זו תעמולה 101.</p>
+                    </div>
+                    <div class="sources">מקורות: Robert Proctor, 'Racial Hygiene: Medicine Under the Nazis' (1988); Richard Evans, 'The Third Reich in Power' (2005)</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -813,6 +924,20 @@ function googleTranslateElementInit() {
                         <p>הטיית המידתיות: אנשים מצפים שלאירועים גדולים יהיו סיבות גדולות. כשמשבר פיננסי גלובלי מתרחש, הרעיון שהוא נבע מגורמים מערכתיים מורכבים הוא לא מספק. הרעיון שקבוצה חזקה תכננה את זה מרגיש מידתי יותר. יהודים, שכבר מוסטראים ככוח פיננסי, הופכים ל"סיבה הגדולה."</p>
                     </div>
                     <div class="sources">מקורות: Daniel Kahneman, 'Thinking, Fast and Slow' (2011)</div>
+                </div>
+            </div>
+
+            <div class="claim-card" onclick="toggleClaim(this)">
+                <div class="claim-title">
+                    <h4>"יהודים מנצלים גויים כלכלית ורואים בהם בהמות"</h4>
+                    <span class="claim-arrow">&#9660;</span>
+                </div>
+                <div class="claim-body">
+                    <div class="refutation">
+                        <div class="refutation-label">&#10003; הפרכה עובדתית</div>
+                        <p>המילה "גוי" פירושה פשוט "אומה" בעברית ומתייחסת ללא-יהודים באופן ניטרלי. אנטישמים סילפו זאת לטענה שיהודים רואים בגויים בהמות תת-אנושיות שאפשר לנצל. זהו בידוי מוחלט. ליהדות יש חוקים אתיים מקיפים המחייבים יחס הוגן לכל בני האדם. עיקרון "דינא דמלכותא דינא" (חוק המדינה הוא החוק) מחייב יהודים להיות ישרים בכל העסקים. הסטריאוטיפ של ניצול כלכלי יהודי שימש להצדקת כל דבר &mdash; מגירושים בימי הביניים ועד פשעי שנאה מודרניים.</p>
+                    </div>
+                    <div class="sources">מקורות: מחקר אקדמי על חוקי מסחר בהלכה; ADL documentation</div>
                 </div>
             </div>
         </div>
@@ -941,6 +1066,20 @@ function googleTranslateElementInit() {
                     </div>
                 </div>
             </div>
+
+            <div class="claim-card" onclick="toggleClaim(this)">
+                <div class="claim-title">
+                    <h4>"יהודים ניתנים לזיהוי פיזי לפי מראה חיצוני (אף מעוקל וכו')"</h4>
+                    <span class="claim-arrow">&#9660;</span>
+                </div>
+                <div class="claim-body">
+                    <div class="refutation">
+                        <div class="refutation-label">&#10003; הפרכה עובדתית</div>
+                        <p>הקריקטורה הפיזית של יהודים &mdash; אף מעוקל, תווים כהים, יציבה כפופה, ידיים משפשפות &mdash; היא המצאה תעמולתית, לא מציאות. יהודים הם עם מגוון אתנית הכולל קהילות אשכנזיות (אירופיות), ספרדיות (ים-תיכוניות), מזרחיות (מזרח-תיכוניות), אתיופיות, הודיות וסיניות שנראות שונות לחלוטין זו מזו. הקריקטורה תוכננה כדי להפוך יהודים ל"אחרים" הניתנים לזיהוי ויזואלי ולבצע דה-הומניזציה שלהם. היא נשארת אחת הצורות הנפוצות ביותר של דימוי אנטישמי באינטרנט.</p>
+                    </div>
+                    <div class="sources">מקורות: ADL documentation on antisemitic imagery; תעמולה נאצית מתועדת</div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -976,6 +1115,20 @@ function googleTranslateElementInit() {
                         <div class="refutation-label">&#10003; הפרכה עובדתית</div>
                         <p>הכחשת הזכות להגדרה עצמית של העם היהודי תוך הענקתה לכל עם אחר היא אפליה. יש 193 מדינות חברות באו"ם. הטלת ספק בלגיטימיות של מדינת ישראל בלבד, תוך קבלת כל השאר, חושפת סטנדרט כפול. זה לא אומר שמדיניות ישראלית מעל ביקורת &mdash; אינה כזו. אבל קריאה לחיסול ישראל כמדינה יהודית (במקום רפורמה של מדיניות ספציפית) מכוונת נגד הקיום הקולקטיבי היהודי, לא נגד התנהגות ממשלתית.</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="claim-card" onclick="toggleClaim(this)">
+                <div class="claim-title">
+                    <h4>"הלובי הישראלי (AIPAC) שולט במדיניות החוץ האמריקאית"</h4>
+                    <span class="claim-arrow">&#9660;</span>
+                </div>
+                <div class="claim-body">
+                    <div class="refutation">
+                        <div class="refutation-label">&#10003; הפרכה עובדתית</div>
+                        <p>כל מדינה עושה לובינג בוושינגטון &mdash; ערב הסעודית, איחוד האמירויות, דרום קוריאה, יפן, ועשרות אחרות מוציאות מיליונים על לובינג. לבודד את הלובי הפרו-ישראלי כחזק באופן ייחודי או מרושע מהדהד את האשמת הנאמנות הכפולה ואת קונספירציית "יהודים שולטים בממשלות". AIPAC הוא ארגון לובינג חוקי הפועל באותם כללים ככל לובי אחר. הטענה שהוא "שולט" במדיניות ארה"ב מתעלמת מהגורמים הגיאופוליטיים, האסטרטגיים והפוליטיים הפנימיים המורכבים שמעצבים מדיניות חוץ אמריקאית.</p>
+                    </div>
+                    <div class="sources">מקורות: רישומי לובינג פדרליים; ניתוח מדיניות חוץ אקדמי</div>
                 </div>
             </div>
         </div>
@@ -1254,13 +1407,18 @@ function googleTranslateElementInit() {
 </main>
 
 <!-- FOOTER -->
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="חזרה למעלה">&#9650;</button>
+
 <footer>
     <p style="color: #e2b714; font-size: 1.2em; margin-bottom: 10px;">האמת היא הנשק החזק ביותר נגד השנאה</p>
     <p>Truth is the most powerful weapon against hatred</p>
+    <p style="color: #e2b714; font-size: 0.95em; margin-top: 10px;">&#1575;&#1604;&#1581;&#1602;&#1610;&#1602;&#1577; &#1607;&#1610; &#1571;&#1602;&#1608;&#1609; &#1587;&#1604;&#1575;&#1581; &#1590;&#1583; &#1575;&#1604;&#1603;&#1585;&#1575;&#1607;&#1610;&#1577;</p>
     <div class="footer-sources">
         <p style="margin-top: 20px;">מקורות: ADL, Yad Vashem, USHMM, UNESCO, מחקר אקדמי מבוסס</p>
         <p>Sources: Anti-Defamation League, Yad Vashem, United States Holocaust Memorial Museum, UNESCO</p>
     </div>
+    <p style="margin-top: 25px; font-size: 0.85em; color: #555;">אתר זה מתעד עלילות אנטישמיות למטרת חינוך והפרכה בלבד. שום טענה המתועדת כאן אינה מאושרת. הן מוצגות כדי שניתן יהיה לפרק אותן.</p>
     <p style="margin-top: 20px;">נבנה על ידי נתנאל אסיס | 2026</p>
 </footer>
 
@@ -1300,6 +1458,22 @@ document.addEventListener('click', function(e) {
     if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
         nav.classList.remove('open');
     }
+});
+
+// Back to top button visibility
+window.addEventListener('scroll', function() {
+    const btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 500) {
+        btn.classList.add('visible');
+    } else {
+        btn.classList.remove('visible');
+    }
+});
+
+// Count claims on load for verification
+document.addEventListener('DOMContentLoaded', function() {
+    const totalClaims = document.querySelectorAll('.claim-card').length;
+    console.log('Total claims loaded: ' + totalClaims);
 });
 </script>
 
