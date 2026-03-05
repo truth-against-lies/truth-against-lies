@@ -498,7 +498,10 @@
             margin-bottom: 10px;
         }
         #google_translate_element {
-            display: inline-block;
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+            visibility: hidden;
         }
         .lang-buttons {
             display: flex;
@@ -522,20 +525,11 @@
             background: #e2b714;
             color: #0a0a1a;
         }
-        /* Style Google Translate dropdown */
-        .goog-te-gadget {
-            font-family: inherit !important;
-        }
-        .goog-te-gadget-simple {
-            background-color: #0a0a1a !important;
-            border: 1px solid #e2b714 !important;
-            border-radius: 8px !important;
-            padding: 8px 15px !important;
-            font-size: 14px !important;
-        }
-        .goog-te-menu-value span {
-            color: #e0e0e0 !important;
-        }
+        /* Hide Google Translate toolbar completely */
+        .goog-te-banner-frame { display: none !important; }
+        .skiptranslate { display: none !important; }
+        body { top: 0 !important; position: static !important; }
+        .goog-te-gadget { display: none !important; }
 
         /* === BACK TO TOP === */
         .back-to-top {
@@ -691,6 +685,7 @@
         <p>Click any language to read the entire site translated</p>
     </div>
     <div class="lang-grid">
+        <a class="lang-option" onclick="goOriginal()" style="background: rgba(226,183,20,0.3); border-color: #e2b714; font-weight: bold;">&#127470;&#127473; עברית (Hebrew)</a>
         <a class="lang-option" onclick="goTranslate('en')">&#127468;&#127463; English</a>
         <a class="lang-option" onclick="goTranslate('ar')">&#127464;&#127462; العربية</a>
         <a class="lang-option" onclick="goTranslate('fr')">&#127467;&#127479; Fran&ccedil;ais</a>
@@ -803,14 +798,43 @@
     </div>
 </section>
 
+<div id="google_translate_element"></div>
 <script>
-var siteUrl = 'https://ethankinng666-coder.github.io/truth-against-lies/';
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'he',
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
 function goTranslate(lang) {
-    var url = 'https://translate.google.com/translate?sl=he&tl=' + lang + '&u=' + encodeURIComponent(siteUrl);
-    window.open(url, '_blank');
     document.getElementById('langMenu').classList.remove('open');
+    // Set the Google Translate cookie
+    document.cookie = 'googtrans=/he/' + lang + ';path=/';
+    document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
+    // If Google Translate is loaded, trigger via the select element
+    var gtCombo = document.querySelector('.goog-te-combo');
+    if (gtCombo) {
+        gtCombo.value = lang;
+        gtCombo.dispatchEvent(new Event('change'));
+    } else {
+        // Fallback: reload to pick up cookie
+        location.reload();
+    }
+}
+
+function goOriginal() {
+    document.cookie = 'googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    document.cookie = 'googtrans=;path=/;domain=.github.io;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+    var gtCombo = document.querySelector('.goog-te-combo');
+    if (gtCombo) {
+        gtCombo.value = '';
+        gtCombo.dispatchEvent(new Event('change'));
+    }
+    location.reload();
 }
 </script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main>
 
