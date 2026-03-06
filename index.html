@@ -1034,6 +1034,119 @@
             background: #e2b714;
             color: #0a0a1a;
         }
+
+        /* === GALLERY SECTION === */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(226,183,20,0.1);
+            transition: transform 0.3s, border-color 0.3s;
+            aspect-ratio: 4/3;
+            background: #16213e;
+        }
+        .gallery-item:hover {
+            transform: translateY(-3px);
+            border-color: #e2b714;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-item .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            padding: 30px 12px 10px;
+            color: #e0e0e0;
+            font-size: 0.82em;
+            line-height: 1.4;
+        }
+        .gallery-item .gallery-caption strong {
+            color: #e2b714;
+            display: block;
+            margin-bottom: 2px;
+            font-size: 1.05em;
+        }
+        .gallery-link-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: rgba(226,183,20,0.15);
+            border: 1px solid #e2b714;
+            color: #e2b714;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .gallery-link-btn:hover {
+            background: #e2b714;
+            color: #0a0a1a;
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-caption {
+            color: #e2b714;
+            margin-top: 15px;
+            font-size: 1em;
+            text-align: center;
+            max-width: 600px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: #e2b714;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(226,183,20,0.2);
+            border: none;
+            color: #e2b714;
+            font-size: 2em;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .lightbox-nav:hover { background: rgba(226,183,20,0.4); }
+        .lightbox-prev { right: 20px; }
+        .lightbox-next { left: 20px; }
     </style>
 </head>
 <body>
@@ -1053,6 +1166,7 @@
                 <li><a href="#timeline">ציר זמן</a></li>
                 <li><a href="#psychology">הפסיכולוגיה</a></li>
                 <li><a href="#regions">שנאה לפי עמים</a></li>
+                <li><a href="#gallery">תיעוד היסטורי</a></li>
                 <li><a href="#report">דווח על אנטישמיות</a></li>
                 <li><a href="#youtube">צפה והתעדכן</a></li>
             </ul>
@@ -2516,6 +2630,76 @@ function goOriginal() {
 
 </section>
 
+<!-- GALLERY SECTION -->
+<section id="gallery">
+    <div class="section-header">
+        <h2>תיעוד היסטורי</h2>
+        <p>תמונות שחייבים לראות &mdash; כדי לזכור, להבין, ולא לתת לזה לחזור</p>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item fade-in" onclick="openLightbox(0)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Auschwitz_Main_Gate.JPG/960px-Auschwitz_Main_Gate.JPG" alt="שער אושוויץ" loading="lazy">
+            <div class="gallery-caption"><strong>שער אושוויץ &mdash; "העבודה משחררת"</strong>1.1 מיליון איש נרצחו כאן. 90% מהם יהודים.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(1)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Stroop_Report_-_Warsaw_Ghetto_Uprising_06b.jpg/960px-Stroop_Report_-_Warsaw_Ghetto_Uprising_06b.jpg" alt="הילד מגטו ורשה" loading="lazy">
+            <div class="gallery-caption"><strong>הילד מגטו ורשה</strong>התמונה המפורסמת ביותר מהשואה. ילד מרים ידיים מול רובה נאצי, 1943.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(2)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Judenstern_JMW.jpg/960px-Judenstern_JMW.jpg" alt="טלאי צהוב" loading="lazy">
+            <div class="gallery-caption"><strong>הכוכב הצהוב &mdash; טלאי הקלון</strong>יהודים חויבו לתפור אותו על בגדיהם. סימון לפני השמדה.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(3)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Interior_view_of_the_destroyed_Fasanenstrasse_Synagogue%2C_Berlin.jpg/960px-Interior_view_of_the_destroyed_Fasanenstrasse_Synagogue%2C_Berlin.jpg" alt="ליל הבדולח" loading="lazy">
+            <div class="gallery-caption"><strong>ליל הבדולח &mdash; בית כנסת שנהרס</strong>9-10 בנובמבר 1938. 1,400 בתי כנסת ו-7,500 עסקים יהודיים נהרסו בלילה אחד.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(4)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Buchenwald_Slave_Laborers_Liberation.jpg/960px-Buchenwald_Slave_Laborers_Liberation.jpg" alt="שחרור בוכנוולד" loading="lazy">
+            <div class="gallery-caption"><strong>שחרור מחנה בוכנוולד</strong>16 באפריל 1945. 56,000 איש נרצחו כאן. אלי ויזל (בן 16) בשורה השנייה, שביעי משמאל.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(5)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Nuremberg_Trials_retouched.jpg/960px-Nuremberg_Trials_retouched.jpg" alt="משפטי נירנברג" loading="lazy">
+            <div class="gallery-caption"><strong>משפטי נירנברג</strong>1945-1946. פושעי מלחמה נאצים נשפטו. 12 נגזרו למוות.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(6)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Declaration_of_State_of_Israel_1948.jpg/960px-Declaration_of_State_of_Israel_1948.jpg" alt="הכרזת העצמאות" loading="lazy">
+            <div class="gallery-caption"><strong>דוד בן-גוריון מכריז על הקמת המדינה</strong>14 במאי 1948. אחרי 2,000 שנות גלות, לעם היהודי יש בית.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(7)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/IDF_Paratroopers_surrounding_the_chief_of_staff_rabbi_Shlomo_Goren_at_Jerusalem%27s_Western_Wall.jpg/960px-IDF_Paratroopers_surrounding_the_chief_of_staff_rabbi_Shlomo_Goren_at_Jerusalem%27s_Western_Wall.jpg" alt="צנחנים בכותל" loading="lazy">
+            <div class="gallery-caption"><strong>צנחנים בכותל המערבי</strong>7 ביוני 1967. הרב שלמה גורן תוקע בשופר &mdash; ירושלים חוזרת לידיים יהודיות אחרי 2,000 שנה.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(8)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Flickr_-_Government_Press_Office_%28GPO%29_-_Hostages_Rescued_from_Entebbe_Airport.jpg/960px-Flickr_-_Government_Press_Office_%28GPO%29_-_Hostages_Rescued_from_Entebbe_Airport.jpg" alt="מבצע אנטבה" loading="lazy">
+            <div class="gallery-caption"><strong>מבצע אנטבה &mdash; החטופים ניצלו</strong>4 ביולי 1976. קומנדו ישראלי טס 4,000 ק"מ לאוגנדה והציל 102 בני ערובה.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(9)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Operation_Solomon_IDF_Archives_XVII.jpg" alt="מבצע שלמה" loading="lazy">
+            <div class="gallery-caption"><strong>מבצע שלמה &mdash; עליית יהודי אתיופיה</strong>מאי 1991. 14,325 יהודים הוטסו לישראל ב-36 שעות. שיא עולמי.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(10)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Iron_Dome_near_Sderot.jpg/960px-Iron_Dome_near_Sderot.jpg" alt="כיפת ברזל" loading="lazy">
+            <div class="gallery-caption"><strong>כיפת ברזל ליד שדרות</strong>מערכת ההגנה שמגנה על אזרחים ישראלים מרקטות חמאס.</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(11)">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Skyline_of_Tel_Aviv_%2834324506705%29.jpg/960px-Skyline_of_Tel_Aviv_%2834324506705%29.jpg" alt="תל אביב" loading="lazy">
+            <div class="gallery-caption"><strong>קו הרקיע של תל אביב</strong>מביצות ודיונות לעיר הייטק עולמית. הניצחון של התקווה.</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top: 30px;">
+        <a class="gallery-link-btn" href="gallery.html">&#9888; כניסה לגלריה המתקדמת &mdash; תמונות קשות</a>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">&#10005;</button>
+    <button class="lightbox-nav lightbox-next" onclick="navLightbox(-1)">&#10094;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navLightbox(1)">&#10095;</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
 <!-- REPORT SECTION -->
 <section id="report">
     <div class="section-header">
@@ -3297,6 +3481,35 @@ function shareLie(el, platform) {
     else if (platform === 'telegram') shareUrl = 'https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
     window.open(shareUrl, '_blank');
 }
+
+// Lightbox
+const galleryItems = document.querySelectorAll('.gallery-item');
+let lbIndex = 0;
+function openLightbox(i) {
+    lbIndex = i;
+    const item = galleryItems[i];
+    document.getElementById('lightbox-img').src = item.querySelector('img').src;
+    document.getElementById('lightbox-caption').innerHTML = item.querySelector('.gallery-caption').innerHTML;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+function navLightbox(dir) {
+    lbIndex = (lbIndex + dir + galleryItems.length) % galleryItems.length;
+    openLightbox(lbIndex);
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') navLightbox(-1);
+    if (e.key === 'ArrowLeft') navLightbox(1);
+});
 
 </script>
 

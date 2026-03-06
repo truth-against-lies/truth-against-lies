@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>גלריה מתקדמת — תיעוד היסטורי | האמת נגד השקר</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        /* WARNING GATE */
+        .warning-gate {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .warning-box {
+            max-width: 650px;
+            background: linear-gradient(135deg, #16213e, #1a1a3e);
+            border: 2px solid #e74c3c;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .warning-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .warning-box h1 {
+            color: #e74c3c;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .warning-box p {
+            color: #c0c0c0;
+            font-size: 1.05em;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .warning-box .warning-detail {
+            background: rgba(231, 76, 60, 0.1);
+            border-right: 3px solid #e74c3c;
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin: 25px 0;
+            text-align: right;
+            color: #e0a0a0;
+            font-size: 0.95em;
+        }
+        .warning-enter {
+            display: inline-block;
+            background: rgba(226, 183, 20, 0.15);
+            border: 2px solid #e2b714;
+            color: #e2b714;
+            padding: 14px 40px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            margin-top: 15px;
+        }
+        .warning-enter:hover {
+            background: #e2b714;
+            color: #0a0a1a;
+        }
+        .warning-back {
+            display: block;
+            margin-top: 20px;
+            color: #888;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .warning-back:hover { color: #e2b714; }
+
+        /* GALLERY CONTENT */
+        .gallery-content {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+        .gallery-content.visible { display: block; }
+        .gallery-header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        .gallery-header h1 {
+            color: #e2b714;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .gallery-header p {
+            color: #888;
+            font-size: 1em;
+        }
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid rgba(226,183,20,0.3);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .back-link:hover { background: rgba(226,183,20,0.15); }
+
+        /* CATEGORY TABS */
+        .cat-tabs {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .cat-tab {
+            padding: 10px 22px;
+            background: rgba(226,183,20,0.08);
+            border: 1px solid rgba(226,183,20,0.2);
+            color: #a0a0a0;
+            border-radius: 25px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .cat-tab:hover { border-color: #e2b714; color: #e2b714; }
+        .cat-tab.active {
+            background: #e2b714;
+            color: #0a0a1a;
+            border-color: #e2b714;
+            font-weight: bold;
+        }
+
+        /* GALLERY GRID */
+        .adv-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .adv-gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 1px solid rgba(226,183,20,0.1);
+            transition: transform 0.3s, border-color 0.3s;
+            aspect-ratio: 4/3;
+            background: #16213e;
+        }
+        .adv-gallery-item:hover {
+            transform: translateY(-3px);
+            border-color: #e2b714;
+        }
+        .adv-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .adv-gallery-item .adv-caption {
+            position: absolute;
+            bottom: 0; right: 0; left: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 35px 12px 10px;
+            color: #e0e0e0;
+            font-size: 0.82em;
+            line-height: 1.4;
+        }
+        .adv-caption strong {
+            color: #e2b714;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .adv-caption .source-tag {
+            color: #888;
+            font-size: 0.85em;
+            font-style: italic;
+        }
+        .cat-section { display: none; }
+        .cat-section.active { display: block; }
+        .cat-section h2 {
+            color: #e2b714;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.15);
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .lightbox-caption {
+            color: #e2b714;
+            margin-top: 15px;
+            font-size: 1em;
+            text-align: center;
+            max-width: 700px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: none;
+            color: #e2b714;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(226,183,20,0.2);
+            border: none;
+            color: #e2b714;
+            font-size: 2em;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        .lightbox-nav:hover { background: rgba(226,183,20,0.4); }
+        .lightbox-prev { right: 20px; }
+        .lightbox-next { left: 20px; }
+
+        @media (max-width: 768px) {
+            .warning-box { padding: 30px 20px; }
+            .warning-box h1 { font-size: 1.4em; }
+            .cat-tab { padding: 8px 14px; font-size: 0.82em; }
+            .adv-gallery-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 500px) {
+            .adv-gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- WARNING GATE -->
+<div class="warning-gate" id="warningGate">
+    <div class="warning-box">
+        <div class="warning-icon">&#9888;</div>
+        <h1>&#9888; אזהרה: תוכן קשה</h1>
+        <p>עמוד זה מכיל תמונות קשות ומזעזעות של פיגועים, שואה, ואירועי טרור.</p>
+        <div class="warning-detail">
+            התמונות מוצגות <strong>לצורך תיעוד היסטורי ומודעות בלבד</strong>.<br>
+            כל התמונות מגיעות ממקורות רשמיים ופומביים: Wikimedia Commons, יד ושם, USHMM, לשכת העיתונות הממשלתית, ארכיון צה"ל.<br><br>
+            <strong style="color: #e74c3c;">אם אינך מסוגל לצפות בתמונות קשות &mdash; אל תכנס.</strong>
+        </div>
+        <button class="warning-enter" onclick="enterGallery()">&#10003; אני מבין ובוחר להיכנס</button>
+        <a class="warning-back" href="index.html">&#8592; חזרה לאתר הראשי</a>
+    </div>
+</div>
+
+<!-- GALLERY CONTENT -->
+<div class="gallery-content" id="galleryContent">
+    <div class="gallery-header">
+        <a class="back-link" href="index.html">&#8592; חזרה לאתר הראשי</a>
+        <h1>גלריה מתקדמת &mdash; תיעוד היסטורי</h1>
+        <p>תמונות ממקורות רשמיים בלבד | לחצו על תמונה להגדלה</p>
+    </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="cat-tabs">
+        <button class="cat-tab active" onclick="showCat('holocaust')">&#10018; השואה</button>
+        <button class="cat-tab" onclick="showCat('oct7')">&#128293; 7 באוקטובר</button>
+        <button class="cat-tab" onclick="showCat('terror')">&#128163; פיגועים</button>
+        <button class="cat-tab" onclick="showCat('antisemitism')">&#10006; אנטישמיות בעולם</button>
+        <button class="cat-tab" onclick="showCat('wars')">&#9876; מלחמות ישראל</button>
+    </div>
+
+    <!-- HOLOCAUST -->
+    <div class="cat-section active" id="cat-holocaust">
+        <h2>&#10018; השואה &mdash; 1933-1945</h2>
+        <div class="adv-gallery-grid">
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Auschwitz_Main_Gate.JPG/960px-Auschwitz_Main_Gate.JPG" alt="שער אושוויץ" loading="lazy">
+                <div class="adv-caption"><strong>שער אושוויץ-בירקנאו</strong>"Arbeit macht frei" &mdash; 1.1 מיליון נרצחו<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Stroop_Report_-_Warsaw_Ghetto_Uprising_06b.jpg/960px-Stroop_Report_-_Warsaw_Ghetto_Uprising_06b.jpg" alt="הילד מגטו ורשה" loading="lazy">
+                <div class="adv-caption"><strong>הילד מגטו ורשה</strong>מתוך דו"ח שטרופ, מרד גטו ורשה 1943<span class="source-tag"> | NARA, Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Judenstern_JMW.jpg/960px-Judenstern_JMW.jpg" alt="טלאי צהוב" loading="lazy">
+                <div class="adv-caption"><strong>הכוכב הצהוב &mdash; "Jude"</strong>סימון יהודים לפני שליחה למחנות<span class="source-tag"> | Jewish Museum Vienna, CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Interior_view_of_the_destroyed_Fasanenstrasse_Synagogue%2C_Berlin.jpg/960px-Interior_view_of_the_destroyed_Fasanenstrasse_Synagogue%2C_Berlin.jpg" alt="בית כנסת שנהרס" loading="lazy">
+                <div class="adv-caption"><strong>בית כנסת פזאננשטראסה, ברלין</strong>נהרס בליל הבדולח, 9 בנובמבר 1938<span class="source-tag"> | Bundesarchiv, Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Buchenwald_Slave_Laborers_Liberation.jpg/960px-Buchenwald_Slave_Laborers_Liberation.jpg" alt="שחרור בוכנוולד" loading="lazy">
+                <div class="adv-caption"><strong>שחרור מחנה בוכנוולד</strong>16 באפריל 1945. אלי ויזל בשורה השנייה<span class="source-tag"> | US Army, Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Shoes_of_victims_of_Auschwitz_-_5.JPG/960px-Shoes_of_victims_of_Auschwitz_-_5.JPG" alt="נעליים אושוויץ" loading="lazy">
+                <div class="adv-caption"><strong>נעליים של קורבנות אושוויץ</strong>ערימות נעליים &mdash; כל זוג היה שייך לאדם<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Nuremberg_Trials_retouched.jpg/960px-Nuremberg_Trials_retouched.jpg" alt="משפטי נירנברג" loading="lazy">
+                <div class="adv-caption"><strong>משפטי נירנברג</strong>1945-1946. פושעי מלחמה נאצים עומדים לדין<span class="source-tag"> | US Government, Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Yad_Vashem_BW_2.JPG/960px-Yad_Vashem_BW_2.JPG" alt="יד ושם" loading="lazy">
+                <div class="adv-caption"><strong>יד ושם &mdash; מוזיאון השואה, ירושלים</strong>אתר ההנצחה הגדול בעולם לזכר שישה מיליון<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OCTOBER 7 -->
+    <div class="cat-section" id="cat-oct7">
+        <h2>&#128293; 7 באוקטובר 2023 &mdash; הטבח הגדול ביותר נגד יהודים מאז השואה</h2>
+        <div class="adv-gallery-grid">
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dolphinarium_Massacre_memorial_in_Tel_Aviv.JPG/960px-Dolphinarium_Massacre_memorial_in_Tel_Aviv.JPG" alt="אנדרטת הדולפינריום" loading="lazy">
+                <div class="adv-caption"><strong>אנדרטת זיכרון &mdash; טבח הדולפינריום</strong>תל אביב, 1 ביוני 2001. 21 נרצחו, רובם נערים<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/IronDome-intercepted-rockets-over-Tel-Aviv-2014-07-24.jpg/960px-IronDome-intercepted-rockets-over-Tel-Aviv-2014-07-24.jpg" alt="יירוט כיפת ברזל" loading="lazy">
+                <div class="adv-caption"><strong>כיפת ברזל מיירטת רקטות מעל תל אביב</strong>24 ביולי 2014, מבצע צוק איתן<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+        </div>
+        <p style="color:#888; margin-top:20px; font-style:italic;">* תמונות רשמיות מ-7 באוקטובר מוגנות בזכויות יוצרים וטרם הועלו ל-Wikimedia Commons. כשתמונות חופשיות יהיו זמינות, הן יתווספו כאן. בינתיים, ניתן לצפות בעדויות ב-<a href="https://www.oct7map.com" target="_blank" style="color:#e2b714;">oct7map.com</a></p>
+    </div>
+
+    <!-- TERROR ATTACKS -->
+    <div class="cat-section" id="cat-terror">
+        <h2>&#128163; פיגועי טרור נגד ישראל</h2>
+        <div class="adv-gallery-grid">
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Memorial_plaque_to_the_victims_of_sbarrow_terror_attack.jpg/960px-Memorial_plaque_to_the_victims_of_sbarrow_terror_attack.jpg" alt="פיגוע סבארו" loading="lazy">
+                <div class="adv-caption"><strong>לוח זיכרון &mdash; פיגוע סבארו, ירושלים</strong>9 באוגוסט 2001. מחבל מתאבד הרג 15 אנשים, ביניהם 7 ילדים<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dolphinarium_Massacre_memorial_in_Tel_Aviv.JPG/960px-Dolphinarium_Massacre_memorial_in_Tel_Aviv.JPG" alt="טבח הדולפינריום" loading="lazy">
+                <div class="adv-caption"><strong>אנדרטת טבח הדולפינריום</strong>1 ביוני 2001, תל אביב. 21 נרצחו ברובם נערים בני 14-17<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Autobus_v_Haif%C4%9B.jpg/960px-Autobus_v_Haif%C4%9B.jpg" alt="פיגוע אוטובוס חיפה" loading="lazy">
+                <div class="adv-caption"><strong>שרידי אוטובוס &mdash; פיגוע בחיפה</strong>האינתיפאדה השנייה. מאות ישראלים נרצחו בפיגועי התאבדות באוטובוסים<span class="source-tag"> | Wikimedia Commons</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANTISEMITISM WORLDWIDE -->
+    <div class="cat-section" id="cat-antisemitism">
+        <h2>&#10006; אנטישמיות בעולם</h2>
+        <div class="adv-gallery-grid">
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Pittsburgh_Synagogue_Shooting_Victims_Plaque.jpg/960px-Pittsburgh_Synagogue_Shooting_Victims_Plaque.jpg" alt="פיגוע פיטסבורג" loading="lazy">
+                <div class="adv-caption"><strong>לוח זיכרון &mdash; טבח בית הכנסת בפיטסבורג</strong>27 באוקטובר 2018. 11 נרצחו ב-Tree of Life<span class="source-tag"> | Wikimedia Commons CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Rassemblement_Charlie_Hebdo_Paris_7_janvier_2015_02.JPG/960px-Rassemblement_Charlie_Hebdo_Paris_7_janvier_2015_02.JPG" alt="עצרת שארלי הבדו" loading="lazy">
+                <div class="adv-caption"><strong>עצרת "Je suis Charlie" בפריז</strong>ינואר 2015. מחבל רצח 4 יהודים בסופר היפר כשר<span class="source-tag"> | Wikimedia Commons</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Protocols_of_the_Elders_of_Zion_by_Nilus_%281912%29.jpg" alt="הפרוטוקולים" loading="lazy">
+                <div class="adv-caption"><strong>"הפרוטוקולים של זקני ציון"</strong>מהדורת נילוס 1912. הזיוף האנטישמי המפורסם ביותר בהיסטוריה<span class="source-tag"> | Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Antisemiticroths.jpg/960px-Antisemiticroths.jpg" alt="קריקטורה אנטישמית" loading="lazy">
+                <div class="adv-caption"><strong>קריקטורה אנטישמית &mdash; רוטשילד אוחז בעולם</strong>1898. תעמולת "היהודים שולטים בעולם" שמופצת עד היום<span class="source-tag"> | Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Destroyed_Elmshorn_Synagogue_%284408612203%29.jpg" alt="בית כנסת שנהרס" loading="lazy">
+                <div class="adv-caption"><strong>בית כנסת אלמסהורן שנהרס</strong>ליל הבדולח, נובמבר 1938. 1,400 בתי כנסת הושמדו ברחבי גרמניה<span class="source-tag"> | Wikimedia Commons</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ISRAEL'S WARS -->
+    <div class="cat-section" id="cat-wars">
+        <h2>&#9876; מלחמות ישראל</h2>
+        <div class="adv-gallery-grid">
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Declaration_of_State_of_Israel_1948.jpg/960px-Declaration_of_State_of_Israel_1948.jpg" alt="הכרזת העצמאות" loading="lazy">
+                <div class="adv-caption"><strong>הכרזת העצמאות, 14 במאי 1948</strong>דוד בן-גוריון מכריז על הקמת מדינת ישראל<span class="source-tag"> | GPO, Public Domain</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/IDF_Paratroopers_surrounding_the_chief_of_staff_rabbi_Shlomo_Goren_at_Jerusalem%27s_Western_Wall.jpg/960px-IDF_Paratroopers_surrounding_the_chief_of_staff_rabbi_Shlomo_Goren_at_Jerusalem%27s_Western_Wall.jpg" alt="צנחנים בכותל" loading="lazy">
+                <div class="adv-caption"><strong>צנחנים בכותל המערבי, 7 ביוני 1967</strong>הרב שלמה גורן תוקע בשופר. ירושלים שוחררה<span class="source-tag"> | GPO CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/IDF_Centurion_Tanks_in_a_Firing_Line%2C_Yom_Kippur_War%2C_13_October_1973.jpg/960px-IDF_Centurion_Tanks_in_a_Firing_Line%2C_Yom_Kippur_War%2C_13_October_1973.jpg" alt="מלחמת יום הכיפורים" loading="lazy">
+                <div class="adv-caption"><strong>טנקי צנטוריון, מלחמת יום הכיפורים</strong>13 באוקטובר 1973. ישראל הופתעה ונלחמה על חייה<span class="source-tag"> | IDF Archives</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Flickr_-_Government_Press_Office_%28GPO%29_-_Hostages_Rescued_from_Entebbe_Airport.jpg/960px-Flickr_-_Government_Press_Office_%28GPO%29_-_Hostages_Rescued_from_Entebbe_Airport.jpg" alt="מבצע אנטבה" loading="lazy">
+                <div class="adv-caption"><strong>חטופים ניצלו &mdash; מבצע אנטבה</strong>4 ביולי 1976. 102 בני ערובה חולצו מאוגנדה<span class="source-tag"> | GPO CC BY-SA</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Operation_Solomon_IDF_Archives_XVII.jpg" alt="מבצע שלמה" loading="lazy">
+                <div class="adv-caption"><strong>מבצע שלמה &mdash; עליית יהודי אתיופיה</strong>מאי 1991. 14,325 יהודים הוטסו ב-36 שעות<span class="source-tag"> | IDF Archives</span></div>
+            </div>
+            <div class="adv-gallery-item" onclick="openLB(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Iron_Dome_near_Sderot.jpg/960px-Iron_Dome_near_Sderot.jpg" alt="כיפת ברזל" loading="lazy">
+                <div class="adv-caption"><strong>סוללת כיפת ברזל ליד שדרות</strong>מערכת ההגנה שהצילה אלפי חיים<span class="source-tag"> | CC BY-SA 3.0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align:center; margin-top:40px; padding-top:20px; border-top:1px solid rgba(226,183,20,0.1);">
+        <p style="color:#888; font-size:0.85em;">כל התמונות מגיעות ממקורות פומביים ברישיון חופשי: Wikimedia Commons, לשכת העיתונות הממשלתית (GPO), ארכיון צה"ל, NARA.<br>תמונות מוצגות לצורך תיעוד היסטורי ומודעות בלבד.</p>
+        <a class="back-link" href="index.html" style="margin-top:15px;">&#8592; חזרה לאתר הראשי</a>
+    </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" onclick="closeLB()">&#10005;</button>
+    <button class="lightbox-nav lightbox-next" onclick="navLB(-1)">&#10094;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="navLB(1)">&#10095;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lightbox-caption" id="lb-caption"></div>
+</div>
+
+<script>
+// Warning gate
+function enterGallery() {
+    document.getElementById('warningGate').style.display = 'none';
+    document.getElementById('galleryContent').classList.add('visible');
+}
+
+// Category tabs
+function showCat(cat) {
+    document.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('cat-' + cat).classList.add('active');
+    event.target.classList.add('active');
+}
+
+// Lightbox
+let lbItems = [];
+let lbIdx = 0;
+function openLB(el) {
+    const activeCat = document.querySelector('.cat-section.active');
+    lbItems = Array.from(activeCat.querySelectorAll('.adv-gallery-item'));
+    lbIdx = lbItems.indexOf(el);
+    showLB();
+}
+function showLB() {
+    const item = lbItems[lbIdx];
+    document.getElementById('lb-img').src = item.querySelector('img').src;
+    document.getElementById('lb-caption').innerHTML = item.querySelector('.adv-caption').innerHTML;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLB() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+function navLB(dir) {
+    lbIdx = (lbIdx + dir + lbItems.length) % lbItems.length;
+    showLB();
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLB();
+});
+document.addEventListener('keydown', function(e) {
+    if (!document.getElementById('lightbox').classList.contains('active')) return;
+    if (e.key === 'Escape') closeLB();
+    if (e.key === 'ArrowRight') navLB(-1);
+    if (e.key === 'ArrowLeft') navLB(1);
+});
+</script>
+
+</body>
+</html>
