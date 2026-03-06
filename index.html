@@ -502,8 +502,13 @@
 
         /* === MOBILE === */
         @media (max-width: 768px) {
-            .nav-search { max-width: 180px; }
-            .nav-search input { padding: 7px 12px; font-size: 0.85em; }
+            nav { padding: 0 12px; }
+            .nav-inner { gap: 8px; }
+            .nav-logo { font-size: 1.05em; }
+            .nav-search { display: none; }
+            .nav-donate { font-size: 0.8em; padding: 5px 10px; }
+            .lang-toggle-text { display: none; }
+            .lang-toggle { padding: 6px 10px; }
             .hero h1 { font-size: 2.2em; }
             .hero-stats { gap: 20px; }
             .stat-number { font-size: 1.8em; }
@@ -519,8 +524,6 @@
             }
             .section-header h2 { font-size: 1.7em; }
             .intro-card { padding: 25px; }
-            .lang-toggle-text { display: none; }
-            .lang-toggle { padding: 8px 16px; }
             .region-card { padding: 20px; }
         }
         #google_translate_element {
