@@ -32,42 +32,102 @@
             padding: 0 20px;
         }
         .nav-inner {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: center;
             height: 60px;
+            gap: 12px;
         }
         .nav-logo {
             color: #e2b714;
             font-size: 1.3em;
             font-weight: bold;
             text-decoration: none;
+            white-space: nowrap;
+        }
+        .nav-menu-wrapper {
+            position: relative;
+        }
+        .hamburger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            color: #e2b714;
+            font-size: 1.4em;
+            width: 44px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .hamburger:hover {
+            background: rgba(226, 183, 20, 0.15);
+            border-color: #e2b714;
         }
         .nav-links {
-            display: flex;
-            gap: 25px;
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: rgba(10, 10, 26, 0.98);
+            border: 1px solid rgba(226, 183, 20, 0.2);
+            border-radius: 0 0 12px 12px;
+            padding: 8px 0;
             list-style: none;
-            flex-wrap: wrap;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 100;
+            backdrop-filter: blur(10px);
         }
-        .nav-links a {
-            color: #a0a0a0;
+        .nav-links.open {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-links li a {
+            color: #c0c0c0;
             text-decoration: none;
             font-size: 0.95em;
-            transition: color 0.3s;
+            padding: 11px 25px;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(226, 183, 20, 0.06);
         }
-        .nav-links a:hover { color: #e2b714; }
-
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
+        .nav-links li:last-child a { border-bottom: none; }
+        .nav-links li a:hover {
             color: #e2b714;
-            font-size: 1.8em;
-            min-width: 44px;
-            min-height: 44px;
-            cursor: pointer;
+            background: rgba(226, 183, 20, 0.08);
+        }
+        .nav-search {
+            flex: 1;
+            max-width: 320px;
+        }
+        .nav-search input {
+            width: 100%;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            background: rgba(226, 183, 20, 0.06);
+            color: #e2b714;
+            font-family: inherit;
+            font-size: 0.9em;
+            outline: none;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .nav-search input::placeholder {
+            color: rgba(226, 183, 20, 0.4);
+        }
+        .nav-search input:focus {
+            border-color: #e2b714;
+            background: rgba(226, 183, 20, 0.1);
+        }
+        .search-highlight {
+            outline: 2px solid #e2b714;
+            outline-offset: 4px;
+            border-radius: 4px;
         }
 
         /* === HERO === */
@@ -437,19 +497,8 @@
 
         /* === MOBILE === */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-links.open {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                left: 0;
-                background: rgba(10, 10, 26, 0.98);
-                padding: 20px;
-                gap: 15px;
-            }
-            .hamburger { display: block; }
+            .nav-search { max-width: 180px; }
+            .nav-search input { padding: 7px 12px; font-size: 0.85em; }
             .hero h1 { font-size: 2.2em; }
             .hero-stats { gap: 20px; }
             .stat-number { font-size: 1.8em; }
@@ -465,7 +514,7 @@
             }
             .section-header h2 { font-size: 1.7em; }
             .intro-card { padding: 25px; }
-            .nav-links.open a { padding: 10px 0; }
+            .lang-toggle-text { display: none; }
             .lang-toggle { padding: 8px 16px; }
             .region-card { padding: 20px; }
         }
@@ -866,19 +915,24 @@
 <nav>
     <div class="nav-inner">
         <a href="#" class="nav-logo">האמת נגד השקר</a>
-        <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
-        <div class="lang-dropdown">
-            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; שפה / Language</button>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#about">מה זה אנטישמיות?</a></li>
+                <li><a href="#claims">עלילות והפרכות</a></li>
+                <li><a href="#lies">שקרים נפוצים</a></li>
+                <li><a href="#timeline">ציר זמן</a></li>
+                <li><a href="#psychology">הפסיכולוגיה</a></li>
+                <li><a href="#regions">שנאה לפי עמים</a></li>
+                <li><a href="#youtube">צפה והתעדכן</a></li>
+            </ul>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about">מה זה אנטישמיות?</a></li>
-            <li><a href="#claims">עלילות והפרכות</a></li>
-            <li><a href="#timeline">ציר זמן</a></li>
-            <li><a href="#psychology">הפסיכולוגיה</a></li>
-            <li><a href="#regions">שנאה לפי עמים</a></li>
-            <li><a href="#lies">שקרים נפוצים</a></li>
-            <li><a href="#youtube">צפה והתעדכן</a></li>
-        </ul>
+        <div class="nav-search">
+            <input type="text" id="siteSearch" placeholder="חיפוש באתר..." onkeydown="if(event.key==='Enter')searchSite()">
+        </div>
+        <div class="lang-dropdown">
+            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; <span class="lang-toggle-text">שפה / Language</span></button>
+        </div>
     </div>
 </nav>
 
@@ -2928,14 +2982,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Close mobile menu on click outside
+// Close menu on click outside
 document.addEventListener('click', function(e) {
     const nav = document.querySelector('.nav-links');
-    const hamburger = document.querySelector('.hamburger');
-    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+    const wrapper = document.querySelector('.nav-menu-wrapper');
+    if (!wrapper.contains(e.target)) {
         nav.classList.remove('open');
     }
 });
+
+// Site search
+let searchMatches = [];
+let searchIdx = -1;
+
+function searchSite() {
+    const query = document.getElementById('siteSearch').value.trim();
+    if (!query) return;
+    document.querySelectorAll('.search-highlight').forEach(el => el.classList.remove('search-highlight'));
+    searchMatches = [];
+    document.querySelectorAll('h2, h3, h4, p, .claim-header span, .lie-card h3, .timeline-content h3, .region-card h3, .intro-card p, .stat-label, li').forEach(el => {
+        if (el.textContent.includes(query)) searchMatches.push(el);
+    });
+    if (searchMatches.length === 0) {
+        document.getElementById('siteSearch').style.borderColor = '#e74c3c';
+        setTimeout(() => document.getElementById('siteSearch').style.borderColor = '', 1500);
+        return;
+    }
+    searchIdx = (searchIdx + 1) % searchMatches.length;
+    const el = searchMatches[searchIdx];
+    el.classList.add('search-highlight');
+    const claim = el.closest('.claim-card');
+    if (claim && !claim.classList.contains('open')) claim.classList.add('open');
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => el.classList.remove('search-highlight'), 3000);
+}
 
 // Back to top button visibility
 window.addEventListener('scroll', function() {
