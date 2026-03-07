@@ -563,22 +563,38 @@ async function handleAdminLogin() {
     var email = document.getElementById('adminEmail').value;
     var password = document.getElementById('adminPassword').value;
     var errEl = document.getElementById('loginError');
-    errEl.textContent = '';
+    errEl.textContent = 'מתחבר...';
     try {
-        await talSignIn(email, password);
-        var profile = await getUserProfile();
-        if (!profile || profile.role !== 'admin') {
+        var signInResult = await talSignIn(email, password);
+        var user = await getCurrentUser();
+        if (!user) {
+            errEl.textContent = 'DEBUG: No user after login';
+            return;
+        }
+        // Try direct query with detailed error
+        var profileResult = await _supabase
+            .from('profiles')
+            .select('*')
+            .eq('id', user.id)
+            .single();
+
+        if (profileResult.error) {
+            errEl.textContent = 'DEBUG profile error: ' + profileResult.error.message + ' | code: ' + profileResult.error.code;
+            return;
+        }
+        var profile = profileResult.data;
+        if (!profile) {
+            errEl.textContent = 'DEBUG: profile is null, user.id=' + user.id;
+            return;
+        }
+        if (profile.role !== 'admin') {
             await talSignOut();
-            errEl.textContent = 'גישה נדחתה — חשבון זה אינו מנהל';
+            errEl.textContent = 'DEBUG: role=' + profile.role + ' email=' + profile.email;
             return;
         }
         showDashboard(profile);
     } catch (e) {
-        if (e.message === 'BLOCKED') {
-            errEl.textContent = 'החשבון שלך חסום';
-        } else {
-            errEl.textContent = 'שגיאה: אימייל או סיסמה שגויים';
-        }
+        errEl.textContent = 'DEBUG catch: ' + e.message;
     }
 }
 
