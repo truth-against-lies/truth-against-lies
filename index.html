@@ -139,6 +139,90 @@
             background: rgba(226, 183, 20, 0.3);
             border-color: #e2b714;
         }
+        .nav-auth-btn {
+            padding: 6px 14px;
+            background: rgba(226, 183, 20, 0.08);
+            border: 1px solid rgba(226, 183, 20, 0.25);
+            color: #e2b714;
+            font-size: 0.85em;
+            font-weight: bold;
+            border-radius: 3px;
+            white-space: nowrap;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .nav-auth-btn:hover {
+            background: rgba(226, 183, 20, 0.2);
+            border-color: #e2b714;
+        }
+        /* AUTH MODAL */
+        .auth-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 10, 26, 0.97);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 30px 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .auth-modal.open { display: flex; }
+        .auth-modal-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: none;
+            border: 1px solid #e2b714;
+            color: #e2b714;
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            font-size: 1.3em;
+            cursor: pointer;
+        }
+        .auth-tab { display: none; max-width: 400px; width: 100%; }
+        .auth-tab.active { display: block; }
+        .auth-tab h2 { color: #e2b714; text-align: center; margin-bottom: 25px; }
+        .auth-form { display: flex; flex-direction: column; gap: 15px; }
+        .auth-form input {
+            padding: 12px 16px;
+            background: rgba(226, 183, 20, 0.06);
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            color: #e0e0e0;
+            border-radius: 3px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        .auth-form input:focus { outline: none; border-color: #e2b714; }
+        .auth-form button {
+            padding: 14px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 3px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .auth-form button:hover { background: #f0c830; }
+        .auth-switch { color: #888; text-align: center; font-size: 0.9em; }
+        .auth-switch a { color: #e2b714; cursor: pointer; text-decoration: underline; }
+        .auth-msg { text-align: center; font-size: 0.9em; min-height: 1.2em; }
+        .auth-msg.error { color: #e74c3c; }
+        .auth-msg.success { color: #2ecc71; }
+        /* PROTECTED CONTENT */
+        .protected-card {
+            background: #12172b;
+            border: 1px solid rgba(226, 183, 20, 0.15);
+            border-right: 3px solid #e2b714;
+            border-radius: 3px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        .protected-card h3 { color: #e2b714; margin-bottom: 10px; }
+        .protected-card p { color: #c0c0c0; }
         .search-highlight {
             outline: 2px solid #e2b714;
             outline-offset: 4px;
@@ -506,7 +590,7 @@
             .nav-inner { gap: 8px; }
             .nav-logo { font-size: 1.05em; }
             .nav-search { display: none; }
-            .nav-donate { font-size: 0.8em; padding: 5px 10px; }
+            .nav-donate, .nav-auth-btn { font-size: 0.8em; padding: 5px 10px; }
             .lang-toggle-text { display: none; }
             .lang-toggle { padding: 6px 10px; }
             .hero h1 { font-size: 2.2em; }
@@ -1247,6 +1331,8 @@
             .str-stat { min-width: 100px; }
         }
     </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
 </head>
 <body>
 
@@ -1274,6 +1360,7 @@
             <input type="text" id="siteSearch" placeholder="חיפוש באתר..." onkeydown="if(event.key==='Enter')searchSite()">
         </div>
         <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+        <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
         <div class="lang-dropdown">
             <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; <span class="lang-toggle-text">שפה / Language</span></button>
         </div>
@@ -1364,6 +1451,39 @@
         <a class="lang-option" onclick="goTranslate('ha')">&#127475;&#127468; Hausa</a>
         <a class="lang-option" onclick="goTranslate('so')">&#127480;&#127476; Soomaali</a>
         <a class="lang-option" onclick="goTranslate('rw')">&#127479;&#127484; Kinyarwanda</a>
+    </div>
+</div>
+
+<!-- AUTH MODAL -->
+<div id="authModal" class="auth-modal">
+    <button class="auth-modal-close" onclick="closeAuthModal()">&#10005;</button>
+    <div id="authLoginTab" class="auth-tab active">
+        <h2>&#128100; התחברות</h2>
+        <div class="auth-form">
+            <input type="email" id="loginEmail" placeholder="אימייל" autocomplete="email">
+            <input type="password" id="loginPassword" placeholder="סיסמה" autocomplete="current-password">
+            <button onclick="handleLogin()">התחבר</button>
+            <p class="auth-switch">אין לך חשבון? <a onclick="showAuthTab('register')">הרשמה</a></p>
+            <p id="loginMsg" class="auth-msg"></p>
+        </div>
+    </div>
+    <div id="authRegisterTab" class="auth-tab">
+        <h2>&#9998; הרשמה</h2>
+        <div class="auth-form">
+            <input type="text" id="regName" placeholder="שם תצוגה">
+            <input type="email" id="regEmail" placeholder="אימייל" autocomplete="email">
+            <input type="password" id="regPassword" placeholder="סיסמה (לפחות 6 תווים)" autocomplete="new-password">
+            <button onclick="handleRegister()">הירשם</button>
+            <p class="auth-switch">כבר יש לך חשבון? <a onclick="showAuthTab('login')">התחברות</a></p>
+            <p id="regMsg" class="auth-msg"></p>
+        </div>
+    </div>
+    <div id="authLoggedIn" class="auth-tab">
+        <h2>&#128075; שלום, <span id="authUserName"></span></h2>
+        <p style="text-align:center;color:#888;margin-bottom:20px;">אתה מחובר ויכול לראות תוכן בלעדי</p>
+        <div style="text-align:center;">
+            <button onclick="handleLogout()" style="padding:12px 30px;background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;border-radius:3px;cursor:pointer;font-family:inherit;font-size:1em;">התנתק</button>
+        </div>
     </div>
 </div>
 
@@ -3975,6 +4095,14 @@ function applyTranslation(t) {
     </div>
 </section>
 
+<!-- PROTECTED CONTENT (visible only to logged-in users) -->
+<section id="protectedContentArea" style="display:none; max-width: 900px; margin: 60px auto; padding: 0 20px;">
+    <div class="section-header">
+        <h2 style="color: #e2b714;">&#128274; תוכן בלעדי לחברים</h2>
+        <div class="section-divider"></div>
+    </div>
+</section>
+
 </main>
 
 <!-- FOOTER -->
@@ -4164,6 +4292,125 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'ArrowLeft') navLightbox(1);
 });
 
+</script>
+
+<script>
+// ========== PAGE TRACKING ==========
+trackPageView('index');
+
+// ========== AUTH MODAL ==========
+function toggleAuthModal() {
+    document.getElementById('authModal').classList.toggle('open');
+}
+function closeAuthModal() {
+    document.getElementById('authModal').classList.remove('open');
+}
+function showAuthTab(tab) {
+    document.querySelectorAll('.auth-tab').forEach(function(t) { t.classList.remove('active'); });
+    if (tab === 'login') document.getElementById('authLoginTab').classList.add('active');
+    else if (tab === 'register') document.getElementById('authRegisterTab').classList.add('active');
+    else if (tab === 'loggedin') document.getElementById('authLoggedIn').classList.add('active');
+}
+
+async function handleLogin() {
+    var email = document.getElementById('loginEmail').value;
+    var password = document.getElementById('loginPassword').value;
+    var msg = document.getElementById('loginMsg');
+    msg.textContent = '';
+    msg.className = 'auth-msg';
+    try {
+        await talSignIn(email, password);
+        msg.textContent = 'מחובר!';
+        msg.classList.add('success');
+        updateAuthUI();
+        setTimeout(closeAuthModal, 1000);
+    } catch (e) {
+        if (e.message === 'BLOCKED') {
+            msg.textContent = 'החשבון שלך חסום.';
+        } else {
+            msg.textContent = 'שגיאה: אימייל או סיסמה שגויים';
+        }
+        msg.classList.add('error');
+    }
+}
+
+async function handleRegister() {
+    var name = document.getElementById('regName').value;
+    var email = document.getElementById('regEmail').value;
+    var password = document.getElementById('regPassword').value;
+    var msg = document.getElementById('regMsg');
+    msg.textContent = '';
+    msg.className = 'auth-msg';
+    if (password.length < 6) {
+        msg.textContent = 'הסיסמה חייבת להיות לפחות 6 תווים';
+        msg.classList.add('error');
+        return;
+    }
+    try {
+        await talSignUp(email, password, name);
+        msg.textContent = 'נרשמת בהצלחה!';
+        msg.classList.add('success');
+        updateAuthUI();
+        setTimeout(closeAuthModal, 1500);
+    } catch (e) {
+        msg.textContent = 'שגיאה: ' + e.message;
+        msg.classList.add('error');
+    }
+}
+
+async function handleLogout() {
+    await talSignOut();
+    updateAuthUI();
+    closeAuthModal();
+}
+
+async function updateAuthUI() {
+    var user = await getCurrentUser();
+    var btn = document.getElementById('authBtn');
+    if (user) {
+        var profile = await getUserProfile();
+        var name = profile ? profile.display_name : user.email;
+        btn.innerHTML = '&#128100; ' + name;
+        document.getElementById('authUserName').textContent = name;
+        showAuthTab('loggedin');
+        loadAndDisplayProtectedContent();
+    } else {
+        btn.innerHTML = '&#128100; הרשמה';
+        showAuthTab('login');
+        hideProtectedContent();
+    }
+}
+
+async function loadAndDisplayProtectedContent() {
+    var content = await loadProtectedContent();
+    var container = document.getElementById('protectedContentArea');
+    if (!container || content.length === 0) {
+        if (container) container.style.display = 'none';
+        return;
+    }
+    container.style.display = 'block';
+    // Keep the header, clear content after it
+    var header = container.querySelector('.section-header');
+    container.innerHTML = '';
+    if (header) container.appendChild(header);
+    content.forEach(function(item) {
+        var div = document.createElement('div');
+        div.className = 'protected-card fade-in';
+        div.innerHTML = '<h3>' + item.title + '</h3>' + item.content_html;
+        container.appendChild(div);
+    });
+}
+
+function hideProtectedContent() {
+    var container = document.getElementById('protectedContentArea');
+    if (container) {
+        container.style.display = 'none';
+    }
+}
+
+// Init auth state
+updateAuthUI();
+onAuthChange(function() { updateAuthUI(); });
 </script>
 
 </body>
