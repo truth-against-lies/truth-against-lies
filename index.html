@@ -358,6 +358,89 @@
             border-radius: 2px;
         }
 
+        /* === WELCOME SECTION === */
+        .welcome-section {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 25px 50px;
+        }
+        .welcome-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .welcome-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 12px;
+        }
+        .welcome-header p {
+            color: #999;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        .welcome-letter {
+            background: rgba(22, 33, 62, 0.6);
+            border: 1px solid rgba(226, 183, 20, 0.15);
+            border-radius: 6px;
+            padding: 35px 30px;
+            margin-bottom: 30px;
+            line-height: 1.9;
+            color: #ccc;
+            font-size: 1.02em;
+        }
+        .welcome-letter p { margin-bottom: 14px; }
+        .welcome-letter p:last-child { margin-bottom: 0; }
+        .welcome-letter strong { color: #e2b714; }
+        .welcome-topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .welcome-topic {
+            background: rgba(18, 23, 43, 0.8);
+            border: 1px solid rgba(226, 183, 20, 0.12);
+            border-radius: 4px;
+            padding: 18px 15px;
+            text-align: center;
+        }
+        .welcome-topic .wt-icon { font-size: 1.6em; margin-bottom: 8px; }
+        .welcome-topic .wt-title { color: #e2b714; font-size: 0.95em; font-weight: bold; margin-bottom: 5px; }
+        .welcome-topic .wt-desc { color: #999; font-size: 0.82em; line-height: 1.5; }
+        .welcome-note {
+            background: rgba(226, 183, 20, 0.04);
+            border-right: 3px solid #e2b714;
+            padding: 20px 22px;
+            margin-top: 25px;
+            color: #bbb;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+        .welcome-note .note-sign { color: #e2b714; font-weight: bold; margin-top: 12px; }
+        .welcome-start {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .welcome-start a {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(135deg, #e2b714, #c9a012);
+            color: #0a0a1a;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .welcome-start a:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(226, 183, 20, 0.25); }
+        @media (max-width: 768px) {
+            .welcome-topics { grid-template-columns: repeat(2, 1fr); }
+            .welcome-letter { padding: 25px 20px; }
+        }
+        @media (max-width: 480px) {
+            .welcome-topics { grid-template-columns: 1fr; }
+        }
+
         /* === INTRO SECTION === */
         .intro-section {
             padding: 60px 0;
@@ -1228,7 +1311,7 @@
             </div>
         </div>
 
-        <a href="#claims" class="hero-cta">גלו את האמת &#x2193;</a>
+        <a href="#welcome" class="hero-cta">גלו את האמת &#x2193;</a>
 
         <div style="margin-top: 20px;">
             <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')" style="font-size: 1em; padding: 10px 25px;">&#127760; Read in 75+ Languages / קראו ב-75+ שפות</button>
@@ -1291,6 +1374,76 @@ function goOriginal() {
 </script>
 
 <main>
+
+<!-- WELCOME SECTION -->
+<section class="welcome-section" id="welcome">
+    <div class="welcome-header">
+        <h2>לפני שמתחילים &mdash; מילה אישית</h2>
+        <p>האתר הזה נולד מתוך כאב, אהבה וצורך אמיתי. קחו רגע לקרוא.</p>
+    </div>
+
+    <div class="welcome-letter">
+        <p>שלום.</p>
+        <p>אם הגעת לכאן, סביר להניח שאתה יהודי שמרגיש שמשהו קורה בעולם. או שאתה אדם שרוצה להבין מה באמת קורה &mdash; מעבר לכותרות.</p>
+        <p><strong>האתר הזה לא נבנה מתוך שנאה.</strong> הוא נבנה מתוך אהבה לעם שלנו, ומתוך סירוב לקבל שקרים בשקט. הוא נבנה כי יש דברים שכל יהודי חייב לדעת &mdash; על ההיסטוריה שלנו, על האויבים שלנו, על הכוח שלנו, ועל האמת שמנסים למחוק.</p>
+        <p>חלק מהתוכן כאן <strong>קשה.</strong> הוא מדבר על טבחות, על שואה, על 7 באוקטובר, על שנאה שלא נגמרת. זה מכוון. <strong>כי האמת קשה &mdash; אבל בורות קשה יותר.</strong></p>
+        <p>אבל האתר הזה הוא הרבה יותר מתיעוד כאב. הוא גם מדבר על <strong>גבורה, תרומה עצומה לאנושות, אחדות, ושרידות של 3,500 שנה</strong> שאף עם אחר בהיסטוריה לא חווה.</p>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 10px;">
+        <h3 style="color: #e2b714; font-size: 1.3em;">מה תמצאו באתר</h3>
+    </div>
+
+    <div class="welcome-topics">
+        <div class="welcome-topic">
+            <div class="wt-icon">&#10060;</div>
+            <div class="wt-title">שקרים והפרכות</div>
+            <div class="wt-desc">34 עלילות אנטישמיות נפוצות &mdash; מופרכות בעובדות</div>
+        </div>
+        <div class="welcome-topic">
+            <div class="wt-icon">&#128336;</div>
+            <div class="wt-title">2,500 שנות היסטוריה</div>
+            <div class="wt-desc">ציר זמן מלא של אנטישמיות מהעולם העתיק ועד היום</div>
+        </div>
+        <div class="welcome-topic">
+            <div class="wt-icon">&#128293;</div>
+            <div class="wt-title">7 באוקטובר</div>
+            <div class="wt-desc">ניתוח מעמיק &mdash; ציר זמן, יישובים, חטופים, גבורה</div>
+        </div>
+        <div class="welcome-topic">
+            <div class="wt-icon">&#127775;</div>
+            <div class="wt-title">מה נתנו לעולם</div>
+            <div class="wt-desc">0.2% מהאנושות, 25% מפרסי נובל, חידושים שהצילו מיליונים</div>
+        </div>
+        <div class="welcome-topic">
+            <div class="wt-icon">&#129309;</div>
+            <div class="wt-title">אחדות העם</div>
+            <div class="wt-desc">מה מפלג אותנו, מה מאחד אותנו, ומה כל אחד יכול לעשות</div>
+        </div>
+        <div class="welcome-topic">
+            <div class="wt-icon">&#127760;</div>
+            <div class="wt-title">אנטישמיות לפי עמים</div>
+            <div class="wt-desc">כל חברה פיתחה את הגרסה שלה לשנאת יהודים</div>
+        </div>
+    </div>
+
+    <div class="welcome-letter">
+        <p><strong>למי האתר הזה?</strong></p>
+        <p>לכל יהודי שרוצה להכיר את ההיסטוריה שלו &mdash; גם את הפרקים הקשים, גם את הפרקים המפוארים. ליהודי שמתבייש ולא יודע למה, וליהודי שגאה ורוצה לדעת עוד יותר.</p>
+        <p>לכל אדם &mdash; מכל דת, לאום ורקע &mdash; שרוצה <strong>לשמוע את הצד שלא מספרים לו.</strong> שרוצה עובדות ולא סיסמאות. שמוכן להתמודד עם מורכבות.</p>
+        <p>ולכל מי שמאמין שהאמת היא הנשק הכי חזק נגד השנאה.</p>
+    </div>
+
+    <div class="welcome-note">
+        <p>אני יצרתי את האתר הזה לבד. לא ארגון, לא ממשלה, לא תקציב. רק אדם אחד שמסרב לשתוק. כי אם לא עכשיו &mdash; אימתי. וכי שמי נתנאל, ומשמעות השם הזה היא <strong>&laquo;נתן אל&raquo; &mdash; מתנה מאלוהים.</strong> ואני מאמין שהאמת היא מתנה שצריך לתת הלאה.</p>
+        <p>הכל כאן מבוסס על מקורות אקדמיים, מחקרים בינלאומיים, ועובדות מוכחות. שום דעה לא מוצגת כעובדה. אבל העובדות מדברות בעד עצמן.</p>
+        <p class="note-sign">&mdash; נתנאל אסיס, יוצר האתר</p>
+    </div>
+
+    <div class="welcome-start">
+        <a href="#about">מוכנים? בואו נתחיל &#8595;</a>
+    </div>
+</section>
 
 <!-- ABOUT SECTION -->
 <section id="about" class="intro-section">
