@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 באוקטובר 2023 — ניתוח מעמיק | האמת נגד השקר</title>
+    <meta name="description" content="ניתוח מעמיק של אירועי 7 באוקטובר 2023 — ציר זמן, יישובים, חטופים, גבורה וכשלון מודיעין">
+    <meta name="theme-color" content="#0a0a1a">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(226, 183, 20, 0.3);
+            padding: 0 20px;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            gap: 12px;
+        }
+        .nav-logo {
+            color: #e2b714;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(226, 183, 20, 0.1);
+            border: 1px solid rgba(226, 183, 20, 0.4);
+            border-radius: 8px;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 0.85em;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        .nav-back:hover { background: rgba(226, 183, 20, 0.25); border-color: #e2b714; }
+        .nav-menu-wrapper { position: relative; }
+        .hamburger {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            color: #e2b714;
+            font-size: 1.4em;
+            width: 44px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .hamburger:hover { background: rgba(226, 183, 20, 0.15); border-color: #e2b714; }
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background: rgba(10, 10, 26, 0.98);
+            border: 1px solid rgba(226, 183, 20, 0.2);
+            border-radius: 0 0 3px 3px;
+            padding: 8px 0;
+            list-style: none;
+            min-width: 220px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .nav-links.open { display: flex; flex-direction: column; }
+        .nav-links li a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-size: 0.95em;
+            padding: 11px 25px;
+            display: block;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(226, 183, 20, 0.06);
+        }
+        .nav-links li:last-child a { border-bottom: none; }
+        .nav-links li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
+        .nav-donate {
+            padding: 6px 14px;
+            background: rgba(226, 183, 20, 0.15);
+            border: 1px solid rgba(226, 183, 20, 0.4);
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 0.85em;
+            font-weight: bold;
+            border-radius: 3px;
+            white-space: nowrap;
+            transition: background 0.3s, border-color 0.3s;
+            margin-right: auto;
+        }
+        .nav-donate:hover { background: rgba(226, 183, 20, 0.3); border-color: #e2b714; }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === HERO BANNER === */
+        .hero-banner {
+            text-align: center;
+            padding: 100px 20px 40px;
+            background: linear-gradient(180deg, rgba(10,10,26,1) 0%, rgba(18,23,43,0.8) 50%, rgba(10,10,26,1) 100%);
+            border-bottom: 1px solid rgba(226, 183, 20, 0.15);
+        }
+        .hero-banner h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        .hero-banner .hero-sub {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.7;
+        }
+        .hero-banner .hero-date {
+            display: inline-block;
+            background: rgba(231,76,60,0.15);
+            border: 1px solid rgba(231,76,60,0.4);
+            color: #e74c3c;
+            padding: 8px 25px;
+            border-radius: 3px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        /* === CONTENT CARDS === */
+        .content-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 35px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(226, 183, 20, 0.08);
+            transition: border-color 0.3s;
+        }
+        .content-card:hover {
+            border-color: rgba(226, 183, 20, 0.3);
+        }
+        .content-card h3 {
+            color: #e2b714;
+            font-size: 1.35em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .content-card p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .content-card ul {
+            padding-right: 20px;
+            margin: 10px 0 15px;
+        }
+        .content-card li {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .content-card strong {
+            color: #e2b714;
+        }
+
+        /* === HIGHLIGHT BOX === */
+        .highlight-box {
+            background: rgba(231, 76, 60, 0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 18px;
+            margin: 15px 0;
+        }
+        .highlight-box p {
+            color: #e0e0e0;
+            font-size: 0.95em;
+        }
+        .highlight-box strong {
+            color: #e74c3c;
+        }
+
+        /* === TIMELINE === */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 85px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #e2b714 0%, #e74c3c 50%, #e2b714 100%);
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+            padding-right: 120px;
+            padding-left: 15px;
+        }
+        .timeline-time {
+            position: absolute;
+            right: 0;
+            top: 2px;
+            width: 70px;
+            text-align: center;
+            color: #e2b714;
+            font-weight: bold;
+            font-size: 1em;
+            background: #0a0a1a;
+            padding: 4px 0;
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            border-radius: 3px;
+        }
+        .timeline-dot {
+            position: absolute;
+            right: 79px;
+            top: 10px;
+            width: 14px;
+            height: 14px;
+            background: #e2b714;
+            border-radius: 50%;
+            border: 3px solid #0a0a1a;
+            z-index: 2;
+        }
+        .timeline-item.critical .timeline-dot {
+            background: #e74c3c;
+            box-shadow: 0 0 12px rgba(231, 76, 60, 0.5);
+        }
+        .timeline-item.critical .timeline-time {
+            color: #e74c3c;
+            border-color: rgba(231, 76, 60, 0.5);
+        }
+        .timeline-content {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 18px;
+            border: 1px solid rgba(226, 183, 20, 0.08);
+        }
+        .timeline-content p {
+            color: #c0c0c0;
+            font-size: 0.93em;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .timeline-content strong {
+            color: #e2b714;
+        }
+        .timeline-item.critical .timeline-content {
+            border-color: rgba(231, 76, 60, 0.2);
+        }
+        .timeline-item.critical .timeline-content strong {
+            color: #e74c3c;
+        }
+
+        /* === COMMUNITY CARDS === */
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        .community-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            border-right: 4px solid #e74c3c;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+        .community-card:hover {
+            border-color: #e2b714;
+            transform: translateX(-3px);
+        }
+        .community-card h4 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 15px;
+        }
+        .community-card p, .community-card li {
+            color: #c0c0c0;
+            font-size: 0.93em;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .community-card ul {
+            padding-right: 20px;
+            margin: 10px 0;
+        }
+        .community-card strong {
+            color: #e2b714;
+        }
+        .community-card .casualty-line {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        /* === STATS BOX === */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .stat-box {
+            background: rgba(18, 23, 43, 0.8);
+            border: 1px solid rgba(226, 183, 20, 0.15);
+            border-radius: 3px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .stat-box:hover {
+            border-color: rgba(226, 183, 20, 0.5);
+        }
+        .stat-number {
+            color: #e2b714;
+            font-size: 2.2em;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            color: #c0c0c0;
+            font-size: 0.85em;
+        }
+        .stat-box.red .stat-number {
+            color: #e74c3c;
+        }
+
+        /* === HERO CARDS (people) === */
+        .hero-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-right: 4px solid #e2b714;
+            position: relative;
+        }
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, #e2b714, rgba(226, 183, 20, 0.2));
+            border-radius: 3px 0 0 3px;
+        }
+        .hero-card h4 {
+            color: #e2b714;
+            font-size: 1.2em;
+            margin-bottom: 12px;
+        }
+        .hero-card p {
+            color: #c0c0c0;
+            font-size: 0.93em;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+        .hero-card strong {
+            color: #e2b714;
+        }
+
+        /* === COMPARISON TABLE === */
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .compare-table th {
+            background: rgba(226, 183, 20, 0.15);
+            color: #e2b714;
+            padding: 14px 18px;
+            text-align: right;
+            font-size: 0.95em;
+            border-bottom: 2px solid rgba(226, 183, 20, 0.3);
+        }
+        .compare-table td {
+            padding: 12px 18px;
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .compare-table tr:hover td {
+            background: rgba(226, 183, 20, 0.03);
+        }
+
+        /* === HOSTAGE SECTION === */
+        .hostage-info-box {
+            background: rgba(231, 76, 60, 0.06);
+            border: 1px solid rgba(231, 76, 60, 0.2);
+            border-radius: 3px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .hostage-info-box h4 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        .hostage-info-box p, .hostage-info-box li {
+            color: #c0c0c0;
+            font-size: 0.93em;
+            line-height: 1.7;
+            margin-bottom: 6px;
+        }
+        .hostage-info-box ul {
+            padding-right: 20px;
+            margin: 10px 0;
+        }
+
+        /* === FOREIGN NATIONALS TABLE === */
+        .foreign-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .foreign-table th {
+            background: rgba(226, 183, 20, 0.1);
+            color: #e2b714;
+            padding: 10px 15px;
+            text-align: right;
+            font-size: 0.85em;
+        }
+        .foreign-table td {
+            padding: 8px 15px;
+            color: #c0c0c0;
+            font-size: 0.85em;
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+
+        .section-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.85em;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 12px; }
+            .nav-inner { gap: 8px; }
+            .nav-logo { font-size: 1.05em; }
+            .nav-donate { font-size: 0.8em; padding: 5px 10px; }
+            .nav-back { font-size: 0.75em; padding: 5px 10px; }
+            .section-header h2 { font-size: 1.7em; }
+            .hero-banner h1 { font-size: 1.8em; }
+            .hero-banner { padding: 80px 15px 30px; }
+            .content-card { padding: 20px; }
+            .community-card { padding: 20px; }
+            .hero-card { padding: 20px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .stat-number { font-size: 1.7em; }
+            .timeline::before { right: 75px; }
+            .timeline-item { padding-right: 105px; }
+            .timeline-dot { right: 69px; }
+            .timeline-time { width: 60px; font-size: 0.85em; }
+            .compare-table th, .compare-table td { padding: 10px 12px; font-size: 0.85em; }
+        }
+        @media (max-width: 480px) {
+            .stats-grid { grid-template-columns: 1fr; }
+            .timeline::before { right: 65px; }
+            .timeline-item { padding-right: 90px; }
+            .timeline-dot { right: 59px; }
+            .timeline-time { width: 52px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html" style="color:#e2b714;">7 באוקטובר</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- === HERO BANNER === -->
+<div class="hero-banner">
+    <h1>7 באוקטובר 2023</h1>
+    <p class="hero-sub">השבת השחורה. הטבח הגדול ביותר של יהודים מאז השואה. ניתוח מעמיק של האירועים, היישובים, הגבורה והכשלון.</p>
+    <span class="hero-date">שבת, שמחת תורה &mdash; 7 באוקטובר 2023</span>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 40px 20px 0;">
+
+<!-- ============================================ -->
+<!-- SECTION A: רקע — עזה תחת חמאס -->
+<!-- ============================================ -->
+<section id="background" class="fade-in">
+    <div class="section-header">
+        <h2>רקע &mdash; עזה תחת חמאס (2007&ndash;2023)</h2>
+        <div class="section-divider"></div>
+        <p>כיצד רצועת עזה הפכה למדינת טרור תחת שלטון חמאס</p>
+    </div>
+
+    <div class="content-card">
+        <h3>חמאס משתלט על עזה</h3>
+        <p>ביוני 2007 חמאס ביצע <strong>הפיכה אלימה</strong> נגד הרשות הפלסטינית והשתלט על רצועת עזה בכוח הנשק. מאז, הרצועה הפכה לבסיס טרור.</p>
+        <ul>
+            <li><strong>אוכלוסייה:</strong> 2.3 מיליון תושבים, 365 קמ"ר &mdash; מהמקומות הצפופים ביותר בעולם</li>
+            <li><strong>גיל חציוני:</strong> ~18. <strong>אבטלה:</strong> ~45%. <strong>סיוע בינלאומי:</strong> 70%+ מהמשפחות תלויות בסיוע. <strong>97%</strong> מהמים לא ראויים לשתייה</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p><strong>מערכת מנהרות "מטרו עזה":</strong> מאות קילומטרים של מנהרות מתחת לרצועה &mdash; שימשו כמרכזי פיקוד, מפעלי נשק ומטה מודיעין. חמאס השתמש בטלפונים קוויים במנהרות כדי להימנע מאיסוף מודיעיני.</p>
+        </div>
+
+        <h3>ארסנל רקטות</h3>
+        <p>3,000&ndash;5,000 רקטות במטח הפתיחה של 7 באוקטובר. סוגי הרקטות כללו:</p>
+        <ul>
+            <li><strong>קסאם</strong> &mdash; ייצור מקומי</li>
+            <li><strong>M-75, B-7</strong> &mdash; טווח בינוני</li>
+            <li><strong>פאג'ר-5</strong> &mdash; ייצור איראני</li>
+            <li><strong>טילים נגד טנקים</strong> &mdash; לשימוש נגד רכבים משוריינים</li>
+        </ul>
+
+        <h3>תפקיד איראן</h3>
+        <ul>
+            <li><strong>$100M&ndash;$350M לשנה</strong> (עלה ל-350 מיליון ב-2023)</li>
+            <li><strong>500 לוחמים</strong> אומנו על ידי משמרות המהפכה האיראניים</li>
+            <li>העברת <strong>טכנולוגיית רקטות</strong> מתקדמת</li>
+            <li>תיאום <strong>"ציר ההתנגדות"</strong> &mdash; חמאס, חיזבאללה, חות'ים, מיליציות עיראקיות</li>
+            <li><strong>7 מיליון דולר/חודש</strong> תקציב נוסף ל"הכנות עימות"</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION B: "התפיסה" — הכשל -->
+<!-- ============================================ -->
+<section id="conception" class="fade-in">
+    <div class="section-header">
+        <h2>"התפיסה" &mdash; הכשל שאיפשר את המתקפה</h2>
+        <div class="section-divider"></div>
+        <p>איך מערכת הביטחון כולה נפלה בפח של הנחת יסוד שגויה</p>
+    </div>
+
+    <div class="content-card">
+        <div class="highlight-box">
+            <p><strong>הנחת היסוד:</strong> חמאס מעדיף תשלומים ($30M קטארי חודשי) על עימות &mdash; ולכן "לא מסוגל" למתקפה רחבה. <strong>כל מערכת הביטחון הישראלית קיבלה: חמאס "מורתע".</strong></p>
+        </div>
+
+        <h3>ההתרעות שנדחו</h3>
+        <ul>
+            <li><strong>מסמך מאוגוסט 2022</strong> מיחיא סינוואר תיאר את התוכנית המדויקת &mdash; סווג כ"שאיפה" ולא "מבצעי"</li>
+            <li><strong>"חומת יריחו"</strong> &mdash; מסמך חמאס שתיאר את תוכנית ההתקפה המדויקת &mdash; <strong>היה בידי המודיעין הישראלי</strong></li>
+        </ul>
+
+        <h3>יחידת נוח'בה (קומנדו עילית)</h3>
+        <p>לוחמי הקומנדו של חמאס <strong>אומנו במיוחד</strong> לכל שלב: לחימת מנהרות, פריצת גדר, חדירה ליישובים. הם צברו <strong>מודיעין מפורט על כל קיבוץ</strong> &mdash; מיקום ממ"דים, מאגרי נשק, לוחות משמרות. <strong>רק 5 מנהיגי חמאס ידעו את התוכנית המלאה.</strong></p>
+
+        <h3>חומת יריחו הטכנולוגית</h3>
+        <ul>
+            <li><strong>65 ק"מ אורך</strong>, עלות מיליארדי שקלים, הושלמה 2021</li>
+            <li>חיישנים, מצלמות, עמדות מרוחקות, מחסום תת-קרקעי ב<strong>עומק 30 מטר</strong></li>
+            <li><strong>נפרצה ב-30 נקודות בו-זמנית</strong> &mdash; כל ההשקעה הפכה לחסרת משמעות</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION C: ציר זמן דקה-דקה -->
+<!-- ============================================ -->
+<section id="timeline-section" class="fade-in">
+    <div class="section-header">
+        <h2>ציר זמן דקה-דקה &mdash; 7 באוקטובר 2023</h2>
+        <div class="section-divider"></div>
+        <p>רצף האירועים כפי שהתגלגלו ביום השחור ביותר בתולדות ישראל</p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-time">05:30</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p>לוחמי חמאס מתחילים <strong>לנוע לעמדות כינוס</strong> לאורך הגדר</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">06:29</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>מטח רקטות מסיבי: 3,000&ndash;5,000 רקטות</strong> על דרום ומרכז ישראל. צפירות בכל הארץ</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">06:30</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p>תחת כיסוי רקטי, <strong>חמאס פורץ את הגדר ב-~30 נקודות בו-זמנית</strong>. בולדוזרים, חומרי נפץ, רכבים, רחפנים. אלפי מצלמות ועמדות מרוחקות מושבתות</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">06:39</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>3 מחבלים על מצנחי רחיפה ממונעים</strong> נוחתים בנתיב העשרה</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">06:42</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p>מחבלים על אופנועים <strong>לכיוון כפר עזה ובארי</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">06:50</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p>לוחמי חמאס על טנדרים <strong>פורצים לכפר עזה משני כיוונים</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">06:56</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p>לוחמי חמאס ראשונים <strong>מגיעים לקיבוץ בארי</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">06:58</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>40 קומנדו נוח'בה</strong> נכנסים לשדרות</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">07:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>מסיבת נובה:</strong> תוך דקות, ~3,500 מחבלים מאופנועים וטנדרים מקיפים את המתחם, <strong>יורים ללא הבחנה</strong> ב-3,500 משתתפים</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">07:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>20+ יישובים תחת מתקפה בו-זמנית:</strong> בארי, כפר עזה, ניר עוז, כיסופים, נירים, עין השלושה, אלומים, חולית, סופה, נתיב העשרה, שדרות, אופקים, בסיסי רעים, נחל עוז ועוד</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">07:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>תצפית נחל עוז</strong> (850 מ' מעזה): חמאס פורץ. צופיות יחידה 414 מסתתרות במקלט &mdash; <strong>רובן נהרגו או נחטפו</strong></p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">07:40</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>צה"ל סוף סוף מאשר שמחבלים חצו לישראל</strong> &mdash; שעה ו-11 דקות אחרי פריצת הגדר</p>
+            </div>
+        </div>
+
+        <div class="timeline-item critical">
+            <div class="timeline-time">08:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>אלוף חממי נפל</strong> &mdash; מהקצינים הבכירים. אוגדת עזה מוצפת: <strong>767 חיילים מול 5,000+ תוקפים</strong>. מטכ"ל בתל אביב לא מודע להיקף. יישובים שלמים תחת טבח ללא מענה צבאי</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">12:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>תגבורות מתחילות להגיע.</strong> רק בצהריים אוגדת עזה מתחילה לתפקד שוב</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">16:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>תא"ל (מיל.) נועם תיבון</strong>, אחרי נסיעה מתל אביב ולחימה עם מחבלים בדרך, מגיע לבית בנו בנחל עוז ומחלץ את משפחתו</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">ערב</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <p><strong>ערב 7.10 עד בוקר 8.10</strong> &mdash; כוחות צה"ל משיגים שליטה הדרגתית. קרב אחרון בתחנת משטרת שדרות &mdash; <strong>~24 שעות אחרי ההתקפה</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION D: פירוט לפי יישוב -->
+<!-- ============================================ -->
+<section id="communities" class="fade-in">
+    <div class="section-header">
+        <h2>פירוט לפי יישוב</h2>
+        <div class="section-divider"></div>
+        <p>הקהילות שחוו את הזוועה &mdash; כל אחת עם הסיפור שלה</p>
+    </div>
+
+    <div class="community-grid">
+
+        <!-- בארי -->
+        <div class="community-card">
+            <h4>קיבוץ בארי</h4>
+            <p class="casualty-line">132 נרצחו (101 אזרחים + 31 כוחות ביטחון) | 32 נחטפו | 125 בתים נפגעו/הושמדו</p>
+            <ul>
+                <li><strong>~340 מחבלים</strong> תקפו את הקיבוץ. המתקפה נמשכה <strong>20+ שעות</strong></li>
+                <li>1,100 תושבים, ~1 ק"מ מעזה</li>
+                <li>קהילת שלום קנדית-ישראלית <strong>שהסיעה חולים מעזה לבתי חולים ישראליים</strong></li>
+                <li><strong>16 משפחות</strong> איבדו 2 בני משפחה ויותר</li>
+                <li>בין ההרוגים: פעילת שלום <strong>ויויאן סילבר</strong> (74)</li>
+            </ul>
+        </div>
+
+        <!-- כפר עזה -->
+        <div class="community-card">
+            <h4>קיבוץ כפר עזה</h4>
+            <p class="casualty-line">~80 נרצחו (62 תושבים + 18 כוחות ביטחון) | 19 נחטפו</p>
+            <ul>
+                <li><strong>~250 תוקפים</strong> (120&ndash;165 נוח'בה + ~80 נוספים)</li>
+                <li>~750 תושבים</li>
+                <li><strong>הקיבוץ כולו נכבש.</strong> הפך לסמל הטבח</li>
+            </ul>
+        </div>
+
+        <!-- ניר עוז -->
+        <div class="community-card">
+            <h4>קיבוץ ניר עוז</h4>
+            <p class="casualty-line">47&ndash;57 נרצחו | 76 נחטפו (67 בחיים, 9 נהרגו)</p>
+            <ul>
+                <li><strong>500+ תוקפים ובוזזים</strong>, ~400 תושבים, 2 ק"מ מעזה</li>
+                <li><strong>סבל מהאבדה היחסית הגבוהה ביותר &mdash; כרבע מכלל התושבים נרצחו או נחטפו</strong></li>
+                <li>שירי ביבס עם שני ילדיה על אופנוע &mdash; <strong>מהתמונות המזעזעות ביותר</strong></li>
+                <li>משפחת ביבס: <strong>ירדן</strong> (34), <strong>שירי</strong> (32), <strong>אריאל</strong> (4), <strong>כפיר</strong> (9 חודשים &mdash; החטוף הצעיר ביותר)</li>
+            </ul>
+        </div>
+
+        <!-- מסיבת נובה -->
+        <div class="community-card" style="border-right-color: #e2b714;">
+            <h4>מסיבת נובה &mdash; רעים</h4>
+            <p class="casualty-line">378 נרצחו (344 אזרחים + 34 כוחות ביטחון) | 44 נחטפו</p>
+            <ul>
+                <li><strong>~3,500 משתתפים</strong>, 5 ק"מ מעזה, שטח פתוח ללא מחסה</li>
+                <li><strong>פיגוע הטרור הקטלני ביותר על אזרחים בהיסטוריה הישראלית</strong></li>
+                <li>קבוצה של <strong>~30 אנשים</strong> הסתתרה במקלט בצד הדרך &mdash; חמאס השליך רימונים שוב ושוב</li>
+                <li>חמאס תכנן לתקוף את צירי הגישה, אך לאחר שגילה את המסיבה <strong>הפנה כוחות</strong></li>
+            </ul>
+        </div>
+
+        <!-- תצפית נחל עוז -->
+        <div class="community-card">
+            <h4>תצפית נחל עוז</h4>
+            <p class="casualty-line">53 חיילים נהרגו | 15&ndash;16 צופיות (יחידה 414) נהרגו | 10 צופיות נחטפו</p>
+            <ul>
+                <li><strong>850 מ' מעזה.</strong> כמעט כולם נהרגו או נחטפו</li>
+                <li><strong>הצופיות שהתריעו ונדחו</strong> &mdash; צעירות שזוהו כ"אלרמיסטיות" שדיווחי המודיעין שלהן נדחו</li>
+            </ul>
+        </div>
+
+        <!-- שדרות -->
+        <div class="community-card">
+            <h4>שדרות</h4>
+            <p class="casualty-line">53 נרצחו (37 אזרחים, 11 שוטרים, 2 כבאים, 3 חיילים)</p>
+            <ul>
+                <li>~33,000 תושבים &mdash; <strong>העיר הגדולה ביותר באזור</strong></li>
+                <li><strong>40 קומנדו נוח'בה</strong> חדרו לעיר</li>
+                <li>מחבלים אחרונים חוסלו רק ב-8:00 בבוקר 8 באוקטובר &mdash; <strong>24 שעות</strong></li>
+                <li><strong>קרב בתחנת המשטרה:</strong> חמאס השתלט על התחנה. 30 שוטרים ואזרחים נהרגו שם</li>
+            </ul>
+        </div>
+
+        <!-- אופקים -->
+        <div class="community-card">
+            <h4>אופקים</h4>
+            <p class="casualty-line">18 נרצחו כולל 6 תאילנדים | 70+ תוקפים</p>
+            <p><strong>24 ק"מ מעזה</strong> &mdash; מהנקודות הרחוקות ביותר שהמחבלים הגיעו אליהן</p>
+        </div>
+
+        <!-- כיסופים -->
+        <div class="community-card">
+            <h4>כיסופים</h4>
+            <p class="casualty-line">18+ נרצחו כולל 5 ילדים</p>
+        </div>
+
+        <!-- זיקים -->
+        <div class="community-card">
+            <h4>זיקים</h4>
+            <p class="casualty-line">18 נרצחו</p>
+        </div>
+
+        <!-- נתיב העשרה -->
+        <div class="community-card">
+            <h4>נתיב העשרה</h4>
+            <p class="casualty-line">21+ נרצחו</p>
+            <p>3 מצנחי רחיפה ו-30 לוחמים תקפו את היישוב</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION E: סיכום נפגעים -->
+<!-- ============================================ -->
+<section id="casualties" class="fade-in">
+    <div class="section-header">
+        <h2>סיכום נפגעים</h2>
+        <div class="section-divider"></div>
+        <p>המספרים מאחורי הטרגדיה</p>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-box red">
+            <span class="stat-number">1,139&ndash;1,219</span>
+            <span class="stat-label">סה"כ הרוגים</span>
+        </div>
+        <div class="stat-box red">
+            <span class="stat-number">810+</span>
+            <span class="stat-label">אזרחים שנהרגו (כולל 38 ילדים)</span>
+        </div>
+        <div class="stat-box red">
+            <span class="stat-number">379+</span>
+            <span class="stat-label">כוחות ביטחון</span>
+        </div>
+        <div class="stat-box red">
+            <span class="stat-number">71</span>
+            <span class="stat-label">אזרחים זרים</span>
+        </div>
+        <div class="stat-box red">
+            <span class="stat-number">4,834+</span>
+            <span class="stat-label">פצועים</span>
+        </div>
+        <div class="stat-box red">
+            <span class="stat-number">251&ndash;255</span>
+            <span class="stat-label">חטופים</span>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3>אזרחים זרים לפי מדינה</h3>
+        <table class="foreign-table">
+            <tr>
+                <th>מדינה</th><th>הרוגים</th>
+                <th>מדינה</th><th>הרוגים</th>
+                <th>מדינה</th><th>הרוגים</th>
+            </tr>
+            <tr>
+                <td>צרפת</td><td>35</td>
+                <td>תאילנד</td><td>33</td>
+                <td>ארה"ב</td><td>31</td>
+            </tr>
+            <tr>
+                <td>אוקראינה</td><td>21</td>
+                <td>בריטניה</td><td>12</td>
+                <td>נפאל</td><td>10</td>
+            </tr>
+            <tr>
+                <td>גרמניה</td><td>10</td>
+                <td>ארגנטינה</td><td>9</td>
+                <td>קנדה</td><td>6</td>
+            </tr>
+            <tr>
+                <td>רומניה</td><td>5</td>
+                <td>פורטוגל</td><td>4</td>
+                <td>סין</td><td>4</td>
+            </tr>
+            <tr>
+                <td>פיליפינים</td><td>4</td>
+                <td>אוסטריה</td><td>4</td>
+                <td colspan="2">ועוד</td>
+            </tr>
+        </table>
+        <p style="margin-top: 10px;">~30,000 עובדים תאילנדים עבדו ליד עזה. <strong>33 נהרגו, 18 נחטפו.</strong></p>
+
+        <h3 style="margin-top: 25px;">גילאי הנפגעים</h3>
+        <ul>
+            <li>תינוקות: <strong>2</strong></li>
+            <li>ילדים עד 10: <strong>14</strong></li>
+            <li>נוער 10&ndash;19: <strong>36</strong></li>
+            <li>ילדים (מתחת ל-18): <strong>38</strong></li>
+            <li>מבוגרים מעל 80: <strong>25</strong></li>
+            <li>הצעירה ביותר: <strong>מילה כהן</strong> &mdash; 10 חודשים (בארי)</li>
+        </ul>
+        <p style="margin-top: 10px;"><strong>~1,500+ מחבלים חוסלו בשטח ישראל</strong></p>
+
+        <div class="highlight-box" style="margin-top: 25px;">
+            <p style="text-align: center; font-size: 1.05em;"><strong>השוואה:</strong></p>
+            <p>11 בספטמבר בארה"ב: 1 נרצח לכל <strong>96,000</strong> אמריקאים</p>
+            <p><strong style="color: #e74c3c;">7 באוקטובר: 1 נרצח לכל 10,000 ישראלים</strong></p>
+            <p style="margin-top: 10px;"><strong>פיגוע הטרור ההרסני ביותר ביחס לאוכלוסייה מאז שמתועדים נתונים גלובליים</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION F: סיפורי גבורה -->
+<!-- ============================================ -->
+<section id="heroism" class="fade-in">
+    <div class="section-header">
+        <h2>סיפורי גבורה</h2>
+        <div class="section-divider"></div>
+        <p>אנשים רגילים שעשו דברים יוצאי דופן ביום הכי חשוך</p>
+    </div>
+
+    <div class="hero-card">
+        <h4>ענר שפירא (22) &mdash; מסיבת נובה</h4>
+        <p>השליך בחזרה <strong>7 רימונים</strong> שחמאס זרק לתוך המקלט במסיבת נובה. הרימון ה-8 התפוצץ והרג אותו.</p>
+        <p><strong>הציל את כל מי שבמקלט.</strong> ללא נשק, עמד בפתח המקלט והשליך רימונים בחזרה.</p>
+    </div>
+
+    <div class="hero-card">
+        <h4>תא"ל (מיל.) נועם תיבון</h4>
+        <p>נסע מתל אביב, <strong>תפס נשק</strong>, נלחם במחבלים בדרך, הגיע לבית בנו בנחל עוז <strong>וחילץ את משפחתו</strong>.</p>
+    </div>
+
+    <div class="hero-card">
+        <h4>רחל אדרי &mdash; "סבתא מאופקים"</h4>
+        <p>מצאה <strong>5 מחבלי חמאס בביתה</strong>. במקום להיבהל, <strong>הגישה להם תה ועוגיות שעות</strong>, שמרה על שיחה, והתריעה בחשאי למשטרה.</p>
+    </div>
+
+    <div class="hero-card">
+        <h4>ענבל רבין-ליברמן (26) &mdash; ניר עם</h4>
+        <p>רכזת ביטחון קיבוץ ניר עם. ב-06:30 כשנשמעו צפירות, <strong>חימשה מיד את צוותה, חילקה נשק</strong> &mdash; החלטה קריטית כי ביישובים אחרים חדר הנשק נשאר נעול.</p>
+        <p>צוות של 12 נלחם ב-~12 מחבלים וחיסל 3. החזיקו עמדה <strong>3.5 שעות</strong> עד הגעת צה"ל.</p>
+        <p><strong>ניר עם היה היישוב היחיד באזור שבו לא נהרג ולא נחטף אף אחד.</strong></p>
+    </div>
+
+    <div class="hero-card">
+        <h4>רמי דוידיאן (59) &mdash; מסיבת נובה</h4>
+        <p>חילץ באופן אישי <strong>~700 צעירים</strong> מאזור מסיבת נובה, עם נסיעות חוזרות בטנדר שלו.</p>
+    </div>
+
+    <div class="hero-card">
+        <h4>מצילים בדואים</h4>
+        <p><strong>ללא נשק.</strong> ישמעאל אלקרנאווי נסע עם 3 בני משפחה לבארי לפנות תושבים. <strong>קהילות בדואיות ארגנו צוותי חילוץ מתנדבים תוך שעות.</strong></p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION G: משבר החטופים -->
+<!-- ============================================ -->
+<section id="hostages" class="fade-in">
+    <div class="section-header">
+        <h2>משבר החטופים</h2>
+        <div class="section-divider"></div>
+        <p>251 אנשים נחטפו &mdash; הסיפור שטלטל את העולם</p>
+    </div>
+
+    <div class="content-card">
+        <p><strong>251 אנשים נחטפו</strong> ב-7 באוקטובר. ~85 לאומים. כמעט מחציתם בעלי אזרחות כפולה.</p>
+        <p>הצעיר ביותר: <strong>כפיר ביבס</strong> &mdash; 9 חודשים. המבוגר ביותר: <strong>85+</strong></p>
+    </div>
+
+    <div class="hostage-info-box">
+        <h4>תנאי שבי (מעדויות חטופים משוחררים)</h4>
+        <ul>
+            <li>חושך מוחלט, איומי מוות, <strong>אלימות מינית</strong> (13 נשים ו-1&ndash;2 גברים העידו)</li>
+            <li>צילום תעמולה בכפייה</li>
+            <li>מנהרות מתחת ל-1.5 מ' גובה, 6 אנשים דחוסים</li>
+            <li>שינה ליד פתחי אוורור מנהרות</li>
+            <li>ארוחה אחת ביום (פיתה או אורז) או כלום</li>
+            <li>חטופים איבדו <strong>30+ ק"ג</strong> במשך חודשים</li>
+            <li>מנהרות צרות: <strong>2 מ"ר, גובה מתחת לעמידה</strong></li>
+        </ul>
+    </div>
+
+    <div class="content-card">
+        <h3>עסקת נובמבר 2023</h3>
+        <ul>
+            <li>הפסקת אש <strong>7 ימים</strong></li>
+            <li>חמאס שחרר <strong>105 חטופים אזרחיים</strong> (81 ישראלים, 23 תאילנדים, 1 פיליפיני)</li>
+            <li>ישראל שחררה <strong>230+ אסירים ביטחוניים</strong> פלסטינים</li>
+            <li>תיווך <strong>קטאר</strong></li>
+        </ul>
+
+        <h3 style="margin-top: 25px;">חילוצים צבאיים</h3>
+        <ul>
+            <li><strong>יוני 2024 &mdash; מבצע "ארנון":</strong> 4 חטופים חולצו חיים (נועה ארגמני, אנדריי קוזלוב, שלומי זיו, אלמוג מאיר יאן)</li>
+            <li><strong>אוגוסט 2024:</strong> פרחאן אלקאדי (בדואי) חולץ מדרום עזה</li>
+            <li><strong>פברואר 2024 &mdash; "יד מזהב":</strong> 2 חטופים חולצו מרפיח (פרננדו מרמן ולואיס הר)</li>
+        </ul>
+    </div>
+
+    <div class="content-card">
+        <h3>נועה ארגמני</h3>
+        <p>חולצה <strong>8 ביוני 2024</strong> אחרי 245 ימים. הוחזקה ב-6 מיקומים שונים.</p>
+        <p>צילום חטיפתה על אופנוע כשהיא צורחת <strong>"אל תהרגו אותה!"</strong> לחבר שלה אור (גם נחטף) הפך ל<strong>תמונה האיקונית</strong> של 7 באוקטובר.</p>
+    </div>
+
+    <div class="hostage-info-box">
+        <h4>טרגדיית משפחת ביבס</h4>
+        <ul>
+            <li>צה"ל קיבל מידע מאוחר יותר ש<strong>שירי, אריאל וכפיר נהרגו בהפצצה ישראלית</strong></li>
+            <li><strong>פברואר 2025:</strong> ירדן שוחרר אחרי 484 ימים. חמאס מסר שרידים עם DNA של שירי</li>
+            <li>כפיר חגג <strong>יום הולדת 1 ו-2</strong> בשבי חמאס</li>
+            <li>בנובמבר 2023 חמאס טען שהמשפחה נהרגה</li>
+        </ul>
+    </div>
+
+    <div class="content-card">
+        <h3>עסקת ינואר 2025 &mdash; שלב 1</h3>
+        <ul>
+            <li><strong>33 חטופים חזרו</strong></li>
+            <li>ישראל שחררה <strong>~2,000 אסירים</strong> פלסטינים</li>
+            <li>5 חטופים תאילנדים גם חזרו</li>
+            <li>ישראל הודתה ש-<strong>8 מהחטופים שחזרו כבר היו מתים</strong></li>
+            <li>הפסקת אש <strong>42 יום</strong></li>
+        </ul>
+
+        <div class="highlight-box" style="margin-top: 20px; border-right-color: #2ecc71;">
+            <p style="text-align: center;"><strong style="color: #2ecc71;">סיום:</strong> עד <strong>13 באוקטובר 2025</strong> &mdash; 20 החטופים החיים האחרונים שוחררו.</p>
+            <p style="text-align: center;">חטוף אחרון: <strong>רן גבילי</strong>, חזר 26 בינואר 2026.</p>
+            <p style="text-align: center; margin-top: 10px;"><strong style="color: #2ecc71;">סה"כ חזרו חיים: 168. גופות הושבו: 85</strong></p>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION H: כשלון מודיעין — השוואה ל-1973 -->
+<!-- ============================================ -->
+<section id="intelligence" class="fade-in">
+    <div class="section-header">
+        <h2>כשלון מודיעין &mdash; השוואה ל-1973</h2>
+        <div class="section-divider"></div>
+        <p>כיצד מערכת מודיעין מובילה בעולם נכשלה כשלון קטסטרופלי</p>
+    </div>
+
+    <div class="content-card">
+        <h3>ההתרעות שנדחו</h3>
+        <ul>
+            <li><strong>יחידה 8200 דחתה התרעות</strong> &mdash; צופיות דיווחו על אימונים חריגים של חמאס, תרגילי פריצת מנהרות, דפוסי תנועה. הדיווחים נדחו כ"רעש"</li>
+            <li>לפחות פעם אחת <strong>צופית הוזהרה</strong> בדיון צבאי שהמשך דיווח "שטויות" על מתקפות חמאס <strong>יהיו לכך השלכות</strong></li>
+            <li><strong>למודיעין הייתה התוכנית המדויקת מאז 2022 לפחות.</strong> אנליסטים שטענו שיכולות וכוונות חמאס משתנות &mdash; <strong>הערכותיהם נדחו</strong></li>
+            <li>מסמך <strong>"חומת יריחו"</strong> מחמאס &mdash; שתיאר תוכנית ההתקפה המדויקת &mdash; <strong>סווג כ"שאיפה"</strong></li>
+        </ul>
+
+        <div class="highlight-box" style="margin-top: 15px;">
+            <p><strong>חומת הטכנולוגיה במיליארדים נכשלה קטסטרופלית:</strong> חמאס פרץ ב-30 נקודות בו-זמנית. מצלמות חסרות תועלת. מחסום תת-קרקעי לא רלוונטי &mdash; <strong style="color: #e74c3c;">חמאס עבר מעל, לא מתחת.</strong></p>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3>השוואה למלחמת יום כיפור 1973</h3>
+        <table class="compare-table">
+            <tr>
+                <th>1973</th>
+                <th>2023</th>
+            </tr>
+            <tr>
+                <td>ועדת חקירה ממלכתית</td>
+                <td>נתניהו סירב לועדת חקירה</td>
+            </tr>
+            <tr>
+                <td>הפתעה ביום כיפור</td>
+                <td>הפתעה בשמחת תורה</td>
+            </tr>
+            <tr>
+                <td>התרעות מודיעין נדחו</td>
+                <td>צופיות + מסמכים נדחו</td>
+            </tr>
+            <tr>
+                <td>"תפיסה" שמצרים/סוריה לא יתקפו</td>
+                <td>"תפיסה" שחמאס מורתע</td>
+            </tr>
+        </table>
+
+        <div class="highlight-box" style="margin-top: 20px;">
+            <p><strong style="color: #e74c3c;">7 באוקטובר נחשב חמור מ-1973:</strong></p>
+            <p>(1) אזרחים היו המטרה העיקרית, לא צבא</p>
+            <p>(2) מסמך "חומת יריחו" תיאר את התוכנית המדויקת &mdash; לא "רמזים" אלא <strong>תוכנית מלאה</strong></p>
+            <p>(3) חומת הטכנולוגיה יצרה <strong>בטחון שווא</strong> שלא היה קיים ב-1973</p>
+        </div>
+
+        <h3 style="margin-top: 25px;">אחריותיות</h3>
+        <ul>
+            <li>רמטכ"ל <strong>הרצי הלוי</strong> התפטר אפריל 2024</li>
+            <li>ראש שב"כ <strong>רונן בר</strong> הציע התפטרות פברואר 2025</li>
+            <li><strong>מפקד אוגדת עזה הודח</strong></li>
+            <li><strong>נתניהו סירב לקבל אחריות אישית. חסם ועדת חקירה ממלכתית.</strong></li>
+            <li>סקרים הראו ש<strong>רוב הישראלים תמכו בועדה כזו</strong></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SECTION I: תגובת העולם + מלחמה בעזה -->
+<!-- ============================================ -->
+<section id="aftermath" class="fade-in">
+    <div class="section-header">
+        <h2>תגובת העולם + מלחמה בעזה</h2>
+        <div class="section-divider"></div>
+        <p>מה קרה אחרי &mdash; סקירה קצרה</p>
+    </div>
+
+    <div class="content-card">
+        <h3>תגובות בינלאומיות</h3>
+        <ul>
+            <li><strong>ביידן:</strong> "מעשה רוע טהור"</li>
+            <li><strong>רוסיה:</strong> הוציאה הצהרת "אזהרה"</li>
+            <li><strong>סין:</strong> קראה ל"ריסון"</li>
+            <li><strong>גוטרש</strong> גינה אך אמר <strong>"לא קרה בוואקום"</strong> &mdash; משפט שהרגיז את ישראל</li>
+            <li><strong>עובדי UNRWA</strong> נמצאו משתתפים בפיגוע. מדינות הקפיאו מימון</li>
+        </ul>
+
+        <h3 style="margin-top: 25px;">קמפיין KIDNAPPED</h3>
+        <p>פוסטרים בניו יורק, לונדון, פריז, ברלין. <strong>קריעת פוסטרים הפכה למבחן מוסרי</strong> &mdash; ADL תיעד <strong>57+ מקרים</strong> בקמפוסים אמריקאים.</p>
+
+        <div class="highlight-box" style="margin-top: 20px;">
+            <p><strong style="color: #e74c3c;">מלחמת בית החולים אל-אהלי (17 באוקטובר):</strong> דיווחים ראשונים ~500 הרוגים, האשמת ישראל.</p>
+            <p style="margin-top: 8px;"><strong>מציאות:</strong> פיצוץ בחניון מרקטה פלסטינית שנכשלה. חקירות עצמאיות (כולל HRW) אישרו &mdash; <strong>ככל הנראה רקטה של הג'יהאד האסלאמי.</strong> מספר ההרוגים נמוך בהרבה.</p>
+        </div>
+    </div>
+
+    <div class="content-card">
+        <h3>מבצע "חרבות ברזל" &mdash; סקירה</h3>
+        <ul>
+            <li><strong>אוקטובר 2023:</strong> הכרזת מלחמה, הפצצה אווירית</li>
+            <li><strong>13 באוקטובר:</strong> צה"ל מורה על פינוי צפון עזה (~1.1 מיליון)</li>
+            <li><strong>ינואר 2024:</strong> פעולות קרקעיות בחאן יונס</li>
+            <li><strong>מאי 2024:</strong> מבצע רפיח</li>
+            <li><strong>יוני 2024:</strong> 4 חטופים חולצו בנוסייראת</li>
+            <li><strong>ינואר 2025:</strong> הפסקת אש שלב 1, שחרור חטופים</li>
+            <li><strong>אוקטובר 2025:</strong> חטופים אחרונים שוחררו</li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>100,000+ חיילי קרקע</strong> בשיא המבצע</p>
+        <p><strong>לחימת מנהרות:</strong> חלק ירדו 40&ndash;60 מ'. צה"ל גילה ונטרל מאות ק"מ של מנהרות מתחת לבתי חולים, בתי ספר, מתקני UNRWA, מסגדים.</p>
+    </div>
+</section>
+
+</main>
+
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
+
+<footer>
+    <p style="color: #e2b714; font-size: 1.2em; margin-bottom: 10px;">לעולם לא נשכח. לעולם לא נסלח.</p>
+    <p>We will never forget. We will never forgive.</p>
+    <p style="margin-top: 25px;"><a href="index.html" style="color:#e2b714; text-decoration:none;">&#8594; חזרה לאתר הראשי</a></p>
+    <p style="margin-top: 10px; font-size: 0.85em; color: #555;">נבנה על ידי נתנאל אסיס | 2026</p>
+</footer>
+
+<script>
+// Close nav on outside click
+document.addEventListener('click', function(e) {
+    var nav = document.querySelector('.nav-links');
+    var hamburger = document.querySelector('.hamburger');
+    if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== hamburger) {
+        nav.classList.remove('open');
+    }
+});
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 500) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade-in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('october7');</script>
+
+</body>
+</html>
