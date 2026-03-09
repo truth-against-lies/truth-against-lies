@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הפרדוקס של נתניהו | האמת נגד השקר</title>
+    <meta name="description" content="הישגים וכשלים — מה חיזק ומה פגע בישראל. רק עובדות מתועדות, רק מקורות">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="הפרדוקס של נתניהו | האמת נגד השקר">
+    <meta property="og:description" content="הישגים וכשלים — מה חיזק ומה פגע בישראל. רק עובדות מתועדות, רק מקורות">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-netanyahu.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="הפרדוקס של נתניהו | האמת נגד השקר">
+    <meta name="twitter:description" content="הישגים וכשלים — מה חיזק ומה פגע בישראל. רק עובדות מתועדות, רק מקורות">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.achievement { border-right: 4px solid #2ecc71; }
+        .fact-card.failure { border-right: 4px solid #e74c3c; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card.achievement .quote {
+            background: rgba(46,204,113,0.08);
+            border-right: 3px solid #2ecc71;
+            color: #2ecc71;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card.achievement .result {
+            background: rgba(46,204,113,0.06);
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card.achievement .result-label {
+            color: #2ecc71;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .stat-highlight-green {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* === BACK LINK === */
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid rgba(226,183,20,0.3);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .back-link:hover { background: rgba(226,183,20,0.15); }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="facts-hero">
+    <h1>&#9878;&#65039; הפרדוקס של נתניהו</h1>
+    <p class="subtitle">הישגים שחיזקו את ישראל &mdash; וכשלים שפגעו בה. רק עובדות מתועדות.</p>
+    <p class="disclaimer">ללא דעות &mdash; רק עובדות מתועדות עם מקורות מוסמכים</p>
+</div>
+
+<!-- BACK LINK -->
+<div style="text-align: center; padding: 0 20px;">
+    <a class="back-link" href="facts.html">&#8592; חזרה לכל הקטגוריות</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+
+<!-- SECTION 1: Achievements -->
+<section id="achievements">
+    <div class="section-header fade-in">
+        <h2>&#9989; ההישגים &mdash; מה שחיזק את ישראל</h2>
+        <div class="section-divider"></div>
+        <p>הישגים ביטחוניים, דיפלומטיים וכלכליים תחת הנהגת נתניהו</p>
+    </div>
+
+    <!-- Achievement 1: Iron Dome -->
+    <div class="fact-card achievement fade-in">
+        <h3>כיפת ברזל &mdash; מערכת ההגנה שמצילה חיים</h3>
+        <div class="role">פריסה מ-2011, 10 סוללות, 2,500+ יירוטים</div>
+        <div class="context">פותחה תחת ממשלת אולמרט אבל <strong>נפרסה, הורחבה ומומנה תחת נתניהו</strong>. שיעור יירוט של <strong>90-97%</strong>. הגנה על מיליוני אזרחים. ארה"ב מימנה <strong>$1.6B+</strong> בזכות שיתוף פעולה שנתניהו קידם.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>מערכת ההגנה האפקטיבית ביותר בעולם &mdash; <span class="stat-highlight-green">2,500+ יירוטים מוצלחים</span>. הצילה אלפי חיים.</p>
+        </div>
+        <div class="source">מקורות: CSIS | IDF Spokesperson | US Congress</div>
+    </div>
+
+    <!-- Achievement 2: David's Sling + Arrow 3 -->
+    <div class="fact-card achievement fade-in">
+        <h3>קלע דוד + חץ 3 &mdash; שכבות הגנה אוויריות</h3>
+        <div class="role">קלע דוד מבצעי מ-2017 | חץ 3 &mdash; יירוט מחוץ לאטמוספרה</div>
+        <div class="context">ישראל בנתה <strong>מערכת הגנה אווירית רב-שכבתית ייחודית בעולם</strong>. קלע דוד יירט טילים מ-<strong>1,500 ק"מ</strong>. חץ 3 מיירט <strong>מחוץ לאטמוספרה</strong>. שתי המערכות הוכיחו עצמן במתקפות איראן (<strong>אפריל ואוקטובר 2024</strong>).</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>הגנה רב-שכבתית שהפכה את ישראל למובילה עולמית בהגנה אווירית.</p>
+        </div>
+        <div class="source">מקורות: Rafael | IAI | IDF</div>
+    </div>
+
+    <!-- Achievement 3: Iron Beam -->
+    <div class="fact-card achievement fade-in">
+        <h3>קרן ברזל (Iron Beam) &mdash; לייזר מבצעי ראשון בעולם</h3>
+        <div class="role">דצמבר 2025 &mdash; כניסה לשירות מבצעי</div>
+        <div class="context">מערכת לייזר <strong>ראשונה בעולם</strong> שנכנסת לשירות צבאי מבצעי. עלות יירוט: <strong>אגורות חשמל</strong> לעומת <strong>$10,000-$100,000+</strong> לטיל יירוט. נתניהו הכריז על השקעה של <strong>350 מיליארד ש"ח</strong> בעשור הקרוב לתעשיית הנשק.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>מהפכה בהגנה אווירית &mdash; יירוט בעלות של אגורות במקום עשרות אלפי דולרים.</p>
+        </div>
+        <div class="source">מקורות: Jerusalem Post | Euronews | Rafael</div>
+    </div>
+
+    <!-- Achievement 4: Abraham Accords -->
+    <div class="fact-card achievement fade-in">
+        <h3>הסכמי אברהם &mdash; פריצת דרך דיפלומטית</h3>
+        <div class="role">15 ספטמבר 2020 &mdash; בית הלבן</div>
+        <div class="context">נורמליזציה עם <strong>UAE, בחריין, מרוקו, סודאן</strong> &mdash; הכפיל פי 3 את מספר המדינות הערביות עם קשרים רשמיים (מ-2 ל-6). ראשון מאז ירדן 1994 &mdash; <strong>פער של 26 שנה</strong>. פתח טיסות ישירות, שיתוף מודיעיני, סחר. <strong>הערה:</strong> תווכו בעיקר ע"י צוות טראמפ (קושנר).</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p><span class="stat-highlight-green">4 הסכמי שלום חדשים</span> &mdash; פריצת דרך דיפלומטית היסטורית אחרי 26 שנות קיפאון.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | AJC | Atlantic Council</div>
+    </div>
+
+    <!-- Achievement 5: Embassy + Golan -->
+    <div class="fact-card achievement fade-in">
+        <h3>שגרירות ארה"ב בירושלים + הכרה ברמת הגולן</h3>
+        <div class="role">מאי 2018 + מרץ 2019</div>
+        <div class="context">טראמפ העביר שגרירות לירושלים &mdash; <strong>הגשמת חלום דיפלומטי של עשרות שנים</strong>. מרץ 2019: ארה"ב הכירה לראשונה <strong>בריבונות ישראלית ברמת הגולן</strong>. שני ההישגים הם תוצר של <strong>הקשר האישי בין נתניהו לטראמפ</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>הכרה אמריקאית בירושלים כבירת ישראל ובריבונות ברמת הגולן &mdash; שינוי היסטורי.</p>
+        </div>
+        <div class="source">מקורות: NPR | CNBC</div>
+    </div>
+
+    <!-- Achievement 6: Campaign Between Wars -->
+    <div class="fact-card achievement fade-in">
+        <h3>"מבצע בין מלחמות" &mdash; מאות תקיפות בסוריה</h3>
+        <div class="role">2013&ndash;2023 &mdash; מאות תקיפות על מטרות איראניות</div>
+        <div class="context">מינואר 2013 ישראל ביצעה <strong>תקיפות שיטתיות</strong> נגד שיגורי נשק איראניים, מטרות חיזבאללה ותשתיות IRGC בסוריה. ינואר 2017&ndash;ספטמבר 2018: <strong>202 מטרות איראניות הופצצו ב-800+ פצצות וטילים</strong> &mdash; תקיפה כל 3 ימים בממוצע. המבצע מנע התבססות צבאית איראנית קבועה בגבול ישראל.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>מניעת התבססות צבאית איראנית בסוריה &mdash; <span class="stat-highlight-green">800+ פצצות וטילים על 202 מטרות</span>.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Jerusalem Post | IDF</div>
+    </div>
+
+    <!-- Achievement 7: Nuclear Archive -->
+    <div class="fact-card achievement fade-in">
+        <h3>גניבת הארכיון הגרעיני מטהרן</h3>
+        <div class="role">31 ינואר 2018 &mdash; מבצע מוסד</div>
+        <div class="context"><strong>24 סוכני מוסד</strong> פרצו למחסן בטהרן, פתחו 6 מתוך 32 כספות, הוציאו <strong>50,000 מסמכי נייר ו-55,000 עמודים על 183 דיסקים</strong>. הוברחו מאיראן באותו לילה. נתניהו חשף ב-30 אפריל 2018 בשידור באנגלית. 3 שבועות אחר כך טראמפ יצא מ-JCPOA. נשיא איראן רוחאני אישר את הגניבה.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>חשיפת תוכנית הגרעין האיראנית &mdash; תרמה ליציאת ארה"ב מהסכם הגרעין.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | JNS | Haaretz</div>
+    </div>
+
+    <!-- Achievement 8: Nasrallah -->
+    <div class="fact-card achievement fade-in">
+        <h3>חיסול נסראללה + מנהיגות חיזבאללה</h3>
+        <div class="role">ספטמבר 2024 &mdash; מבצעי פייג'רים + תקיפה</div>
+        <div class="context">מבצע פייג'רים (17&ndash;18 ספטמבר): אלפי מכשירים התפוצצו &mdash; <strong>42 הרוגים, 4,000 פצועים, 1,500 לוחמי חיזבאללה הושבתו</strong>. 27 ספטמבר: <strong>80+ פצצות</strong> על מטה חיזבאללה בביירות &mdash; נסראללה חוסל אחרי <strong>32 שנות הנהגה</strong>. כמעט כל מנהיגות חיזבאללה הצבאית חוסלה. נתניהו: <strong>"הפעולות בוצעו למרות התנגדות גורמי ביטחון בכירים."</strong></div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>חיסול מנהיגות חיזבאללה &mdash; <span class="stat-highlight-green">נסראללה חוסל אחרי 32 שנה</span>. שינוי אסטרטגי באזור.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | CFR | CBS News</div>
+    </div>
+
+    <!-- Achievement 9: Rising Lion -->
+    <div class="fact-card achievement fade-in">
+        <h3>מבצע אריה עולה &mdash; השמדת הגרעין האיראני</h3>
+        <div class="role">13&ndash;24 יוני 2025 &mdash; 12 ימי לחימה</div>
+        <div class="context">ישראל תקפה את מתקני <strong>נתנז, אספהאן ואראק</strong>. חוסלו: מפקד חיל האוויר של IRGC, ראש מועצת הביטחון לשעבר, <strong>6 מדעני גרעין, 2 מפקדי חיל אוויר נוספים</strong>. הופסקה בהפסקת אש בתיווך ארה"ב. נתניהו: <strong>"מבצע אריה עולה מנע שואה גרעינית איראנית."</strong></div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>השמדת תשתיות הגרעין האיראניות &mdash; מניעת שואה גרעינית.</p>
+        </div>
+        <div class="source">מקורות: CNN | Jerusalem Post | Wikipedia</div>
+    </div>
+
+    <!-- Achievement 10: Economy -->
+    <div class="fact-card achievement fade-in">
+        <h3>כלכלה &mdash; מ-$27,500 ל-$58,270 לנפש</h3>
+        <div class="role">2009&ndash;2023</div>
+        <div class="context">כשר אוצר (2003&ndash;2005): רפורמות שחילצו ישראל ממיתון חמור. כראש ממשלה: תוצר לנפש מ-<strong>$27,500 (2009) ל-$58,270 (2023)</strong> &mdash; צמיחה של <strong>112%</strong>. חוב/תוצר: מ-<strong>100% ל-57.6%</strong>. הצטרפות ל-OECD (2010). גז טבעי &mdash; עצמאות אנרגטית. <strong>הערה כנה:</strong> כלכלנים חולקים &mdash; יש הטוענים שהצמיחה באה "למרות, לא בזכות" מדיניות הממשלה.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>צמיחה כלכלית של <span class="stat-highlight-green">112%</span> בתוצר לנפש. ישראל בין 20 הכלכלות החזקות בעולם.</p>
+        </div>
+        <div class="source">מקורות: Jerusalem Post | IMF | Wharton</div>
+    </div>
+
+    <!-- Achievement 11: Cyber -->
+    <div class="fact-card achievement fade-in">
+        <h3>מעצמת סייבר עולמית</h3>
+        <div class="role">2010 &mdash; ביקור ביחידה 8200 שהתניע את האסטרטגיה</div>
+        <div class="context">2012: הקים את <strong>מטה הסייבר הלאומי</strong> בלשכת ראש הממשלה. 2017: מיזג ל<strong>מערך הסייבר הלאומי</strong> &mdash; ראשון מסוגו בעולם, כפוף ישירות לראש הממשלה. 6 מרכזי מחקר סייבר באוניברסיטאות. תוצאה: <strong>40%</strong> מהשקעות הסייבר הפרטיות בעולם הולכות לחברות ישראליות. <strong>שליש</strong> מחד-הקרן הסייבר בעולם ישראליות.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p><span class="stat-highlight-green">40% מהשקעות הסייבר בעולם</span> &mdash; ישראל מעצמת סייבר מספר 1.</p>
+        </div>
+        <div class="source">מקורות: JNS | IISS</div>
+    </div>
+
+    <!-- Achievement 12: Egypt Fence -->
+    <div class="fact-card achievement fade-in">
+        <h3>גדר מצרים &mdash; 99.6% ירידה בחדירות</h3>
+        <div class="role">נובמבר 2010 &mdash; 2013 | 245 ק"מ | 1.6 מיליארד ש"ח</div>
+        <div class="context">חדירות בלתי חוקיות ירדו מ-<strong>9,570</strong> במחצית הראשונה של 2012 ל-<strong>34</strong> במחצית הראשונה של 2013. <strong>הערה:</strong> שר לשעבר ישראל כץ טען שנתניהו "גנב קרדיט" &mdash; הפרויקט החל לפניו.</div>
+        <div class="result">
+            <div class="result-label">&#10003; התוצאה:</div>
+            <p>ירידה של <span class="stat-highlight-green">99.6%</span> בחדירות בלתי חוקיות &mdash; מ-9,570 ל-34.</p>
+        </div>
+        <div class="source">מקורות: JNS | Times of Israel</div>
+    </div>
+
+</section>
+
+<!-- SECTION 2: Failures -->
+<section id="failures">
+    <div class="section-header fade-in">
+        <h2>&#10060; הכשלים &mdash; מה שפגע בישראל</h2>
+        <div class="section-divider"></div>
+        <p>כשלים ביטחוניים, פוליטיים ואישיים שפגעו במדינה</p>
+    </div>
+
+    <!-- Failure 1: Qatar Money -->
+    <div class="fact-card failure fade-in">
+        <h3>צינור הכסף קטאר-חמאס &mdash; $1 מיליארד באישורו</h3>
+        <div class="role">2012&ndash;2023 &mdash; אושר ומומן תחת נתניהו</div>
+        <div class="context">מ-2012: אישר העברת <strong>~$1 מיליארד מקטאר לחמאס</strong>. מ-2018: מכוניות עם מזוודות <strong>$30M במזומן כל חודש</strong> דרך שטח ישראלי. שלח מכתב סודי לקטאר להמשיך. 2019: ראש שב"כ ארגמן הזהיר שדייף מנכס כספים. 2020: אמ"ן דיווח &mdash; <strong>$4M/חודש מוסטים לכנף צבאית</strong>. לשכת נתניהו הודתה שידע. הכסף מימן מנהרות, רקטות, והכנות ל-7 באוקטובר.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p><span class="stat-highlight">$1 מיליארד</span> שמימנו את תשתית הטרור שהובילה ל-7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: CNN | Ynet | Times of Israel | Haaretz</div>
+    </div>
+
+    <!-- Failure 2: Hamas Strengthening -->
+    <div class="fact-card failure fade-in">
+        <h3>חיזוק חמאס כמדיניות מוצהרת</h3>
+        <div class="role">12 מרץ 2019 &mdash; ישיבת סיעת ליכוד</div>
+        <div class="quote">"מי שרוצה לסכל הקמת מדינה פלסטינית צריך לתמוך בחיזוק חמאס והעברת כסף לחמאס. זה חלק מהאסטרטגיה שלנו, להבדיל בין הפלסטינים בעזה לפלסטינים ביהודה ושומרון."</div>
+        <div class="context">ראש שב"כ לשעבר <strong>יובל דיסקין</strong> (2013): "אחד האנשים המרכזיים שתרמו לחיזוק חמאס היה ביבי נתניהו." <strong>אהוד ברק</strong> (2019): "האסטרטגיה של נתניהו היא לשמור על חמאס חי ובועט... על חשבון תושבי הדרום." <strong>סמוטריץ'</strong> (2015): "הרשות הפלסטינית היא נטל, חמאס הוא נכס."</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס חוזק באופן שיטתי &mdash; והשתמש בכל משאב שקיבל לבניית מערך הטרור של 7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: Haaretz | Jerusalem Post | Times of Israel | The Intercept</div>
+    </div>
+
+    <!-- Failure 3: War Warning -->
+    <div class="fact-card failure fade-in">
+        <h3>אזהרת מלחמה ישירה &mdash; 10 שבועות לפני 7/10</h3>
+        <div class="role">23 יולי 2023 &mdash; בית חולים שיבא</div>
+        <div class="context">ראש השב"כ <strong>רונן בר</strong> ביקר את נתניהו בבית חולים שיבא ואמר לו ישירות: <strong>"היום אני נותן לך אזהרת מלחמה."</strong> גם הרמטכ"ל הלוי הגיע באותו ערב. תגובת לשכת נתניהו: <strong>"רה"מ לא קיבל אזהרה על מלחמה בעזה &mdash; לא בתאריך הנטען ולא רגע לפני 6:29 ב-7 באוקטובר."</strong></div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>אזהרת מלחמה ישירה מראש השב"כ &mdash; <span class="stat-highlight">10 שבועות לפני הטבח</span>.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel</div>
+    </div>
+
+    <!-- Failure 4: Jericho Wall -->
+    <div class="fact-card failure fade-in">
+        <h3>תוכנית "חומת יריחו" &mdash; הופצה ללשכתו ב-2018</h3>
+        <div class="role">אפריל 2018 &mdash; אגף המודיעין</div>
+        <div class="context">תוכנית הפלישה של חמאס &mdash; שתארה <strong>פריצה בעשרות נקודות ופריסת אלפי לוחמים</strong> &mdash; הופצה למזכירו הצבאי של נתניהו, למועצה לביטחון לאומי, ולראשי שב"כ ומוסד. 2022: פיקוד דרום הציג בפני נתניהו <strong>מצגת שהזכירה "חומת יריחו" בשמה</strong>. נתניהו הכחיש שקיבל או תודרך על התוכנית.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>תוכנית שתארה את 7 באוקטובר <strong>בדיוק כפי שהתרחש</strong> &mdash; הייתה בידי לשכת ראש הממשלה.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Haaretz</div>
+    </div>
+
+    <!-- Failure 5: Egypt Warning -->
+    <div class="fact-card failure fade-in">
+        <h3>אזהרת מצרים &mdash; "משהו גדול"</h3>
+        <div class="role">לפני 7 באוקטובר</div>
+        <div class="context">גורם מודיעיני מצרי אמר שקהיר הזהירה ישראל שוב ושוב ש<strong>חמאס מתכנן "משהו גדול"</strong>, כולל הודעה ישירה משר המודיעין של מצרים לנתניהו. תגובת נתניהו: <strong>"הדיווח שרה"מ קיבל הודעה ממצרים הוא שקרי לחלוטין."</strong> סתירה: מייקל מקול, יו"ר ועדת החוץ בקונגרס, אישר את הגרסה המצרית. לפי גורמים מצריים, נתניהו אמר שהצבא <strong>"שקוע בצרות בגדה המערבית."</strong></div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>אזהרה ישירה ממצרים &mdash; הוכחשה, התעלמו ממנה, ואושרה מאוחר יותר ע"י גורמים אמריקאים.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Ynet</div>
+    </div>
+
+    <!-- Failure 6: Shalit Deal -->
+    <div class="fact-card failure fade-in">
+        <h3>עסקת שליט &mdash; שחרור סינוואר</h3>
+        <div class="role">18 אוקטובר 2011</div>
+        <div class="context">נתניהו אישר שחרור <strong>1,027 אסירים &mdash; 280 מרצים מאסר עולם</strong> &mdash; תמורת חייל אחד. ביניהם: <strong>יחיא סינוואר</strong>, שריצה 4 מאסרי עולם. סינוואר הפך <strong>לאדריכל 7 באוקטובר</strong>. ראש השב"כ רונן בר: <strong>"82% מהמשוחררים חזרו לפעילות טרור."</strong> 6 ישראלים נוספים נרצחו ע"י משוחררים מ-2014.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p><span class="stat-highlight">1,200 הרוגים ו-240 חטופים ב-7 באוקטובר</span> &mdash; מאדריכל שישראל שחררה.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Times of Israel | Jerusalem Post</div>
+    </div>
+
+    <!-- Failure 7: Judicial Reform -->
+    <div class="fact-card failure fade-in">
+        <h3>הרפורמה המשפטית &mdash; שסע שהחליש את ישראל</h3>
+        <div class="role">ינואר&ndash;יולי 2023</div>
+        <div class="context">הרפורמה עוררה את <strong>המחאות הגדולות בתולדות ישראל</strong>. <strong>1,142 טייסי מילואים הפסיקו שירות</strong> &mdash; כולל טייסי F-15 שתקפו מטרות איראניות כל שבוע. <strong>10,000+ מילואימניקים השעו שירות</strong>. נתניהו אמר לעוזריו: <strong>"אנחנו יכולים בלי כמה טייסות."</strong> יולי 2023: גורמי איראן וחמאס נפגשו בטהרן והעריכו שהמשבר החליש את ישראל. <strong>עוד ממצא:</strong> מסמכי מודיעין ישראליים הצביעו שהחלוקה הפנימית דווקא שימשה "גורם מרסן" &mdash; הוויכוח נותר פתוח.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p><span class="stat-highlight">1,142 טייסים ו-10,000+ מילואימניקים</span> השעו שירות &mdash; איראן וחמאס העריכו שישראל נחלשה.</p>
+        </div>
+        <div class="source">מקורות: Axios | Haaretz | JNS | Jerusalem Post</div>
+    </div>
+
+    <!-- Failure 8: Force Diversion -->
+    <div class="fact-card failure fade-in">
+        <h3>הסטת כוחות מגבול עזה &mdash; יומיים לפני 7/10</h3>
+        <div class="role">5 אוקטובר 2023</div>
+        <div class="context">2 פלוגות של חטיבת הקומנדו (<strong>~100 חיילים</strong>) הועברו מגבול עזה לאזור חווארה בגדה &mdash; בגלל מתיחות שנגרמה <strong>מאלימות מתנחלים</strong>. <strong>21 גדודות הוסטו לגדה</strong> בחודשים שקדמו. המודיעין הצבאי והשב"כ העריכו שגבול עזה יחזיק עם פחות כוחות &mdash; מתוך הנחה שפלישה מעזה לא סבירה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>כוחות הוסטו מגבול עזה <span class="stat-highlight">יומיים לפני הפלישה</span> &mdash; הגבול נשאר חשוף.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | IDF Spokesman</div>
+    </div>
+
+    <!-- Failure 9: 767 vs 5000 -->
+    <div class="fact-card failure fade-in">
+        <h3>767 מול 5,000 &mdash; גבול עזה ביום הפלישה</h3>
+        <div class="role">7 באוקטובר 2023</div>
+        <div class="context">כשחמאס פלש עם <strong>5,000+ מחבלים</strong>, רק <strong>767 חיילי צה"ל</strong> היו פרוסים לאורך כל גבול עזה. כוחות הוסטו לגדה. הסתמכות יתר על <strong>גדר "חכמה" ו"חומת ברזל" הטכנולוגית</strong>. צוותי הגנה אזרחיים קוצצו תקציבית ופורקו חלקית. מצלמות מעקב על בלוני תצפית היו מושבתות. חיילות תצפית העידו על <strong>"תקלות, הזנחה, ואפס אימוני לחימה."</strong></div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>יחס של <span class="stat-highlight">1:6.5 לרעת ישראל</span> &mdash; גבול שנוטרל תוך דקות.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Foreign Policy</div>
+    </div>
+
+    <!-- Failure 10: Disengagement -->
+    <div class="fact-card failure fade-in">
+        <h3>ההתנתקות &mdash; הצביע בעד 4 פעמים, אחר כך התפטר</h3>
+        <div class="role">2004&ndash;2005</div>
+        <div class="context">כשר אוצר, נתניהו הצביע בעד ההתנתקות מעזה <strong>4 פעמים</strong>: יוני 2004, אוקטובר 2004, פברואר 2005, ועוד הצבעה בכנסת. אז, <strong>ב-7 באוגוסט 2005</strong> &mdash; ימים לפני ההתנתקות &mdash; התפטר בטענה שהוא מתנגד. ההתפטרות נתפסה כ<strong>"מהלך פוליטי"</strong> למיצוב בתוך ועדת הליכוד, לא כעמדה עקרונית. מאז 2005: <strong>22,570+ רקטות מעזה, 5 מלחמות</strong>, שיאן 7 באוקטובר.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>הצביע בעד 4 פעמים &mdash; התפטר ברגע האחרון. מאז: <span class="stat-highlight">22,570+ רקטות ו-5 מלחמות</span>.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | NPR | Washington Institute</div>
+    </div>
+
+    <!-- Failure 11: Zero Accountability -->
+    <div class="fact-card failure fade-in">
+        <h3>אפס אחריות אחרי 7 באוקטובר</h3>
+        <div class="role">אוקטובר 2023 &mdash; מרץ 2026</div>
+        <div class="context">כל ראשי הביטחון קיבלו אחריות והתפטרו: <strong>הלוי, חליבה, בר, גלנט</strong>. נתניהו &mdash; לא. 28 אוקטובר 2023: פרסם ציוץ שמאשים את ראשי המודיעין &mdash; <strong>מחק אחרי סערה והתנצל</strong>. 55 עמודי תגובה למבקר המדינה &mdash; <strong>אפס אחריות אישית</strong>. עוזרו פלדשטיין העיד: <strong>"המשימה הראשונה"</strong> אחרי 7/10 הייתה לתכנן <strong>"איך להתחמק מאחריות"</strong>. גלנט: <strong>"יש לנו שקרן בתור ראש ממשלה."</strong> אייזנקוט: <strong>"הגנה מפוברקת."</strong> מנהל חקירה שבה הוא עצמו קובע את ההרכב.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>כל ראשי הביטחון לקחו אחריות. <span class="stat-highlight">ראש הממשלה &mdash; היחיד שלא</span>.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Haaretz | Washington Times | PBS</div>
+    </div>
+
+    <!-- Failure 12: Hostage Deal Delays -->
+    <div class="fact-card failure fade-in">
+        <h3>עיכוב עסקאות חטופים &mdash; שיקולים קואליציוניים</h3>
+        <div class="role">אפריל 2024 &mdash; ינואר 2025</div>
+        <div class="context">יולי 2024: נתניהו הוסיף דרישות ברגע האחרון (<strong>ציר פילדלפי "בלתי ניתן למשא ומתן"</strong>) ושיבש טיוטת עסקה. ביידן (2 ספטמבר 2024): <strong>נתניהו "לא עושה מספיק."</strong> אוגוסט 2024: <strong>6 חטופים נמצאו מתים במנהרה ברפיח</strong> &mdash; כולל האמריקאי-ישראלי הרש גולדברג-פולין (23). בן גביר (ינואר 2025): <strong>"בשנה האחרונה, באמצעות הכוח הפוליטי שלנו, הצלחנו למנוע את העסקה הזו פעם אחר פעם."</strong> גיל דיקמן (קרוב משפחה של כרמל גת שנהרגה בשבי): <strong>"אם לא בגללו, כרמל הייתה חיה היום."</strong> העסקה של ינואר 2025 כמעט זהה להצעת מאי 2024 &mdash; חודשים של עיכוב שעלו בחיים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>עסקה שעוכבה חודשים &mdash; <span class="stat-highlight">6 חטופים נמצאו מתים</span>. העסקה הסופית כמעט זהה למקורית.</p>
+        </div>
+        <div class="source">מקורות: CNN | Jerusalem Post | NPR | Washington Post</div>
+    </div>
+
+    <!-- Failure 13: Case 4000 -->
+    <div class="fact-card failure fade-in">
+        <h3>תיק 4000 &mdash; שליטה בתקשורת תמורת רגולציה</h3>
+        <div class="role">2012&ndash;2017 | נובמבר 2019 &mdash; כתב אישום</div>
+        <div class="context">כשר תקשורת ורה"מ בו-זמנית, נתניהו קידם רגולציה שהעשירה את שאול אלוביץ' (בזק) ב-<strong>1.8 מיליארד ש"ח</strong>. בתמורה: כיסוי מותאם אישית בוואלה. אלוביץ' ל-CEO וואלה: <strong>"תוריד את זה מיד, זה יהרוס לנו את אישור Yes... אני אהרוג אותך."</strong> עורך לשעבר הודה שהסיר את המילה "כישלון" מכותרת &mdash; <strong>"ללא שיקול מקצועי."</strong> עיתונאי וואלה כינו אותו <strong>"קים"</strong> &mdash; על שם הדיקטטור הצפון קוריאני. עורך התפטר בגלל <strong>"התערבות ברוטלית."</strong> ביקש חנינה מהנשיא (נובמבר 2025) בלי להודות באשמה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>כתב אישום בשוחד, מרמה והפרת אמונים &mdash; <span class="stat-highlight">1.8 מיליארד ש"ח</span> לאלוביץ' תמורת כיסוי חיובי.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Newsweek | Columbia Journalism Review</div>
+    </div>
+
+    <!-- Failure 14: Gallant + Bar Firings -->
+    <div class="fact-card failure fade-in">
+        <h3>פיטורי גלנט ובר &mdash; הדחת ביטחון בזמן מלחמה</h3>
+        <div class="role">נובמבר 2024 + מרץ 2025</div>
+        <div class="context">5 נובמבר 2024: פיטר את שר הביטחון <strong>יואב גלנט</strong> &mdash; על 3 מחלוקות: עסקת חטופים, ועדת חקירה, גיוס חרדים. החליף ב<strong>ישראל כץ</strong> &mdash; "תומך נתניהו ותיק עם מעט ניסיון צבאי." 20 מרץ 2025: פיטר את ראש השב"כ <strong>רונן בר</strong> &mdash; <strong>ראשון בתולדות ישראל</strong>. ניגוד עניינים: השב"כ חקר 2 יועצים של נתניהו על תשלומים מקטאר. בג"ץ פסק שהפיטורים <strong>"בלתי חוקיים"</strong> (מאי 2025). בר: <strong>"ציפייתו של ראש הממשלה לנאמנות אישית פוגעת באינטרס הציבורי."</strong></div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>פיטורי שר ביטחון וראש שב"כ <span class="stat-highlight">בזמן מלחמה</span> &mdash; פיטורי בר נפסלו כבלתי חוקיים.</p>
+        </div>
+        <div class="source">מקורות: CNN | NPR | Al Jazeera | PBS</div>
+    </div>
+
+    <!-- Failure 15: Fraud Law -->
+    <div class="fact-card failure fade-in">
+        <h3>חוק ביטול מרמה והפרת אמונים &mdash; חקיקה אישית</h3>
+        <div class="role">12 ינואר 2026</div>
+        <div class="context">חברי הקואליציה קידמו חוק לבטל את עבירת <strong>"מרמה והפרת אמונים"</strong> &mdash; <strong>בדיוק העבירה שנתניהו מואשם בה בכל 3 התיקים</strong>. יוזמים: שמחה רוטמן (הציונות הדתית), אופיר כץ (ליכוד), מישל בוסקילה (תקווה חדשה). לפיד: <strong>"זה לא רפורמה, זה הפיכה שתהפוך את ישראל למדינת עולם שלישי."</strong> הקשר ישיר: אם החוק יעבור &mdash; <strong>כל 3 התיקים נגד נתניהו יתבטלו</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חקיקה שתבטל את <span class="stat-highlight">כל 3 התיקים</span> נגד ראש הממשלה &mdash; חקיקה אישית.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | Haaretz</div>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-netanyahu');</script>
+
+</body>
+</html>
