@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עובדות שלא מספרים לך | האמת נגד השקר</title>
+    <meta name="description" content="עובדות מתועדות על אנשים בעמדות כוח שפגעו בעם ובמדינה — רק מקורות, רק אמת">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="עובדות שלא מספרים לך | האמת נגד השקר">
+    <meta property="og:description" content="עובדות מתועדות על אנשים בעמדות כוח שפגעו בעם ובמדינה — רק מקורות, רק אמת">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="עובדות שלא מספרים לך | האמת נגד השקר">
+    <meta name="twitter:description" content="עובדות מתועדות על אנשים בעמדות כוח שפגעו בעם ובמדינה — רק מקורות, רק אמת">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.military { border-right: 4px solid #e74c3c; }
+        .fact-card.court { border-right: 4px solid #9b59b6; }
+        .fact-card.policy { border-right: 4px solid #e67e22; }
+        .fact-card.statements { border-right: 4px solid #3498db; }
+        .fact-card.myths { border-right: 4px solid #2ecc71; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === COURT CARDS === */
+        .court-box {
+            background: rgba(155,89,182,0.06);
+            border-right: 3px solid #9b59b6;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .court-box .court-label {
+            color: #9b59b6;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .court-box p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .impact-box {
+            background: rgba(231,76,60,0.06);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .impact-box .impact-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .impact-box p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* === MYTH CARDS (Section 5) === */
+        .myth-claim {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .myth-claim .myth-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-claim p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality {
+            background: rgba(46,204,113,0.08);
+            border-right: 3px solid #2ecc71;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .myth-reality .myth-label {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-reality p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality strong {
+            color: #2ecc71;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128161; עובדות שלא מספרים לך</h1>
+    <p class="subtitle">עובדות מתועדות על אנשים בעמדות כוח שפגעו בעם ובמדינה &mdash; רק מקורות, רק אמת</p>
+    <p class="disclaimer">&#9888; זה לא עניין פוליטי &mdash; זו חשיפת עובדות</p>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<!-- ==================== SECTION 1: MILITARY & INTELLIGENCE ==================== -->
+<section id="military">
+    <div class="section-header fade-in">
+        <h2>&#9876; אנשי צבא ומודיעין</h2>
+        <div class="section-divider"></div>
+        <p>רמטכ"לים, ראשי שב"כ ומוסד שפעלו או דיברו נגד האינטרס הביטחוני</p>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אביב כוכבי</h3>
+        <div class="role">רמטכ"ל לשעבר (2019&ndash;2023)</div>
+        <div class="quote">"לא ראינו את חמאס כאיום קיומי"</div>
+        <div class="context">הוביל את <strong>"הקונספציה"</strong> &mdash; ההנחה שחמאס מרותע ומעדיף כלכלה על מלחמה. תחת פיקודו הוסט תקציב מודיעין מעזה לגדה המערבית ולאיראן. תוכנית <strong>"חומת יריחו"</strong> (מתקפת חמאס מפורטת) נדחתה כ"שאפתנית מדי".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>7 באוקטובר 2023 &mdash; <span class="stat-highlight">1,200 נרצחים</span>, 251 חטופים. הכשל המודיעיני הגדול בתולדות ישראל.</p>
+        </div>
+        <div class="source">מקורות: ועדת חקירה ממלכתית | דו"ח מבקר המדינה | עדויות קצינים בכירים | Ynet, הארץ</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>תמיר הימן</h3>
+        <div class="role">ראש אגף המודיעין (אמ"ן) 2018&ndash;2021</div>
+        <div class="quote">"חמאס מרותע מאוד ממלחמה ומעדיף שקט"</div>
+        <div class="context">הערכת מודיעין רשמית מיוני 2019. הוביל מדיניות <strong>"חמאס = נכס, לא איום"</strong>. המליץ להמשיך בהעברת כספי קטאר לעזה כמנגנון ריסון.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס השתמש בשנים של "שקט" לבניית מנהרות, אימון כוחות, ותכנון 7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: הערכות מודיעין שנתיות | עדויות ועדת החקירה | ערוץ 12, ערוץ 13</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אהרון חליוה</h3>
+        <div class="role">ראש אגף המודיעין (אמ"ן) 2021&ndash;2024</div>
+        <div class="quote">"ציפיתי לשקט של 5 שנים לפחות"</div>
+        <div class="context">המשיך את הקונספציה של קודמו. <strong>הראשון שהתפטר</strong> לאחר 7 באוקטובר. הודה: "אמ"ן תחת פיקודי לא עמד במשימתו. האזהרות היו שם &mdash; אני נושא באחריות."</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>התפטר באפריל 2024. הודה בכישלון אישי.</p>
+        </div>
+        <div class="source">מקורות: מכתב ההתפטרות | Ynet | Times of Israel</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>הרצי הלוי</h3>
+        <div class="role">רמטכ"ל (2023&ndash;2025)</div>
+        <div class="quote">"צה"ל כשל במשימתו הבסיסית ביותר — להגן על אזרחי ישראל"</div>
+        <div class="context">היה רמטכ"ל ביום 7 באוקטובר. לקח אחריות אישית והתפטר בינואר 2025. קודם לכן שימש מפקד פיקוד דרום (2018&ndash;2021) &mdash; בדיוק התקופה בה חמאס תכנן את המתקפה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>התפטר. שני רמטכ"לים רצופים נושאים באחריות לכשל.</p>
+        </div>
+        <div class="source">מקורות: נאום ההתפטרות | דו"ח 7.10 | Times of Israel</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אהוד ברק</h3>
+        <div class="role">רמטכ"ל לשעבר, ראש ממשלה לשעבר, שר ביטחון לשעבר</div>
+        <div class="quote">"אני גאה בנסיגה מלבנון"</div>
+        <div class="context">הוביל את <strong>הנסיגה החד-צדדית מלבנון</strong> (מאי 2000) ללא הסכם. חיזבאללה מילא את הריק. ב-2000 הציע לערפאת 95% מהגדה + חלוקת ירושלים &mdash; ערפאת סירב והצית את <strong>האינתיפאדה השנייה</strong>. קשרים מתועדים עם ג'פרי אפשטיין (27 ביקורים מתועדים).</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חיזבאללה צבר <span class="stat-highlight">150,000+ רקטות</span>. האינתיפאדה השנייה: <span class="stat-highlight">1,137 הרוגים ישראלים</span>.</p>
+        </div>
+        <div class="source">מקורות: ארכיוני צה"ל | דו"ח ועדת וינוגרד | מרשם טיסות אפשטיין | The Daily Beast</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>דן חלוץ</h3>
+        <div class="role">רמטכ"ל (2005&ndash;2007)</div>
+        <div class="quote">"ההתנתקות הייתה הכרחית"</div>
+        <div class="context">כרמטכ"ל ביצע את <strong>ההתנתקות מעזה</strong> (2005). 3 שעות אחרי חטיפת החיילים שהובילה למלחמת לבנון השנייה &mdash; <strong>מכר מניות</strong> בחשבונו האישי (לפני שהמידע הגיע לציבור). הושמד פוליטית אחרי ועדת וינוגרד.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>מאז ההתנתקות: <span class="stat-highlight">22,570+ רקטות</span> על ישראל, 5 מלחמות. מלחמת לבנון 2 נחשבה לכשל.</p>
+        </div>
+        <div class="source">מקורות: ועדת וינוגרד | הרשות לני"ע (חקירת מניות) | Ynet</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>משה (בוגי) יעלון</h3>
+        <div class="role">רמטכ"ל לשעבר, שר ביטחון לשעבר</div>
+        <div class="quote">"מדינה פשיסטית ומצורעת" | "תורת גזע נאצית"</div>
+        <div class="context">שר ביטחון שהשווה את <strong>ממשלת ישראל</strong> לנאציזם: "אני מזהה כאן תורת גזע נאצית". כינה את ישראל <strong>"מדינה פשיסטית מצורעת"</strong>. הצהרות אלה נאמרו בראיונות לתקשורת זרה ושימשו תעמולה נגד ישראל בעולם.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ציטוטים אלה הופצו ברחבי העולם כ"הוכחה" שגם ישראלים מודים ש"ישראל = נאצים".</p>
+        </div>
+        <div class="source">מקורות: ראיונות לתקשורת בינלאומית | Ynet | The Guardian</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>יאיר גולן</h3>
+        <div class="role">סגן רמטכ"ל לשעבר, ח"כ לשעבר</div>
+        <div class="quote">"אני מזהה בישראל סימנים מצמררים של גרמניה של שנות ה-30"</div>
+        <div class="context">הצהרה ביום הזיכרון לשואה 2016 &mdash; בטקס רשמי. מאוחר יותר: <strong>"ישראל הורגת תינוקות כתחביב"</strong> (ראיון לתקשורת זרה). כח"כ פעל באופן שיטתי נגד ממשלת ישראל בזירה הבינלאומית.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ציטוט "גרמניה של שנות ה-30" הפך לנשק תעמולתי מרכזי נגד ישראל ברחבי העולם.</p>
+        </div>
+        <div class="source">מקורות: נאום יום הזיכרון 2016 | ראיונות לתקשורת זרה | Haaretz | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אמירם לוין</h3>
+        <div class="role">סגן ראש המוסד לשעבר, אלוף במילואים</div>
+        <div class="quote">"מה שקורה בחברון — זה בדיוק מה שקרה בגרמניה הנאצית"</div>
+        <div class="context">השווה את נוכחות צה"ל בחברון לגרמניה הנאצית. קרא לצה"ל <strong>"שותף בפשעי מלחמה"</strong>. הצהרות חוזרות בתקשורת בינלאומית.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>שימש כ"עד מומחה" בתעמולה אנטי-ישראלית &mdash; "אפילו סגן ראש המוסד מודה".</p>
+        </div>
+        <div class="source">מקורות: ראיונות לערוץ 13 ולתקשורת זרה | Haaretz</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>עמי אילון</h3>
+        <div class="role">ראש שב"כ לשעבר (1996&ndash;2000)</div>
+        <div class="quote">"אם הייתי פלסטיני, הייתי נלחם נגד ישראל"</div>
+        <div class="context">הצהרה בראיון שפורסם בתקשורת בינלאומית. מנהיג ביטחוני ישראלי <strong>מצדיק את המאבק האלים</strong> נגד ישראל. ציטוט זה הפך לנשק מרכזי בלגיטימציה של טרור.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>מצוטט בקביעות בתעמולה פרו-פלסטינית כ"הוכחה" שגם ישראלים מודים שהטרור מוצדק.</p>
+        </div>
+        <div class="source">מקורות: ראיון לתקשורת בינלאומית | The Guardian</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>יובל דיסקין</h3>
+        <div class="role">ראש שב"כ לשעבר (2005&ndash;2011)</div>
+        <div class="quote">"צריך לסגור את המדינה"</div>
+        <div class="context">התבטאויות פומביות שיטתיות נגד מדיניות הממשלה. קרא ללחץ בינלאומי על ישראל. תמך בעמדות שהחלישו את עמדת ישראל מול איראן.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ראשי ביטחון לשעבר שפועלים נגד ישראל בזירה הבינלאומית מעניקים לגיטימציה לאויבי ישראל.</p>
+        </div>
+        <div class="source">מקורות: ראיונות לתקשורת | Ynet | ערוץ 12</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>תמיר פרדו</h3>
+        <div class="role">ראש המוסד לשעבר (2011&ndash;2016)</div>
+        <div class="quote">"יש כאן אפרטהייד — זו המציאות" | "הממשלה כמו ה-KKK"</div>
+        <div class="context">ראש המוסד לשעבר <strong>השווה את ממשלת ישראל ל-KKK</strong> ואת המדיניות בשטחים ל<strong>אפרטהייד</strong>. הצהרות אלה פורסמו בתקשורת בינלאומית ושימשו תנועת BDS.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>"גם ראש המוסד אומר שזה אפרטהייד" &mdash; הפך לטיעון מרכזי בקמפיינים נגד ישראל.</p>
+        </div>
+        <div class="source">מקורות: Associated Press | Haaretz | BBC</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>מאיר דגן</h3>
+        <div class="role">ראש המוסד לשעבר (2002&ndash;2011)</div>
+        <div class="quote">"תקיפה באיראן — זה הרעיון הכי טיפש ששמעתי"</div>
+        <div class="context">ראש המוסד שפעל <strong>בפומבי</strong> נגד מדיניות ממשלת ישראל כלפי איראן. ערער בתקשורת הבינלאומית על האפשרות למנוע מאיראן פצצה גרעינית. התבטאויותיו שימשו את איראן להצדיק את תוכנית הגרעין.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>החליש את ההרתעה הישראלית מול איראן. איראן התקדמה לרמת העשרה של 60%.</p>
+        </div>
+        <div class="source">מקורות: ראיון CBS 60 Minutes | Ynet | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>כספי קטאר לחמאס</h3>
+        <div class="role">מדיניות שהתמשכה שנים באישור דרג ביטחוני</div>
+        <div class="quote">"הכסף הקטארי שומר על השקט"</div>
+        <div class="context">קטאר העבירה <strong>$30 מיליון בחודש</strong> לחמאס, במזוודות מזומנים דרך מעבר ארז, <strong>באישור מערכת הביטחון הישראלית</strong>. גורמי מודיעין הזהירו שהכסף מממן חימוש ומנהרות &mdash; האזהרות נדחו.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס השתמש בכספים לבניית מערך טרור שהוביל ל-7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: New York Times | ועדת חקירה | דיונים בכנסת | ערוץ 12</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>600+ אנשי ביטחון</h3>
+        <div class="role">גנרלים, אלופים, ראשי שב"כ ומוסד לשעבר</div>
+        <div class="quote">מכתב לנשיא ארה"ב ללחוץ על ממשלת ישראל</div>
+        <div class="context">למעלה מ-600 אנשי ביטחון ישראלים לשעבר חתמו על <strong>מכתב לנשיא טראמפ</strong> המבקש ממנו <strong>ללחוץ על ישראל</strong> לשנות מדיניות. ישראלים פנו לגורם חיצוני כדי להתערב בנושאים פנימיים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>לגיטימציה ללחץ בינלאומי על ישראל &mdash; מפי אנשי ביטחון ישראלים עצמם.</p>
+        </div>
+        <div class="source">מקורות: Commanders for Israel's Security | Haaretz | Times of Israel</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 2: SUPREME COURT ==================== -->
+<section id="court">
+    <div class="section-header fade-in">
+        <h2>&#9878; פסיקות בג"ץ שכבלו את צה"ל</h2>
+        <div class="section-divider"></div>
+        <p>פסיקות שהגבילו את יכולת צה"ל להילחם בטרור ולהגן על אזרחים</p>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>איסור "לחץ פיזי" בחקירות שב"כ</h3>
+        <div class="role">בג"ץ 5100/94 &mdash; 1999</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בית המשפט העליון אסר על שב"כ להשתמש באמצעי לחץ פיזיים בחקירות חשודים בטרור. כולל: מניעת שינה ממושכת, כפיית תנוחות, טלטולים חזקים.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>חוקרי שב"כ מדווחים שהפסיקה <strong>מנעה סיכול</strong> של עשרות פיגועים. מחבלים למדו שניתן "לשבת על השקט" ולא לחשוף מידע. ישראל נותרה המדינה הדמוקרטית <strong>היחידה בעולם</strong> שבג"ץ קבע כללים כה מחמירים לחקירות ביטחון.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 5100/94 | דו"חות שב"כ | Israel Democracy Institute</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>שינוי מסלול גדר ההפרדה</h3>
+        <div class="role">בג"ץ 2056/04 ופסיקות נוספות &mdash; 2004&ndash;2006</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ שינה את מסלול גדר הביטחון עשרות פעמים, מנימוקי "מידתיות" וזכויות התושבים הפלסטינים. הגדר הוזזה לעיתים קרובות ממסלול ביטחוני אופטימלי למסלול פחות מוגן.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>שינויי המסלול יצרו <strong>פרצות ביטחוניות</strong> שמחבלים ניצלו. למרות זאת, הגדר הפחיתה פיגועי התאבדות ב-<strong>90%+</strong> &mdash; אבל בכל מקום שהמסלול שונה, הייתה חולשה.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 2056/04 | דו"ח מבקר המדינה | B'Tselem (באירוניה) | IDF Archives</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>ביטול "נוהל השכן"</h3>
+        <div class="role">בג"ץ 3799/02 &mdash; 2005</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ אסר על צה"ל להשתמש באזרחים מקומיים ככלי עזר בפעולות מעצר. הנוהל כלל בקשה משכן/קרוב משפחה של המבוקש לדפוק על הדלת ולקרוא לו להיכנע &mdash; כדי למנוע חילופי אש.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>ללא הנוהל, צה"ל נאלץ לפרוץ לבתים בכוח &mdash; מה שהוביל <strong>ליותר נפגעים</strong> בשני הצדדים. הפרדוקס: הנוהל <strong>הציל חיים</strong> של אזרחים ושל חיילים.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 3799/02 | עדויות מפקדי שטח | Israel Democracy Institute</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלת חיסולים ממוקדים</h3>
+        <div class="role">בג"ץ 769/02 &mdash; 2006</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ קבע שכל חיסול ממוקד דורש <strong>בדיקה פרטנית</strong> של מידתיות. נאסר לחסל אדם אם ניתן לעוצרו. נקבע שיש לבצע "חקירה בלתי תלויה" לאחר כל חיסול.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>סרבול בירוקרטי ומשפטי שעיכב פעולות. <strong>"חלון הזדמנות"</strong> נסגר בזמן שמשפטנים דנים. מחבלים בכירים חמקו כי תהליך האישור היה ארוך מדי.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 769/02 | דו"חות צה"ל | International Law Studies</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלת הריסות בתים</h3>
+        <div class="role">פסיקות שונות &mdash; 2000&ndash;2020</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ הגביל הריסות בתי מחבלים בתנאים מחמירים: חובת התראה, זכות ערעור, בדיקת "מידתיות". בפועל, תהליך שלפני בג"ץ לקח שבועות.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>הריסת בתים הוכחה כ<strong>אמצעי הרתעה יעיל</strong> &mdash; מחקרים הראו ירידה בפיגועים באזורים בהם בוצעו הריסות. ההגבלות <strong>החלישו את ההרתעה</strong>.</p>
+        </div>
+        <div class="source">מקורות: פסיקות בג"ץ שונות | מחקר Hebrew University | IDF data</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלות על מעצר מנהלי</h3>
+        <div class="role">פסיקות שונות &mdash; 1990&ndash;2020</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ הגביל את השימוש במעצר מנהלי (מעצר ללא משפט של חשודים מסוכנים) &mdash; דרש ביקורת שיפוטית תכופה, הצגת ראיות, ומגבלות זמן.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>מחבלים מסוכנים שוחררו כי לא ניתן היה להציג ראיות מודיעיניות (שחשיפתן הייתה מסכנת סוכנים). חלק מהם <strong>חזרו לפעילות טרור</strong>.</p>
+        </div>
+        <div class="source">מקורות: פסיקות בג"ץ | דו"חות שב"כ | Hamoked (באירוניה)</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>תקן "הסבירות" — אקטיביזם שיפוטי</h3>
+        <div class="role">עשרות שנים של פסיקות</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ פיתח "עילת סבירות" שאפשרה לו לבטל <strong>כל החלטה ממשלתית</strong> שנחשבה "לא סבירה" &mdash; כולל מינויים ביטחוניים, החלטות מבצעיות, ומדיניות כלפי איומים. אין מקבילה בשום דמוקרטיה אחרת.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>יצר <strong>"ממשלת שופטים"</strong> לא נבחרת שהשפיעה על החלטות ביטחוניות קריטיות. ניסיון הרפורמה המשפטית (2023) שנועד לתקן זאת הוביל למשבר חברתי חמור.</p>
+        </div>
+        <div class="source">מקורות: Israel Democracy Institute | Prof. Daniel Friedmann | Jerusalem Post</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 3: POLICIES ==================== -->
+<section id="policies">
+    <div class="section-header fade-in">
+        <h2>&#128220; חוקים ומדיניות שפגעו בהגנה</h2>
+        <div class="section-divider"></div>
+        <p>החלטות מדיניות שהביאו נזק ישיר ליכולת ההגנה של ישראל</p>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>הסכמי אוסלו</h3>
+        <div class="role">1993 &mdash; יצחק רבין ושמעון פרס</div>
+        <div class="context">ישראל <strong>חימשה את הרשות הפלסטינית</strong> &mdash; העבירה 40,000+ רובים לכוחות הביטחון הפלסטינים. הנחה: "הם ישמרו על הסדר ויילחמו בטרור". במקום זאת, חלק מהנשק שימש <strong>נגד ישראלים</strong> באינתיפאדה השנייה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>האינתיפאדה השנייה (2000&ndash;2005): <span class="stat-highlight">1,137 הרוגים ישראלים</span>. חלק נורו בנשק שישראל עצמה סיפקה.</p>
+        </div>
+        <div class="source">מקורות: הסכמי אוסלו | ועדת חקירה | IDF Archives | Ynet</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת ג'יבריל</h3>
+        <div class="role">1985 &mdash; ממשלת שמעון פרס</div>
+        <div class="context">ישראל שחררה <strong>1,150 אסירי ביטחון</strong> (כולל רוצחים) תמורת 3 חיילים ישראלים. בין המשוחררים: <strong>אחמד יאסין</strong> &mdash; שהלך לייסד ולחזק את <strong>חמאס</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס הפך לארגון הטרור הגדול בעזה. עסקה זו נחשבת לאחת <strong>הטעויות האסטרטגיות הגדולות</strong> בתולדות ישראל.</p>
+        </div>
+        <div class="source">מקורות: ארכיון צה"ל | Ynet | Wikipedia (עסקת ג'יבריל)</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת טננבאום</h3>
+        <div class="role">2004 &mdash; ממשלת אריאל שרון</div>
+        <div class="context">ישראל שחררה <strong>400+ אסירים</strong> (כולל רוצחים) וגופות מחבלים תמורת אלחנן טננבאום ושלושת גופות החיילים. בין המשוחררים היו מחבלים שחזרו לפעילות טרור.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>אסירים משוחררים היו מעורבים ברצח <span class="stat-highlight">231 ישראלים</span> לאחר שחרורם.</p>
+        </div>
+        <div class="source">מקורות: Almagor Terror Victims Association | Ynet | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת שליט</h3>
+        <div class="role">2011 &mdash; ממשלת נתניהו</div>
+        <div class="context">ישראל שחררה <strong>1,027 אסירים</strong> (כולל רוצחים המוניים) תמורת גלעד שליט. בין המשוחררים: <strong>יחיא סינוואר</strong> &mdash; שהפך למנהיג חמאס בעזה ו<strong>תכנן את 7 באוקטובר</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>סינוואר תכנן וביצע את <span class="stat-highlight">הטבח של 7 באוקטובר</span>. עסקה אחת &mdash; 1,200 הרוגים ו-251 חטופים.</p>
+        </div>
+        <div class="source">מקורות: דיוני ממשלה | ועדת חקירה | Times of Israel | BBC</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>ההתנתקות מעזה</h3>
+        <div class="role">2005 &mdash; ממשלת אריאל שרון</div>
+        <div class="context">ישראל <strong>פינתה חד-צדדית</strong> את כל ההתנחלויות בעזה. 8,500 מתנחלים גורשו. צה"ל נסוג לחלוטין. חמאס השתלט על עזה ב-2007 והפך אותה <strong>לבסיס טרור</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p><span class="stat-highlight">22,570+ רקטות</span> על ישראל מאז ההתנתקות. <strong>5 מלחמות</strong>: עופרת יצוקה, עמוד ענן, צוק איתן, שומר החומות, חרבות ברזל.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA reports | Ynet | Wikipedia</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>דלדול כוחות בעוטף</h3>
+        <div class="role">2020&ndash;2023 &mdash; דרג ביטחוני</div>
+        <div class="context">צה"ל צמצם את הכוחות בעוטף עזה לרמה מינימלית. ביום 7 באוקטובר היו רק <strong>767 חיילים</strong> מול <strong>~5,000 מחבלי חמאס</strong>. הנחת העבודה: "הגדר עוצרת, חמאס מרותע".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>יחס כוחות של <span class="stat-highlight">1:6.5</span> ביום הפלישה. חיילים נלחמו בגבורה אבל לא יכלו לעצור 5,000 מחבלים.</p>
+        </div>
+        <div class="source">מקורות: דו"ח מבקר המדינה | ועדת חקירה | ערוץ 12</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>דחיית תוכנית "חומת יריחו"</h3>
+        <div class="role">2016&ndash;2023 &mdash; דרג ביטחוני</div>
+        <div class="context"><strong>"חומת יריחו"</strong> היה מסמך מודיעיני מפורט שתיאר בדיוק את תוכנית המתקפה של חמאס: פריצת הגדר, חדירה ליישובים, חטיפת אזרחים. <strong>נדחה כ"תרחיש דמיוני"</strong> ו"שאפתני מדי עבור חמאס".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ב-7 באוקטובר חמאס ביצע <strong>בדיוק</strong> את מה שתואר במסמך &mdash; צעד בצעד.</p>
+        </div>
+        <div class="source">מקורות: חקירת New York Times | ועדת חקירה | ערוץ 13</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>סגירת מחלקת הערבית בצה"ל</h3>
+        <div class="role">2000&ndash;2020 &mdash; דרג ביטחוני</div>
+        <div class="context">צה"ל <strong>צמצם דרמטית</strong> את לימוד הערבית, המחקר התרבותי והמודיעין האנושי (HUMINT) בעזה. תקציבי מודיעין הוסטו לטכנולוגיה (סייבר, AI) על חשבון <strong>הבנת האויב</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ירידה חדה ביכולת לקרוא את האויב, להבין את כוונותיו ולפענח אזהרות. תרמה לכשל המודיעיני של 7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: דו"חות מודיעין פנימיים | ועדת חקירה | Ynet</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 4: PUBLIC STATEMENTS ==================== -->
+<section id="statements">
+    <div class="section-header fade-in">
+        <h2>&#127908; הצהרות ציבוריות מתועדות</h2>
+        <div class="section-divider"></div>
+        <p>עיתונאים, חברי כנסת, ארגונים ואקדמאים שפעלו נגד ישראל</p>
+    </div>
+
+    <!-- Sub-section: Journalists -->
+    <h3 class="subsection-title fade-in">&#128240; עיתונאים</h3>
+
+    <div class="fact-card statements fade-in">
+        <h3>גדעון לוי</h3>
+        <div class="role">כתב הארץ</div>
+        <div class="quote">"ישראל לא יכולה לכלוא 2 מיליון בני אדם ולצפות לשקט"</div>
+        <div class="context">הצהרה <strong>יומיים אחרי 7 באוקטובר</strong>, כשישראל עוד ספרה את ההרוגים. למעשה <strong>הצדיק את הטבח</strong> כתגובה "טבעית". שנים של טורים בהארץ ובתקשורת בינלאומית שמציגים את ישראל כאגרסור ואת המחבלים כקורבנות.</div>
+        <div class="source">מקורות: טור בהארץ, אוקטובר 2023 | ראיונות לתקשורת בינלאומית | Democracy Now</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>עמירה הס</h3>
+        <div class="role">כתבת הארץ ברמאללה</div>
+        <div class="quote">"ידוי אבנים הוא זכות לידה של כל מי שנמצא תחת כיבוש"</div>
+        <div class="context">טור בהארץ (2013) שהצדיק <strong>ידוי אבנים על ישראלים</strong>. אבנים הרגו ופצעו עשרות ישראלים. הס גרה ברמאללה ובעזה שנים וכותבת באופן שיטתי נגד ישראל.</div>
+        <div class="source">מקורות: טור בהארץ, אפריל 2013 | Honest Reporting | Times of Israel</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>עמוס שוקן</h3>
+        <div class="role">מוציא לאור, הארץ</div>
+        <div class="quote">"מחבלים פלסטינים הם לוחמי חופש"</div>
+        <div class="context">בעליו של <strong>העיתון הישראלי הארץ</strong> הגדיר מחבלים שרצחו אזרחים ישראלים כ<strong>"לוחמי חופש"</strong>. מתחת לניהולו, הארץ הפך לפלטפורמה מרכזית לביקורת על ישראל בשפה האנגלית.</div>
+        <div class="source">מקורות: ראיון להארץ | Honest Reporting | Jerusalem Post</div>
+    </div>
+
+    <!-- Sub-section: Knesset Members -->
+    <h3 class="subsection-title fade-in">&#127963; חברי כנסת</h3>
+
+    <div class="fact-card statements fade-in">
+        <h3>חנין זועבי</h3>
+        <div class="role">ח"כ לשעבר (בל"ד)</div>
+        <div class="quote">"חיילים רוצחים" | "החוטפים הם לא מחבלים"</div>
+        <div class="context">השתתפה ב<strong>משט המרמרה</strong> (2010) &mdash; ניסיון לשבור את המצור הימי על עזה. כינתה חיילי צה"ל <strong>"רוצחים"</strong>. על חוטפי שלושת הנערים (2014) אמרה: <strong>"הם לא מחבלים"</strong>. פעלה באופן שיטתי נגד ישראל מתוך הכנסת.</div>
+        <div class="source">מקורות: פרוטוקולי כנסת | Ynet | Times of Israel</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>באסל גטאס</h3>
+        <div class="role">ח"כ לשעבר (בל"ד)</div>
+        <div class="quote">הורשע בהברחת טלפונים סלולריים למחבלים בכלא</div>
+        <div class="context">חבר כנסת ישראלי ש<strong>הברחיח טלפונים סלולריים למחבלים מורשעים</strong> בכלא ישראלי. הורשע ונידון ל<strong>שנתיים מאסר</strong>. השתמש בחסינות הפרלמנטרית לביצוע עבירות ביטחוניות.</div>
+        <div class="source">מקורות: כתב אישום ופסק דין | Ynet | Times of Israel</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>עזמי בשארה</h3>
+        <div class="role">ח"כ לשעבר (בל"ד)</div>
+        <div class="quote">ברח מישראל בחשד לריגול עבור חיזבאללה</div>
+        <div class="context">חבר כנסת ישראלי שברח לקטאר בזמן <strong>חקירת ריגול</strong>. חשוד שהעביר <strong>מידע מודיעיני לחיזבאללה</strong> במהלך מלחמת לבנון השנייה (2006) &mdash; מידע שסייע לחיזבאללה לתקוף את צה"ל.</div>
+        <div class="source">מקורות: שב"כ | משטרת ישראל | Ynet | BBC</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>אופר כסיף</h3>
+        <div class="role">ח"כ (חד"ש)</div>
+        <div class="quote">"ציונות = גזענות" | תומך בהאג נגד ישראל</div>
+        <div class="context">חבר כנסת ישראלי ש<strong>תמך בתביעה נגד ישראל בהאג</strong>. הגדיר את הציונות כ<strong>"גזענות"</strong>. השתתף בהפגנות עם דגלי פלסטין. פועל באופן שיטתי <strong>מתוך הכנסת</strong> נגד מדינת ישראל.</div>
+        <div class="source">מקורות: פרוטוקולי כנסת | Ynet | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>אחמד טיבי</h3>
+        <div class="role">ח"כ (תע"ל)</div>
+        <div class="quote">קרא למחבלים "שהידים" (קדושים)</div>
+        <div class="context">שימש כ<strong>יועץ אישי של יאסר ערפאת</strong> בו-זמנית לתפקידו כחבר כנסת ישראלי. כינה מחבלים שרצחו ישראלים <strong>"שהידים"</strong> (קדושים). בעל אזרחות ישראלית המייעץ לנשיא הרשות הפלסטינית.</div>
+        <div class="source">מקורות: פרוטוקולי כנסת | ראיונות | Ynet | Times of Israel</div>
+    </div>
+
+    <!-- Sub-section: Foreign-Funded NGOs -->
+    <h3 class="subsection-title fade-in">&#127968; ארגונים ממומנים מבחוץ</h3>
+
+    <div class="fact-card statements fade-in">
+        <h3>בצלם</h3>
+        <div class="role">ארגון "זכויות אדם" ישראלי</div>
+        <div class="quote">"ישראל היא משטר אפרטהייד"</div>
+        <div class="context">ארגון שמגדיר את עצמו כ"ישראלי" אך ממומן בעיקר מ<strong>ממשלות זרות</strong> (EU, שוודיה, דנמרק, הולנד ועוד). מנכ"ל בצלם <strong>העיד בפני האו"ם</strong> נגד ישראל. דו"חות בצלם הם הבסיס העיקרי לתעמולה אנטי-ישראלית בעולם.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות רשם העמותות | Im Tirtzu</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>שוברים שתיקה</h3>
+        <div class="role">ארגון "חיילים לשעבר"</div>
+        <div class="quote">מפרסם עדויות (לעיתים לא מאומתות) נגד צה"ל</div>
+        <div class="context"><strong>50%+ מתקציב הארגון ממימון זר</strong> (EU, ממשלות אירופיות, קרנות בינלאומיות). הארגון אוסף "עדויות" מחיילים ומפרסם אותן בתקשורת הבינלאומית. חלק מהעדויות <strong>לא אומתו</strong>. פעילי הארגון מרצים באוניברסיטאות בחו"ל נגד ישראל.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות רשם העמותות | Ad Kan</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>יש דין</h3>
+        <div class="role">ארגון "מתנדבים למען זכויות אדם"</div>
+        <div class="quote">94&ndash;98% מימון זר</div>
+        <div class="context">ארגון ישראלי שכמעט <strong>כל תקציבו מגיע מממשלות זרות</strong>. מגיש עתירות לבג"ץ נגד צה"ל ומדינת ישראל. פעיל בזירה הבינלאומית נגד ישראל. מעסיק עורכי דין שמגישים תלונות בהאג.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות כספיים | רשם העמותות</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>סה"כ: מימון זר לארגונים</h3>
+        <div class="role">נתון מצטבר</div>
+        <div class="quote">470 מיליון ש"ח מממשלות זרות ל-40+ ארגונים ישראלים</div>
+        <div class="context"><strong>470 מיליון ש"ח</strong> הועברו מממשלות זרות (EU, גרמניה, שוודיה, נורבגיה, דנמרק ועוד) ל<strong>למעלה מ-40 ארגונים ישראלים</strong> שפועלים נגד מדינת ישראל בזירה הבינלאומית. זהו <strong>מימון זר של קמפיין</strong> נגד מדינה דמוקרטית.</div>
+        <div class="source">מקורות: NGO Monitor | חוק הגילוי (2011) | דו"חות רשם העמותות | Im Tirtzu</div>
+    </div>
+
+    <!-- Sub-section: Academics -->
+    <h3 class="subsection-title fade-in">&#127891; אקדמאים</h3>
+
+    <div class="fact-card statements fade-in">
+        <h3>אילן פפה</h3>
+        <div class="role">היסטוריון, אוניברסיטת אקסטר</div>
+        <div class="quote">"ישראל ביצעה טיהור אתני ב-1948"</div>
+        <div class="context">היסטוריון ישראלי שעזב את ישראל וכותב באופן שיטתי על <strong>"טיהור אתני"</strong> ו<strong>"נכבה"</strong>. תומך פעיל ב<strong>BDS</strong>. ספריו משמשים כ"מקור אקדמי" בתעמולה אנטי-ישראלית בקמפוסים ברחבי העולם.</div>
+        <div class="source">מקורות: ספריו | University of Exeter | BDS movement</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>נורית פלד-אלחנן</h3>
+        <div class="role">פרופסור, האוניברסיטה העברית</div>
+        <div class="quote">"ישראל = דאעש" | "ישראל מבצעת רצח עם"</div>
+        <div class="context">פרופסור <strong>באוניברסיטה העברית בירושלים</strong> שהשוותה את ישראל ל<strong>דאעש</strong>. הוזמנה להעיד בפרלמנט האירופי נגד ישראל. משתמשת בטרגדיה האישית (בתה נרצחה בפיגוע) כדי <strong>להצדיק את הטרור</strong>.</div>
+        <div class="source">מקורות: עדות בפרלמנט האירופי | הרצאות מתועדות | Ynet</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>שלמה זנד</h3>
+        <div class="role">פרופסור, אוניברסיטת תל אביב</div>
+        <div class="quote">"העם היהודי הומצא"</div>
+        <div class="context">ספרו <strong>"מתי ואיך הומצא העם היהודי"</strong> (2008) טוען שהעם היהודי <strong>אינו עם אמיתי</strong> אלא המצאה מודרנית. הספר שימש כבסיס "אקדמי" לטענה ש<strong>ליהודים אין זכות על ארץ ישראל</strong>. תורגם ל-20+ שפות.</div>
+        <div class="source">מקורות: ספרו (2008) | ביקורות אקדמיות | Times of Israel</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 5: MYTHS DISPROVEN ==================== -->
+<section id="myths">
+    <div class="section-header fade-in">
+        <h2>&#128161; שקרים שהמציאות הפריכה</h2>
+        <div class="section-divider"></div>
+        <p>טענות שמאל שהתרסקו אל מול העובדות &mdash; שקר באדום, מציאות בירוק</p>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "שלום תמורת שטח"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"אם ישראל תוותר על שטחים, היא תקבל שלום. נסיגה = ביטחון."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הסכמי אוסלו (1993): ישראל נתנה נשק ושטחים לרשות. התוצאה: <strong>האינתיפאדה השנייה &mdash; 1,137 הרוגים ישראלים</strong>. נסיגה מלבנון (2000): <strong>150,000+ רקטות חיזבאללה</strong>. ההתנתקות מעזה (2005): <strong>22,570+ רקטות</strong>. כל ויתור הוביל ליותר טרור, לא פחות.</p>
+        </div>
+        <div class="source">מקורות: IDF Archives | MFA Israel | Ynet</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "נעזוב את עזה ויהיה שקט"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ברגע שישראל תצא מעזה, הפלסטינים יבנו מדינה מתקדמת והאלימות תפסיק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ישראל יצאה ב-2005. חמאס השתלט ב-2007. מאז: <strong>22,570+ רקטות, 5 מלחמות, אלפי הרוגים</strong>. עזה הפכה לבסיס טרור, לא למדינה.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA reports | UN OCHA</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חמאס מרותע"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"חמאס מרותע מאוד ממלחמה ומעדיף כלכלה על מאבק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>7 באוקטובר 2023. <strong>3,000 מחבלים פרצו את הגדר, רצחו 1,200 אנשים, חטפו 251</strong>. הקונספציה קרסה. חמאס מעולם לא היה מרותע &mdash; הוא פשוט <strong>חיכה</strong>.</p>
+        </div>
+        <div class="source">מקורות: ועדת חקירה | הערכות מודיעין שנתיות | Times of Israel</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "הרשות הפלסטינית שותפה לשלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"הרשות הפלסטינית היא שותפה אמינה לשלום ויש לחזק אותה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הרשות משלמת <strong>$330 מיליון בשנה</strong> למשפחות מחבלים ("חוק שכר שהידים"). ככל שהפיגוע רצחני יותר &mdash; המשכורת גבוהה יותר. <strong>תמריץ כלכלי ישיר לטרור</strong>.</p>
+        </div>
+        <div class="source">מקורות: Palestinian Media Watch | Taylor Force Act | US Congress</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "ערפאת רצה שלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ערפאת היה מנהיג שלום. ישראל לא הציעה לו מספיק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>בקמפ דיוויד (2000) ערפאת קיבל הצעה ל<strong>95% מהגדה + חלוקת ירושלים</strong> &mdash; ודחה. לא הגיש הצעה נגדית. <strong>הצית את האינתיפאדה השנייה</strong>. קלינטון: "ערפאת היה שקרן."</p>
+        </div>
+        <div class="source">מקורות: Dennis Ross "The Missing Peace" | Clinton memoirs | Ynet</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חימוש הרשות = ביטחון"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"לתת נשק לרשות הפלסטינית כדי שתילחם בטרור בעצמה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ספינת <strong>קארין A</strong> (2002): 50 טון נשק איראני בדרך לרשות &mdash; כולל רקטות קטיושה ונ"ט. ערפאת הכחיש מעורבות למרות הוכחות. נשק שישראל סיפקה לרשות <strong>שימש בפיגועים נגד ישראלים</strong>.</p>
+        </div>
+        <div class="source">מקורות: חיל הים / צה"ל | MFA Israel | BBC</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "מתנחלים = המכשול לשלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ההתנחלויות הן הסיבה לאלימות. ללא מתנחלים = שלום."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>7 באוקטובר &mdash; המתקפה הגדולה ביותר &mdash; הגיעה <strong>מעזה, שאין בה אף מתנחל מ-2005</strong>. חמאס לא תוקף בגלל התנחלויות. הוא תוקף כי <strong>המטרה שלו היא חיסול ישראל</strong> (אמנת חמאס, סעיף 7).</p>
+        </div>
+        <div class="source">מקורות: Hamas Charter | 7 October timeline | IDF data</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "גדר ההפרדה = אפרטהייד"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"גדר ההפרדה היא סמל לאפרטהייד ולדיכוי."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הגדר נבנתה אחרי גל פיגועי התאבדות. התוצאה: <strong>ירידה של 90%+ בפיגועי התאבדות</strong>. הגדר <strong>הצילה אלפי חיים</strong> &mdash; יהודים וערבים כאחד. זה לא אפרטהייד, זה <strong>מחסום חיים</strong>.</p>
+        </div>
+        <div class="source">מקורות: ISA data | IDF statistics | Israel MFA</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "הקהילה הבינלאומית תגן על ישראל"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ישראל צריכה לסמוך על הקהילה הבינלאומית ולפעול לפי רצונה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>86% מהחלטות האו"ם על זכויות אדם</strong> מכוונות נגד ישראל. מועצת זכויות האדם כוללת סין, רוסיה, סעודיה. ה-UNRWA העסיקה <strong>מחבלי חמאס</strong>. הקהילה הבינלאומית לא הגנה על ישראל &mdash; <strong>אף פעם</strong>.</p>
+        </div>
+        <div class="source">מקורות: UN Watch | UNHRC voting records | UNRWA scandal 2024</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חמאס יתמתן עם הזמן"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ברגע שחמאס ישלוט ויישא באחריות, הוא יתמתן ויהפוך לגוף פוליטי."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>חמאס שלט בעזה <strong>17 שנים</strong> (2007&ndash;2024). לא התמתן. לא בנה כלכלה. השקיע הכל במנהרות ונשק. <strong>7 באוקטובר היה אחרי 17 שנות שלטון</strong>. "התמתנות" = שקר.</p>
+        </div>
+        <div class="source">מקורות: Hamas governance record | World Bank | Times of Israel</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "שתי מדינות = סוף הסכסוך"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"פתרון שתי מדינות יסיים את הסכסוך אחת ולתמיד."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>55% מהפלסטינים</strong> מתנגדים לפתרון שתי מדינות (סקר PCPSR). חמאס דוחה מכל וכל. אפילו הרשות מסרבת להכיר בישראל כ<strong>מדינה יהודית</strong>. "שתי מדינות" = שלב ראשון, לא סיום.</p>
+        </div>
+        <div class="source">מקורות: PCPSR polls | Hamas Charter | PA official statements</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "BDS = זכויות אדם"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"תנועת BDS היא תנועת זכויות אדם שלווה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>מייסד BDS, <strong>עומר ברגותי</strong>: "אנחנו מתנגדים למדינה יהודית בכל חלק של פלסטין." BDS לא רוצה שלום &mdash; רוצה <strong>חיסול ישראל</strong>. ברגותי עצמו בעל תואר מ<strong>אוניברסיטת תל אביב</strong> (אפרטהייד?).</p>
+        </div>
+        <div class="source">מקורות: Omar Barghouti interviews | NGO Monitor | Tel Aviv University records</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "אין פתרון צבאי לטרור"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"לא ניתן לנצח טרור בכוח צבאי. רק משא ומתן יפתור."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>מבצע חומת מגן</strong> (2002): ירידה של <strong>70% בפיגועים</strong>. הגדר + פעילות צבאית = הצלחה דרמטית. ניצחון צבאי על טרור <strong>אפשרי ומוכח</strong>. דווקא "ריסון" ו"הבלגה" הובילו ליותר טרור.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA statistics | Operation Defensive Shield records</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "ריסון = תמיכה בינלאומית"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"אם ישראל תתאפק, היא תזכה בתמיכה בינלאומית."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ישראל <strong>מגונה בכל מקרה</strong>. 86% מהחלטות האו"ם נגדה &mdash; גם כשהיא מגיבה וגם כשהיא לא. ריסון <strong>לא מביא תמיכה</strong>, רק מעודד יותר טרור. המסר: "אין מחיר לתקיפת ישראל."</p>
+        </div>
+        <div class="source">מקורות: UN Watch | UNGA voting records | Israel MFA</div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts');</script>
+
+</body>
+</html>
