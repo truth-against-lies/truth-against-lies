@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חוקים ומדיניות כושלת | האמת נגד השקר</title>
+    <meta name="description" content="הסכמים, נסיגות ועסקאות שחרור שפגעו בביטחון ישראל — רק מקורות, רק אמת">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="חוקים ומדיניות כושלת | האמת נגד השקר">
+    <meta property="og:description" content="הסכמים, נסיגות ועסקאות שחרור שפגעו בביטחון ישראל — רק מקורות, רק אמת">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-policies.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="חוקים ומדיניות כושלת | האמת נגד השקר">
+    <meta name="twitter:description" content="הסכמים, נסיגות ועסקאות שחרור שפגעו בביטחון ישראל — רק מקורות, רק אמת">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.policy { border-right: 4px solid #e67e22; }
+        .fact-card.oslo { border-right: 4px solid #ff1744; }
+        .fact-card.disengage { border-right: 4px solid #ff6f00; }
+        .fact-card.prisoners { border-right: 4px solid #d500f9; }
+        .fact-card.additional { border-right: 4px solid #8bc34a; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1.05em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover { opacity: 0.7; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128220; חוקים ומדיניות כושלת</h1>
+    <p class="subtitle">הסכמים, נסיגות ועסקאות שחרור שפגעו בביטחון ישראל</p>
+    <p class="disclaimer">&#9888; זה לא עניין פוליטי &mdash; זו חשיפת עובדות</p>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<a href="facts.html" class="back-link">&#8592; חזרה לכל הקטגוריות</a>
+
+<!-- ==================== SECTION 1: POLICIES ==================== -->
+<section id="policies">
+    <div class="section-header fade-in">
+        <h2>&#128220; חוקים ומדיניות שפגעו בהגנה</h2>
+        <div class="section-divider"></div>
+        <p>החלטות מדיניות שהביאו נזק ישיר ליכולת ההגנה של ישראל</p>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>הסכמי אוסלו</h3>
+        <div class="role">1993 &mdash; יצחק רבין ושמעון פרס</div>
+        <div class="context">ישראל <strong>חימשה את הרשות הפלסטינית</strong> &mdash; העבירה 40,000+ רובים לכוחות הביטחון הפלסטינים. הנחה: "הם ישמרו על הסדר ויילחמו בטרור". במקום זאת, חלק מהנשק שימש <strong>נגד ישראלים</strong> באינתיפאדה השנייה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>האינתיפאדה השנייה (2000&ndash;2005): <span class="stat-highlight">1,137 הרוגים ישראלים</span>. חלק נורו בנשק שישראל עצמה סיפקה.</p>
+        </div>
+        <div class="source">מקורות: הסכמי אוסלו | ועדת חקירה | IDF Archives | Ynet</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת ג'יבריל</h3>
+        <div class="role">1985 &mdash; ממשלת שמעון פרס</div>
+        <div class="context">ישראל שחררה <strong>1,150 אסירי ביטחון</strong> (כולל רוצחים) תמורת 3 חיילים ישראלים. בין המשוחררים: <strong>אחמד יאסין</strong> &mdash; שהלך לייסד ולחזק את <strong>חמאס</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס הפך לארגון הטרור הגדול בעזה. עסקה זו נחשבת לאחת <strong>הטעויות האסטרטגיות הגדולות</strong> בתולדות ישראל.</p>
+        </div>
+        <div class="source">מקורות: ארכיון צה"ל | Ynet | Wikipedia (עסקת ג'יבריל)</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת טננבאום</h3>
+        <div class="role">2004 &mdash; ממשלת אריאל שרון</div>
+        <div class="context">ישראל שחררה <strong>400+ אסירים</strong> (כולל רוצחים) וגופות מחבלים תמורת אלחנן טננבאום ושלושת גופות החיילים. בין המשוחררים היו מחבלים שחזרו לפעילות טרור.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>אסירים משוחררים היו מעורבים ברצח <span class="stat-highlight">231 ישראלים</span> לאחר שחרורם.</p>
+        </div>
+        <div class="source">מקורות: Almagor Terror Victims Association | Ynet | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>עסקת שליט</h3>
+        <div class="role">2011 &mdash; ממשלת נתניהו</div>
+        <div class="context">ישראל שחררה <strong>1,027 אסירים</strong> (כולל רוצחים המוניים) תמורת גלעד שליט. בין המשוחררים: <strong>יחיא סינוואר</strong> &mdash; שהפך למנהיג חמאס בעזה ו<strong>תכנן את 7 באוקטובר</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>סינוואר תכנן וביצע את <span class="stat-highlight">הטבח של 7 באוקטובר</span>. עסקה אחת &mdash; 1,200 הרוגים ו-251 חטופים.</p>
+        </div>
+        <div class="source">מקורות: דיוני ממשלה | ועדת חקירה | Times of Israel | BBC</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>ההתנתקות מעזה</h3>
+        <div class="role">2005 &mdash; ממשלת אריאל שרון</div>
+        <div class="context">ישראל <strong>פינתה חד-צדדית</strong> את כל ההתנחלויות בעזה. 8,500 מתנחלים גורשו. צה"ל נסוג לחלוטין. חמאס השתלט על עזה ב-2007 והפך אותה <strong>לבסיס טרור</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p><span class="stat-highlight">22,570+ רקטות</span> על ישראל מאז ההתנתקות. <strong>5 מלחמות</strong>: עופרת יצוקה, עמוד ענן, צוק איתן, שומר החומות, חרבות ברזל.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA reports | Ynet | Wikipedia</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>דלדול כוחות בעוטף</h3>
+        <div class="role">2020&ndash;2023 &mdash; דרג ביטחוני</div>
+        <div class="context">צה"ל צמצם את הכוחות בעוטף עזה לרמה מינימלית. ביום 7 באוקטובר היו רק <strong>767 חיילים</strong> מול <strong>~5,000 מחבלי חמאס</strong>. הנחת העבודה: "הגדר עוצרת, חמאס מרותע".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>יחס כוחות של <span class="stat-highlight">1:6.5</span> ביום הפלישה. חיילים נלחמו בגבורה אבל לא יכלו לעצור 5,000 מחבלים.</p>
+        </div>
+        <div class="source">מקורות: דו"ח מבקר המדינה | ועדת חקירה | ערוץ 12</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>דחיית תוכנית "חומת יריחו"</h3>
+        <div class="role">2016&ndash;2023 &mdash; דרג ביטחוני</div>
+        <div class="context"><strong>"חומת יריחו"</strong> היה מסמך מודיעיני מפורט שתיאר בדיוק את תוכנית המתקפה של חמאס: פריצת הגדר, חדירה ליישובים, חטיפת אזרחים. <strong>נדחה כ"תרחיש דמיוני"</strong> ו"שאפתני מדי עבור חמאס".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ב-7 באוקטובר חמאס ביצע <strong>בדיוק</strong> את מה שתואר במסמך &mdash; צעד בצעד.</p>
+        </div>
+        <div class="source">מקורות: חקירת New York Times | ועדת חקירה | ערוץ 13</div>
+    </div>
+
+    <div class="fact-card policy fade-in">
+        <h3>סגירת מחלקת הערבית בצה"ל</h3>
+        <div class="role">2000&ndash;2020 &mdash; דרג ביטחוני</div>
+        <div class="context">צה"ל <strong>צמצם דרמטית</strong> את לימוד הערבית, המחקר התרבותי והמודיעין האנושי (HUMINT) בעזה. תקציבי מודיעין הוסטו לטכנולוגיה (סייבר, AI) על חשבון <strong>הבנת האויב</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ירידה חדה ביכולת לקרוא את האויב, להבין את כוונותיו ולפענח אזהרות. תרמה לכשל המודיעיני של 7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: דו"חות מודיעין פנימיים | ועדת חקירה | Ynet</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 2: OSLO DEEP DIVE ==================== -->
+<section id="oslo-deep">
+    <div class="section-header fade-in">
+        <h2>&#128465; חקירה מעמיקה: כשלון הסכמי אוסלו</h2>
+        <div class="section-divider"></div>
+        <p>ישראל נתנה נשק, שטח ולגיטימציה &mdash; וקיבלה בתמורה 1,137 הרוגים</p>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>מה ישראל נתנה — ומה קיבלה</h3>
+        <div class="role">אוסלו A (1993) + אוסלו B (1995)</div>
+        <div class="context">
+            <strong style="color:#2ecc71;">ישראל נתנה:</strong><br>
+            &#8226; הכרה ב-PLO כנציג הפלסטינים<br>
+            &#8226; הבאת ערפאת מגלות בתוניס <strong>חזרה לשטחים</strong><br>
+            &#8226; נסיגה מערים פלסטיניות (אזור A)<br>
+            &#8226; חימוש הרשות: <strong>15,000 רובים אוטומטיים, 240 מקלעים כבדים, 45 כלי רכב משוריינים</strong><br>
+            &#8226; כוח משטרה של <strong>30,000-50,000 שוטרים חמושים</strong><br><br>
+            <strong style="color:#e74c3c;">ישראל קיבלה:</strong><br>
+            &#8226; מכתב מערפאת "המוותר על טרור" &mdash; <strong>הפר אותו שוב ושוב</strong><br>
+            &#8226; הבטחה לשיתוף פעולה ביטחוני &mdash; <strong>קרסה באינתיפאדה</strong><br>
+            &#8226; <strong>1,137 ישראלים מתים</strong> באינתיפאדה השנייה
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; השורה התחתונה:</div>
+            <p>ישראל נתנה ויתורים <strong>בלתי הפיכים</strong> (שטח, נשק, לגיטימציה) וקיבלה רק הבטחות &mdash; <strong>שכולן הופרו</strong>.</p>
+        </div>
+        <div class="source">מקורות: הסכמי אוסלו | Britannica | Seton Hall University | THINC Israel</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>אוניית קארין A — 50 טון נשק איראני לערפאת</h3>
+        <div class="role">3 בינואר 2002 &mdash; בזמן "תהליך שלום" פעיל</div>
+        <div class="quote">"אני לא יודע על שום אונייה" &mdash; יאסר ערפאת (שקר מתועד)</div>
+        <div class="context">שייטת 13 תפסה את אוניית <strong>קארין A</strong> בים האדום, עמוסה ב<strong>50 טון נשק איראני</strong>: רקטות קטיושה, טילים נגד טנקים, חומרי נפץ, מרגמות, רובי צלפים, מוקשים, RPG. הנשק ארוז ב<strong>80 ארגזי עץ</strong> בתוך מכולות עמידות במים <strong>שיוצרו רק באיראן</strong>. קפטן האונייה: <strong>קולונל עומר עקאווי</strong> &mdash; פעיל פת"ח ומשטרת הרשות. האונייה נתפסה <strong>בזמן שגנרל אמריקאי נפגש עם ערפאת לקדם שלום</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; המשמעות:</div>
+            <p>בזמן ש"שותף השלום" מדבר על שלום &mdash; הוא מייבא <strong>50 טון נשק מאיראן</strong>. זה הפנים האמיתיות של ערפאת.</p>
+        </div>
+        <div class="source">מקורות: Washington Institute | Jewish Virtual Library | Meir Amit Intelligence Center</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>ערפאת דוחה הכל — קמפ דיוויד ופרמטרים של קלינטון</h3>
+        <div class="role">יולי 2000 + דצמבר 2000</div>
+        <div class="context">
+            <strong>מה אהוד ברק הציע בקמפ דיוויד (יולי 2000):</strong><br>
+            &#8226; מדינה פלסטינית על <strong>91-95% מהגדה + 100% מעזה</strong><br>
+            &#8226; <strong>מזרח ירושלים</strong> כבירה פלסטינית<br>
+            &#8226; ריבונות על רובעים מוסלמיים ונוצריים<br>
+            &#8226; "משמורת" על הר הבית<br><br>
+            <strong>פרמטרים של קלינטון (דצמבר 2000) — עוד יותר נדיבים:</strong><br>
+            &#8226; <strong>94-96% מהגדה + החלפות שטח = ~97%</strong><br>
+            &#8226; בירה פלסטינית <strong>ריבונית</strong> במזרח ירושלים<br>
+            &#8226; <strong>$30 מיליארד</strong> קרן פיצויים לפליטים<br><br>
+            <strong style="color:#e74c3c;">ערפאת דחה הכל. לא הציע הצעה נגדית.</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; מה קלינטון אמר:</div>
+            <p>קלינטון לערפאת: <strong>"אני כישלון קולוסאלי, ואתה הפכת אותי לכזה."</strong> דניס רוס: <strong>"ערפאת לא יכול לסיים את הסכסוך כי לסיים את הסכסוך זה לסיים את עצמו."</strong></p>
+        </div>
+        <div class="source">מקורות: Newsweek | Jewish Virtual Library | HonestReporting | Wikipedia</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>הדו-לשוניות של ערפאת — שלום באנגלית, ג'יהאד בערבית</h3>
+        <div class="role">ציטוטים מתועדים</div>
+        <div class="quote">"ההסכם הזה הוא כמו הסכם חודייביה שחתם הנביא מוחמד... הג'יהאד ימשיך, וירושלים היא לא רק לפלסטינים, היא לכל האומה המוסלמית." &mdash; ערפאת, מסגד ביוהנסבורג, 10 במאי 1994</div>
+        <div class="context">
+            <strong>8 חודשים</strong> אחרי שחתם על הסכמי אוסלו בדשא הבית הלבן, ערפאת הוקלט בסתר במסגד ביוהנסבורג. הוא <strong>השווה את אוסלו להסכם חודייביה</strong> &mdash; הפסקת אש זמנית שמוחמד חתם עם שבט קוריש, <strong>שאותה הפר וכבש אותם</strong>.
+            <br><br>
+            <strong>ציטוטים נוספים:</strong><br>
+            &#8226; <strong>מחנה פליטים דהאישה (1996):</strong> "אנחנו מכירים רק מילה אחת: ג'יהאד, ג'יהאד, ג'יהאד"<br>
+            &#8226; <strong>לעבד אל-בארי עטוואן</strong> (עיתונאי): ערפאת אמר לו בחשאי שהיהודים <strong>"יברחו מפלסטין כמו עכברים מספינה טובעת"</strong><br>
+            &#8226; <strong>בוושינגטון:</strong> "שלום אמיצים", "תהליך בלתי הפיך"<br>
+            &#8226; <strong>במסגדים:</strong> "מיליון שהידים צועדים לירושלים"
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; התבנית:</div>
+            <p><strong>באנגלית — שלום. בערבית — ג'יהאד.</strong> וישראל נתנה לו נשק, שטח, וכסף.</p>
+        </div>
+        <div class="source">מקורות: MEMRI | Palestinian Media Watch | Middle East Forum | Wikipedia</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>האינתיפאדה השנייה — הפיגועים שאוסלו אפשר</h3>
+        <div class="role">ספטמבר 2000 &mdash; 2005 | 1,137 הרוגים ישראלים</div>
+        <div class="context">
+            <strong>הנתונים:</strong> 1,137 הרוגים ישראלים (887 אזרחים, ~250 כוחות ביטחון), 8,341 פצועים, ~138 פיגועי התאבדות.<br><br>
+            <strong>פיגועים מרכזיים:</strong><br>
+            &#128308; <strong>דולפינריום, ת"א</strong> (1.6.2001): <strong>21 הרוגים</strong> &mdash; נערים ונערות בבילוי שישי<br>
+            &#128308; <strong>סבארו, ירושלים</strong> (9.8.2001): <strong>16 הרוגים</strong> (7 ילדים + אישה בהריון)<br>
+            &#128308; <strong>מלון פארק, נתניה</strong> (27.3.2002): <strong>30 הרוגים</strong> &mdash; ליל סדר פסח<br>
+            &#128308; <strong>אוטובוס 37, חיפה</strong> (5.3.2003): <strong>17 הרוגים</strong> (9 ילדים חוזרים מבי"ס)<br>
+            &#128308; <strong>מסעדת מקסים, חיפה</strong> (4.10.2003): <strong>21 הרוגים</strong> (כולל תינוק בן חודשיים)<br>
+            &#128308; <strong>תחנה מרכזית ת"א</strong> (5.1.2003): <strong>23 הרוגים</strong> &mdash; פיגוע כפול בשעת שיא<br><br>
+            <strong>"מרץ השחור" 2002:</strong> 15 פיגועי התאבדות בחודש אחד, <strong>111 הרוגים</strong> &mdash; הוביל למבצע חומת מגן.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; הקשר לאוסלו:</div>
+            <p><strong>חלק מהנשק</strong> שנורה על ישראלים &mdash; <strong>סופק על ידי ישראל עצמה</strong> במסגרת חימוש הרשות הפלסטינית.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | ICT | B'Tselem Statistics</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>נשק אוסלו — ישראל חימשה את הרוצחים</h3>
+        <div class="role">הבגידה הגדולה</div>
+        <div class="context">
+            ישראל העבירה <strong>15,000 רובים אוטומטיים, 240 מקלעים כבדים, ו-45 משוריינים</strong> לרשות הפלסטינית. מה שקרה:<br><br>
+            &#8226; הרשות <strong>הכפילה פי 3</strong> את כמות הנשק המורשה<br>
+            &#8226; ערפאת <strong>חילק נשק בסתר לטנזים</strong> (מיליציה של פת"ח בפיקוד מרוואן ברגותי)<br>
+            &#8226; <strong>גדודי שהידי אל-אקצא</strong> &mdash; מיליציה של פת"ח &mdash; ביצעו <strong>39 מתוך 250 הפיגועים הראשונים</strong><br>
+            &#8226; מעבר לנשק המורשה, הוברחו <strong>מרגמות, RPG, טילים נגד טנקים, וטילי SAM-7 נגד מטוסים</strong><br><br>
+            <strong>מבצע חומת מגן (2002):</strong> ישראל נאלצה <strong>לכבוש מחדש</strong> את השטחים שנסגה מהם באוסלו, <strong>לחרום את הנשק שהיא עצמה סיפקה</strong>, ולפרק את תשתית הטרור שאוסלו אפשר.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; האירוניה הקטלנית:</div>
+            <p>ישראל <strong>חימשה "שותף לשלום"</strong> שהשתמש בנשק הזה <strong>לרצוח ישראלים</strong>. ואז נאלצה לפלוש מחדש כדי לחרום את הנשק שהיא סיפקה.</p>
+        </div>
+        <div class="source">מקורות: Seton Hall University | Heritage Foundation | JCPA | Wikipedia</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>פרס נובל לשלום — ואז 1,137 מתים</h3>
+        <div class="role">14 באוקטובר 1994</div>
+        <div class="context">
+            <strong>ערפאת, רבין ופרס</strong> קיבלו פרס נובל לשלום "על מאמציהם ליצור שלום במזרח התיכון".<br><br>
+            &#8226; <strong>שעה אחת</strong> אחרי ההכרזה &mdash; חבר ועדת נובל <strong>קורה כריסטיאנסן התפטר</strong><br>
+            &#8226; כריסטיאנסן: <strong>"ערפאת הוא הטרוריסט המפורסם ביותר בעולם. עברו מוכתם מדי באלימות, טרור ושפיכות דמים"</strong><br>
+            &#8226; מרכז סימון ויזנטל כינה ערפאת <strong>"הסנדק של הטרור"</strong><br><br>
+            <strong>מה קרה אחרי הפרס:</strong><br>
+            1994: פרס נובל → 1995: רבין נרצח → 2000: ערפאת דוחה קמפ דיוויד → 2000-2005: <strong>1,137 הרוגים</strong> → 2002: קארין A (50 טון נשק)
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; האירוניה:</div>
+            <p>חתן פרס נובל לשלום <strong>הייבא 50 טון נשק, הצית אינתיפאדה, ורצח 1,137 ישראלים</strong>.</p>
+        </div>
+        <div class="source">מקורות: NobelPrize.org | CBS News | Times of Israel | JTA</div>
+    </div>
+
+    <div class="fact-card oslo fade-in">
+        <h3>אוסלו וחמאס — איך ההסכמים יצרו את האויב</h3>
+        <div class="role">1993&ndash;2006</div>
+        <div class="context">
+            <strong>חמאס התנגד לאוסלו מיום הראשון</strong> וקרא לו "הסכם כניעה". כשלון תהליך השלום <strong>חיזק את חמאס</strong>:<br><br>
+            &#8226; כל כישלון במו"מ → <strong>יותר תמיכה בחמאס</strong><br>
+            &#8226; ערפאת נראה חלש ומושחת → חמאס הציג חלופה<br>
+            &#8226; ההתנחלויות גדלו מ-<strong>115,700 (1993) ל-203,000 (2000)</strong> — הוכחת ההסכמים הם כיסוי<br>
+            &#8226; חמאס ביצע פיגועי התאבדות <strong>בכוונה</strong> כדי לחסל את השלום: גל פברואר-מרץ 1996 (<strong>65 הרוגים</strong>) הפיל את פרס והביא את נתניהו<br>
+            &#8226; דו"חות שהגיעו לרבין <strong>במהלך המו"מ</strong> הזהירו מ"גידול מדאיג בתמיכה בחמאס" &mdash; הוא המשיך בכל זאת
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; הפרדוקס:</div>
+            <p>אוסלו <strong>נתן לחמאס סיבה להילחם</strong> (נגד ההסכמים) ו<strong>כאוס בו לגדול</strong>. ההסכמים יצרו את הרוצח.</p>
+        </div>
+        <div class="source">מקורות: CFR | Britannica | IJCRT | Tandfonline</div>
+    </div>
+
+    <div class="fact-card oslo fade-in" style="background: linear-gradient(135deg, #12172b, rgba(255,23,68,0.08)); border: 1px solid rgba(255,23,68,0.2);">
+        <h3 style="color: #ff1744; font-size: 1.4em;">&#9888; מאזן אוסלו</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>ישראל נתנה:</strong> הכרה ב-PLO, שטחים, 15,000+ רובים, 50,000 שוטרים חמושים, לגיטימציה בינלאומית, פרס נובל לערפאת.<br>
+            <strong>ישראל קיבלה:</strong> הבטחות &mdash; <strong>שכולן הופרו</strong>.<br><br>
+            <strong style="color: #ff1744;">התוצאה הסופית: 1,137 ישראלים מתים. נשק ישראלי שנורה על ישראלים. ערפאת קרא לג'יהאד. וישראל נאלצה לכבוש מחדש את מה שנתנה.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 3: GAZA DISENGAGEMENT DEEP DIVE ==================== -->
+<section id="disengage-deep">
+    <div class="section-header fade-in">
+        <h2>&#128683; חקירה מעמיקה: ההתנתקות מעזה</h2>
+        <div class="section-divider"></div>
+        <p>"עזה תהפוך לסינגפור" &mdash; שמעון פרס. התוצאה: 22,000+ רקטות, 5 מלחמות, 7 באוקטובר.</p>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>"ההתנתקות היא פורמלין" — ההודאה של וייסגלס</h3>
+        <div class="role">דב וייסגלס, יועץ שרון | הארץ, אוקטובר 2004</div>
+        <div class="quote">"המשמעות של תוכנית ההתנתקות היא הקפאת תהליך השלום... ההתנתקות היא למעשה פורמלין. היא מספקת את כמות הפורמלין הנחוצה כדי שלא יהיה תהליך מדיני עם הפלסטינים."</div>
+        <div class="context">יועצו הבכיר של שרון הודה בגלוי שההתנתקות <strong>לא נועדה לשלום</strong> אלא <strong>להקפיא את התהליך</strong>: "כשמקפיאים את התהליך, מונעים הקמת מדינה פלסטינית, ומונעים דיון בפליטים, בגבולות ובירושלים." שרון עצמו עמד בפני <strong>חקירות שחיתות</strong> (פרשת האי היווני) &mdash; מבקרים טענו שההתנתקות נועדה להסיט תשומת לב.</div>
+        <div class="source">מקורות: Haaretz | Wikipedia | Times of Israel</div>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>8,600 מפונים — 21 יישובים נהרסו</h3>
+        <div class="role">15-22 באוגוסט 2005</div>
+        <div class="context">
+            <strong>1,800 משפחות</strong> עוקרו מ-21 יישובים בעזה + 4 בצפון שומרון. <strong>2,800 בתים</strong> נהרסו. <strong>26 בתי כנסת</strong> הושמדו.<br><br>
+            <strong>הנזק האנושי:</strong><br>
+            &#8226; <strong>40%+</strong> מהמפונים עמדו בקריטריונים ל-PTSD (מחקר אוניברסיטת בן-גוריון)<br>
+            &#8226; עלייה חדה בדיכאון, מחלות לב, סוכרת<br>
+            &#8226; התאבדויות, גירושין, עוני<br>
+            &#8226; <strong>10 שנים אחרי</strong>: 350 משפחות עדיין בקרוואנים זמניים<br>
+            &#8226; <strong>11 שנים אחרי</strong>: 13% עדיין בדיור זמני
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; המחיר האנושי:</div>
+            <p>משפחות שבנו <strong>חיים שלמים</strong> נעקרו בכוח. חלקם <strong>מעולם לא התאוששו</strong>.</p>
+        </div>
+        <div class="source">מקורות: Jewish Action | Times of Israel | Ynetnews | Ben-Gurion University</div>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>חממות ב-$14 מיליון — נבזזו תוך שעות</h3>
+        <div class="role">12 בספטמבר 2005 &mdash; רגע שהחייל האחרון יצא</div>
+        <div class="context">קרן בינלאומית בראשות <strong>ג'יימס וולפנסון</strong> (נשיא הבנק העולמי לשעבר) רכשה את חממות גוש קטיף ב-<strong>$14 מיליון</strong> עבור עובדים פלסטינים. וולפנסון תרם <strong>$500,000 מכיסו</strong>. <strong>800 מתוך 4,000 חממות</strong> נבזזו והושמדו ברגע שהצבא יצא. במקביל &mdash; <strong>בתי כנסת הוצתו</strong> על ידי המונים פלסטינים. לפחות <strong>4 בתי כנסת עלו באש</strong> בנצרים, כפר דרום ומורג.</div>
+        <div class="result">
+            <div class="result-label">&#9888; הסמל:</div>
+            <p>ישראל השאירה <strong>תשתית כלכלית</strong> שיכלה לפרנס אלפי פלסטינים. הם <strong>השמידו אותה תוך שעות</strong> ושרפו את בתי הכנסת.</p>
+        </div>
+        <div class="source">מקורות: NPR | ASIL | Christian Century</div>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>חמאס משתלט — מבחירות להפיכה</h3>
+        <div class="role">ינואר 2006 &mdash; יוני 2007</div>
+        <div class="context">
+            &#8226; <strong>25 בינואר 2006:</strong> חמאס מנצח בבחירות &mdash; <strong>74 מתוך 132 מושבים</strong>, 42.9% מהקולות<br>
+            &#8226; <strong>29 במרץ 2006:</strong> ממשלת חמאס בראשות <strong>איסמאעיל הנייה</strong><br>
+            &#8226; <strong>14 ביוני 2007:</strong> חמאס משתלט בכוח &mdash; <strong>רוצח אנשי פת"ח, זורק יריבים מגגות</strong><br>
+            &#8226; הרשות מפוצלת: חמאס שולט בעזה, פת"ח ביו"ש
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; מה ההתנתקות אפשרה:</div>
+            <p>חמאס ניצל את <strong>"שחרור עזה"</strong> כדי לזכות בבחירות, ואז <strong>השתלט בכוח</strong> — ובנה צבא טרור במשך 16 שנה.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Times of Israel</div>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>22,000+ רקטות ו-5 מלחמות</h3>
+        <div class="role">2005&ndash;2023</div>
+        <div class="context">
+            <strong>רקטות לפי שנים (מרכזיות):</strong><br>
+            &#8226; 2005: ~860 | 2006: ~1,275 | 2008: ~3,278 | 2012: ~2,257<br>
+            &#8226; 2014: <strong>4,564-4,881 רקטות + 1,753 מרגמות</strong> (צוק איתן)<br>
+            &#8226; 2021: <strong>4,360+</strong> (שומר החומות)<br>
+            &#8226; 7/10/2023: <strong>4,300+</strong> במטח הראשון בלבד<br><br>
+            <strong>5 המלחמות:</strong> עופרת יצוקה (2008-9) → עמוד ענן (2012) → צוק איתן (2014) → שומר החומות (2021) → <strong>7 באוקטובר (2023)</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; מול ההבטחה:</div>
+            <p>פרס: <strong>"עזה תהפוך לסינגפור"</strong>. המציאות: 22,000+ רקטות, 5 מלחמות, <strong>1,200 הרוגים ב-7/10</strong>.</p>
+        </div>
+        <div class="source">מקורות: Jewish Virtual Library | Wikipedia | IDF | RAND</div>
+    </div>
+
+    <div class="fact-card disengage fade-in">
+        <h3>מסדרון פילדלפי — כביש ההברחות</h3>
+        <div class="role">2005&ndash;2023 | 14 ק"מ של גבול עזה-מצרים</div>
+        <div class="context">ישראל נסגה ממסדרון פילדלפי. ל-17 שנה הוא שימש <strong>כעורק החיים של חמאס</strong>. צבא מצרים הרס <strong>1,659 מנהרות הברחה</strong>. חלקן <strong>בגודל שמתאים למשאיות</strong>. בשנים 2005-2008 בלבד:<br><br>
+            &#8226; <strong>250 טון חומרי נפץ</strong><br>
+            &#8226; <strong>80 טון דשן</strong> (לייצור פצצות)<br>
+            &#8226; <strong>4,000 RPG</strong><br>
+            &#8226; <strong>1,800 רקטות</strong><br>
+            &#8226; טילי פאג'ר-5 איראניים (טווח 45 מייל)<br><br>
+            שוטרי מצרים בסיני <strong>קיבלו שוחד מחמאס</strong> תמורת מעבר נשק.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; הקו הישיר ל-7/10:</div>
+            <p>נסיגת ישראל מפילדלפי <strong>פתחה את הברז</strong>. אירן חימשה את חמאס. <strong>7 באוקטובר התאפשר</strong> כי ישראל ויתרה על השליטה.</p>
+        </div>
+        <div class="source">מקורות: AIPAC | Washington Institute | FDD | HonestReporting</div>
+    </div>
+
+    <div class="fact-card disengage fade-in" style="background: linear-gradient(135deg, #12172b, rgba(255,111,0,0.08)); border: 1px solid rgba(255,111,0,0.2);">
+        <h3 style="color: #ff6f00; font-size: 1.4em;">&#9888; השרשרת: מההתנתקות ל-7 באוקטובר</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            2005: ישראל נסגת, מפנה פילדלפי → הברחת נשק מסיבית<br>
+            2006: חמאס מנצח בבחירות → 2007: הפיכה → שליטה מוחלטת<br>
+            16 שנות בנייה צבאית: 350-450 מייל מנהרות, אלפי רקטות, 6,000 לוחמים<br>
+            5 מלחמות מוכיחות לחמאס: ישראל מתייחסת לעזה כ"איום נשלט"<br>
+            <strong>7 באוקטובר:</strong> 3,000 מחבלים, 119 נקודות פריצה, <strong>1,200 נרצחים, 251 נחטפים</strong>.<br><br>
+            <strong style="color: #ff6f00;">הכל התחיל ברגע שישראל עזבה את עזה. "עזה תהפוך לסינגפור" &mdash; הפכה לבסיס הטרור הגדול בעולם.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 4: PRISONER EXCHANGES DEEP DIVE ==================== -->
+<section id="prisoners-deep">
+    <div class="section-header fade-in">
+        <h2>&#128274; חקירה מעמיקה: עסקאות שחרור אסירים</h2>
+        <div class="section-divider"></div>
+        <p>מג'יבריל (1985) שיצר את חמאס → דרך שליט (2011) ששחרר את סינוואר → ל-7 באוקטובר</p>
+    </div>
+
+    <div class="fact-card prisoners fade-in">
+        <h3>עסקת ג'יבריל (1985) — העסקה שיצרה את חמאס</h3>
+        <div class="role">21 במאי 1985 | ממשלת שמעון פרס</div>
+        <div class="context">ישראל שחררה <strong>1,150 אסירים ביטחוניים</strong> (כולל רוצחים שנידונו למאסר עולם) תמורת <strong>3 חיילים</strong>.<br><br>
+            <strong>מי שוחרר:</strong><br>
+            &#8226; <strong>שייח' אחמד יאסין</strong> &mdash; מנהיג האחים המוסלמים בעזה. נידון ב-1983 ל-13 שנים על אגירת נשק. <strong>שנתיים אחרי שחרורו &mdash; ייסד את חמאס</strong> (10 בדצמבר 1987)<br>
+            &#8226; <strong>קוזו אוקמוטו</strong> &mdash; מבצע טבח נמל התעופה בלוד (1972, 26 הרוגים). נידון למאסר עולם
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; השרשרת:</div>
+            <p>ישראל שחררה יאסין → יאסין ייסד חמאס → חמאס ביצע את <strong>7 באוקטובר</strong>. <strong>הכל התחיל בעסקה אחת.</strong></p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Washington Institute | Middle East Monitor</div>
+    </div>
+
+    <div class="fact-card prisoners fade-in">
+        <h3>עסקת טננבאום (2004) — שחרור סמיר קונטאר</h3>
+        <div class="role">29 בינואר 2004 + 16 ביולי 2008</div>
+        <div class="context">
+            <strong>2004:</strong> ישראל שחררה <strong>436 אסירים + 60 גופות</strong> תמורת <strong>אלחנן טננבאום</strong> (אזרח שנחטף בעסקת סמים) + גופות 3 חיילים.<br><br>
+            <strong>2008:</strong> ישראל שחררה <strong>סמיר קונטאר</strong> + 4 מחבלים + 199 גופות תמורת <strong>2 ארונות קבורה</strong> (גולדווסר ורגב, שנהרגו בחטיפה).<br><br>
+            <strong>מי היה סמיר קונטאר?</strong><br>
+            22 באפריל 1979: פלש לנהריה. לקח את <strong>דני הרן (31)</strong> ובתו <strong>עינת (4)</strong> כבני ערובה. <strong>ירה בדני ממש מול בתו, ואז טבע אותו</strong>. <strong>ריסק את גולגולתה של עינת בת ה-4 בקת הרובה</strong>. <strong>יעל (2)</strong> מתה כשאמה חנקה בטעות את בכייה במחבוא.<br>
+            נידון ל-<strong>4 מאסרי עולם + 47 שנים</strong>.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; הסוף:</div>
+            <p>קונטאר התקבל <strong>כגיבור</strong> בלבנון. הצטרף לחיזבאללה. <strong>חוסל בתקיפה בסוריה</strong> (19 בדצמבר 2015).</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Ynetnews | Times of Israel | CBS News</div>
+    </div>
+
+    <div class="fact-card prisoners fade-in">
+        <h3>עסקת שליט (2011) — שחרור סינוואר = 7 באוקטובר</h3>
+        <div class="role">18 באוקטובר 2011 | 1,027 אסירים תמורת חייל אחד</div>
+        <div class="quote">"שחרור אסירים יושג רק דרך חטיפת יהודים והחלפתם" &mdash; יחיא סינוואר, ביום שחרורו, 2011</div>
+        <div class="context">ישראל שחררה <strong>1,027 אסירים</strong> (280 נידונו למאסר עולם) תמורת גלעד שליט.<br><br>
+            <strong>מי שוחרר:</strong><br>
+            &#8226; <strong>יחיא סינוואר</strong> &mdash; 4 מאסרי עולם. עלה לראש חמאס בעזה (2017). <strong>תכנן וביצע את 7 באוקטובר</strong>. חוסל 16.10.2024<br>
+            &#8226; <strong>אהלאם תמימי</strong> &mdash; הובילה מחבל מתאבד לסבארו (15 הרוגים, 7 ילדים). 16 מאסרי עולם. ברחה לירדן. <strong>ברשימת המבוקשים של FBI</strong><br><br>
+            <strong>משוחררים שרצחו אחרי שחרורם:</strong><br>
+            &#8226; <strong>זיאד עוואד</strong> &mdash; ירה והרג את ברוך מזרחי (48) בערב פסח 2014<br>
+            &#8226; <strong>אחמד נג'אר</strong> &mdash; כיוון ירי שהרג את מלאכי רוזנפלד (25) ביוני 2015<br>
+            &#8226; <strong>אוסאמה אסעד</strong> &mdash; מעורב ברצח דני גונן (25) ביוני 2015
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; המספרים:</div>
+            <p><strong>82%</strong> מהמשוחררים חזרו לטרור (נתוני שב"כ). <strong>6 ישראלים נרצחו</strong> על ידי משוחררי שליט עד 2015. סינוואר <strong>אמר ביום שחרורו</strong> שיחטוף שוב — וב-7/10 חטף 251.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Jerusalem Post | AJC | Times of Israel</div>
+    </div>
+
+    <div class="fact-card prisoners fade-in" style="background: linear-gradient(135deg, #12172b, rgba(213,0,249,0.08)); border: 1px solid rgba(213,0,249,0.2);">
+        <h3 style="color: #d500f9; font-size: 1.4em;">&#9888; שרשרת הסיבתיות</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 2.2;">
+            <strong>1985:</strong> עסקת ג'יבריל משחררת אחמד יאסין<br>
+            <strong>1987:</strong> יאסין מייסד את חמאס<br>
+            <strong>2006:</strong> חמאס חוטף את גלעד שליט<br>
+            <strong>2011:</strong> עסקת שליט משחררת יחיא סינוואר<br>
+            <strong>2017:</strong> סינוואר נבחר למנהיג חמאס בעזה<br>
+            <strong>2023:</strong> סינוואר מתכנן ומבצע את 7 באוקטובר<br>
+            <strong style="color: #d500f9;">= 1,200 הרוגים, 251 חטופים</strong><br><br>
+            <strong>סה"כ ישראל שחררה:</strong> 10,000+ אסירים בכל העסקאות<br>
+            <strong>183 ישראלים נרצחו</strong> על ידי אסירים משוחררים (נתוני אלמגור)<br>
+            <strong style="color: #d500f9;">כל עסקה יצרה את האסון הבא.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 5: ADDITIONAL CARDS ==================== -->
+<section id="additional">
+    <div class="section-header fade-in">
+        <h2>&#128203; נספחים</h2>
+        <div class="section-divider"></div>
+        <p>עובדות נוספות הקשורות למדיניות כושלת</p>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>גל טרור 2022 — 19 הרוגים ב-5 פיגועים</h3>
+        <div class="role">מרץ-מאי 2022</div>
+        <div class="context">גל הטרור הקטלני ביותר מאז האינתיפאדה:<br>
+            &#8226; <strong>באר שבע</strong> (22.3): מוחמד אבו אל-קיעאן, תומך דאע"ש — <strong>4 נרצחים</strong><br>
+            &#8226; <strong>חדרה</strong> (27.3): שני בני דודים מאום אל-פחם, תומכי דאע"ש — <strong>2 שוטרי מג"ב נרצחו</strong><br>
+            &#8226; <strong>בני ברק</strong> (29.3): מחבל מג'נין — <strong>5 נרצחים</strong> (כולל <strong>אמיר חורי</strong>, שוטר ערבי-נוצרי)<br>
+            &#8226; <strong>דיזנגוף ת"א</strong> (7.4): מחבל מג'נין — <strong>3 נרצחים</strong><br>
+            &#8226; <strong>אלעד</strong> (5.5): 2 מחבלים עם גרזנים — <strong>3 נרצחים</strong> (אחד נטבח ליד <strong>בנו בן ה-6</strong>)</div>
+        <div class="source">מקורות: Wikipedia | Times of Israel | Ynet</div>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>הסכמי אברהם vs. אוסלו — מה עובד ומה נכשל</h3>
+        <div class="role">1993 vs. 2020</div>
+        <div class="context">
+            <strong>אוסלו (1993):</strong> "שלום תמורת שטח" — ויתורים → אינתיפאדה → <strong>1,200+ הרוגים</strong>.<br>
+            <strong>הסכמי אברהם (2020):</strong> נורמליזציה על בסיס אינטרסים משותפים (בעיקר נגד איראן) — <strong>ללא ויתורים</strong>.<br>
+            &#8226; סחר ישראל-UAE: מ-<strong>$200M (2020)</strong> ל-<strong>$3.24 מיליארד (2024)</strong> — פי 16<br>
+            &#8226; שרדו: 7/10, מלחמת עזה, עימות ישראל-איראן, זעם אזורי<br>
+            &#8226; אוסלו היה "אוטופי ומשיחי". אברהם היה <strong>"פרגמטי"</strong> — ולכן עבד.
+        </div>
+        <div class="source">מקורות: Jerusalem Post | Atlantic Council | Heritage Foundation | INSS</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-policies');</script>
+
+</body>
+</html>

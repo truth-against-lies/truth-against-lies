@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תקשורת שקרנית | האמת נגד השקר</title>
+    <meta name="description" content="עיתונאים, רשתות ותקשורת בינלאומית שמפיצים שקרים ומשתפים פעולה עם חמאס">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="תקשורת שקרנית | האמת נגד השקר">
+    <meta property="og:description" content="עיתונאים, רשתות ותקשורת בינלאומית שמפיצים שקרים ומשתפים פעולה עם חמאס">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-media.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="תקשורת שקרנית | האמת נגד השקר">
+    <meta name="twitter:description" content="עיתונאים, רשתות ותקשורת בינלאומית שמפיצים שקרים ומשתפים פעולה עם חמאס">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.media { border-right: 4px solid #ff9800; }
+        .fact-card.statements { border-right: 4px solid #3498db; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === BACK LINK === */
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1em;
+            margin-bottom: 10px;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover { opacity: 0.7; }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128250; תקשורת שקרנית</h1>
+    <p class="subtitle">עיתונאים, רשתות ותקשורת בינלאומית שמפיצים שקרים ומשתפים פעולה עם חמאס</p>
+    <p class="disclaimer">&#9888; זה לא עניין פוליטי &mdash; זו חשיפת עובדות</p>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<a href="facts.html" class="back-link">&larr; חזרה לכל הקטגוריות</a>
+
+<!-- ==================== JOURNALISTS (from Section 4) ==================== -->
+<section id="journalists">
+    <h3 class="subsection-title fade-in">&#128240; עיתונאים ישראלים</h3>
+
+    <div class="fact-card statements fade-in">
+        <h3>גדעון לוי</h3>
+        <div class="role">כתב הארץ</div>
+        <div class="quote">"ישראל לא יכולה לכלוא 2 מיליון בני אדם ולצפות לשקט"</div>
+        <div class="context">הצהרה <strong>יומיים אחרי 7 באוקטובר</strong>, כשישראל עוד ספרה את ההרוגים. למעשה <strong>הצדיק את הטבח</strong> כתגובה "טבעית". שנים של טורים בהארץ ובתקשורת בינלאומית שמציגים את ישראל כאגרסור ואת המחבלים כקורבנות.</div>
+        <div class="source">מקורות: טור בהארץ, אוקטובר 2023 | ראיונות לתקשורת בינלאומית | Democracy Now</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>עמירה הס</h3>
+        <div class="role">כתבת הארץ ברמאללה</div>
+        <div class="quote">"ידוי אבנים הוא זכות לידה של כל מי שנמצא תחת כיבוש"</div>
+        <div class="context">טור בהארץ (2013) שהצדיק <strong>ידוי אבנים על ישראלים</strong>. אבנים הרגו ופצעו עשרות ישראלים. הס גרה ברמאללה ובעזה שנים וכותבת באופן שיטתי נגד ישראל.</div>
+        <div class="source">מקורות: טור בהארץ, אפריל 2013 | Honest Reporting | Times of Israel</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>עמוס שוקן</h3>
+        <div class="role">מוציא לאור, הארץ</div>
+        <div class="quote">"מחבלים פלסטינים הם לוחמי חופש"</div>
+        <div class="context">בעליו של <strong>העיתון הישראלי הארץ</strong> הגדיר מחבלים שרצחו אזרחים ישראלים כ<strong>"לוחמי חופש"</strong>. מתחת לניהולו, הארץ הפך לפלטפורמה מרכזית לביקורת על ישראל בשפה האנגלית.</div>
+        <div class="source">מקורות: ראיון להארץ | Honest Reporting | Jerusalem Post</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 7: MEDIA ==================== -->
+<section id="media">
+    <div class="section-header fade-in">
+        <h2>&#128250; תקשורת, שקרים ודיסאינפורמציה</h2>
+        <div class="section-divider"></div>
+        <p>תקשורת עולמית שמפיצה שקרים, מביימת סצנות ומשתפת פעולה עם חמאס</p>
+    </div>
+
+    <h3 class="subsection-title fade-in">&#128225; אלג'זירה &mdash; זרוע תעמולה קטארית</h3>
+
+    <div class="fact-card media fade-in">
+        <h3>6 עיתונאי אלג'זירה = פעילי חמאס/ג'יהאד</h3>
+        <div class="role">2024 &mdash; מסמכים שנתפסו בעזה</div>
+        <div class="context">צה"ל חשף מסמכים שתפוסים המוכיחים ש-<strong>6 כתבי אלג'זירה פעילים</strong> היו בו-זמנית פעילי חמאס/ג'יהאד: <strong>אנס אל-שריף</strong> &mdash; חבר גדוד ג'באליה של חמאס, עמד בראש תא ירי רקטות מונחות. <strong>מוחמד ושאח</strong> &mdash; "מפקד בכיר" ביחידת טילים נגד טנקים. <strong>איסמעיל אבו עומר</strong> &mdash; חצה את הגדר ב-7/10 ופרסם סרטונים מהשטח.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ישראל אסרה אלג'זירה (מאי 2024). גם <strong>הרשות הפלסטינית</strong> אסרה אלג'זירה (דצמבר 2024) — וקראה לה פרו-חמאסית.</p>
+        </div>
+        <div class="source">מקורות: Times of Israel | FDD Analysis | Washington Post</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>שיתוף פעולה מתועד חמאס-אלג'זירה</h3>
+        <div class="role">מסמכים מ-2022-2023</div>
+        <div class="context">מסמכים שנתפסו חשפו שחמאס הקים <strong>"טלפון אלג'זירה"</strong> &mdash; קו חם מסווג לתקשורת. מסמך מ-2022 הראה שחמאס נתן <strong>הוראות ישירות</strong> לאלג'זירה בנוגע לסיקור שיגור רקטה כושל של ג'יהאד: (1) לא להשתמש במילה "טבח", (2) לצמצם תמונות, (3) שחברי הפאנל לא יבקרו את חמאס. אלג'זירה ממומנת <strong>90% על ידי ממשלת קטאר</strong>.</div>
+        <div class="source">מקורות: JNS | FDD | BBC (ראיון מנכ"ל אלג'זירה 2017)</div>
+    </div>
+
+    <h3 class="subsection-title fade-in">&#128187; BBC &mdash; הטיה מתועדת</h3>
+
+    <div class="fact-card media fade-in">
+        <h3>דו"ח בלן — £330,000 להסתיר הטיה</h3>
+        <div class="role">2004-2012</div>
+        <div class="context">BBC הזמינה דו"ח פנימי של <strong>20,000 מילים</strong> שבחן מאות שעות סיקור של הסכסוך. BBC <strong>סירבה לפרסם</strong> ונלחמה עד <strong>בית המשפט העליון</strong> כדי לשמור עליו חשאי. המאבק המשפטי עלה <strong>£330,000</strong> מכספי משלמי המיסים הבריטים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>עד היום — הדו"ח חשאי. BBC שילמה £330,000 כדי שלא תדעו מה כתוב בו.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia (Balen Report) | Daily Sceptic</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>1,553 הפרות הנחיות BBC</h3>
+        <div class="role">ספטמבר 2024 &mdash; דו"ח 199 עמודים</div>
+        <div class="context">צוות של <strong>20 עורכי דין ו-20 מדעני נתונים</strong>, בראשות עו"ד טרוור אסרסון, ניתח <strong>9 מיליון מילים</strong> של סיקור BBC. נמצאו <strong>1,553 הפרות</strong> של הנחיות BBC עצמה ב-4 חודשים. "דפוס עקבי של שפה ודיווח שהעדיף את הנרטיב הפלסטיני." לדוגמה: כתב BBC ג'ון דוניסון שיער בשידור שפיצוץ בית חולים אל-אהלי "ככל הנראה" הפצצה ישראלית — <strong>התברר שזו רקטה של ג'יהאד</strong>.</div>
+        <div class="source">מקורות: HonestReporting | Times of Israel</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>BBC סירבה לקרוא לחמאס "מחבלים"</h3>
+        <div class="role">אוקטובר 2023</div>
+        <div class="context">אחרי 7 באוקטובר, BBC סירבה להשתמש במילה <strong>"מחבלים"</strong> לתיאור חמאס — למרות שחמאס מוגדר כארגון טרור בבריטניה מ-2021. שר החוץ הבריטי דרש שישנו מדיניות. <strong>אלפים הפגינו</strong> מול מטה BBC בלונדון. כתב ספורט <strong>נואה אברהמס התפטר</strong> במחאה.</div>
+        <div class="source">מקורות: Variety | Times of Israel</div>
+    </div>
+
+    <h3 class="subsection-title fade-in">&#127916; פאליווד &mdash; סצנות מבוימות</h3>
+
+    <div class="fact-card media fade-in">
+        <h3>מוחמד אל-דורה — הבימוי שהכי הרס</h3>
+        <div class="role">30 בספטמבר 2000 &mdash; France 2</div>
+        <div class="context">France 2 שידרה 55 שניות מתוך 27 דקות חומר גולמי, שהציגו ילד בן 12 "נהרג" בידי צה"ל. <strong>צוות שופטים צרפתי</strong> שצפה בחומר הגולמי קבע שהתיעוד כלל <strong>"סצנות מבוימות בצורה בוטה"</strong>. <strong>הילד הרים את ראשו אחרי שלכאורה "נהרג"</strong> — אנדרלן חתך את הסצנה. הצלם <strong>טלאל אבו-רחמה</strong> נמצא כמי ש"עסק באופן שיטתי בביום סצנות".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>התיעוד הפך לאחד מסמלי האינתיפאדה — והוביל לגל פיגועים. המונח <strong>"פאליווד"</strong> נטבע בעקבותיו.</p>
+        </div>
+        <div class="source">מקורות: CAMERA | HonestReporting | Wikipedia</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>תובייה גרוסמן — היהודי שהוצג כפלסטיני</h3>
+        <div class="role">30 בספטמבר 2000 &mdash; New York Times</div>
+        <div class="context">NYT פרסם תמונת AP של צעיר מדמם מתחת לשוטר ישראלי אלים, עם כיתוב: <strong>"שוטר ישראלי ופלסטיני"</strong>. במציאות: הצעיר היה <strong>תובייה גרוסמן</strong>, סטודנט יהודי-אמריקאי שהותקף על ידי <strong>המון פלסטיני</strong>, והשוטר <strong>הגן עליו</strong>. NYT פרסם שני תיקונים. <strong>התקרית הובילה להקמת HonestReporting</strong> — ארגון ניטור תקשורת.</div>
+        <div class="source">מקורות: Wikipedia (Tuvia Grossman) | HonestReporting</div>
+    </div>
+
+    <h3 class="subsection-title fade-in">&#128240; כשלונות תקשורת נוספים</h3>
+
+    <div class="fact-card media fade-in">
+        <h3>פיצוץ בית חולים אל-אהלי</h3>
+        <div class="role">17 באוקטובר 2023</div>
+        <div class="context">חמאס הכריז ש<strong>ישראל הפציצה בית חולים — 500 הרוגים</strong>. NYT, BBC וכל התקשורת העולמית רצו עם הכותרת. המציאות: <strong>סוכנויות מודיעין</strong> של ארה"ב, בריטניה, צרפת וקנדה קבעו שזו <strong>רקטה כושלת של ג'יהאד</strong>. מספר ההרוגים האמיתי: <strong>50-100</strong> (לא 500). AP, CNN, The Economist, Guardian ו-WSJ כולם הגיעו למסקנה שרקטה מעזה גרמה לפיצוץ.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>הדיווח הכוזב גרם <strong>למהומות אנטי-ישראליות ברחבי העולם</strong> וכמעט טרפד את ביקור ביידן באזור.</p>
+        </div>
+        <div class="source">מקורות: Wikipedia | Human Rights Watch | CNN</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>צלמים עם חמאס ב-7 באוקטובר</h3>
+        <div class="role">7 באוקטובר 2023 &mdash; חשיפת HonestReporting</div>
+        <div class="context"><strong>חסאן אסלייה</strong>, צלם פרילנסר של CNN ו-AP, צולם <strong>חוצה את הגדר</strong> לישראל ביחד עם מחבלי חמאס. צילם טנק בוער ומחבלים חודרים לכפר עזה. תמונה שלו עם <strong>סינוואר מנשק אותו</strong> (ינואר 2020) התגלתה. CNN ו-AP ניתקו קשר. HonestReporting זיהה <strong>6 צלמים פרילנסרים</strong> שנכחו במתקפה — AP, Reuters, NYT ו-CNN השתמשו בתמונותיהם.</div>
+        <div class="source">מקורות: Washington Post | CNN | HonestReporting | Times of Israel</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>דו"ח גולדסטון — הכותב חזר בו</h3>
+        <div class="role">ספטמבר 2009 (דו"ח) | אפריל 2011 (חרטה)</div>
+        <div class="context">השופט ריצ'רד גולדסטון הוביל דו"ח של האו"ם שקבע שישראל <strong>כיוונה בכוונה נגד אזרחים</strong>. באפריל 2011 פרסם חרטה ב-Washington Post: <strong>"אם הייתי יודע אז מה שאני יודע עכשיו, הדו"ח היה שונה. אזרחים לא הותקפו כמדיניות מכוונת."</strong> הוא הכיר בכך שישראל חקרה מעשי הפרה, בעוד חמאס <strong>"נכשל לחלוטין לחקור"</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>הדו"ח המקורי עדיין משמש כנשק תעמולתי — <strong>למרות שהכותב עצמו חזר בו</strong>. האו"ם מעולם לא תיקן.</p>
+        </div>
+        <div class="source">מקורות: Washington Post (Op-Ed אפריל 2011) | NPR | CNN | Brookings</div>
+    </div>
+
+    <div class="fact-card media fade-in">
+        <h3>"טבח ג'נין" שלא היה</h3>
+        <div class="role">אפריל 2002</div>
+        <div class="context">BBC ותקשורת עולמית הגבירו טענות פלסטיניות על <strong>"טבח" עם 500-1,300 הרוגים</strong> בג'נין. חקירות עצמאיות של <strong>האו"ם, אמנסטי, HRW, מגזין Time ו-BBC עצמה</strong> קבעו: <strong>לא היה טבח</strong>. ההרוגים בפועל: <strong>46-55</strong>, רבים מהם לוחמים. כמעט אף כתב לא תיקן את הדיווח המקורי.</div>
+        <div class="source">מקורות: HonestReporting | Wikipedia (Battle of Jenin 2002)</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-media');</script>
+
+</body>
+</html>

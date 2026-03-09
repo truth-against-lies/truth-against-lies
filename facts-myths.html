@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שקרים שהמציאות הפריכה | האמת נגד השקר</title>
+    <meta name="description" content="טענות שהתרסקו אל מול העובדות — שקר באדום, מציאות בירוק. רק עובדות מתועדות, רק מקורות">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="שקרים שהמציאות הפריכה | האמת נגד השקר">
+    <meta property="og:description" content="טענות שהתרסקו אל מול העובדות — שקר באדום, מציאות בירוק. רק עובדות מתועדות, רק מקורות">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-myths.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="שקרים שהמציאות הפריכה | האמת נגד השקר">
+    <meta name="twitter:description" content="טענות שהתרסקו אל מול העובדות — שקר באדום, מציאות בירוק. רק עובדות מתועדות, רק מקורות">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.myths { border-right: 4px solid #2ecc71; }
+        .fact-card.revisionism { border-right: 4px solid #76ff03; }
+        .fact-card.education { border-right: 4px solid #00e5ff; }
+        .fact-card.additional { border-right: 4px solid #8bc34a; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === MYTH CARDS === */
+        .myth-claim {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .myth-claim .myth-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-claim p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality {
+            background: rgba(46,204,113,0.08);
+            border-right: 3px solid #2ecc71;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .myth-reality .myth-label {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-reality p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality strong {
+            color: #2ecc71;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === BACK LINK === */
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1em;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: #ffd54f; }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128269; שקרים שהמציאות הפריכה</h1>
+    <p class="subtitle">טענות שהתרסקו אל מול העובדות &mdash; שקר באדום, מציאות בירוק</p>
+    <p class="disclaimer">&#9888; רק עובדות מתועדות &mdash; רק מקורות</p>
+</div>
+
+<main style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<a href="facts.html" class="back-link">&larr; חזרה לכל הקטגוריות</a>
+
+<!-- ==================== SECTION: MYTHS DISPROVEN ==================== -->
+<section id="myths">
+    <div class="section-header fade-in">
+        <h2>&#128161; שקרים שהמציאות הפריכה</h2>
+        <div class="section-divider"></div>
+        <p>טענות שמאל שהתרסקו אל מול העובדות &mdash; שקר באדום, מציאות בירוק</p>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "שלום תמורת שטח"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"אם ישראל תוותר על שטחים, היא תקבל שלום. נסיגה = ביטחון."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הסכמי אוסלו (1993): ישראל נתנה נשק ושטחים לרשות. התוצאה: <strong>האינתיפאדה השנייה &mdash; 1,137 הרוגים ישראלים</strong>. נסיגה מלבנון (2000): <strong>150,000+ רקטות חיזבאללה</strong>. ההתנתקות מעזה (2005): <strong>22,570+ רקטות</strong>. כל ויתור הוביל ליותר טרור, לא פחות.</p>
+        </div>
+        <div class="source">מקורות: IDF Archives | MFA Israel | Ynet</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "נעזוב את עזה ויהיה שקט"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ברגע שישראל תצא מעזה, הפלסטינים יבנו מדינה מתקדמת והאלימות תפסיק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ישראל יצאה ב-2005. חמאס השתלט ב-2007. מאז: <strong>22,570+ רקטות, 5 מלחמות, אלפי הרוגים</strong>. עזה הפכה לבסיס טרור, לא למדינה.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA reports | UN OCHA</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חמאס מרותע"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"חמאס מרותע מאוד ממלחמה ומעדיף כלכלה על מאבק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>7 באוקטובר 2023. <strong>3,000 מחבלים פרצו את הגדר, רצחו 1,200 אנשים, חטפו 251</strong>. הקונספציה קרסה. חמאס מעולם לא היה מרותע &mdash; הוא פשוט <strong>חיכה</strong>.</p>
+        </div>
+        <div class="source">מקורות: ועדת חקירה | הערכות מודיעין שנתיות | Times of Israel</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "הרשות הפלסטינית שותפה לשלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"הרשות הפלסטינית היא שותפה אמינה לשלום ויש לחזק אותה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הרשות משלמת <strong>$330 מיליון בשנה</strong> למשפחות מחבלים ("חוק שכר שהידים"). ככל שהפיגוע רצחני יותר &mdash; המשכורת גבוהה יותר. <strong>תמריץ כלכלי ישיר לטרור</strong>.</p>
+        </div>
+        <div class="source">מקורות: Palestinian Media Watch | Taylor Force Act | US Congress</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "ערפאת רצה שלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ערפאת היה מנהיג שלום. ישראל לא הציעה לו מספיק."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>בקמפ דיוויד (2000) ערפאת קיבל הצעה ל<strong>95% מהגדה + חלוקת ירושלים</strong> &mdash; ודחה. לא הגיש הצעה נגדית. <strong>הצית את האינתיפאדה השנייה</strong>. קלינטון: "ערפאת היה שקרן."</p>
+        </div>
+        <div class="source">מקורות: Dennis Ross "The Missing Peace" | Clinton memoirs | Ynet</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חימוש הרשות = ביטחון"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"לתת נשק לרשות הפלסטינית כדי שתילחם בטרור בעצמה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ספינת <strong>קארין A</strong> (2002): 50 טון נשק איראני בדרך לרשות &mdash; כולל רקטות קטיושה ונ"ט. ערפאת הכחיש מעורבות למרות הוכחות. נשק שישראל סיפקה לרשות <strong>שימש בפיגועים נגד ישראלים</strong>.</p>
+        </div>
+        <div class="source">מקורות: חיל הים / צה"ל | MFA Israel | BBC</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "מתנחלים = המכשול לשלום"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ההתנחלויות הן הסיבה לאלימות. ללא מתנחלים = שלום."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>7 באוקטובר &mdash; המתקפה הגדולה ביותר &mdash; הגיעה <strong>מעזה, שאין בה אף מתנחל מ-2005</strong>. חמאס לא תוקף בגלל התנחלויות. הוא תוקף כי <strong>המטרה שלו היא חיסול ישראל</strong> (אמנת חמאס, סעיף 7).</p>
+        </div>
+        <div class="source">מקורות: Hamas Charter | 7 October timeline | IDF data</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "גדר ההפרדה = אפרטהייד"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"גדר ההפרדה היא סמל לאפרטהייד ולדיכוי."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>הגדר נבנתה אחרי גל פיגועי התאבדות. התוצאה: <strong>ירידה של 90%+ בפיגועי התאבדות</strong>. הגדר <strong>הצילה אלפי חיים</strong> &mdash; יהודים וערבים כאחד. זה לא אפרטהייד, זה <strong>מחסום חיים</strong>.</p>
+        </div>
+        <div class="source">מקורות: ISA data | IDF statistics | Israel MFA</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "הקהילה הבינלאומית תגן על ישראל"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ישראל צריכה לסמוך על הקהילה הבינלאומית ולפעול לפי רצונה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>86% מהחלטות האו"ם על זכויות אדם</strong> מכוונות נגד ישראל. מועצת זכויות האדם כוללת סין, רוסיה, סעודיה. ה-UNRWA העסיקה <strong>מחבלי חמאס</strong>. הקהילה הבינלאומית לא הגנה על ישראל &mdash; <strong>אף פעם</strong>.</p>
+        </div>
+        <div class="source">מקורות: UN Watch | UNHRC voting records | UNRWA scandal 2024</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "חמאס יתמתן עם הזמן"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"ברגע שחמאס ישלוט ויישא באחריות, הוא יתמתן ויהפוך לגוף פוליטי."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>חמאס שלט בעזה <strong>17 שנים</strong> (2007&ndash;2024). לא התמתן. לא בנה כלכלה. השקיע הכל במנהרות ונשק. <strong>7 באוקטובר היה אחרי 17 שנות שלטון</strong>. "התמתנות" = שקר.</p>
+        </div>
+        <div class="source">מקורות: Hamas governance record | World Bank | Times of Israel</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "שתי מדינות = סוף הסכסוך"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"פתרון שתי מדינות יסיים את הסכסוך אחת ולתמיד."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>55% מהפלסטינים</strong> מתנגדים לפתרון שתי מדינות (סקר PCPSR). חמאס דוחה מכל וכל. אפילו הרשות מסרבת להכיר בישראל כ<strong>מדינה יהודית</strong>. "שתי מדינות" = שלב ראשון, לא סיום.</p>
+        </div>
+        <div class="source">מקורות: PCPSR polls | Hamas Charter | PA official statements</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "BDS = זכויות אדם"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"תנועת BDS היא תנועת זכויות אדם שלווה."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>מייסד BDS, <strong>עומר ברגותי</strong>: "אנחנו מתנגדים למדינה יהודית בכל חלק של פלסטין." BDS לא רוצה שלום &mdash; רוצה <strong>חיסול ישראל</strong>. ברגותי עצמו בעל תואר מ<strong>אוניברסיטת תל אביב</strong> (אפרטהייד?).</p>
+        </div>
+        <div class="source">מקורות: Omar Barghouti interviews | NGO Monitor | Tel Aviv University records</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "אין פתרון צבאי לטרור"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"לא ניתן לנצח טרור בכוח צבאי. רק משא ומתן יפתור."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p><strong>מבצע חומת מגן</strong> (2002): ירידה של <strong>70% בפיגועים</strong>. הגדר + פעילות צבאית = הצלחה דרמטית. ניצחון צבאי על טרור <strong>אפשרי ומוכח</strong>. דווקא "ריסון" ו"הבלגה" הובילו ליותר טרור.</p>
+        </div>
+        <div class="source">מקורות: IDF data | ISA statistics | Operation Defensive Shield records</div>
+    </div>
+
+    <div class="fact-card myths fade-in">
+        <h3>&#10060; "ריסון = תמיכה בינלאומית"</h3>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; מה נטען:</div>
+            <p>"אם ישראל תתאפק, היא תזכה בתמיכה בינלאומית."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; מה קרה בפועל:</div>
+            <p>ישראל <strong>מגונה בכל מקרה</strong>. 86% מהחלטות האו"ם נגדה &mdash; גם כשהיא מגיבה וגם כשהיא לא. ריסון <strong>לא מביא תמיכה</strong>, רק מעודד יותר טרור. המסר: "אין מחיר לתקיפת ישראל."</p>
+        </div>
+        <div class="source">מקורות: UN Watch | UNGA voting records | Israel MFA</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: EDUCATION FOR HATE ==================== -->
+<section id="education-deep">
+    <div class="section-header fade-in">
+        <h2>&#128218; חקירה מעמיקה: חינוך לשנאה</h2>
+        <div class="section-divider"></div>
+        <p>ספרי לימוד, קייטנות, טלוויזיית ילדים — איך מגדלים דור של רוצחים</p>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>ספרי לימוד פלסטיניים — חשבון עם "שהידים"</h3>
+        <div class="role">IMPACT-se | 290 ספרים + 71 מדריכי מורה</div>
+        <div class="context">
+            <strong>תרגילי חשבון (כיתה ד'+ט'):</strong> "מספר שהידי האינתיפאדה הראשונה: 2,026. מספר שהידי אינתיפאדת אל-אקצא: 5,050. הפצועים: 49,760. <strong>חשבו...</strong>"<br><br>
+            <strong>פיזיקה (כיתה ז'):</strong> חוק ניוטון השני מוצג דרך <strong>קלע של נער פלסטיני מול חיילים</strong><br><br>
+            <strong>מפות:</strong> לפחות 3 מפות <strong>ללא ישראל</strong> &mdash; תל אביב וחיפה מסומנות כערים פלסטיניות<br><br>
+            <strong>אנטישמיות (כיתה י'):</strong> "יהודים שולטים בכסף, במדיה ובפוליטיקה, ורותמים כוח גלובלי לטובתם"<br><br>
+            <strong>דלאל מוגרבי (כיתה ה'):</strong> 10 עמודי הבנת הנקרא על המחבלת שהרגה <strong>38 ישראלים, כולל 13 ילדים</strong> (טבח הכביש החופי, 1978). מוצגת כגיבורה
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; מי מממן:</div>
+            <p>ספרי הלימוד ממומנים על ידי <strong>האיחוד האירופי ($500M+)</strong>. הפרלמנט האירופי <strong>גינה 5 פעמים</strong> את התוכן &mdash; <strong>המימון ממשיך</strong>.</p>
+        </div>
+        <div class="source">מקורות: IMPACT-se | EU Reporter | CAMERA | Algemeiner | MEMRI</div>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>76 בתי ספר על שם מחבלים</h3>
+        <div class="role">Palestinian Media Watch | אוקטובר 2018</div>
+        <div class="context">הרשות הפלסטינית קראה <strong>76 בתי ספר</strong> על שם מחבלים ומשתפי פעולה עם הנאצים. הדוגמה המפורסמת: <strong>בלגיה</strong> מימנה בית ספר בחברון שהרשות שינתה שמו ל<strong>"דלאל מוגרבי"</strong>. כשבלגיה הקפיאה מימון, הרשות <strong>העבירה את השם ל-2 בתי ספר אחרים</strong> באותה שכונה. הודעת הרשות: <strong>"בית אוא לא איבד את השם דלאל מוגרבי."</strong></div>
+        <div class="source">מקורות: PMW | Times of Israel</div>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>קייטנות חמאס — 100,000 ילדים/שנה באימון נשק חי</h3>
+        <div class="role">2021&ndash;2023 | גדודי עז א-דין אל-קסאם</div>
+        <div class="context">
+            &#8226; <strong>2023 ("מגן ירושלים"):</strong> ~100,000 ילדים ונוערים. אימון בפיקוח <strong>לוחמי אל-קסאם</strong>: ירי בנשק חי, לוחמה עירונית, סימולציית פשיטה על עמדות צה"ל, סימולציית כיבוש ירושלים<br>
+            &#8226; <strong>2022 ("שתילי ירושלים"):</strong> ~100,000 ב-~500 קייטנות<br>
+            &#8226; <strong>2021:</strong> ~50,000 רשומים<br><br>
+            <strong>נשיא הרצוג</strong> הציג ב-NBC מסמך חמאס שנתפס &mdash; <strong>הנחיות לניהול קייטנות ילדים בבסיסי חמאס</strong>: ירי, סימולציות, קורסים תיאורטיים. <strong>מטרה מוצהרת: הכנת הדור הבא לשרת בארגון הטרור</strong>.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; הקשר ל-7/10:</div>
+            <p>הילדים של הקייטנות של 2007 הם <strong>הלוחמים של 7 באוקטובר 2023</strong>. חמאס גידל <strong>דור שלם של רוצחים</strong>.</p>
+        </div>
+        <div class="source">מקורות: MEMRI | Israel Hayom | Times of Israel | FDD</div>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>אונר"א — 133 מורים מסיתים + 12 השתתפו ב-7/10</h3>
+        <div class="role">UN Watch / IMPACT-se | 2023&ndash;2024</div>
+        <div class="context">
+            &#8226; <strong>133 עובדי אונר"א</strong> תועדו מסיתים לאלימות ברשתות החברתיות<br>
+            &#8226; <strong>12 עובדי אונר"א</strong> (7 מורים, 2 מנהלי בי"ס) לכאורה <strong>השתתפו ב-7 באוקטובר</strong><br>
+            &#8226; קבוצת טלגרם של <strong>3,000 מורי אונר"א</strong> בעזה חגגה את הטבח <strong>תוך דקות</strong> מתחילתו<br>
+            &#8226; <strong>15%+</strong> מהמורים הבכירים בעזה &mdash; חברי חמאס או ג'יהאד אסלאמי<br>
+            &#8226; שיעור ערבית בבית ספר אונר"א: פיגוע הצתת אוטובוס יהודי כ<strong>"מסיבת ברביקיו"</strong><br>
+            &#8226; שלטי גן ילדים חמאס: <strong>"ילדי הגן הם שהידי המחר"</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; המימון:</div>
+            <p>תקציב אונר"א: <strong>$1.46 מיליארד</strong>/שנה. <strong>60% הולך לחינוך</strong>. <strong>42% ממומן ע"י האיחוד האירופי</strong>. כסף אירופי <strong>מממן חינוך לשנאה ולרצח</strong>.</p>
+        </div>
+        <div class="source">מקורות: UN Watch | IMPACT-se | JNS | CBS News | Times of Israel</div>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>אינתיפאדת הסכינים — ילדים בני 13 דוקרים יהודים</h3>
+        <div class="role">אוקטובר 2015 &mdash; מרץ 2016</div>
+        <div class="context">
+            <strong>211 דקירות</strong>, 83 ירי, 42 דריסות. <strong>30 ישראלים נרצחו</strong>.<br><br>
+            התוקפים: נערים מיואשים, <strong>חלקם בני 13-14 בלבד</strong>. הם התייצרו ממדיה חברתית:<br>
+            &#8226; תמונה: <strong>"כשאתה דוקר, שים רעל על הסכין"</strong><br>
+            &#8226; סרטון YouTube: <strong>"למד איך לדקור יהודי"</strong><br>
+            &#8226; האשטאג <strong>#דקור</strong> עלה לטרנד בטוויטר ופייסבוק<br>
+            &#8226; נערה פלסטינית פרסמה סרטון בפייסבוק עם סכין: <strong>"דקור! דקור! דקור!"</strong><br><br>
+            <strong>הקשר לחינוך:</strong> הילדים האלה למדו מספרי לימוד שמפארים "שהידים", צפו בטלוויזיה שמעודדת רצח יהודים, ושיחקו עם נשק חי בקייטנות חמאס.
+        </div>
+        <div class="source">מקורות: Wikipedia | MEMRI | France24 | Times of Israel</div>
+    </div>
+
+    <div class="fact-card education fade-in">
+        <h3>אוניברסיטאות — תצוגה של פיגוע סבארו + חגיגות חמאס</h3>
+        <div class="role">אוניברסיטת אן-נג'אח, שכם | 2001</div>
+        <div class="context">
+            סטודנטים באוניברסיטת <strong>אן-נג'אח</strong> בשכם בנו <strong>שחזור בגודל חדר</strong> של פיגוע ההתאבדות בסבארו (16 הרוגים, 7 ילדים): <strong>רהיטים שבורים מותזים בדם מזויף וחלקי גוף</strong>. בכניסה &mdash; ציור קיר של הפיגוע. התצוגה משכה המונים.<br><br>
+            <strong>בירזית (2022):</strong> גוש הוופא המזוהה עם חמאס זכה ב<strong>28 מתוך 51 מושבים</strong> בבחירות סטודנטים. <strong>דגלי חמאס ירוקים</strong> הונפו ברחבי הקמפוס. בהיעדר בחירות לאומיות &mdash; בחירות סטודנטים הפכו ל<strong>ברומטר פוליטי</strong>.
+        </div>
+        <div class="source">מקורות: Wikipedia (Sbarro) | Al-Fanar Media | Middle East Eye | Times of Israel</div>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>פרפור העכבר — חמאס מלמד ילדים להרוג</h3>
+        <div class="role">2007-2022 &mdash; ערוץ אל-אקצה (חמאס)</div>
+        <div class="context">תוכנית ילדים <strong>"חלוצי המחר"</strong> (בסגנון רחוב סומסום) עם דמויות מחופשות: <strong>פרפור העכבר</strong> (חיקוי מיקי מאוס) — "אנחנו מניחים יסודות לעולם בהנהגת האסלאם". <strong>"נהרג" בידי חוקר ישראלי</strong>. <strong>נחול הדבורה</strong> — "נקמה באויבי אלוהים". <strong>אסעוד הארנב</strong> — "אסיים את היהודים ואוכל אותם". ילדה בתוכנית שיבחה על רצונה להיות שוטרת <strong>"ולירות ביהודים"</strong>. לפחות <strong>75 בתי ספר</strong> של הרשות נקראים על שם מחבלים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>דור שלם של ילדים גדל על שנאה, ג'יהאד ורצון להרוג. <strong>100+ מחבלי 7/10 הם בוגרי אונר"א</strong>.</p>
+        </div>
+        <div class="source">מקורות: CBS News | MEMRI | Wikipedia (Tomorrow's Pioneers) | IMPACT-se</div>
+    </div>
+
+    <div class="fact-card education fade-in" style="background: linear-gradient(135deg, #12172b, rgba(0,229,255,0.08)); border: 1px solid rgba(0,229,255,0.2);">
+        <h3 style="color: #00e5ff; font-size: 1.4em;">&#9888; הצינור: מחינוך לטרור</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>ספרי לימוד</strong> שמלמדים שנאה → <strong>טלוויזיה</strong> שמפארת רצח → <strong>קייטנות</strong> עם נשק חי → <strong>רשתות חברתיות</strong> שמעודדות דקירות → <strong>אוניברסיטאות</strong> שחוגגות פיגועים → <strong>גדודי חמאס</strong><br><br>
+            זה לא מקרי. <strong>זו מערכת שלמה</strong>: ממשפחה, דרך בי"ס, דרך מדיה, דרך קייטנות &mdash; ועד הרצח ב-7 באוקטובר.<br>
+            <strong>100,000 ילדים בשנה</strong> עוברים את הצינור הזה.<br>
+            <strong style="color: #00e5ff;">12 מורי אונר"א השתתפו ב-7/10. 3,000 מורי אונר"א חגגו. האיחוד האירופי מממן $600M+ בשנה.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: HISTORICAL LIES DEBUNKED ==================== -->
+<section id="revisionism-deep">
+    <div class="section-header fade-in">
+        <h2>&#128506; שקרים היסטוריים שהופרכו</h2>
+        <div class="section-divider"></div>
+        <p>"פלסטין הייתה מדינה", "יהודים הם קולוניאליסטים", "אפרטהייד", "רצח עם" — העובדות מדברות</p>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>"פלסטין הייתה מדינה" — מעולם לא</h3>
+        <div class="role">היסטוריה מתועדת</div>
+        <div class="context">
+            &#8226; <strong>135 לספירה:</strong> הקיסר הרומי <strong>אדריאנוס</strong> שינה את שם <strong>יהודה</strong> ל-"סוריה פלסטינה" — <strong>עונש על מרד בר כוכבא</strong>. המטרה: למחוק את הזיקה היהודית. השם נגזר מ"פלישתים" — אויבי היהודים<br>
+            &#8226; <strong>400 שנות שלטון עות'מאני</strong> (1517-1917): <strong>אין יחידה מנהלית בשם "פלסטין"</strong>. האזור חולק לסנג'ק ירושלים ומחוזות ביירות וסוריה<br>
+            &#8226; <strong>מנדט בריטי</strong> (1920-1948): מנדט של חבר הלאומים — <strong>לא מדינה עצמאית</strong><br><br>
+            <strong>מנהיגים ערבים שהכחישו את "פלסטין":</strong><br>
+            &#8226; <strong>עוני ביי עבד אל-האדי</strong> (1937, ועדת פיל): <strong>"אין מדינה כזו פלסטין! 'פלסטין' היא מונח שהציונים המציאו!"</strong><br>
+            &#8226; <strong>זוהיר מוחסן</strong> (מנהיג א-סאיקה, PLO, 1977): <strong>"העם הפלסטיני לא קיים. יצירת מדינה פלסטינית היא רק אמצעי להמשיך את המאבק נגד ישראל... בפועל אין הבדל בין ירדנים, פלסטינים, סורים ולבנונים"</strong><br>
+            &#8226; <strong>חאפז אסד</strong> לערפאת: <strong>"אין דבר כזה עם פלסטיני, אין ישות פלסטינית, יש רק סוריה"</strong>
+        </div>
+        <div class="source">מקורות: Wikipedia | Wikiquote | Snugfam | Hudson Institute</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>"יהודים הם קולוניאליסטים אירופים" — DNA אומר אחרת</h3>
+        <div class="role">מחקרים גנטיים + ארכיאולוגיה</div>
+        <div class="context">
+            <strong>ראיות גנטיות:</strong><br>
+            &#8226; <strong>Atzmon et al. (2010):</strong> 7 קהילות יהודיות → כולן חולקות <strong>"מוצא מזרח-תיכוני משותף"</strong>. 12 מתוך 20 הזוגות הגנטיים הקרובים ביותר = <strong>זוגות יהודיים</strong><br>
+            &#8226; <strong>75% מיהודי היום</strong> ממוצא מזרח-תיכוני (World Jewish Congress)<br>
+            &#8226; שיעור התערבות גנטית אירופית באשכנזים: <strong>5-8% בלבד</strong><br><br>
+            <strong>ראיות ארכיאולוגיות:</strong><br>
+            &#8226; <strong>אסטלת מרנפתח (1208 לפנה"ס)</strong> — אזכור "ישראל" הראשון מחוץ לתנ"ך, <strong>3,200+ שנה</strong><br>
+            &#8226; <strong>מגילות ים המלח</strong> — המאה ה-3 לפנה"ס עד המאה ה-1 לספירה<br>
+            &#8226; <strong>שער טיטוס, רומא (81 לספירה):</strong> חיילים רומאים נושאים <strong>מנורת בית המקדש</strong><br>
+            &#8226; <strong>100+ בתי כנסת עתיקים</strong> בארץ ישראל<br>
+            &#8226; <strong>פרויקט ניפוי הר הבית:</strong> 500,000+ ממצאים, 800+ מטבעות יהודיות מהבית השני<br><br>
+            <strong>נוכחות רצופה 3,000+ שנה:</strong> ירושלים, חברון, טבריה, צפת — יהודים חיו שם <strong>גם תחת כיבוש</strong>.
+        </div>
+        <div class="source">מקורות: PubMed | WJC | Stanford | Biblical Archaeology Society | Temple Mount Sifting Project</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>הכחשת בית המקדש — גם הקוראן מכיר בו</h3>
+        <div class="role">3,000 שנות היסטוריה מול שקר מודרני</div>
+        <div class="context">
+            <strong>ציר הזמן:</strong><br>
+            &#8226; ~957 לפנה"ס: <strong>בית ראשון</strong> (שלמה) → נחרב 586 לפנה"ס<br>
+            &#8226; 516 לפנה"ס: <strong>בית שני</strong> → נחרב <strong>70 לספירה</strong> ע"י רומא<br>
+            &#8226; ~691 לספירה: <strong>כיפת הסלע</strong> (600+ שנה אחרי חורבן הבית)<br>
+            &#8226; ~705-715 לספירה: <strong>מסגד אל-אקצא</strong><br><br>
+            <strong>מקורות מוסלמיים שמאשרים:</strong><br>
+            &#8226; <strong>קוראן, סורה 17:7</strong> — מתייחס לחורבן שני בתי המקדש<br>
+            &#8226; שלמה (סולימאן) מופיע <strong>בקוראן כנביא</strong><br>
+            &#8226; <strong>כעב אל-אחבר</strong> (רב יהודי שהתאסלם) אמר ל<strong>עומר בן אל-ח'טאב</strong> (638) שהאתר זהה לבתי המקדש<br>
+            &#8226; השם <strong>"בית אל-מקדס"</strong> = תרגום ישיר של <strong>"בית המקדש"</strong><br><br>
+            <strong>1999:</strong> הוואקף השתמש ב<strong>דחפורים</strong> לחפור בהר הבית ללא פיקוח ארכיאולוגי — <strong>400 משאיות אדמה</strong> עם ממצאים נזרקו. פרויקט הניפוי שיחזר 500,000+ ממצאים.
+        </div>
+        <div class="source">מקורות: Wikipedia | Britannica | JCFA | Washington Institute | TMSP</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>"נכבה" — 5 צבאות ערביים פלשו לישראל + 850,000 יהודים גורשו</h3>
+        <div class="role">מאי 1948</div>
+        <div class="context">
+            <strong>15 במאי 1948:</strong> ישראל הכריזה על עצמאות. <strong>5 צבאות ערביים</strong> (מצרים, סוריה, עבר הירדן, לבנון, עירק) <strong>פלשו</strong>.<br><br>
+            <strong>עאזם פאשה</strong> (מזכ"ל הליגה הערבית, 1947): <strong>"זו תהיה מלחמת השמדה וטבח רב"</strong><br><br>
+            <strong>הפליטים היהודים שלא מדברים עליהם:</strong><br>
+            &#8226; <strong>850,000+ יהודים</strong> גורשו ממצרים, עירק, סוריה, לבנון, תימן, לוב, מרוקו<br>
+            &#8226; <strong>הפרהוד, בגדד</strong> (1941): 150-180 יהודים נרצחו, 600 נפצעו, 1,500 חנויות נבזזו<br>
+            &#8226; <strong>פוגרום טריפולי</strong> (1945): 140+ יהודים נרצחו כולל ילדים<br>
+            &#8226; היום נשארו <strong>~4,500 יהודים</strong> בכל ארצות ערב<br>
+            &#8226; <strong>אין סוכנות אום</strong> ייעודית לפליטים יהודים. פלסטינים קיבלו אונר"א ב-$1.46B/שנה
+        </div>
+        <div class="source">מקורות: Wikipedia | USHMM | UK Parliament | World Jewish Congress</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>"אפרטהייד" — שופט עליון מוסלמי, מיס ישראל ערבייה</h3>
+        <div class="role">2 מיליון אזרחים ערבים עם זכויות מלאות</div>
+        <div class="context">
+            <strong>2 מיליון אזרחים ערבים</strong> (21% מהאוכלוסייה) עם אזרחות מלאה, זכות הצבעה, חופש תנועה.<br><br>
+            <strong>הישגים:</strong><br>
+            &#8226; <strong>שופט בית משפט עליון</strong>: ח'אלד כבוב — שופט מוסלמי קבוע ראשון (2022)<br>
+            &#8226; <strong>מיס ישראל 1999</strong>: ראנה רסלאן (ערבייה מחיפה)<br>
+            &#8226; <strong>25% מהרופאים, 27% מהאחיות, 49% מהרוקחים</strong> &mdash; ערבים<br>
+            &#8226; <strong>10 חברי כנסת</strong> לא-יהודים בכנסת ה-25<br>
+            &#8226; אלוף משנה <strong>אילא וואוויה</strong> — אישה מוסלמית ערבייה ראשונה בדרגת רב-סרן בצה"ל<br><br>
+            <strong>לעומת דרום אפריקה:</strong> חוק רישום גזעי, חופים/אוטובוסים/בתי חולים נפרדים, שחורים <strong>לא הצביעו</strong>. בישראל: <strong>אין הפרדה</strong> חוקית על בסיס אתני.
+        </div>
+        <div class="source">מקורות: Wikipedia | PMC | SSRN | AJC</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>"רצח עם" — האוכלוסייה גדלה 167%</h3>
+        <div class="role">נתוני הלשכה המרכזית לסטטיסטיקה הפלסטינית</div>
+        <div class="context">
+            <strong>גידול אוכלוסייה פלסטינית:</strong><br>
+            &#8226; 1990: <strong>1.98 מיליון</strong> → 2024: <strong>5.29 מיליון</strong> = צמיחה של <strong>167%</strong><br>
+            &#8226; צמיחה עולמית ממוצעת באותה תקופה: <strong>54%</strong> — פלסטינים גדלו <strong>פי 3 מהממוצע</strong><br>
+            &#8226; שיעור ילודה בעזה: <strong>3.97 ילדים לאישה</strong> (מקום 31 בעולם)<br><br>
+            <strong>לעומת רצחות עם אמיתיים:</strong><br>
+            &#8226; <strong>שואה:</strong> 6,000,000 — 63% מיהודי אירופה הושמדו<br>
+            &#8226; <strong>רוואנדה:</strong> 500,000-1,000,000 — 70-80% מהטוטסים ב-100 יום<br>
+            &#8226; <strong>ארמניה:</strong> 664,000-1,200,000 — כמעט חיסול מוחלט<br><br>
+            רצח עם = <strong>ירידה דרמטית</strong> באוכלוסייה. צמיחה של 167% = <strong>ההפך המוחלט</strong> מרצח עם.
+        </div>
+        <div class="source">מקורות: PCBS | Worldometers | Wikipedia</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>אונסק"ו מוחקת 3,000 שנות יהדות</h3>
+        <div class="role">2016 &mdash; 3 החלטות</div>
+        <div class="context">
+            <strong>15 באפריל 2016:</strong> אונסק"ו הצביעה <strong>33-6</strong> על החלטה שמתייחסת להר הבית <strong>רק בשמו המוסלמי "אל-חרם אל-שריף"</strong> ולכותל רק כ<strong>"אל-בוראק/רחבת הכותל המערבי"</strong> — <strong>מוחקת את כל השמות העבריים</strong><br><br>
+            <strong>13 באוקטובר 2016:</strong> החלטה נוספת: <strong>24 בעד, 6 נגד, 26 נמנעים</strong><br><br>
+            <strong>26 באוקטובר 2016:</strong> החלטה שלישית: <strong>10 בעד, 2 נגד, 8 נמנעים</strong><br><br>
+            שלוש החלטות <strong>מחקו 3,000 שנות קשר יהודי מתועד</strong> להר הבית — קשר ש<strong>גם מקורות מוסלמיים מכירים בו</strong>.
+        </div>
+        <div class="source">מקורות: JTA | UN Watch | Times of Israel | JPost</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in">
+        <h3>תורת הכוזרים — מופרכת גנטית</h3>
+        <div class="role">שלמה זנד (2008) vs. מדע</div>
+        <div class="context">
+            <strong>הטענה:</strong> שלמה זנד ("המצאת העם היהודי", 2008) טען שיהודים אשכנזים הם צאצאי <strong>הכוזרים</strong> — עם טורקי מהקווקז שהתגייר במאה ה-8.<br><br>
+            <strong>ההפרכה המדעית:</strong><br>
+            &#8226; <strong>Behar et al. (2013):</strong> מדגם הגדול ביותר — <strong>1,774 דגימות מ-106 אוכלוסיות</strong>. מסקנה: <strong>"אין שום סימן למוצא גנטי כוזרי בקרב יהודים אשכנזים"</strong><br>
+            &#8226; מספר מחקרים נוספים (Metsapalu, Costa) &mdash; אותה מסקנה<br>
+            &#8226; <strong>הקונצנזוס המדעי:</strong> "אוכלוסיות יהודיות חולקות מוצא מזרח-תיכוני עתיק משותף. אין מוצא כוזרי"
+        </div>
+        <div class="source">מקורות: PubMed | Wikipedia (Khazar hypothesis) | Genetic Studies of Jews</div>
+    </div>
+
+    <div class="fact-card revisionism fade-in" style="background: linear-gradient(135deg, #12172b, rgba(118,255,3,0.08)); border: 1px solid rgba(118,255,3,0.2);">
+        <h3 style="color: #76ff03; font-size: 1.4em;">&#9888; סטנדרט כפול כמדיניות</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>2024:</strong> האו"ם אימץ <strong>17 החלטות נגד ישראל</strong> לעומת <strong>7 נגד כל שאר העולם</strong><br>
+            <strong>2006-2024:</strong> מועצת זכויות האדם: <strong>108 נגד ישראל</strong>, 45 נגד סוריה, 15 נגד איראן, 10 נגד רוסיה<br>
+            אונסק"ו <strong>מוחקת</strong> זיקה יהודית בת 3,000 שנה. ICC <strong>מוציא צווי מעצר</strong> נגד ראש ממשלה דמוקרטי. אוניברסיטאות <strong>קוראות ל"מהנהר לים"</strong> — גם כשהקוראן עצמו מכיר בבתי המקדש.<br><br>
+            <strong style="color: #76ff03;">השקרים ההיסטוריים אינם טעות — הם כלי מלחמה. וחובתנו לחשוף כל אחד מהם.</strong>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-myths');</script>
+
+</body>
+</html>

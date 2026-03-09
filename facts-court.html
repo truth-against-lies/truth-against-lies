@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בג״ץ ומערכת המשפט | האמת נגד השקר</title>
+    <meta name="description" content="פסיקות בג״ץ שכבלו את צה״ל ותעמולה משפטית בינלאומית — רק עובדות מתועדות, רק מקורות">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="בג״ץ ומערכת המשפט | האמת נגד השקר">
+    <meta property="og:description" content="פסיקות בג״ץ שכבלו את צה״ל ותעמולה משפטית בינלאומית — רק עובדות מתועדות, רק מקורות">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-court.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="בג״ץ ומערכת המשפט | האמת נגד השקר">
+    <meta name="twitter:description" content="פסיקות בג״ץ שכבלו את צה״ל ותעמולה משפטית בינלאומית — רק עובדות מתועדות, רק מקורות">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.court { border-right: 4px solid #9b59b6; }
+        .fact-card.lawfare { border-right: 4px solid #00bcd4; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === COURT CARDS === */
+        .court-box {
+            background: rgba(155,89,182,0.06);
+            border-right: 3px solid #9b59b6;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .court-box .court-label {
+            color: #9b59b6;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .court-box p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .impact-box {
+            background: rgba(231,76,60,0.06);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .impact-box .impact-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .impact-box p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === BACK LINK === */
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 0;
+            margin: 0 auto;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover { opacity: 0.7; }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="facts-hero">
+    <h1>&#9878; בג״ץ ומערכת המשפט</h1>
+    <p class="subtitle">פסיקות שכבלו את צה"ל ותעמולה משפטית בינלאומית</p>
+    <p class="disclaimer">רק עובדות מתועדות &mdash; רק מקורות</p>
+</div>
+
+<div style="text-align:center; padding: 0 20px;">
+    <a href="facts.html" class="back-link">&larr; חזרה לכל הקטגוריות</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+
+<!-- ==================== SECTION: COURT ==================== -->
+<section id="court">
+    <div class="section-header fade-in">
+        <h2>&#9878; פסיקות בג"ץ שכבלו את צה"ל</h2>
+        <div class="section-divider"></div>
+        <p>פסיקות שהגבילו את יכולת צה"ל להילחם בטרור ולהגן על אזרחים</p>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>איסור "לחץ פיזי" בחקירות שב"כ</h3>
+        <div class="role">בג"ץ 5100/94 &mdash; 1999</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בית המשפט העליון אסר על שב"כ להשתמש באמצעי לחץ פיזיים בחקירות חשודים בטרור. כולל: מניעת שינה ממושכת, כפיית תנוחות, טלטולים חזקים.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>חוקרי שב"כ מדווחים שהפסיקה <strong>מנעה סיכול</strong> של עשרות פיגועים. מחבלים למדו שניתן "לשבת על השקט" ולא לחשוף מידע. ישראל נותרה המדינה הדמוקרטית <strong>היחידה בעולם</strong> שבג"ץ קבע כללים כה מחמירים לחקירות ביטחון.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 5100/94 | דו"חות שב"כ | Israel Democracy Institute</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>שינוי מסלול גדר ההפרדה</h3>
+        <div class="role">בג"ץ 2056/04 ופסיקות נוספות &mdash; 2004&ndash;2006</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ שינה את מסלול גדר הביטחון עשרות פעמים, מנימוקי "מידתיות" וזכויות התושבים הפלסטינים. הגדר הוזזה לעיתים קרובות ממסלול ביטחוני אופטימלי למסלול פחות מוגן.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>שינויי המסלול יצרו <strong>פרצות ביטחוניות</strong> שמחבלים ניצלו. למרות זאת, הגדר הפחיתה פיגועי התאבדות ב-<strong>90%+</strong> &mdash; אבל בכל מקום שהמסלול שונה, הייתה חולשה.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 2056/04 | דו"ח מבקר המדינה | B'Tselem (באירוניה) | IDF Archives</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>ביטול "נוהל השכן"</h3>
+        <div class="role">בג"ץ 3799/02 &mdash; 2005</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ אסר על צה"ל להשתמש באזרחים מקומיים ככלי עזר בפעולות מעצר. הנוהל כלל בקשה משכן/קרוב משפחה של המבוקש לדפוק על הדלת ולקרוא לו להיכנע &mdash; כדי למנוע חילופי אש.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>ללא הנוהל, צה"ל נאלץ לפרוץ לבתים בכוח &mdash; מה שהוביל <strong>ליותר נפגעים</strong> בשני הצדדים. הפרדוקס: הנוהל <strong>הציל חיים</strong> של אזרחים ושל חיילים.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 3799/02 | עדויות מפקדי שטח | Israel Democracy Institute</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלת חיסולים ממוקדים</h3>
+        <div class="role">בג"ץ 769/02 &mdash; 2006</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ קבע שכל חיסול ממוקד דורש <strong>בדיקה פרטנית</strong> של מידתיות. נאסר לחסל אדם אם ניתן לעוצרו. נקבע שיש לבצע "חקירה בלתי תלויה" לאחר כל חיסול.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>סרבול בירוקרטי ומשפטי שעיכב פעולות. <strong>"חלון הזדמנות"</strong> נסגר בזמן שמשפטנים דנים. מחבלים בכירים חמקו כי תהליך האישור היה ארוך מדי.</p>
+        </div>
+        <div class="source">מקורות: בג"ץ 769/02 | דו"חות צה"ל | International Law Studies</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלת הריסות בתים</h3>
+        <div class="role">פסיקות שונות &mdash; 2000&ndash;2020</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ הגביל הריסות בתי מחבלים בתנאים מחמירים: חובת התראה, זכות ערעור, בדיקת "מידתיות". בפועל, תהליך שלפני בג"ץ לקח שבועות.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>הריסת בתים הוכחה כ<strong>אמצעי הרתעה יעיל</strong> &mdash; מחקרים הראו ירידה בפיגועים באזורים בהם בוצעו הריסות. ההגבלות <strong>החלישו את ההרתעה</strong>.</p>
+        </div>
+        <div class="source">מקורות: פסיקות בג"ץ שונות | מחקר Hebrew University | IDF data</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>הגבלות על מעצר מנהלי</h3>
+        <div class="role">פסיקות שונות &mdash; 1990&ndash;2020</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ הגביל את השימוש במעצר מנהלי (מעצר ללא משפט של חשודים מסוכנים) &mdash; דרש ביקורת שיפוטית תכופה, הצגת ראיות, ומגבלות זמן.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>מחבלים מסוכנים שוחררו כי לא ניתן היה להציג ראיות מודיעיניות (שחשיפתן הייתה מסכנת סוכנים). חלק מהם <strong>חזרו לפעילות טרור</strong>.</p>
+        </div>
+        <div class="source">מקורות: פסיקות בג"ץ | דו"חות שב"כ | Hamoked (באירוניה)</div>
+    </div>
+
+    <div class="fact-card court fade-in">
+        <h3>תקן "הסבירות" — אקטיביזם שיפוטי</h3>
+        <div class="role">עשרות שנים של פסיקות</div>
+        <div class="court-box">
+            <div class="court-label">&#9878; מה נפסק:</div>
+            <p>בג"ץ פיתח "עילת סבירות" שאפשרה לו לבטל <strong>כל החלטה ממשלתית</strong> שנחשבה "לא סבירה" &mdash; כולל מינויים ביטחוניים, החלטות מבצעיות, ומדיניות כלפי איומים. אין מקבילה בשום דמוקרטיה אחרת.</p>
+        </div>
+        <div class="impact-box">
+            <div class="impact-label">&#9888; ההשפעה הביטחונית:</div>
+            <p>יצר <strong>"ממשלת שופטים"</strong> לא נבחרת שהשפיעה על החלטות ביטחוניות קריטיות. ניסיון הרפורמה המשפטית (2023) שנועד לתקן זאת הוביל למשבר חברתי חמור.</p>
+        </div>
+        <div class="source">מקורות: Israel Democracy Institute | Prof. Daniel Friedmann | Jerusalem Post</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: LAWFARE ==================== -->
+<section id="lawfare">
+    <div class="section-header fade-in">
+        <h2>&#9878; לוחמה משפטית בינלאומית</h2>
+        <div class="section-divider"></div>
+        <p>איך מוסדות בינלאומיים מנוצלים כנשק פוליטי נגד ישראל</p>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>צו מעצר ICC — והשערורייה של התובע</h3>
+        <div class="role">נובמבר 2024</div>
+        <div class="context">בית הדין הפלילי הבינלאומי הוציא <strong>צו מעצר נגד נתניהו וגלנט</strong>. התובע <strong>קארים חאן</strong> הגיש את הבקשה <strong>18 יום</strong> אחרי שנודע לו על תלונת הטרדה מינית נגדו. לפי WSJ, חאן אמר לקורבנו: <strong>"תחשבי על צווי המעצר הפלסטיניים"</strong> — כדי להשתיק אותה. אישה שנייה הגישה תלונה (אוגוסט 2025). חאן יצא <strong>לחופשה</strong> במאי 2025 בעקבות חקירה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ישראל — הדמוקרטיה הראשונה שמנהיג שלה מוצא נגדו צו מעצר ICC — על ידי תובע <strong>בחופשה בגלל הטרדה מינית</strong>.</p>
+        </div>
+        <div class="source">מקורות: ICC | Wall Street Journal | Times of Israel | NPR</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>מועצת זכויות האדם — ישראל vs. כולם</h3>
+        <div class="role">2006-2024</div>
+        <div class="context">
+            ישראל מקבלת יותר גינויים מכל מדינות העולם <strong>ביחד</strong>:<br>
+            &#8226; <strong>ישיבות חירום</strong>: ישראל 9, סוריה 5, מיאנמר 3<br>
+            &#8226; <strong>ועדות חקירה</strong>: ישראל 9, סוריה 2, צפון קוריאה 1<br>
+            &#8226; <strong>החלטות (2006-2022)</strong>: ישראל 99, סוריה 41, איראן 13, רוסיה 4<br>
+            &#8226; <strong>סעיף 7</strong>: ישראל המדינה <strong>היחידה בעולם</strong> עם סעיף קבוע בכל ישיבה. אין סעיף כזה לאיראן, סין, צפון קוריאה, רוסיה או אף מדינה אחרת.
+        </div>
+        <div class="source">מקורות: UN Watch | World Jewish Congress</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>ועדת חקירה קבועה — עם יו"ר שחתמה על BDS</h3>
+        <div class="role">מאי 2021 &mdash; ועדת פילאי</div>
+        <div class="context">האו"ם הקים <strong>ועדת חקירה קבועה</strong> (ללא תאריך סיום!) — הראשונה מסוגה. יו"ר: <strong>נאבי פילאי</strong> — שחתמה על עצומת BDS <strong>לפני מינויה</strong>. חבר הוועדה <strong>מילון קותרי</strong> אמר: "הרשתות החברתיות נשלטות בעיקר על ידי <strong>הלובי היהודי</strong>." כל 3 החברים <strong>התפטרו</strong> ביולי 2025 — פעם ראשונה בתולדות UNHRC.</div>
+        <div class="source">מקורות: UN Watch | Times of Israel</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>עצרת האו"ם — 17 vs. 7</h3>
+        <div class="role">2024</div>
+        <div class="context">ב-2024, עצרת האו"ם אימצה <strong>17 החלטות נגד ישראל</strong> ורק <strong>7 נגד כל שאר מדינות העולם</strong> (צפון קוריאה, איראן, סוריה, מיאנמר, רוסיה/גאורגיה, רוסיה/קרים, ארה"ב/קובה). 2015-2024: <strong>173 החלטות נגד ישראל</strong> vs. <strong>80 נגד כל השאר</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ישראל — 10 מיליון תושבים — מקבלת <strong>יותר גינויים מ-192 מדינות ביחד</strong>.</p>
+        </div>
+        <div class="source">מקורות: UN Watch | Wikipedia (UN Resolutions Concerning Israel)</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>ועידת דרבן — פסטיבל השנאה</h3>
+        <div class="role">אוגוסט-ספטמבר 2001, דרום אפריקה</div>
+        <div class="context">ועידת האו"ם נגד גזענות הפכה ל<strong>פסטיבל אנטישמי</strong>: חולקו עותקים של <strong>"פרוטוקולי זקני ציון"</strong>. עלון עם <strong>היטלר</strong> שאל "מה היה קורה אם ניצחתי?". קריקטורות של יהודים עם אף מעוקל, דם נוטף ושקי כסף. <strong>ארה"ב וישראל עזבו</strong>. ועידות המשך — <strong>38 מדינות חרמו</strong> את דרבן IV (2021).</div>
+        <div class="source">מקורות: ADL | Jewish Virtual Library | B'nai B'rith</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>UNESCO מוחקת את ההיסטוריה היהודית</h3>
+        <div class="role">2016-2017</div>
+        <div class="context">UNESCO הצביעה על החלטות שקראו לכותל המערבי רק <strong>"אל-בוראק פלאזה"</strong> ולהר הבית רק <strong>"אל-אקצה"</strong> — <strong>ללא שם עברי/יהודי אחד</strong>. ביולי 2017 הכריזה על <strong>חברון ומערת המכפלה</strong> כ"אתר מורשת פלסטיני מסוכן" — מקום קבורת אברהם, יצחק, יעקב, שרה, רבקה ולאה.</div>
+        <div class="source">מקורות: Times of Israel | UN Watch | Haaretz</div>
+    </div>
+
+    <div class="fact-card lawfare fade-in">
+        <h3>פרנצ'סקה אלבנזה — דוברת האו"ם</h3>
+        <div class="role">מאי 2022 &mdash; היום</div>
+        <div class="context">דוברת האו"ם לשטחים שפרסמה ש<strong>"אמריקה משועבדת ללובי היהודי"</strong> (2014). על 7/10 אמרה: <strong>"קורבנות 7/10 לא נהרגו בגלל יהדותם אלא בתגובה לדיכוי"</strong>. כינתה עזה <strong>"מחנה הריכוז הגדול ביותר במאה ה-21"</strong>. <strong>צרפת וגרמניה</strong> גינו אותה על אנטישמיות — פעם ראשונה בתולדות האו"ם. למרות הכל, <strong>UNHRC חידש לה כהונה ל-3 שנים נוספות</strong> (אפריל 2025).</div>
+        <div class="source">מקורות: ADL | UN Watch | Wikipedia | Jerusalem Post</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-court');</script>
+
+</body>
+</html>

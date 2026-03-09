@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בגידות המערב | האמת נגד השקר</title>
+    <meta name="description" content="אמברגו נשק, הדלפות, מימון אויבים — ומי באמת עומד לצד ישראל. רק עובדות מתועדות.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="בגידות המערב | האמת נגד השקר">
+    <meta property="og:description" content="אמברגו נשק, הדלפות, מימון אויבים — ומי באמת עומד לצד ישראל. רק עובדות מתועדות.">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-west.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="בגידות המערב | האמת נגד השקר">
+    <meta name="twitter:description" content="אמברגו נשק, הדלפות, מימון אויבים — ומי באמת עומד לצד ישראל. רק עובדות מתועדות.">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.betrayals { border-right: 4px solid #448aff; }
+        .fact-card.additional { border-right: 4px solid #8bc34a; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="facts-hero">
+    <h1>&#127760; בגידות המערב</h1>
+    <p class="subtitle">אמברגו נשק, הדלפות, מימון אויבים — ומי באמת עומד לצד ישראל</p>
+    <p class="disclaimer">רק עובדות מתועדות — רק מקורות</p>
+</section>
+
+<div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <a href="facts.html" class="back-link">&#8592; חזרה לכל הקטגוריות</a>
+</div>
+
+<!-- ===== WESTERN BETRAYALS ===== -->
+<main style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+
+    <div class="section-header">
+        <h2>&#127760; בגידות המערב — כשבעלות הברית הפכו לאויבות</h2>
+        <div class="section-divider"></div>
+        <p>אמברגו נשק, הדלפות, מימון אויבים — ומי באמת עומד לצד ישראל</p>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>בריטניה — אמברגו בזמן מלחמה</h3>
+        <div class="role">יחס 150:1 — סעודיה מול ישראל</div>
+        <div class="context">
+            <strong>ספטמבר 2024:</strong> בריטניה הטילה <strong>אמברגו חלקי</strong> על מכירת נשק לישראל — בזמן שישראל נלחמת בחמאס ובחיזבאללה.<br><br>
+            <strong>הצביעות במספרים:</strong><br>
+            &#8226; <strong>מכירות נשק בריטיות לסעודיה:</strong> GBP 33.9 מיליארד<br>
+            &#8226; <strong>מכירות נשק בריטיות לישראל:</strong> GBP 11 מיליון<br>
+            &#8226; <strong>יחס: 150:1</strong> — סעודיה (שמפציצה תימן, 377,000 הרוגים) מול ישראל<br><br>
+            <strong>מה בריטניה לא עשתה:</strong><br>
+            &#8226; לא הטילה אמברגו על סעודיה <strong>בזמן המלחמה בתימן</strong> (377K הרוגים)<br>
+            &#8226; לא הטילה אמברגו על <strong>מצרים, UAE, טורקיה</strong><br>
+            &#8226; לא הטילה אמברגו על <strong>שום מדינה</strong> שנלחמת בטרור — חוץ מישראל<br><br>
+            <strong style="color: #448aff;">GBP 33.9 מיליארד לסעודיה = בסדר. GBP 11 מיליון לישראל = "פשעי מלחמה".</strong>
+        </div>
+        <div class="source">מקורות: UK CAAT Database | SIPRI | UK Parliament Records | Yemen Data Project</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>אובמה — JCPOA + $1.7B מזומן + 2334</h3>
+        <div class="role">2009-2017 | 3 בגידות מרכזיות</div>
+        <div class="context">
+            <strong>1. JCPOA (2015):</strong> שחרר $150 מיליארד לאיראן — שמימנה חיזבאללה וחמאס (ראו סקציית איראן).<br>
+            <strong>2. $1.7 מיליארד במזומן (2016):</strong> שלח <strong>$400M במזומנים על משטחים</strong> + $1.3B בהעברות — לאיראן. בזמן שאיראן מממנת טרור.<br>
+            <strong>3. החלטה 2334 (דצמבר 2016):</strong> <strong>נמנע מווטו</strong> בועד הביטחון — אפשר להחלטה שמגדירה שטחים (כולל הכותל) כ"שטח כבוש בניגוד לחוק" לעבור.<br><br>
+            <strong>בונוס:</strong><br>
+            &#8226; חיסל את <strong>Project Cassandra</strong> — חקירת DEA נגד הברחת סמים של חיזבאללה — כדי לא לפגוע ב-JCPOA<br>
+            &#8226; אפשר ל<strong>חיזבאללה להבריח קוקאין לאמריקה</strong> כדי לשמור על הסכם גרעין<br><br>
+            <strong style="color: #448aff;">אובמה מימן את איראן, אפשר לחיזבאללה להבריח סמים, והצביע נגד ישראל — בשביל "שלום".</strong>
+        </div>
+        <div class="source">מקורות: Politico "Project Cassandra" | AP | UNSC Resolution 2334 | US Treasury</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>ביידן — $6B + עיכוב נשק + הדלפות</h3>
+        <div class="role">2021-2025 | בגידה בזמן מלחמה</div>
+        <div class="context">
+            <strong>1. $6 מיליארד לאיראן (ספטמבר 2023):</strong> שחרר $6B בנכסים קפואים — <strong>37 ימים לפני 7 באוקטובר</strong>.<br>
+            <strong>2. עיכוב משלוחי נשק (2024):</strong> <strong>עיכב פצצות 2,000 פאונד ותחמושת</strong> לישראל — בזמן מלחמה.<br>
+            <strong>3. הדלפות מודיעין:</strong> <strong>פקידים בכירים</strong> הדליפו מידע מסווג על תוכניות תקיפה ישראליות:<br>
+            &#8226; הדלפת תוכנית התקיפה על איראן (2024)<br>
+            &#8226; הדלפת מודיעין על מיקום חטופים<br>
+            &#8226; דרישה "לידע מראש" על כל פעולה<br><br>
+            <strong>4. לחץ פוליטי:</strong><br>
+            &#8226; <strong>"Don't"</strong> — אמר לאיראן, ואז לא עשה כלום כשאיראן שיגרה 300+ טילים<br>
+            &#8226; דרש "הפסקת אש" <strong>לפני חיסול סינוואר</strong><br>
+            &#8226; איים ב<strong>אמברגו נשק</strong> אם ישראל נכנסת לרפיח<br><br>
+            <strong style="color: #448aff;">$6B לאיראן 37 ימים לפני הטבח. עיכוב נשק בזמן מלחמה. הדלפות שסכנו חיילים. עם "בעל ברית" כזה — מי צריך אויבים?</strong>
+        </div>
+        <div class="source">מקורות: WSJ | NYT | Reuters | Washington Post | Axios</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>ספרד, אירלנד, נורבגיה — הכרה בפלסטין</h3>
+        <div class="role">מאי 2024 — תגמול לטרור</div>
+        <div class="context">
+            <strong>28 במאי 2024:</strong> ספרד, אירלנד ונורבגיה <strong>הכירו במדינת פלסטין</strong>.<br><br>
+            <strong>התזמון:</strong> <strong>7 חודשים אחרי הטבח הגדול ביותר ביהודים מאז השואה</strong>. המסר: טרור = תגמול דיפלומטי.<br><br>
+            <strong>הצביעות:</strong><br>
+            &#8226; <strong>ספרד:</strong> לא מכירה בקוסובו, קטלוניה, מדינת הבאסקים — אבל <strong>מכירה בפלסטין</strong> שאין בה בחירות 19 שנה<br>
+            &#8226; <strong>אירלנד:</strong> לא מכירה בטייוואן — אבל מכירה בישות שנשלטת ע"י ארגון טרור<br>
+            &#8226; <strong>נורבגיה:</strong> תיווכה באוסלו (1993) — תהליך ש<strong>הרג 1,137 ישראלים</strong><br><br>
+            <strong style="color: #448aff;">הכרה 7 חודשים אחרי 7/10 = מסר ברור: טרור עובד. פיגועים משתלמים.</strong>
+        </div>
+        <div class="source">מקורות: Reuters | BBC | Foreign Ministries of Spain, Ireland, Norway</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>UNHRC — 108 החלטות נגד ישראל, 0 נגד סין</h3>
+        <div class="role">מועצת "זכויות האדם" של האו"ם</div>
+        <div class="context">
+            <strong>מ-2006 ועד 2024:</strong><br>
+            &#8226; <strong>108 החלטות נגד ישראל</strong><br>
+            &#8226; <strong>45 נגד סוריה</strong> (500,000 הרוגים)<br>
+            &#8226; <strong>15 נגד איראן</strong> (מממנת טרור גלובלי)<br>
+            &#8226; <strong>10 נגד צפון קוריאה</strong> (מחנות ריכוז)<br>
+            &#8226; <strong>0 נגד סין</strong> (מיליון אויגורים במחנות)<br>
+            &#8226; <strong>0 נגד סעודיה</strong> (377K הרוגים בתימן)<br><br>
+            <strong>חברות במועצה (2024):</strong> סין, קובה, אריתראה, סודן — מדינות עם <strong>הפרות זכויות אדם שיטתיות</strong> — שופטות את ישראל.<br>
+            <strong>Agenda Item 7:</strong> ישראל היא <strong>המדינה היחידה</strong> עם סעיף קבוע בכל ישיבה.<br><br>
+            <strong style="color: #448aff;">מועצה שבה סין (0 החלטות) שופטת את ישראל (108 החלטות) — זו לא זכויות אדם. זה תיאטרון.</strong>
+        </div>
+        <div class="source">מקורות: UN Watch | UNHRC Records | US State Department</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>דרום אפריקה ב-ICJ — מי שופט את מי?</h3>
+        <div class="role">תביעת "רצח עם" — ינואר 2024</div>
+        <div class="context">
+            <strong>דרום אפריקה הגישה תביעת "רצח עם" נגד ישראל ב-ICJ.</strong><br><br>
+            <strong>מי שופט:</strong><br>
+            &#8226; שיעור רצח בד"א: <strong>42 ל-100,000</strong> (מהגבוהים בעולם)<br>
+            &#8226; <strong>70 רציחות ביום</strong> בד"א<br>
+            &#8226; אפרטהייד <strong>שלהם</strong> הסתיים רק ב-1994<br>
+            &#8226; <strong>רצח עם בדארפור:</strong> לא הגישו תביעה<br>
+            &#8226; <strong>מלחמת תימן:</strong> לא הגישו תביעה<br>
+            &#8226; <strong>אויגורים בסין:</strong> לא הגישו תביעה<br><br>
+            <strong>הקשר:</strong><br>
+            &#8226; ANC (מפלגת השלטון) שומרת על <strong>קשרים הדוקים עם חמאס</strong><br>
+            &#8226; ד"א קיבלה <strong>מיליארדי דולרים באיראן</strong> בעסקאות נפט<br>
+            &#8226; <strong>רמפוזה:</strong> "חמאס הם לוחמי חופש"<br><br>
+            <strong style="color: #448aff;">מדינה עם 70 רציחות ביום שופטת את ישראל על "רצח עם" — כי חמאס הם "חברים".</strong>
+        </div>
+        <div class="source">מקורות: ICJ Records | South Africa Police Service | SAPS Crime Stats | Reuters</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in">
+        <h3>הצלב האדום — 15 חודשים ללא גישה לחטופים</h3>
+        <div class="role">ICRC — "ניטרלי" בין חוטפים לחטופים</div>
+        <div class="context">
+            <strong>7 באוקטובר 2023:</strong> חמאס חטף <strong>253 בני אדם</strong> — כולל תינוקות, ילדים, קשישים.<br>
+            <strong>15 חודשים אח"כ:</strong> הצלב האדום <strong>לא ביקר אף חטוף</strong>.<br><br>
+            <strong>מה הצלב האדום עשה:</strong><br>
+            &#8226; <strong>לא דרש גישה</strong> לחטופים<br>
+            &#8226; <strong>לא זיהה מיקומים</strong><br>
+            &#8226; <strong>לא העביר תרופות</strong> (חטופים חולי סוכרת, לב)<br>
+            &#8226; <strong>לא פרסם דו"ח</strong> על תנאי ההחזקה<br>
+            &#8226; <strong>כן</strong> נפגש עם חמאס — <strong>לא</strong> בנושא החטופים<br><br>
+            <strong>אמנת ג'נבה:</strong> ICRC <strong>חייב</strong> לבקר שבויים. חמאס סירב — ו-ICRC לא עשה <strong>כלום</strong>.<br><br>
+            <strong style="color: #448aff;">15 חודשים. 253 חטופים. 0 ביקורים. ארגון שנוסד להגן על שבויים — לא עשה כלום כשיהודים נחטפו.</strong>
+        </div>
+        <div class="source">מקורות: ICRC Statements | Hostage Families Forum | Geneva Convention Art. 126 | Reuters</div>
+    </div>
+
+    <div class="fact-card betrayals fade-in" style="background: linear-gradient(135deg, #12172b, rgba(68,138,255,0.08)); border: 1px solid rgba(68,138,255,0.2);">
+        <h3 style="color: #448aff; font-size: 1.4em;">&#9888; דפוס הבגידה</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>בריטניה:</strong> GBP 33.9B לסעודיה (377K הרוגים) — אמברגו על ישראל (GBP 11M).<br>
+            <strong>אובמה:</strong> $150B + $1.7B מזומן לאיראן. חיסל חקירת סמים של חיזבאללה.<br>
+            <strong>ביידן:</strong> $6B לאיראן 37 ימים לפני 7/10. עיכב נשק. הדליף מודיעין.<br>
+            <strong>UNHRC:</strong> 108 נגד ישראל, 0 נגד סין. סעיף קבוע רק לישראל.<br>
+            <strong>ICJ:</strong> ד"א (70 רציחות/יום) שופטת ישראל על "רצח עם".<br>
+            <strong>צלב אדום:</strong> 15 חודשים, 0 ביקורים אצל 253 חטופים.<br><br>
+            <strong style="color: #448aff; font-size: 1.1em;">ישראל לא יכולה לסמוך על "הקהילה הבינלאומית". כל מי שחשב שהמערב יגן — 7 באוקטובר הוכיח שזה שקר.</strong>
+        </div>
+    </div>
+
+    <!-- ===== ADDITIONAL FACTS ===== -->
+    <div class="section-header">
+        <h2>עובדות נוספות</h2>
+        <div class="section-divider"></div>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>UNIFIL — 18 שנות כשלון מוחלט</h3>
+        <div class="role">2006-2024 &mdash; החלטה 1701</div>
+        <div class="context">החלטה 1701 דרשה: פירוק חיזבאללה, נסיגה מדרום הליטאני, אין נשק חוץ מ-UNIFIL וצבא לבנון. <strong>מה קרה בפועל</strong>: חיזבאללה גדל מ-<strong>~15,000 רקטות ל-150,000+</strong> — פי 10 — מתחת לאף של UNIFIL. UNIFIL <strong>נחסם מאזורים רגישים</strong> שנים. חיזבאללה <strong>השמיד מצלמות UNIFIL</strong>, תקף כלי רכב, גנב ציוד. UNIFIL <strong>כמעט מעולם לא החרים נשק</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>מועצת הביטחון הסכימה <strong>לסגור את UNIFIL</strong> בסוף 2026. 18 שנים, מיליארדי דולרים — <strong>0 תוצאות</strong>.</p>
+        </div>
+        <div class="source">מקורות: AIPAC | Washington Institute | AFPC | AJC</div>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>גוטרש (מזכ"ל האו"ם) — "לא קרה בריק"</h3>
+        <div class="role">24 באוקטובר 2023</div>
+        <div class="context">17 ימים אחרי הטבח, מזכ"ל האו"ם <strong>אנטוניו גוטרש</strong> אמר: <strong>"מתקפת חמאס לא קרתה בריק"</strong>. הוסיף: "העם הפלסטיני חווה 56 שנות כיבוש מחניק." בורל (נציג EU): <strong>"ההרס בעזה גדול יחסית מזה שבגרמניה במלחמת העולם"</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ישראל ביטלה פגישה עם גוטרש ודרשה התפטרותו. הוצג כ"מסביר טרור".</p>
+        </div>
+        <div class="source">מקורות: CNN | Times of Israel</div>
+    </div>
+
+    <div class="fact-card additional fade-in">
+        <h3>סטנדרטים כפולים — טורקיה, סין, רוסיה, סעודיה</h3>
+        <div class="role">השוואה</div>
+        <div class="context">
+            <strong>טורקיה/כורדים</strong> (2018): 395-510 אזרחים נהרגו בעפרין. <strong>0 החלטות UNGA</strong>.<br>
+            <strong>סין/אויגורים</strong>: <strong>1 מיליון+</strong> עצורים במחנות. דו"ח האו"ם קבע "פשעי אנושות אפשריים". UNHRC <strong>הצביע שלא לדון</strong> בממצאים. <strong>0 החלטות UNGA</strong>.<br>
+            <strong>רוסיה/צ'צ'ניה</strong> (1999-2000): <strong>גרוזני — "העיר ההרוסה ביותר בעולם"</strong> (האו"ם). 25,000-30,000 אזרחים. <strong>0 החלטות UNGA</strong>.<br>
+            <strong>סעודיה/תימן</strong>: <strong>19,200+ אזרחים</strong> נהרגו/נפצעו, כולל 2,300 ילדים. האו"ם <strong>הסיר את סעודיה</strong> מ"רשימת הבושה" למרות מאות הפרות. <strong>0 החלטות UNGA</strong>.<br><br>
+            <strong>ישראל</strong>: 173 החלטות (2015-2024). סעיף קבוע. ועדת חקירה קבועה. צו מעצר ICC.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>סין, רוסיה, טורקיה, סעודיה — <strong>0 החלטות</strong>. ישראל — <strong>173</strong>. זה לא צדק. <strong>זו אנטישמיות בחליפה</strong>.</p>
+        </div>
+        <div class="source">מקורות: UN Watch | Wikipedia | HRW | Amnesty International | CFR</div>
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-west');</script>
+
+</body>
+</html>

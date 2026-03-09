@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פיקוד כושל ובוגד | האמת נגד השקר</title>
+    <meta name="description" content="רמטכ&quot;לים, ראשי מודיעין ומפקדים בכירים שכשלו במשימתם — רק עובדות מתועדות, רק מקורות">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="פיקוד כושל ובוגד | האמת נגד השקר">
+    <meta property="og:description" content="רמטכ&quot;לים, ראשי מודיעין ומפקדים בכירים שכשלו במשימתם — רק עובדות מתועדות, רק מקורות">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-command.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="פיקוד כושל ובוגד | האמת נגד השקר">
+    <meta name="twitter:description" content="רמטכ&quot;לים, ראשי מודיעין ומפקדים בכירים שכשלו במשימתם — רק עובדות מתועדות, רק מקורות">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.military { border-right: 4px solid #e74c3c; }
+        .fact-card.failures { border-right: 4px solid #ff1744; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* === BACK LINK === */
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            padding: 8px 20px;
+            border: 1px solid rgba(226,183,20,0.3);
+            border-radius: 3px;
+            margin-bottom: 30px;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+        .back-link:hover { background: rgba(226,183,20,0.15); }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="facts-hero">
+    <h1>&#9876;&#65039; פיקוד כושל ובוגד</h1>
+    <p class="subtitle">רמטכ"לים, ראשי מודיעין ומפקדים בכירים שכשלו במשימתם</p>
+    <p class="disclaimer">רק עובדות מתועדות &mdash; רק מקורות</p>
+</div>
+
+<!-- BACK LINK -->
+<div style="text-align: center; padding: 0 20px;">
+    <a class="back-link" href="facts.html">&#8592; חזרה לכל הקטגוריות</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+
+<!-- SECTION 1: Military -->
+<section id="military">
+    <div class="section-header fade-in">
+        <h2>&#9876; אנשי צבא ומודיעין</h2>
+        <div class="section-divider"></div>
+        <p>רמטכ"לים, ראשי שב"כ ומוסד שפעלו או דיברו נגד האינטרס הביטחוני</p>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אביב כוכבי</h3>
+        <div class="role">רמטכ"ל לשעבר (2019&ndash;2023)</div>
+        <div class="quote">"לא ראינו את חמאס כאיום קיומי"</div>
+        <div class="context">הוביל את <strong>"הקונספציה"</strong> &mdash; ההנחה שחמאס מרותע ומעדיף כלכלה על מלחמה. תחת פיקודו הוסט תקציב מודיעין מעזה לגדה המערבית ולאיראן. תוכנית <strong>"חומת יריחו"</strong> (מתקפת חמאס מפורטת) נדחתה כ"שאפתנית מדי".</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>7 באוקטובר 2023 &mdash; <span class="stat-highlight">1,200 נרצחים</span>, 251 חטופים. הכשל המודיעיני הגדול בתולדות ישראל.</p>
+        </div>
+        <div class="source">מקורות: ועדת חקירה ממלכתית | דו"ח מבקר המדינה | עדויות קצינים בכירים | Ynet, הארץ</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>תמיר הימן</h3>
+        <div class="role">ראש אגף המודיעין (אמ"ן) 2018&ndash;2021</div>
+        <div class="quote">"חמאס מרותע מאוד ממלחמה ומעדיף שקט"</div>
+        <div class="context">הערכת מודיעין רשמית מיוני 2019. הוביל מדיניות <strong>"חמאס = נכס, לא איום"</strong>. המליץ להמשיך בהעברת כספי קטאר לעזה כמנגנון ריסון.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס השתמש בשנים של "שקט" לבניית מנהרות, אימון כוחות, ותכנון 7 באוקטובר.</p>
+        </div>
+        <div class="source">מקורות: הערכות מודיעין שנתיות | עדויות ועדת החקירה | ערוץ 12, ערוץ 13</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אהרון חליוה</h3>
+        <div class="role">ראש אגף המודיעין (אמ"ן) 2021&ndash;2024</div>
+        <div class="quote">"ציפיתי לשקט של 5 שנים לפחות"</div>
+        <div class="context">המשיך את הקונספציה של קודמו. <strong>הראשון שהתפטר</strong> לאחר 7 באוקטובר. הודה: "אמ"ן תחת פיקודי לא עמד במשימתו. האזהרות היו שם &mdash; אני נושא באחריות."</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>התפטר באפריל 2024. הודה בכישלון אישי.</p>
+        </div>
+        <div class="source">מקורות: מכתב ההתפטרות | Ynet | Times of Israel</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>הרצי הלוי</h3>
+        <div class="role">רמטכ"ל (2023&ndash;2025)</div>
+        <div class="quote">"צה"ל כשל במשימתו הבסיסית ביותר — להגן על אזרחי ישראל"</div>
+        <div class="context">היה רמטכ"ל ביום 7 באוקטובר. לקח אחריות אישית והתפטר בינואר 2025. קודם לכן שימש מפקד פיקוד דרום (2018&ndash;2021) &mdash; בדיוק התקופה בה חמאס תכנן את המתקפה.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>התפטר. שני רמטכ"לים רצופים נושאים באחריות לכשל.</p>
+        </div>
+        <div class="source">מקורות: נאום ההתפטרות | דו"ח 7.10 | Times of Israel</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אהוד ברק</h3>
+        <div class="role">רמטכ"ל לשעבר, ראש ממשלה לשעבר, שר ביטחון לשעבר</div>
+        <div class="quote">"אני גאה בנסיגה מלבנון"</div>
+        <div class="context">הוביל את <strong>הנסיגה החד-צדדית מלבנון</strong> (מאי 2000) ללא הסכם. חיזבאללה מילא את הריק. ב-2000 הציע לערפאת 95% מהגדה + חלוקת ירושלים &mdash; ערפאת סירב והצית את <strong>האינתיפאדה השנייה</strong>. קשרים מתועדים עם ג'פרי אפשטיין (27 ביקורים מתועדים).</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חיזבאללה צבר <span class="stat-highlight">150,000+ רקטות</span>. האינתיפאדה השנייה: <span class="stat-highlight">1,137 הרוגים ישראלים</span>.</p>
+        </div>
+        <div class="source">מקורות: ארכיוני צה"ל | דו"ח ועדת וינוגרד | מרשם טיסות אפשטיין | The Daily Beast</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>דן חלוץ</h3>
+        <div class="role">רמטכ"ל (2005&ndash;2007)</div>
+        <div class="quote">"ההתנתקות הייתה הכרחית"</div>
+        <div class="context">כרמטכ"ל ביצע את <strong>ההתנתקות מעזה</strong> (2005). 3 שעות אחרי חטיפת החיילים שהובילה למלחמת לבנון השנייה &mdash; <strong>מכר מניות</strong> בחשבונו האישי (לפני שהמידע הגיע לציבור). הושמד פוליטית אחרי ועדת וינוגרד.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>מאז ההתנתקות: <span class="stat-highlight">22,570+ רקטות</span> על ישראל, 5 מלחמות. מלחמת לבנון 2 נחשבה לכשל.</p>
+        </div>
+        <div class="source">מקורות: ועדת וינוגרד | הרשות לני"ע (חקירת מניות) | Ynet</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>משה (בוגי) יעלון</h3>
+        <div class="role">רמטכ"ל לשעבר, שר ביטחון לשעבר</div>
+        <div class="quote">"מדינה פשיסטית ומצורעת" | "תורת גזע נאצית"</div>
+        <div class="context">שר ביטחון שהשווה את <strong>ממשלת ישראל</strong> לנאציזם: "אני מזהה כאן תורת גזע נאצית". כינה את ישראל <strong>"מדינה פשיסטית מצורעת"</strong>. הצהרות אלה נאמרו בראיונות לתקשורת זרה ושימשו תעמולה נגד ישראל בעולם.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ציטוטים אלה הופצו ברחבי העולם כ"הוכחה" שגם ישראלים מודים ש"ישראל = נאצים".</p>
+        </div>
+        <div class="source">מקורות: ראיונות לתקשורת בינלאומית | Ynet | The Guardian</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>יאיר גולן</h3>
+        <div class="role">סגן רמטכ"ל לשעבר, ח"כ לשעבר</div>
+        <div class="quote">"אני מזהה בישראל סימנים מצמררים של גרמניה של שנות ה-30"</div>
+        <div class="context">הצהרה ביום הזיכרון לשואה 2016 &mdash; בטקס רשמי. מאוחר יותר: <strong>"ישראל הורגת תינוקות כתחביב"</strong> (ראיון לתקשורת זרה). כח"כ פעל באופן שיטתי נגד ממשלת ישראל בזירה הבינלאומית.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ציטוט "גרמניה של שנות ה-30" הפך לנשק תעמולתי מרכזי נגד ישראל ברחבי העולם.</p>
+        </div>
+        <div class="source">מקורות: נאום יום הזיכרון 2016 | ראיונות לתקשורת זרה | Haaretz | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>אמירם לוין</h3>
+        <div class="role">סגן ראש המוסד לשעבר, אלוף במילואים</div>
+        <div class="quote">"מה שקורה בחברון — זה בדיוק מה שקרה בגרמניה הנאצית"</div>
+        <div class="context">השווה את נוכחות צה"ל בחברון לגרמניה הנאצית. קרא לצה"ל <strong>"שותף בפשעי מלחמה"</strong>. הצהרות חוזרות בתקשורת בינלאומית.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>שימש כ"עד מומחה" בתעמולה אנטי-ישראלית &mdash; "אפילו סגן ראש המוסד מודה".</p>
+        </div>
+        <div class="source">מקורות: ראיונות לערוץ 13 ולתקשורת זרה | Haaretz</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>עמי אילון</h3>
+        <div class="role">ראש שב"כ לשעבר (1996&ndash;2000)</div>
+        <div class="quote">"אם הייתי פלסטיני, הייתי נלחם נגד ישראל"</div>
+        <div class="context">הצהרה בראיון שפורסם בתקשורת בינלאומית. מנהיג ביטחוני ישראלי <strong>מצדיק את המאבק האלים</strong> נגד ישראל. ציטוט זה הפך לנשק מרכזי בלגיטימציה של טרור.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>מצוטט בקביעות בתעמולה פרו-פלסטינית כ"הוכחה" שגם ישראלים מודים שהטרור מוצדק.</p>
+        </div>
+        <div class="source">מקורות: ראיון לתקשורת בינלאומית | The Guardian</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>יובל דיסקין</h3>
+        <div class="role">ראש שב"כ לשעבר (2005&ndash;2011)</div>
+        <div class="quote">"צריך לסגור את המדינה"</div>
+        <div class="context">התבטאויות פומביות שיטתיות נגד מדיניות הממשלה. קרא ללחץ בינלאומי על ישראל. תמך בעמדות שהחלישו את עמדת ישראל מול איראן.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>ראשי ביטחון לשעבר שפועלים נגד ישראל בזירה הבינלאומית מעניקים לגיטימציה לאויבי ישראל.</p>
+        </div>
+        <div class="source">מקורות: ראיונות לתקשורת | Ynet | ערוץ 12</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>תמיר פרדו</h3>
+        <div class="role">ראש המוסד לשעבר (2011&ndash;2016)</div>
+        <div class="quote">"יש כאן אפרטהייד — זו המציאות" | "הממשלה כמו ה-KKK"</div>
+        <div class="context">ראש המוסד לשעבר <strong>השווה את ממשלת ישראל ל-KKK</strong> ואת המדיניות בשטחים ל<strong>אפרטהייד</strong>. הצהרות אלה פורסמו בתקשורת בינלאומית ושימשו תנועת BDS.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>"גם ראש המוסד אומר שזה אפרטהייד" &mdash; הפך לטיעון מרכזי בקמפיינים נגד ישראל.</p>
+        </div>
+        <div class="source">מקורות: Associated Press | Haaretz | BBC</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>מאיר דגן</h3>
+        <div class="role">ראש המוסד לשעבר (2002&ndash;2011)</div>
+        <div class="quote">"תקיפה באיראן — זה הרעיון הכי טיפש ששמעתי"</div>
+        <div class="context">ראש המוסד שפעל <strong>בפומבי</strong> נגד מדיניות ממשלת ישראל כלפי איראן. ערער בתקשורת הבינלאומית על האפשרות למנוע מאיראן פצצה גרעינית. התבטאויותיו שימשו את איראן להצדיק את תוכנית הגרעין.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>החליש את ההרתעה הישראלית מול איראן. איראן התקדמה לרמת העשרה של 60%.</p>
+        </div>
+        <div class="source">מקורות: ראיון CBS 60 Minutes | Ynet | Jerusalem Post</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>כספי קטאר לחמאס — $1.8 מיליארד+</h3>
+        <div class="role">מדיניות שהתמשכה שנים באישור דרג ביטחוני | <a href="#qatar-deep" style="color:#ffd700;">&#8592; חקירה מעמיקה למטה</a></div>
+        <div class="quote">"מי שרוצה לסכל מדינה פלסטינית צריך לתמוך בחיזוק חמאס" &mdash; נתניהו, מרץ 2019</div>
+        <div class="context">קטאר העבירה <strong>$30 מיליון בחודש</strong> לחמאס, במזוודות מזומנים דרך מעבר ארז, <strong>באישור מערכת הביטחון הישראלית</strong>. גורמי מודיעין הזהירו שהכסף מממן חימוש ומנהרות &mdash; האזהרות נדחו. בספטמבר 2023 &mdash; <strong>חודש לפני 7/10</strong> &mdash; ישראל ביקשה מקטאר <strong>להגדיל</strong> את התשלומים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>חמאס השתמש בכספים לבניית מערך טרור שהוביל ל-7 באוקטובר. <strong>חקירת שב"כ (מרץ 2025) קבעה קשר ישיר</strong> בין מדיניות הכספים ל-7/10.</p>
+        </div>
+        <div class="source">מקורות: New York Times | ועדת חקירה | דיונים בכנסת | ערוץ 12 | חקירת שב"כ 2025</div>
+    </div>
+
+    <div class="fact-card military fade-in">
+        <h3>600+ אנשי ביטחון</h3>
+        <div class="role">גנרלים, אלופים, ראשי שב"כ ומוסד לשעבר</div>
+        <div class="quote">מכתב לנשיא ארה"ב ללחוץ על ממשלת ישראל</div>
+        <div class="context">למעלה מ-600 אנשי ביטחון ישראלים לשעבר חתמו על <strong>מכתב לנשיא טראמפ</strong> המבקש ממנו <strong>ללחוץ על ישראל</strong> לשנות מדיניות. ישראלים פנו לגורם חיצוני כדי להתערב בנושאים פנימיים.</div>
+        <div class="result">
+            <div class="result-label">&#9888; התוצאה:</div>
+            <p>לגיטימציה ללחץ בינלאומי על ישראל &mdash; מפי אנשי ביטחון ישראלים עצמם.</p>
+        </div>
+        <div class="source">מקורות: Commanders for Israel's Security | Haaretz | Times of Israel</div>
+    </div>
+</section>
+
+<!-- SECTION 21: Oct 7 Failures -->
+<section id="failures-deep">
+    <div class="section-header">
+        <h2>&#128680; כשלי 7 באוקטובר — מי ידע, מי התעלם, ומי ברח</h2>
+        <div class="section-divider"></div>
+        <p>חומת יריחו, הצופות שהתעלמו מהן, 767 מול 5,000, ו-7 שעות ללא תגובה</p>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>חומת יריחו — התוכנית שנדחתה</h3>
+        <div class="role">תוכנית אגף המבצעים | נדחתה כ"שאפתנית מדי"</div>
+        <div class="context">
+            <strong>מה זה:</strong> <strong>"חומת יריחו"</strong> הייתה תוכנית מודיעינית-מבצעית שזיהתה את <strong>התרחיש המדויק</strong> של פריצת הגדר ופלישה:<br>
+            &#8226; <strong>פריצת הגדר בנקודות מרובות</strong><br>
+            &#8226; <strong>חדירת אלפי מחבלים</strong> ביבשה, אוויר, ים<br>
+            &#8226; <strong>חטיפת אזרחים לעזה</strong><br>
+            &#8226; <strong>מתקפה בשעות הבוקר</strong> בשבת/חג<br><br>
+            <strong>מה קרה:</strong> התוכנית <strong>נדחתה</strong> ע"י גורמי מודיעין בכירים כ-<strong>"שאפתנית מדי"</strong> ו-"לא ריאליסטית". חמאס לא מסוגל, טענו.<br>
+            <strong>7 באוקטובר:</strong> חמאס ביצע את התרחיש <strong>בדיוק כפי שתואר</strong> בתוכנית.<br><br>
+            <strong style="color: #ff1744;">היה מסמך. היה תרחיש. היה כל מה שצריך. בחרו להתעלם.</strong>
+        </div>
+        <div class="source">מקורות: NYT Oct 2023 | Channel 12 Investigation | IDF Internal Review</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>הצופות של אמן — "נשים, מה הן מבינות"</h3>
+        <div class="role">חיילות יחידה 414 | אגף המודיעין</div>
+        <div class="context">
+            <strong>מה קרה:</strong> <strong>חיילות צעירות</strong> ביחידה 414 ("צופיות") <strong>דיווחו שוב ושוב</strong> על:<br>
+            &#8226; <strong>אימונים חריגים</strong> של חמאס ליד הגדר<br>
+            &#8226; <strong>תרגילי פריצת גדר</strong> עם מודלים של קיבוצים<br>
+            &#8226; <strong>חפירות</strong> וסימני הכנה למתקפה<br>
+            &#8226; <strong>שינויים בדפוסי התנהגות</strong> — העלמות פתאומית מ-20/9<br><br>
+            <strong>תגובת הפיקוד:</strong><br>
+            &#8226; <strong>"את מגזימה"</strong><br>
+            &#8226; <strong>"חמאס מורתע"</strong><br>
+            &#8226; <strong>"הן רק בנות, מה הן מבינות"</strong> — ציטוט מיוחס לקצין בכיר<br><br>
+            <strong>7 באוקטובר:</strong> 15 מהצופות <strong>נרצחו</strong> בבסיס נחל עוז. <strong>7 נחטפו</strong>.<br><br>
+            <strong style="color: #ff1744;">החיילות שידעו — נרצחו. הקצינים שהתעלמו — ישבו בתל אביב.</strong>
+        </div>
+        <div class="source">מקורות: NYT | Haaretz | Channel 12 | IDF Internal Investigation</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>הקונספציה — "חמאס מורתע"</h3>
+        <div class="role">2007-2023 | 16 שנות אשליה</div>
+        <div class="context">
+            <strong>"הקונספציה"</strong> = ההנחה שחמאס <strong>מורתע ולא מעוניין במלחמה</strong>:<br><br>
+            <strong>מי אמר מה:</strong><br>
+            &#8226; <strong>תמיר הימן (ראש אמ"ן):</strong> "חמאס מרותע מאוד ממלחמה" — 2019<br>
+            &#8226; <strong>אביב כוכבי (רמטכ"ל):</strong> "לא ראינו את חמאס כאיום קיומי" — 2023<br>
+            &#8226; <strong>אהרון חליוה (8200):</strong> "ציפיתי לשקט של 5 שנים"<br>
+            &#8226; <strong>שב"כ:</strong> "סינוואר רוצה לשפר את החיים בעזה"<br><br>
+            <strong>מה חמאס עשה בפועל (2007-2023):</strong><br>
+            &#8226; <strong>בנה 500+ ק"מ מנהרות</strong> מתחת לעזה<br>
+            &#8226; <strong>גייס ואימן 30,000+ מחבלים</strong><br>
+            &#8226; <strong>ייצר אלפי רקטות</strong><br>
+            &#8226; <strong>תרגל את המתקפה שנים</strong> — באופן גלוי<br>
+            &#8226; <strong>קיבל $350M/שנה מאיראן</strong><br><br>
+            <strong style="color: #ff1744;">הקונספציה לא הייתה טעות — הייתה עיוורון מכוון. כל הסימנים היו שם.</strong>
+        </div>
+        <div class="source">מקורות: State Comptroller Report | IDF Internal Review | Haaretz | NYT</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>767 חיילים מול 5,000 מחבלים</h3>
+        <div class="role">דלדול כוחות בעוטף — החלטה מכוונת</div>
+        <div class="context">
+            <strong>ב-7 באוקטובר 2023:</strong><br>
+            &#8226; <strong>767 חיילים</strong> בלבד שמרו על <strong>כל עוטף עזה</strong><br>
+            &#8226; <strong>5,000 מחבלים</strong> פרצו את הגדר<br>
+            &#8226; <strong>יחס: 1:6.5</strong> — לטובת המחבלים<br><br>
+            <strong>למה כל כך מעט:</strong><br>
+            &#8226; <strong>הקונספציה:</strong> "חמאס מורתע, לא צריך הרבה כוחות"<br>
+            &#8226; <strong>חגים:</strong> שבת + שמחת תורה = חיילים רבים בחופשה<br>
+            &#8226; <strong>צפון:</strong> חלק מהכוחות הועברו <strong>ליהודה ושומרון</strong> בגלל חששות שם<br>
+            &#8226; <strong>טכנולוגיה במקום אנשים:</strong> הסתמכות על גדר ה-$1B, מצלמות, חיישנים<br><br>
+            <strong>הגדר:</strong> $1 מיליארד — <strong>נוטרלה תוך דקות</strong>. מל"טים השמידו מצלמות, חיישנים הושבתו, ופורצי גדר עברו ב-<strong>29 נקודות</strong>.<br><br>
+            <strong style="color: #ff1744;">$1 מיליארד על גדר. 767 חיילים מולם. חמאס נוטרל הכל תוך דקות.</strong>
+        </div>
+        <div class="source">מקורות: IDF After-Action Report | State Comptroller | Channel 12</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>7-12 שעות ללא תגובה</h3>
+        <div class="role">כשהטבח התרחש — הצבא לא הגיע</div>
+        <div class="context">
+            <strong>06:29</strong> — אזעקות ראשונות. ירי רקטות.<br>
+            <strong>06:30-07:00</strong> — חדירת 5,000 מחבלים ב-29 נקודות.<br>
+            <strong>07:00-08:00</strong> — טבח בנחל עוז, רעים, כפר עזה, בארי.<br>
+            <strong>08:00-12:00</strong> — <strong>אין כוחות סדירים</strong>. אזרחים חמושים + כיתות כוננות מקומיות לבד.<br>
+            <strong>12:00-14:00</strong> — כוחות ראשונים מתחילים להגיע.<br>
+            <strong>18:00+</strong> — חלק מהקיבוצים <strong>עדיין בלי חילוץ</strong>.<br><br>
+            <strong>מי הגיע ראשון:</strong><br>
+            &#8226; <strong>אזרחים חמושים</strong> — מילואימניקים שנסעו על דעת עצמם<br>
+            &#8226; <strong>כיתות כוננות</strong> — קבוצות קטנות של 5-10 לוחמים<br>
+            &#8226; <strong>גנרלים</strong> — הגיעו אחרי שעות ולא הבינו את המצב<br><br>
+            <strong style="color: #ff1744;">7-12 שעות. 1,200 נרצחים. 253 חטופים. הצבא החזק במזרח התיכון — לא הגיע.</strong>
+        </div>
+        <div class="source">מקורות: IDF Timeline | State Comptroller | BBC Timeline | Haaretz</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>אזהרות מצריות — 3 ימים לפני</h3>
+        <div class="role">"משהו גדול הולך לקרות" — ישראל התעלמה</div>
+        <div class="context">
+            <strong>4 באוקטובר 2023:</strong> ראש המודיעין המצרי <strong>התקשר באופן אישי</strong> והזהיר שמשהו גדול הולך לקרות מעזה.<br><br>
+            <strong>תגובת ישראל:</strong><br>
+            &#8226; ראש אמ"ן: <strong>לא הועבר לדרג המדיני</strong><br>
+            &#8226; שב"כ: <strong>"בדקנו — הערכתנו שחמאס מורתע"</strong><br>
+            &#8226; פיקוד דרום: <strong>לא שינה דבר</strong><br><br>
+            <strong>גם קודם:</strong><br>
+            &#8226; <strong>ארה"ב (ספטמבר 2023):</strong> CIA העבירה אזהרה כללית<br>
+            &#8226; <strong>ירדן:</strong> הזהירה מ"אירוע חריג"<br>
+            &#8226; <strong>מודיעין פנימי:</strong> מידע על אימונים חריגים<br><br>
+            <strong style="color: #ff1744;">3 מדינות הזהירו. חיילות דיווחו. מסמך חומת יריחו קיים. הכל היה שם — ובחרו לישון.</strong>
+        </div>
+        <div class="source">מקורות: Ynet | Channel 12 | AP | Times of Israel</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>הנחיית חניבעל — 13 חטופים נהרגו בבארי</h3>
+        <div class="role">האם צה"ל ירה על אזרחים שלו?</div>
+        <div class="context">
+            <strong>"הנחיית חניבעל"</strong> = נוהל שמטרתו <strong>למנוע חטיפה</strong> — גם במחיר פגיעה בחטוף.<br><br>
+            <strong>בארי, 7/10:</strong><br>
+            &#8226; מחבלים נכנסו לבתים, לקחו בני ערובה<br>
+            &#8226; טנק של צה"ל <strong>ירה על בית</strong> שבו היו חטופים ומחבלים<br>
+            &#8226; <strong>13 בני ערובה ישראלים נהרגו</strong> — לפחות חלקם מאש צה"ל<br>
+            &#8226; חקירה פנימית: "לא הייתה הנחייה רשמית" — אבל <strong>בפועל הנוהל הופעל</strong><br><br>
+            <strong>שאלות פתוחות:</strong><br>
+            &#8226; כמה ישראלים נהרגו מאש צה"ל ולא מחמאס?<br>
+            &#8226; מי נתן פקודה לירות על בתים עם אזרחים?<br>
+            &#8226; האם הנחיית חניבעל הופעלה גם במקומות אחרים?<br><br>
+            <strong style="color: #ff1744;">שאלות שעדיין ממתינות לתשובה — ומשפחות שממתינות לאמת.</strong>
+        </div>
+        <div class="source">מקורות: Haaretz Investigation | Ynet | IDF Internal Probe | Kibbutz Be'eri Testimony</div>
+    </div>
+
+    <div class="fact-card failures fade-in">
+        <h3>כולם התפטרו — חוץ מאחד</h3>
+        <div class="role">מי לקח אחריות?</div>
+        <div class="context">
+            <strong>התפטרו / הודחו:</strong><br>
+            &#8226; <strong>הרצי הלוי</strong> — רמטכ"ל. "צה"ל כשל במשימתו." התפטר.<br>
+            &#8226; <strong>אהרון חליוה</strong> — ראש 8200. ראשון שהתפטר.<br>
+            &#8226; <strong>רונן בר</strong> — ראש שב"כ. התפטר.<br>
+            &#8226; <strong>אלי ברוך</strong> — ראש אמ"ן. פוטר/התפטר.<br>
+            &#8226; <strong>יואב גלנט</strong> — שר ביטחון. פוטר.<br>
+            &#8226; <strong>מפקד פיקוד דרום</strong> — הודח.<br><br>
+            <strong>לא התפטר:</strong><br>
+            &#8226; <strong>בנימין נתניהו</strong> — ראש ממשלה 15+ שנים. <strong>אחראי מכולם.</strong> <strong>לא לקח אחריות.</strong><br>
+            &#8226; <strong>"אני אענה על שאלות אחרי המלחמה"</strong> — אמר ביולי 2024<br><br>
+            <strong style="color: #ff1744;">כל ראשי הצבא והמודיעין לקחו אחריות. האיש שמעליהם — מסרב כבר שנה וחצי.</strong>
+        </div>
+        <div class="source">מקורות: IDF Announcements | Shin Bet | Knesset Records | Israeli Media</div>
+    </div>
+
+    <div class="fact-card failures fade-in" style="background: linear-gradient(135deg, #12172b, rgba(255,23,68,0.08)); border: 1px solid rgba(255,23,68,0.2);">
+        <h3 style="color: #ff1744; font-size: 1.4em;">&#9888; 7 באוקטובר — סיכום הכשלים</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>חומת יריחו:</strong> תוכנית מדויקת שזיהתה את התרחיש — <strong>נדחתה</strong>.<br>
+            <strong>הצופות:</strong> חיילות שדיווחו — <strong>הושתקו, נרצחו, נחטפו</strong>.<br>
+            <strong>הקונספציה:</strong> 16 שנות "חמאס מורתע" — <strong>שקר שגבה 1,200 חיים</strong>.<br>
+            <strong>767 מול 5,000:</strong> דלדול מכוון של כוחות — <strong>1:6.5 לרעת ישראל</strong>.<br>
+            <strong>גדר $1B:</strong> נוטרלה תוך דקות — <strong>טכנולוגיה לא מחליפה חיילים</strong>.<br>
+            <strong>7-12 שעות:</strong> הצבא החזק במזה"ת — <strong>לא הגיע</strong>.<br>
+            <strong>אזהרות:</strong> מצרים, ירדן, CIA, חיילות — <strong>כולם הוזהרו, אף אחד לא שמע</strong>.<br>
+            <strong>אחריות:</strong> כולם התפטרו — <strong>חוץ מנתניהו</strong>.<br><br>
+            <strong style="color: #ff1744; font-size: 1.1em;">7 באוקטובר לא היה "הפתעה". זו הייתה רשלנות פושעת של כל מי שהתעלם מהסימנים — ושל מי שעדיין מסרב לקחת אחריות.</strong>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-command');</script>
+
+</body>
+</html>

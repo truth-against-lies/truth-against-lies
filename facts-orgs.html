@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ארגונים, אקדמיה ו-BDS | האמת נגד השקר</title>
+    <meta name="description" content="ארגונים ממומנים מבחוץ, אקדמאים שפעלו נגד ישראל, ותנועת BDS נחשפת — רק עובדות מתועדות">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="ארגונים, אקדמיה ו-BDS | האמת נגד השקר">
+    <meta property="og:description" content="ארגונים ממומנים מבחוץ, אקדמאים שפעלו נגד ישראל, ותנועת BDS נחשפת — רק עובדות מתועדות">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-orgs.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ארגונים, אקדמיה ו-BDS | האמת נגד השקר">
+    <meta name="twitter:description" content="ארגונים ממומנים מבחוץ, אקדמאים שפעלו נגד ישראל, ותנועת BDS נחשפת — רק עובדות מתועדות">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* === HERO === */
+        .facts-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(226,183,20,0.08) 0%, transparent 100%);
+        }
+        .facts-hero h1 {
+            color: #e2b714;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+        }
+        .facts-hero .subtitle {
+            color: #c0c0c0;
+            font-size: 1.15em;
+            max-width: 700px;
+            margin: 0 auto 20px;
+            line-height: 1.8;
+        }
+        .facts-hero .disclaimer {
+            color: #e74c3c;
+            font-size: 0.95em;
+            font-weight: bold;
+        }
+
+        /* === SECTION HEADERS === */
+        .section-header {
+            text-align: center;
+            padding: 50px 0 25px;
+        }
+        .section-header h2 {
+            color: #e2b714;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: #e2b714;
+            margin: 0 auto 15px;
+        }
+        .section-header p {
+            color: #888;
+            font-size: 1em;
+        }
+
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.statements { border-right: 4px solid #3498db; }
+        .fact-card.influence { border-right: 4px solid #ff5722; }
+        .fact-card.bds { border-right: 4px solid #e040fb; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-right: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        /* === GENERAL === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(226, 183, 20, 0.2);
+            margin-top: 80px;
+            color: #666;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #e2b714;
+            color: #0a0a1a;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s;
+            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
+        }
+        .back-to-top.visible { display: block; }
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .back-link {
+            display: inline-block;
+            color: #e2b714;
+            text-decoration: none;
+            font-size: 1.05em;
+            margin-bottom: 30px;
+            transition: opacity 0.3s;
+        }
+        .back-link:hover { opacity: 0.7; }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html#about">מה זה אנטישמיות?</a></li>
+                <li><a href="index.html#claims">עלילות והפרכות</a></li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li><a href="gallery.html">תיעוד היסטורי</a></li>
+                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li><a href="facts.html" style="color:#e2b714;">עובדות שלא מספרים לך</a></li>
+                <li><a href="index.html#strengthen">חיזוק העם</a></li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul>
+        </div>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+        <a href="index.html" class="nav-back">&#8594; דף ראשי</a>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="facts-hero">
+    <h1>&#127970; ארגונים, אקדמיה ו-BDS</h1>
+    <p class="subtitle">ארגונים ממומנים מבחוץ, אקדמאים שפעלו נגד ישראל, ותנועת BDS נחשפת</p>
+    <p class="disclaimer">רק עובדות מתועדות &mdash; רק מקורות</p>
+</section>
+
+<div style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <a href="facts.html" class="back-link">&larr; חזרה לכל הקטגוריות</a>
+</div>
+
+<!-- ==================== SECTION: FOREIGN-FUNDED NGOs ==================== -->
+<section style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header fade-in">
+        <h2>&#127968; ארגונים ממומנים מבחוץ</h2>
+        <div class="section-divider"></div>
+        <p>ארגונים "ישראלים" שכמעט כל תקציבם מגיע מממשלות זרות</p>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>בצלם</h3>
+        <div class="role">ארגון "זכויות אדם" ישראלי</div>
+        <div class="quote">"ישראל היא משטר אפרטהייד"</div>
+        <div class="context">ארגון שמגדיר את עצמו כ"ישראלי" אך ממומן בעיקר מ<strong>ממשלות זרות</strong> (EU, שוודיה, דנמרק, הולנד ועוד). מנכ"ל בצלם <strong>העיד בפני האו"ם</strong> נגד ישראל. דו"חות בצלם הם הבסיס העיקרי לתעמולה אנטי-ישראלית בעולם.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות רשם העמותות | Im Tirtzu</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>שוברים שתיקה</h3>
+        <div class="role">ארגון "חיילים לשעבר"</div>
+        <div class="quote">מפרסם עדויות (לעיתים לא מאומתות) נגד צה"ל</div>
+        <div class="context"><strong>50%+ מתקציב הארגון ממימון זר</strong> (EU, ממשלות אירופיות, קרנות בינלאומיות). הארגון אוסף "עדויות" מחיילים ומפרסם אותן בתקשורת הבינלאומית. חלק מהעדויות <strong>לא אומתו</strong>. פעילי הארגון מרצים באוניברסיטאות בחו"ל נגד ישראל.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות רשם העמותות | Ad Kan</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>יש דין</h3>
+        <div class="role">ארגון "מתנדבים למען זכויות אדם"</div>
+        <div class="quote">94&ndash;98% מימון זר</div>
+        <div class="context">ארגון ישראלי שכמעט <strong>כל תקציבו מגיע מממשלות זרות</strong>. מגיש עתירות לבג"ץ נגד צה"ל ומדינת ישראל. פעיל בזירה הבינלאומית נגד ישראל. מעסיק עורכי דין שמגישים תלונות בהאג.</div>
+        <div class="source">מקורות: NGO Monitor | דו"חות כספיים | רשם העמותות</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>סה"כ: מימון זר לארגונים</h3>
+        <div class="role">נתון מצטבר</div>
+        <div class="quote">470 מיליון ש"ח מממשלות זרות ל-40+ ארגונים ישראלים</div>
+        <div class="context"><strong>470 מיליון ש"ח</strong> הועברו מממשלות זרות (EU, גרמניה, שוודיה, נורבגיה, דנמרק ועוד) ל<strong>למעלה מ-40 ארגונים ישראלים</strong> שפועלים נגד מדינת ישראל בזירה הבינלאומית. זהו <strong>מימון זר של קמפיין</strong> נגד מדינה דמוקרטית.</div>
+        <div class="source">מקורות: NGO Monitor | חוק הגילוי (2011) | דו"חות רשם העמותות | Im Tirtzu</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: ACADEMICS ==================== -->
+<section style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header fade-in">
+        <h2>&#127891; אקדמאים</h2>
+        <div class="section-divider"></div>
+        <p>אקדמאים ישראלים שפועלים באופן שיטתי נגד ישראל בזירה הבינלאומית</p>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>אילן פפה</h3>
+        <div class="role">היסטוריון, אוניברסיטת אקסטר</div>
+        <div class="quote">"ישראל ביצעה טיהור אתני ב-1948"</div>
+        <div class="context">היסטוריון ישראלי שעזב את ישראל וכותב באופן שיטתי על <strong>"טיהור אתני"</strong> ו<strong>"נכבה"</strong>. תומך פעיל ב<strong>BDS</strong>. ספריו משמשים כ"מקור אקדמי" בתעמולה אנטי-ישראלית בקמפוסים ברחבי העולם.</div>
+        <div class="source">מקורות: ספריו | University of Exeter | BDS movement</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>נורית פלד-אלחנן</h3>
+        <div class="role">פרופסור, האוניברסיטה העברית</div>
+        <div class="quote">"ישראל = דאעש" | "ישראל מבצעת רצח עם"</div>
+        <div class="context">פרופסור <strong>באוניברסיטה העברית בירושלים</strong> שהשוותה את ישראל ל<strong>דאעש</strong>. הוזמנה להעיד בפרלמנט האירופי נגד ישראל. משתמשת בטרגדיה האישית (בתה נרצחה בפיגוע) כדי <strong>להצדיק את הטרור</strong>.</div>
+        <div class="source">מקורות: עדות בפרלמנט האירופי | הרצאות מתועדות | Ynet</div>
+    </div>
+
+    <div class="fact-card statements fade-in">
+        <h3>שלמה זנד</h3>
+        <div class="role">פרופסור, אוניברסיטת תל אביב</div>
+        <div class="quote">"העם היהודי הומצא"</div>
+        <div class="context">ספרו <strong>"מתי ואיך הומצא העם היהודי"</strong> (2008) טוען שהעם היהודי <strong>אינו עם אמיתי</strong> אלא המצאה מודרנית. הספר שימש כבסיס "אקדמי" לטענה ש<strong>ליהודים אין זכות על ארץ ישראל</strong>. תורגם ל-20+ שפות.</div>
+        <div class="source">מקורות: ספרו (2008) | ביקורות אקדמיות | Times of Israel</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: FOREIGN INFLUENCE ==================== -->
+<section id="influence" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header fade-in">
+        <h2>&#127758; מבצעי השפעה זרים</h2>
+        <div class="section-divider"></div>
+        <p>קטאר, איראן, טורקיה וגורמים זרים שמממנים תעמולה נגד ישראל</p>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>קטאר — $6.6 מיליארד לאוניברסיטאות + $1.8 מיליארד לחמאס</h3>
+        <div class="role">1996 &mdash; היום</div>
+        <div class="context">קטאר היא <strong>המממנת הזרה מספר 1</strong> של אוניברסיטאות אמריקאיות: <strong>$6.6 מיליארד</strong> — כולל Cornell ($2.3B), Carnegie Mellon ($1.05B), Georgetown ($1.02B), Harvard ($358M). במקביל, העבירה <strong>$1.8 מיליארד+</strong> לחמאס. מממנת <strong>90%</strong> מתקציב אלג'זירה. אירחה את הלשכה הפוליטית של חמאס בדוחא עד נובמבר 2024.</div>
+        <div class="source">מקורות: US Department of Education | JNS | FDD | Wikipedia</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>איראן — תקציב תעמולה $480M ומבצעי סייבר</h3>
+        <div class="role">2007 &mdash; היום</div>
+        <div class="context">איראן מפעילה <strong>8 ערוצי טלוויזיה בינלאומיים ורדיו ב-32 שפות</strong>. תקציב IRIB הוכפל פי 3 ל-<strong>$480 מיליון</strong>. Press TV (אנגלית) נאסר בבריטניה (2012). <strong>11 מבצעי סייבר</strong> באוקטובר 2023 בלבד (לעומת 1 כל חודשיים ב-2021). Meta הסירה <strong>93 חשבונות פייסבוק, 194 פרופילי אינסטגרם</strong> במבצע אחד. שימוש גובר ב-AI ליצירת דיסאינפורמציה.</div>
+        <div class="source">מקורות: FDD | Atlantic Council | INSS | Euronews</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>טורקיה/ארדוגן — "נתניהו עקף את היטלר"</h3>
+        <div class="role">2009 &mdash; היום</div>
+        <div class="context">ארדוגן: "נתניהו = <strong>קצב עזה</strong>" (2023), "<strong>שיטות הרצח עם של נתניהו היו גורמות להיטלר לקנא</strong>" (2024), "<strong>נתניהו עקף את היטלר</strong>" (2025). טורקיה <strong>ניתקה סחר של $7 מיליארד/שנה</strong> עם ישראל (מאי 2024). הוציאה <strong>צו מעצר</strong> נגד נתניהו (נובמבר 2025). תקשורת ממלכתית TRT מסרבת לכנות חמאס "טרור".</div>
+        <div class="source">מקורות: Times of Israel | Anadolu Agency | Daily Sabah | FDD</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>אנטישמיות בקמפוסים — עלייה של 477%</h3>
+        <div class="role">אוקטובר 2023 &mdash; היום</div>
+        <div class="context">ADL תיעד <strong>2,087 אירועים אנטי-ישראליים</strong> בקמפוסים (יוני 2023 - מאי 2024) — עלייה של <strong>477%</strong>. <strong>Columbia</strong>: פריצה להמילטון הול, "לכו חזרה לאירופה", "10,000 שביעי באוקטובר" — פיצוי <strong>$221M</strong>. <strong>UCLA</strong>: "אזור הדרה ליהודים", פיצוי <strong>$6M</strong> + תביעת <strong>$1 מיליארד</strong>. <strong>Harvard</strong>: 39% מהיהודים לא הרגישו בבית, 26% חשו לא בטוחים פיזית.</div>
+        <div class="source">מקורות: ADL | NPR | PBS | Harvard Magazine</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>"קריאה לרצח עם יהודים מפרה כללים?" — "תלוי בהקשר"</h3>
+        <div class="role">5 בדצמבר 2023 &mdash; שימוע בקונגרס</div>
+        <div class="context">נשיאות <strong>הרווארד (קלודין גיי), פן (ליז מגיל) ו-MIT (סאלי קורנבלוט)</strong> העידו בפני ועדת החינוך של הקונגרס. שאלת חברת הקונגרס אליס סטפניק: "האם קריאה לרצח עם יהודים מפרה את כללי ההתנהגות?" — <strong>גיי: "תלוי בהקשר"</strong>. מגיל: "תלוי במצב". <strong>מגיל התפטרה 4 ימים מאוחר יותר</strong>. <strong>גיי התפטרה</strong> (ינואר 2024) — הנשיאות הקצרה ביותר ב-388 שנות הרווארד.</div>
+        <div class="source">מקורות: NPR | PBS | Wikipedia</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>$100M+ בשנה — ממשלות אירופה מממנות ארגונים נגד ישראל</h3>
+        <div class="role">שנתי</div>
+        <div class="context">ממשלות אירופה מעבירות <strong>$100 מיליון+/שנה</strong> לארגונים שפועלים נגד ישראל. <strong>בצלם</strong>: 19.68 מיליון ש"ח (~$6M) מממשלות זרות (2017-2019). <strong>EU</strong>: לפחות <strong>&euro;25M</strong> (2011-2018) הועברו לארגונים עם קשרים ל-PFLP (ארגון טרור). <strong>שוודיה</strong>: הקצתה 120M קרונות (~$11M) ל"תוכנית זכויות אדם" (2024-2027).</div>
+        <div class="source">מקורות: NGO Monitor | Times of Israel | דו"חות רשם העמותות</div>
+    </div>
+
+    <div class="fact-card influence fade-in">
+        <h3>SJP ו-JVP — ארגוני סטודנטים שמממנים חמאס?</h3>
+        <div class="role">ISGAP Report &mdash; מאי 2024</div>
+        <div class="context">ISGAP חשף ש-<strong>SJP (סטודנטים למען צדק בפלסטין)</strong> מקבל <strong>$3M+/שנה</strong> ממימון המקושר לארגונים שהואשמו במימון חמאס. <strong>AMP</strong> (American Muslims for Palestine), שתומך ב-SJP, נוסד על ידי מנהיגים לשעבר של IAP שנסגר — ו<strong>נחקר על ידי התובע הכללי של וירג'יניה</strong>. <strong>JVP</strong> (Jewish Voice for Peace) קיבל <strong>$875,000 מסורוס/OSF</strong>.</div>
+        <div class="source">מקורות: ISGAP Report | ADL | NGO Monitor</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: BDS DEEP DIVE ==================== -->
+<section id="bds-deep" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header">
+        <h2>&#128683; תנועת BDS נחשפת — מאחורי המסכה</h2>
+        <div class="section-divider"></div>
+        <p>ברגותי, קשרי טרור, מימון, כישלונות — ומה הם באמת רוצים</p>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>עומר ברגותי — הצביעות בגוף אחד</h3>
+        <div class="role">מייסד BDS | גר בישראל | בוגר אוניברסיטת תל אביב</div>
+        <div class="context">
+            <strong>קורא לחרם על ישראל — מתוך ישראל:</strong><br>
+            &#8226; <strong>גר ברמאללה</strong> עם אשתו הישראלית (אזרחית ישראל)<br>
+            &#8226; <strong>למד ותואר שני באוניברסיטת תל אביב</strong> — אותה אוניברסיטה שהוא קורא לחרם עליה<br>
+            &#8226; נהנה מ<strong>שירותי בריאות ישראליים</strong><br>
+            &#8226; נוסע בחופשיות ב<strong>דרכון ישראלי</strong> למדינות שהוא מסית נגד ישראל<br><br>
+            <strong>מה הוא אומר באנגלית:</strong> "אנחנו רוצים שוויון וצדק"<br>
+            <strong>מה הוא אומר בערבית:</strong> "אנחנו <strong>מתנגדים למדינה יהודית בכל חלק</strong> מפלסטין" (2014)<br><br>
+            <strong style="color: #e040fb;">ברגותי לא רוצה "סוף כיבוש" — הוא רוצה סוף ישראל. אבל בינתיים הוא נהנה מכל מה שישראל מציעה.</strong>
+        </div>
+        <div class="source">מקורות: TAU Records | Interview 2014 | Electronic Intifada | JPost</div>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>קשרי טרור — 30+ מחבלים בארגוני BDS</h3>
+        <div class="role">PFLP, סמידון, ו-NGOs עם "שליחות הומניטרית"</div>
+        <div class="context">
+            <strong>שב"כ + שין בית (2022):</strong> <strong>30+ מחבלים</strong> מהחזית העממית (PFLP) עבדו ב-NGOs הקשורים ל-BDS:<br>
+            &#8226; <strong>Addameer</strong> (ארגון אסירים) — יו"ר: חבר PFLP<br>
+            &#8226; <strong>Defense for Children International</strong> — מנהלים: חברי PFLP<br>
+            &#8226; <strong>Union of Agricultural Work Committees</strong> — חזית ל-PFLP<br><br>
+            <strong>סמידון (Samidoun):</strong><br>
+            &#8226; רשמית: "רשת סולידריות אסירים"<br>
+            &#8226; בפועל: <strong>חזית ל-PFLP</strong> — ארגון טרור מוכר<br>
+            &#8226; <strong>קנדה (2022):</strong> הכריזה על סמידון כ<strong>ארגון טרור</strong><br>
+            &#8226; <strong>גרמניה (2023):</strong> <strong>אסרה</strong> את סמידון<br><br>
+            <strong style="color: #e040fb;">BDS = חזית אזרחית לארגוני טרור. לא תנועת זכויות אדם.</strong>
+        </div>
+        <div class="source">מקורות: Shin Bet 2022 | Canada Public Safety | Germany Interior Ministry | NGO Monitor</div>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>מימון — רוקפלר, סורוס, קטאר</h3>
+        <div class="role">מי משלם על ה"מאבק ההומניטרי"?</div>
+        <div class="context">
+            <strong>מקורות מימון מרכזיים:</strong><br>
+            &#8226; <strong>Rockefeller Brothers Fund:</strong> $3.4 מיליון ל-BDS-aligned NGOs<br>
+            &#8226; <strong>Open Society (Soros):</strong> מיליונים ל"זכויות אדם" שמקדמות BDS<br>
+            &#8226; <strong>קטאר:</strong> $100M+ לאוניברסיטאות שמקדמות BDS<br>
+            &#8226; <strong>ממשלות אירופה:</strong> EU, הולנד, שבדיה, נורבגיה — מימון ל-NGOs שמקדמות BDS<br><br>
+            <strong>ישראל (NGO Monitor 2020):</strong> <strong>470 מיליון ש"ח</strong> מממשלות זרות ל-~40 ארגונים ישראליים שתומכים ב-BDS.<br><br>
+            <strong style="color: #e040fb;">זה לא "תנועה עממית" — זה ארגון ממומן היטב עם אינטרסים גיאו-פוליטיים.</strong>
+        </div>
+        <div class="source">מקורות: NGO Monitor | Rockefeller Brothers Fund 990 | Foundation Search | Knesset Committee</div>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>כישלון כלכלי — GDP ישראל +267%</h3>
+        <div class="role">BDS נוסדה 2005 | GDP ישראל 2005: $142B &rarr; 2023: $521B</div>
+        <div class="context">
+            <strong>מאז הקמת BDS (2005):</strong><br>
+            &#8226; GDP ישראל: <strong>$142B &rarr; $521B</strong> (+267%)<br>
+            &#8226; ייצוא טכנולוגי: <strong>שיא כל הזמנים</strong><br>
+            &#8226; הסכמי אברהם (2020): <strong>4 מדינות ערביות</strong> נרמלו יחסים<br>
+            &#8226; סעודיה: <strong>במו"מ</strong> על נורמליזציה<br>
+            &#8226; הודו: שותפות אסטרטגית חדשה<br><br>
+            <strong>"הישגי" BDS:</strong><br>
+            &#8226; Ben &amp; Jerry's: ביטלו חרם אחרי תביעה<br>
+            &#8226; SodaStream: העבירו מפעל — <strong>500 פלסטינים איבדו עבודה</strong><br>
+            &#8226; Airbnb: ביטלו חרם תוך חודשים<br><br>
+            <strong style="color: #e040fb;">BDS פוגעת בפלסטינים, לא בישראל. כל "הישג" שלהם = פלסטינים שמאבדים עבודה.</strong>
+        </div>
+        <div class="source">מקורות: World Bank GDP Data | IMF | Abraham Accords | BDS Impact Studies</div>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>המטרה האמיתית — "מתנגדים למדינה יהודית"</h3>
+        <div class="role">לא "סוף כיבוש" — סוף ישראל</div>
+        <div class="context">
+            <strong>ברגותי (2014):</strong> "אנחנו מתנגדים למדינה יהודית <strong>בכל חלק</strong> מפלסטין ההיסטורית"<br>
+            <strong>3 הדרישות של BDS:</strong><br>
+            &#8226; סוף "כיבוש" — כולל <strong>כל שטחי 67</strong><br>
+            &#8226; שוויון מלא לערביי ישראל — כבר <strong>קיים בחוק</strong><br>
+            &#8226; <strong>"זכות שיבה" ל-5.9 מיליון</strong> — = סוף ישראל כמדינה יהודית<br><br>
+            <strong>אנטי-נורמליזציה:</strong><br>
+            &#8226; גינו פלסטיני שזכה באוסקר כי <strong>שיתף פעולה עם ישראלים</strong><br>
+            &#8226; מתנגדים ל<strong>כל דיאלוג</strong> בין ישראלים לפלסטינים<br>
+            &#8226; מתנגדים ל<strong>הסכמי אברהם</strong> — שלום = אויב<br><br>
+            <strong style="color: #e040fb;">BDS לא רוצה שלום — BDS רוצה שישראל לא תתקיים. כל השאר הוא PR.</strong>
+        </div>
+        <div class="source">מקורות: BDS Official Website | Barghouti 2014 Interview | As'ad AbuKhalil (supporter)</div>
+    </div>
+
+    <div class="fact-card bds fade-in">
+        <h3>38 מדינות אמריקאיות אסרו BDS</h3>
+        <div class="role">Anti-BDS Legislation</div>
+        <div class="context">
+            <strong>נכון ל-2024:</strong> <strong>38 מדינות בארה"ב</strong> חוקקו חוקים נגד BDS:<br>
+            &#8226; <strong>חוקי אנטי-חרם:</strong> אוסרים על חברות שמחרימות ישראל לעבוד עם הממשלה<br>
+            &#8226; <strong>שתי מפלגות:</strong> רפובליקנים <strong>ודמוקרטים</strong> תמכו בחקיקה<br>
+            &#8226; <strong>הגדרת IHRA:</strong> 41 מדינות אימצו הגדרה שמזהה BDS כאנטישמיות<br><br>
+            <strong>אירופה:</strong><br>
+            &#8226; <strong>גרמניה (2019):</strong> הכנסת הגרמנית הכריזה ש-BDS = אנטישמיות<br>
+            &#8226; <strong>צרפת:</strong> BDS = הסתה — <strong>ניתן להעמיד לדין</strong><br>
+            &#8226; <strong>ספרד:</strong> בתי משפט פסקו נגד BDS<br><br>
+            <strong style="color: #e040fb;">העולם הדמוקרטי מזהה מה BDS באמת — לא "זכויות אדם" אלא אנטישמיות מאורגנת.</strong>
+        </div>
+        <div class="source">מקורות: JNS | Anti-BDS Laws Database | IHRA | German Bundestag 2019</div>
+    </div>
+
+    <div class="fact-card bds fade-in" style="background: linear-gradient(135deg, #12172b, rgba(224,64,251,0.08)); border: 1px solid rgba(224,64,251,0.2);">
+        <h3 style="color: #e040fb; font-size: 1.4em;">&#9888; BDS — הסיכום</h3>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>מייסד:</strong> גר בישראל, למד בתל אביב, קורא לחיסול ישראל.<br>
+            <strong>קשרי טרור:</strong> 30+ מחבלי PFLP ב-NGOs. סמידון = ארגון טרור.<br>
+            <strong>מימון:</strong> רוקפלר, סורוס, קטאר, ממשלות אירופה.<br>
+            <strong>תוצאות:</strong> GDP ישראל +267%. 4 הסכמי שלום חדשים. 0 הישגים לפלסטינים.<br>
+            <strong>מטרה אמיתית:</strong> "מתנגדים למדינה יהודית בכל חלק" — לא "סוף כיבוש".<br>
+            <strong>38 מדינות</strong> אמריקאיות + גרמניה + צרפת = BDS הוא אנטישמיות.<br><br>
+            <strong style="color: #e040fb; font-size: 1.1em;">BDS פוגעת בפלסטינים, ממומנת ע"י טרור, ומטרתה חיסול ישראל. כל דבר אחר שהם אומרים — שקר.</strong>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 האמת נגד השקר &mdash; כל הזכויות שמורות</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">בנוי באהבה לעם ישראל &#10084;</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="חזרה למעלה">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="שתף">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="העתק קישור">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-orgs');</script>
+
+</body>
+</html>
