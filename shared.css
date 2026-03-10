@@ -33,7 +33,7 @@ nav {
     display: flex;
     align-items: center;
     height: 60px;
-    gap: 12px;
+    gap: 8px;
 }
 .nav-logo {
     color: #e2b714;
@@ -41,23 +41,8 @@ nav {
     font-weight: bold;
     text-decoration: none;
     white-space: nowrap;
+    margin: 0 auto;
 }
-.nav-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    background: rgba(226, 183, 20, 0.1);
-    border: 1px solid rgba(226, 183, 20, 0.4);
-    border-radius: 8px;
-    color: #e2b714;
-    text-decoration: none;
-    font-size: 0.85em;
-    font-weight: bold;
-    white-space: nowrap;
-    transition: all 0.3s;
-}
-.nav-back:hover { background: rgba(226, 183, 20, 0.25); border-color: #e2b714; }
 .nav-menu-wrapper { position: relative; }
 .hamburger {
     display: flex;
@@ -112,15 +97,13 @@ nav {
     border-radius: 3px;
     white-space: nowrap;
     transition: background 0.3s, border-color 0.3s;
-    margin-right: auto;
 }
 .nav-donate:hover { background: rgba(226, 183, 20, 0.3); border-color: #e2b714; }
 @media (max-width: 768px) {
     nav { padding: 0 12px; }
-    .nav-inner { gap: 8px; }
+    .nav-inner { gap: 6px; }
     .nav-logo { font-size: 1.05em; }
     .nav-donate { font-size: 0.8em; padding: 5px 10px; }
-    .nav-back { font-size: 0.75em; padding: 5px 10px; }
 }
 
 /* === LANGUAGE PICKER === */
@@ -131,12 +114,13 @@ nav {
     background: rgba(226, 183, 20, 0.2);
     border: 1px solid #e2b714;
     color: #e2b714;
-    padding: 5px 10px;
+    padding: 5px 8px;
     border-radius: 3px;
     cursor: pointer;
-    font-size: 0.85em;
+    font-size: 1em;
     font-family: inherit;
     transition: all 0.3s;
+    line-height: 1;
 }
 .nav-lang-btn:hover { background: #e2b714; color: #0a0a1a; }
 .nav-lang-menu {

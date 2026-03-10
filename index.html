@@ -1261,7 +1261,14 @@
 <!-- NAVIGATION -->
 <nav>
     <div class="nav-inner">
-        <a href="#" class="nav-logo">האמת נגד השקר</a>
+        <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
+            </div>
+        </div>
         <div class="nav-menu-wrapper">
             <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
             <ul class="nav-links">
@@ -1283,19 +1290,12 @@
                 <li><a href="action.html">מה אפשר לעשות?</a></li>
             </ul>
         </div>
+        <a href="#" class="nav-logo">האמת נגד השקר</a>
         <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
-        <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
-        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
-        <div class="nav-settings">
-            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
-            <div class="nav-settings-menu">
-                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
-                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
-            </div>
-        </div>
         <div class="lang-dropdown">
-            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; <span class="lang-toggle-text">שפה / Language</span></button>
+            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')" style="padding:5px 8px;font-size:1em;line-height:1;">&#127760; <span class="lang-toggle-text" style="display:none;">שפה / Language</span></button>
         </div>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
     </div>
 </nav>
 
