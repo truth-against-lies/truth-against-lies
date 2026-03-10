@@ -344,11 +344,11 @@
 
     <!-- CATEGORY TABS -->
     <div class="cat-tabs">
-        <button class="cat-tab active" onclick="showCat('holocaust')">&#10018; השואה</button>
-        <button class="cat-tab" onclick="showCat('oct7')">&#128293; 7 באוקטובר</button>
-        <button class="cat-tab" onclick="showCat('terror')">&#128163; פיגועים</button>
-        <button class="cat-tab" onclick="showCat('antisemitism')">&#10006; אנטישמיות בעולם</button>
-        <button class="cat-tab" onclick="showCat('wars')">&#9876; מלחמות ישראל</button>
+        <button class="cat-tab active" onclick="showCat('holocaust', event)">&#10018; השואה</button>
+        <button class="cat-tab" onclick="showCat('oct7', event)">&#128293; 7 באוקטובר</button>
+        <button class="cat-tab" onclick="showCat('terror', event)">&#128163; פיגועים</button>
+        <button class="cat-tab" onclick="showCat('antisemitism', event)">&#10006; אנטישמיות בעולם</button>
+        <button class="cat-tab" onclick="showCat('wars', event)">&#9876; מלחמות ישראל</button>
     </div>
 
     <!-- HOLOCAUST -->
@@ -518,11 +518,11 @@ function enterGallery() {
 }
 
 // Category tabs
-function showCat(cat) {
+function showCat(cat, e) {
     document.querySelectorAll('.cat-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
     document.getElementById('cat-' + cat).classList.add('active');
-    event.target.classList.add('active');
+    e.target.classList.add('active');
 }
 
 // Lightbox
