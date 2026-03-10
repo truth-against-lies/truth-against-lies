@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v1';
+var CACHE_NAME = 'tal-v2';
 var ASSETS = [
     './',
     'index.html',
@@ -55,20 +55,19 @@ self.addEventListener('activate', function(e) {
     self.clients.claim();
 });
 
-// Fetch: cache-first, fallback to network
+// Fetch: network-first, fallback to cache (ensures updates show immediately)
 self.addEventListener('fetch', function(e) {
     e.respondWith(
-        caches.match(e.request).then(function(cached) {
-            if (cached) return cached;
-            return fetch(e.request).then(function(response) {
-                if (response && response.status === 200 && response.type === 'basic') {
-                    var clone = response.clone();
-                    caches.open(CACHE_NAME).then(function(cache) {
-                        cache.put(e.request, clone);
-                    });
-                }
-                return response;
-            });
+        fetch(e.request).then(function(response) {
+            if (response && response.status === 200 && response.type === 'basic') {
+                var clone = response.clone();
+                caches.open(CACHE_NAME).then(function(cache) {
+                    cache.put(e.request, clone);
+                });
+            }
+            return response;
+        }).catch(function() {
+            return caches.match(e.request);
         })
     );
 });
