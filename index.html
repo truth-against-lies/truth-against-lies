@@ -112,30 +112,6 @@
             color: #e2b714;
             background: rgba(226, 183, 20, 0.08);
         }
-        .nav-search {
-            flex: 1;
-            max-width: 320px;
-        }
-        .nav-search input {
-            width: 100%;
-            padding: 8px 16px;
-            border-radius: 3px;
-            border: 1px solid rgba(226, 183, 20, 0.3);
-            background: rgba(226, 183, 20, 0.06);
-            color: #e2b714;
-            font-family: inherit;
-            font-size: 0.9em;
-            outline: none;
-            transition: border-color 0.3s;
-            box-sizing: border-box;
-        }
-        .nav-search input::placeholder {
-            color: rgba(226, 183, 20, 0.4);
-        }
-        .nav-search input:focus {
-            border-color: #e2b714;
-            background: rgba(226, 183, 20, 0.1);
-        }
         .nav-donate {
             padding: 6px 14px;
             background: rgba(226, 183, 20, 0.15);
@@ -793,7 +769,6 @@
             nav { padding: 0 12px; }
             .nav-inner { gap: 8px; }
             .nav-logo { font-size: 1.05em; }
-            .nav-search { display: none; }
             .nav-donate, .nav-auth-btn { font-size: 0.8em; padding: 5px 10px; }
             .lang-toggle-text { display: none; }
             .lang-toggle { padding: 6px 10px; }
@@ -1282,7 +1257,6 @@
 </head>
 <body>
 <div class="reading-progress"></div>
-<a href="#main-content" class="skip-link">דלג לתוכן</a>
 
 <!-- NAVIGATION -->
 <nav>
@@ -1309,12 +1283,9 @@
                 <li><a href="action.html">מה אפשר לעשות?</a></li>
             </ul>
         </div>
-        <div class="nav-search">
-            <input type="text" id="siteSearch" placeholder="חיפוש באתר..." onkeydown="if(event.key==='Enter')searchSite()">
-        </div>
-        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
-        <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
         <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
+        <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
         <div class="nav-settings">
             <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
             <div class="nav-settings-menu">
@@ -3056,32 +3027,6 @@ document.addEventListener('click', function(e) {
         nav.classList.remove('open');
     }
 });
-
-// Site search
-let searchMatches = [];
-let searchIdx = -1;
-
-function searchSite() {
-    const query = document.getElementById('siteSearch').value.trim();
-    if (!query) return;
-    document.querySelectorAll('.search-highlight').forEach(el => el.classList.remove('search-highlight'));
-    searchMatches = [];
-    document.querySelectorAll('h2, h3, h4, p, .claim-header span, .lie-card h3, .timeline-content h3, .region-card h3, .intro-card p, .stat-label, li, .str-highlight').forEach(el => {
-        if (el.textContent.includes(query)) searchMatches.push(el);
-    });
-    if (searchMatches.length === 0) {
-        document.getElementById('siteSearch').style.borderColor = '#e74c3c';
-        setTimeout(() => document.getElementById('siteSearch').style.borderColor = '', 1500);
-        return;
-    }
-    searchIdx = (searchIdx + 1) % searchMatches.length;
-    const el = searchMatches[searchIdx];
-    el.classList.add('search-highlight');
-    const claim = el.closest('.claim-card');
-    if (claim && !claim.classList.contains('open')) claim.classList.add('open');
-    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    setTimeout(() => el.classList.remove('search-highlight'), 3000);
-}
 
 // Back to top button visibility
 window.addEventListener('scroll', function() {
