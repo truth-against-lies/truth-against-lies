@@ -236,6 +236,28 @@ a:focus-visible, button:focus-visible {
     * { box-shadow: none !important; text-shadow: none !important; }
 }
 
+/* === HERO META (last updated date) === */
+.hero-meta {
+    color: #888;
+    font-size: 0.8em;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* === COPY LINK BUTTON === */
+.copy-link-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.85em;
+    padding: 2px 6px;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    float: left;
+}
+.copy-link-btn:hover { opacity: 1; color: #e2b714; }
+
 /* === GOOGLE TRANSLATE HIDING === */
 #google_translate_element { position: absolute; top: -9999px; left: -9999px; visibility: hidden; }
 .goog-te-banner-frame { display: none !important; }

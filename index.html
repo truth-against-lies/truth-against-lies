@@ -315,6 +315,12 @@
             color: #111;
             margin: 0;
         }
+        .hero .hero-meta {
+            color: #888;
+            font-size: 0.8em;
+            margin-top: 10px;
+            opacity: 0.7;
+        }
         .hero-stats {
             display: flex;
             gap: 40px;
@@ -659,6 +665,18 @@
         .claim-card.open .claim-arrow {
             transform: rotate(180deg);
         }
+        .copy-link-btn {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 0.85em;
+            padding: 2px 6px;
+            opacity: 0.4;
+            transition: opacity 0.2s;
+            float: left;
+        }
+        .copy-link-btn:hover { opacity: 1; color: #e2b714; }
         .claim-body {
             display: none;
             padding: 0 25px 25px;
@@ -1527,6 +1545,7 @@
         <div style="margin-top: 20px;">
             <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')" style="font-size: 1em; padding: 10px 25px;">&#127760; Read in 75+ Languages / קראו ב-75+ שפות</button>
         </div>
+        <p class="hero-meta">עודכן לאחרונה: מרץ 2026</p>
     </div>
 </section>
 
@@ -1803,10 +1822,11 @@ function goOriginal() {
         </div>
         <div class="claims-list">
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-1" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"היהודים הרגו את ישו"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1821,10 +1841,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-2" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים הם ילדי השטן"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1839,10 +1860,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-3" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"עלילת דם: יהודים משתמשים בדם ילדים נוצרים בטקסים"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1857,10 +1879,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-4" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"חילול לחם הקודש: יהודים דוקרים רקיקי קומוניון"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1875,10 +1898,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-5" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים מרעילים בארות ומפיצים מגפות"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1893,10 +1917,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-6" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים קוללו לנדוד ללא מולדת"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1911,10 +1936,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-7" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"התלמוד מכיל תורות שנאה נגד גויים"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1941,10 +1967,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-8" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים הם גזע נפרד ונחות"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1959,10 +1986,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-9" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים נוטים גנטית לחמדנות ולמניפולציה"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1977,10 +2005,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-10" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים הם תת-אנושיים (אונטרמנשן)"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -1995,10 +2024,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-11" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים מקדמים ערבוב גזעי כדי להחליש גזעים אחרים"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2024,10 +2054,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-12" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים שולטים בבנקים ובמערכות הפיננסיות בעולם"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2042,10 +2073,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-13" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים חמדנים ואובססיביים לגבי כסף"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2061,10 +2093,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-14" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים גרמו למשבר הפיננסי של 2008"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2079,10 +2112,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-15" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים מנצלים גויים כלכלית ורואים בהם בהמות"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2110,10 +2144,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-16" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים שולטים בממשלות העולם בסתר (ZOG)"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2129,10 +2164,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-17" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים שולטים בתקשורת ומניפולים את דעת הקהל"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2148,10 +2184,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-18" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"ליהודים נאמנות כפולה &mdash; הם נאמנים לישראל, לא למדינתם"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2167,10 +2204,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-19" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"11 בספטמבר תוזמן על ידי ישראל/המוסד"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2186,10 +2224,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-20" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים יצרו את הקומוניזם כדי להרוס את הציביליזציה המערבית"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2216,10 +2255,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-21" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים שבטיים ומסרבים להתבולל"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2235,10 +2275,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-22" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים חושבים שהם 'העם הנבחר' ונעלים על כולם"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2254,10 +2295,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-23" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים שולטים בהוליווד ומשחיתים את המוסר"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2273,10 +2315,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-24" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים ניתנים לזיהוי פיזי לפי מראה חיצוני (אף מעוקל וכו')"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2303,10 +2346,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-25" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"ישראל היא מדינה נאצית / הציונות היא נאציזם"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2322,10 +2366,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-26" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"ליהודים לא מגיעה מדינה &mdash; לישראל אין זכות קיום"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2341,10 +2386,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-27" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"הלובי הישראלי (AIPAC) שולט במדיניות החוץ האמריקאית"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2371,10 +2417,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-28" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"השואה לא קרתה / 6 מיליון זו הגזמה"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2390,10 +2437,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-29" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים המציאו או הגזימו את השואה לרווח פוליטי וכספי"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2409,10 +2457,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-30" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"תאי הגזים לא היו קיימים / היו רק תאי חיטוי"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2439,10 +2488,11 @@ function goOriginal() {
             <div class="category-toggle">&#9660; לחצו לפתיחה</div>
         </div>
         <div class="claims-list">
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-31" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"סמלים מקודדים: סוגריים משולשים (((echoes))), 'early life section'"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2458,10 +2508,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-32" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים יצרו את הקורונה / הרוויחו מהמגפה / חיסונים כמזימה יהודית"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2477,10 +2528,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-33" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים עומדים מאחורי 'ההחלפה הגדולה' &mdash; תזמורים הגירה המונית"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -2496,10 +2548,11 @@ function goOriginal() {
                 </div>
             </div>
 
-            <div class="claim-card" onclick="toggleClaim(this)">
+            <div class="claim-card" id="claim-34" onclick="toggleClaim(this)">
                 <div class="claim-title">
                     <h4>"יהודים מנשקים טענות אנטישמיות כדי להשתיק ביקורת"</h4>
                     <span class="claim-arrow">&#9660;</span>
+                    <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
                 </div>
                 <div class="claim-body">
                     <div class="refutation">
@@ -4017,6 +4070,33 @@ function hideProtectedContent() {
 // Init auth state
 updateAuthUI();
 onAuthChange(function() { updateAuthUI(); });
+</script>
+
+<script>
+function copyCardLink(e, btn) {
+    e.stopPropagation();
+    var card = btn.closest('[id]');
+    var url = location.origin + location.pathname + '#' + card.id;
+    navigator.clipboard.writeText(url).then(function() {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '&#10003;';
+        setTimeout(function() { btn.innerHTML = '&#128279;'; }, 1500);
+    });
+}
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) {
+            setTimeout(function() {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (el.classList.contains('claim-card')) {
+                    var body = el.querySelector('.claim-body');
+                    if (body) body.style.display = 'block';
+                }
+            }, 500);
+        }
+    }
+})();
 </script>
 
 </body>

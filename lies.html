@@ -340,11 +340,13 @@
         <h2>עלילות ושקרים נפוצים</h2>
         <div class="section-divider"></div>
         <p>שקרים נפוצים נגד ישראל והעם היהודי &mdash; והעובדות שחושפות אותם</p>
+        <p class="hero-meta">עודכן לאחרונה: מרץ 2026</p>
     </div>
 
     <!-- LIE 1: GENOCIDE -->
-    <div class="lie-card fade-in" id="genocide">
+    <div class="lie-card fade-in" id="card-1">
         <h3>"ישראל ביצעה רצח עם בעזה"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
 
         <div class="lie-claim-box">
             <div class="lie-label">&#10060; מה הם טוענים:</div>
@@ -380,8 +382,9 @@
     </div>
 
     <!-- LIE 2: TRUMP & IRAN -->
-    <div class="lie-card fade-in" id="iran">
+    <div class="lie-card fade-in" id="card-2">
         <h3>"ישראל דחפה את טראמפ להילחם באיראן"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
 
         <div class="lie-claim-box">
             <div class="lie-label">&#10060; מה הם טוענים:</div>
@@ -417,8 +420,9 @@
     </div>
 
     <!-- LIE 3: APARTHEID -->
-    <div class="lie-card fade-in" id="apartheid">
+    <div class="lie-card fade-in" id="card-3">
         <h3>"ישראל היא מדינת אפרטהייד"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
 
         <div class="lie-claim-box">
             <div class="lie-label">&#10060; מה הם טוענים:</div>
@@ -464,8 +468,9 @@
     </div>
 
     <!-- LIE 4: MEDIA CONTROL -->
-    <div class="lie-card fade-in" id="media">
+    <div class="lie-card fade-in" id="card-4">
         <h3>"היהודים שולטים בתקשורת ובכלכלה העולמית"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
 
         <div class="lie-claim-box">
             <div class="lie-label">&#10060; מה הם טוענים:</div>
@@ -511,8 +516,9 @@
     </div>
 
     <!-- LIE 5: NO HISTORICAL CONNECTION -->
-    <div class="lie-card fade-in" id="history">
+    <div class="lie-card fade-in" id="card-5">
         <h3>"אין קשר היסטורי של היהודים לארץ ישראל"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
 
         <div class="lie-claim-box">
             <div class="lie-label">&#10060; מה הם טוענים:</div>
@@ -651,6 +657,29 @@ function shareLie(el, platform) {
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase-config.js"></script>
 <script>trackPageView('lies');</script>
+
+<script>
+function copyCardLink(e, btn) {
+    e.stopPropagation();
+    var card = btn.closest('[id]');
+    var url = location.origin + location.pathname + '#' + card.id;
+    navigator.clipboard.writeText(url).then(function() {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '&#10003;';
+        setTimeout(function() { btn.innerHTML = '&#128279;'; }, 1500);
+    });
+}
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) {
+            setTimeout(function() {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
+        }
+    }
+})();
+</script>
 
 </body>
 </html>
