@@ -496,6 +496,7 @@
                 <li><a href="action.html">מה אפשר לעשות?</a></li>
             </ul>
         </div>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש" title="חיפוש">&#128269;</button>
         <div class="nav-lang">
             <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
             <div class="nav-lang-menu">
@@ -1348,6 +1349,24 @@
 
 </main>
 
+<!-- Table of Contents -->
+<div class="toc-fab" id="tocFab">
+    <div class="toc-panel" id="tocPanel">
+        <div class="toc-title">תוכן עניינים</div>
+        <a class="toc-link" href="#background">רקע &mdash; עזה תחת חמאס</a>
+        <a class="toc-link" href="#conception">"התפיסה" &mdash; הכשל</a>
+        <a class="toc-link" href="#timeline-section">ציר זמן דקה-דקה</a>
+        <a class="toc-link" href="#communities">פירוט לפי יישוב</a>
+        <a class="toc-link" href="#casualties">סיכום נפגעים</a>
+        <a class="toc-link" href="#heroism">סיפורי גבורה</a>
+        <a class="toc-link" href="#hostages">משבר החטופים</a>
+        <a class="toc-link" href="#sexual-violence">אלימות מינית</a>
+        <a class="toc-link" href="#intelligence">כשלון מודיעין</a>
+        <a class="toc-link" href="#aftermath">תגובת העולם + מלחמה</a>
+    </div>
+    <button class="toc-fab-btn" aria-label="תוכן עניינים" onclick="document.getElementById('tocPanel').classList.toggle('open')">&#9776;</button>
+</div>
+
 <button class="back-to-top" aria-label="חזרה למעלה" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
 
 <!-- Floating Share Button -->
@@ -1417,6 +1436,81 @@ function copyCardLink(e, btn) {
     }
 })();
 </script>
+
+<!-- TOC Script -->
+<script>
+(function() {
+    var tocBtn = document.querySelector('.toc-fab-btn');
+    var tocPanel = document.getElementById('tocPanel');
+    var tocLinks = document.querySelectorAll('.toc-link');
+    var sections = [];
+
+    // Collect sections
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+    });
+
+    // Show/hide TOC button on scroll
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) tocBtn.classList.add('visible');
+        else {
+            tocBtn.classList.remove('visible');
+            tocPanel.classList.remove('open');
+        }
+    });
+
+    // Intersection Observer for active section
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                tocLinks.forEach(function(l) { l.classList.remove('active'); });
+                var activeLink = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
+                if (activeLink) activeLink.classList.add('active');
+            }
+        });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    sections.forEach(function(s) { observer.observe(s.el); });
+
+    // Close on link click
+    tocLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var id = this.getAttribute('href').substring(1);
+            var target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                setTimeout(function() { tocPanel.classList.remove('open'); }, 300);
+            }
+        });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.toc-fab')) {
+            tocPanel.classList.remove('open');
+        }
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') tocPanel.classList.remove('open');
+    });
+})();
+</script>
+
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>

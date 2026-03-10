@@ -234,6 +234,7 @@
                 <li><a href="action.html">מה אפשר לעשות?</a></li>
             </ul>
         </div>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש" title="חיפוש">&#128269;</button>
         <div class="nav-lang">
             <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760; שפה</button>
             <div class="nav-lang-menu">
@@ -999,6 +1000,18 @@ function copyCardLink(e, btn) {
     }
 })();
 </script>
+
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+
+<script src="search-index.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>

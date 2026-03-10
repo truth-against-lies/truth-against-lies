@@ -1392,6 +1392,7 @@
         </div>
         <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
         <button id="authBtn" class="nav-auth-btn" onclick="toggleAuthModal()">&#128100; הרשמה</button>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש" title="חיפוש">&#128269;</button>
         <div class="lang-dropdown">
             <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')">&#127760; <span class="lang-toggle-text">שפה / Language</span></button>
         </div>
@@ -3347,6 +3348,17 @@ function copyCardLink(e, btn) {
     }
 })();
 </script>
+
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
 
 </body>
 </html>
