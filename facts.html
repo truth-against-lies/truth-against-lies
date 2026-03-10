@@ -22,16 +22,6 @@
     <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
     <link rel="stylesheet" href="shared.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: #0a0a1a;
-            color: #e0e0e0;
-            line-height: 1.7;
-            scroll-behavior: smooth;
-        }
-
         /* === HERO === */
         .facts-hero {
             text-align: center;
@@ -134,39 +124,6 @@
         .category-card.west { border-right: 4px solid #448aff; }
         .category-card.myths { border-right: 4px solid #2ecc71; }
         .category-card.netanyahu { border-right: 4px solid transparent; border-image: linear-gradient(to bottom, #2ecc71, #e74c3c) 1; }
-
-        /* === GENERAL === */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(226, 183, 20, 0.2);
-            margin-top: 80px;
-            color: #666;
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 50px;
-            height: 50px;
-            background: #e2b714;
-            color: #0a0a1a;
-            border: none;
-            border-radius: 50%;
-            font-size: 1.5em;
-            cursor: pointer;
-            display: none;
-            z-index: 999;
-            transition: opacity 0.3s;
-            box-shadow: 0 4px 15px rgba(226, 183, 20, 0.3);
-        }
-        .back-to-top.visible { display: block; }
 
         @media (max-width: 768px) {
             .facts-hero h1 { font-size: 2em; }
