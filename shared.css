@@ -110,8 +110,9 @@ nav {
     .nav-lang-btn { width: 34px; height: 34px; font-size: 0.85em; padding: 0; }
 }
 /* Tame Google Translate injected elements */
-.goog-te-banner-frame { display: none !important; }
-body { top: 0 !important; }
+.goog-te-banner-frame { display: none !important; height: 0 !important; }
+.skiptranslate { display: none !important; height: 0 !important; }
+body { top: 0 !important; position: static !important; }
 
 /* === LANGUAGE PICKER === */
 .nav-lang {

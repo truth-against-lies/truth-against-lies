@@ -74,13 +74,21 @@ function googleTranslateElementInit() {
 }
 (function(){
     var lang = localStorage.getItem('siteLang');
-    if (lang && lang !== 'he') {
-        document.cookie = 'googtrans=/he/' + lang + ';path=/';
-        document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
+    // If no language explicitly selected, clean up any stale GT cookies
+    if (!lang || lang === 'he') {
+        document.cookie = 'googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        document.cookie = 'googtrans=;path=/;domain=.github.io;expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        // Force reset body position in case GT pushed it down
+        document.body.style.top = '0';
+        document.body.style.position = '';
+        // Remove any GT banner frames
+        var gtFrame = document.querySelector('.goog-te-banner-frame');
+        if (gtFrame) gtFrame.remove();
+        return;
     }
-    // Only load Google Translate when a non-Hebrew language is selected
-    var hasGT = document.cookie.indexOf('googtrans=') !== -1 && document.cookie.indexOf('googtrans=;') === -1;
-    if (hasGT && !document.getElementById('gt-script')) {
+    document.cookie = 'googtrans=/he/' + lang + ';path=/';
+    document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
+    if (!document.getElementById('gt-script')) {
         var s = document.createElement('script');
         s.id = 'gt-script';
         s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
