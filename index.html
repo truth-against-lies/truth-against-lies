@@ -6,7 +6,6 @@
     <title>האמת נגד השקר - מאבק באנטישמיות</title>
     <meta name="description" content="חושפים את השקרים, מציגים את העובדות. 34 עלילות אנטישמיות מופרכות בעזרת עובדות, מדע והיסטוריה.">
     <meta name="theme-color" content="#0a0a1a">
-    <meta name="google" content="notranslate">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -767,22 +766,16 @@
 
         /* === MOBILE === */
         @media (max-width: 768px) {
-            nav { padding: 0 8px; }
-            .nav-inner { gap: 5px; overflow: hidden; }
-            .nav-logo { font-size: 0.95em; }
-            .nav-donate { display: none; }
-            .nav-auth-btn { font-size: 0.75em; padding: 4px 8px; }
-            .nav-search-btn .search-label { display: none; }
+            nav { padding: 0 12px; }
+            .nav-inner { gap: 8px; }
+            .nav-logo { font-size: 1.05em; }
+            .nav-donate, .nav-auth-btn { font-size: 0.8em; padding: 5px 10px; }
             .lang-toggle-text { display: none; }
-            .lang-toggle { padding: 4px 6px; font-size: 0.9em; }
-            /* Hero mobile fix — visible text, shorter height */
-            .hero { min-height: auto; padding: 80px 20px 30px; }
-            .hero::before { background-size: 120px 120px, auto; background-position: center 20%, center center; }
-            .hero::after { background: linear-gradient(180deg, rgba(10,10,26,0.3) 0%, rgba(10,10,26,0.85) 60%, rgba(10,10,26,1) 100%); }
-            .hero h1 { font-size: 2.2em; color: #e2b714; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
-            .hero h1 span { color: #e2b714 !important; }
-            .hero .subtitle { font-size: 1.1em; color: #ff6b6b; margin-bottom: 20px; }
-            .hero .subtitle-en { font-size: 0.95em; color: #c0c0c0; }
+            .lang-toggle { padding: 6px 10px; }
+            .hero h1 { font-size: 2.2em; }
+            .hero .subtitle { font-size: 1.1em; margin-bottom: 120px; }
+            .hero .subtitle-en { font-size: 0.95em; }
+            .hero::before { background-size: 120px 120px, auto; background-position: center 30%, center center; }
             .hero-stats { gap: 15px; margin-top: 5px; }
             .stat-number { font-size: 1.8em; }
             .timeline::before { right: 20px; }
@@ -800,15 +793,14 @@
         }
         #google_translate_element {
             position: absolute;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
+            top: -9999px;
+            left: -9999px;
             visibility: hidden;
         }
-        /* Hide Google Translate toolbar — ONLY banner iframe, never page content */
+        /* Hide Google Translate toolbar completely */
         .goog-te-banner-frame { display: none !important; }
-        body { top: 0 !important; position: static !important; overflow-x: hidden !important; }
+        .skiptranslate { display: none !important; }
+        body { top: 0 !important; position: static !important; }
         .goog-te-gadget { display: none !important; }
 
         /* === FOCUS STATES === */

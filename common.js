@@ -74,25 +74,10 @@ function googleTranslateElementInit() {
 }
 (function(){
     var lang = localStorage.getItem('siteLang');
-    // If no language explicitly selected, clean up any stale GT state
-    if (!lang || lang === 'he') {
-        document.cookie = 'googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        document.cookie = 'googtrans=;path=/;domain=.github.io;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        document.cookie = 'googtrans=;path=/;domain=' + location.hostname + ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        // Remove GT classes from html element
-        var html = document.documentElement;
-        html.classList.remove('translated-ltr', 'translated-rtl');
-        html.removeAttribute('class');
-        html.setAttribute('lang', 'he');
-        html.setAttribute('dir', 'rtl');
-        // Force reset body
-        document.body.style.top = '';
-        // Remove GT injected elements — never remove .skiptranslate (Chrome wraps content in it)
-        document.querySelectorAll('.goog-te-banner-frame, iframe[id^="goog"]').forEach(function(el) { el.remove(); });
-        return;
+    if (lang && lang !== 'he') {
+        document.cookie = 'googtrans=/he/' + lang + ';path=/';
+        document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
     }
-    document.cookie = 'googtrans=/he/' + lang + ';path=/';
-    document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
     if (!document.getElementById('gt-script')) {
         var s = document.createElement('script');
         s.id = 'gt-script';
