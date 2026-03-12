@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v12';
+var CACHE_NAME = 'tal-v13';
 var ASSETS = [
     './',
     'index.html',
@@ -24,6 +24,7 @@ var ASSETS = [
     'glossary.html',
     'statistics.html',
     'holocaust-denial.html',
+    'unity.html',
     'shared.css',
     'common.js',
     'search.js',
