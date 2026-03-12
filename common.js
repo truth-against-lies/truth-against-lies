@@ -74,16 +74,21 @@ function googleTranslateElementInit() {
 }
 (function(){
     var lang = localStorage.getItem('siteLang');
-    // If no language explicitly selected, clean up any stale GT cookies
+    // If no language explicitly selected, clean up any stale GT state
     if (!lang || lang === 'he') {
         document.cookie = 'googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT';
         document.cookie = 'googtrans=;path=/;domain=.github.io;expires=Thu, 01 Jan 1970 00:00:00 GMT';
-        // Force reset body position in case GT pushed it down
-        document.body.style.top = '0';
-        document.body.style.position = '';
-        // Remove any GT banner frames
-        var gtFrame = document.querySelector('.goog-te-banner-frame');
-        if (gtFrame) gtFrame.remove();
+        document.cookie = 'googtrans=;path=/;domain=' + location.hostname + ';expires=Thu, 01 Jan 1970 00:00:00 GMT';
+        // Remove GT classes from html element
+        var html = document.documentElement;
+        html.classList.remove('translated-ltr', 'translated-rtl');
+        html.removeAttribute('class');
+        html.setAttribute('lang', 'he');
+        html.setAttribute('dir', 'rtl');
+        // Force reset body
+        document.body.style.top = '';
+        // Remove GT injected elements
+        document.querySelectorAll('.goog-te-banner-frame, .skiptranslate, iframe[id^="goog"]').forEach(function(el) { el.remove(); });
         return;
     }
     document.cookie = 'googtrans=/he/' + lang + ';path=/';
