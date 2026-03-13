@@ -525,6 +525,7 @@ body.light-mode .nav-settings-menu button:hover { color: #b48c0a; }
 .mobile-nav {
     display: none;
     position: fixed;
+    top: auto;
     bottom: 0;
     left: 0;
     right: 0;
