@@ -388,6 +388,39 @@
             line-height: 1.8;
         }
         .welcome-note .note-sign { color: #e2b714; font-weight: bold; margin-top: 12px; }
+
+        /* Trust Box */
+        .trust-box {
+            background: rgba(226, 183, 20, 0.06);
+            border: 1px solid rgba(226, 183, 20, 0.3);
+            border-radius: 8px;
+            padding: 25px 28px;
+            margin: 25px 0;
+        }
+        .trust-box h3 {
+            color: #e2b714;
+            font-size: 1.2em;
+            margin-bottom: 18px;
+            text-align: center;
+        }
+        .trust-points { display: flex; flex-direction: column; gap: 16px; }
+        .trust-point {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .trust-icon {
+            font-size: 1.4em;
+            min-width: 30px;
+            text-align: center;
+            padding-top: 2px;
+        }
+        .trust-point strong { color: #e2b714; display: block; margin-bottom: 4px; }
+        .trust-point p { color: #bbb; font-size: 0.93em; line-height: 1.7; margin: 0; }
+        @media (max-width: 768px) {
+            .trust-box { padding: 20px 16px; }
+        }
+
         .welcome-start {
             text-align: center;
             margin-top: 30px;
@@ -1530,6 +1563,40 @@ function goOriginal() {
         <p><strong>האתר הזה לא נבנה מתוך שנאה.</strong> הוא נבנה מתוך אהבה לעם שלנו, ומתוך סירוב לקבל שקרים בשקט. הוא נבנה כי יש דברים שכל יהודי חייב לדעת &mdash; על ההיסטוריה שלנו, על האויבים שלנו, על הכוח שלנו, ועל האמת שמנסים למחוק.</p>
         <p>חלק מהתוכן כאן <strong>קשה.</strong> הוא מדבר על טבחות, על שואה, על 7 באוקטובר, על שנאה שלא נגמרת. זה מכוון. <strong>כי האמת קשה &mdash; אבל בורות קשה יותר.</strong></p>
         <p>אבל האתר הזה הוא הרבה יותר מתיעוד כאב. הוא גם מדבר על <strong>גבורה, תרומה עצומה לאנושות, אחדות, ושרידות של 3,500 שנה</strong> שאף עם אחר בהיסטוריה לא חווה.</p>
+    </div>
+
+    <div class="trust-box">
+        <h3>&#128270; איך אנחנו יודעים שזה אמת?</h3>
+        <div class="trust-points">
+            <div class="trust-point">
+                <span class="trust-icon">&#9989;</span>
+                <div>
+                    <strong>אימות צולב</strong>
+                    <p>כל עובדה באתר עברה בדיקה מול מספר מקורות עצמאיים: מחקרים אקדמיים, מסמכים רשמיים, ארגונים בינלאומיים ומקורות היסטוריים מוכחים.</p>
+                </div>
+            </div>
+            <div class="trust-point">
+                <span class="trust-icon">&#128722;</span>
+                <div>
+                    <strong>בלי פרופגנדה</strong>
+                    <p>האתר לא שייך לממשלה, ארגון או מפלגה. אין כאן אג&rsquo;נדה פוליטית &mdash; יש עובדות מתועדות. דעה מוצגת כדעה, עובדה מוצגת עם מקור.</p>
+                </div>
+            </div>
+            <div class="trust-point">
+                <span class="trust-icon">&#128250;</span>
+                <div>
+                    <strong>למה לא סתם יוטיוב?</strong>
+                    <p>ביוטיוב ובתקשורת, אלגוריתם מחליט מה תראו &mdash; לפי צפיות, לא לפי אמת. כאן המידע מסודר, מאומת, ולא תלוי בכמה לייקים הוא קיבל.</p>
+                </div>
+            </div>
+            <div class="trust-point">
+                <span class="trust-icon">&#128170;</span>
+                <div>
+                    <strong>המטרה</strong>
+                    <p>לחזק את העם היהודי באמת מבוססת. לתת כלים לכל מי שרוצה לדעת מה באמת קורה &mdash; מעבר לכותרות ולסיסמאות.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div style="text-align: center; margin-bottom: 10px;">
