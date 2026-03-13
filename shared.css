@@ -103,7 +103,8 @@ nav {
     nav { padding: 0 12px; }
     .nav-inner { gap: 6px; }
     .nav-logo { font-size: 1.05em; }
-    .nav-donate { font-size: 0.8em; padding: 5px 10px; }
+    .nav-donate { display: none; }
+    .lang-dropdown { display: none; }
 }
 
 /* === LANGUAGE PICKER === */
