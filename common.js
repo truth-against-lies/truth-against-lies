@@ -77,12 +77,12 @@ function googleTranslateElementInit() {
     if (lang && lang !== 'he') {
         document.cookie = 'googtrans=/he/' + lang + ';path=/';
         document.cookie = 'googtrans=/he/' + lang + ';path=/;domain=.github.io';
-    }
-    if (!document.getElementById('gt-script')) {
-        var s = document.createElement('script');
-        s.id = 'gt-script';
-        s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        document.body.appendChild(s);
+        if (!document.getElementById('gt-script')) {
+            var s = document.createElement('script');
+            s.id = 'gt-script';
+            s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(s);
+        }
     }
 })();
 
