@@ -235,16 +235,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background:
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%230038b8' stroke-width='3'%3E%3Cpolygon points='50,10 84.6,70 15.4,70'/%3E%3Cpolygon points='50,90 15.4,30 84.6,30'/%3E%3C/g%3E%3C/svg%3E") center 33% / 200px 200px no-repeat,
-                linear-gradient(180deg,
-                    #ffffff 0%, #ffffff 7%,
-                    #0038b8 7%, #0038b8 18%,
-                    #ffffff 18%, #ffffff 52%,
-                    #0038b8 52%, #0038b8 63%,
-                    #ffffff 63%, #ffffff 70%,
-                    #0a0a1a 100%
-                );
+            background: url('israel-flag.webp') center 30% / cover no-repeat;
             z-index: 0;
         }
         .hero::after {
@@ -252,13 +243,13 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background:
-                radial-gradient(circle at 50% 30%, rgba(226, 183, 20, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 50% 30%, rgba(0, 56, 184, 0.08) 0%, transparent 50%),
                 linear-gradient(180deg,
-                    rgba(10, 10, 26, 0.08) 0%,
-                    rgba(10, 10, 26, 0.12) 20%,
-                    rgba(10, 10, 26, 0.25) 40%,
-                    rgba(10, 10, 26, 0.5) 58%,
-                    rgba(10, 10, 26, 0.8) 73%,
+                    rgba(10, 10, 26, 0.3) 0%,
+                    rgba(10, 10, 26, 0.25) 20%,
+                    rgba(10, 10, 26, 0.35) 40%,
+                    rgba(10, 10, 26, 0.6) 58%,
+                    rgba(10, 10, 26, 0.85) 73%,
                     rgba(10, 10, 26, 1) 88%
                 );
             z-index: 1;
@@ -266,20 +257,22 @@
         .hero-content { position: relative; z-index: 2; }
         .hero h1 {
             font-size: 3.5em;
-            color: #0d2d6b;
+            color: #ffffff;
             margin: 0;
-            text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
         .hero .subtitle {
             font-size: 1.4em;
-            color: #cc0000;
+            color: #e2b714;
             font-weight: bold;
             margin: 0 0 230px 0;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
         .hero .subtitle-en {
             font-size: 1.1em;
-            color: #111;
+            color: rgba(255, 255, 255, 0.9);
             margin: 0;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
         .hero .hero-meta {
             color: #888;
@@ -808,7 +801,7 @@
             .hero h1 { font-size: 2.2em; }
             .hero .subtitle { font-size: 1.1em; margin-bottom: 120px; }
             .hero .subtitle-en { font-size: 0.95em; }
-            .hero::before { background-size: 120px 120px, auto; background-position: center 30%, center center; }
+            .hero::before { background-position: center 20%; }
             .hero-stats { gap: 15px; margin-top: 5px; }
             .stat-number { font-size: 1.8em; }
             .timeline::before { right: 20px; }
@@ -1458,7 +1451,7 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h1><span style="color:#111">האמת</span> נגד <span style="color:#cc0000">השקר</span></h1>
+        <h1>האמת נגד <span style="color:#cc0000">השקר</span></h1>
         <p class="subtitle">חושפים את השקרים, מציגים את העובדות</p>
         <p class="subtitle-en">The Truth Against The Lie &mdash; Fighting Antisemitism</p>
 

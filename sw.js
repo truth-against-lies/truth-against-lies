@@ -1,7 +1,8 @@
-var CACHE_NAME = 'tal-v26';
+var CACHE_NAME = 'tal-v27';
 var ASSETS = [
     './',
     'index.html',
+    'israel-flag.webp',
     'lies.html',
     'october7.html',
     'antisemitism.html',
