@@ -236,7 +236,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: url('israel-flag.webp') center 30% / cover no-repeat;
+            background: url('israel-flag.webp?v=2') center 36% / cover no-repeat;
             z-index: 0;
         }
         .hero::after {
@@ -246,12 +246,12 @@
             background:
                 radial-gradient(circle at 50% 30%, rgba(0, 56, 184, 0.08) 0%, transparent 50%),
                 linear-gradient(180deg,
-                    rgba(10, 10, 26, 0.3) 0%,
-                    rgba(10, 10, 26, 0.25) 20%,
-                    rgba(10, 10, 26, 0.35) 40%,
-                    rgba(10, 10, 26, 0.6) 58%,
-                    rgba(10, 10, 26, 0.85) 73%,
-                    rgba(10, 10, 26, 1) 88%
+                    rgba(10, 10, 26, 0.2) 0%,
+                    rgba(10, 10, 26, 0.15) 20%,
+                    rgba(10, 10, 26, 0.25) 40%,
+                    rgba(10, 10, 26, 0.45) 60%,
+                    rgba(10, 10, 26, 0.7) 78%,
+                    rgba(10, 10, 26, 1) 92%
                 );
             z-index: 1;
         }
@@ -282,22 +282,26 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
         }
         .hero-stats {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
-            gap: 40px;
-            margin: 10px 0 40px;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            z-index: 3;
+            padding-right: 10px;
         }
         .stat {
-            text-align: center;
+            text-align: right;
         }
         .stat-number {
-            font-size: 2.5em;
+            font-size: 1.4em;
             font-weight: bold;
             color: #e2b714;
         }
         .stat-label {
-            font-size: 0.9em;
+            font-size: 0.7em;
             color: #ccc;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
         }
@@ -1454,39 +1458,29 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h1>האמת נגד <span style="color:#cc0000">השקר</span></h1>
-        <p class="subtitle">חושפים את השקרים, מציגים את העובדות</p>
-        <p class="subtitle-en">The Truth Against The Lie &mdash; Fighting Antisemitism</p>
-
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number">34</div>
-                <div class="stat-label">עלילות מופרכות</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">2,500+</div>
-                <div class="stat-label">שנות תיעוד</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">8</div>
-                <div class="stat-label">קטגוריות</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">7</div>
-                <div class="stat-label">עמים וחברות</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">מקורות אקדמיים</div>
-            </div>
+        <h1><span style="color:#0038b8">האמת</span> נגד <span style="color:#cc0000">השקר</span></h1>
+    </div>
+    <div class="hero-stats">
+        <div class="stat">
+            <div class="stat-number">34</div>
+            <div class="stat-label">עלילות מופרכות</div>
         </div>
-
-        <a href="#welcome" class="hero-cta">גלו את האמת &#x2193;</a>
-
-        <div style="margin-top: 20px;">
-            <button class="lang-toggle" onclick="document.getElementById('langMenu').classList.add('open')" style="font-size: 1em; padding: 10px 25px;">&#127760; Read in 75+ Languages / קראו ב-75+ שפות</button>
+        <div class="stat">
+            <div class="stat-number">2,500+</div>
+            <div class="stat-label">שנות תיעוד</div>
         </div>
-        <p class="hero-meta">עודכן לאחרונה: מרץ 2026</p>
+        <div class="stat">
+            <div class="stat-number">8</div>
+            <div class="stat-label">קטגוריות</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">7</div>
+            <div class="stat-label">עמים וחברות</div>
+        </div>
+        <div class="stat">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">מקורות אקדמיים</div>
+        </div>
     </div>
 </section>
 
@@ -1545,6 +1539,12 @@ function goOriginal() {
 </script>
 
 <main id="main-content">
+
+<div style="text-align: center; padding: 40px 20px 30px; max-width: 700px; margin: 0 auto;">
+    <p style="font-size: 1.4em; color: #e2b714; font-weight: bold; margin-bottom: 10px;">חושפים את השקרים, מציגים את העובדות</p>
+    <p style="font-size: 1em; color: #aaa;">The Truth Against The Lie &mdash; Fighting Antisemitism</p>
+    <a href="lies.html" class="hero-cta" style="margin-top: 20px;">גלו את האמת</a>
+</div>
 
 <!-- WELCOME SECTION -->
 <section class="welcome-section" id="welcome">
