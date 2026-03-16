@@ -247,7 +247,7 @@ a:focus-visible, button:focus-visible {
 .copy-link-btn {
     background: none;
     border: none;
-    color: #666;
+    color: #999;
     cursor: pointer;
     font-size: 0.85em;
     padding: 2px 6px;
@@ -439,7 +439,7 @@ body.light-mode .nav-settings-menu button:hover { color: #b48c0a; }
     direction: rtl;
 }
 .search-input:focus { border-color: #e2b714; }
-.search-input::placeholder { color: #555; }
+.search-input::placeholder { color: #999; }
 .search-close {
     position: absolute;
     top: 20px;
@@ -470,7 +470,7 @@ body.light-mode .nav-settings-menu button:hover { color: #b48c0a; }
 .search-result-text { color: #999; font-size: 0.85em; line-height: 1.5; }
 .search-result-text mark { background: rgba(226, 183, 20, 0.3); color: #e2b714; padding: 1px 3px; border-radius: 2px; }
 .search-no-results { color: #888; text-align: center; padding: 40px; font-size: 1.1em; }
-.search-count { color: #666; font-size: 0.85em; text-align: center; margin: 10px 0; }
+.search-count { color: #999; font-size: 0.85em; text-align: center; margin: 10px 0; }
 @media (max-width: 768px) {
     .search-overlay { padding: 60px 12px 12px; }
     .search-input { font-size: 1em; padding: 12px 15px; }
@@ -606,7 +606,7 @@ footer {
     padding: 40px 20px;
     border-top: 1px solid rgba(226, 183, 20, 0.2);
     margin-top: 80px;
-    color: #666;
+    color: #999;
 }
 
 /* === BACK-TO-TOP === */
@@ -718,7 +718,7 @@ footer {
 }
 .lie-sources {
     font-size: 0.8em;
-    color: #666;
+    color: #999;
     font-style: italic;
     margin-top: 15px;
     line-height: 1.6;
@@ -820,7 +820,7 @@ footer {
     padding: 40px 20px;
     border-top: 1px solid rgba(226, 183, 20, 0.2);
     margin-top: 60px;
-    color: #666;
+    color: #999;
 }
 .page-footer a {
     color: #e2b714;
