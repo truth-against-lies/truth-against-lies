@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v45';
+var CACHE_NAME = 'tal-v46';
 var ASSETS = [
     './',
     'index.html',
@@ -31,6 +31,7 @@ var ASSETS = [
     'left-narrative.html',
     'daat-dat.html',
     'sword-prayer.html',
+    'the-schism.html',
     'shared.css',
     'common.js',
     'search.js',
