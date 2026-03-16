@@ -152,14 +152,26 @@
         <div class="nav-menu-wrapper">
             <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="antisemitism.html">מה זה אנטישמיות?</a></li>
-                <li><a href="antisemitism.html#claims">עלילות והפרכות</a></li>
-                <li><a href="lies.html" style="color:#e2b714;">שקרים נפוצים</a></li>
-                <li><a href="index.html#timeline">ציר זמן</a></li>
-                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li class="has-submenu">
+                    <a href="antisemitism.html">אנטישמיות</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism.html">🔍 מה זה אנטישמיות?</a></li>
+                        <li><a href="antisemitism.html#claims">📋 עלילות והפרכות</a></li>
+                        <li><a href="holocaust-denial.html">🕯 הכחשת השואה</a></li>
+                        <li><a href="statistics.html">📊 נתוני אנטישמיות</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="#timeline">ציר זמן</a></li>
+                <li><a href="#psychology">הפסיכולוגיה</a></li>
                 <li><a href="regions.html">שנאה לפי עמים</a></li>
-                <li><a href="gallery.html">תיעוד היסטורי</a></li>
-                <li><a href="videos.html">צפה והתעדכן</a></li>
+                <li class="has-submenu">
+                    <a href="gallery.html">מדיה</a>
+                    <ul class="submenu">
+                        <li><a href="gallery.html">🖼 תיעוד היסטורי</a></li>
+                        <li><a href="videos.html">📹 צפה והתעדכן</a></li>
+                    </ul>
+                </li>
                 <li><a href="october7.html">7 באוקטובר</a></li>
                 <li class="has-submenu">
                     <a href="facts.html">עובדות שלא מספרים לך</a>
@@ -177,18 +189,20 @@
                         <li><a href="facts-netanyahu.html">⚖ הפרדוקס של נתניהו</a></li>
                     </ul>
                 </li>
-                <li><a href="unity.html">חיזוק העם היהודי</a></li>
-                <li><a href="mind.html">חיזוק המוח</a></li>
-                <li><a href="left-narrative.html">הנרטיב של השמאל</a></li>
-                <li><a href="daat-dat.html">דעת vs דת</a></li>
-                <li><a href="sword-prayer.html">חרב ותפילה</a></li>
-                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
-                <li><a href="holocaust-denial.html">הכחשת השואה</a></li>
-                <li><a href="statistics.html">נתוני אנטישמיות</a></li>
+                <li class="has-submenu">
+                    <a href="unity.html">חיזוק ומחשבה</a>
+                    <ul class="submenu">
+                        <li><a href="unity.html">💪 חיזוק העם היהודי</a></li>
+                        <li><a href="mind.html">🧠 חיזוק המוח</a></li>
+                        <li><a href="left-narrative.html">📰 הנרטיב של השמאל</a></li>
+                        <li><a href="daat-dat.html">⚖ דעת vs דת</a></li>
+                        <li><a href="sword-prayer.html">⚔ חרב ותפילה</a></li>
+                    </ul>
+                </li>
+                <li><a href="#report">דווח על אנטישמיות</a></li>
                 <li><a href="glossary.html">מילון מונחים</a></li>
                 <li><a href="action.html">מה אפשר לעשות?</a></li>
-            </ul>
-        </div>
+            </ul></div>
         <a href="index.html" class="nav-logo">האמת נגד השקר</a>
         <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
         <div class="nav-lang">

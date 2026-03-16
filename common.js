@@ -26,52 +26,61 @@ document.addEventListener('click', function(e) {
 
 // ========== SUBMENU: FLYOUT (DESKTOP) + ACCORDION (MOBILE) ==========
 (function() {
-    var parent = document.querySelector('.has-submenu');
-    if (!parent) return;
-    var submenu = parent.querySelector('.submenu');
-    if (!submenu) return;
-    var link = parent.querySelector('a');
-    var hideTimer = null;
+    var parents = document.querySelectorAll('.has-submenu');
+    if (!parents.length) return;
+    var flyouts = [];
 
-    // Move submenu to body so backdrop-filter on nav/nav-links doesn't trap it
-    var flyout = submenu.cloneNode(true);
-    flyout.classList.add('submenu-flyout');
-    document.body.appendChild(flyout);
-
-    function showFlyout() {
-        if (window.innerWidth <= 768) return;
-        clearTimeout(hideTimer);
-        var navLinks = document.querySelector('.nav-links');
-        var navRect = navLinks.getBoundingClientRect();
-        var itemRect = parent.getBoundingClientRect();
-        flyout.style.top = itemRect.top + 'px';
-        flyout.style.right = (window.innerWidth - navRect.left) + 'px';
-        flyout.classList.add('visible');
-        // keep inside viewport vertically
-        var fRect = flyout.getBoundingClientRect();
-        if (fRect.bottom > window.innerHeight) {
-            flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
-        }
+    function hideAll() {
+        flyouts.forEach(function(f) { f.el.classList.remove('visible'); });
     }
-    function startHide() {
-        if (window.innerWidth <= 768) return;
-        hideTimer = setTimeout(function() { flyout.classList.remove('visible'); }, 200);
-    }
-    function cancelHide() { clearTimeout(hideTimer); }
 
-    parent.addEventListener('mouseenter', showFlyout);
-    parent.addEventListener('mouseleave', startHide);
-    flyout.addEventListener('mouseenter', cancelHide);
-    flyout.addEventListener('mouseleave', startHide);
+    parents.forEach(function(parent) {
+        var submenu = parent.querySelector('.submenu');
+        if (!submenu) return;
+        var link = parent.querySelector('a');
+        var hideTimer = null;
 
-    // Mobile: click toggles accordion (uses original submenu inside nav)
-    link.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768) {
-            if (!parent.classList.contains('open')) {
-                e.preventDefault();
-                parent.classList.toggle('open');
+        // Clone submenu to body to escape backdrop-filter stacking context
+        var flyout = submenu.cloneNode(true);
+        flyout.classList.add('submenu-flyout');
+        document.body.appendChild(flyout);
+        flyouts.push({ el: flyout, parent: parent });
+
+        function showFlyout() {
+            if (window.innerWidth <= 768) return;
+            clearTimeout(hideTimer);
+            hideAll();
+            var navLinks = document.querySelector('.nav-links');
+            var navRect = navLinks.getBoundingClientRect();
+            var itemRect = parent.getBoundingClientRect();
+            flyout.style.top = itemRect.top + 'px';
+            flyout.style.right = (window.innerWidth - navRect.left) + 'px';
+            flyout.classList.add('visible');
+            var fRect = flyout.getBoundingClientRect();
+            if (fRect.bottom > window.innerHeight) {
+                flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
             }
         }
+        function startHide() {
+            if (window.innerWidth <= 768) return;
+            hideTimer = setTimeout(function() { flyout.classList.remove('visible'); }, 200);
+        }
+        function cancelHide() { clearTimeout(hideTimer); }
+
+        parent.addEventListener('mouseenter', showFlyout);
+        parent.addEventListener('mouseleave', startHide);
+        flyout.addEventListener('mouseenter', cancelHide);
+        flyout.addEventListener('mouseleave', startHide);
+
+        // Mobile: click toggles accordion
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                if (!parent.classList.contains('open')) {
+                    e.preventDefault();
+                    parent.classList.toggle('open');
+                }
+            }
+        });
     });
 })();
 
