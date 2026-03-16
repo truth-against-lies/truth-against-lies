@@ -24,19 +24,49 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ========== SUBMENU MOBILE TOGGLE ==========
+// ========== SUBMENU: FLYOUT (DESKTOP) + ACCORDION (MOBILE) ==========
 (function() {
-    var submenus = document.querySelectorAll('.has-submenu > a');
-    submenus.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                var parent = this.parentElement;
-                if (!parent.classList.contains('open')) {
-                    e.preventDefault();
-                    parent.classList.toggle('open');
-                }
+    var parent = document.querySelector('.has-submenu');
+    if (!parent) return;
+    var submenu = parent.querySelector('.submenu');
+    if (!submenu) return;
+    var link = parent.querySelector('a');
+    var hideTimer = null;
+
+    function showFlyout() {
+        if (window.innerWidth <= 768) return;
+        clearTimeout(hideTimer);
+        var navLinks = document.querySelector('.nav-links');
+        var navRect = navLinks.getBoundingClientRect();
+        var itemRect = parent.getBoundingClientRect();
+        submenu.style.top = itemRect.top + 'px';
+        submenu.style.right = (window.innerWidth - navRect.left) + 'px';
+        submenu.classList.add('visible');
+        // keep inside viewport vertically
+        var subRect = submenu.getBoundingClientRect();
+        if (subRect.bottom > window.innerHeight) {
+            submenu.style.top = Math.max(0, window.innerHeight - subRect.height) + 'px';
+        }
+    }
+    function startHide() {
+        if (window.innerWidth <= 768) return;
+        hideTimer = setTimeout(function() { submenu.classList.remove('visible'); }, 200);
+    }
+    function cancelHide() { clearTimeout(hideTimer); }
+
+    parent.addEventListener('mouseenter', showFlyout);
+    parent.addEventListener('mouseleave', startHide);
+    submenu.addEventListener('mouseenter', cancelHide);
+    submenu.addEventListener('mouseleave', startHide);
+
+    // Mobile: click toggles accordion
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            if (!parent.classList.contains('open')) {
+                e.preventDefault();
+                parent.classList.toggle('open');
             }
-        });
+        }
     });
 })();
 

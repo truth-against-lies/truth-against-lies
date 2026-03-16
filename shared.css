@@ -87,31 +87,50 @@ nav {
 .nav-links li:last-child a { border-bottom: none; }
 .nav-links li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
 
-/* === SUBMENU ACCORDION (always inline — nav is always hamburger) === */
-.has-submenu > a::after { content: ' ▾'; font-size: 0.7em; opacity: 0.5; }
+/* === SUBMENU FLYOUT (desktop: fixed left of nav, mobile: accordion) === */
+.has-submenu > a::after { content: ' ◂'; font-size: 0.7em; opacity: 0.5; }
 .submenu {
     display: none;
+    position: fixed;
     list-style: none;
-    background: rgba(226, 183, 20, 0.05);
-    border-right: 2px solid rgba(226, 183, 20, 0.3);
-    margin-right: 10px;
-    padding: 4px 0;
+    background: rgba(10, 10, 26, 0.98);
+    border: 1px solid rgba(226, 183, 20, 0.2);
+    border-radius: 3px;
+    min-width: 220px;
+    padding: 6px 0;
+    z-index: 2001;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    max-height: 80vh;
+    overflow-y: auto;
 }
+.submenu.visible { display: block; }
 .submenu li a {
     display: block;
     padding: 9px 20px;
     color: #ccc;
     text-decoration: none;
     font-size: 0.85em;
+    white-space: nowrap;
     border-bottom: 1px solid rgba(226, 183, 20, 0.06);
     transition: color 0.2s, background 0.2s;
 }
 .submenu li:last-child a { border-bottom: none; }
 .submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
-.has-submenu:hover > .submenu { display: block; }
-/* Mobile: click-to-toggle instead of hover */
+/* Mobile: inline accordion instead of flyout */
 @media (max-width: 768px) {
-    .has-submenu:hover > .submenu { display: none; }
+    .has-submenu > a::after { content: ' ▾'; }
+    .submenu {
+        position: static !important;
+        border: none;
+        box-shadow: none;
+        backdrop-filter: none;
+        min-width: auto;
+        background: rgba(226, 183, 20, 0.05);
+        border-right: 2px solid rgba(226, 183, 20, 0.3);
+        margin-right: 10px;
+    }
+    .submenu.visible { display: none; }
     .has-submenu.open > .submenu { display: block; }
 }
 
