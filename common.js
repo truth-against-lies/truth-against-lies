@@ -24,6 +24,22 @@ document.addEventListener('click', function(e) {
     }
 });
 
+// ========== SUBMENU MOBILE TOGGLE ==========
+(function() {
+    var submenus = document.querySelectorAll('.has-submenu > a');
+    submenus.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                var parent = this.parentElement;
+                if (!parent.classList.contains('open')) {
+                    e.preventDefault();
+                    parent.classList.toggle('open');
+                }
+            }
+        });
+    });
+})();
+
 // ========== FLOATING SHARE ==========
 function fabShare(platform) {
     var url = window.location.href;
