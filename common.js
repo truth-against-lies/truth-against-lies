@@ -33,33 +33,38 @@ document.addEventListener('click', function(e) {
     var link = parent.querySelector('a');
     var hideTimer = null;
 
+    // Move submenu to body so backdrop-filter on nav/nav-links doesn't trap it
+    var flyout = submenu.cloneNode(true);
+    flyout.classList.add('submenu-flyout');
+    document.body.appendChild(flyout);
+
     function showFlyout() {
         if (window.innerWidth <= 768) return;
         clearTimeout(hideTimer);
         var navLinks = document.querySelector('.nav-links');
         var navRect = navLinks.getBoundingClientRect();
         var itemRect = parent.getBoundingClientRect();
-        submenu.style.top = itemRect.top + 'px';
-        submenu.style.right = (window.innerWidth - navRect.left) + 'px';
-        submenu.classList.add('visible');
+        flyout.style.top = itemRect.top + 'px';
+        flyout.style.right = (window.innerWidth - navRect.left) + 'px';
+        flyout.classList.add('visible');
         // keep inside viewport vertically
-        var subRect = submenu.getBoundingClientRect();
-        if (subRect.bottom > window.innerHeight) {
-            submenu.style.top = Math.max(0, window.innerHeight - subRect.height) + 'px';
+        var fRect = flyout.getBoundingClientRect();
+        if (fRect.bottom > window.innerHeight) {
+            flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
         }
     }
     function startHide() {
         if (window.innerWidth <= 768) return;
-        hideTimer = setTimeout(function() { submenu.classList.remove('visible'); }, 200);
+        hideTimer = setTimeout(function() { flyout.classList.remove('visible'); }, 200);
     }
     function cancelHide() { clearTimeout(hideTimer); }
 
     parent.addEventListener('mouseenter', showFlyout);
     parent.addEventListener('mouseleave', startHide);
-    submenu.addEventListener('mouseenter', cancelHide);
-    submenu.addEventListener('mouseleave', startHide);
+    flyout.addEventListener('mouseenter', cancelHide);
+    flyout.addEventListener('mouseleave', startHide);
 
-    // Mobile: click toggles accordion
+    // Mobile: click toggles accordion (uses original submenu inside nav)
     link.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
             if (!parent.classList.contains('open')) {

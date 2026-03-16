@@ -87,9 +87,12 @@ nav {
 .nav-links li:last-child a { border-bottom: none; }
 .nav-links li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
 
-/* === SUBMENU FLYOUT (desktop: fixed left of nav, mobile: accordion) === */
+/* === SUBMENU === */
 .has-submenu > a::after { content: ' ◂'; font-size: 0.7em; opacity: 0.5; }
-.submenu {
+/* Original submenu inside nav — hidden on desktop, used as accordion on mobile */
+.submenu { display: none; list-style: none; }
+/* Flyout clone appended to body — escapes backdrop-filter stacking context */
+.submenu-flyout {
     display: none;
     position: fixed;
     list-style: none;
@@ -98,14 +101,13 @@ nav {
     border-radius: 3px;
     min-width: 220px;
     padding: 6px 0;
-    z-index: 2001;
+    z-index: 9999;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    backdrop-filter: blur(10px);
     max-height: 80vh;
     overflow-y: auto;
 }
-.submenu.visible { display: block; }
-.submenu li a {
+.submenu-flyout.visible { display: block; }
+.submenu-flyout li a, .submenu li a {
     display: block;
     padding: 9px 20px;
     color: #ccc;
@@ -115,22 +117,17 @@ nav {
     border-bottom: 1px solid rgba(226, 183, 20, 0.06);
     transition: color 0.2s, background 0.2s;
 }
-.submenu li:last-child a { border-bottom: none; }
-.submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
-/* Mobile: inline accordion instead of flyout */
+.submenu-flyout li:last-child a, .submenu li:last-child a { border-bottom: none; }
+.submenu-flyout li a:hover, .submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
+/* Mobile: accordion inside nav, flyout hidden */
 @media (max-width: 768px) {
     .has-submenu > a::after { content: ' ▾'; }
+    .submenu-flyout { display: none !important; }
     .submenu {
-        position: static !important;
-        border: none;
-        box-shadow: none;
-        backdrop-filter: none;
-        min-width: auto;
         background: rgba(226, 183, 20, 0.05);
         border-right: 2px solid rgba(226, 183, 20, 0.3);
         margin-right: 10px;
     }
-    .submenu.visible { display: none; }
     .has-submenu.open > .submenu { display: block; }
 }
 
