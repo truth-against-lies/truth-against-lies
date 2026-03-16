@@ -1,6 +1,6 @@
 /* ============================================
    SHARED JS — Truth Against Lies
-   Used by: lies, october7, gallery, videos, action, regions
+   Used by: all pages
    ============================================ */
 
 // ========== HAMBURGER ARIA-EXPANDED ==========

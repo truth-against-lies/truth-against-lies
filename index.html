@@ -3102,30 +3102,6 @@ document.querySelectorAll('.fade-in').forEach(function(el) {
 </script>
 
 <script>
-// ========== FLOATING SHARE ==========
-function fabShare(platform) {
-    var url = window.location.href;
-    var title = document.title;
-    var text = title + '\n' + url;
-    var encoded = encodeURIComponent(text);
-    if (platform === 'whatsapp') window.open('https://wa.me/?text=' + encoded, '_blank');
-    else if (platform === 'telegram') window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(title), '_blank');
-    else if (platform === 'twitter') window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodeURIComponent(url), '_blank');
-    else if (platform === 'facebook') window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), '_blank');
-    else if (platform === 'copy') {
-        navigator.clipboard.writeText(url);
-        var btn = document.querySelector('.sfab-cp');
-        btn.textContent = '\u2713';
-        setTimeout(function() { btn.innerHTML = '&#128203;'; }, 2000);
-    }
-    document.getElementById('shareFab').classList.remove('open');
-}
-// Close share menu on outside click
-document.addEventListener('click', function(e) {
-    var fab = document.getElementById('shareFab');
-    if (fab && !fab.contains(e.target)) fab.classList.remove('open');
-});
-
 // ========== PAGE TRACKING ==========
 trackPageView('index');
 
