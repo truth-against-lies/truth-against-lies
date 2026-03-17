@@ -1096,6 +1096,35 @@ body.light-mode .sources-title { color: #8a6d00; border-top-color: rgba(0,0,0,0.
 body.light-mode .sources-list li { color: #666; }
 body.light-mode .sources-list li em { color: #444; }
 
+/* === EVIDENCE SCORE BADGE === */
+.evidence-score {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(226, 183, 20, 0.12);
+    border: 1px solid rgba(226, 183, 20, 0.4);
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin: 8px 0 12px;
+}
+.es-stars {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: #e2b714;
+}
+.es-empty {
+    color: #555;
+}
+.es-label {
+    font-size: 0.7em;
+    color: #999;
+    white-space: nowrap;
+}
+body.light-mode .evidence-score { background: rgba(226, 183, 20, 0.15); border-color: rgba(180, 140, 10, 0.4); }
+body.light-mode .es-stars { color: #b48c0a; }
+body.light-mode .es-empty { color: #ccc; }
+body.light-mode .es-label { color: #777; }
+
 /* === GOOGLE TRANSLATE HIDING === */
 #google_translate_element { position: absolute; top: -9999px; left: -9999px; visibility: hidden; }
 .goog-te-banner-frame { display: none !important; }
