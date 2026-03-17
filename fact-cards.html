@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כרטיסי עובדות | האמת נגד השקר</title>
+    <meta name="description" content="18 כרטיסי עובדות לשיתוף — מיתוס, עובדה, מקורות. הפרכת שקרים אנטישמיים בפורמט קצר וויזואלי. עברית + English.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="כרטיסי עובדות — מיתוס vs עובדה | האמת נגד השקר">
+    <meta property="og:description" content="18 כרטיסי עובדות לשיתוף — הפרכת שקרים אנטישמיים עם מקורות אקדמיים">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/fact-cards.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="כרטיסי עובדות — מיתוס vs עובדה | האמת נגד השקר">
+    <meta name="twitter:description" content="18 כרטיסי עובדות לשיתוף — הפרכת שקרים אנטישמיים עם מקורות אקדמיים">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/fact-cards.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/fact-cards.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/fact-cards.html">
+    <style>
+        /* === HERO === */
+        .fc-hero { text-align: center; padding: 100px 20px 30px; }
+        .fc-hero h1 { color: #e2b714; font-size: 2.4em; margin-bottom: 10px; }
+        .fc-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 600px; margin: 0 auto 10px; line-height: 1.7; }
+        .fc-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+
+        /* === LANG TOGGLE === */
+        .fc-lang-toggle { display: flex; gap: 8px; justify-content: center; margin: 20px 0 15px; }
+        .fc-lang-btn { padding: 6px 18px; background: rgba(226,183,20,0.08); border: 1px solid rgba(226,183,20,0.25); color: #e2b714; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.9em; transition: all 0.2s; }
+        .fc-lang-btn.active { background: #e2b714; color: #0a0a1a; font-weight: bold; }
+
+        /* === FILTER BUTTONS === */
+        .fc-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; padding: 0 20px; }
+        .fc-filter-btn { padding: 7px 16px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .fc-filter-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; }
+
+        /* === CARDS GRID === */
+        .fc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+
+        /* === INDIVIDUAL CARD === */
+        .fc-card { background: #12172b; border-radius: 3px; border-top: 4px solid #e2b714; padding: 24px 22px 16px; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+        .fc-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+
+        /* Brand watermark top */
+        .fc-brand { text-align: center; color: #e2b714; font-size: 0.7em; letter-spacing: 2px; margin-bottom: 14px; opacity: 0.6; }
+
+        /* Myth box (red) */
+        .fc-myth { background: rgba(231,76,60,0.08); border-right: 3px solid #e74c3c; padding: 12px 16px; margin-bottom: 14px; border-radius: 3px; }
+        .fc-myth-label { color: #e74c3c; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
+        .fc-myth-text { color: #e0e0e0; font-size: 0.95em; line-height: 1.5; margin: 0; }
+
+        /* Fact box (green) */
+        .fc-fact { background: rgba(46,204,113,0.08); border-right: 3px solid #2ecc71; padding: 12px 16px; margin-bottom: 14px; border-radius: 3px; }
+        .fc-fact-label { color: #2ecc71; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
+        .fc-fact-text { color: #c0c0c0; font-size: 0.88em; line-height: 1.65; margin: 0; }
+
+        /* Sources */
+        .fc-source { font-size: 0.75em; color: #777; font-style: italic; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; margin-bottom: 10px; line-height: 1.5; }
+
+        /* Actions row */
+        .fc-actions { display: flex; gap: 6px; align-items: center; justify-content: center; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; }
+        .fc-actions a, .fc-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
+        .fc-actions a:hover, .fc-actions button:hover { border-color: #e2b714; color: #e2b714; }
+        .fc-actions .wa:hover { border-color: #25D366; color: #25D366; }
+        .fc-actions .tw:hover { border-color: #1DA1F2; color: #1DA1F2; }
+        .fc-actions .tg:hover { border-color: #0088cc; color: #0088cc; }
+
+        /* URL watermark bottom */
+        .fc-card::after { content: 'truth-against-lies.github.io'; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 0.6em; color: rgba(226,183,20,0.25); letter-spacing: 1px; pointer-events: none; }
+
+        /* English blocks */
+        .fc-en { direction: ltr; text-align: left; }
+        .fc-en .fc-myth { border-right: none; border-left: 3px solid #e74c3c; }
+        .fc-en .fc-fact { border-right: none; border-left: 3px solid #2ecc71; }
+
+        /* === BOTTOM LINKS === */
+        .fc-links { max-width: 700px; margin: 0 auto; padding: 20px 20px 40px; }
+        .fc-link-box { display: block; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #e2b714; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+        .fc-link-box:hover { background: rgba(226,183,20,0.12); }
+        .fc-link-box .link-desc { color: #999; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .fc-hero h1 { font-size: 1.7em; }
+            .fc-grid { grid-template-columns: 1fr; padding: 0 12px 30px; }
+            .fc-card { padding: 18px 15px 14px; }
+        }
+
+        /* === LIGHT MODE === */
+        body.light-mode .fc-card { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        body.light-mode .fc-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        body.light-mode .fc-myth { background: rgba(231,76,60,0.05); }
+        body.light-mode .fc-myth-text { color: #333; }
+        body.light-mode .fc-fact { background: rgba(46,204,113,0.05); }
+        body.light-mode .fc-fact-text { color: #333; }
+        body.light-mode .fc-brand { color: #b48c0a; }
+        body.light-mode .fc-card::after { color: rgba(180,140,10,0.2); }
+        body.light-mode .fc-hero h1 { color: #b48c0a; }
+        body.light-mode .fc-filter-btn.active { background: rgba(180,140,10,0.12); border-color: #b48c0a; color: #b48c0a; }
+        body.light-mode .fc-lang-btn.active { background: #b48c0a; }
+        body.light-mode .fc-link-box { background: rgba(180,140,10,0.04); border-color: #ddd; color: #b48c0a; }
+    </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Did Israel commit genocide in Gaza?","acceptedAnswer":{"@type":"Answer","text":"The ICJ did not rule genocide. The IDF sent 12M voice messages, 14M SMS, and 50,066 personal calls to warn civilians."}},{"@type":"Question","name":"Is Israel an apartheid state?","acceptedAnswer":{"@type":"Answer","text":"Arab citizens (21%) have full voting rights since 1948. Judge Richard Goldstone wrote: In Israel, there is no apartheid."}},{"@type":"Question","name":"Do Jews control the media?","acceptedAnswer":{"@type":"Answer","text":"The Protocols were proven a forgery in 1921. The 4 largest banks are Chinese. Jews are 0.2% of the world population."}}],"publisher":{"@type":"Organization","name":"Truth Against Lies"},"inLanguage":["he","en"]}
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism.html">אנטישמיות</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism.html">&#128269; מה זה אנטישמיות?</a></li>
+                        <li><a href="antisemitism.html#claims">&#128203; עלילות והפרכות</a></li>
+                        <li><a href="holocaust-denial.html">&#128367; הכחשת השואה</a></li>
+                        <li><a href="statistics.html">&#128202; נתוני אנטישמיות</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="fact-cards.html">&#127183; כרטיסי עובדות</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li class="has-submenu">
+                    <a href="gallery.html">מדיה</a>
+                    <ul class="submenu">
+                        <li><a href="gallery.html">&#128444; תיעוד היסטורי</a></li>
+                        <li><a href="videos.html">&#128249; צפה והתעדכן</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li class="has-submenu">
+                    <a href="facts.html">עובדות שלא מספרים לך</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command.html">&#9874; פיקוד כושל ובוגד</a></li>
+                        <li><a href="facts-knesset.html">&#127963; חברי כנסת</a></li>
+                        <li><a href="facts-court.html">&#9878; בג"ץ ומערכת המשפט</a></li>
+                        <li><a href="facts-policies.html">&#128203; חוקים ומדיניות כושלת</a></li>
+                        <li><a href="facts-media.html">&#128249; תקשורת שקרנית</a></li>
+                        <li><a href="facts-orgs.html">&#127970; ארגונים, אקדמיה ו-BDS</a></li>
+                        <li><a href="facts-money.html">&#128176; הכסף — מימון הטרור</a></li>
+                        <li><a href="facts-iran.html">&#128293; ציר ההרס של איראן</a></li>
+                        <li><a href="facts-west.html">&#127760; בגידות המערב</a></li>
+                        <li><a href="facts-myths.html">&#128269; שקרים שהמציאות הפריכה</a></li>
+                        <li><a href="facts-netanyahu.html">&#9878; הפרדוקס של נתניהו</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity.html">חיזוק ומחשבה</a>
+                    <ul class="submenu">
+                        <li><a href="unity.html">&#128170; חיזוק העם היהודי</a></li>
+                        <li><a href="mind.html">&#129504; חיזוק המוח</a></li>
+                        <li><a href="left-narrative.html">&#128240; הנרטיב של השמאל</a></li>
+                        <li><a href="daat-dat.html">&#9878; דעת vs דת</a></li>
+                        <li><a href="sword-prayer.html">&#9876; חרב ותפילה</a></li>
+                        <li><a href="the-schism.html">&#9878; הפילוג הגדול</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="glossary.html">מילון מונחים</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul></div>
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
+        <div class="nav-lang">
+            <button class="nav-lang-btn" onclick="document.querySelector('.nav-lang-menu').classList.toggle('open')">&#127760;</button>
+            <div class="nav-lang-menu">
+                <a href="#" onclick="setPageLang('he')">עברית</a>
+                <a href="#" onclick="setPageLang('en')">English</a>
+                <a href="#" onclick="setPageLang('ar')">العربية</a>
+                <a href="#" onclick="setPageLang('fr')">Français</a>
+                <a href="#" onclick="setPageLang('de')">Deutsch</a>
+                <a href="#" onclick="setPageLang('es')">Español</a>
+                <a href="#" onclick="setPageLang('ru')">Русский</a>
+                <a href="#" onclick="setPageLang('zh-CN')">中文</a>
+                <a href="#" onclick="setPageLang('pt')">Português</a>
+                <a href="#" onclick="setPageLang('fa')">فارسی</a>
+                <a href="#" onclick="setPageLang('tr')">Türkçe</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="fc-hero">
+    <h1>&#127183; כרטיסי עובדות</h1>
+    <div class="subtitle">מיתוס &#10142; עובדה &#10142; מקורות<br>שתפו, הורידו, הפיצו אמת.</div>
+    <div class="hero-meta">18 כרטיסים &bull; עברית + English &bull; מקורות אקדמיים</div>
+</section>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="fc-lang-toggle">
+    <button class="fc-lang-btn active" onclick="setFCLang('he',this)">עברית</button>
+    <button class="fc-lang-btn" onclick="setFCLang('en',this)">English</button>
+</div>
+
+<!-- FILTER BUTTONS -->
+<div class="fc-filters">
+    <button class="fc-filter-btn active" onclick="filterCards('all',this)">הכל (18)</button>
+    <button class="fc-filter-btn" onclick="filterCards('israel',this)">ישראל (6)</button>
+    <button class="fc-filter-btn" onclick="filterCards('conspiracy',this)">קונספירציות (7)</button>
+    <button class="fc-filter-btn" onclick="filterCards('history',this)">היסטוריה (4)</button>
+    <button class="fc-filter-btn" onclick="filterCards('culture',this)">תרבות (1)</button>
+</div>
+
+<!-- CARDS GRID -->
+<div class="fc-grid">
+
+<!-- 1. GENOCIDE -->
+<div class="fc-card" id="fc-genocide" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"ישראל ביצעה רצח עם בעזה"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">ICJ לא קבע רצח עם &mdash; רק שהתביעה "סבירה מספיק להישמע" (הרף הנמוך ביותר). צה"ל ביצע 50,066 שיחות אישיות, שלח 12 מיליון הודעות קוליות ו-14 מיליון SMS להזהרת אזרחים. אין רצח עם בהיסטוריה שבו התוקף מזהיר את הקורבנות לברוח.</p></div><div class="fc-source">ICJ ינואר 2024 | John Spencer, West Point | HLMG (20+ גנרלים מ-NATO)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Israel committed genocide in Gaza"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The ICJ did NOT rule genocide &mdash; only that the claim was "plausible enough to be heard" (lowest legal threshold). The IDF made 50,066 personal calls, sent 12M voice messages and 14M SMS to warn civilians. No genocide in history featured the attacker warning victims to flee.</p></div><div class="fc-source">ICJ Jan 2024 | John Spencer, West Point | HLMG (20+ NATO generals)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 2. APARTHEID -->
+<div class="fc-card" id="fc-apartheid" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"ישראל היא מדינת אפרטהייד"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">אזרחים ערבים (21%) מצביעים בזכות מלאה מ-1948. שופט סלים ג'ובראן (ערבי) כיהן בבית המשפט העליון. 25% מרופאי ישראל ערבים. השופט ריצ'רד גולדסטון (דרום אפריקה) כתב ב-NYT: "בישראל, אין אפרטהייד."</p></div><div class="fc-source">Richard Goldstone, NYT 2011 | Kenneth Meshoe, חבר פרלמנט דרום אפריקאי</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Israel is an apartheid state"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Arab citizens (21%) have full voting rights since 1948. Judge Salim Joubran (Arab) served on the Supreme Court. 25% of Israel's doctors are Arab. Judge Richard Goldstone (South Africa) wrote in NYT: "In Israel, there is no apartheid."</p></div><div class="fc-source">Richard Goldstone, NYT 2011 | Kenneth Meshoe, South African MP</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 3. MEDIA CONTROL -->
+<div class="fc-card" id="fc-media-control" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"היהודים שולטים בתקשורת ובכלכלה העולמית"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">"פרוטוקולי זקני ציון" הוכחו כזיוף ב-1921 (Times של לונדון). 4 הבנקים הגדולים בעולם הם סיניים. Fox בבעלות מרדוק (אוסטרלי), Sony &mdash; יפנית. יהודים = 0.2% מאוכלוסיית העולם.</p></div><div class="fc-source">USHMM | S&amp;P Global 2024 | ADL</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews control the media and world economy"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The "Protocols of the Elders of Zion" was proven a forgery in 1921 (London Times). The 4 largest banks are Chinese. Fox is owned by Murdoch (Australian), Sony is Japanese. Jews are 0.2% of the world population.</p></div><div class="fc-source">USHMM | S&amp;P Global 2024 | ADL</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 4. NO CONNECTION -->
+<div class="fc-card" id="fc-no-connection" data-cat="history">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"אין קשר היסטורי של היהודים לארץ ישראל"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">3,200 שנות ראיות: סטלת מרנפטח (1208 לפנה"ס), סטלת תל דן ("בית דוד"), מגילות ים המלח, שער טיטוס ברומא. מחקרים גנטיים (Nature 2010) מראים שיהודים קרובים גנטית לפלסטינים מלאירופאים. חבר הלאומים (1922) הכיר רשמית בקשר.</p></div><div class="fc-source">Behar et al., Nature 2010 | Israel Museum | חבר הלאומים 1922</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews have no historical connection to Israel"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">3,200 years of evidence: Merneptah Stele (1208 BCE), Tel Dan Stele ("House of David"), Dead Sea Scrolls, Arch of Titus. Genetic studies (Nature 2010) show Jews are genetically closer to Palestinians than to Europeans. League of Nations (1922) officially recognized the connection.</p></div><div class="fc-source">Behar et al., Nature 2010 | Israel Museum | League of Nations 1922</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 5. HAMAS CREATED -->
+<div class="fc-card" id="fc-hamas-created" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"ישראל יצרה את חמאס"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">חמאס הוקם ב-1987 כזרוע האחים המוסלמים (ארגון מצרי מ-1928). ישראל אפשרה פעילות חברתית בשנות ה-70-80 כנגד אש"ף &mdash; לא ארגון צבאי. מי באמת מימן? איראן ($100-350M/שנה) וקטאר ($1.8 מיליארד, 2012-2023).</p></div><div class="fc-source">CFR &mdash; Hamas Timeline | Washington Post 2014 | Treasury Department</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Israel created Hamas"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Hamas was founded in 1987 as a Muslim Brotherhood branch (Egyptian org est. 1928). Israel allowed social activity in the 70s-80s vs PLO &mdash; not a military org. Actual funders: Iran ($100-350M/year) and Qatar ($1.8B, 2012-2023).</p></div><div class="fc-source">CFR &mdash; Hamas Timeline | Washington Post 2014 | Treasury Dept.</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 6. RIVER TO SEA -->
+<div class="fc-card" id="fc-river-to-sea" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"'מהנהר ועד הים' &mdash; זו רק קריאה לחירות"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">אמנת חמאס 2017, סעיף 2: "פלסטין" = מהירדן לים &mdash; כל שטח ישראל. בין הירדן לים חיים 7.2 מיליון יהודים. הקונגרס האמריקאי גינה את הסיסמה ברוב 377-44 (2024). מקור: אמנת אש"ף 1964.</p></div><div class="fc-source">אמנת חמאס 2017 סעיפים 2, 20 | H.Res.883 (2024) | ADL</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"'From the river to the sea' is just a call for freedom"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Hamas Charter 2017, Art. 2: "Palestine" = Jordan River to Mediterranean &mdash; all of Israel. 7.2 million Jews live there. US Congress condemned the slogan 377-44 (2024). Origin: PLO Charter 1964.</p></div><div class="fc-source">Hamas Charter 2017 Art. 2, 20 | H.Res.883 (2024) | ADL</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 7. ETHNIC CLEANSING -->
+<div class="fc-card" id="fc-ethnic-cleansing" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"ישראל מבצעת טיהור אתני"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">האוכלוסייה הפלסטינית צמחה מ-1.3M (1990) ל-5.5M (2024) &mdash; גידול 323%. ערבים בישראל: מ-156,000 (1948) ל-2.1M (2024) &mdash; פי 13. סרברניצה: 8,000 ב-10 ימים. רואנדה: 800,000 ב-100 יום. בטיהור אתני אמיתי, האוכלוסייה לא גדלה.</p></div><div class="fc-source">PCBS | World Bank | CBS ישראל</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Israel commits ethnic cleansing"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Palestinian population grew from 1.3M (1990) to 5.5M (2024) &mdash; 323% increase. Arabs in Israel: 156,000 (1948) to 2.1M (2024) &mdash; 13x growth. Srebrenica: 8,000 in 10 days. Rwanda: 800,000 in 100 days. In real ethnic cleansing, the population doesn't grow.</p></div><div class="fc-source">PCBS | World Bank | Israel CBS</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 8. KILLED JESUS -->
+<div class="fc-card" id="fc-killed-jesus" data-cat="history">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"היהודים הרגו את ישו"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">ישו נצלב בשיטה רומאית, בפקודת הנציב הרומי פונטיוס פילאטוס. הבשורות נכתבו 40-70 שנה אחרי האירועים. הוותיקן השני (1965, Nostra Aetate) הכריז רשמית: אין להטיל אשמה קולקטיבית על העם היהודי.</p></div><div class="fc-source">Vatican II, Nostra Aetate (1965) | Raymond Brown, 'The Death of the Messiah' (1994)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"The Jews killed Jesus"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Jesus was crucified by Roman method, on orders of Roman governor Pontius Pilate. The Gospels were written 40-70 years after the events. Vatican II (1965, Nostra Aetate) officially declared: collective guilt cannot be placed on the Jewish people.</p></div><div class="fc-source">Vatican II, Nostra Aetate (1965) | Raymond Brown, 'The Death of the Messiah' (1994)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 9. BLOOD LIBEL -->
+<div class="fc-card" id="fc-blood-libel" data-cat="history">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"עלילת דם: יהודים משתמשים בדם ילדים נוצרים"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">ב-900 שנה מאז העלילה הראשונה (נוריץ' 1144), אף מקרה לא הוכח. היהדות אוסרת במפורש אכילת דם (ויקרא 17:14). האפיפיור אינוקנטיוס IV (1247) חקר ומצא חסר בסיס. במשפט ביילס (1913) &mdash; חבר מושבעים נוצרי זיכה.</p></div><div class="fc-source">R. Po-chia Hsia, 'The Myth of Ritual Murder' (1988) | Magda Teter, 'Blood Libel' (2020)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Blood libel: Jews use Christian children's blood in rituals"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">In 900 years since the first accusation (Norwich 1144), not a single case was ever proven. Judaism explicitly prohibits consuming blood (Leviticus 17:14). Pope Innocent IV (1247) investigated and found baseless. In the Beilis trial (1913) &mdash; an all-Christian jury acquitted.</p></div><div class="fc-source">R. Po-chia Hsia, 'The Myth of Ritual Murder' (1988) | Magda Teter, 'Blood Libel' (2020)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 10. BANKS -->
+<div class="fc-card" id="fc-banks" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"יהודים שולטים בבנקים ובמערכות הפיננסיות"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">4 הבנקים הגדולים בעולם סיניים ממשלתיים (ICBC, Agricultural, Construction, Bank of China). מתוך 20 הגדולים &mdash; אף אחד בשליטת משפחה יהודית. הקשר ההיסטורי: נוצרים באירופה הגבילו יהודים להלוואות ואז האשימו אותם בתוצאה.</p></div><div class="fc-source">S&amp;P Global 2025 | Hamilton &amp; Gifford (1976)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews control banks and financial systems"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The 4 largest banks are Chinese state-owned (ICBC, Agricultural, Construction, Bank of China). Of the top 20 &mdash; none controlled by a Jewish family. Historical context: Christians restricted Jews to moneylending, then blamed them for it.</p></div><div class="fc-source">S&amp;P Global 2025 | Hamilton &amp; Gifford (1976)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 11. DUAL LOYALTY -->
+<div class="fc-card" id="fc-dual-loyalty" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"ליהודים נאמנות כפולה &mdash; הם נאמנים לישראל, לא למדינתם"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">550,000 יהודים שירתו בצבא ארה"ב במלה"ע 2, מעל 50,000 קיבלו עיטורים. 78% מיהודי ארה"ב הצביעו לאובמה, רק 24% לטראמפ &mdash; למרות מדיניותו הפרו-ישראלית. ב-1935, גרמניה שללה אזרחות מ-100,000 יהודים ששירתו בצבאה במלה"ע 1.</p></div><div class="fc-source">National Museum of American Jewish Military History | AJC | ADL 2024</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews have dual loyalty &mdash; loyal to Israel, not their country"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">550,000 Jews served in the US military in WWII, 50,000+ decorated. 78% of US Jews voted for Obama, only 24% for Trump &mdash; despite his pro-Israel policies. In 1935, Germany stripped citizenship from 100,000 Jews who served in its WWI army.</p></div><div class="fc-source">National Museum of American Jewish Military History | AJC | ADL 2024</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 12. 9/11 -->
+<div class="fc-card" id="fc-911" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"11 בספטמבר תוזמן על ידי ישראל/המוסד"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">~400 יהודים נהרגו ב-11/9 &mdash; 15% מהנספים, תואם את האחוז היהודי בניו יורק. "4,000 שהוזהרו" מקורו בג'רוזלם פוסט שדיווח שמשרד החוץ מנסה "לאתר" 4,000 ישראלים &mdash; "לאתר" סולף ל"הוזהרו".</p></div><div class="fc-source">ועדת 9/11 (2004) | Wall Street Journal 2001 | Snopes</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"9/11 was planned by Israel/Mossad"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">~400 Jews were killed on 9/11 &mdash; 15% of victims, matching NYC's Jewish percentage. The "4,000 warned" claim came from a Jerusalem Post report that Foreign Ministry was trying to "locate" 4,000 Israelis &mdash; "locate" was twisted into "warned."</p></div><div class="fc-source">9/11 Commission (2004) | Wall Street Journal 2001 | Snopes</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 13. PROTOCOLS / ZOG -->
+<div class="fc-card" id="fc-protocols" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"יהודים שולטים בממשלות העולם בסתר (ZOG)"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">"פרוטוקולי זקני ציון" נוצרו ע"י המשטרה החשאית הרוסית (~1903), הוכחו כזיוף ב-1921 &mdash; הועתקו מסאטירה צרפתית על נפוליאון III (1864) שאין לה קשר ליהודים. אם 0.2% באמת שלטו &mdash; למה לא מנעו את השואה?</p></div><div class="fc-source">Norman Cohn, 'Warrant for Genocide' (1967) | Times of London 1921</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews secretly control world governments (ZOG)"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The "Protocols" was created by Russian secret police (~1903), proven a forgery in 1921 &mdash; copied from an 1864 French satire about Napoleon III with zero Jewish connection. If 0.2% truly controlled the world &mdash; why couldn't they prevent the Holocaust?</p></div><div class="fc-source">Norman Cohn, 'Warrant for Genocide' (1967) | Times of London 1921</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 14. CHOSEN PEOPLE -->
+<div class="fc-card" id="fc-chosen-people" data-cat="culture">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"יהודים חושבים שהם 'העם הנבחר' ונעלים על כולם"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">"נבחר" ביהדות = אחריות נוספת (613 מצוות), לא עליונות. גויים מחויבים ב-7 מצוות, יהודים ב-613. "לצדיקי אומות העולם יש חלק לעולם הבא" (תוספתא סנהדרין). עמוס 9:7: "כל העמים שווים בעיני אלוהים."</p></div><div class="fc-source">Borowitz, 'Renewing the Covenant' (1991) | Novak, 'The Election of Israel' (1995)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews think they're 'the chosen people' and superior"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">"Chosen" in Judaism means additional responsibility (613 commandments), not superiority. Non-Jews: 7 commandments, Jews: 613. "The righteous of all nations have a share in the World to Come" (Tosefta Sanhedrin). Amos 9:7: "All nations are equal before God."</p></div><div class="fc-source">Borowitz, 'Renewing the Covenant' (1991) | Novak, 'The Election of Israel' (1995)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 15. ZIONISM = NAZISM -->
+<div class="fc-card" id="fc-zionism-nazism" data-cat="israel">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"הציונות היא נאציזם"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">האו"ם העביר החלטה 3379 ב-1975 ("ציונות = גזענות") &mdash; וביטל אותה בעצמו ב-1991 ברוב 111-25. הגדרת IHRA (47 מדינות) מזהה השוואה זו כאנטישמיות. גרמניה הנאצית בנתה מערכת תעשייתית להשמדת 6 מיליון &mdash; שום דמוקרטיה לא עשתה דבר דומה.</p></div><div class="fc-source">IHRA Working Definition (2016) | החלטה 46/86 של האו"ם (1991)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Zionism is Nazism"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The UN passed Resolution 3379 in 1975 ("Zionism = racism") &mdash; then revoked it in 1991 by 111-25. The IHRA definition (47 countries) identifies this comparison as antisemitism. Nazi Germany built an industrial system to exterminate 6 million &mdash; no democracy has done anything comparable.</p></div><div class="fc-source">IHRA Working Definition (2016) | UN Resolution 46/86 (1991)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 16. HOLOCAUST DENIAL -->
+<div class="fc-card" id="fc-holocaust-denial" data-cat="history">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"השואה לא קרתה / 6 מיליון זו הגזמה"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">רשומות מנהליות נאציות, עדויות 100,000+ ניצולים, הודאות מבצעים בנירנברג, צילומי שחרור, פרוטוקול ואנזה (1942). דייוויד אירווינג הופרך בבית משפט בלונדון (2000) &mdash; השופט: "סילף ועיוות במכוון." הכחשת שואה אסורה ב-17 מדינות.</p></div><div class="fc-source">Lipstadt, 'Denying the Holocaust' (1993) | Irving v Penguin (2000) | USHMM</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"The Holocaust didn't happen / 6 million is exaggerated"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Evidence: Nazi admin records, 100,000+ survivor testimonies, perpetrator confessions at Nuremberg, liberation photos, Wannsee Protocol (1942). David Irving was debunked in London court (2000) &mdash; judge: "deliberately distorted." Denial is illegal in 17 countries.</p></div><div class="fc-source">Lipstadt, 'Denying the Holocaust' (1993) | Irving v Penguin (2000) | USHMM</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 17. GREAT REPLACEMENT -->
+<div class="fc-card" id="fc-great-replacement" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"יהודים עומדים מאחורי 'ההחלפה הגדולה'"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">הגירה מונעת ע"י כלכלה, מלחמות ואקלים &mdash; לא ע"י 0.2% מהעולם. הקונספירציה הזו רוצחת: צוטטה ע"י רוצחים בפיטסבורג (11 הרוגים, 2018), כרייסטצ'רץ' (51, 2019), אל פאסו (23, 2019). כולם פרסמו מניפסטים נגד יהודים.</p></div><div class="fc-source">ADL | Christchurch Royal Commission Report (2020)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews are behind 'The Great Replacement'"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">Immigration is driven by economics, wars, and climate &mdash; not by 0.2% of the world. This conspiracy kills: cited by shooters in Pittsburgh (11 dead, 2018), Christchurch (51, 2019), El Paso (23, 2019). All published anti-Jewish manifestos.</p></div><div class="fc-source">ADL | Christchurch Royal Commission Report (2020)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+<!-- 18. COVID -->
+<div class="fc-card" id="fc-covid" data-cat="conspiracy">
+<div class="fc-brand">&#9733; האמת נגד השקר &#9733;</div>
+<div class="fc-he"><div class="fc-myth"><div class="fc-myth-label">&#10060; מיתוס:</div><p class="fc-myth-text">"יהודים יצרו את הקורונה / הרוויחו מהמגפה"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; עובדה:</div><p class="fc-fact-text">ADL תיעדה 17,000+ ציוצים שהאשימו יהודים בקורונה בחודשים הראשונים. מחקר Nature Scientific Reports (2023) מצא מתאם מובהק בין קונספירציות קורונה לאנטישמיות. אותו דפוס מ-1348 (הרעלת בארות), 1918 (שפעת), 2020. 700 שנה, אותו שקר.</p></div><div class="fc-source">ADL COVID-19 Report 2020 | Allington, Hirsh &amp; Katz, Nature Scientific Reports (2023)</div></div>
+<div class="fc-en" style="display:none" dir="ltr"><div class="fc-myth"><div class="fc-myth-label">&#10060; Myth:</div><p class="fc-myth-text">"Jews created COVID / profited from the pandemic"</p></div><div class="fc-fact"><div class="fc-fact-label">&#10003; Fact:</div><p class="fc-fact-text">The ADL documented 17,000+ tweets blaming Jews for COVID in the first months. A Nature Scientific Reports study (2023) found significant correlation between COVID conspiracies and antisemitism. Same pattern since 1348 (well poisoning), 1918 (flu), 2020. 700 years, same lie.</p></div><div class="fc-source">ADL COVID-19 Report 2020 | Allington, Hirsh &amp; Katz, Nature Scientific Reports (2023)</div></div>
+<div class="fc-actions"><a class="wa" onclick="shareFC(this,'whatsapp')" title="WhatsApp">W</a><a class="tw" onclick="shareFC(this,'twitter')" title="X">&#120143;</a><a class="tg" onclick="shareFC(this,'telegram')" title="Telegram">T</a><button onclick="copyFCText(this)" title="העתק טקסט">&#128203;</button><button onclick="copyFCLink(this)" title="העתק לינק">&#128279;</button><button onclick="downloadFC(this)" title="הורד כתמונה">&#128247;</button></div>
+</div>
+
+</div><!-- end fc-grid -->
+
+<!-- BOTTOM LINKS -->
+<div class="fc-links">
+    <a href="lies.html" class="fc-link-box">&#128270; לניתוח מלא: שקרים נפוצים<span class="link-desc">10 שקרים עם הפרכות מפורטות, פסיכולוגיה ומקורות</span></a>
+    <a href="antisemitism.html#claims" class="fc-link-box">&#128203; לניתוח מלא: 34 עלילות אנטישמיות<span class="link-desc">כל העלילות מסודרות בקטגוריות עם הפרכות עובדתיות ופסיכולוגיות</span></a>
+</div>
+
+<div class="page-footer">
+    <p><a href="index.html">&#8594; חזרה לאתר הראשי</a></p>
+    <p style="margin-top: 15px;">נבנה על ידי נתנאל אסיס | 2026</p>
+</div>
+
+<!-- Floating Share Button -->
+<div class="share-fab" id="shareFab">
+    <div class="share-fab-menu">
+        <a class="sfab-wa" title="WhatsApp" onclick="fabShare('whatsapp')">W</a>
+        <a class="sfab-tg" title="Telegram" onclick="fabShare('telegram')">T</a>
+        <a class="sfab-tw" title="X / Twitter" onclick="fabShare('twitter')">&#120143;</a>
+        <a class="sfab-fb" title="Facebook" onclick="fabShare('facebook')">f</a>
+        <a class="sfab-cp" title="העתק קישור" onclick="fabShare('copy')">&#128203;</a>
+    </div>
+    <button class="share-fab-btn" aria-label="שתף דף" onclick="document.getElementById('shareFab').classList.toggle('open')" title="שתף">&#10149;</button>
+</div>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<!-- FACT CARDS JS -->
+<script>
+// Language toggle
+function setFCLang(lang, btn) {
+    document.querySelectorAll('.fc-lang-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.fc-card').forEach(function(card) {
+        var he = card.querySelector('.fc-he');
+        var en = card.querySelector('.fc-en');
+        if (he) he.style.display = lang === 'he' ? '' : 'none';
+        if (en) en.style.display = lang === 'en' ? '' : 'none';
+    });
+}
+
+// Filter cards
+function filterCards(cat, btn) {
+    document.querySelectorAll('.fc-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.fc-card').forEach(function(card) {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+}
+
+// Share per card
+function shareFC(el, platform) {
+    var card = el.closest('.fc-card');
+    var visible = card.querySelector('.fc-he[style=""], .fc-he:not([style])') ? card.querySelector('.fc-he') : card.querySelector('.fc-en');
+    if (!visible || visible.style.display === 'none') visible = card.querySelector('.fc-en') || card.querySelector('.fc-he');
+    var myth = visible.querySelector('.fc-myth-text').textContent;
+    var fact = visible.querySelector('.fc-fact-text').textContent;
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/fact-cards.html#' + card.id;
+    var text = myth + '\n\n' + fact + '\n\n' + url;
+    if (platform === 'whatsapp') window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    else if (platform === 'twitter') window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(myth + ' ' + fact.substring(0, 180)) + '&url=' + encodeURIComponent(url), '_blank');
+    else if (platform === 'telegram') window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(myth), '_blank');
+}
+
+// Copy text
+function copyFCText(btn) {
+    var card = btn.closest('.fc-card');
+    var visible = card.querySelector('.fc-en[style*="display: none"]') ? card.querySelector('.fc-he') : card.querySelector('.fc-en');
+    if (card.querySelector('.fc-he').style.display === 'none') visible = card.querySelector('.fc-en');
+    else visible = card.querySelector('.fc-he');
+    var myth = visible.querySelector('.fc-myth-text').textContent;
+    var fact = visible.querySelector('.fc-fact-text').textContent;
+    var src = visible.querySelector('.fc-source').textContent;
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/fact-cards.html#' + card.id;
+    navigator.clipboard.writeText(myth + '\n\n' + fact + '\n\n' + src + '\n\n' + url);
+    btn.textContent = '\u2713';
+    setTimeout(function() { btn.innerHTML = '&#128203;'; }, 2000);
+}
+
+// Copy link
+function copyFCLink(btn) {
+    var card = btn.closest('.fc-card');
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/fact-cards.html#' + card.id;
+    navigator.clipboard.writeText(url);
+    btn.textContent = '\u2713';
+    setTimeout(function() { btn.innerHTML = '&#128279;'; }, 2000);
+}
+
+// Download as image (lazy-load html2canvas)
+function downloadFC(btn) {
+    var card = btn.closest('.fc-card');
+    var actions = card.querySelector('.fc-actions');
+    function doCapture() {
+        actions.style.display = 'none';
+        html2canvas(card, { backgroundColor: '#0a0a1a', scale: 2, useCORS: true }).then(function(canvas) {
+            actions.style.display = '';
+            var link = document.createElement('a');
+            link.download = card.id + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }).catch(function() { actions.style.display = ''; });
+    }
+    if (typeof html2canvas === 'undefined') {
+        var s = document.createElement('script');
+        s.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js';
+        s.onload = doCapture;
+        document.head.appendChild(s);
+    } else { doCapture(); }
+}
+
+// Anchor scroll on load
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500);
+    }
+})();
+
+// Fade-in observer
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fc-card').forEach(function(el) { el.classList.add('fade-in'); observer.observe(el); });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('fact-cards');</script>
+
+<nav class="mobile-nav" aria-label="ניווט מובייל">
+    <a href="index.html"><span class="mn-icon">&#127968;</span>ראשי</a>
+    <a href="lies.html"><span class="mn-icon">&#10060;</span>שקרים</a>
+    <a href="antisemitism.html"><span class="mn-icon">&#128737;</span>אנטישמיות</a>
+    <a href="october7.html"><span class="mn-icon">&#128293;</span>7.10</a>
+    <a href="facts.html"><span class="mn-icon">&#128269;</span>עובדות</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

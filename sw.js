@@ -1,10 +1,11 @@
-var CACHE_NAME = 'tal-v46';
+var CACHE_NAME = 'tal-v47';
 var ASSETS = [
     './',
     'index.html',
     'israel-flag.webp',
     'supabase-config.js',
     'lies.html',
+    'fact-cards.html',
     'october7.html',
     'antisemitism.html',
     'facts.html',
