@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v53';
+var CACHE_NAME = 'tal-v54';
 var ASSETS = [
     './',
     'index.html',
@@ -34,11 +34,42 @@ var ASSETS = [
     'sword-prayer.html',
     'the-schism.html',
     'shared.css',
+    'shared-en.css',
     'common.js',
     'search.js',
     'search-index.js',
     'favicon.png',
-    'favicon.ico'
+    'favicon.ico',
+    'index-en.html',
+    'lies-en.html',
+    'fact-cards-en.html',
+    'october7-en.html',
+    'antisemitism-en.html',
+    'facts-en.html',
+    'facts-command-en.html',
+    'facts-court-en.html',
+    'facts-iran-en.html',
+    'facts-knesset-en.html',
+    'facts-media-en.html',
+    'facts-money-en.html',
+    'facts-myths-en.html',
+    'facts-netanyahu-en.html',
+    'facts-orgs-en.html',
+    'facts-policies-en.html',
+    'facts-west-en.html',
+    'gallery-en.html',
+    'videos-en.html',
+    'action-en.html',
+    'regions-en.html',
+    'glossary-en.html',
+    'statistics-en.html',
+    'holocaust-denial-en.html',
+    'unity-en.html',
+    'mind-en.html',
+    'left-narrative-en.html',
+    'daat-dat-en.html',
+    'sword-prayer-en.html',
+    'the-schism-en.html'
 ];
 
 // Install: cache all assets

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strengthening the Mind | Truth Against Lies</title>
+    <meta name="description" content="Critical thinking, cognitive biases, identifying manipulation, media literacy, and digital self-defense — research, tools, and action.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Strengthening the Mind | Truth Against Lies">
+    <meta property="og:description" content="Critical thinking, identifying manipulation, media literacy, and digital self-defense">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/mind-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Strengthening the Mind | Truth Against Lies">
+    <meta name="twitter:description" content="Critical thinking, identifying manipulation, media literacy, and digital self-defense">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="shared-en.css">
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/mind-en.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/mind.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/mind-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/mind.html">
+    <style>
+        /* === MIND HERO === */
+        .mind-hero {
+            text-align: center;
+            padding: 100px 20px 50px;
+            background: linear-gradient(180deg, rgba(100,80,200,0.10) 0%, rgba(50,50,180,0.05) 50%, transparent 100%);
+        }
+        .mind-hero h1 { color: #e2b714; font-size: 2.6em; margin-bottom: 15px; }
+        .mind-hero .subtitle { color: #c0c0c0; font-size: 1.1em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+        .mind-hero .opening-quote { font-size: 1.8em; color: #9b59b6; font-weight: bold; margin: 30px auto; max-width: 600px; line-height: 1.6; }
+        .mind-hero .quote-source { color: #888; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
+        .mind-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 20px; }
+
+        /* === SECTION STYLE === */
+        .mind-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .mind-section h2 { color: #e2b714; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(155,89,182,0.3); }
+        .mind-section .section-intro { color: #999; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
+
+        /* === BIAS CARD (purple) === */
+        .bias-card { background: #12172b; border-left: 3px solid #9b59b6; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .bias-card .bias-name { color: #9b59b6; font-weight: bold; font-size: 0.85em; letter-spacing: 1px; margin-bottom: 6px; }
+        .bias-card h4 { color: #9b59b6; margin-bottom: 8px; }
+        .bias-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .bias-card .source-ref { color: #666; font-size: 0.8em; font-style: italic; margin-top: 8px; }
+
+        /* === TECHNIQUE CARD (red) === */
+        .technique-card { background: #12172b; border-left: 4px solid #e74c3c; padding: 25px; margin-bottom: 22px; border-radius: 3px; }
+        .technique-card .technique-num { color: #e74c3c; font-weight: bold; font-size: 0.85em; margin-bottom: 6px; }
+        .technique-card h4 { color: #e2b714; margin-bottom: 10px; font-size: 1.1em; }
+        .technique-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; margin-bottom: 10px; }
+
+        /* === TOOL CARD (green) === */
+        .tool-card { background: #12172b; border-left: 3px solid #2ecc71; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .tool-card h4 { color: #2ecc71; margin-bottom: 8px; }
+        .tool-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+
+        /* === COUNTER / TRUTH BOX (green inset) === */
+        .counter-box { background: rgba(46,204,113,0.08); border-left: 3px solid #2ecc71; padding: 15px; margin-top: 12px; border-radius: 3px; }
+        .counter-box .counter-label { color: #2ecc71; font-weight: bold; font-size: 0.85em; margin-bottom: 4px; }
+        .counter-box p { color: #c0c0c0; font-size: 0.9em; line-height: 1.6; }
+
+        /* === SCIENCE CARD (blue) === */
+        .science-card { background: #12172b; border-left: 3px solid #3498db; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .science-card h4 { color: #3498db; margin-bottom: 8px; }
+        .science-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .science-card .source-ref { color: #666; font-size: 0.8em; font-style: italic; margin-top: 8px; }
+
+        /* === WISDOM CARD (gold) === */
+        .wisdom-card { background: rgba(226,183,20,0.04); border: 1px solid rgba(226,183,20,0.15); padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .wisdom-card h4 { color: #e2b714; margin-bottom: 8px; }
+        .wisdom-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .wisdom-card .hebrew-quote { color: #e2b714; font-size: 1.15em; font-weight: bold; margin: 12px 0; line-height: 1.5; }
+        .wisdom-card .wisdom-era { color: #888; font-size: 0.8em; font-style: italic; margin-bottom: 8px; }
+
+        /* === STAT ROW === */
+        .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 30px 0; }
+        .stat-block { background: #12172b; border: 1px solid rgba(155,89,182,0.2); padding: 20px; text-align: center; border-radius: 3px; }
+        .stat-block .stat-num { color: #9b59b6; font-size: 2em; font-weight: bold; display: block; }
+        .stat-block .stat-label { color: #888; font-size: 0.85em; margin-top: 6px; }
+
+        /* === ACTION LIST === */
+        .action-list { list-style: none; padding: 0; counter-reset: action; }
+        .action-list li { padding: 12px 0 12px 45px; border-bottom: 1px solid rgba(226,183,20,0.1); color: #c0c0c0; font-size: 0.95em; line-height: 1.7; position: relative; counter-increment: action; }
+        .action-list li::before { content: counter(action); position: absolute; left: 0; top: 12px; width: 30px; height: 30px; border-radius: 50%; background: rgba(226,183,20,0.15); color: #e2b714; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9em; }
+
+        /* === COVENANT BOX === */
+        .covenant-box { border: 2px solid #e2b714; padding: 30px; text-align: center; margin: 30px 0; border-radius: 5px; background: rgba(226,183,20,0.03); }
+        .covenant-box p { color: #e2b714; font-size: 1.1em; line-height: 1.8; font-weight: bold; }
+
+        /* === CLOSING QUOTE === */
+        .closing-quote { text-align: center; margin: 40px 0 20px; }
+        .closing-quote blockquote { color: #9b59b6; font-size: 1.2em; line-height: 1.7; border: none; margin: 0; padding: 0; font-style: italic; }
+        .closing-quote .quote-author { color: #666; font-size: 0.85em; margin-top: 10px; }
+
+        /* === SECTION TRANSITION === */
+        .section-transition { text-align: center; color: rgba(155,89,182,0.3); letter-spacing: 10px; padding: 20px; font-size: 1.1em; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .mind-hero h1 { font-size: 1.8em; }
+            .mind-hero .opening-quote { font-size: 1.3em; }
+            .mind-section h2 { font-size: 1.3em; }
+            .stat-row { grid-template-columns: 1fr; }
+        }
+
+        /* === LIGHT MODE === */
+        body.light-mode .mind-hero { background: linear-gradient(180deg, rgba(100,80,200,0.06) 0%, transparent 100%); }
+        body.light-mode .mind-hero h1 { color: #b48c0a; }
+        body.light-mode .mind-hero .opening-quote { color: #7d3c98; }
+        body.light-mode .mind-section h2 { color: #b48c0a; border-bottom-color: rgba(155,89,182,0.3); }
+        body.light-mode .bias-card { background: #fff; }
+        body.light-mode .bias-card h4 { color: #7d3c98; }
+        body.light-mode .bias-card p { color: #333; }
+        body.light-mode .technique-card { background: #fff; }
+        body.light-mode .technique-card h4 { color: #b48c0a; }
+        body.light-mode .technique-card p { color: #333; }
+        body.light-mode .tool-card { background: #fff; }
+        body.light-mode .tool-card p { color: #333; }
+        body.light-mode .science-card { background: #fff; }
+        body.light-mode .science-card p { color: #333; }
+        body.light-mode .wisdom-card { background: rgba(180,140,10,0.04); border-color: #ddd; }
+        body.light-mode .wisdom-card h4 { color: #b48c0a; }
+        body.light-mode .wisdom-card p { color: #333; }
+        body.light-mode .wisdom-card .hebrew-quote { color: #b48c0a; }
+        body.light-mode .stat-block { background: #fff; border-color: #ddd; }
+        body.light-mode .stat-block .stat-num { color: #7d3c98; }
+        body.light-mode .counter-box { background: rgba(46,204,113,0.05); }
+        body.light-mode .counter-box p { color: #333; }
+        body.light-mode .covenant-box { background: rgba(180,140,10,0.06); border-color: #b48c0a; }
+        body.light-mode .covenant-box p { color: #b48c0a; }
+        body.light-mode .action-list li { color: #333; border-bottom-color: #ddd; }
+        body.light-mode .closing-quote blockquote { color: #7d3c98; }
+    </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Strengthening the Mind — Critical Thinking, Identifying Manipulation, and Digital Self-Defense","description":"Learn to think, stop falling for manipulation. Psychological research, practical tools, and Jewish wisdom.","author":{"@type":"Person","name":"Nathanael Assis"},"publisher":{"@type":"Organization","name":"Truth Against Lies"},"dateModified":"2026-03-12","inLanguage":"en","mainEntityOfPage":"https://truth-against-lies.github.io/truth-against-lies/mind-en.html"}
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="Settings" title="Settings">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">Light Mode</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>Print / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="Navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism-en.html">Antisemitism</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism-en.html">&#128269; What is Antisemitism?</a></li>
+                        <li><a href="antisemitism-en.html#claims">&#128203; Claims &amp; Refutations</a></li>
+                        <li><a href="holocaust-denial-en.html">&#128367; Holocaust Denial</a></li>
+                        <li><a href="statistics-en.html">&#128202; Antisemitism Statistics</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies-en.html">Common Lies</a></li>
+                <li><a href="fact-cards-en.html">&#127183; Fact Cards</a></li>
+                <li><a href="index-en.html#timeline">Timeline</a></li>
+                <li><a href="index-en.html#psychology">Psychology</a></li>
+                <li><a href="regions-en.html">Hatred by Nations</a></li>
+                <li class="has-submenu">
+                    <a href="gallery-en.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="gallery-en.html">&#128444; Historical Documentation</a></li>
+                        <li><a href="videos-en.html">&#128249; Watch &amp; Learn</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7-en.html">October 7</a></li>
+                <li class="has-submenu">
+                    <a href="facts-en.html">Facts They Don't Tell You</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command-en.html">&#9874; Failed Command</a></li>
+                        <li><a href="facts-knesset-en.html">&#127963; Knesset Members</a></li>
+                        <li><a href="facts-court-en.html">&#9878; Supreme Court</a></li>
+                        <li><a href="facts-policies-en.html">&#128203; Failed Policies</a></li>
+                        <li><a href="facts-media-en.html">&#128249; Lying Media</a></li>
+                        <li><a href="facts-orgs-en.html">&#127970; Organizations, Academia &amp; BDS</a></li>
+                        <li><a href="facts-money-en.html">&#128176; The Money &mdash; Terror Funding</a></li>
+                        <li><a href="facts-iran-en.html">&#128293; Iran's Axis of Destruction</a></li>
+                        <li><a href="facts-west-en.html">&#127760; Western Betrayals</a></li>
+                        <li><a href="facts-myths-en.html">&#128269; Debunked Myths</a></li>
+                        <li><a href="facts-netanyahu-en.html">&#9878; The Netanyahu Paradox</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity-en.html">Strengthening &amp; Thought</a>
+                    <ul class="submenu">
+                        <li><a href="unity-en.html">&#128170; Strengthening the Jewish People</a></li>
+                        <li><a href="mind-en.html">&#129504; Strengthening the Mind</a></li>
+                        <li><a href="left-narrative-en.html">&#128240; The Left's Narrative</a></li>
+                        <li><a href="daat-dat-en.html">&#9878; Knowledge vs. Religion</a></li>
+                        <li><a href="sword-prayer-en.html">&#9876; Sword and Prayer</a></li>
+                        <li><a href="the-schism-en.html">&#9878; The Great Schism</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-en.html#report">Report Antisemitism</a></li>
+                <li><a href="glossary-en.html">Glossary</a></li>
+                <li><a href="action-en.html">Take Action</a></li>
+            </ul></div>
+        <a href="index-en.html" class="nav-logo">Truth Against Lies</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="Search the site" title="Search the site"><span class="search-icon">&#128269;</span><span class="search-label">Search</span></button>
+        <div class="nav-lang">
+            <a href="mind.html" class="nav-lang-btn" title="&#1506;&#1489;&#1512;&#1497;&#1514;">&#1506;&#1489;</a>
+        </div>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; Support</a>
+    </div>
+</nav>
+
+<!-- ============================== -->
+<!-- SECTION 1: HERO                -->
+<!-- ============================== -->
+<section class="mind-hero" id="mind-hero">
+    <h1>Strengthening the Mind</h1>
+    <p class="subtitle">This article surveys the principles of critical thinking, media manipulation mechanisms, media literacy tools, and digital self-defense &mdash; based on documented research.</p>
+    <div class="opening-quote">
+        &#10077; Who is wise? One who learns from every person &#10078;
+        <span class="quote-source">Pirkei Avot 4:1</span>
+    </div>
+    <p class="hero-meta">Last updated: March 2026</p>
+</section>
+
+<div class="tldr-box">
+    <div class="tldr-title">In Brief</div>
+    <ul>
+        <li>The brain contains built-in cognitive biases &mdash; identifying them enables more accurate thinking</li>
+        <li>Media manipulation operates through emotional mechanisms &mdash; 12 documented techniques listed below</li>
+        <li>Propaganda in 2026: deepfakes, bots, algorithms &mdash; 47% of internet traffic is bots</li>
+        <li>Media literacy: source verification, context examination, identifying interests</li>
+    </ul>
+    <a href="#content-start" class="tldr-cta">&darr; Read the full article</a>
+</div>
+
+<!-- ============================== -->
+<!-- SECTION 2: BRAIN HACKED        -->
+<!-- ============================== -->
+<div class="mind-section" id="content-start">
+    <h2>&#129504; Cognitive Biases &mdash; Built-in Thinking Errors</h2>
+    <p class="section-intro">Research in cognitive psychology identifies over 188 thinking biases common to all humans. Recognizing these biases is the first step in reducing their impact on judgment and perception of reality.</p>
+
+    <div class="bias-card">
+        <div class="bias-name">CONFIRMATION BIAS</div>
+        <h4>Confirmation Bias</h4>
+        <p>People tend to seek information that confirms their existing beliefs and ignore contradictory information. This bias is independent of intelligence level.</p>
+        <p><strong>Example:</strong> People who believe &quot;Israel is apartheid&quot; will only search for information confirming this, ignoring the fact that 2 million Arabs are Israeli citizens, an Arab judge sits on the Supreme Court, Arabs serve in the Knesset, and 25% of doctors are Arab.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Actively search for contradictory information. If you cannot find a strong counter-argument to your position &mdash; your search may not have been thorough enough.</p>
+        </div>
+        <div class="source-ref">Research: Peter Wason (1960), Quarterly Journal of Experimental Psychology; Kahneman &amp; Tversky, Prospect Theory (1979)</div>
+    </div>
+
+    <div class="bias-card">
+        <div class="bias-name">ANCHORING EFFECT</div>
+        <h4>The Anchoring Effect</h4>
+        <p>The first number or piece of information received serves as a reference point ("anchor"), and all subsequent information is measured against it &mdash; even when the anchor is entirely arbitrary.</p>
+        <p><strong>Example:</strong> When media publishes the headline &quot;50,000 killed in Gaza&quot; (a Hamas figure, unverified, including combatants) &mdash; it becomes the anchor. Even if later proven inflated &mdash; the anchor is already set in the brain.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Examine: Who provided the initial figure? What is their interest? Does an independent source verify the data?</p>
+        </div>
+        <div class="source-ref">Research: Tversky &amp; Kahneman (1974), "Judgment under Uncertainty," Science, 185(4157):1124-1131</div>
+    </div>
+
+    <div class="bias-card">
+        <div class="bias-name">AVAILABILITY HEURISTIC</div>
+        <h4>The Availability Heuristic</h4>
+        <p>People estimate the frequency of phenomena based on how easily examples come to mind. Events in headlines are perceived as more common and dangerous.</p>
+        <p><strong>Example:</strong> The Israeli-Palestinian conflict receives extensive media coverage relative to other conflicts. As a result, it is perceived as the world's central problem &mdash; despite 630,000 killed in Syria, 500,000+ in Yemen, and hundreds of thousands in Sudan and Myanmar, with far less media exposure.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Verify quantitative data. A subjective sense of frequency is not equivalent to fact. Examine: What is the actual media coverage of this event?</p>
+        </div>
+        <div class="source-ref">Research: Tversky &amp; Kahneman (1973), "Availability: A heuristic," Cognitive Psychology, 5(2):207-232</div>
+    </div>
+
+    <div class="bias-card">
+        <div class="bias-name">BANDWAGON EFFECT</div>
+        <h4>The Bandwagon Effect</h4>
+        <p>When a perception forms that the majority holds a certain opinion, there is a tendency to join it &mdash; even without independent verification. Social pressure often overrides rational judgment.</p>
+        <p><strong>Example:</strong> &quot;Everyone supports the Palestinians&quot; &mdash; not true. A 2024 Gallup survey shows that support for Israel among Americans is still 58%. But algorithms amplify emotional and polarizing content, so it <em>appears</em> as if everyone agrees.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Broad agreement is not proof of correctness. For thousands of years, most humans believed the Earth was flat.</p>
+        </div>
+        <div class="source-ref">Research: Solomon Asch (1951), conformity experiments; Cialdini (1984), Influence: The Psychology of Persuasion</div>
+    </div>
+
+    <div class="bias-card">
+        <div class="bias-name">DUNNING-KRUGER EFFECT</div>
+        <h4>The Dunning-Kruger Effect</h4>
+        <p>People with limited knowledge on a topic tend to overestimate their level of understanding. The less knowledge, the higher the confidence in one's opinion.</p>
+        <p><strong>Example:</strong> People who have read a few articles about the Israeli-Palestinian conflict may be highly confident in their understanding, while researchers who have studied the subject for decades recognize its depth and complexity. Absolute certainty sometimes indicates a lack of knowledge.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>High levels of certainty require examination: What are the gaps in my knowledge? What do I not know about this topic?</p>
+        </div>
+        <div class="source-ref">Research: Kruger &amp; Dunning (1999), Journal of Personality and Social Psychology, 77(6):1121-1134</div>
+    </div>
+
+    <div class="bias-card">
+        <div class="bias-name">SELECTIVE EMPATHY BIAS</div>
+        <h4>Selective Empathy Bias</h4>
+        <p>Human empathy is activated unequally. Media narratives influence who is perceived as deserving empathy and who is not.</p>
+        <p><strong>Example:</strong> Israeli children murdered on October 7 received almost no media coverage. Palestinian children &mdash; global headlines. Not because one pain is greater than the other, but because the media filters empathy according to narrative.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>If certain people's suffering is perceived as "more significant" &mdash; perhaps your empathy has been shaped by an external narrative. Examine what mechanisms are influencing this.</p>
+        </div>
+        <div class="source-ref">Research: Bruneau &amp; Saxe (2012), Journal of Experimental Social Psychology, 48(4):855-866</div>
+    </div>
+
+    <div class="stat-row">
+        <div class="stat-block">
+            <span class="stat-num">188+</span>
+            <span class="stat-label">Documented cognitive biases</span>
+        </div>
+        <div class="stat-block">
+            <span class="stat-num">95%</span>
+            <span class="stat-label">Of our decisions are unconscious</span>
+        </div>
+        <div class="stat-block">
+            <span class="stat-num">8 sec</span>
+            <span class="stat-label">Average attention span on social media</span>
+        </div>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 3: MANIPULATION        -->
+<!-- ============================== -->
+<div class="mind-section" id="manipulation-playbook">
+    <h2>&#128214; 12 Documented Propaganda Techniques</h2>
+    <p class="section-intro">The following are academically documented manipulation techniques used by governments, organizations, and movements throughout history. Identifying these methods enables critical thinking against propaganda.</p>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #1</div>
+        <h4>The Big Lie</h4>
+        <p>A claim so extreme that its very implausibility leads people to assume there must be some truth to it.</p>
+        <p><strong>Example:</strong> The claim "Israel is an apartheid state" has become "common knowledge" &mdash; despite 2 million Arabs being Israeli citizens with full voting rights, Knesset members, an Arab Supreme Court justice, and 25% of doctors being Arab.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>The more dramatic and "self-evident" a claim, the stronger the evidence needed to support it.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #2</div>
+        <h4>Illusory Truth Effect</h4>
+        <p>Repeating a statement enough times causes people to rate it as true, even if they previously knew it was false. The brain tends to interpret "familiarity" as "truth."</p>
+        <p><strong>Example:</strong> &quot;From the river to the sea&quot; &mdash; repeated thousands of times daily on social media until it sounds like a moral truth, when in fact it is a call to erase Israel from the map.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>The frequency of exposure to a message does not indicate its truthfulness. Verify every claim from independent sources.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #3</div>
+        <h4>Emotional Hijacking</h4>
+        <p>Emotional stimuli are processed in the amygdala before reaching the prefrontal cortex &mdash; meaning the emotional response precedes rational processing. A shocking image affects judgment before critical thinking is possible.</p>
+        <p><strong>Example:</strong> An image of a crying child in Gaza &mdash; you won't see the context (that Hamas fires from within schools), because emotion has already "hijacked" the brain before you had time to think.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When an image or video triggers an immediate emotional response &mdash; that is the moment to stop and examine: What context is not being shown?</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #4</div>
+        <h4>Appeal to False Authority</h4>
+        <p>Presenting an "authority" to give a claim weight &mdash; even when the authority is not relevant to the topic.</p>
+        <p><strong>Example:</strong> &quot;500 university professors signed a petition against Israel&quot; &mdash; but professors of English literature and sociology are not Middle East experts. Authority in which field?</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Ask: An expert in what exactly? A physics professor expressing an opinion on geopolitics = opinion, not authority.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #5</div>
+        <h4>Straw Man</h4>
+        <p>Instead of addressing the other side's actual argument, distort it into an exaggerated version and then attack the distorted version.</p>
+        <p><strong>Example:</strong> Israel says &quot;We have the right to defend ourselves.&quot; Opponents translate: &quot;Israel says it's allowed to kill civilians.&quot; That is not what was said &mdash; but it's easier to attack.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Ask: &quot;Is this really what the other side is claiming, or is this what's convenient for me to attack?&quot;</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #6</div>
+        <h4>Whataboutism</h4>
+        <p>Instead of answering a claim, pointing to someone else's wrongdoing. This is not an answer &mdash; it's a distraction.</p>
+        <p><strong>Example:</strong> &quot;Israel violates human rights.&quot; &mdash; &quot;What about Saudi Arabia?&quot; Both sides use this. The technique prevents genuine discussion. The fact that another country does terrible things doesn't justify or contradict anything.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When someone changes the subject instead of answering &mdash; they haven't answered. Return to the original question.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #7</div>
+        <h4>Dehumanization</h4>
+        <p>When people stop using names and start using labels &mdash; they are preparing the ground for violence. This is stage 4 of 10 in the genocide process (Gregory Stanton, 1996).</p>
+        <p><strong>Example:</strong> Nazis called Jews &quot;vermin.&quot; Today, Israelis are called &quot;white colonizers&quot; &mdash; a term that erases 3,500 years of connection to the Land of Israel and the fact that most Jews in Israel originate from Arab countries.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When someone stops talking about people and starts talking about &quot;them&quot; &mdash; that's a dangerous sign. Return to names and faces.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #8</div>
+        <h4>False Dichotomy</h4>
+        <p>Presenting only two options, as if no other possibility exists. &quot;You're either for X or for Y&quot; &mdash; when in reality there are dozens of options.</p>
+        <p><strong>Example:</strong> &quot;Are you pro-Palestine or pro-Israel?&quot; &mdash; What if I'm for peace for both peoples? What if I'm for Israel's security and also for Palestinian civilian rights? The forced choice prevents solutions.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When offered only two options &mdash; look for the third. It almost always exists.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #9</div>
+        <h4>Cherry-Picking</h4>
+        <p>Selective choice of facts that support a narrative, while ignoring everything that contradicts it.</p>
+        <p><strong>Example:</strong> Showing only images of destruction in Gaza without mentioning 15,000+ rockets fired at Israel, without mentioning that Hamas hides inside hospitals and schools (UNRWA's own report found rockets in schools). They pick what's convenient.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Always ask: &quot;What are they <em>not</em> showing me?&quot; The missing story is usually more important than the one being shown.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #10</div>
+        <h4>Gaslighting &mdash; Making You Doubt Reality</h4>
+        <p>Manipulation that causes the victim to doubt their own perception of reality. &quot;That didn't happen,&quot; &quot;You're exaggerating,&quot; &quot;You're making it up.&quot;</p>
+        <p><strong>Example:</strong> &quot;There was no massacre on October 7, it's Israeli propaganda.&quot; Despite 1,200 documented deaths, thousands of GoPro videos from the attackers themselves, 252 hostages, testimonies from hundreds of survivors, and international reports.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When someone makes you doubt what you <em>saw with your own eyes</em> &mdash; that's manipulation, not debate.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #11</div>
+        <h4>Astroturfing &mdash; Fake Grassroots Movement</h4>
+        <p>Creating the appearance of a "popular movement" that is actually organized and coordinated &mdash; fake accounts, bots, uniform slogans.</p>
+        <p><strong>Example:</strong> The Oxford Internet Institute (OII) revealed in 2019 that 70 countries operate organized manipulation campaigns on social media. Iran alone operates thousands of fake accounts on Twitter, Reddit, and Instagram posing as ordinary citizens.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>When you see a "grassroots movement" that sprang up overnight with uniform slogans &mdash; check who's behind it.</p>
+        </div>
+    </div>
+
+    <div class="technique-card">
+        <div class="technique-num">Technique #12</div>
+        <h4>Manufacturing Consent</h4>
+        <p>5 filters through which all information passes: ownership, advertising, sources, pressure, and ideology. The media doesn't tell you what to think &mdash; it tells you what to think about.</p>
+        <p><strong>Example:</strong> The UN voted 15 resolutions against Israel in 2023 alone &mdash; compared to 7 for the entire rest of the world combined. Not because Israel is worse, but because 57 OIC countries (Organisation of Islamic Cooperation) vote as an automatic bloc.</p>
+        <div class="counter-box">
+            <div class="counter-label">&#128737; How to defend yourself:</div>
+            <p>Ask: Who <em>chooses</em> what makes the headlines? And what <em>doesn't</em> make them?</p>
+        </div>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 4: MEDIA LITERACY      -->
+<!-- ============================== -->
+<div class="mind-section" id="media-literacy">
+    <h2>&#128270; Media Literacy &mdash; Information Verification Tools</h2>
+    <p class="section-intro">The media is not the enemy, but consuming information without verification poses a risk. Here are tools for independent verification of media content.</p>
+
+    <div class="tool-card">
+        <h4>&#128203; The CRAAP Test &mdash; Information Credibility Check</h4>
+        <p>5 questions that test any piece of information:</p>
+        <p><strong>C &mdash; Currency:</strong> When was this published? Is it current?</p>
+        <p><strong>R &mdash; Relevance:</strong> Is this related to the topic I'm researching?</p>
+        <p><strong>A &mdash; Authority:</strong> Who wrote this? What are their credentials?</p>
+        <p><strong>A &mdash; Accuracy:</strong> Are there sources? Can it be verified?</p>
+        <p><strong>P &mdash; Purpose:</strong> Is the purpose to inform, persuade, sell, or trigger emotion?</p>
+        <div class="source-ref" style="color: #666; font-size: 0.8em; font-style: italic; margin-top: 8px;">Source: Meriam Library, California State University Chico</div>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#128279; Lateral Reading</h4>
+        <p>What do professional fact-checkers do? They <strong>don't</strong> read the article first. They open new tabs and check the <em>source</em> &mdash; who is the author, who funds the website, what is its reputation.</p>
+        <p><strong>Research:</strong> Sam Wineburg &amp; Sarah McGrew (2019) from Stanford proved that professional fact-checkers spend <em>less</em> time on the article but verify <em>more</em> &mdash; because they check the source, not the content.</p>
+        <p><strong>Practical steps:</strong> Before reading an article &mdash; Google the author's name. Google the website name. Check who funds it. Only then read.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#127909; Identifying Pallywood and Fake Images</h4>
+        <p>Pallywood = Palestinian + Hollywood &mdash; staged documentation of events to create a media narrative. Not everything is fake, but some definitely is &mdash; and there are tools to check.</p>
+        <p><strong>Documented cases:</strong> The Al-Ahli Hospital explosion (October 2023) &mdash; blamed on Israel, turned out to be a stray rocket from Islamic Jihad (NYT and AP analysis). The Al-Dura affair (2000) &mdash; France 2 footage remains disputed to this day.</p>
+        <p><strong>Tools:</strong> Google Reverse Image Search, TinEye, Yandex Images &mdash; check if a "new" image was already published years ago.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#9989; Fact-Checking Tools</h4>
+        <p><strong>Websites:</strong> Snopes, FactCheck.org, CAMERA, HonestReporting, BBC Verify</p>
+        <p><strong>Tools:</strong> Google Fact Check Explorer, ClaimBuster</p>
+        <p><strong>Important note:</strong> Even fact-checkers have biases. Don't rely on a single source. Compare multiple fact-checkers and check who funds them too.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#128240; How to Read Beyond the Headline</h4>
+        <p>The headline is written to make you click, not to inform you. Research by Ecker et al. (2014) demonstrated that misleading headlines distort memory &mdash; even when the article itself is accurate.</p>
+        <p><strong>Rule of thumb:</strong> If a headline causes a strong emotion (anger, fear, joy) &mdash; that's exactly what it was designed to do. Read the entire article. Check the sources. Only then &mdash; react.</p>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 5: MASS CONTROL        -->
+<!-- ============================== -->
+<div class="mind-section" id="mass-control">
+    <h2>&#128081; Psychology of Mass Control</h2>
+    <p class="section-intro">Psychological experiments show that most humans tend toward obedience to authority, conformity with the group, and surrender of independent thinking under social pressure. Awareness of these mechanisms enables resistance to them.</p>
+
+    <div class="science-card">
+        <h4>&#9889; The Milgram Experiment &mdash; Obedience to Authority (1963)</h4>
+        <p>Stanley Milgram of Yale University discovered that <strong>65% of participants</strong> were willing to administer what they believed was a lethal electric shock to another person &mdash; simply because a man in a lab coat told them to continue.</p>
+        <p><strong>Relevance:</strong> The experiment provides an explanation for how ordinary citizens participated in Holocaust crimes. Today, a similar pattern is evident when authority figures (academics, influencers, political leaders) provide legitimacy for extreme positions.</p>
+        <div class="source-ref">Stanley Milgram (1963), "Behavioral Study of Obedience," Journal of Abnormal and Social Psychology, 67(4):371-378</div>
+    </div>
+
+    <div class="science-card">
+        <h4>&#128101; Asch's Conformity Experiments (1951)</h4>
+        <p>Solomon Asch showed that <strong>75% of participants</strong> agreed with an obviously wrong answer &mdash; at least once &mdash; when all other group members gave the same wrong answer.</p>
+        <p><strong>Relevance:</strong> On social media, pressure to align with a prevailing position (e.g., accusing Israel of apartheid) can be strong even without factual examination of the claim.</p>
+        <div class="source-ref">Solomon Asch (1951), "Effects of group pressure," in Groups, Leadership and Men (Carnegie Press)</div>
+    </div>
+
+    <div class="science-card">
+        <h4>&#128274; The Stanford Prison Experiment (1971)</h4>
+        <p>Philip Zimbardo demonstrated that ordinary students became sadistic "guards" within days &mdash; when given arbitrary authority over "prisoners."</p>
+        <p><strong>Relevance:</strong> Illustrates the speed at which ordinary people adopt violent behavior when a framework permits it. According to testimonies, among the October 7 attackers were also ordinary Gazan civilians, alongside trained fighters.</p>
+        <p><strong>Note:</strong> The experiment has faced methodological criticism (Reicher &amp; Haslam, 2006), but the central insight about the power of situation has been confirmed repeatedly.</p>
+        <div class="source-ref">Haney, Banks &amp; Zimbardo (1973), International Journal of Criminology &amp; Penology, 1:69-97</div>
+    </div>
+
+    <div class="science-card">
+        <h4>&#128106; Gustave Le Bon &mdash; The Psychology of Crowds (1895)</h4>
+        <p>Within a crowd, people lose their sense of personal responsibility and rational thinking. The "crowd mind" is emotional, suggestible, and can be directed by a skilled leader.</p>
+        <p><strong>Modern parallel:</strong> Social media is a "global digital crowd." Twitter mobs, viral hashtags, cancel culture &mdash; all are crowd mechanisms operating exactly as Le Bon described 130 years ago.</p>
+        <div class="source-ref">Gustave Le Bon (1895), The Crowd: A Study of the Popular Mind</div>
+    </div>
+
+    <div class="science-card">
+        <h4>&#127908; Edward Bernays &mdash; The Father of Modern Propaganda (1928)</h4>
+        <p>Freud's nephew. Coined the term "public relations" as a nicer word for propaganda. Wrote: <em>&quot;The conscious and intelligent manipulation of the organized habits and opinions of the masses is an important element in democratic society.&quot;</em></p>
+        <p><strong>Relevance:</strong> Every social media campaign, every political slogan, every BDS campaign &mdash; uses techniques that Bernays documented in 1928.</p>
+        <div class="source-ref">Edward Bernays (1928), Propaganda</div>
+    </div>
+
+    <div class="science-card">
+        <h4>&#127758; Totalitarian Regimes &mdash; How Entire Nations Are Subjugated</h4>
+        <p>George Orwell in <em>1984</em> described "doublethink," the "memory hole," and "Newspeak" &mdash; tools that control reality through control of language.</p>
+        <p>Hannah Arendt wrote: <em>&quot;The ideal subject of totalitarian rule is not the convinced Nazi or the convinced Communist, but people for whom the distinction between fact and fiction no longer exists.&quot;</em></p>
+        <p><strong>Modern examples:</strong> Iranian regime media, RT (Russia), China's Great Firewall, Al Jazeera (Qatar).</p>
+        <div class="source-ref">Hannah Arendt (1951), The Origins of Totalitarianism; George Orwell (1949), 1984</div>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 6: DIGITAL DEFENSE     -->
+<!-- ============================== -->
+<div class="mind-section" id="digital-defense">
+    <h2>&#128737; Digital Self-Defense &mdash; Practical Tools</h2>
+    <p class="section-intro">No technical expertise is needed to identify digital manipulation. Here are accessible tools and methods for detecting fake content and influence operations.</p>
+
+    <div class="tool-card">
+        <h4>&#129302; How to Identify Bots and Troll Farms</h4>
+        <p><strong>Signs:</strong> Recently created account, no real profile picture, posts 24/7 in uniform language, follows repetitive patterns, username with random numbers.</p>
+        <p><strong>Exposed operations:</strong> Iran's &quot;International Union of Virtual Media&quot; &mdash; exposed by Meta in 2023, operated thousands of fake accounts in Hebrew, English, and Arabic. Russia's &quot;Internet Research Agency&quot; &mdash; documented in the Mueller Report (2019).</p>
+        <p><strong>Research:</strong> Oxford Internet Institute &mdash; 70 countries operate organized manipulation campaigns on social media (reports 2017-2024).</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#128300; Filter Bubbles and Echo Chambers</h4>
+        <p>Algorithms display content matching users' existing views, because this increases time spent on the platform. The result: exposure to only one perspective, with the illusion of a complete picture.</p>
+        <p><strong>Research:</strong> Bakshy, Messing &amp; Adamic (2015) from Facebook showed that algorithms reduce exposure to opposing views in Science, 348(6239):1130-1132.</p>
+        <p><strong>What to do:</strong> Follow accounts you <em>disagree</em> with. Read news from at least 3 different political directions. Use private browsing mode for searches.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#128247; Reverse Image Search</h4>
+        <p>Every viral image needs verification. Sometimes a "Gaza 2024" image is actually from Syria 2018.</p>
+        <p><strong>How:</strong> Google Images &mdash; click the camera icon and upload an image. TinEye &mdash; a dedicated reverse search site. Yandex Images &mdash; sometimes finds results that Google doesn't show.</p>
+        <p><strong>When to use:</strong> Any image that looks too perfect, too shocking, or too convenient for a particular narrative.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#127909; Video Verification</h4>
+        <p><strong>Tool:</strong> InVID WeVerify &mdash; a free browser extension used by journalists for video verification (metadata, geolocation, weather verification).</p>
+        <p><strong>Example:</strong> Videos of "bombed hospitals" from October 2023 that turned out to be from Syria 2018.</p>
+    </div>
+
+    <div class="tool-card">
+        <h4>&#9888; 7 Signs Someone Is Trying to Manipulate You</h4>
+        <p><strong>1.</strong> Urgency &mdash; &quot;Share now before they delete it!&quot;</p>
+        <p><strong>2.</strong> Anonymity &mdash; No source, no name, no credit.</p>
+        <p><strong>3.</strong> Emotional overload &mdash; Appeals only to fear or anger, never to reason.</p>
+        <p><strong>4.</strong> Binary framing &mdash; &quot;You're either with us or against us.&quot;</p>
+        <p><strong>5.</strong> No counter-argument &mdash; No other side is presented.</p>
+        <p><strong>6.</strong> Request not to verify &mdash; &quot;Don't listen to the mainstream media.&quot;</p>
+        <p><strong>7.</strong> Too-perfect narrative &mdash; Reality is messy. If the story is smooth and simple &mdash; it's probably not complete.</p>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 7: JEWISH THINKING     -->
+<!-- ============================== -->
+<div class="mind-section" id="jewish-thinking">
+    <h2>&#128220; Jewish Tradition and Critical Thinking &mdash; 3,500 Years</h2>
+    <p class="section-intro">Jewish tradition contains core principles of critical thinking that preceded modern cognitive psychology. Below are documented examples from the sources.</p>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">Mishnah, 2nd Century</div>
+        <h4>Disputes for the Sake of Heaven</h4>
+        <div class="hebrew-quote">&quot;Every dispute that is for the sake of Heaven will endure&quot;</div>
+        <p style="color: #888; font-size: 0.85em; margin-bottom: 10px;">Pirkei Avot 5:17</p>
+        <p>The Talmud presents <strong>both sides</strong> of every argument. Beit Hillel and Beit Shammai. The losing opinion is preserved forever &mdash; because perhaps one day the context will change and the minority opinion will become correct.</p>
+        <p><strong>Comparison to the modern era:</strong> While "cancel culture" dismisses dissenting opinions, the Talmudic principle encourages listening to the other side's reasoning.</p>
+    </div>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">An eternal Jewish trait</div>
+        <h4>&quot;Two Jews, Three Opinions&quot;</h4>
+        <p>This expression reflects an essential cultural characteristic. Jewish tradition has preserved plurality of opinions as a core value, and research shows that cognitive diversity contributes to group resilience.</p>
+        <p><strong>Related research:</strong> Scott Page (2007) in <em>The Difference</em> proved that cognitive diversity (variety of thinking approaches) beats individual talent. A diverse group of "ordinary" people solves problems better than a group of "experts" who all think the same way.</p>
+    </div>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">Torah + Ancient Greece</div>
+        <h4>Asking Questions as a Supreme Value</h4>
+        <div class="hebrew-quote">&quot;Why is this night different from all other nights?&quot;</div>
+        <p>The Passover Seder doesn't begin with answers &mdash; it begins with <strong>questions</strong>. The Torah commands "and you shall tell your child" &mdash; but the Haggadah happens through the child's questioning.</p>
+        <p><strong>The Socratic method:</strong> Socrates (470-399 BCE) developed a method of inquiry through questions. The Talmudic method is parallel and even predates it. Both say: The answer is less important than the question.</p>
+    </div>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">12th Century, Egypt and Spain</div>
+        <h4>Maimonides &mdash; Logic as the Foundation of Faith</h4>
+        <p>Moses ben Maimon (1138-1204) argued in the <em>Guide for the Perplexed</em> that faith and logic are not enemies. God <strong>gave</strong> humans intellect and expects them to <strong>use</strong> it.</p>
+        <p>Maimonides rejected blind faith. He encouraged investigation. He wrote: <em>Accept the truth from whoever speaks it</em> &mdash; regardless of whether they are Jewish, Muslim, Christian, or atheist. Truth does not depend on its source.</p>
+    </div>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">Beit Midrash tradition</div>
+        <h4>The Chavruta Method &mdash; Learning Through Debate</h4>
+        <p><strong>Chavruta:</strong> Two students sit together, study a text, argue, and challenge each other. Not to win &mdash; but to understand.</p>
+        <p><strong>Modern validation:</strong> Eric Mazur of Harvard (1991) developed the "Peer Instruction" method and proved that students who argue and discuss learn significantly more than those who listen passively.</p>
+        <p>The yeshiva is perhaps the oldest peer-learning institution in the world.</p>
+    </div>
+
+    <div class="wisdom-card">
+        <div class="wisdom-era">Babylonian Talmud, Bava Metzia 59b</div>
+        <h4>&quot;It Is Not in Heaven&quot;</h4>
+        <div class="hebrew-quote">&quot;Lo bashamayim hi&quot; (It is not in heaven)</div>
+        <p>In the famous Talmudic story, the voice of God Himself declares that a certain opinion is correct. But the sages reject it: <em>&quot;The Torah is not in heaven&quot;</em> &mdash; meaning humans must use their own reason.</p>
+        <p>This story is an extraordinary statement in religious literature: the authority to interpret the sacred text is given to rational human discussion, even in the face of supreme authority.</p>
+    </div>
+</div>
+
+<div class="section-transition">&#10070; &#10070; &#10070;</div>
+
+<!-- ============================== -->
+<!-- SECTION 8: MENTAL SHIELD       -->
+<!-- ============================== -->
+<div class="mind-section" id="mental-shield">
+    <h2>&#128737; Practical Application &mdash; Steps for Critical Thinking</h2>
+    <p class="section-intro">Theoretical knowledge about biases and manipulations is insufficient without practical application. Here is an action plan.</p>
+
+    <h3 style="color: #e2b714; margin: 25px 0 15px;">&#128203; 5 Questions Before You Share Anything</h3>
+    <ol class="action-list">
+        <li><strong>Who is the source?</strong> Is it credible? Is there a name and face behind the information?</li>
+        <li><strong>When was this published?</strong> Is it current? A video from 2018 presented as "today" is a lie.</li>
+        <li><strong>What is the purpose?</strong> To inform me, or to make me feel? Information that appeals only to emotion &mdash; suspect.</li>
+        <li><strong>Have I checked the other side?</strong> If I've only read one side &mdash; I don't know, I believe.</li>
+        <li><strong>Does this unite or divide?</strong> Content designed only to generate hatred &mdash; serves someone else, not you.</li>
+    </ol>
+
+    <h3 style="color: #e2b714; margin: 30px 0 15px;">&#128250; Daily Media Diet</h3>
+    <div class="tool-card">
+        <p><strong>1.</strong> Read at least one source from "the other side" every day.</p>
+        <p><strong>2.</strong> Limit social media to 30 minutes per day. Research by Allcott et al. (2020, American Economic Review) proved that reducing Facebook use significantly improved psychological well-being.</p>
+        <p><strong>3.</strong> Follow fact-checkers, not influencers.</p>
+        <p><strong>4.</strong> Read books, not comments. One book is worth a thousand posts.</p>
+    </div>
+
+    <h3 style="color: #e2b714; margin: 30px 0 15px;">&#128295; The Truth Toolkit</h3>
+    <div class="tool-card">
+        <p>&#9745; Google Reverse Image Search &mdash; bookmarked in your browser</p>
+        <p>&#9745; InVID WeVerify &mdash; extension installed in your browser</p>
+        <p>&#9745; 3 fact-checking websites bookmarked</p>
+        <p>&#9745; At least 2 news sources from different political directions</p>
+        <p>&#9745; Daily "Steel Man" exercise &mdash; formulate the <em>strongest</em> version of the opinion you disagree with</p>
+    </div>
+
+    <h3 style="color: #e2b714; margin: 35px 0 15px; text-align: center;">&#128220; The Covenant of Independent Thought</h3>
+    <div class="covenant-box">
+        <p>Principles of critical thinking:<br>Never share information without prior verification.<br>Ask questions before reacting.<br>Remember that the main obstacle to truth is not lies &mdash; but the avoidance of verification.<br>Accurate thinking strengthens the collective.</p>
+    </div>
+
+    <div class="closing-quote">
+        <blockquote>&#10077; Do not accept anything as true simply because you have heard it. Do not accept anything as true simply because the majority agrees. Investigate for yourself, and if you find that it leads to good &mdash; accept it and live by it &#10078;</blockquote>
+        <div class="quote-author">A parallel principle in Buddhism (Kalama Sutta) and in Maimonides' method &mdash; truth from any source</div>
+    </div>
+</div>
+
+<div class="page-footer">
+    <p><a href="index-en.html">&#8594; Back to main site</a></p>
+    <p style="margin-top: 15px;">Built by Nathanael Assis | 2026</p>
+</div>
+
+<!-- Floating Share Button -->
+<div class="share-fab" id="shareFab">
+    <div class="share-fab-menu">
+        <a class="sfab-wa" title="WhatsApp" onclick="fabShare('whatsapp')">W</a>
+        <a class="sfab-tg" title="Telegram" onclick="fabShare('telegram')">T</a>
+        <a class="sfab-tw" title="X / Twitter" onclick="fabShare('twitter')">&#120143;</a>
+        <a class="sfab-fb" title="Facebook" onclick="fabShare('facebook')">f</a>
+        <a class="sfab-cp" title="Copy link" onclick="fabShare('copy')">&#128203;</a>
+    </div>
+    <button class="share-fab-btn" aria-label="Share page" onclick="document.getElementById('shareFab').classList.toggle('open')" title="Share">&#10149;</button>
+</div>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('mind-en');</script>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index-en.html"><span class="mn-icon">&#127968;</span>Home</a>
+    <a href="lies-en.html"><span class="mn-icon">&#10060;</span>Lies</a>
+    <a href="antisemitism-en.html"><span class="mn-icon">&#128737;</span>Antisemitism</a>
+    <a href="october7-en.html"><span class="mn-icon">&#128293;</span>Oct 7</a>
+    <a href="facts-en.html"><span class="mn-icon">&#128269;</span>Facts</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

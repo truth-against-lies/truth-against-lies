@@ -1,0 +1,185 @@
+/* ============================================
+   SHARED-EN.CSS — LTR overrides for English pages
+   Load AFTER shared.css on -en.html pages only
+   ============================================ */
+
+/* === GENERAL DIRECTION === */
+body {
+    direction: ltr;
+    text-align: left;
+}
+
+/* === READING PROGRESS BAR === */
+.reading-progress {
+    right: auto;
+    left: 0;
+}
+
+/* === NAV DROPDOWN === */
+.nav-links {
+    right: auto;
+    left: 0;
+}
+
+/* === SUBMENU ARROW === */
+.has-submenu > a::after {
+    content: ' \25B8' !important; /* ▸ right-pointing arrow for LTR */
+}
+@media (max-width: 768px) {
+    .has-submenu > a::after {
+        content: ' \25BE' !important; /* ▾ down arrow on mobile */
+    }
+    .submenu {
+        border-right: none;
+        border-left: 2px solid rgba(226, 183, 20, 0.3);
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+/* === SETTINGS MENU === */
+.nav-settings-menu {
+    right: auto;
+    left: 0;
+}
+.nav-settings-menu button {
+    text-align: left;
+}
+
+/* === LANG MENU === */
+.nav-lang-menu {
+    right: auto;
+    left: 0;
+}
+
+/* === SHARE FAB MENU === */
+.share-fab-menu {
+    right: auto;
+    left: 0;
+}
+
+/* === SEARCH === */
+.search-input {
+    direction: ltr;
+}
+.search-close {
+    left: auto;
+    right: 20px;
+}
+@media (max-width: 768px) {
+    .search-close {
+        left: auto;
+        right: 12px;
+    }
+}
+
+/* === COPY LINK BUTTON === */
+.copy-link-btn {
+    float: right;
+}
+
+/* === TABLE OF CONTENTS === */
+.toc-link {
+    border-right: none;
+    border-left: 2px solid transparent;
+}
+.toc-link.active {
+    border-right-color: transparent;
+    border-left-color: #e2b714;
+}
+body.light-mode .toc-link.active {
+    border-right-color: transparent;
+    border-left-color: #b48c0a;
+}
+
+/* === LIE CARDS === */
+.lie-card {
+    border-right: none;
+    border-left: 4px solid #e74c3c;
+}
+.lie-claim-box {
+    border-right: none;
+    border-left: 3px solid #e74c3c;
+}
+.lie-refutation {
+    border-right: none;
+    border-left: 3px solid #2ecc71;
+}
+.lie-refutation ul {
+    padding-right: 0;
+    padding-left: 20px;
+}
+.lie-share-row {
+    margin-right: 0;
+    margin-left: auto;
+}
+body.light-mode .lie-card {
+    border-right-color: transparent;
+    border-left-color: #c0392b;
+}
+
+/* === TERM CARDS === */
+.term-card {
+    border-right: none;
+    border-left: 4px solid #e2b714;
+}
+
+/* === TL;DR BOX === */
+.tldr-box {
+    border-right: none;
+    border-left: 4px solid #e2b714;
+    direction: ltr;
+}
+.tldr-box li {
+    padding-right: 0;
+    padding-left: 20px;
+}
+.tldr-box li::before {
+    right: auto;
+    left: 0;
+}
+body.light-mode .tldr-box {
+    border-right-color: transparent;
+    border-left-color: #b48c0a;
+}
+
+/* === SOURCES LIST === */
+.sources-list {
+    padding: 0 0 0 25px;
+    direction: ltr;
+}
+
+/* === FACT CARDS PAGE === */
+.fact-card {
+    border-right: none;
+    border-left: 4px solid #e2b714;
+}
+
+/* === REGION CARDS === */
+.region-card {
+    border-right: none;
+    border-left: 4px solid #e2b714;
+}
+
+/* === GATEWAY CARDS === */
+.gateway-card {
+    text-align: left;
+}
+
+/* === BACK LINK ARROW === */
+.back-link::before {
+    content: '\2190 '; /* ← */
+}
+
+/* === INLINE BORDER FLIPS for common patterns === */
+[style*="border-right: 3px solid"],
+[style*="border-right: 4px solid"],
+[style*="border-right:3px solid"],
+[style*="border-right:4px solid"] {
+    border-right: none !important;
+}
+
+/* === PRINT === */
+@media print {
+    body { direction: ltr; text-align: left; }
+}

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Money &mdash; Terror Financing | Truth Against Lies</title>
+    <meta name="description" content="Qatar, PA corruption, UNRWA and payments to terrorists — tracking the flow of money">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Money &mdash; Terror Financing | Truth Against Lies">
+    <meta property="og:description" content="Qatar, PA corruption, UNRWA and payments to terrorists — tracking the flow of money">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-money-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Money &mdash; Terror Financing | Truth Against Lies">
+    <meta name="twitter:description" content="Qatar, PA corruption, UNRWA and payments to terrorists — tracking the flow of money">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="shared-en.css">
+    <style>
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.qatar { border-left: 4px solid #ffd700; }
+        .fact-card.corruption { border-left: 4px solid #ffc107; }
+        .fact-card.unrwa { border-left: 4px solid #e91e63; }
+        .fact-card.additional { border-left: 4px solid #8bc34a; }
+
+        /* === CORRUPTION MONEY FLOW === */
+        .corruption-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .corruption-flow .corr-box {
+            background: rgba(255,193,7,0.05);
+            border: 1px solid rgba(255,193,7,0.15);
+            border-radius: 3px;
+            padding: 12px;
+            text-align: center;
+        }
+        .corruption-flow .corr-amount {
+            color: #ffc107;
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        /* === QATAR DEEP DIVE === */
+        .qatar-timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 15px 0;
+        }
+        .qatar-timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #ffd700, #e74c3c);
+        }
+        .qatar-timeline .tl-item {
+            position: relative;
+            margin-bottom: 18px;
+            padding: 12px 15px;
+            background: rgba(255,215,0,0.04);
+            border-radius: 3px;
+        }
+        .qatar-timeline .tl-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 16px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ffd700;
+            border: 2px solid #0a0a1a;
+        }
+        .qatar-timeline .tl-item.critical::before {
+            background: #e74c3c;
+        }
+        .qatar-timeline .tl-date {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 0.85em;
+        }
+        .qatar-timeline .tl-text {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .qatar-timeline .tl-text strong {
+            color: #e2b714;
+        }
+        .qatar-money-flow {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .qatar-money-flow .flow-box {
+            background: rgba(255,215,0,0.04);
+            border: 1px solid rgba(255,215,0,0.15);
+            border-radius: 3px;
+            padding: 15px;
+            text-align: center;
+        }
+        .qatar-money-flow .flow-amount {
+            color: #ffd700;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .qatar-money-flow .flow-label {
+            color: #888;
+            font-size: 0.85em;
+            margin-top: 5px;
+        }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-left: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/facts-money-en.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/facts-money.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/facts-money-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/facts-money.html">
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"The Money — Terror Financing | Truth Against Lies","description":"Qatar, PA corruption, UNRWA and payments to terrorists — tracking the flow of money","author":{"@type":"Person","name":"Nathanael Assis"},"publisher":{"@type":"Organization","name":"Truth Against Lies"},"dateModified":"2026-03-10","inLanguage":"en","mainEntityOfPage":"https://truth-against-lies.github.io/truth-against-lies/facts-money-en.html"}
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="Settings" title="Settings">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">Light Mode</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>Print / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="Navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism-en.html">Antisemitism</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism-en.html">What is Antisemitism?</a></li>
+                        <li><a href="antisemitism-en.html#claims">Claims &amp; Refutations</a></li>
+                        <li><a href="holocaust-denial-en.html">Holocaust Denial</a></li>
+                        <li><a href="statistics-en.html">Statistics</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies-en.html">Common Lies</a></li>
+                <li><a href="fact-cards-en.html">&#127183; Fact Cards</a></li>
+                <li><a href="index-en.html#timeline">Timeline</a></li>
+                <li><a href="index-en.html#psychology">Psychology</a></li>
+                <li><a href="regions-en.html">Hatred by Nations</a></li>
+                <li class="has-submenu">
+                    <a href="gallery-en.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="gallery-en.html">Historical Documentation</a></li>
+                        <li><a href="videos-en.html">Watch &amp; Learn</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7-en.html">October 7</a></li>
+                <li class="has-submenu">
+                    <a href="facts-en.html">Facts They Don't Tell You</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command-en.html">Failed &amp; Treacherous Command</a></li>
+                        <li><a href="facts-knesset-en.html">Knesset Members</a></li>
+                        <li><a href="facts-court-en.html">Supreme Court &amp; Justice System</a></li>
+                        <li><a href="facts-policies-en.html">Failed Laws &amp; Policies</a></li>
+                        <li><a href="facts-media-en.html">Media Failures</a></li>
+                        <li><a href="facts-orgs-en.html">Organizations, Academia &amp; BDS</a></li>
+                        <li><a href="facts-money-en.html">The Money &mdash; Terror Funding</a></li>
+                        <li><a href="facts-iran-en.html">Iran's Axis of Destruction</a></li>
+                        <li><a href="facts-west-en.html">Western Betrayals</a></li>
+                        <li><a href="facts-myths-en.html">Debunked Myths</a></li>
+                        <li><a href="facts-netanyahu-en.html">The Netanyahu Paradox</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity-en.html">Strengthening</a>
+                    <ul class="submenu">
+                        <li><a href="unity-en.html">Strengthening the Jewish People</a></li>
+                        <li><a href="mind-en.html">Strengthening the Mind</a></li>
+                        <li><a href="left-narrative-en.html">The Left's Narrative</a></li>
+                        <li><a href="daat-dat-en.html">Reason vs. Religion</a></li>
+                        <li><a href="sword-prayer-en.html">Sword &amp; Prayer</a></li>
+                        <li><a href="the-schism-en.html">The Great Schism</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-en.html#report">Report Antisemitism</a></li>
+                <li><a href="glossary-en.html">Glossary</a></li>
+                <li><a href="action-en.html">Take Action</a></li>
+            </ul></div>
+        <a href="index-en.html" class="nav-logo">Truth Against Lies</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="Search the site" title="Search the site"><span class="search-icon">&#128269;</span><span class="search-label">Search</span></button>
+        <div class="nav-lang">
+            <a href="facts-money.html" class="nav-lang-btn" title="&#1506;&#1489;&#1512;&#1497;&#1514;">&#1506;&#1489;</a>
+        </div>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; Support</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128176; The Money &mdash; Funding Sources &amp; Destinations</h1>
+    <p class="subtitle">Qatar, PA corruption, UNRWA and payments to terrorists &mdash; tracking the flow of money</p>
+    <p class="disclaimer">&#9888; Based on documented sources only</p>
+    <p class="hero-meta">Last updated: March 2026</p>
+</div>
+
+<main id="main-content" style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<p style="margin-bottom: 30px;"><a href="facts-en.html" style="color: #e2b714; text-decoration: none; font-size: 1.05em;">&larr; Back to Facts</a></p>
+
+<div class="tldr-box">
+    <div class="tldr-title">In Brief</div>
+    <ul>
+        <li>Qatar transferred $1.8 billion+ to Hamas in suitcases of cash through the Erez crossing &mdash; $30M per month</li>
+        <li>The Palestinian Authority pays $350M per year to terrorists and their families &mdash; "Pay for Slay"</li>
+        <li>UNRWA: 12 employees participated in October 7, Hamas tunnels found under schools</li>
+        <li>PA corruption: Arafat amassed $1-5 billion, Abbas and his sons are billionaires &mdash; from aid money</li>
+    </ul>
+    <a href="#content-start" class="tldr-cta">&darr; Read the full article</a>
+</div>
+
+<!-- ==================== SECTION 1: QATAR DEEP DIVE ==================== -->
+<section id="content-start">
+    <div class="section-header fade-in">
+        <h2>&#128176; Deep Investigation: Qatari Money to Hamas</h2>
+        <div class="section-divider"></div>
+        <p>$1.8 billion+ in cash suitcases &mdash; policy analysis and its consequences</p>
+    </div>
+
+    <div id="fact-1" class="fact-card qatar fade-in">
+        <h3>The Physical Mechanism &mdash; Suitcases of Cash Through Erez</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2012&ndash;2023</div>
+        <div class="context">Qatari ambassador <strong>Mohammed al-Emadi</strong> physically entered Gaza through the Erez crossing every month, carrying <strong>suitcases full of cash</strong>. The money was transferred <strong>directly to Hamas</strong> &mdash; not through banks, not through international oversight, not through the Palestinian Authority. After 2018, Israel required that some of the funds be channeled through <strong>fuel vouchers</strong> and UN aid coupons &mdash; but <strong>Hamas continued to control distribution</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The mechanism in practice:</div>
+            <p>Israel approved the entry of cash into the Gaza Strip. Oversight was partial and insufficient, particularly regarding the salary component.</p>
+        </div>
+        <div class="source">Sources: New York Times | Wall Street Journal | Times of Israel | Channel 12</div>
+    </div>
+
+    <div id="fact-2" class="fact-card qatar fade-in">
+        <h3>$30 Million Per Month &mdash; Breakdown</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Budget breakdown</div>
+        <div class="qatar-money-flow">
+            <div class="flow-box">
+                <div class="flow-amount">$10M</div>
+                <div class="flow-label">Fuel and energy<br><small style="color:#e74c3c;">Hamas controlled distribution</small></div>
+            </div>
+            <div class="flow-box">
+                <div class="flow-amount">$10M</div>
+                <div class="flow-label">Hamas employee salaries<br><small style="color:#e74c3c;">Including the military wing</small></div>
+            </div>
+            <div class="flow-box">
+                <div class="flow-amount">$10M</div>
+                <div class="flow-label">"Family assistance"<br><small style="color:#e74c3c;">Including terrorist families</small></div>
+            </div>
+        </div>
+        <div class="context"><strong>Total: $1.8 billion+</strong> from 2012 to 2023. According to reports, <strong>Mohammed Deif (military wing commander) diverted $4 million per month</strong> from the Qatari funds to military development: tunnels, rockets, drones, divers, and fighter training.</div>
+        <div class="result">
+            <div class="result-label">&#9888; Summary:</div>
+            <p>At least <strong>$48 million per year</strong> was diverted directly to Hamas's military wing &mdash; which planned and executed October 7.</p>
+        </div>
+        <div class="source">Sources: Shin Bet | Haaretz | Channel 13 | FDD (Foundation for Defense of Democracies)</div>
+    </div>
+
+    <div id="fact-3" class="fact-card qatar fade-in">
+        <h3>Who Approved? &mdash; The Chain of Authorization</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Political and security echelons</div>
+        <div class="context">
+            &#8226; <strong>Benjamin Netanyahu</strong> (Prime Minister) &mdash; personally promoted the policy. Quote from Likud faction meeting, <strong>March 2019</strong>: <strong>"Anyone who wants to thwart the establishment of a Palestinian state should support the strengthening of Hamas and the transfer of money to them"</strong><br>
+            &#8226; <strong>The Security Cabinet</strong> &mdash; formally approved the mechanism<br>
+            &#8226; <strong>Mossad</strong> &mdash; coordinated the entries through Erez<br>
+            &#8226; <strong>IDF/AMAN</strong> &mdash; provided the assessment that the money "keeps things quiet"<br>
+            &#8226; <strong>Shin Bet</strong> &mdash; knew about diversion of funds to the military wing, <strong>warned &mdash; was ignored</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The significance:</div>
+            <p>The data indicates this was a coordinated policy involving multiple elements of the security establishment, led by the Prime Minister.</p>
+        </div>
+        <div class="source">Sources: Haaretz | Channel 12 | Jerusalem Post | Ynet | Times of Israel</div>
+    </div>
+
+    <div id="fact-4" class="fact-card qatar fade-in">
+        <h3>Netanyahu's Quote &mdash; March 2019</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Likud faction meeting</div>
+        <div class="quote">"Anyone who wants to thwart the establishment of a Palestinian state should support the strengthening of Hamas and the transfer of money to them. This is part of our strategy &mdash; to isolate the Palestinians in Gaza from the Palestinians in Judea and Samaria."</div>
+        <div class="context">This quote, first published in Channel 12 and Haaretz, points to the political logic behind the money policy: preventing a Palestinian state by splitting Gaza from the West Bank. Hamas, according to this logic, was perceived as a "strategic asset."</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>The organization defined as an "asset" carried out the deadliest terror attack in Israel's history on October 7, 2023.</p>
+        </div>
+        <div class="source">Sources: Channel 12 | Haaretz | Times of Israel | New York Times</div>
+    </div>
+
+    <div id="fact-5" class="fact-card qatar fade-in">
+        <h3>Who Warned? &mdash; The Rejected Warnings</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2016&ndash;2023</div>
+        <div class="qatar-timeline">
+            <div class="tl-item critical">
+                <div class="tl-date">December 2016</div>
+                <div class="tl-text"><strong>Avigdor Lieberman</strong> (Defense Minister) wrote a formal memo warning that Qatari money was <strong>directly funding Hamas's military wing</strong> and that the policy would lead to a <strong>"security disaster."</strong> The memo was rejected.</div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">2019&ndash;2020</div>
+                <div class="tl-text"><strong>Shin Bet</strong> reported that Mohammed Deif was diverting <strong>$4 million/month</strong> from Qatari funds to <strong>military development</strong>: offensive tunnels, rockets, drones, naval capabilities. The report <strong>did not lead to a policy change</strong>.</div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2019&ndash;2021</div>
+                <div class="tl-text">Intelligence officials speaking anonymously to <strong>Channel 13</strong> and the <strong>Wall Street Journal</strong> said the money was "creating a monster" and that Hamas was <strong>"building an army."</strong> The political echelon dismissed it: <strong>"Better money and quiet than war."</strong></div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">September 2023</div>
+                <div class="tl-text"><strong>One month before October 7</strong>: Israel asked Qatar <strong>to increase the transfers</strong>. Hamas had already completed training for <strong>Operation "Al-Aqsa Flood."</strong></div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The significance:</div>
+            <p>All warnings &mdash; from Lieberman, Shin Bet, and intelligence officials &mdash; were rejected. The policy continued until September 2023, when Israel even asked to increase the transfers.</p>
+        </div>
+        <div class="source">Sources: Lieberman Memo | Shin Bet | Channel 13 | Wall Street Journal | New York Times</div>
+    </div>
+
+    <div id="fact-6" class="fact-card qatar fade-in">
+        <h3>Official Justifications &mdash; "Quiet for Cash"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Political and security establishment arguments</div>
+        <div class="context">
+            <strong>Argument 1:</strong> "The money prevents a humanitarian crisis that would create international pressure on Israel"<br>
+            <strong>Argument 2:</strong> "Hamas that is busy with civilian management doesn't engage in terror" &mdash; <strong>the Conception</strong><br>
+            <strong>Argument 3:</strong> "If we stop the money, Hamas will start a war"<br>
+            <strong>Argument 4:</strong> "Better a strong Hamas that is responsible than chaos in Gaza"<br>
+            <strong>Argument 5:</strong> "The money goes to civilians, not the military" &mdash; <strong>contradicted by Shin Bet reports</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; What actually happened:</div>
+            <p>The events of October 7, 2023, disproved all five assumptions. Hamas was not deterred, some funds reached the military wing, and the "quiet" period was used for military preparation.</p>
+        </div>
+        <div class="source">Sources: IDF and Shin Bet internal investigations | Shin Bet reports | Haaretz | Channel 12</div>
+    </div>
+
+    <div id="fact-7" class="fact-card qatar fade-in">
+        <h3>What Hamas Did With the Money &mdash; The October 7 Arsenal</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Documented uses</div>
+        <div class="context">
+            &#128308; <strong>560-720 km of tunnels</strong> &mdash; a system larger than the London Underground. Cost: <strong>~$275,000 per kilometer</strong> (IDF estimate).<br>
+            &#128308; <strong>14,000+ rockets</strong> fired from 2012 to 10/7 + 3,000+ on 10/7 itself<br>
+            &#128308; <strong>Attack drones</strong> that disabled observation towers on 10/7<br>
+            &#128308; <strong>Naval capabilities</strong> &mdash; divers who infiltrated by sea<br>
+            &#128308; <strong>Training of 6,000+ fighters</strong> for the October 7 invasion<br>
+            &#128308; <strong>Nukhba battalions</strong> (elite force) &mdash; established and trained with these funds<br>
+            &#128308; <strong>Communications equipment</strong> and underground command and control systems
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The key finding:</div>
+            <p>According to official investigations, funds that Israel approved were used to finance the military capabilities that enabled the October 7 attack.</p>
+        </div>
+        <div class="source">Sources: IDF | CNN | NPR | Times of Israel | FDD</div>
+    </div>
+
+    <div id="fact-8" class="fact-card qatar fade-in">
+        <h3>"The Conception" &mdash; Hamas Is Deterred, Hamas Is an Asset</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">The thinking failure underlying the policy</div>
+        <div class="context">"The Conception" was the assumption that Hamas was <strong>"deterred from fighting"</strong> and preferred <strong>civilian governance over confrontation</strong>. This assumption enabled the justification of the money policy. The key figures:
+        <br><br>
+            &#8226; <strong>Tamir Hayman</strong> (AMAN chief): "Hamas is very deterred from war" (June 2019)<br>
+            &#8226; <strong>Aharon Haliva</strong> (AMAN chief): "I expected quiet for 5 years"<br>
+            &#8226; <strong>Aviv Kochavi</strong> (Chief of Staff): led the "Hamas = asset" policy<br>
+            &#8226; <strong>The Cabinet</strong>: accepted intelligence assessments without challenge
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; What actually happened:</div>
+            <p>The deterrence assumption did not hold. Hamas used the funds to strengthen its military capabilities, and used the "quiet" period for operational preparations. The events of October 7 disproved the Conception's assumptions.</p>
+        </div>
+        <div class="source">Sources: IDF internal investigations and State Comptroller reports | Channel 12 | Haaretz | Jerusalem Post</div>
+    </div>
+
+    <div id="fact-9" class="fact-card qatar fade-in">
+        <h3>September 2023 &mdash; "Increase the Money" (One Month Before 10/7)</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">The critical point</div>
+        <div class="quote">In September 2023, Israel asked Qatar to increase the transfers to Hamas.</div>
+        <div class="context">While Hamas <strong>was completing its training</strong> for "Al-Aqsa Flood" &mdash; Israel, instead of preparing, <strong>asked to transfer more money</strong>. That same month:
+        <br><br>
+            &#8226; Hamas conducted a <strong>final general rehearsal</strong> near the fence<br>
+            &#8226; <strong>Female observers</strong> reported unusual training &mdash; <strong>reports were dismissed</strong><br>
+            &#8226; <strong>Unit 8200</strong> received intelligence &mdash; <strong>classified as "unrealistic"</strong><br>
+            &#8226; Israel <strong>moved forces from Gaza to the West Bank</strong> for the Tishrei holidays
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The gap between policy and reality:</div>
+            <p>Israel asked to increase transfers to an organization that was at that time completing preparations for an attack. 30 days later &mdash; 1,200 dead.</p>
+        </div>
+        <div class="source">Sources: New York Times | Haaretz | Channel 13 | Wall Street Journal</div>
+    </div>
+
+    <div id="fact-10" class="fact-card qatar fade-in">
+        <h3>Shin Bet Investigation (March 2025) &mdash; "Direct Link to the Money Policy"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Official conclusions</div>
+        <div class="quote">An internal Shin Bet investigation completed in March 2025 established a "direct link" between the policy of transferring Qatari funds and the capabilities that enabled the October 7 attack.</div>
+        <div class="context">Key investigation findings:
+        <br><br>
+            &#8226; The funds enabled Hamas to <strong>maintain an armament system</strong> alongside civilian governance<br>
+            &#8226; <strong>Shin Bet warnings</strong> about diversion of funds to the military wing <strong>were rejected by the political echelon</strong><br>
+            &#8226; The mechanism created a <strong>"false mutual dependency"</strong> &mdash; Israel thought Hamas "needed" the money too much to risk it<br>
+            &#8226; Hamas exploited the "quiet" as a <strong>period of strategic buildup</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The conclusion:</div>
+            <p>According to the Shin Bet investigation's conclusions, the money transfer policy indirectly enabled the buildup of capabilities that led to the October 7 attack.</p>
+        </div>
+        <div class="source">Sources: Shin Bet | Haaretz | Channel 12 | Times of Israel | Ynet</div>
+    </div>
+
+    <div id="fact-11" class="fact-card qatar fade-in">
+        <h3>"Qatargate" &mdash; Did Netanyahu's Aides Receive Qatari Money?</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Political scandal</div>
+        <div class="context">Between 2019-2023, suspicions and reports emerged that <strong>figures in Netanyahu's inner circle</strong> received benefits from Qatari sources. The affair, dubbed <strong>"Qatargate,"</strong> included:
+        <br><br>
+            &#8226; Reports of <strong>political mediation</strong> between Doha and Jerusalem<br>
+            &#8226; Suspicions of <strong>personal benefits</strong> for those who promoted the policy<br>
+            &#8226; <strong>Visits by Qatari diplomats to Israel</strong> with unusual status<br>
+            &#8226; <strong>Legal representation</strong> funded by Qatari sources for Israelis
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; Open question:</div>
+            <p>Was the money policy driven <strong>solely by security considerations</strong> &mdash; or also by <strong>personal interests</strong>? As of 2025, the investigation has not been completed.</p>
+        </div>
+        <div class="source">Sources: Channel 13 | Haaretz | Calcalist | Foreign reports</div>
+    </div>
+
+    <div id="fact-12" class="fact-card qatar fade-in">
+        <h3>Full Timeline &mdash; From 2012 to October 7</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Chronology</div>
+        <div class="qatar-timeline">
+            <div class="tl-item">
+                <div class="tl-date">2012</div>
+                <div class="tl-text">Qatar begins transferring funds to Gaza. <strong>$400 million</strong> for construction projects.</div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2014</div>
+                <div class="tl-text"><strong>Operation Protective Edge</strong>. Hamas uses tunnels built with Qatari money. 72 Israelis killed (66-67 soldiers and 5-6 civilians).</div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">2016</div>
+                <div class="tl-text"><strong>Lieberman writes a warning memo</strong>. Rejected. The money continues to flow.</div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2018</div>
+                <div class="tl-text">Transfers move to a fixed <strong>$30M/month</strong>. Netanyahu approves personally. "March of Return" protests at the fence.</div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">March 2019</div>
+                <div class="tl-text">Netanyahu at Likud faction: <strong>"Anyone who wants to thwart a Palestinian state should support strengthening Hamas."</strong></div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2019</div>
+                <div class="tl-text">Tamir Hayman (AMAN chief): <strong>"Hamas is very deterred from war."</strong></div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">May 2021</div>
+                <div class="tl-text"><strong>Operation Guardian of the Walls</strong>. Hamas fires 4,360 rockets in 11 days. The money continues.</div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">2022</div>
+                <div class="tl-text">Shin Bet reports: Deif diverts <strong>$4M/month to military wing</strong>. Report rejected.</div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">September 2023</div>
+                <div class="tl-text">Israel asks Qatar <strong>to increase the transfers</strong>. Hamas completes final training exercises.</div>
+            </div>
+            <div class="tl-item critical">
+                <div class="tl-date">October 7, 2023</div>
+                <div class="tl-text"><strong>~3,000 terrorists breach the fence (out of ~6,000 mobilized). 1,200 murdered. 251 kidnapped.</strong> The Qatari money funded it all.</div>
+            </div>
+            <div class="tl-item">
+                <div class="tl-date">March 2025</div>
+                <div class="tl-text"><strong>Shin Bet investigation</strong> establishes "direct link" between the money policy and 10/7.</div>
+            </div>
+        </div>
+        <div class="source">Sources: New York Times | Wall Street Journal | Haaretz | Channel 12 | Shin Bet | FDD</div>
+    </div>
+
+    <div id="fact-13" class="fact-card qatar fade-in" style="background: linear-gradient(135deg, #12172b, rgba(231,76,60,0.08)); border: 1px solid rgba(231,76,60,0.2);">
+        <h3 style="color: #e74c3c; font-size: 1.4em;">&#9888; Summary of Findings</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            The Israeli government approved the transfer of $1.8 billion+ to Hamas, an organization whose stated goal is the destruction of the State of Israel.<br><br>
+            The money was delivered in cash suitcases, with partial and insufficient oversight.<br>
+            Intelligence officials warned of the policy's consequences &mdash; the warnings were rejected.<br>
+            Hamas allocated some of the funds to building military capabilities: tunnels, rockets, and fighter training.<br>
+            One month before the attack &mdash; Israel asked to increase the transfers.<br><br>
+            <strong style="color: #e74c3c; font-size: 1.1em;">On October 7, 2023, 1,200 Israelis and foreign nationals were murdered in an attack financed in part by these funds.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 2: PA CORRUPTION ==================== -->
+<section id="corruption-deep" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header">
+        <h2>&#128176; Palestinian Authority Corruption &mdash; $40 Billion+ That Disappeared</h2>
+        <div class="section-divider"></div>
+        <p>Analysis of international aid allocation to the Palestinian Authority</p>
+    </div>
+
+    <div id="fact-14" class="fact-card corruption fade-in">
+        <h3>Yasser Arafat &mdash; $1 to $6.5 Billion</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">"Leader of the Palestinians" | 1994-2004</div>
+        <div class="context">
+            <strong>Forbes (2003):</strong> Estimated Arafat's wealth at <strong>$300 million</strong> &mdash; among the wealthiest world leaders.<br>
+            <strong>CBS 60 Minutes:</strong> Investigation found <strong>$1 billion+</strong> that Arafat hid in secret accounts.<br>
+            <strong>IMF (2003):</strong> Confirmed that <strong>$900 million</strong> in PA funds was diverted to an account controlled by Arafat between 1995-2000.<br>
+            <strong>Additional estimates:</strong> Various researchers estimated his wealth at <strong>$3-6.5 billion</strong>.<br><br>
+            <strong>Meanwhile:</strong> Palestinians lived in poverty. Arafat rejected the Camp David peace offer (2000) and ignited an Intifada that killed <strong>3,000 Palestinians and 1,137 Israelis</strong>.<br><br>
+            <strong style="color: #ffc107;">According to documentation, the leadership accumulated significant personal wealth while the population lived in poverty.</strong>
+        </div>
+        <div class="source">Sources: Forbes 2003 | CBS 60 Minutes | IMF Report 2003 | Haaretz</div>
+    </div>
+
+    <div id="fact-15" class="fact-card corruption fade-in">
+        <h3>The Abbas Family &mdash; A Business Empire</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Mahmoud Abbas &mdash; in power since 2005, from a 4-year "term"</div>
+        <div class="context">
+            <strong>Abbas's sons:</strong> Yasser and Tareq Abbas operate a <strong>business empire</strong> within the PA:<br>
+            &#8226; <strong>Sky (Falcon Tobacco):</strong> Cigarette monopoly in the PA<br>
+            &#8226; Real estate, contracting, and communications<br>
+            &#8226; <strong>Government contracts</strong> channeled to family companies<br><br>
+            <strong>Abbas himself:</strong><br>
+            &#8226; <strong>In power since 2005</strong> &mdash; without elections<br>
+            &#8226; Low official salary &mdash; but lives in a <strong>$13 million palace in Ramallah</strong><br>
+            &#8226; Doctorate from Patrice Lumumba University (Moscow) &mdash; <strong>a thesis that denied the Holocaust</strong><br><br>
+            <strong style="color: #ffc107;">Abbas has served continuously since 2005 without elections, while his family has accumulated significant business assets.</strong>
+        </div>
+        <div class="source">Sources: OCCRP | Al Jazeera | Reuters | Jerusalem Post</div>
+    </div>
+
+    <div id="fact-16" class="fact-card corruption fade-in">
+        <h3>$40 Billion+ in Aid &mdash; The Highest Per Capita in History</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">More than the Marshall Plan for Europe</div>
+        <div class="context">
+            <strong>From 1993 (Oslo) to 2026:</strong> Palestinians received <strong>$40 billion+</strong> in international aid.<br>
+            <strong>Per capita:</strong> <strong>The highest aid per capita in history</strong> &mdash; including the Marshall Plan for post-WWII European reconstruction.<br><br>
+            <strong>Where did the money go?</strong>
+            <div class="corruption-flow">
+                <div class="corr-box">
+                    <div class="corr-amount">$330M/year</div>
+                    <div style="color:#aaa;">Payments to terrorists<br>("Pay for Slay")</div>
+                </div>
+                <div class="corr-box">
+                    <div class="corr-amount">$900M</div>
+                    <div style="color:#aaa;">Diverted by Arafat<br>(IMF confirmed)</div>
+                </div>
+                <div class="corr-box">
+                    <div class="corr-amount">Tunnels</div>
+                    <div style="color:#aaa;">Aid cement turned<br>into terror tunnels</div>
+                </div>
+                <div class="corr-box">
+                    <div class="corr-amount">Villas</div>
+                    <div style="color:#aaa;">Senior officials live<br>in luxury</div>
+                </div>
+            </div>
+            <strong style="color: #ffc107;">$40 billion in aid did not produce equivalent state infrastructure. A significant portion of the funds was diverted to payments for terrorists, military infrastructure, and personal assets of officials.</strong>
+        </div>
+        <div class="source">Sources: World Bank | OECD | Congressional Research Service | PA Budget Analysis</div>
+    </div>
+
+    <div id="fact-17" class="fact-card corruption fade-in">
+        <h3>Hamas Leaders &mdash; $11 Billion (Israeli Intelligence Estimates)</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">"Resistance" &mdash; from hotels in Doha</div>
+        <div class="context">
+            <strong>Accumulated wealth of Hamas leaders (Israeli intelligence estimates):</strong><br>
+            &#8226; <strong>Khaled Mashal:</strong> $2.6-$5 billion &mdash; lives in luxury in Qatar<br>
+            &#8226; <strong>Mousa Abu Marzook:</strong> $2-$3 billion &mdash; lives in Qatar<br>
+            &#8226; <strong>Ismail Haniyeh (deceased):</strong> $4 billion &mdash; lived in Qatar until his assassination<br><br>
+            <strong>Meanwhile in Gaza:</strong><br>
+            &#8226; 45% unemployment<br>
+            &#8226; Only a few hours of electricity per day<br>
+            &#8226; 96% of drinking water contaminated<br>
+            &#8226; Population trapped &mdash; Hamas <strong>prevents evacuation</strong> during war<br><br>
+            <strong style="color: #ffc107;">According to the data, Hamas leaders accumulated significant wealth while residing outside the Gaza Strip, as the population lives in dire humanitarian conditions.</strong>
+        </div>
+        <div class="source">Sources: Forbes Middle East | Times of Israel | Telegraph | Israeli Intelligence</div>
+    </div>
+
+    <div id="fact-18" class="fact-card corruption fade-in">
+        <h3>UNRWA &mdash; Perpetuating 5.9 Million "Refugees" from 750K Original</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">The only UN agency that perpetuates refugee status</div>
+        <div class="context">
+            <strong>1948:</strong> ~<strong>750,000</strong> Arabs left/were expelled.<br>
+            <strong>2024:</strong> UNRWA registers <strong>5.9 million "refugees"</strong> &mdash; because <strong>the status is inherited</strong>.<br><br>
+            <strong>The difference from every other refugee in the world:</strong><br>
+            &#8226; <strong>UNHCR</strong> (all refugees worldwide): Goal = <strong>rehabilitation and integration</strong>. 72 million refugees.<br>
+            &#8226; <strong>UNRWA</strong> (Palestinians only): Goal = <strong>preserve the status</strong>. Inherited forever.<br><br>
+            <strong>The result:</strong> Instead of rehabilitating 750K in 1948, they created <strong>5.9 million claiming a "right of return"</strong> &mdash; a demographic weapon for Israel's elimination.<br>
+            <strong>UNRWA employees on 10/7:</strong> The OIOS investigation confirmed involvement of <strong>9 UNRWA employees</strong> in the massacre (Israel claimed 12). Teachers, social workers &mdash; terrorists.<br><br>
+            <strong style="color: #ffc107;">UNRWA's structure, unlike UNHCR, perpetuates refugee status instead of resolving it.</strong>
+        </div>
+        <div class="source">Sources: UNRWA Reports | UN Watch | IMPACT-se | Israeli Intelligence Jan 2024</div>
+    </div>
+
+    <div id="fact-19" class="fact-card corruption fade-in" style="background: linear-gradient(135deg, #12172b, rgba(255,193,7,0.08)); border: 1px solid rgba(255,193,7,0.2);">
+        <h3 style="color: #ffc107; font-size: 1.4em;">&#9888; Financial Summary</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>Arafat:</strong> $1-6.5B (varying estimates). <strong>Abbas:</strong> Extensive family assets. <strong>Hamas leaders:</strong> $11B (Israeli intelligence estimates).<br>
+            <strong>$40 billion in aid</strong> &mdash; a significant portion did not reach civilian development.<br>
+            <strong>$330 million/year</strong> for payments to terrorists &mdash; an official PA law.<br>
+            <strong>UNRWA</strong> expanded registered refugees from 750K to 5.9M through hereditary status transfer.<br><br>
+            <strong style="color: #ffc107; font-size: 1.1em;">The data reveals a consistent pattern: a significant portion of international aid funds did not reach their stated purpose, while the leadership accumulated personal wealth.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 3: UNRWA ==================== -->
+<section id="unrwa" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header fade-in">
+        <h2>&#127963; UNRWA &mdash; Findings and Criticism</h2>
+        <div class="section-divider"></div>
+        <p>Findings regarding the operations of the UN agency for Palestinian refugees</p>
+    </div>
+
+    <div id="fact-20" class="fact-card unrwa fade-in">
+        <h3>UNRWA Employees on October 7</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">January 2024 &mdash; Israeli intelligence disclosure</div>
+        <div class="context">Israel presented intelligence that <strong>12 UNRWA employees</strong> directly participated in the October 7 massacre. The UN investigation (OIOS) confirmed involvement of <strong>9 employees</strong> and fired them. Additionally, according to Israeli intelligence claims, <strong>~1,200 employees (10% of 12,000)</strong> were found to have ties to Hamas/Islamic Jihad, of whom <strong>190 were identified terror operatives</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p><span class="stat-highlight">16 countries</span> froze funding totaling $440M+. The Knesset voted <span class="stat-highlight">92-10</span> to ban UNRWA operations in Israel.</p>
+        </div>
+        <div class="source">Sources: CNN | NPR | Times of Israel | Wall Street Journal | NBC News</div>
+    </div>
+
+    <div id="fact-21" class="fact-card unrwa fade-in">
+        <h3>Hamas Tunnel Under UNRWA Headquarters</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">February 2024 &mdash; IDF discovery</div>
+        <div class="context">The IDF uncovered a <strong>700-meter tunnel</strong> directly beneath UNRWA headquarters in Gaza City, with a <strong>Hamas data center and computer servers</strong>, an electrical room with industrial batteries, living quarters, a kitchen, and meeting rooms. Electrical cables <strong>ran directly from the UNRWA building</strong> to the tunnel. The walls were covered with <strong>al-Qassam Brigades posters</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>Lazzarini (UNRWA chief): "We didn't know what was under the headquarters." IDF commander: "There is no doubt that UNRWA employees knew."</p>
+        </div>
+        <div class="source">Sources: Times of Israel | NPR | Jerusalem Post</div>
+    </div>
+
+    <div id="fact-22" class="fact-card unrwa fade-in">
+        <h3>Rockets in UNRWA Schools</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">July 2014 &mdash; 3 separate incidents</div>
+        <div class="context">During Operation Protective Edge, UNRWA <strong>itself admitted</strong> that rockets were found in its schools on <strong>3 separate occasions</strong> (July 16, 22, and 29, 2014). In the third incident, approximately 20 missiles were found. <strong>UNRWA returned the rockets to "local authorities"</strong> &mdash; i.e., to Hamas. A UN commission of inquiry determined it was <strong>"very likely"</strong> that Hamas used UNRWA schools for weapons storage and firing.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>UNRWA discovered Hamas weapons &mdash; and <strong>returned them to Hamas</strong>.</p>
+        </div>
+        <div class="source">Sources: Official UNRWA statements | Times of Israel | UN Watch</div>
+    </div>
+
+    <div id="fact-23" class="fact-card unrwa fade-in">
+        <h3>Textbooks of Incitement and Jihad</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">IMPACT-se research &mdash; 2022-2023</div>
+        <div class="context">Textbooks in UNRWA schools include: <strong>praise for terrorist Dalal Mughrabi</strong> (38 killed including 13 children) as a "heroine," reading exercises presenting an arson attack as a <strong>"barbecue party,"</strong> math problems using <strong>numbers of martyrs</strong>, grammar sentences: "I will wage jihad to liberate the homeland," <strong>maps that erase Israel</strong> entirely. At least <strong>100 Hamas members</strong> who carried out 10/7 are graduates of the UNRWA education system.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>IMPACT-se research points to educational curricula that promote violence, funded by the international community.</p>
+        </div>
+        <div class="source">Sources: IMPACT-se Reports | Times of Israel | UN Watch</div>
+    </div>
+
+    <div id="fact-24" class="fact-card unrwa fade-in">
+        <h3>133+ Teachers Celebrated Terror Online</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">UN Watch &mdash; 2023-2024</div>
+        <div class="context">UN Watch documented <strong>133 UNRWA teachers and employees</strong> who posted hate and violence content on social media. <strong>30 teachers celebrated the October 7 massacre</strong>. A Telegram group of <strong>3,000 UNRWA teachers</strong> included members who encouraged attacks and shared instructions to assist Hamas.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>133 UNRWA employees were documented publishing hate and violence content, including 30 teachers who celebrated the October 7 attack.</p>
+        </div>
+        <div class="source">Sources: UN Watch | UNRWA Terrorgram Report</div>
+    </div>
+
+    <div id="fact-25" class="fact-card unrwa fade-in">
+        <h3>Perpetuating the Refugee Problem</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Since 1950</div>
+        <div class="context">In 1948 there were <strong>~750,000 refugees</strong>. Today UNRWA registers <strong>5.9 million "refugees"</strong> &mdash; 8 times more. The reason: UNRWA transfers refugee status <strong>to descendants in perpetuity</strong> &mdash; a unique case worldwide. UNHCR (the regular refugee agency) works to end refugee status through rehabilitation. <strong>UNRWA is the only agency that perpetuates it</strong>. If UNHCR criteria applied, only <strong>tens of thousands</strong> from 1948 would still be alive.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>750,000 &rarr; <span class="stat-highlight">5.9 million</span>. A unique structure that perpetuates refugee status instead of resolving it.</p>
+        </div>
+        <div class="source">Sources: Foreign Policy | Times of Israel | UNRWA FAQ | Fathom Journal</div>
+    </div>
+
+    <div id="fact-26" class="fact-card unrwa fade-in">
+        <h3>Systematic Aid Theft</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2023-2024</div>
+        <div class="context">Hamas set fixed quotas of <strong>15%-25% of all aid</strong> for its own use. In intercepted conversations, Gaza residents described how Hamas <strong>looted UNRWA flour warehouses</strong> and sold it to civilians at inflated prices. UNRWA vehicles were <strong>lent to Hamas</strong>. UNRWA and USAID bags were found as <strong>construction materials in tunnels</strong> beneath al-Azhar University.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>Humanitarian aid intended for civilians was systematically stolen for Hamas's benefit.</p>
+        </div>
+        <div class="source">Sources: UN Watch | FDD Analysis | JNS</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 4: ADDITIONAL MONEY CARDS ==================== -->
+<section id="additional-money" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+    <div class="section-header fade-in">
+        <h2>&#128181; Payments to Terrorists and Aid Diversion</h2>
+        <div class="section-divider"></div>
+        <p>"Pay-for-Slay" policy and diversion of construction materials for military use</p>
+    </div>
+
+    <div id="fact-27" class="fact-card additional fade-in">
+        <h3>"Martyr Pay Law" &mdash; Payment Scale by Severity of Crime</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Since 2004 | $300M+/year</div>
+        <div class="context">The Palestinian Authority pays <strong>monthly salaries to terrorists and their families</strong> &mdash; <strong>$300 million+ per year</strong> (7% of the budget). Scale: up to 3 years = $400/month, <strong>30+ years = $3,429/month</strong>. <strong>8,000 terrorist "pensioners."</strong> Ahmad Barghouti (12 killed in suicide bombings) received <strong>1.2 million NIS</strong>. In February 2025, Abu Mazen announced the "abolition" of the fund &mdash; in 2026 the US confirmed the fund <strong>continues under a different name</strong>.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The outcome:</div>
+            <p>The mechanism creates a direct economic incentive for terrorist acts &mdash; the payment amount increases in proportion to the severity of the act.</p>
+        </div>
+        <div class="source">Sources: Palestinian Media Watch | Taylor Force Act | US Congress | Ynetnews</div>
+    </div>
+
+    <div id="fact-28" class="fact-card additional fade-in">
+        <h3>Aid Diversion in Gaza &mdash; Cement for Tunnels, Pipes for Rockets</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2007-2024</div>
+        <div class="context">Hamas built <strong>560-720 km of tunnels</strong> &mdash; a system larger than the London Underground. "Humanitarian" construction materials were diverted to tunnels: <strong>UNRWA and USAID bags</strong> were found as building materials. <strong>Sewer pipes</strong> were uprooted for rocket production. <strong>Fiberglass</strong> meant for fishing boat repairs was diverted to the weapons industry. Hamas set quotas of <strong>15%-25%</strong> of all aid for its use.</div>
+        <div class="source">Sources: NPR | CNN | Times of Israel | JNS</div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Truth Against Lies &mdash; All rights reserved</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">Built by Nathanael Assis | 2026</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Share">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="Copy link">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-money-en');</script>
+
+<script>
+function copyCardLink(e, btn) {
+    e.stopPropagation();
+    var card = btn.closest('[id]');
+    var url = location.origin + location.pathname + '#' + card.id;
+    navigator.clipboard.writeText(url).then(function() {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '&#10003;';
+        setTimeout(function() { btn.innerHTML = '&#128279;'; }, 1500);
+    });
+}
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) {
+            setTimeout(function() {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
+        }
+    }
+})();
+</script>
+
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index-en.html"><span class="mn-icon">&#127968;</span>Home</a>
+    <a href="lies-en.html"><span class="mn-icon">&#10060;</span>Lies</a>
+    <a href="antisemitism-en.html"><span class="mn-icon">&#128737;</span>Antisemitism</a>
+    <a href="october7-en.html"><span class="mn-icon">&#128293;</span>10.7</a>
+    <a href="facts-en.html"><span class="mn-icon">&#128269;</span>Facts</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>

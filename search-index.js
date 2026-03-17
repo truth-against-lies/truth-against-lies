@@ -1360,5 +1360,34 @@ var SEARCH_INDEX = [
         url: "fact-cards.html#fc-covid",
         text: "קורונה COVID-19 מעבדה ווהאן Wuhan. מקור: שוק חיות Huanan. ישראל פיתחה חיסון ושיתפה עם הרשות הפלסטינית. ADL תיעד 7 מיליארד פוסטים אנטישמיים.",
         page: "כרטיסי עובדות"
-    }
+    },
+
+    // ==================== ENGLISH PAGES ====================
+    { title: "What is this site?", url: "index-en.html#faq", text: "A platform exposing 34 antisemitic claims and debunking them with facts, science, academic sources, and documented history.", page: "Home (EN)" },
+    { title: "Psychology of Hatred — Scapegoating", url: "index-en.html#psychology", text: "Scapegoating: blaming an out-group for society's problems. Jews served as scapegoats throughout history — from the Black Death to COVID.", page: "Home (EN)" },
+    { title: "Confirmation Bias", url: "index-en.html#psychology", text: "People seek information confirming existing beliefs. If someone thinks Jews control the world, they find evidence everywhere and ignore contradictions.", page: "Home (EN)" },
+    { title: "Timeline of Antisemitism", url: "index-en.html#timeline", text: "From ancient Egypt to modern online hate — comprehensive timeline spanning 3,000 years of documented antisemitic events.", page: "Home (EN)" },
+    { title: "Common Lies About Jews and Israel", url: "lies-en.html", text: "Debunking antisemitic lies with evidence-based refutations. Blood libel, world domination, dual loyalty, media control, and more.", page: "Common Lies (EN)" },
+    { title: "What is Antisemitism?", url: "antisemitism-en.html", text: "Comprehensive analysis: IHRA definition, 34 claims examined across 8 categories from religious to modern online hate, with academic sources.", page: "Antisemitism (EN)" },
+    { title: "IHRA Definition of Antisemitism", url: "antisemitism-en.html#ihra", text: "Working definition adopted by 47 countries. 11 examples including Holocaust denial, dual loyalty accusations, double standards, Nazi comparisons.", page: "Antisemitism (EN)" },
+    { title: "October 7 Hamas Attack", url: "october7-en.html", text: "Documentation of October 7 2023 Hamas attack. 1,200 murdered, 251 kidnapped. Timeline, facts, evidence. Largest pogrom since WWII.", page: "October 7 (EN)" },
+    { title: "What Can You Do?", url: "action-en.html", text: "Practical guide for combating antisemitism: reporting, sharing, organizations, useful links. Everyone can act against hatred.", page: "Take Action (EN)" },
+    { title: "Facts They Don't Tell You", url: "facts-en.html", text: "Documented information about failures in command, politics, judiciary, media, and international organizations — verified sources.", page: "Facts (EN)" },
+    { title: "Holocaust Denial", url: "holocaust-denial-en.html", text: "Debunking Holocaust denial. Six million Jews murdered by Nazi Germany (1941-1945). Gas chambers, evidence, survivor testimonies.", page: "Holocaust Denial (EN)" },
+    { title: "Glossary of Terms", url: "glossary-en.html", text: "Definitions: antisemitism, Zionism, apartheid, BDS, IHRA, blood libel, pogrom, Nakba, genocide, ethnic cleansing, human shields.", page: "Glossary (EN)" },
+    { title: "Hatred by Nations", url: "regions-en.html", text: "Antisemitism by region. Historical and modern across Europe, Middle East, Americas, online. Country-specific data and incidents.", page: "Hatred by Nations (EN)" },
+    { title: "Antisemitism Statistics", url: "statistics-en.html", text: "Data on antisemitic incidents worldwide. ADL audit, hate crimes, online monitoring, campus incidents, trends.", page: "Statistics (EN)" },
+    { title: "Historical Documentation", url: "gallery-en.html", text: "Visual documentation: Holocaust, pogroms, October 7, terror attacks, Jewish contributions, IDF, beautiful Israel.", page: "Gallery (EN)" },
+    { title: "Watch and Learn", url: "videos-en.html", text: "Curated videos about antisemitism, Israel, Jewish history, October 7. Documentaries, interviews, educational content.", page: "Videos (EN)" },
+    { title: "Strengthening the Jewish People", url: "unity-en.html", text: "Jewish unity, resilience, identity. What divides us, what unites us, building strength from within.", page: "Unity (EN)" },
+    { title: "Strengthening the Mind", url: "mind-en.html", text: "Cognitive tools, mental resilience, thinking patterns. Critical thinking against propaganda and manipulation.", page: "Mind (EN)" },
+    { title: "Fact Cards", url: "fact-cards-en.html", text: "18 shareable fact cards debunking myths about Israel and Jews. Download, share on social media, spread truth with sources.", page: "Fact Cards (EN)" },
+    { title: "Failed Command", url: "facts-command-en.html", text: "Military and intelligence failures. Leadership accountability, operational mistakes, systemic issues.", page: "Failed Command (EN)" },
+    { title: "Iran's Axis of Destruction", url: "facts-iran-en.html", text: "Iran proxy network: Hezbollah, Hamas, PIJ, Houthis. Nuclear program, JCPOA, missile proliferation, terror funding.", page: "Iran (EN)" },
+    { title: "Terror Financing", url: "facts-money-en.html", text: "Financial flows to terror. Qatar funding, PA corruption, UNRWA, pay-for-slay policy, international aid diversion.", page: "Terror Funding (EN)" },
+    { title: "Western Betrayals", url: "facts-west-en.html", text: "Western nations betraying Israel. Arms embargoes, intelligence leaks, JCPOA, diplomatic double standards.", page: "Western Betrayals (EN)" },
+    { title: "The Left's Narrative", url: "left-narrative-en.html", text: "Progressive narratives on Israel. Intersectionality, colonialism framing, media bias, academic discourse.", page: "Left Narrative (EN)" },
+    { title: "Sword and Prayer", url: "sword-prayer-en.html", text: "Military action and faith in Jewish tradition. Biblical warriors to modern IDF — the dual identity of the Jewish fighter.", page: "Sword & Prayer (EN)" },
+    { title: "The Great Schism", url: "the-schism-en.html", text: "Internal divisions in Israeli society. Secular vs religious, left vs right, Ashkenazi vs Mizrahi — paths toward unity.", page: "The Schism (EN)" },
+    { title: "Knowledge vs Religion", url: "daat-dat-en.html", text: "Tension between secular knowledge (Da'at) and religious faith (Dat). Hebrew linguistics, Kabbalah, bridging the divide.", page: "Knowledge vs Religion (EN)" }
 ];

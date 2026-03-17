@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debunked Myths | Truth Against Lies</title>
+    <meta name="description" content="Common claims vs. documented facts — a source-based comparative analysis">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Debunked Myths | Truth Against Lies">
+    <meta property="og:description" content="Common claims vs. documented facts — a source-based comparative analysis">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/facts-myths-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Debunked Myths | Truth Against Lies">
+    <meta name="twitter:description" content="Common claims vs. documented facts — a source-based comparative analysis">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="shared-en.css">
+    <style>
+        /* === FACT CARDS === */
+        .fact-card {
+            background: #12172b;
+            border-radius: 3px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .fact-card.myths { border-left: 4px solid #2ecc71; }
+        .fact-card.revisionism { border-left: 4px solid #76ff03; }
+        .fact-card.education { border-left: 4px solid #00e5ff; }
+        .fact-card.additional { border-left: 4px solid #8bc34a; }
+
+        .fact-card h3 {
+            color: #e2b714;
+            font-size: 1.25em;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        .fact-card .role {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+        .fact-card .quote {
+            background: rgba(231,76,60,0.08);
+            border-left: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+            color: #e74c3c;
+            font-style: italic;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        .fact-card .context {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+        .fact-card .context strong {
+            color: #e2b714;
+        }
+        .fact-card .result {
+            background: rgba(231,76,60,0.06);
+            border-radius: 3px;
+            padding: 12px 15px;
+            margin-bottom: 12px;
+        }
+        .fact-card .result-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .fact-card .result p {
+            color: #c0c0c0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .fact-card .source {
+            font-size: 0.8em;
+            color: #666;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+
+        /* === MYTH CARDS === */
+        .myth-claim {
+            background: rgba(231,76,60,0.08);
+            border-left: 3px solid #e74c3c;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        .myth-claim .myth-label {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-claim p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality {
+            background: rgba(46,204,113,0.08);
+            border-left: 3px solid #2ecc71;
+            border-radius: 3px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+        .myth-reality .myth-label {
+            color: #2ecc71;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .myth-reality p {
+            color: #c0c0c0;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .myth-reality strong {
+            color: #2ecc71;
+        }
+
+        /* === SUB-SECTION HEADERS === */
+        .subsection-title {
+            color: #e2b714;
+            font-size: 1.3em;
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+
+        .stat-highlight {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        @media (max-width: 768px) {
+            .facts-hero h1 { font-size: 2em; }
+            .section-header h2 { font-size: 1.7em; }
+            .fact-card { padding: 20px; }
+        }
+    </style>
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/facts-myths-en.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/facts-myths.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/facts-myths-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/facts-myths.html">
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Debunked Myths | Truth Against Lies","description":"Common claims vs. documented facts — a source-based comparative analysis","author":{"@type":"Person","name":"Nathanael Assis"},"publisher":{"@type":"Organization","name":"Truth Against Lies"},"dateModified":"2026-03-10","inLanguage":"en","mainEntityOfPage":"https://truth-against-lies.github.io/truth-against-lies/facts-myths-en.html"}
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="Settings" title="Settings">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">Light Mode</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>Print / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="Navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism-en.html">Antisemitism</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism-en.html">What is Antisemitism?</a></li>
+                        <li><a href="antisemitism-en.html#claims">Claims &amp; Refutations</a></li>
+                        <li><a href="holocaust-denial-en.html">Holocaust Denial</a></li>
+                        <li><a href="statistics-en.html">Statistics</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies-en.html">Common Lies</a></li>
+                <li><a href="fact-cards-en.html">&#127183; Fact Cards</a></li>
+                <li><a href="index-en.html#timeline">Timeline</a></li>
+                <li><a href="index-en.html#psychology">Psychology</a></li>
+                <li><a href="regions-en.html">Hatred by Nations</a></li>
+                <li class="has-submenu">
+                    <a href="gallery-en.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="gallery-en.html">Historical Documentation</a></li>
+                        <li><a href="videos-en.html">Watch &amp; Learn</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7-en.html">October 7</a></li>
+                <li class="has-submenu">
+                    <a href="facts-en.html">Facts They Don't Tell You</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command-en.html">Failed &amp; Treacherous Command</a></li>
+                        <li><a href="facts-knesset-en.html">Knesset Members</a></li>
+                        <li><a href="facts-court-en.html">Supreme Court &amp; Justice System</a></li>
+                        <li><a href="facts-policies-en.html">Failed Laws &amp; Policies</a></li>
+                        <li><a href="facts-media-en.html">Media Failures</a></li>
+                        <li><a href="facts-orgs-en.html">Organizations, Academia &amp; BDS</a></li>
+                        <li><a href="facts-money-en.html">The Money &mdash; Terror Funding</a></li>
+                        <li><a href="facts-iran-en.html">Iran's Axis of Destruction</a></li>
+                        <li><a href="facts-west-en.html">Western Betrayals</a></li>
+                        <li><a href="facts-myths-en.html">Debunked Myths</a></li>
+                        <li><a href="facts-netanyahu-en.html">The Netanyahu Paradox</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity-en.html">Strengthening</a>
+                    <ul class="submenu">
+                        <li><a href="unity-en.html">Strengthening the Jewish People</a></li>
+                        <li><a href="mind-en.html">Strengthening the Mind</a></li>
+                        <li><a href="left-narrative-en.html">The Left's Narrative</a></li>
+                        <li><a href="daat-dat-en.html">Reason vs. Religion</a></li>
+                        <li><a href="sword-prayer-en.html">Sword &amp; Prayer</a></li>
+                        <li><a href="the-schism-en.html">The Great Schism</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-en.html#report">Report Antisemitism</a></li>
+                <li><a href="glossary-en.html">Glossary</a></li>
+                <li><a href="action-en.html">Take Action</a></li>
+            </ul></div>
+        <a href="index-en.html" class="nav-logo">Truth Against Lies</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="Search the site" title="Search the site"><span class="search-icon">&#128269;</span><span class="search-label">Search</span></button>
+        <div class="nav-lang">
+            <a href="facts-myths.html" class="nav-lang-btn" title="עברית">עב</a>
+        </div>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; Support</a>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<div class="facts-hero">
+    <h1>&#128269; Claims Debunked by the Facts</h1>
+    <p class="subtitle">Comparative analysis &mdash; common claims versus documented reality</p>
+    <p class="disclaimer">&#9888; Based on documented sources only</p>
+    <p class="hero-meta">Last updated: March 2026</p>
+</div>
+
+<main id="main-content" style="max-width: 1000px; margin: 0 auto; padding: 20px 20px 0;">
+
+<a href="facts-en.html" class="back-link">&larr; Back to Facts</a>
+
+<div class="tldr-box">
+    <div class="tldr-title">In Brief</div>
+    <ul>
+        <li>"Land for peace": Oslo = 1,137 dead, Lebanon = 150,000+ rockets, Gaza = 22,570+ rockets</li>
+        <li>"Withdrawal will bring quiet": Hamas turned Gaza into a terror base with 560-720 km of tunnels</li>
+        <li>"Israel is isolated": 4 new peace agreements (Abraham Accords), 165 countries recognize Israel</li>
+        <li>Every territorial concession by Israel led to more terrorism, not less &mdash; the facts prove it</li>
+    </ul>
+    <a href="#content-start" class="tldr-cta">&darr; Read the full article</a>
+</div>
+
+<!-- ==================== SECTION: MYTHS DISPROVEN ==================== -->
+<section id="content-start">
+    <div class="section-header fade-in">
+        <h2>&#128161; Claims Debunked by the Facts</h2>
+        <div class="section-divider"></div>
+        <p>Common claims where documented reality paints a different picture from what is alleged</p>
+    </div>
+
+    <div id="fact-1" class="fact-card myths fade-in">
+        <h3>&#10060; "Land for Peace"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"If Israel gives up territory, it will receive peace. Withdrawal = security."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>The Oslo Accords (1993): Israel gave weapons and territory to the PA. The result: <strong>the Second Intifada &mdash; 1,137 Israeli dead</strong>. Withdrawal from Lebanon (2000): <strong>150,000+ Hezbollah rockets</strong>. The Gaza disengagement (2005): <strong>22,570+ rockets</strong>. Every concession led to more terrorism, not less.</p>
+        </div>
+        <div class="source">Sources: IDF Archives | MFA Israel | Ynet</div>
+    </div>
+
+    <div id="fact-2" class="fact-card myths fade-in">
+        <h3>&#10060; "Leave Gaza and There Will Be Quiet"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Once Israel leaves Gaza, the Palestinians will build an advanced state and the violence will stop."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>Israel left in 2005. Hamas took over in 2007. Since then: 22,570+ rockets, 5 wars, thousands dead. Gaza became a Hamas military base, not a developing state.</p>
+        </div>
+        <div class="source">Sources: IDF data | ISA reports | UN OCHA</div>
+    </div>
+
+    <div id="fact-3" class="fact-card myths fade-in">
+        <h3>&#10060; "Hamas Is Deterred"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Hamas is highly deterred from war and prefers economics over conflict."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>October 7, 2023: Approximately 3,000 terrorists breached the fence, 1,200 were murdered, 251 were kidnapped. The deterrence assumption was disproven. According to investigation findings, Hamas exploited the period of "quiet" for military preparations.</p>
+        </div>
+        <div class="source">Sources: Commission of Inquiry | Annual Intelligence Assessments | Times of Israel</div>
+    </div>
+
+    <div id="fact-4" class="fact-card myths fade-in">
+        <h3>&#10060; "The Palestinian Authority Is a Peace Partner"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"The Palestinian Authority is a reliable peace partner and should be strengthened."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>The PA allocates $330 million annually to terrorists and their families ("Pay-for-Slay" law). The payment amount increases with the severity of the offense &mdash; a mechanism creating a direct economic incentive for acts of terrorism.</p>
+        </div>
+        <div class="source">Sources: Palestinian Media Watch | Taylor Force Act | US Congress</div>
+    </div>
+
+    <div id="fact-5" class="fact-card myths fade-in">
+        <h3>&#10060; "Arafat Wanted Peace"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Arafat was a peace leader. Israel didn't offer him enough."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>At Camp David (2000), Arafat received an offer of ~91% of the West Bank + division of Jerusalem &mdash; and rejected it. Under the Clinton Parameters (December 2000), ~95% was offered &mdash; rejected again. He never submitted a counter-proposal. The Second Intifada then erupted. Clinton directly attributed the failure of negotiations to Arafat.</p>
+        </div>
+        <div class="source">Sources: Dennis Ross "The Missing Peace" | Clinton memoirs | Ynet</div>
+    </div>
+
+    <div id="fact-6" class="fact-card myths fade-in">
+        <h3>&#10060; "Arming the PA = Security"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Give weapons to the Palestinian Authority so it can fight terrorism on its own."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>The <strong>Karine A</strong> ship (2002): 50 tons of Iranian weapons en route to the PA &mdash; including Katyusha rockets and anti-tank missiles. Arafat denied involvement despite evidence. Weapons that Israel supplied to the PA <strong>were used in attacks against Israelis</strong>.</p>
+        </div>
+        <div class="source">Sources: Israeli Navy / IDF | MFA Israel | BBC</div>
+    </div>
+
+    <div id="fact-7" class="fact-card myths fade-in">
+        <h3>&#10060; "Settlers = The Obstacle to Peace"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Settlements are the cause of violence. No settlers = peace."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>The October 7 attack came from Gaza, which has had no settlers since 2005. According to the Hamas Charter (Article 7), the organization's goal is the elimination of the State of Israel &mdash; not the settlement issue.</p>
+        </div>
+        <div class="source">Sources: Hamas Charter | October 7 timeline | IDF data</div>
+    </div>
+
+    <div id="fact-8" class="fact-card myths fade-in">
+        <h3>&#10060; "The Separation Barrier = Apartheid"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"The separation barrier is a symbol of apartheid and oppression."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>The barrier was built in response to a wave of suicide bombings. The documented result: a 90%+ decrease in suicide attacks. The data shows that the physical barrier significantly reduced the risk to both sides.</p>
+        </div>
+        <div class="source">Sources: ISA data | IDF statistics | Israel MFA</div>
+    </div>
+
+    <div id="fact-9" class="fact-card myths fade-in">
+        <h3>&#10060; "The International Community Will Protect Israel"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Israel should rely on the international community and act according to its wishes."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>86% of UN human rights resolutions target Israel. The Human Rights Council includes countries like China, Russia, and Saudi Arabia. UNRWA employees with Hamas affiliations were discovered. The data shows that international institutions do not provide effective protection for Israel.</p>
+        </div>
+        <div class="source">Sources: UN Watch | UNHRC voting records | UNRWA scandal 2024</div>
+    </div>
+
+    <div id="fact-10" class="fact-card myths fade-in">
+        <h3>&#10060; "Hamas Will Moderate Over Time"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Once Hamas rules and bears responsibility, it will moderate and become a political body."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>Hamas ruled Gaza for 17 years (2007&ndash;2024). There was no political moderation, and significant resources were diverted to military infrastructure. The October 7 attack occurred after 17 years of rule &mdash; contradicting the moderation assumption.</p>
+        </div>
+        <div class="source">Sources: Hamas governance record | World Bank | Times of Israel</div>
+    </div>
+
+    <div id="fact-11" class="fact-card myths fade-in">
+        <h3>&#10060; "Two States = End of the Conflict"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"A two-state solution will end the conflict once and for all."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>Approximately <strong>65% of Palestinians</strong> oppose a two-state solution (PCPSR poll). Hamas rejects it entirely. Even the PA refuses to recognize Israel as a <strong>Jewish state</strong>. "Two states" = a first step, not an ending.</p>
+        </div>
+        <div class="source">Sources: PCPSR polls | Hamas Charter | PA official statements</div>
+    </div>
+
+    <div id="fact-12" class="fact-card myths fade-in">
+        <h3>&#10060; "BDS = Human Rights"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"The BDS movement is a peaceful human rights movement."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>BDS founder Omar Barghouti: "We oppose a Jewish state in any part of Palestine." According to its founders' statements, the movement's goal is not peace but the denial of the right to a Jewish state. Barghouti himself holds a degree from Tel Aviv University.</p>
+        </div>
+        <div class="source">Sources: Omar Barghouti interviews | NGO Monitor | Tel Aviv University records</div>
+    </div>
+
+    <div id="fact-13" class="fact-card myths fade-in">
+        <h3>&#10060; "There Is No Military Solution to Terrorism"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"Terrorism cannot be defeated by military force. Only negotiations will resolve it."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>Operation Defensive Shield (2002): A 70% reduction in attacks. The combination of a physical barrier and military action led to a significant decline in terrorism. The data shows that targeted military action produced measurable results.</p>
+        </div>
+        <div class="source">Sources: IDF data | ISA statistics | Operation Defensive Shield records</div>
+    </div>
+
+    <div id="fact-14" class="fact-card myths fade-in">
+        <h3>&#10060; "Restraint = International Support"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="myth-claim">
+            <div class="myth-label">&#10060; The claim:</div>
+            <p>"If Israel shows restraint, it will earn international support."</p>
+        </div>
+        <div class="myth-reality">
+            <div class="myth-label">&#10003; What actually happened:</div>
+            <p>86% of UN resolutions target Israel &mdash; regardless of the nature of its response. The data shows that a policy of restraint did not produce an improvement in the international stance toward Israel.</p>
+        </div>
+        <div class="source">Sources: UN Watch | UNGA voting records | Israel MFA</div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: EDUCATION FOR HATE ==================== -->
+<section id="education-deep">
+    <div class="section-header fade-in">
+        <h2>&#128218; Deep Analysis: Educational Content</h2>
+        <div class="section-divider"></div>
+        <p>Textbooks, summer camps and children's TV &mdash; findings on incitement content in the education system</p>
+    </div>
+
+    <div id="fact-15" class="fact-card education fade-in">
+        <h3>Palestinian Textbooks &mdash; Math Problems with "Martyrs"</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">IMPACT-se | 290 books + 71 teacher guides</div>
+        <div class="context">
+            <strong>Math exercises (grades 4 &amp; 9):</strong> "The number of martyrs of the First Intifada: 2,026. The number of martyrs of the Al-Aqsa Intifada: 5,050. The wounded: 49,760. <strong>Calculate...</strong>"<br><br>
+            <strong>Physics (grade 7):</strong> Newton's Second Law presented through <strong>a Palestinian boy's slingshot against soldiers</strong><br><br>
+            <strong>Maps:</strong> At least 3 maps with <strong>no Israel</strong> &mdash; Tel Aviv and Haifa marked as Palestinian cities<br><br>
+            <strong>Antisemitism (grade 10):</strong> "Jews control money, media and politics, and harness global power for their benefit"<br><br>
+            <strong>Dalal Mughrabi (grade 5):</strong> 10 pages of reading comprehension about the terrorist who killed <strong>38 Israelis, including 13 children</strong> (Coastal Road Massacre, 1978). Presented as a heroine
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; Who funds it:</div>
+            <p>The textbooks are funded by the <strong>European Union ($500M+)</strong>. The European Parliament has <strong>condemned the content 5 times</strong> &mdash; <strong>funding continues</strong>.</p>
+        </div>
+        <div class="source">Sources: IMPACT-se | EU Reporter | CAMERA | Algemeiner | MEMRI</div>
+    </div>
+
+    <div id="fact-16" class="fact-card education fade-in">
+        <h3>76 Schools Named After Terrorists</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Palestinian Media Watch | October 2018</div>
+        <div class="context">The Palestinian Authority named <strong>76 schools</strong> after terrorists and Nazi collaborators. The most famous example: <strong>Belgium</strong> funded a school in Hebron that the PA renamed to <strong>"Dalal Mughrabi."</strong> When Belgium froze funding, the PA <strong>transferred the name to 2 other schools</strong> in the same neighborhood. The PA's statement: <strong>"Beit Awa did not lose the name Dalal Mughrabi."</strong></div>
+        <div class="source">Sources: PMW | Times of Israel</div>
+    </div>
+
+    <div id="fact-17" class="fact-card education fade-in">
+        <h3>Hamas Summer Camps &mdash; 100,000 Children/Year in Live Weapons Training</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2021&ndash;2023 | Izz ad-Din al-Qassam Brigades</div>
+        <div class="context">
+            &#8226; <strong>2023 ("Shield of Jerusalem"):</strong> ~100,000 children and youth. Training supervised by <strong>al-Qassam fighters</strong>: live weapons firing, urban warfare, simulation of raids on IDF positions, simulation of capturing Jerusalem<br>
+            &#8226; <strong>2022 ("Seedlings of Jerusalem"):</strong> ~100,000 in ~500 camps<br>
+            &#8226; <strong>2021:</strong> ~50,000 registered<br><br>
+            <strong>President Herzog</strong> presented on NBC a captured Hamas document &mdash; <strong>guidelines for running children's summer camps at Hamas bases</strong>: shooting, simulations, theoretical courses. <strong>Stated goal: preparing the next generation to serve in the terror organization</strong>.
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; Connection to 10/7:</div>
+            <p>According to chronological analysis, children from the 2007 camps reached military age in 2023. Hamas trained an entire generation through these camps.</p>
+        </div>
+        <div class="source">Sources: MEMRI | Israel Hayom | Times of Israel | FDD</div>
+    </div>
+
+    <div id="fact-18" class="fact-card education fade-in">
+        <h3>UNRWA &mdash; 133 Inciting Teachers + Israel Exposed 12 Who Participated in 10/7, the UN Confirmed and Fired 9</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">UN Watch / IMPACT-se | 2023&ndash;2024</div>
+        <div class="context">
+            &#8226; <strong>133 UNRWA employees</strong> were documented inciting violence on social media<br>
+            &#8226; <strong>12 UNRWA employees</strong> (7 teachers, 2 educational counselors) allegedly <strong>participated in October 7</strong> &mdash; the UN investigation confirmed 9 of them<br>
+            &#8226; A Telegram group of <strong>3,000 UNRWA teachers</strong> in Gaza celebrated the massacre <strong>within minutes</strong> of its start<br>
+            &#8226; <strong>15%+</strong> of senior teachers in Gaza &mdash; Hamas or Islamic Jihad members<br>
+            &#8226; An Arabic class in a UNRWA school: a Jewish bus arson attack described as a <strong>"barbecue party"</strong><br>
+            &#8226; Hamas kindergarten signs: <strong>"Today's kindergartners are tomorrow's martyrs"</strong>
+        </div>
+        <div class="result">
+            <div class="result-label">&#9888; The funding:</div>
+            <p>UNRWA budget: $1.46 billion/year. 60% allocated to education. 42% funded by the European Union. IMPACT-se and UN Watch findings point to significant incitement content in curricula funded by these monies.</p>
+        </div>
+        <div class="source">Sources: UN Watch | IMPACT-se | JNS | CBS News | Times of Israel</div>
+    </div>
+
+    <div id="fact-19" class="fact-card education fade-in">
+        <h3>The Knife Intifada &mdash; 13-Year-Old Children Stabbing Jews</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">October 2015 &mdash; March 2016</div>
+        <div class="context">
+            <strong>211 stabbings</strong>, 83 shootings, 42 car-rammings. <strong>30 Israelis murdered</strong>.<br><br>
+            The attackers: desperate teens, <strong>some as young as 13-14</strong>. They were incited through social media:<br>
+            &#8226; Image: <strong>"When you stab, put poison on the knife"</strong><br>
+            &#8226; YouTube video: <strong>"Learn how to stab a Jew"</strong><br>
+            &#8226; The hashtag <strong>#Stab</strong> trended on Twitter and Facebook<br>
+            &#8226; A Palestinian girl posted a Facebook video with a knife: <strong>"Stab! Stab! Stab!"</strong><br><br>
+            <strong>Connection to education:</strong> These children learned from textbooks glorifying "martyrs," watched TV encouraging the murder of Jews, and played with live weapons at Hamas summer camps.
+        </div>
+        <div class="source">Sources: Wikipedia | MEMRI | France24 | Times of Israel</div>
+    </div>
+
+    <div id="fact-20" class="fact-card education fade-in">
+        <h3>Universities &mdash; Sbarro Attack Display + Hamas Celebrations</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">An-Najah National University, Nablus | 2001</div>
+        <div class="context">
+            Students at <strong>An-Najah</strong> University in Nablus built a <strong>room-sized recreation</strong> of the Sbarro suicide bombing (15 killed, 7 children): <strong>broken furniture splattered with fake blood and body parts</strong>. At the entrance &mdash; a mural painting of the attack. The display attracted crowds.<br><br>
+            <strong>Birzeit (2022):</strong> The Hamas-affiliated Wafa bloc won <strong>28 of 51 seats</strong> in student elections. <strong>Green Hamas flags</strong> were waved across campus. In the absence of national elections &mdash; student elections became a <strong>political barometer</strong>.
+        </div>
+        <div class="source">Sources: Wikipedia (Sbarro) | Al-Fanar Media | Middle East Eye | Times of Israel</div>
+    </div>
+
+    <div id="fact-21" class="fact-card additional fade-in">
+        <h3>Farfour the Mouse &mdash; Hamas Teaches Children to Kill</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2007-2022 &mdash; Al-Aqsa TV (Hamas)</div>
+        <div class="context">A children's program <strong>"Tomorrow's Pioneers"</strong> (Sesame Street-style) with costumed characters: <strong>Farfour the Mouse</strong> (Mickey Mouse imitation) &mdash; "We are laying the foundations for a world under Islamic leadership." <strong>"Killed" by an Israeli interrogator</strong>. <strong>Nahoul the Bee</strong> &mdash; "Revenge against the enemies of God." <strong>Assud the Rabbit</strong> &mdash; "I will finish off the Jews and eat them." A girl on the show was praised for wanting to be a policewoman <strong>"and shoot at Jews."</strong> At least <strong>75 PA schools</strong> are named after terrorists.</div>
+        <div class="result">
+            <div class="result-label">&#9888; The result:</div>
+            <p>According to content research, these programs promoted violence as a positive value. Per Israeli intelligence, 100+ of the October 7 attackers are graduates of UNRWA's education system.</p>
+        </div>
+        <div class="source">Sources: CBS News | MEMRI | Wikipedia (Tomorrow's Pioneers) | IMPACT-se</div>
+    </div>
+
+    <div id="fact-22" class="fact-card education fade-in" style="background: linear-gradient(135deg, #12172b, rgba(0,229,255,0.08)); border: 1px solid rgba(0,229,255,0.2);">
+        <h3 style="color: #00e5ff; font-size: 1.4em;">&#9888; Summary: An Education System as a Military Training Pipeline</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            Textbooks &rarr; Children's TV &rarr; Summer camps with live weapons &rarr; Social media &rarr; Universities &rarr; Hamas brigades<br><br>
+            The data indicates a multi-stage system: from the education system, through media and summer camps &mdash; to recruitment into terror organizations.<br>
+            Approximately 100,000 children per year undergo Hamas military summer camps.<br>
+            <strong style="color: #00e5ff;">9-12 UNRWA employees participated in the 10/7 attack. 3,000 UNRWA teachers celebrated. The European Union funds $600M+ per year.</strong>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION: HISTORICAL LIES DEBUNKED ==================== -->
+<section id="revisionism-deep">
+    <div class="section-header fade-in">
+        <h2>&#128506; Historical Claims vs. the Facts</h2>
+        <div class="section-divider"></div>
+        <p>Examining common claims in light of historical and archaeological evidence</p>
+    </div>
+
+    <div id="fact-23" class="fact-card revisionism fade-in">
+        <h3>"Palestine Was a State" &mdash; It Never Was</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Documented history</div>
+        <div class="context">
+            &#8226; <strong>135 CE:</strong> The Roman Emperor <strong>Hadrian</strong> renamed <strong>Judea</strong> to "Syria Palaestina" &mdash; <strong>as punishment for the Bar Kokhba revolt</strong>. The goal: to erase the Jewish connection. The name derived from "Philistines" &mdash; enemies of the Jews<br>
+            &#8226; <strong>400 years of Ottoman rule</strong> (1517-1917): <strong>No administrative unit called "Palestine"</strong>. The area was divided into the Sanjak of Jerusalem and the provinces of Beirut and Syria<br>
+            &#8226; <strong>British Mandate</strong> (1920-1948): A League of Nations mandate &mdash; <strong>not an independent state</strong><br><br>
+            <strong>Arab leaders who denied "Palestine":</strong><br>
+            &#8226; <strong>Auni Bey Abdul-Hadi</strong> (1937, Peel Commission): <strong>"There is no such country as Palestine! 'Palestine' is a term the Zionists invented!"</strong><br>
+            &#8226; <strong>Zuheir Mohsen</strong> (As-Sa'iqa leader, PLO, 1977): <strong>"The Palestinian people does not exist. The creation of a Palestinian state is only a means for continuing the struggle against Israel... In reality there is no difference between Jordanians, Palestinians, Syrians and Lebanese"</strong><br>
+            &#8226; <strong>Hafez al-Assad</strong> to Arafat: <strong>"There is no such thing as a Palestinian people, there is no Palestinian entity, there is only Syria"</strong>
+        </div>
+        <div class="source">Sources: Wikipedia | Wikiquote | Snugfam | Hudson Institute</div>
+    </div>
+
+    <div id="fact-24" class="fact-card revisionism fade-in">
+        <h3>"Jews Are European Colonialists" &mdash; DNA Says Otherwise</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Genetic studies + archaeology</div>
+        <div class="context">
+            <strong>Genetic evidence:</strong><br>
+            &#8226; <strong>Atzmon et al. (2010):</strong> 7 Jewish communities &rarr; all share a <strong>"common Middle Eastern origin."</strong> 12 of the 20 closest genetic pairs = <strong>Jewish pairs</strong><br>
+            &#8226; <strong>75% of today's Jews</strong> are of Middle Eastern origin (World Jewish Congress)<br>
+            &#8226; European genetic admixture in Ashkenazi Jews: <strong>5-8% on the paternal line (Y-DNA)</strong>; in broad genomic studies &mdash; 30-55% (primarily through the maternal line)<br><br>
+            <strong>Archaeological evidence:</strong><br>
+            &#8226; <strong>Merneptah Stele (1208 BCE)</strong> &mdash; the first mention of "Israel" outside the Bible, <strong>3,200+ years ago</strong><br>
+            &#8226; <strong>Dead Sea Scrolls</strong> &mdash; 3rd century BCE to 1st century CE<br>
+            &#8226; <strong>Arch of Titus, Rome (81 CE):</strong> Roman soldiers carrying the <strong>Temple Menorah</strong><br>
+            &#8226; <strong>100+ ancient synagogues</strong> in the Land of Israel<br>
+            &#8226; <strong>Temple Mount Sifting Project:</strong> 500,000+ artifacts, 800+ Jewish coins from the Second Temple period<br><br>
+            <strong>Continuous presence for 3,000+ years:</strong> Jerusalem, Hebron, Tiberias, Safed &mdash; Jews lived there <strong>even under occupation</strong>.
+        </div>
+        <div class="source">Sources: PubMed | WJC | Stanford | Biblical Archaeology Society | Temple Mount Sifting Project</div>
+    </div>
+
+    <div id="fact-25" class="fact-card revisionism fade-in">
+        <h3>Temple Denial &mdash; Even the Quran Acknowledges It</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">3,000 years of history vs. a modern lie</div>
+        <div class="context">
+            <strong>Timeline:</strong><br>
+            &#8226; ~957 BCE: <strong>First Temple</strong> (Solomon) &rarr; Destroyed 586 BCE<br>
+            &#8226; 516 BCE: <strong>Second Temple</strong> &rarr; Destroyed <strong>70 CE</strong> by Rome<br>
+            &#8226; ~691 CE: <strong>Dome of the Rock</strong> (600+ years after the Temple's destruction)<br>
+            &#8226; ~705-715 CE: <strong>Al-Aqsa Mosque</strong><br><br>
+            <strong>Muslim sources that confirm:</strong><br>
+            &#8226; <strong>Quran, Surah 17:7</strong> &mdash; refers to the destruction of the two Temples<br>
+            &#8226; Solomon (Suleiman) appears <strong>in the Quran as a prophet</strong><br>
+            &#8226; <strong>Ka'b al-Ahbar</strong> (a Jewish rabbi who converted to Islam) told <strong>Umar ibn al-Khattab</strong> (638) that the site is identical to the Temples<br>
+            &#8226; The name <strong>"Bait al-Maqdis"</strong> = direct translation of <strong>"Beit HaMikdash" (The Temple)</strong><br><br>
+            <strong>1999:</strong> The Waqf used <strong>bulldozers</strong> to excavate the Temple Mount without archaeological supervision &mdash; <strong>400 truckloads of soil</strong> with artifacts were discarded. The Sifting Project recovered 500,000+ artifacts.
+        </div>
+        <div class="source">Sources: Wikipedia | Britannica | JCFA | Washington Institute | TMSP</div>
+    </div>
+
+    <div id="fact-26" class="fact-card revisionism fade-in">
+        <h3>"Nakba" &mdash; 5 Arab Armies Invaded Israel + 850,000 Jews Expelled</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">May 1948</div>
+        <div class="context">
+            <strong>May 15, 1948:</strong> Israel declared independence. <strong>5 Arab armies</strong> (Egypt, Syria, Transjordan, Lebanon, Iraq) <strong>invaded</strong>.<br><br>
+            <strong>Azzam Pasha</strong> (Secretary-General of the Arab League, 1947): <strong>"This will be a war of extermination and a momentous massacre"</strong><br><br>
+            <strong>The Jewish refugees nobody talks about:</strong><br>
+            &#8226; <strong>850,000+ Jews</strong> expelled from Egypt, Iraq, Syria, Lebanon, Yemen, Libya, Morocco<br>
+            &#8226; <strong>The Farhud, Baghdad</strong> (1941): 179-180 Jews murdered, 600 injured, hundreds of businesses looted<br>
+            &#8226; <strong>Tripoli Pogrom</strong> (1945): 140+ Jews murdered including children<br>
+            &#8226; Today fewer than <strong>15,000 Jews</strong> remain in all Arab countries (most in Morocco)<br>
+            &#8226; <strong>No dedicated UN agency</strong> for Jewish refugees. Palestinians received UNRWA at $1.46B/year
+        </div>
+        <div class="source">Sources: Wikipedia | USHMM | UK Parliament | World Jewish Congress</div>
+    </div>
+
+    <div id="fact-27" class="fact-card revisionism fade-in">
+        <h3>"Apartheid" &mdash; Muslim Supreme Court Justice, Arab Miss Israel</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2 million Arab citizens with full rights</div>
+        <div class="context">
+            <strong>2 million Arab citizens</strong> (21% of the population) with full citizenship, voting rights, and freedom of movement.<br><br>
+            <strong>Achievements:</strong><br>
+            &#8226; <strong>Supreme Court Justice</strong>: Khaled Kabub &mdash; first permanent Muslim justice (2022)<br>
+            &#8226; <strong>Miss Israel 1999</strong>: Rana Raslan (Arab from Haifa)<br>
+            &#8226; <strong>25% of doctors, 27% of nurses, 49% of pharmacists</strong> &mdash; Arab<br>
+            &#8226; <strong>10 non-Jewish Knesset members</strong> in the 25th Knesset<br>
+            &#8226; Lt. Col. <strong>Ella Waweya</strong> &mdash; first Muslim Arab woman promoted to Lt. Colonel in the IDF<br><br>
+            <strong>Compared to South Africa:</strong> Racial registration law, separate beaches/buses/hospitals, Black people <strong>did not vote</strong>. In Israel: <strong>no legal separation</strong> based on ethnicity.
+        </div>
+        <div class="source">Sources: Wikipedia | PMC | SSRN | AJC</div>
+    </div>
+
+    <div id="fact-28" class="fact-card revisionism fade-in">
+        <h3>"Genocide" &mdash; The Population Grew 167%</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Palestinian Central Bureau of Statistics data</div>
+        <div class="context">
+            <strong>Palestinian population growth:</strong><br>
+            &#8226; 1990: <strong>1.98 million</strong> &rarr; 2024: <strong>5.29 million</strong> = growth of <strong>167%</strong><br>
+            &#8226; Global average growth in the same period: <strong>54%</strong> &mdash; Palestinians grew <strong>3 times the average</strong><br>
+            &#8226; Birth rate in Gaza: <strong>3.3 children per woman</strong> (31st in the world)<br><br>
+            <strong>Compared to actual genocides:</strong><br>
+            &#8226; <strong>Holocaust:</strong> 6,000,000 &mdash; 63% of European Jews exterminated<br>
+            &#8226; <strong>Rwanda:</strong> 500,000-1,000,000 &mdash; 70-80% of Tutsis in 100 days<br>
+            &#8226; <strong>Armenia:</strong> 664,000-1,200,000 &mdash; near-total annihilation<br><br>
+            Genocide = <strong>dramatic population decline</strong>. Growth of 167% = <strong>the exact opposite</strong> of genocide.
+        </div>
+        <div class="source">Sources: PCBS | Worldometers | Wikipedia</div>
+    </div>
+
+    <div id="fact-29" class="fact-card revisionism fade-in">
+        <h3>UNESCO Erases 3,000 Years of Judaism</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">2016 &mdash; 3 resolutions</div>
+        <div class="context">
+            <strong>April 15, 2016:</strong> UNESCO voted <strong>33-6</strong> on a resolution referring to the Temple Mount <strong>only by its Muslim name "al-Haram al-Sharif"</strong> and the Western Wall only as <strong>"al-Buraq/Western Wall Plaza"</strong> &mdash; <strong>erasing all Hebrew names</strong><br><br>
+            <strong>October 13, 2016:</strong> Another resolution: <strong>24 in favor, 6 against, 26 abstentions (and 2 absent)</strong><br><br>
+            <strong>October 26, 2016:</strong> Third resolution: <strong>10 in favor, 2 against, 8 abstentions</strong><br><br>
+            Three resolutions <strong>erased 3,000 years of documented Jewish connection</strong> to the Temple Mount &mdash; a connection that <strong>even Muslim sources acknowledge</strong>.
+        </div>
+        <div class="source">Sources: JTA | UN Watch | Times of Israel | JPost</div>
+    </div>
+
+    <div id="fact-30" class="fact-card revisionism fade-in">
+        <h3>The Khazar Theory &mdash; Genetically Debunked</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="role">Shlomo Sand (2008) vs. Science</div>
+        <div class="context">
+            <strong>The claim:</strong> Shlomo Sand ("The Invention of the Jewish People," 2008) claimed that Ashkenazi Jews are descendants of the <strong>Khazars</strong> &mdash; a Turkic people from the Caucasus who converted to Judaism in the 8th century.<br><br>
+            <strong>The scientific refutation:</strong><br>
+            &#8226; <strong>Behar et al. (2013):</strong> The largest sample &mdash; <strong>1,774 samples from 106 populations</strong>. Conclusion: <strong>"There is no sign of Khazar genetic origin among Ashkenazi Jews"</strong><br>
+            &#8226; Multiple additional studies (Metsapalu, Costa) &mdash; the same conclusion<br>
+            &#8226; <strong>The scientific consensus:</strong> "Jewish populations share an ancient common Middle Eastern origin. There is no Khazar origin"
+        </div>
+        <div class="source">Sources: PubMed | Wikipedia (Khazar hypothesis) | Genetic Studies of Jews</div>
+    </div>
+
+    <div id="fact-31" class="fact-card revisionism fade-in" style="background: linear-gradient(135deg, #12172b, rgba(118,255,3,0.08)); border: 1px solid rgba(118,255,3,0.2);">
+        <h3 style="color: #76ff03; font-size: 1.4em;">&#9888; Double Standards as Policy</h3>
+        <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="Copy link">&#128279;</button>
+        <div class="context" style="font-size: 1.05em; line-height: 1.9;">
+            <strong>2024:</strong> The UN adopted <strong>17 resolutions against Israel</strong> compared to <strong>6 against the rest of the world</strong><br>
+            <strong>2006-2024:</strong> Human Rights Council: <strong>108 against Israel</strong>, 45 against Syria, 15 against Iran, 10 against Russia<br>
+            UNESCO <strong>erases</strong> a 3,000-year Jewish connection. The ICC <strong>issues arrest warrants</strong> against a democratic prime minister. Universities <strong>chant "from the river to the sea"</strong> &mdash; even when the Quran itself acknowledges the Temples.<br><br>
+            <strong style="color: #76ff03;">The historical lies are not mistakes &mdash; they are weapons of war. And it is our duty to expose every single one.</strong>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Truth Against Lies &mdash; All rights reserved</p>
+    <p style="margin-top: 8px; font-size: 0.85em; color: #555;">Built by Nathanael Assis | 2026</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#8593;</button>
+
+<!-- FLOATING SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="this.parentElement.classList.toggle('open')" aria-label="Share">&#8599;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" onclick="fabShare('whatsapp')" title="WhatsApp">W</a>
+        <a class="sfab-tg" onclick="fabShare('telegram')" title="Telegram">T</a>
+        <a class="sfab-tw" onclick="fabShare('twitter')" title="X">&#120143;</a>
+        <a class="sfab-fb" onclick="fabShare('facebook')" title="Facebook">f</a>
+        <a class="sfab-cp" onclick="fabShare('copy')" title="Copy link">&#128203;</a>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script>
+// Back to top
+window.addEventListener('scroll', function() {
+    var btn = document.querySelector('.back-to-top');
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+});
+// Fade in
+var fadeObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observe(el); });
+</script>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('facts-myths-en');</script>
+
+<script>
+function copyCardLink(e, btn) {
+    e.stopPropagation();
+    var card = btn.closest('[id]');
+    var url = location.origin + location.pathname + '#' + card.id;
+    navigator.clipboard.writeText(url).then(function() {
+        var orig = btn.innerHTML;
+        btn.innerHTML = '&#10003;';
+        setTimeout(function() { btn.innerHTML = '&#128279;'; }, 1500);
+    });
+}
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) {
+            setTimeout(function() {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 500);
+        }
+    }
+})();
+</script>
+
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index-en.html"><span class="mn-icon">&#127968;</span>Home</a>
+    <a href="lies-en.html"><span class="mn-icon">&#10060;</span>Lies</a>
+    <a href="antisemitism-en.html"><span class="mn-icon">&#128737;</span>Antisemitism</a>
+    <a href="october7-en.html"><span class="mn-icon">&#128293;</span>10.7</a>
+    <a href="facts-en.html"><span class="mn-icon">&#128269;</span>Facts</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>
