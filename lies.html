@@ -294,6 +294,8 @@
         <div class="lie-footer"></div>
     </div>
 
+    <div class="section-break"><span class="break-icon">&#9830;</span></div>
+
     <!-- LIE 2: TRUMP & IRAN -->
     <div class="lie-card fade-in" id="card-2">
         <h3>"ישראל דחפה את טראמפ להילחם באיראן"</h3>
@@ -345,6 +347,8 @@
         </div>
         <div class="lie-footer"></div>
     </div>
+
+    <div class="section-break"><span class="break-icon">&#9670;</span></div>
 
     <!-- LIE 3: APARTHEID -->
     <div class="lie-card fade-in" id="card-3">
@@ -405,6 +409,8 @@
         <div class="lie-footer"></div>
     </div>
 
+    <div class="section-break"><span class="break-icon">&#9830;</span></div>
+
     <!-- LIE 4: MEDIA CONTROL -->
     <div class="lie-card fade-in" id="card-4">
         <h3>"היהודים שולטים בתקשורת ובכלכלה העולמית"</h3>
@@ -463,6 +469,8 @@
         </div>
         <div class="lie-footer"></div>
     </div>
+
+    <div class="section-break"><span class="break-icon">&#9670;</span></div>
 
     <!-- LIE 5: NO HISTORICAL CONNECTION -->
     <div class="lie-card fade-in" id="card-5">
@@ -528,6 +536,8 @@
         <div class="lie-footer"></div>
     </div>
 
+    <div class="section-break"><span class="break-icon">&#9830;</span></div>
+
     <!-- LIE 6: ISRAEL CREATED HAMAS -->
     <div class="lie-card fade-in" id="card-6">
         <h3>"ישראל יצרה את חמאס"</h3>
@@ -574,6 +584,8 @@
         <div class="lie-footer"></div>
     </div>
 
+    <div class="section-break"><span class="break-icon">&#9670;</span></div>
+
     <!-- LIE 7: FROM THE RIVER TO THE SEA -->
     <div class="lie-card fade-in" id="card-7">
         <h3>"מהנהר ועד הים &mdash; זו רק קריאה לחירות"</h3>
@@ -618,6 +630,8 @@
         </div>
         <div class="lie-footer"></div>
     </div>
+
+    <div class="section-break"><span class="break-icon">&#9830;</span></div>
 
     <!-- LIE 8: ETHNIC CLEANSING -->
     <div class="lie-card fade-in" id="card-8">
@@ -666,6 +680,8 @@
         <div class="lie-footer"></div>
     </div>
 
+    <div class="section-break"><span class="break-icon">&#9670;</span></div>
+
     <!-- LIE 9: ORGAN THEFT -->
     <div class="lie-card fade-in" id="card-9">
         <h3>"ישראל גונבת איברים מפלסטינים"</h3>
@@ -710,6 +726,8 @@
         </div>
         <div class="lie-footer"></div>
     </div>
+
+    <div class="section-break"><span class="break-icon">&#9830;</span></div>
 
     <!-- LIE 10: TARGETING JOURNALISTS -->
     <div class="lie-card fade-in" id="card-10">
@@ -908,69 +926,7 @@ function copyCardLink(e, btn) {
 })();
 </script>
 
-<!-- TOC Script -->
-<script>
-(function() {
-    var tocBtn = document.querySelector('.toc-fab-btn');
-    var tocPanel = document.getElementById('tocPanel');
-    var tocLinks = document.querySelectorAll('.toc-link');
-    var sections = [];
-
-    // Collect sections
-    tocLinks.forEach(function(link) {
-        var id = link.getAttribute('href').substring(1);
-        var el = document.getElementById(id);
-        if (el) sections.push({ id: id, el: el, link: link });
-    });
-
-    // Show/hide TOC button on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) tocBtn.classList.add('visible');
-        else {
-            tocBtn.classList.remove('visible');
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Intersection Observer for active section
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                tocLinks.forEach(function(l) { l.classList.remove('active'); });
-                var activeLink = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
-                if (activeLink) activeLink.classList.add('active');
-            }
-        });
-    }, { rootMargin: '-20% 0px -60% 0px' });
-
-    sections.forEach(function(s) { observer.observe(s.el); });
-
-    // Close on link click
-    tocLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var id = this.getAttribute('href').substring(1);
-            var target = document.getElementById(id);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                setTimeout(function() { tocPanel.classList.remove('open'); }, 300);
-            }
-        });
-    });
-
-    // Close on click outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.toc-fab')) {
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') tocPanel.classList.remove('open');
-    });
-})();
-</script>
+<!-- TOC script → moved to common.js -->
 
 
 <nav class="mobile-nav" aria-label="ניווט מובייל">

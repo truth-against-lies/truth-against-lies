@@ -29,49 +29,7 @@
     <meta name="twitter:description" content="כל חברה פיתחה את הגרסה שלה לשנאת יהודים — אותו רעל, בקבוקים שונים">
     <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
     <link rel="stylesheet" href="shared.css">
-    <style>
-        .region-card {
-            background: #12172b;
-            border-radius: 3px;
-            padding: 35px;
-            margin-bottom: 30px;
-            border-right: 4px solid #e74c3c;
-        }
-        .region-card h3 {
-            color: #e74c3c;
-            font-size: 1.4em;
-            margin-bottom: 5px;
-        }
-        .region-card .region-subtitle {
-            color: #e2b714;
-            font-size: 0.95em;
-            margin-bottom: 15px;
-        }
-        .region-card p, .region-card li {
-            color: #c0c0c0;
-            font-size: 1em;
-            margin-bottom: 10px;
-        }
-        .region-card ul { padding-right: 20px; margin-bottom: 15px; }
-        .region-card li { margin-bottom: 8px; }
-        .region-card .fact-box {
-            background: rgba(231, 76, 60, 0.08);
-            border-radius: 3px;
-            padding: 15px;
-            margin: 15px 0;
-            border-right: 3px solid #e74c3c;
-        }
-        .region-card .fact-box strong { color: #e74c3c; }
-        .region-card .source-ref {
-            font-size: 0.85em;
-            color: #666;
-            font-style: italic;
-            margin-top: 10px;
-        }
-        @media (max-width: 768px) {
-            .region-card { padding: 20px; }
-        }
-    </style>
+    <!-- region-card styles → moved to shared.css -->
     <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/regions.html">
     <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/regions.html">
     <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/regions.html">
@@ -178,7 +136,7 @@
 
     <span id="content-start"></span>
     <!-- ISLAMIC/ARAB WORLD -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="muslim-world">
         <h3>העולם המוסלמי והערבי</h3>
         <div class="region-subtitle">מהאנטישמיות הדתית של ימי הביניים ועד הסכסוך המודרני</div>
 
@@ -204,7 +162,7 @@
     </div>
 
     <!-- EUROPE: POLAND & EASTERN EUROPE -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="eastern-europe">
         <h3>פולין ומזרח אירופה</h3>
         <div class="region-subtitle">מיתוסים תלמודיים, "קומוניזם יהודי", ושנאה ששרדה את השואה</div>
 
@@ -226,7 +184,7 @@
     </div>
 
     <!-- NAZI GERMANY -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="nazi-germany">
         <h3>גרמניה הנאצית</h3>
         <div class="region-subtitle">מהאנטישמיות האידיאולוגית ועד ההשמדה התעשייתית</div>
 
@@ -254,7 +212,7 @@
     </div>
 
     <!-- MODERN WESTERN -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="western-europe">
         <h3>אירופה המערבית המודרנית</h3>
         <div class="region-subtitle">ביטויי אנטישמיות מודרניים בדמוקרטיות מערביות</div>
 
@@ -272,7 +230,7 @@
     </div>
 
     <!-- USA -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="usa">
         <h3>ארצות הברית</h3>
         <div class="region-subtitle">אנטישמיות מהימין הקיצוני, הקהילה האפרו-אמריקאית, ותרבות הסלבריטאים</div>
 
@@ -290,7 +248,7 @@
     </div>
 
     <!-- IRAN -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="iran">
         <h3>איראן והמשטר האיסלאמי</h3>
         <div class="region-subtitle">אנטישמיות כמדיניות מדינה: הכחשת שואה, מימון ארגונים מזוינים, ורטוריקה אנטי-ישראלית</div>
 
@@ -306,7 +264,7 @@
     </div>
 
     <!-- JAPAN/EAST ASIA -->
-    <div class="region-card fade-in">
+    <div class="region-card fade-in" id="east-asia">
         <h3>יפן, דרום קוריאה ומזרח אסיה</h3>
         <div class="region-subtitle">תופעה מפתיעה: אנטישמיות במדינות כמעט ללא יהודים</div>
 
@@ -319,6 +277,21 @@
 </section>
 
 </main>
+
+<!-- Table of Contents -->
+<div class="toc-fab" id="tocFab">
+    <div class="toc-panel" id="tocPanel">
+        <div class="toc-title">תוכן עניינים</div>
+        <a class="toc-link" href="#muslim-world">העולם המוסלמי והערבי</a>
+        <a class="toc-link" href="#eastern-europe">פולין ומזרח אירופה</a>
+        <a class="toc-link" href="#nazi-germany">גרמניה הנאצית</a>
+        <a class="toc-link" href="#western-europe">אירופה המערבית</a>
+        <a class="toc-link" href="#usa">ארצות הברית</a>
+        <a class="toc-link" href="#iran">איראן</a>
+        <a class="toc-link" href="#east-asia">מזרח אסיה</a>
+    </div>
+    <button class="toc-fab-btn" aria-label="תוכן עניינים" onclick="document.getElementById('tocPanel').classList.toggle('open')">&#9776;</button>
+</div>
 
 <button class="back-to-top" aria-label="חזרה למעלה" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#9650;</button>
 

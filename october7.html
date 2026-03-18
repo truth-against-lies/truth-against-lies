@@ -61,59 +61,7 @@
             font-weight: bold;
         }
 
-        /* === CONTENT CARDS === */
-        .content-card {
-            background: #12172b;
-            border-radius: 3px;
-            padding: 35px;
-            margin-bottom: 35px;
-            border: 1px solid rgba(226, 183, 20, 0.08);
-            transition: border-color 0.3s;
-        }
-        .content-card:hover {
-            border-color: rgba(226, 183, 20, 0.3);
-        }
-        .content-card h3 {
-            color: #e2b714;
-            font-size: 1.35em;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        .content-card p {
-            color: #c0c0c0;
-            font-size: 0.95em;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .content-card ul {
-            padding-right: 20px;
-            margin: 10px 0 15px;
-        }
-        .content-card li {
-            color: #c0c0c0;
-            font-size: 0.95em;
-            line-height: 1.7;
-            margin-bottom: 8px;
-        }
-        .content-card strong {
-            color: #e2b714;
-        }
-
-        /* === HIGHLIGHT BOX === */
-        .highlight-box {
-            background: rgba(231, 76, 60, 0.08);
-            border-right: 3px solid #e74c3c;
-            border-radius: 3px;
-            padding: 18px;
-            margin: 15px 0;
-        }
-        .highlight-box p {
-            color: #e0e0e0;
-            font-size: 0.95em;
-        }
-        .highlight-box strong {
-            color: #e74c3c;
-        }
+        /* content-card + highlight-box → moved to shared.css */
 
         /* === TIMELINE === */
         .timeline {
@@ -391,7 +339,6 @@
             .section-header h2 { font-size: 1.7em; }
             .hero-banner h1 { font-size: 1.8em; }
             .hero-banner { padding: 80px 15px 30px; }
-            .content-card { padding: 20px; }
             .community-card { padding: 20px; }
             .hero-card { padding: 20px; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -556,7 +503,7 @@
         <p>התפתחות השלטון של חמאס ברצועת עזה והמילטריזציה של הרצועה</p>
     </div>
 
-    <div class="content-card" id="card-1">
+    <div class="content-card card-claim" id="card-1">
         <h3>חמאס משתלט על עזה</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <p>ביוני 2007 חמאס ביצע <strong>הפיכה צבאית</strong> נגד הרשות הפלסטינית והשתלט על רצועת עזה בכוח הנשק. מאז, הרצועה שימשה כבסיס לפעילות צבאית נגד ישראל.</p>
@@ -590,6 +537,10 @@
         </ul>
 
         <h3>תפקיד איראן</h3>
+        <div class="key-stat">
+            <div class="big-number">$100M–$350M</div>
+            <div class="stat-desc">מימון איראני שנתי לחמאס</div>
+        </div>
         <ul>
             <li><strong>$100M&ndash;$350M לשנה</strong> (עלה ל-350 מיליון ב-2023)</li>
             <li><strong>500 לוחמים</strong> אומנו על ידי משמרות המהפכה האיראניים</li>
@@ -601,6 +552,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION B: "התפיסה" — הכשל -->
 <!-- ============================================ -->
@@ -611,7 +564,7 @@
         <p>הנחת היסוד השגויה שאפשרה את הפתעת המודיעין</p>
     </div>
 
-    <div class="content-card" id="card-2">
+    <div class="content-card card-warning" id="card-2">
         <div class="highlight-box">
             <p><strong>הנחת היסוד:</strong> חמאס מעדיף תשלומים ($30M קטארי חודשי) על עימות &mdash; ולכן "לא מסוגל" למתקפה רחבה. <strong>הנחה זו התקבלה ברוב מערכת הביטחון הישראלית.</strong></p>
         </div>
@@ -646,6 +599,8 @@
         <div class="source">מקורות: דו"ח מבקר המדינה | ועדת החקירה | Ynet | הארץ</div>
     </div>
 </section>
+
+<div class="section-break"><span class="break-icon">&#9670;</span></div>
 
 <!-- ============================================ -->
 <!-- SECTION C: ציר זמן דקה-דקה -->
@@ -789,6 +744,8 @@
     <div class="source" style="margin-top: 20px;">מקורות: צה"ל — ציר זמן רשמי | דו"ח מבקר המדינה 2024 | עדויות לוחמים</div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION D: פירוט לפי יישוב -->
 <!-- ============================================ -->
@@ -922,6 +879,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9670;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION E: סיכום נפגעים -->
 <!-- ============================================ -->
@@ -955,7 +914,7 @@
         </div>
     </div>
 
-    <div class="content-card" id="card-13">
+    <div class="content-card card-info" id="card-13">
         <h3>אזרחים זרים לפי מדינה</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <div style="overflow-x: auto;">
@@ -1016,6 +975,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION F: סיפורי גבורה -->
 <!-- ============================================ -->
@@ -1072,6 +1033,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9670;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION G: משבר החטופים -->
 <!-- ============================================ -->
@@ -1082,7 +1045,7 @@
         <p>סקירת נתוני החטיפה, תנאי השבי, ומהלכי השחרור</p>
     </div>
 
-    <div class="content-card" id="card-20">
+    <div class="content-card card-warning" id="card-20">
         <p><strong>251 אנשים נחטפו</strong> ב-7 באוקטובר. כ-25 לאומים. כמעט מחציתם בעלי אזרחות כפולה.</p>
         <p>הצעיר ביותר: <strong>כפיר ביבס</strong> &mdash; 9 חודשים. המבוגר ביותר: <strong>85+</strong></p>
         <div class="source">מקורות: פורום משפחות החטופים | צה"ל | Ynet | BBC | NY Times</div>
@@ -1103,7 +1066,7 @@
         <div class="source">מקורות: פורום משפחות החטופים | צה"ל | Ynet | BBC | NY Times</div>
     </div>
 
-    <div class="content-card" id="card-22">
+    <div class="content-card card-fact" id="card-22">
         <h3>עסקת נובמבר 2023</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <ul>
@@ -1122,7 +1085,7 @@
         <div class="source">מקורות: פורום משפחות החטופים | צה"ל | Ynet | BBC | NY Times</div>
     </div>
 
-    <div class="content-card" id="card-23">
+    <div class="content-card card-fact" id="card-23">
         <h3>נועה ארגמני</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <p>חולצה <strong>8 ביוני 2024</strong> אחרי 245 ימים. הוחזקה ב-6 מיקומים שונים.</p>
@@ -1141,14 +1104,14 @@
             <li><strong>ירדן ביבס (האב) שוחרר אחרי 484 ימים</strong></li>
             <li>כפיר, שנחטף בגיל 9 חודשים, היה <strong>החטוף הצעיר ביותר בהיסטוריה</strong></li>
         </ul>
-        <div style="margin-top: 18px; padding: 18px; background: rgba(231,76,60,0.06); border-right: 3px solid #e74c3c; border-radius: 3px;">
+        <div class="warning-box" style="margin-top: 18px;">
             <p style="color: #e74c3c; font-weight: bold; margin-bottom: 10px; font-size: 0.95em;">&#9888; סיכום פרשת משפחת ביבס:</p>
-            <p style="color: #c0c0c0; font-size: 0.95em; line-height: 1.8;">על פי ממצאי צה"ל, חמאס חטף משפחה עם תינוק בן 9 חודשים, <strong style="color:#e74c3c;">הרג את הילדים</strong>, מסר מידע כוזב על נסיבות מותם, וניסה להחזיר גופה שאינה של בת המשפחה.</p>
+            <p>על פי ממצאי צה"ל, חמאס חטף משפחה עם תינוק בן 9 חודשים, <strong style="color:#e74c3c;">הרג את הילדים</strong>, מסר מידע כוזב על נסיבות מותם, וניסה להחזיר גופה שאינה של בת המשפחה.</p>
         </div>
         <div class="source">מקורות: פורום משפחות החטופים | צה"ל | Ynet | BBC | NY Times</div>
     </div>
 
-    <div class="content-card" id="card-25">
+    <div class="content-card card-fact" id="card-25">
         <h3>עסקת ינואר 2025 &mdash; שלב 1</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <ul>
@@ -1168,6 +1131,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION G2: אלימות מינית ובריאות הנפש -->
 <!-- ============================================ -->
@@ -1178,7 +1143,7 @@
         <p>ממצאי דו"ח פרמילה פאטן, הנציבה המיוחדת לאלימות מינית בסכסוכים, והתגובות הבינלאומיות</p>
     </div>
 
-    <div class="content-card" id="card-26">
+    <div class="content-card card-claim" id="card-26">
         <h3>דו"ח פרמילה פאטן &mdash; ממצאי משלחת האו"ם</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 3, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
@@ -1209,18 +1174,23 @@
         <div class="source">מקורות: דו"ח פרמילה פטן (UN) מרץ 2024 | ZAKA | משטרת ישראל</div>
     </div>
 
-    <div class="content-card" id="card-28">
+    <div class="content-card card-info" id="card-28">
         <h3>בריאות הנפש &mdash; המספרים</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
+        <div class="key-stat">
+            <div class="big-number">16.2% &#8594; 29.8%</div>
+            <div class="stat-desc">קפיצת שיעורי PTSD בישראל אחרי 7 באוקטובר</div>
+        </div>
         <ul>
             <li><strong>ער"ן (קו סיוע נפשי)</strong>: 50,000+ שיחות בחודש הראשון. סה"כ: <strong>53,000 שיחות</strong></li>
-            <li><strong>PTSD בישראל:</strong> קפץ מ-<strong>16.2%</strong> לפני המתקפה ל-<strong>29.8%</strong> אחריה</li>
             <li><strong>ביישובי העוטף:</strong> 75% הראו תסמינים משמעותיים של חרדה, דיכאון או PTSD</li>
             <li>מערכת בריאות הנפש בישראל תוארה כ<strong>&laquo;לא מוכנה להתמודד עם הביקוש&raquo;</strong></li>
         </ul>
         <div class="source">מקורות: ער"ן — קו סיוע נפשי | משרד הבריאות | CBS — הלשכה המרכזית לסטטיסטיקה</div>
     </div>
 </section>
+
+<div class="section-break"><span class="break-icon">&#9670;</span></div>
 
 <!-- ============================================ -->
 <!-- SECTION H: כשלון מודיעין — השוואה ל-1973 -->
@@ -1232,7 +1202,7 @@
         <p>ניתוח כשלון המודיעין והשוואה למלחמת יום כיפור 1973</p>
     </div>
 
-    <div class="content-card" id="card-29">
+    <div class="content-card card-warning" id="card-29">
         <h3>ההתרעות שנדחו</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <ul>
@@ -1248,7 +1218,7 @@
         <div class="source">מקורות: דו"ח מבקר המדינה | ועדת אגרנט (1973) | ועדת וינוגרד (2006)</div>
     </div>
 
-    <div class="content-card" id="card-30">
+    <div class="content-card card-info" id="card-30">
         <h3>השוואה למלחמת יום כיפור 1973</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <table class="compare-table">
@@ -1293,6 +1263,8 @@
     </div>
 </section>
 
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- ============================================ -->
 <!-- SECTION I: תגובת העולם + מלחמה בעזה -->
 <!-- ============================================ -->
@@ -1303,7 +1275,7 @@
         <p>מה קרה אחרי &mdash; סקירה קצרה</p>
     </div>
 
-    <div class="content-card" id="card-31">
+    <div class="content-card card-info" id="card-31">
         <h3>תגובות בינלאומיות</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <ul>
@@ -1331,7 +1303,7 @@
         <div class="source">מקורות: משרד החוץ | Reuters | AP | BBC | HRW | ADL</div>
     </div>
 
-    <div class="content-card" id="card-32">
+    <div class="content-card card-fact" id="card-32">
         <h3>מבצע "חרבות ברזל" &mdash; סקירה</h3>
         <button class="copy-link-btn" onclick="copyCardLink(event,this)" title="העתק לינק">&#128279;</button>
         <ul>
@@ -1471,69 +1443,7 @@ function copyCardLink(e, btn) {
 })();
 </script>
 
-<!-- TOC Script -->
-<script>
-(function() {
-    var tocBtn = document.querySelector('.toc-fab-btn');
-    var tocPanel = document.getElementById('tocPanel');
-    var tocLinks = document.querySelectorAll('.toc-link');
-    var sections = [];
-
-    // Collect sections
-    tocLinks.forEach(function(link) {
-        var id = link.getAttribute('href').substring(1);
-        var el = document.getElementById(id);
-        if (el) sections.push({ id: id, el: el, link: link });
-    });
-
-    // Show/hide TOC button on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) tocBtn.classList.add('visible');
-        else {
-            tocBtn.classList.remove('visible');
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Intersection Observer for active section
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                tocLinks.forEach(function(l) { l.classList.remove('active'); });
-                var activeLink = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
-                if (activeLink) activeLink.classList.add('active');
-            }
-        });
-    }, { rootMargin: '-20% 0px -60% 0px' });
-
-    sections.forEach(function(s) { observer.observe(s.el); });
-
-    // Close on link click
-    tocLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var id = this.getAttribute('href').substring(1);
-            var target = document.getElementById(id);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                setTimeout(function() { tocPanel.classList.remove('open'); }, 300);
-            }
-        });
-    });
-
-    // Close on click outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.toc-fab')) {
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') tocPanel.classList.remove('open');
-    });
-})();
-</script>
+<!-- TOC script → moved to common.js -->
 
 
 <nav class="mobile-nav" aria-label="ניווט מובייל">

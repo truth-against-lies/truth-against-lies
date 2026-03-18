@@ -155,10 +155,40 @@ body.light-mode .tldr-box {
     border-left: 4px solid #e2b714;
 }
 
+/* === CONTENT CARDS === */
+.content-card {
+    border-right: none;
+    border-left: 4px solid #e2b714;
+}
+.content-card.card-claim { border-left-color: #e74c3c; }
+.content-card.card-fact { border-left-color: #2ecc71; }
+.content-card.card-info { border-left-color: #3498db; }
+.content-card.card-warning { border-left-color: #e67e22; }
+
 /* === REGION CARDS === */
 .region-card {
     border-right: none;
-    border-left: 4px solid #e2b714;
+    border-left: 4px solid #e74c3c;
+}
+
+/* === HIGHLIGHT BOX & FACT BOX === */
+.highlight-box, .fact-box {
+    border-right: none;
+    border-left: 3px solid #e74c3c;
+}
+
+/* === CALLOUT & WARNING BOX === */
+.callout-box {
+    border-right: none;
+    border-left: 3px solid #3498db;
+}
+.callout-box::before {
+    right: auto;
+    left: 12px;
+}
+.warning-box {
+    border-right: none;
+    border-left: 3px solid #e67e22;
 }
 
 /* === GATEWAY CARDS === */

@@ -363,6 +363,22 @@ a:focus-visible, button:focus-visible {
 }
 .toc-link:hover { color: #e2b714; background: rgba(226, 183, 20, 0.05); }
 .toc-link.active { color: #e2b714; border-right-color: #e2b714; background: rgba(226, 183, 20, 0.08); }
+/* Desktop sidebar mode */
+@media (min-width: 1200px) {
+    .toc-fab-btn { display: none !important; }
+    .toc-panel {
+        display: block !important;
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        bottom: auto;
+        max-height: calc(100vh - 120px);
+        min-width: 220px;
+        max-width: 260px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+}
 @media (max-width: 768px) {
     .toc-fab { bottom: 80px; left: 20px; }
     .toc-panel {
@@ -620,13 +636,17 @@ body {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    padding-bottom: 20px;
 }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* === SECTION HEADER === */
 .section-header {
     text-align: center;
-    padding: 50px 0 25px;
+    padding: 60px 0 30px;
+    background: linear-gradient(180deg, rgba(226, 183, 20, 0.05) 0%, transparent 100%);
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 .section-header h1,
 .section-header h2 {
@@ -637,13 +657,259 @@ body {
 .section-divider {
     width: 60px;
     height: 3px;
-    background: #e2b714;
+    background: linear-gradient(90deg, #e2b714, #f0d060);
     margin: 0 auto 15px;
+    border-radius: 2px;
 }
 .section-header p {
     color: #888;
     font-size: 1em;
 }
+
+/* === CONTENT CARD SYSTEM === */
+.content-card {
+    background: #12172b;
+    border-radius: 3px;
+    padding: 40px;
+    margin-bottom: 45px;
+    border: 1px solid rgba(226, 183, 20, 0.08);
+    border-right: 4px solid #e2b714;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+.content-card:hover {
+    border-color: rgba(226, 183, 20, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.content-card h3 {
+    color: #e2b714;
+    font-size: 1.35em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.content-card p {
+    color: #c0c0c0;
+    font-size: 0.95em;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+.content-card ul {
+    padding-right: 20px;
+    margin: 10px 0 15px;
+}
+.content-card li {
+    color: #c0c0c0;
+    font-size: 0.95em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+.content-card strong {
+    color: #e2b714;
+}
+@media (max-width: 768px) {
+    .content-card { padding: 22px; margin-bottom: 35px; }
+    .section-header { padding: 40px 0 20px; }
+    .section-break { margin: 40px 0; }
+}
+
+/* Content card — Claim/Lie variant (red) */
+.content-card.card-claim {
+    border-right-color: #e74c3c;
+}
+.content-card.card-claim h3 { color: #e74c3c; }
+.content-card.card-claim strong { color: #e74c3c; }
+
+/* Content card — Fact/Evidence variant (green) */
+.content-card.card-fact {
+    border-right-color: #2ecc71;
+}
+.content-card.card-fact h3 { color: #2ecc71; }
+.content-card.card-fact strong { color: #2ecc71; }
+
+/* Content card — Info/Notes variant (blue) */
+.content-card.card-info {
+    border-right-color: #3498db;
+}
+.content-card.card-info h3 { color: #3498db; }
+.content-card.card-info strong { color: #3498db; }
+
+/* Content card — Warning/Alert variant (orange) */
+.content-card.card-warning {
+    border-right-color: #e67e22;
+}
+.content-card.card-warning h3 { color: #e67e22; }
+.content-card.card-warning strong { color: #e67e22; }
+
+/* === REGION CARD === */
+.region-card {
+    background: #12172b;
+    border-radius: 3px;
+    padding: 40px;
+    margin-bottom: 45px;
+    border-right: 4px solid #e74c3c;
+    transition: box-shadow 0.3s;
+}
+.region-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.region-card h3 {
+    color: #e74c3c;
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+.region-card .region-subtitle {
+    color: #e2b714;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+.region-card p, .region-card li {
+    color: #c0c0c0;
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+.region-card ul {
+    padding-right: 20px;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .region-card { padding: 20px; }
+}
+
+/* === HIGHLIGHT BOX & FACT BOX (inside cards) === */
+.highlight-box, .fact-box {
+    background: rgba(231, 76, 60, 0.08);
+    border-right: 3px solid #e74c3c;
+    border-radius: 3px;
+    padding: 18px;
+    margin: 15px 0;
+}
+.highlight-box p, .fact-box p {
+    color: #e0e0e0;
+    font-size: 0.95em;
+}
+.highlight-box strong, .fact-box strong {
+    color: #e74c3c;
+}
+
+/* === SOURCE REFERENCE === */
+.source-ref {
+    font-size: 0.8em;
+    color: #666;
+    font-style: italic;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 10px;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* === SECTION DIVIDER (between sections) === */
+.section-break {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 60px 0;
+    color: rgba(226, 183, 20, 0.4);
+    font-size: 0.85em;
+}
+.section-break::before,
+.section-break::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(226, 183, 20, 0.2), transparent);
+}
+.section-break .break-icon {
+    font-size: 1.2em;
+    opacity: 0.6;
+}
+
+/* === CALLOUT BOX (quotes, important notes) === */
+.callout-box {
+    background: rgba(52, 152, 219, 0.08);
+    border-right: 3px solid #3498db;
+    border-radius: 3px;
+    padding: 20px 22px;
+    margin: 20px 0;
+    position: relative;
+}
+.callout-box::before {
+    content: '\201C';
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 2.5em;
+    color: rgba(52, 152, 219, 0.2);
+    line-height: 1;
+}
+.callout-box p {
+    color: #d0d0d0;
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+.callout-box strong {
+    color: #3498db;
+}
+.callout-box cite {
+    display: block;
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 8px;
+}
+
+/* === KEY STAT BOX (big number + explanation) === */
+.key-stat {
+    background: rgba(226, 183, 20, 0.06);
+    border: 1px solid rgba(226, 183, 20, 0.15);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 20px 0;
+    text-align: center;
+}
+.key-stat .big-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e2b714;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+.key-stat .big-number.red { color: #e74c3c; }
+.key-stat .big-number.green { color: #2ecc71; }
+.key-stat .stat-desc {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
+/* === WARNING BOX (orange callout) === */
+.warning-box {
+    background: rgba(230, 126, 34, 0.08);
+    border-right: 3px solid #e67e22;
+    border-radius: 3px;
+    padding: 18px;
+    margin: 15px 0;
+}
+.warning-box strong {
+    color: #e67e22;
+}
+.warning-box p {
+    color: #d0d0d0;
+    font-size: 0.95em;
+    line-height: 1.7;
+}
+
+/* Visual breaks — light mode */
+body.light-mode .section-break { color: rgba(180, 140, 10, 0.4); }
+body.light-mode .section-break::before,
+body.light-mode .section-break::after { background: linear-gradient(90deg, transparent, rgba(180, 140, 10, 0.2), transparent); }
+body.light-mode .callout-box { background: rgba(52, 152, 219, 0.06); }
+body.light-mode .callout-box p { color: #444; }
+body.light-mode .callout-box strong { color: #2471a3; }
+body.light-mode .callout-box::before { color: rgba(52, 152, 219, 0.15); }
+body.light-mode .key-stat { background: rgba(226, 183, 20, 0.08); border-color: rgba(180, 140, 10, 0.2); }
+body.light-mode .key-stat .big-number { color: #b48c0a; }
+body.light-mode .key-stat .stat-desc { color: #555; }
+body.light-mode .warning-box { background: rgba(230, 126, 34, 0.06); }
+body.light-mode .warning-box strong { color: #ca6f1e; }
 
 /* === FOOTER === */
 footer {
@@ -707,8 +973,8 @@ footer {
 .lie-card {
     background: #12172b;
     border-radius: 3px;
-    padding: 35px;
-    margin-bottom: 35px;
+    padding: 40px;
+    margin-bottom: 45px;
     border-right: 4px solid #e74c3c;
 }
 .lie-card h3 {
@@ -961,6 +1227,7 @@ body.light-mode .toc-panel { background: rgba(245, 245, 240, 0.98); border-color
 body.light-mode .toc-link { color: #666; }
 body.light-mode .toc-link.active { color: #b48c0a; border-right-color: #b48c0a; }
 body.light-mode .toc-fab-btn { background: #fff; border-color: rgba(180, 140, 10, 0.4); }
+body.light-mode .toc-title { color: #8a6d00; }
 /* Related */
 body.light-mode .related-link { background: #fff; border-color: #ddd; }
 body.light-mode .related-title { color: #444; }
@@ -1004,18 +1271,33 @@ body.light-mode .claim-card,
 body.light-mode .gateway-card { background: #fff !important; }
 /* Page-specific text */
 body.light-mode .content-card h3,
-body.light-mode .fact-card h3,
-body.light-mode .region-card h3 { color: #b48c0a !important; }
+body.light-mode .fact-card h3 { color: #b48c0a !important; }
 body.light-mode .content-card p,
 body.light-mode .fact-card p,
 body.light-mode .region-card p { color: #444 !important; }
+body.light-mode .region-card h3 { color: #c0392b !important; }
+/* Content card color variants — light mode */
+body.light-mode .content-card.card-claim { border-right-color: #c0392b; }
+body.light-mode .content-card.card-claim h3 { color: #c0392b !important; }
+body.light-mode .content-card.card-fact { border-right-color: #1e8449; }
+body.light-mode .content-card.card-fact h3 { color: #1e8449 !important; }
+body.light-mode .content-card.card-info { border-right-color: #2471a3; }
+body.light-mode .content-card.card-info h3 { color: #2471a3 !important; }
+body.light-mode .content-card.card-warning { border-right-color: #ca6f1e; }
+body.light-mode .content-card.card-warning h3 { color: #ca6f1e !important; }
+/* Highlight box & fact box — light mode */
+body.light-mode .highlight-box, body.light-mode .fact-box { background: rgba(192,57,43,0.06); }
+body.light-mode .highlight-box strong, body.light-mode .fact-box strong { color: #c0392b; }
+body.light-mode .source-ref { color: #888; }
+/* Section header — light mode gradient */
+body.light-mode .section-header { background: linear-gradient(180deg, rgba(180,140,10,0.06) 0%, transparent 100%); }
 body.light-mode .reading-progress { background: linear-gradient(90deg, #b48c0a, #d4a820); }
 
 /* === TL;DR BOX === */
 .tldr-box {
     max-width: 800px;
-    margin: 20px auto 30px;
-    padding: 20px 24px;
+    margin: 30px auto 45px;
+    padding: 24px 28px;
     background: rgba(226, 183, 20, 0.08);
     border-right: 4px solid #e2b714;
     border-radius: 8px;

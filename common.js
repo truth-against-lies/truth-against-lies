@@ -180,6 +180,87 @@ document.addEventListener('click', function(e) {
     });
 })();
 
+// ========== TABLE OF CONTENTS (auto-init) ==========
+(function() {
+    var tocBtn = document.querySelector('.toc-fab-btn');
+    var tocPanel = document.getElementById('tocPanel');
+    if (!tocBtn || !tocPanel) return;
+
+    var tocLinks = document.querySelectorAll('.toc-link');
+    var sections = [];
+
+    // Collect sections referenced by TOC links
+    tocLinks.forEach(function(link) {
+        var id = link.getAttribute('href').substring(1);
+        var el = document.getElementById(id);
+        if (el) sections.push({ id: id, el: el, link: link });
+    });
+
+    // Show/hide TOC button on scroll (mobile + small desktop)
+    window.addEventListener('scroll', function() {
+        if (window.innerWidth >= 1200) return; // sidebar handles desktop
+        if (window.scrollY > 300) tocBtn.classList.add('visible');
+        else {
+            tocBtn.classList.remove('visible');
+            tocPanel.classList.remove('open');
+        }
+    });
+
+    // Desktop sidebar: always show panel when wide enough
+    function checkSidebar() {
+        if (window.innerWidth >= 1200) {
+            tocBtn.classList.remove('visible');
+            tocPanel.classList.add('open');
+        } else {
+            tocPanel.classList.remove('open');
+        }
+    }
+    checkSidebar();
+    window.addEventListener('resize', checkSidebar);
+
+    // Scroll spy via IntersectionObserver
+    if (typeof IntersectionObserver !== 'undefined') {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(function(l) { l.classList.remove('active'); });
+                    var activeLink = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
+                    if (activeLink) activeLink.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+        sections.forEach(function(s) { observer.observe(s.el); });
+    }
+
+    // Click on link → scroll + close panel (mobile)
+    tocLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var id = this.getAttribute('href').substring(1);
+            var target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (window.innerWidth < 1200) {
+                    setTimeout(function() { tocPanel.classList.remove('open'); }, 300);
+                }
+            }
+        });
+    });
+
+    // Close on click outside (mobile)
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth >= 1200) return;
+        if (!e.target.closest('.toc-fab')) {
+            tocPanel.classList.remove('open');
+        }
+    });
+
+    // Close on Escape (mobile)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && window.innerWidth < 1200) tocPanel.classList.remove('open');
+    });
+})();
+
 // ========== SERVICE WORKER ==========
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js').catch(function() {});

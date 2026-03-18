@@ -312,6 +312,9 @@
         <strong style="color:#e2b714;">3. Historical Context</strong> &mdash; documented consequences of the claim</p>
     </div>
 </section>
+
+<div class="section-break"><span class="break-icon">&#9830;</span></div>
+
 <!-- CLAIMS SECTION -->
 <section id="claims">
     <div class="section-header">
@@ -1489,69 +1492,7 @@ document.querySelectorAll('.fade-in').forEach(function(el) { fadeObserver.observ
 <script src="supabase-config.js"></script>
 <script>trackPageView('antisemitism-en');</script>
 
-<!-- TOC Script -->
-<script>
-(function() {
-    var tocBtn = document.querySelector('.toc-fab-btn');
-    var tocPanel = document.getElementById('tocPanel');
-    var tocLinks = document.querySelectorAll('.toc-link');
-    var sections = [];
-
-    // Collect sections
-    tocLinks.forEach(function(link) {
-        var id = link.getAttribute('href').substring(1);
-        var el = document.getElementById(id);
-        if (el) sections.push({ id: id, el: el, link: link });
-    });
-
-    // Show/hide TOC button on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) tocBtn.classList.add('visible');
-        else {
-            tocBtn.classList.remove('visible');
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Intersection Observer for active section
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                tocLinks.forEach(function(l) { l.classList.remove('active'); });
-                var activeLink = document.querySelector('.toc-link[href="#' + entry.target.id + '"]');
-                if (activeLink) activeLink.classList.add('active');
-            }
-        });
-    }, { rootMargin: '-20% 0px -60% 0px' });
-
-    sections.forEach(function(s) { observer.observe(s.el); });
-
-    // Close on link click
-    tocLinks.forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var id = this.getAttribute('href').substring(1);
-            var target = document.getElementById(id);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                setTimeout(function() { tocPanel.classList.remove('open'); }, 300);
-            }
-        });
-    });
-
-    // Close on click outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.toc-fab')) {
-            tocPanel.classList.remove('open');
-        }
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') tocPanel.classList.remove('open');
-    });
-})();
-</script>
+<!-- TOC script → moved to common.js -->
 
 
 <nav class="mobile-nav" aria-label="Mobile navigation">
