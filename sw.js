@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v63';
+var CACHE_NAME = 'tal-v64';
 var ASSETS = [
     './',
     'index.html',
@@ -77,7 +77,9 @@ var ASSETS = [
     'consciousness.html',
     'consciousness-en.html',
     'bnei-yisrael.html',
-    'bnei-yisrael-en.html'
+    'bnei-yisrael-en.html',
+    'streams.html',
+    'streams-en.html'
 ];
 
 // Install: cache all assets

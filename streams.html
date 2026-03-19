@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>זרמים ומגזרים בעם ישראל | האמת נגד השקר</title>
+    <meta name="description" content="מפה מקיפה של כל הזרמים, המגזרים, העדות והקהילות בעם ישראל — מחרדים ועד חילונים, מאשכנזים ועד תימנים. מה שהיה לפני השואה ומה שנותר היום.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="זרמים ומגזרים בעם ישראל | האמת נגד השקר">
+    <meta property="og:description" content="מפה מקיפה של כל הזרמים, המגזרים, העדות והקהילות בעם ישראל">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/streams.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="זרמים ומגזרים בעם ישראל | האמת נגד השקר">
+    <meta name="twitter:description" content="מפה מקיפה של כל הזרמים, המגזרים, העדות והקהילות בעם ישראל">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/streams.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/streams.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/streams-en.html">
+    <style>
+        /* === HERO === */
+        .str-hero { text-align: center; padding: 100px 20px 50px; background: linear-gradient(180deg, rgba(30,74,138,0.15) 0%, rgba(226,183,20,0.05) 50%, transparent 100%); }
+        .str-hero h1 { color: #1e4a8a; font-size: 2.6em; margin-bottom: 15px; }
+        .str-hero .subtitle { color: #c0c0c0; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+        .str-hero .opening-quote { font-size: 1.6em; color: #e2b714; font-weight: bold; margin: 30px auto; max-width: 650px; line-height: 1.6; }
+        .str-hero .quote-source { color: #888; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
+        .str-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 20px; }
+
+        /* === SECTIONS === */
+        .str-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .str-section h2 { color: #e2b714; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(30,74,138,0.3); }
+        .str-section .section-intro { color: #999; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
+
+        /* === STREAM CARD === */
+        .stream-card { background: #12172b; border-right: 3px solid #e2b714; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .stream-card h4 { color: #e2b714; margin-bottom: 8px; font-size: 1.1em; }
+        .stream-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .stream-card .card-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+        .stream-card .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: bold; }
+        .badge-orthodox { background: rgba(226,183,20,0.15); color: #e2b714; }
+        .badge-nonoртhodox { background: rgba(52,152,219,0.15); color: #3498db; }
+        .badge-reform { background: rgba(52,152,219,0.15); color: #3498db; }
+        .badge-ethnic { background: rgba(26,188,156,0.15); color: #1abc9c; }
+        .badge-political { background: rgba(39,174,96,0.15); color: #27ae60; }
+        .badge-size { background: rgba(255,255,255,0.06); color: #888; }
+        .stream-card .source-ref { color: #555; font-size: 0.8em; font-style: italic; margin-top: 10px; }
+
+        /* === CARD BORDER VARIANTS === */
+        .card-orthodox { border-right-color: #e2b714; }
+        .card-orthodox h4 { color: #e2b714; }
+        .card-nonorthodox { border-right-color: #3498db; }
+        .card-nonorthodox h4 { color: #3498db; }
+        .card-ethnic { border-right-color: #1abc9c; }
+        .card-ethnic h4 { color: #1abc9c; }
+        .card-political { border-right-color: #27ae60; }
+        .card-political h4 { color: #27ae60; }
+
+        /* === DESTROYED CARD === */
+        .destroyed-card { background: #12172b; border-right: 3px solid #8b0000; padding: 25px; margin-bottom: 18px; border-radius: 3px; position: relative; }
+        .destroyed-card h4 { color: #cd5c5c; margin-bottom: 8px; font-size: 1.1em; }
+        .destroyed-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .destroyed-badge { background: rgba(139,0,0,0.2); color: #cd5c5c; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+
+        /* === TENSION CARD === */
+        .tension-card { background: #12172b; border-right: 3px solid #e67e22; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .tension-card h4 { color: #e67e22; margin-bottom: 8px; font-size: 1.05em; }
+        .tension-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .tension-card .view-quote { color: #e67e22; font-style: italic; margin: 8px 0; font-size: 0.9em; }
+
+        /* === UNITY BOX === */
+        .unity-callout { border: 2px solid #e2b714; padding: 35px; text-align: center; margin: 30px 0; border-radius: 5px; background: rgba(226,183,20,0.04); }
+        .unity-callout p { color: #e2b714; font-size: 1.1em; line-height: 1.9; }
+        .unity-callout strong { color: #fff; }
+
+        /* === FAMILY MESSAGE === */
+        .family-message { background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(226,183,20,0.08)); border: 2px solid #e2b714; border-radius: 8px; padding: 40px 30px; margin: 30px 0; text-align: center; }
+        .family-message h3 { color: #e2b714; font-size: 1.5em; margin-bottom: 20px; }
+        .family-message p { color: #c0c0c0; font-size: 1.05em; line-height: 2; margin-bottom: 15px; }
+        .family-message .highlight { color: #fff; font-weight: bold; }
+        .family-message .nazi-text { color: #cd5c5c; font-weight: bold; }
+        .family-message .am-ehad { color: #e2b714; font-size: 1.8em; font-weight: bold; display: block; margin-top: 25px; }
+
+        /* === DEMOGRAPHICS TABLE === */
+        .pop-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .pop-table th { background: rgba(30,74,138,0.15); color: #e2b714; padding: 10px; text-align: right; font-size: 0.9em; }
+        .pop-table td { padding: 8px 10px; color: #c0c0c0; font-size: 0.9em; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .pop-table tr:hover td { background: rgba(255,255,255,0.03); }
+
+        /* === SECTION DIVIDER === */
+        .section-divider { text-align: center; color: rgba(30,74,138,0.3); letter-spacing: 10px; padding: 20px; font-size: 1.1em; }
+
+        /* === CLOSING QUOTE === */
+        .closing-quote { text-align: center; margin: 40px 0 20px; }
+        .closing-quote blockquote { color: #e2b714; font-size: 1.3em; line-height: 1.7; border: none; margin: 0; padding: 0; }
+        .closing-quote .quote-author { color: #666; font-size: 0.85em; margin-top: 10px; }
+
+        /* === TOC === */
+        .toc-fab { position: fixed; left: 20px; bottom: 80px; z-index: 997; }
+        .toc-fab-btn { background: #1e4a8a; color: #fff; border: none; width: 48px; height: 48px; border-radius: 50%; font-size: 1.3em; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
+        .toc-panel { position: fixed; left: -300px; top: 60px; width: 260px; height: calc(100vh - 120px); background: #0d1117; border-right: 2px solid rgba(30,74,138,0.3); padding: 20px 15px; overflow-y: auto; z-index: 997; transition: left 0.3s; }
+        .toc-panel.open { left: 0; }
+        .toc-panel h3 { color: #e2b714; font-size: 0.95em; margin-bottom: 15px; }
+        .toc-link { display: block; color: #888; font-size: 0.85em; padding: 6px 0; text-decoration: none; border-right: 2px solid transparent; padding-right: 10px; transition: all 0.2s; }
+        .toc-link:hover, .toc-link.active { color: #e2b714; border-right-color: #e2b714; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .str-hero { padding: 80px 16px 40px; }
+            .str-hero h1 { font-size: 1.6em; }
+            .str-hero .opening-quote { font-size: 1.2em; }
+            .str-section { padding: 30px 16px; }
+            .str-section h2 { font-size: 1.3em; }
+            .stream-card, .destroyed-card, .tension-card { padding: 18px 14px; }
+            .family-message { padding: 25px 16px; }
+            .family-message .am-ehad { font-size: 1.4em; }
+            .pop-table { font-size: 0.8em; display: block; overflow-x: auto; }
+            .toc-fab { left: 12px; bottom: 70px; }
+        }
+
+        @media (min-width: 1200px) {
+            .toc-panel { left: 0; }
+            .toc-fab { display: none; }
+        }
+
+        /* === LIGHT MODE === */
+        body.light-mode .str-hero { background: linear-gradient(180deg, rgba(30,74,138,0.06) 0%, transparent 100%); }
+        body.light-mode .str-hero h1 { color: #1e4a8a; }
+        body.light-mode .str-hero .opening-quote { color: #b48c0a; }
+        body.light-mode .str-section h2 { color: #b48c0a; }
+        body.light-mode .stream-card, body.light-mode .tension-card, body.light-mode .destroyed-card { background: #fff; }
+        body.light-mode .stream-card p, body.light-mode .tension-card p, body.light-mode .destroyed-card p { color: #333; }
+        body.light-mode .pop-table th { background: rgba(30,74,138,0.08); color: #8b6f00; }
+        body.light-mode .pop-table td { color: #333; }
+        body.light-mode .unity-callout { background: rgba(226,183,20,0.03); }
+        body.light-mode .unity-callout p { color: #8b6f00; }
+        body.light-mode .family-message { background: linear-gradient(135deg, rgba(139,0,0,0.04), rgba(226,183,20,0.04)); }
+        body.light-mode .family-message p { color: #333; }
+        body.light-mode .toc-panel { background: #f8f9fa; border-right-color: #ddd; }
+    </style>
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"זרמים ומגזרים בעם ישראל","description":"מפה מקיפה של כל הזרמים, המגזרים, העדות והקהילות בעם ישראל — מחרדים ועד חילונים, מאשכנזים ועד תימנים.","author":{"@type":"Person","name":"נתנאל אסיס"},"publisher":{"@type":"Organization","name":"האמת נגד השקר"},"dateModified":"2026-03-19","inLanguage":"he","mainEntityOfPage":"https://truth-against-lies.github.io/truth-against-lies/streams.html"}
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism.html">אנטישמיות</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism.html">&#128269; מה זה אנטישמיות?</a></li>
+                        <li><a href="antisemitism.html#claims">&#128203; עלילות והפרכות</a></li>
+                        <li><a href="holocaust-denial.html">&#128367; הכחשת השואה</a></li>
+                        <li><a href="statistics.html">&#128202; נתוני אנטישמיות</a></li>
+                        <li><a href="antisemitic-orgs.html">&#9760; ארגונים אנטישמיים</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="fact-cards.html">&#127183; כרטיסי עובדות</a></li>
+                <li><a href="index.html#timeline">ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li class="has-submenu">
+                    <a href="gallery.html">מדיה</a>
+                    <ul class="submenu">
+                        <li><a href="gallery.html">&#128444; תיעוד היסטורי</a></li>
+                        <li><a href="videos.html">&#128249; צפה והתעדכן</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li class="has-submenu">
+                    <a href="facts.html">עובדות שלא מספרים לך</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command.html">&#9874; פיקוד כושל ובוגד</a></li>
+                        <li><a href="facts-knesset.html">&#127963; חברי כנסת</a></li>
+                        <li><a href="facts-court.html">&#9878; בג"ץ ומערכת המשפט</a></li>
+                        <li><a href="facts-policies.html">&#128203; חוקים ומדיניות כושלת</a></li>
+                        <li><a href="facts-media.html">&#128249; תקשורת שקרנית</a></li>
+                        <li><a href="facts-orgs.html">&#127970; ארגונים, אקדמיה ו-BDS</a></li>
+                        <li><a href="facts-money.html">&#128176; הכסף — מימון הטרור</a></li>
+                        <li><a href="facts-iran.html">&#128293; ציר ההרס של איראן</a></li>
+                        <li><a href="facts-west.html">&#127760; בגידות המערב</a></li>
+                        <li><a href="facts-myths.html">&#128269; שקרים שהמציאות הפריכה</a></li>
+                        <li><a href="facts-netanyahu.html">&#9878; הפרדוקס של נתניהו</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity.html">חיזוק ומחשבה</a>
+                    <ul class="submenu">
+                        <li><a href="unity.html">&#128170; חיזוק העם היהודי</a></li>
+                        <li><a href="consciousness.html">&#128293; שינוי תודעה</a></li>
+                        <li><a href="mind.html">&#129504; חיזוק המוח</a></li>
+                        <li><a href="left-narrative.html">&#128240; הנרטיב של השמאל</a></li>
+                        <li><a href="daat-dat.html">&#9878; דעת vs דת</a></li>
+                        <li><a href="sword-prayer.html">&#9876; חרב ותפילה</a></li>
+                        <li><a href="the-schism.html">&#9878; הפילוג הגדול</a></li>
+                        <li><a href="bnei-yisrael.html">&#128220; בני ישראל</a></li>
+                        <li><a href="streams.html">&#127907; זרמים ומגזרים</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="glossary.html">מילון מונחים</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul></div>
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
+        <div class="nav-lang">
+            <a href="streams-en.html" class="nav-lang-btn" title="English">EN</a>
+        </div>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
+    </div>
+</nav>
+
+<!-- TOC Panel -->
+<div class="toc-panel" id="tocPanel">
+    <h3>תוכן עניינים</h3>
+    <a href="#intro" class="toc-link">מבוא</a>
+    <a href="#orthodox" class="toc-link">הספקטרום האורתודוקסי</a>
+    <a href="#nonorthodox" class="toc-link">זרמים לא-אורתודוקסיים</a>
+    <a href="#ethnic" class="toc-link">עדות וקהילות</a>
+    <a href="#political" class="toc-link">זהויות פוליטיות</a>
+    <a href="#tensions" class="toc-link">מה חושבים אחד על השני</a>
+    <a href="#holocaust" class="toc-link">לפני השואה</a>
+    <a href="#demographics" class="toc-link">דמוגרפיה</a>
+    <a href="#one-people" class="toc-link">עם אחד</a>
+    <a href="#sources" class="toc-link">מקורות</a>
+</div>
+<div class="toc-fab" id="tocFab">
+    <button class="toc-fab-btn" onclick="document.getElementById('tocPanel').classList.toggle('open')" aria-label="תוכן עניינים">&#9776;</button>
+</div>
+
+<!-- HERO -->
+<div class="str-hero">
+    <h1>&#127907; הזרמים והמגזרים בעם ישראל</h1>
+    <div class="subtitle">עם אחד &mdash; מאה פנים</div>
+    <div class="opening-quote">
+        &#10077;מפני מה נברא אדם יחידי? להגיד גדולתו של הקדוש ברוך הוא: שאדם טובע כמה מטבעות בחותם אחד &mdash; וכולם דומין זה לזה. והקדוש ברוך הוא טובע כל אדם בחותמו של אדם הראשון &mdash; ואין אחד מהם דומה לחברו&#10078;
+        <span class="quote-source">תלמוד בבלי, סנהדרין לח.</span>
+    </div>
+    <div class="hero-meta">עודכן: מרץ 2026</div>
+</div>
+
+<!-- TL;DR -->
+<div class="str-section">
+    <div class="callout-box" style="border-color: #1e4a8a;">
+        <h3 style="color: #e2b714; margin-bottom: 12px;">&#128218; בקצרה</h3>
+        <ul style="color: #c0c0c0; line-height: 2; padding-right: 20px;">
+            <li>בעם ישראל קיימים <strong style="color:#fff;">עשרות זרמים, מגזרים ועדות</strong> &mdash; דתיים, חילוניים, אתניים ופוליטיים</li>
+            <li>מחסידי סאטמר שמתנגדים למדינה ועד ציונים דתיים שרואים בה &quot;ראשית הגאולה&quot;</li>
+            <li>לפני השואה <strong style="color:#fff;">היו זרמים שלמים שנמחקו</strong> &mdash; הבונד, יהדות סלוניקי, חצרות חסידיות שלמות</li>
+            <li>למרות כל ההבדלים הפנימיים &mdash; <strong style="color:#e2b714;">עבור האויבים שלנו אין הבדל. יהודי הוא יהודי.</strong></li>
+        </ul>
+    </div>
+</div>
+
+<!-- SECTION 1: INTRODUCTION -->
+<div class="str-section" id="intro">
+    <h2>&#128161; למה חשוב להכיר את הזרמים?</h2>
+    <p class="section-intro">
+        העם היהודי אינו מונוליט. לאורך 3,500 שנה התפתחו בתוכו קהילות, מסורות, השקפות עולם ודרכי חיים מגוונות &mdash; לפעמים דומות, לפעמים סותרות. הכרת המגוון הזה חיונית להבנת הציוויליזציה היהודית, ולהבנה למה המושג &quot;היהודים&quot; כאילו הם גוף אחד הומוגני &mdash; הוא טעות יסודית.
+    </p>
+    <p class="section-intro">
+        בעמוד זה נמפה את כל הזרמים והמגזרים הקיימים היום, נסביר את ההבדלים ביניהם, נחשוף מה הם חושבים אחד על השני, ובסוף &mdash; נזכיר מה שהשואה השמידה, ולמה למרות הכל אנחנו עם אחד.
+    </p>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 2: ORTHODOX SPECTRUM -->
+<div class="str-section" id="orthodox">
+    <h2>&#128220; הספקטרום האורתודוקסי</h2>
+    <p class="section-intro">
+        האורתודוקסיה היהודית מחזיקה בעיקרון שהתורה &mdash; כתובה ושבעל-פה &mdash; היא דבר ה' המחייב את כל היהודים. אבל בתוך האורתודוקסיה עצמה יש הבדלים עצומים.
+    </p>
+
+    <!-- HASIDIC -->
+    <div class="stream-card card-orthodox">
+        <h4>&#9733; חב&quot;ד-ליובאוויטש</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חסידי</span>
+            <span class="badge badge-size">~90,000 ליבה + מיליונים נעזרים</span>
+        </div>
+        <p>
+            <strong>נוסדה:</strong> 1775, על ידי רבי שניאור זלמן מליאדי.<br>
+            <strong>שם:</strong> ר"ת חכמה-בינה-דעת. משלבת קבלה עם התבוננות שכלית.<br>
+            <strong>ייחוד:</strong> התנועה החסידית <strong>היחידה</strong> שעוסקת בקירוב יהודים באופן פעיל ברחבי העולם. 4,900 משפחות שלוחים ב-100 מדינות, 3,500 מוסדות. בתי חב"ד משמשים כמרכזים קהילתיים לכל יהודי &mdash; ללא הבדל רמת שמירת מצוות.<br>
+            <strong>מחלוקת:</strong> הרבי, רבי מנחם מנדל שניאורסון (נפטר 1994), נחשב על ידי חלק מהחסידים למשיח. קבוצת ה&quot;משיחיסטים&quot; עדיין מאמינה שהוא חי &mdash; עמדה שקבוצות חרדיות אחרות רואות כבעייתית.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#9733; סאטמר</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חסידי</span>
+            <span class="badge badge-size">~300,000 &mdash; החצר הגדולה בעולם</span>
+        </div>
+        <p>
+            <strong>נוסדה:</strong> לאחר מלחמת העולם השנייה בניו יורק, על ידי רבי יואל טייטלבוים.<br>
+            <strong>אמונה מרכזית:</strong> <strong>אנטי-ציונות קיצונית</strong> על בסיס תיאולוגי. מאמינים שהקמת מדינה יהודית לפני בוא המשיח אסורה (בהתבסס על &quot;שלוש השבועות&quot; בתלמוד כתובות). דוחים את מדינת ישראל לחלוטין.<br>
+            <strong>פיצול:</strong> לאחר פטירת הרבי משה טייטלבוים (2006), נפצלו לשתי פלגים: אהרן טייטלבוים (קרית יואל) וזלמן טייטלבוים (וויליאמסבורג).<br>
+            <strong>דעה על אחרים:</strong> רואים יהודים ציוניים (גם דתיים) ככופרים. רפורמים וקונסרבטיבים אינם נחשבים ליהדות לגיטימית. אפילו מבקרים קבוצות חרדיות אחרות על חוסר אנטי-ציונות מספקת.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#9733; ברסלב</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חסידי</span>
+            <span class="badge badge-size">עשרות אלפים (מבוזר)</span>
+        </div>
+        <p>
+            <strong>נוסדה:</strong> על ידי רבי נחמן מברסלב (1772-1810), נין של הבעל שם טוב.<br>
+            <strong>ייחוד:</strong> מדגישה שמחה, אמונה ופשטות. תרגול מרכזי: <strong>התבודדות</strong> &mdash; שעה ביום של שיחה אישית עם הקב"ה. ידועים בתפילה אקסטטית עם מחיאות כפיים, שירה וריקוד.<br>
+            <strong>ללא רבי חי:</strong> רבי נחמן לא מינה יורש &mdash; כבר 200+ שנה בלי אדמו"ר. קבוצות חסידיות אחרות מכנות אותם לפעמים &quot;החסידים המתים&quot;.<br>
+            <strong>נ-נח:</strong> תת-קבוצה עם הנוסחה המיסטית &quot;נ-נח-נחמ-נחמן מאומן&quot;. ידועים בכיפות לבנות, רכבי רמקולים וריקוד ברחובות.<br>
+            <strong>אומן:</strong> ~50,000 עולים לקבר רבי נחמן באומן, אוקראינה, בכל ראש השנה. 8% מכלל יהודי ישראל ביקרו באומן לפחות פעם אחת.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#9733; גור, בעלז, ויז'ניץ, בובוב &mdash; חצרות חסידיות נוספות</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חסידי</span>
+            <span class="badge badge-size">עשרות אלפי משפחות בכל חצר</span>
+        </div>
+        <p>
+            <strong>גור:</strong> ~11,600 משפחות. החצר השנייה בגודלה. גישה רציונלית יותר. כוח פוליטי דומיננטי ביהדות התורה. ידועים בתקנות צניעות מחמירות.<br>
+            <strong>בעלז:</strong> ~7,000 משפחות. בית הכנסת הגדול של בעלז בירושלים מהגדולים בעולם. עזבו את העדה החרדית ב-1979.<br>
+            <strong>ויז'ניץ:</strong> ~10,500 משפחות. מסורת כריזמטית-פופולרית שמעמידה את הצדיק במרכז.<br>
+            <strong>בובוב:</strong> לפני המלחמה ~100,000 חסידים. <strong>רק ~300 שרדו</strong>. נבנתה מחדש בבורו פארק, ברוקלין.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#128218; ליטאי / ישיבתי (ליטוואקים)</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חרדי-ליטאי</span>
+            <span class="badge badge-size">מאות אלפים</span>
+        </div>
+        <p>
+            <strong>גישה:</strong> לימוד תלמוד אינטלקטואלי-עמוק &mdash; בניגוד לגישה הרגשית-מיסטית של החסידות. מורשת הגאון מווילנה (1720-1797) שהתנגד נמרצות לחסידות.<br>
+            <strong>מוסדות:</strong> ישיבת לייקווד (Beth Medrash Govoha) &mdash; 9,000+ תלמידים. ישיבת מיר בירושלים &mdash; הישיבה הגדולה בעולם. פוניבז' בבני ברק.<br>
+            <strong>מערכת כוללים:</strong> גברים נשואים לומדים תורה במשרה מלאה עם מלגה. ערך עליון: לימוד תורה.<br>
+            <strong>דעה על אחרים:</strong> רואים עצמם כסטנדרט הזהב של לימוד תורה. מסתייגים מהחסידים בשל &quot;רמת לימוד תלמוד לא מספקת&quot;. דוחים רפורמים/קונסרבטיבים לחלוטין. אמביוולנטיים כלפי ציונות דתית.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#9878; חרדיות ספרדית (ש&quot;ס)</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חרדי-ספרדי</span>
+            <span class="badge badge-size">מאות אלפי תומכים</span>
+        </div>
+        <p>
+            <strong>דמות מפתח:</strong> הרב עובדיה יוסף (1920-2013), הרב הראשי הספרדי לשעבר.<br>
+            <strong>מפלגה:</strong> ש&quot;ס, נוסדה 1984 &mdash; מייצגת יהודים חרדים ספרדים ומזרחים. זוכה ב-8-11 מושבים בכנסת באופן עקבי.<br>
+            <strong>ייחוד:</strong> הולכת לפי מסורת ההלכה הספרדית (מקילה יותר בחלק מהתחומים). משלבת הקפדה דתית עם גאווה אתנית. <strong>המפלגה החרדית הראשונה שהצטרפה לארגון הציוני העולמי</strong> (2010).<br>
+            <strong>תרומה:</strong> הרב עובדיה הכיר ביהודי אתיופיה כיהודים לפי ההלכה (1973). תמך בעלייתם. בנה מערכת ישיבות ספרדית שלמה (רשת &quot;אל המעיין&quot;).
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#128170; ציונות דתית / דתי לאומי</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">דתי-לאומי</span>
+            <span class="badge badge-size">~12% מיהודי ישראל</span>
+        </div>
+        <p>
+            <strong>שלושה עמודים:</strong> ארץ ישראל, עם ישראל, תורת ישראל. רואים את מדינת ישראל כמשמעותית דתית &mdash; רבים מהם מכנים אותה &quot;אתחלתא דגאולה&quot;.<br>
+            <strong>מעשי:</strong> משלבים לימוד תורה עם השכלה חילונית, שירות צבאי ומקצוע. גברים לובשים כיפה סרוגה. בנים בישיבות הסדר, בנות בשירות לאומי.<br>
+            <strong>מוסדות:</strong> ישיבת מרכז הרב (מיסודו של הרב קוק), אוניברסיטת בר-אילן.<br>
+            <strong>דעה על אחרים:</strong> ביקורתיים כלפי חרדים על אי-שירות בצה&quot;ל. מכבדים אך שומרים מרחק מרפורמים/קונסרבטיבים. יחס מורכב עם חילונים.
+        </p>
+    </div>
+
+    <div class="stream-card card-orthodox">
+        <h4>&#9876; חרד&quot;ל (חרדי-לאומי)</h4>
+        <div class="card-meta">
+            <span class="badge badge-orthodox">חרד&quot;ל</span>
+            <span class="badge badge-size">~1% מיהודי ישראל</span>
+        </div>
+        <p>
+            <strong>היברידי:</strong> הקפדה הלכתית ברמת חרדית + מחויבות ציונית לארץ ישראל. מאמינים שישראל היא אתחלתא דגאולה. דוחים ליברליזם חילוני. הפרדה מגדרית מלאה.<br>
+            <strong>נשים:</strong> מכסות כל שיער (ללא פאה). מתנגדים לתנועות נוער מעורבות. חינוך נפרד מגיל צעיר.<br>
+            <strong>צבא:</strong> בניגוד לחרדים הרגילים, משרתים בצה&quot;ל &mdash; רבים ביחידות קרביות מובחרות. השפעה לא פרופורציונלית על הצבא ועל החינוך.<br>
+            <strong>דמויות מפתח:</strong> הרבנים צבי טאו, שלמה אבינר.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 3: NON-ORTHODOX -->
+<div class="str-section" id="nonorthodox">
+    <h2>&#127760; זרמים לא-אורתודוקסיים</h2>
+    <p class="section-intro">
+        זרמים אלו נוסדו בעיקר במאות ה-19 וה-20, מתוך תפיסה שהיהדות צריכה להתפתח ולהתאים את עצמה לעולם המודרני. האורתודוקסיה לא מכירה בהם כמייצגים יהדות אותנטית.
+    </p>
+
+    <div class="stream-card card-nonorthodox">
+        <h4>&#127760; יהדות רפורמית / פרוגרסיבית</h4>
+        <div class="card-meta">
+            <span class="badge badge-reform">רפורמי</span>
+            <span class="badge badge-size">~2 מיליון &mdash; הזרם הגדול בארה&quot;ב</span>
+        </div>
+        <p>
+            <strong>נוסדה:</strong> אמצע המאה ה-19 בגרמניה. מייסדים: אברהם גייגר, שמואל הולדהיים.<br>
+            <strong>אמונה:</strong> היהדות תמיד התפתחה וחייבת להמשיך להשתנות. אוטונומיה אישית עליונה. התורה בהשראה אלוהית אך לא מילולית. שוויון מגדרי מלא, הכלת להט&quot;ב. מכירים בייחוס אבהי (משנת 1983 &mdash; שבירה מהותית מההלכה המסורתית).<br>
+            <strong>תפילות:</strong> בעיקר בשפה המקומית. ישיבה מעורבת. נשים ולהט&quot;ב משמשים כרבנים. כשרות ושבת &mdash; בחירה אישית.<br>
+            <strong>בישראל:</strong> נוכחות זעירה (~5-8% מזדהים). אין הכרה רשמית. רבני רפורמה לא יכולים לערוך נישואין או גיורים חוקיים.<br>
+            <strong>מגמה:</strong> <span style="color: #cd5c5c;">בירידה</span> &mdash; צפויה ירידה של 46% באוכלוסייה בני 30-69 ב-50 השנים הקרובות.
+        </p>
+    </div>
+
+    <div class="stream-card card-nonorthodox">
+        <h4>&#128220; יהדות קונסרבטיבית / מסורתית (מסורתי)</h4>
+        <div class="card-meta">
+            <span class="badge badge-reform">קונסרבטיבי</span>
+            <span class="badge badge-size">~1.1-2 מיליון</span>
+        </div>
+        <p>
+            <strong>נוסדה:</strong> סוף המאה ה-19, כ&quot;אסכולה היסטורית-חיובית&quot; של זכריה פרנקל.<br>
+            <strong>אמונה:</strong> ההלכה <strong>מחייבת ועוברת התפתחות היסטורית</strong> בו-זמנית. משתמשת במחקר מודרני לצד שיטות מסורתיות. שומרת על מנהגים מסורתיים (כשרות, שבת, עברית בתפילה) אך מאפשרת שינוי דרך תהליך רבני.<br>
+            <strong>שוויון:</strong> רוב בתי הכנסת שוויוניים. נשים כרבניות מ-1985. רבנים להט&quot;ב מ-2006.<br>
+            <strong>מגמה:</strong> <span style="color: #cd5c5c;">בירידה משמעותית</span> &mdash; היה פעם הזרם הגדול בארה&quot;ב, כיום רק ~17%.
+        </p>
+    </div>
+
+    <div class="stream-card card-nonorthodox">
+        <h4>&#128301; רקונסטרוקציוניזם</h4>
+        <div class="card-meta">
+            <span class="badge badge-reform">רקונסטרוקציוניסטי</span>
+            <span class="badge badge-size">~100,000</span>
+        </div>
+        <p>
+            <strong>מייסד:</strong> הרב מרדכי קפלן (1881-1983).<br>
+            <strong>אמונה:</strong> <strong>היהדות היא ציוויליזציה מתפתחת</strong>, לא רק דת. כוללת דת, תרבות, שפה, אמנות, היסטוריה וארגון חברתי. אלוהים מובן באופן לא-מסורתי (לא ישות על-טבעית). ההלכה אינה מחייבת אך משמשת בסיס לפרקטיקה יהודית.<br>
+            <strong>ראשונים:</strong> הזרם הראשון שהסמיך רבנים להט&quot;ב (1984).
+        </p>
+    </div>
+
+    <div class="stream-card card-nonorthodox">
+        <h4>&#10024; התחדשות יהודית (Jewish Renewal)</h4>
+        <div class="card-meta">
+            <span class="badge badge-reform">התחדשות</span>
+            <span class="badge badge-size">קטן</span>
+        </div>
+        <p>
+            <strong>מייסד:</strong> הרב זלמן שכטר-שלומי (1924-2014), רב מוסמך חב"ד שפרש.<br>
+            <strong>ייחוד:</strong> משלב <strong>תפילה חסידית אקסטטית</strong> עם ערכים עכשוויים: שוויון מגדרי, סביבתנות, פוליטיקה פרוגרסיבית. שואב מקבלה ומדיטציה. אחד הזרמים היחידים שמגשר בין מיסטיקה חסידית לפוליטיקה פרוגרסיבית.
+        </p>
+    </div>
+
+    <div class="stream-card card-nonorthodox">
+        <h4>&#129504; יהדות הומניסטית</h4>
+        <div class="card-meta">
+            <span class="badge badge-reform">הומניסטי</span>
+            <span class="badge badge-size">~10,000-50,000</span>
+        </div>
+        <p>
+            <strong>מייסד:</strong> הרב שרווין ויין (1928-2007).<br>
+            <strong>אמונה:</strong> <strong>יהדות א-תיאיסטית.</strong> חוגגת תרבות, היסטוריה וחגים יהודיים <strong>ללא התייחסות לאלוהים</strong>. מדגישה אתיקה הומניסטית וחשיבה רציונלית. היהדות = הנסיון התרבותי-היסטורי של העם היהודי, לא ציווי אלוהי.<br>
+            <strong>דעה עליהם:</strong> כמעט כל שאר הזרמים רואים בזה אוקסימורון &mdash; &quot;יהדות בלי אלוהים זו לא יהדות&quot;.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 4: ETHNIC COMMUNITIES -->
+<div class="str-section" id="ethnic">
+    <h2>&#127758; עדות וקהילות</h2>
+    <p class="section-intro">
+        מעבר לחלוקה דתית-אידאולוגית, העם היהודי מורכב ממגוון קהילות אתניות-תרבותיות, כל אחת עם מסורת, מנהגים, שפה ומוזיקה ייחודיים.
+    </p>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127466;&#127482; אשכנזים</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~65-70% מיהדות העולם</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> מרכז ומזרח אירופה (גרמניה, פולין, רוסיה, ליטא).<br>
+            <strong>מסורת:</strong> שפת יידיש, מנהגי תפילה (נוסח אשכנז), מאכלים (גפילטע פיש, צ'ולנט, קוגל), הלכה לפי הרמ"א.<br>
+            <strong>דומיננטיות:</strong> שלטו ברוב המוסדות בישראל ובגולה. יצרו את התנועה הציונית, שלטו בפוליטיקה, באקדמיה, בצבא ובמערכת המשפט הישראלית עשרות שנים.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127466;&#127480; ספרדים</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">קהילה היסטורית יוקרתית</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> חצי האי האיברי (ספרד ופורטוגל) לפני גירוש 1492.<br>
+            <strong>מסורת:</strong> שפת לאדינו (ג'ודאו-ספרדית), הולכים ישירות לפי שולחן ערוך של ר' יוסף קארו, ליטורגיה ייחודית, פסיקה הלכתית מקילה יותר מאשכנזים.<br>
+            <strong>תפוצה:</strong> לאחר 1492 התפזרו לאימפריה העות'מנית (טורקיה, יוון, בלקן, צפון אפריקה), הולנד, איטליה.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127470;&#127473; מזרחים</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~50% מיהודי ישראל</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> המזרח התיכון וצפון אפריקה (עיראק, איראן, תימן, מרוקו, תוניסיה, לוב, מצרים, סוריה).<br>
+            <strong>מתחים עם אשכנזים:</strong> אחד הקווים הכואבים בחברה הישראלית. בשנות ה-50, עולי מזרח טופלו כ&quot;מזרחנים נחשלים&quot;. שוכנו במעברות ובעיירות פיתוח. פער הכנסות: הכנסת אשכנזים <strong>גבוהה ב-36%</strong> (2004). אשכנזים &mdash; סיכוי כפול ללימודים אקדמיים. <strong>אף ראש ממשלה מזרחי מעולם לא היה.</strong><br>
+            <strong>תגובה:</strong> &quot;הפנתרים השחורים&quot; (1971), הקמת ש&quot;ס (1984), שילוב הולך וגובר דרך נישואים מעורבים.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127466;&#127481; ביתא ישראל (יהודי אתיופיה)</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~171,600 בישראל</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> אזורי אמהרה וטיגריי בצפון אתיופיה.<br>
+            <strong>עלייה:</strong> מבצע משה (1984), מבצע שלמה (1991).<br>
+            <strong>ייחוד:</strong> שמרו על התורה (נקראת &quot;אוריט&quot; בגעז) בבידוד מוחלט. לא הכירו את התלמוד, את העברית או את המסורות שלאחר התנ&quot;ך. האמינו שהם <strong>היהודים האחרונים בעולם</strong>.<br>
+            <strong>הכרה:</strong> הרב עובדיה יוסף פסק שהם יהודים לפי ההלכה (1973). חלק מהסמכויות האשכנזיות דרשו גיור.<br>
+            <strong>אפליה:</strong> שנות ה-90 &mdash; בנק הדם הישראלי <strong>השמיד באופן שיטתי דם שתרמו יהודי אתיופיה</strong>. הכנסה ~40% נמוכה מהממוצע. שיעור עוני הגבוה בקרב יהודי ישראל. הפגנות המוניות ב-2015 וב-2019 לאחר הריגות בידי משטרה.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127470;&#127473; תימנים (תימנים)</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~400,000+ צאצאים בישראל</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> תימן &mdash; אחת מקהילות התפוצה העתיקות ביותר.<br>
+            <strong>עלייה:</strong> מבצע מרבד הקסמים (1949-1950), ~49,000 עולים.<br>
+            <strong>מסורת:</strong> קריאת תורה עם תרגום ארמי (לעתים על ידי ילד), הגייה עברית שנחשבת הקרובה ביותר לעברית העתיקה, פאות ארוכות, טקס חינה, מוזיקה ושירה ייחודית, מחולות מסורתיים.<br>
+            <strong>טראומה:</strong> &quot;פרשת ילדי תימן&quot; (1948-1954) &mdash; האשמות שמאות ילדים תימניים נגנבו וניתנו למשפחות אשכנזיות.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127470;&#127475; יהודי הודו</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~5,000 נשארו בהודו</span>
+        </div>
+        <p>
+            <strong>שלוש קהילות:</strong><br>
+            <strong>בני ישראל:</strong> ~67,000. לפי המסורת, 14 ניצולי טביעת ספינה נחתו ליד מומבאי. שמרו על שמע ישראל, שבת, ברית מילה וחלק מהכשרות &mdash; בבידוד מוחלט. איבדו ספרי קודש.<br>
+            <strong>יהודי קוצ'ין:</strong> ~2,500 ב-1948, כמעט כולם עלו לישראל. קהילה עתיקה עם זכויות נחושת ממלכים מקומיים.<br>
+            <strong>יהודי בגדד:</strong> מהגרי המאה ה-19 מעיראק, סוריה, איראן. שגשגו תחת השלטון הבריטי.<br>
+            <strong>עובדה מרתקת:</strong> הודו היא <strong>כמעט המדינה היחידה ללא אנטישמיות</strong> לאורך כל ההיסטוריה היהודית שם.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#128220; קראים</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני-דתי</span>
+            <span class="badge badge-size">~30,000-50,000 בישראל</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> פיצול מהיהדות הרבנית במאות ה-8-9 במסופוטמיה.<br>
+            <strong>אמונה:</strong> <strong>דוחים את התורה שבעל-פה (תלמוד) לחלוטין.</strong> הולכים רק לפי התורה הכתובה (תנ"ך). צמודים לפשט הכתוב.<br>
+            <strong>הבדלים:</strong> לא מפרידים בשר וחלב (זה מהתלמוד), חלקם לא חוגגים חנוכה (חג שלאחר התנ"ך), מתפללים עם השתחוויות מלאות, ייחוס אבהי (לא אמהי), שבת ללא כל אור (בניגוד ליהדות רבנית שמאפשרת נרות שהודלקו מראש).<br>
+            <strong>סטטוס:</strong> מוכרים כיהודים לצורכי חוק השבות. הרבנות לא מכירה בנישואיהם ובגיוריהם.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#9878; שומרונים</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני-דתי (שנוי במחלוקת)</span>
+            <span class="badge badge-size">~900 &mdash; הקבוצה האתנו-דתית הקטנה בעולם</span>
+        </div>
+        <p>
+            <strong>אמונה:</strong> רואים עצמם כישראלים האמיתיים. מקבלים <strong>רק את חמישה חומשי תורה</strong> &mdash; דוחים את כל שאר הספרים ואת כל הספרות הרבנית. <strong>הר גריזים</strong> (לא ירושלים) הוא ההר הקדוש שלהם. מאמינים שעקדת יצחק התרחשה שם.<br>
+            <strong>מעשי:</strong> שומרים על כהונה גדולה. <strong>שוחטים ואוכלים כבשים בערב פסח</strong> &mdash; הקורבן העתיק ביותר שעדיין מתבצע. חוגגים את שלושת הרגלים, אך בלוח שנה שונה.<br>
+            <strong>מיקום:</strong> ~460 בחולון, ~380 בקרית לוזה (הר גריזים). התאוששו משפל של ~146 ב-1917.<br>
+            <strong>סטטוס:</strong> רוב היהודים לא מחשיבים את השומרונים כיהודים. הם עצמם מגדירים עצמם כישראלים, לא &quot;יהודים&quot; (מזוהה עם ממלכת יהודה).
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127468;&#127479; רומניוטים (יהודי יוון)</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~5,500 ביוון &mdash; 35 רומניוטים ביואנינה</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> יהודים ילידי יוון. <strong>2,300+ שנות נוכחות רציפה</strong> &mdash; הקהילה היהודית העתיקה ביותר באירופה.<br>
+            <strong>מסורת:</strong> הלכו לפי <strong>התלמוד הירושלמי</strong> (רוב היהודים הולכים לפי הבבלי). מבנה בית כנסת ייחודי. דיברו יבאנית (יהודית-יוונית) בכתב עברי. מנהגי ברית מילה ייחודיים (נייר ה&quot;אלף&quot;).<br>
+            <strong>שואה:</strong> הרסנית. רוב יהודי יוון נרצחו. שרידי הקהילה בני 80-90, מנהגים בסכנת הכחדה.
+        </p>
+    </div>
+
+    <div class="stream-card card-ethnic">
+        <h4>&#127470;&#127481; יהודי איטליה (איטלקים)</h4>
+        <div class="card-meta">
+            <span class="badge badge-ethnic">אתני</span>
+            <span class="badge badge-size">~28,000 באיטליה</span>
+        </div>
+        <p>
+            <strong>מוצא:</strong> יהודים באיטליה מהמאה ה-2 לפנה&quot;ס &mdash; אחת מקהילות התפוצה העתיקות ביותר.<br>
+            <strong>מסורת:</strong> <strong>נוסח איטלקי (Nusach Italiani)</strong> &mdash; ליטורגיה שונה מאשכנז ומספרד כאחד. הודפס לראשונה ב-1486. חוקרים סבורים שקרוב לליטורגיה הקדומה של ארץ ישראל. דיברו דיאלקטים יהודיים-איטלקיים.<br>
+            <strong>שואה:</strong> חוקי הגזע של מוסוליני (1938). ~7,500 נרצחו (17% מהקהילה). בניגוד למזרח אירופה, הקהילה שרדה ועדיין שומרת על מסורתה הייחודית.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 5: POLITICAL IDENTITIES -->
+<div class="str-section" id="political">
+    <h2>&#127963; זהויות פוליטיות ותרבותיות</h2>
+
+    <div class="stream-card card-political">
+        <h4>&#127758; חילוני / הילוני</h4>
+        <div class="card-meta">
+            <span class="badge badge-political">תרבותי-פוליטי</span>
+            <span class="badge badge-size">~45% מיהודי ישראל &mdash; הקטגוריה הגדולה</span>
+        </div>
+        <p>
+            הזהות היהודית היא בעיקר אתנית/לאומית, לא דתית. רוב מאמינים בעמיות יהודית אך לא בהכרח באלוהים. עשויים לשמור מסורות מסוימות (סדר פסח, צום כיפור) כמנהגים תרבותיים. 73% רואים במתח חרדי-חילוני אחד משני הקונפליקטים החמורים בחברה. 80% תומכים בגיוס חרדים לצה&quot;ל.
+        </p>
+    </div>
+
+    <div class="stream-card card-political">
+        <h4>&#128301; מסורתי (במובן הישראלי)</h4>
+        <div class="card-meta">
+            <span class="badge badge-political">תרבותי</span>
+            <span class="badge badge-size">~29-33% מיהודי ישראל</span>
+        </div>
+        <p>
+            <strong>לא זהה לתנועה הקונסרבטיבית/מסורתית:</strong> בישראל &quot;מסורתי&quot; = שומר חלק מההלכות באופן סלקטיבי, מאמין באלוהים, שומר רמה מסוימת של כשרות ושבת, אך לא מגדיר עצמו &quot;דתי&quot; (דתי) או &quot;חילוני&quot; (חילוני).<br>
+            <strong>קהילת גשר:</strong> הקבוצה המגוונת ביותר. הכי סביר שיש להם חברים מכל הקבוצות. <strong>הגשר הפוטנציאלי היחיד בין השבטים היהודיים של ישראל.</strong><br>
+            <strong>מוצא:</strong> בעיקר ספרדי/מזרחי. זה היה אופן היהדות המוגדר במזרח התיכון ובצפון אפריקה &mdash; מסורת ללא הקטגוריזציה הנוקשה של &quot;אורתודוקסי&quot; מול &quot;חילוני&quot;.
+        </p>
+    </div>
+
+    <div class="stream-card card-political">
+        <h4>&#9873; ציונות סוציאליסטית / עבודה</h4>
+        <div class="card-meta">
+            <span class="badge badge-political">פוליטי-היסטורי</span>
+        </div>
+        <p>
+            <strong>מייסדים:</strong> א.ד. גורדון, דוד בן-גוריון, ברל כצנלסון.<br>
+            <strong>אמונה:</strong> מיזוג סוציאליזם עם לאומיות יהודית. מדינה יהודית רק דרך <strong>מעמד הפועלים</strong> &mdash; עלייה, קיבוצים, מושבים, &quot;כיבוש העבודה&quot;.<br>
+            <strong>מורשת:</strong> <strong>שלטה בתנועה הציונית ובישראל</strong> מ-1930 עד 1977. יצרה את הקיבוצים, ההסתדרות, וכמעט כל מוסדות המדינה. האליטה האשכנזית-אינטלקטואלית שציונות העבודה יצרה עדיין משפיעה באקדמיה, בתקשורת ובבתי המשפט.
+        </p>
+    </div>
+
+    <div class="stream-card card-political">
+        <h4>&#9876; ציונות רוויזיוניסטית</h4>
+        <div class="card-meta">
+            <span class="badge badge-political">פוליטי-היסטורי</span>
+        </div>
+        <p>
+            <strong>מייסד:</strong> זאב ז'בוטינסקי (1925).<br>
+            <strong>אמונה:</strong> מדינה יהודית <strong>מקסימליסטית</strong> משני צידי הירדן. צבא יהודי. ליברליזם כלכלי (בניגוד לסוציאליזם של העבודה). הדגשת הצדדים הרומנטיים/לאומיים.<br>
+            <strong>מורשת:</strong> <strong>מנחם בגין</strong> (יורשו של ז'בוטינסקי) הקים את הליכוד. שולט בפוליטיקה הישראלית מ-1977. נתניהו = היורש הפוליטי. האידיאולוגיה הדומיננטית בישראל כיום.
+        </p>
+    </div>
+
+    <div class="stream-card card-political" style="border-right-color: #8b0000;">
+        <h4 style="color: #cd5c5c;">&#10060; חרדים אנטי-ציונים (סאטמר + נטורי קרתא)</h4>
+        <div class="card-meta">
+            <span class="badge badge-political">אנטי-ציוני</span>
+        </div>
+        <p>
+            <strong>סאטמר</strong> (ראו לעיל): ~300,000. מסרבים להכיר בישראל. לא לוקחים כסף ממשלתי. לא מצביעים בבחירות.<br>
+            <strong>נטורי קרתא:</strong> ~5,000 חסידים. מאמינים שקיום ישראל הוא &quot;הכפירה הגדולה ביותר&quot;. <strong>השתתפו בכנס הכחשת שואה בטהראן (2006).</strong> נפגשו עם אחמדינג'אד. שומרים על קשרים עם ממשלת איראן.<br>
+            <strong>סטטוס:</strong> <strong>מגונים אוניברסלית</strong> על ידי כמעט כל הקבוצות היהודיות, כולל סאטמר עצמם (שרואים במגע עם מכחישי שואה חציית קו אדום). מיעוט בתוך מיעוט.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 6: WHAT THEY THINK OF EACH OTHER -->
+<div class="str-section" id="tensions">
+    <h2>&#9878; מה חושבים אחד על השני?</h2>
+    <p class="section-intro">
+        המתחים בתוך העם היהודי הם אמיתיים ועמוקים. הנה ההתנגשויות המרכזיות:
+    </p>
+
+    <div class="tension-card">
+        <h4>&#9876; אורתודוקסים מול לא-אורתודוקסים: משבר הגיור והכותל</h4>
+        <p>
+            <strong>הבעיה:</strong> האורתודוקסיה מכירה רק בגיורים שמבצעים רבנים אורתודוקסים. הרבנות הראשית בישראל היא הסמכות החוקית היחידה לגיור, נישואין וגירושין.<br>
+            <strong>ייחוס אבהי:</strong> מ-1983, הרפורמים מכירים בילדי אבות יהודיים (לא רק אמהות) כיהודים &mdash; מה שיוצר אוכלוסייה שהרפורמים רואים כיהודית אך האורתודוקסיה לא.<br>
+            <strong>משבר הכותל (2026):</strong> הכנסת הצביעה 56-47 לקדם חוק שנותן <strong>לרבנות שליטה מלאה על כל התפילה בכותל</strong>. תפילה שוויונית (גברים ונשים יחד) &mdash; שכך מתפללים <strong>85% מיהודי העולם</strong> &mdash; תיחשב &quot;חילול&quot;, עם <strong>עונש של עד 7 שנות מאסר</strong>.
+        </p>
+        <div class="view-quote">&ldquo;עלבון ישיר ליהודים בישראל, בצפון אמריקה וברחבי העולם&rdquo; &mdash; תגובת התנועה הרפורמית</div>
+    </div>
+
+    <div class="tension-card">
+        <h4>&#128293; חילוני מול חרדי: גיוס, תקציבים, ושירות</h4>
+        <p>
+            <strong>73% מהישראלים</strong> רואים במתח חרדי-חילוני אחד משני הקונפליקטים החמורים ביותר.<br>
+            <strong>גיוס:</strong> הנושא הנפיץ ביותר. גברים חרדים פטורים משירות צבאי מ-1948. באוקטובר 2025, <strong>200,000 חרדים חסמו כבישים בירושלים</strong> במחאה על אכיפת הגיוס. נער בן 15 נהרג במהלך ההפגנה.<br>
+            <strong>מימון:</strong> חרדים מקבלים מענקי לימוד תורה ממשלתיים. חילונים מתרעמים על מימון אוכלוסייה גדלה שלא עובדת ולא משרתת.<br>
+            <strong>קיטוב:</strong> ישראל לא זזה באופן אחיד לכיוון יותר או פחות דת &mdash; <strong>הדתיים נעשים יותר דתיים והחילונים נעשים יותר חילונים.</strong>
+        </p>
+    </div>
+
+    <div class="tension-card">
+        <h4>&#127466;&#127482; אשכנזי מול מזרחי/ספרדי</h4>
+        <p>
+            אחד הקווים הכואבים ביותר בחברה הישראלית:<br>
+            <strong>שנות ה-50:</strong> עולי מזרח שוכנו במעברות ובעיירות פיתוח.<br>
+            <strong>פער כלכלי:</strong> הכנסת אשכנזים גבוהה ב-36%. סיכוי כפול ללימודים אקדמיים.<br>
+            <strong>ייצוג:</strong> אף ראש ממשלה מזרחי. אף נשיא בית משפט עליון מזרחי. אקדמיה &mdash; דומיננטיות אשכנזית מוחלטת.<br>
+            <strong>מפלגת ש&quot;ס:</strong> הוקמה ב-1984 ספציפית כדי להילחם באפליה אשכנזית ולייצג אינטרסים ספרדים/מזרחים.<br>
+            <strong>כיום:</strong> נישואים מעורבים הולכים וגדלים. שילוב חברתי משתפר אך פערים מבניים נמשכים.
+        </p>
+    </div>
+
+    <div class="tension-card">
+        <h4>&#128065; מה החרדים חושבים על כולם?</h4>
+        <p>
+            רואים עצמם <strong>כשומרים היחידים של ההלכה האותנטית</strong>:<br>
+            <strong>על ציונות דתית:</strong> &quot;מתפשרים&quot; &mdash; מוותרים על ערכי תורה לטובת מודרניות.<br>
+            <strong>על רפורמים:</strong> לא יהדות. צורה של התבוללות. &quot;הרס התורה מבפנים&quot;. רבניהם אינם רבנים. גיוריהם אינם גיורים.<br>
+            <strong>על קונסרבטיבים:</strong> מעט טוב יותר מרפורמים אבל עדיין לא לגיטימיים. &quot;מדרון חלקלק&quot;.<br>
+            <strong>על חילונים:</strong> יהודים אבודים שצריך להחזירם בתשובה (קירוב). לא אויבים, אלא תועים.
+        </p>
+    </div>
+
+    <div class="tension-card">
+        <h4>&#127760; מה הרפורמים/קונסרבטיבים חושבים על האורתודוקסיה?</h4>
+        <p>
+            <strong>נוקשות:</strong> האורתודוקסיה נתפסת כנוקשה, מכלילה ופטריארכלית.<br>
+            <strong>מונופול:</strong> המונופול האורתודוקסי בישראל = הפרת חופש דת.<br>
+            <strong>דחיית הרוב:</strong> 85% מיהודי התפוצות מתפללים באופן שוויוני. הסירוב האורתודוקסי לקבל זאת נתפס כדחייה של רוב יהודי העולם.<br>
+            <strong>חוק הכותל:</strong> נקרא &quot;קריאת השכמה&quot; &mdash; הוכחה שהממשלה הישראלית תחת השפעה חרדית הייתה <strong>מפלילה</strong> את דרך התפילה של רוב יהודי העולם.
+        </p>
+    </div>
+
+    <div class="tension-card">
+        <h4>&#128270; &quot;מיהו יהודי?&quot; &mdash; המשבר הגובר</h4>
+        <p>
+            <strong>הבעיה:</strong> לאחר כמה דורות, <strong>יש כיום אנשים רבים שנחשבים יהודים על ידי חלק מהזרמים אך לא על ידי אחרים</strong>. גיור רפורמי לא מוכר בישראל. ילד לאב יהודי ואם לא-יהודייה הוא יהודי לפי הרפורמים אך לא לפי האורתודוקסיה, הקונסרבטיבים וההלכה המסורתית.<br>
+            <strong>העתיד:</strong> קהילות אורתודוקסיות/חרדיות הן היחידות שגדלות. רפורמים וקונסרבטיבים מצטמצמים. תוך 50 שנה, רוב היהודים המאורגנים עשויים להיות אורתודוקסים &mdash; אבל מיליונים שנחשבים יהודים בעיני חלק לא יוכרו בעיני אחרים.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 7: BEFORE THE HOLOCAUST -->
+<div class="str-section" id="holocaust">
+    <h2>&#128367; לפני השואה &mdash; מה שנחרב</h2>
+    <p class="section-intro">
+        השואה לא רק רצחה שישה מיליון יהודים. היא השמידה <strong>זרמים שלמים, תרבויות, שפות ומסורות</strong> שלא יוכלו לחזור לעולם. ~16.6 מיליון יהודים לפני השואה, ~15.8 מיליון היום &mdash; <strong>80+ שנה ועדיין לא התאוששנו דמוגרפית.</strong>
+    </p>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; נחרב בשואה</span>
+        <h4>הבונד &mdash; התנועה הסוציאליסטית היהודית</h4>
+        <p>
+            <strong>נוסד:</strong> 1897 בווילנה (אותה שנה כקונגרס הציוני הראשון).<br>
+            <strong>אמונה:</strong> סוציאליזם יהודי + <strong>אוטונומיה תרבותית בתוך מדינות מגוריהם</strong> (בניגוד לציונות). קידמו יידיש כשפה הלאומית היהודית. נאבקו לזכויות פוליטיות ותרבותיות במזרח אירופה ללא מדינה נפרדת.<br>
+            <strong>גודל:</strong> אחת התנועות היהודיות הגדולות ביותר לפני המלחמה, במיוחד בפולין, רוסיה וליטא.<br>
+            <strong>מה נהרס:</strong> השואה חיסלה את בסיס החברים. הקמת ישראל ותמורות השפה (מיידיש לעברית/אנגלית) הפכו את החזון ללא רלוונטי.
+        </p>
+    </div>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; נחרב בשואה</span>
+        <h4>חצרות חסידיות שלמות שנמחקו</h4>
+        <p>
+            פולין לפני השואה הייתה <strong>מרכז עולמי של החסידות</strong>. חצרות שנהרסו:<br>
+            <strong>אלכסנדר:</strong> אחת מ-3 החצרות הגדולות בפולין. הושמדה.<br>
+            <strong>בובוב:</strong> ~100,000 חסידים לפני המלחמה. <strong>רק ~300 שרדו.</strong><br>
+            <strong>פיאסצ'נה:</strong> רבי קלונימוס קלמן שפירא כתב את דרשות &quot;אש קודש&quot; <strong>בתוך גטו ורשה</strong> לפני שנרצח בטרבלינקה.<br>
+            עשרות חצרות קטנות יותר <strong>נמחקו לחלוטין ללא שורד אחד לבנות מחדש</strong>.
+        </p>
+    </div>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; נחרב בשואה</span>
+        <h4>עולם הישיבות הליטאי</h4>
+        <p>
+            הישיבות הגדולות שהגדירו את החיים האינטלקטואליים היהודיים:<br>
+            <strong>וולוז'ין</strong> (1803) &mdash; &quot;אם כל הישיבות&quot;.<br>
+            <strong>סלובודקה</strong> (קובנה) &mdash; &quot;אם הישיבות&quot;. הדגישה מוסר. נסגרה 1941 כשהנאצים כבשו ליטא; רוב התלמידים נרצחו.<br>
+            <strong>מיר</strong> &mdash; הישיבה היחידה שנמלטה בשלמות לשנחאי. נבנתה מחדש בירושלים (כיום הישיבה הגדולה בעולם).<br>
+            <strong>פוניבז', ראדון (של החפץ חיים), טלז, קלם</strong> &mdash; כולם נהרסו, חלקם נבנו מחדש בישראל או בארה&quot;ב.
+        </p>
+    </div>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; 95% נרצחו</span>
+        <h4>יהדות סלוניקי &mdash; &quot;ירושלים של הבלקן&quot;</h4>
+        <p>
+            <strong>לפני המלחמה:</strong> 55,200 יהודים &mdash; <strong>שני שלישים מאוכלוסיית העיר</strong>. הקהילה הגדולה בעולם דוברת לאדינו. הנמל נסגר בשבתות. ידועה כ&quot;אם ישראל&quot;.<br>
+            <strong>הרס:</strong> <strong>95% נרצחו.</strong> 43,850 גורשו, רק ~1,950 חזרו בחיים (~4% הישרדות).<br>
+            <strong>מוות לשוני:</strong> הדור האחרון שדיבר לאדינו בבית היה דור השואה. היום רק קומץ יהודים בסלוניקי דוברים לאדינו.<br>
+            <strong>מה אבד:</strong> ציוויליזציה שלמה &mdash; 500 שנה של תרבות ספרדית רציפה, מוזיקה ייחודית, ספרות, עיתונות (עיתונים רבים בלאדינו).
+        </p>
+    </div>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; נחרב בשואה</span>
+        <h4>יהדות רפורמית גרמנית &mdash; קהילת המקור</h4>
+        <p>
+            <strong>ערש היהדות הרפורמית</strong> בשנות ה-1840. הקהילה היהודית המשולבת ביותר באירופה. הפיחה חיים באיינשטיין, פרויד, קפקא, מנדלסון, היינה.<br>
+            <strong>השואה השמידה:</strong> לא רק את האנשים, אלא את <strong>הסינתזה הייחודית</strong> בין Bildung גרמנית לזהות יהודית. ~225,000 יהודים בגרמניה כיום (בעיקר מברית המועצות לשעבר), אך התרבות היהודית-גרמנית המקורית &mdash; חלפה לעולם.
+        </p>
+    </div>
+
+    <div class="destroyed-card">
+        <span class="destroyed-badge">&#128367; נחרב בשואה</span>
+        <h4>תנועת ההשכלה (הַשְׂכָּלָה)</h4>
+        <p>
+            <strong>תקופה:</strong> סוף המאה ה-18 עד סוף ה-19. דמויות מפתח: משה מנדלסון.<br>
+            <strong>אמונה:</strong> שילוב יהודים בחברה האירופית דרך השכלה חילונית, אימוץ שפות ומנהגים מקומיים, תוך שמירה על זהות יהודית. קידמו עברית כשפה ספרותית.<br>
+            <strong>מורשת:</strong> הולידה את היהדות הרפורמית (קחו את המודרניזציה הכי רחוק) ובעקיפין את האורתודוקסיה (שהגדירה עצמה בהתנגדות). גם לאומיות יהודית חילונית (ציונות) ותנועות תרבות יידיש. הגרסה המזרח-אירופית שלה הושמדה פיזית בשואה.
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 8: DEMOGRAPHICS -->
+<div class="str-section" id="demographics">
+    <h2>&#128202; סקירה דמוגרפית</h2>
+
+    <table class="pop-table">
+        <tr><th>קבוצה</th><th>אוכלוסייה משוערת</th><th>מגמה</th></tr>
+        <tr><td><strong>יהדות עולמית</strong></td><td>~15.8 מיליון</td><td>&#8599; צמיחה איטית</td></tr>
+        <tr><td>ישראל</td><td>~7.42 מיליון יהודים</td><td>&#8599; צמיחה</td></tr>
+        <tr><td>ארה&quot;ב</td><td>~7.46 מיליון יהודים</td><td>&#8596; יציב/ירידה</td></tr>
+        <tr><td colspan="3" style="color:#e2b714; font-weight:bold; padding-top:12px;">אורתודוקסיה</td></tr>
+        <tr><td>חרדים (עולמי)</td><td>~2-2.5 מיליון</td><td style="color:#2ecc71;">&#8599; צמיחה מהירה (4%/שנה)</td></tr>
+        <tr><td>ציונות דתית / דתי</td><td>~2 מיליון</td><td style="color:#2ecc71;">&#8599; צמיחה</td></tr>
+        <tr><td>סאטמר</td><td>~300,000</td><td style="color:#2ecc71;">&#8599; צמיחה מהירה</td></tr>
+        <tr><td>חב&quot;ד</td><td>~90,000 ליבה</td><td style="color:#2ecc71;">&#8599; צמיחה</td></tr>
+        <tr><td colspan="3" style="color:#3498db; font-weight:bold; padding-top:12px;">לא-אורתודוקסי</td></tr>
+        <tr><td>רפורמי</td><td>~2 מיליון</td><td style="color:#cd5c5c;">&#8600; ירידה</td></tr>
+        <tr><td>קונסרבטיבי</td><td>~1.1-2 מיליון</td><td style="color:#cd5c5c;">&#8600; ירידה משמעותית</td></tr>
+        <tr><td>רקונסטרוקציוניסטי</td><td>~100,000</td><td>&#8596; קטן/יציב</td></tr>
+        <tr><td>הומניסטי</td><td>~10,000-50,000</td><td>&#8596; קטן/יציב</td></tr>
+        <tr><td colspan="3" style="color:#1abc9c; font-weight:bold; padding-top:12px;">קהילות אתניות</td></tr>
+        <tr><td>חילוני ישראלי</td><td>~3.3 מיליון (~45%)</td><td>&#8596; יציב</td></tr>
+        <tr><td>מסורתי ישראלי</td><td>~2.2 מיליון (~30%)</td><td>&#8596; יציב</td></tr>
+        <tr><td>ביתא ישראל (אתיופיה)</td><td>~171,600</td><td>&#8599; צמיחה</td></tr>
+        <tr><td>קראים</td><td>~30,000-50,000</td><td>&#8596; יציב</td></tr>
+        <tr><td>שומרונים</td><td>~900</td><td>&#8599; התאוששות איטית</td></tr>
+        <tr><td>רומניוטים</td><td>~5,500 ביוון</td><td style="color:#cd5c5c;">&#8600; סכנת הכחדה</td></tr>
+        <tr><td>נטורי קרתא</td><td>~5,000</td><td>&#8596; קטן/יציב</td></tr>
+    </table>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 9: ONE PEOPLE -->
+<div class="str-section" id="one-people">
+    <h2>&#128293; עם אחד</h2>
+
+    <div class="family-message">
+        <h3>&#10077; בתוך המשפחה &mdash; אנחנו רואים הבדלים &#10078;</h3>
+
+        <p>
+            אנחנו רבים. אנחנו חולקים. חסיד סאטמר ורפורמי מסן פרנסיסקו חיים בעולמות שונים לחלוטין. ליטאי ומזרחי, חילוני ודתי, ימני ושמאלני &mdash; מסתכלים על אותו עולם ורואים דברים שונים.
+        </p>
+        <p>
+            <strong>זה טבעי. זו משפחה.</strong>
+        </p>
+
+        <p style="margin-top: 25px;">
+            אבל <span class="nazi-text">עבור הנאצים &mdash; לא היה שום הבדל.</span><br>
+            דתי, חילוני, שמאלני, ימני, אשכנזי, ספרדי, רפורמי, אורתודוקסי &mdash; אם היה לך <span class="highlight">אפילו סבתא רבא אחת יהודייה</span>, סומנת להשמדה.<br>
+            חוקי נירנברג לא שאלו באיזה בית כנסת אתה מתפלל.
+        </p>
+
+        <p style="margin-top: 25px;">
+            <span class="nazi-text">עבור הקיצוניים האיסלמיסטיים &mdash; אותו דבר.</span><br>
+            חמאס לא בודק את הזרם שלך לפני שמשגר רקטה. לסכין של המחבל אין העדפה דתית. <span class="highlight">יהודי הוא יהודי. נקודה.</span>
+        </p>
+
+        <p style="margin-top: 30px;">
+            <strong>ולכן &mdash;</strong> הוויכוחים הפנימיים שלנו הם מותרות של חופש.<br>
+            האויבים שלנו רואים אותנו כאחד. <strong>כי אנחנו אחד.</strong>
+        </p>
+
+        <span class="am-ehad">&#10077; כל ישראל ערבים זה בזה &#10078;</span>
+        <p style="color: #888; font-size: 0.85em; margin-top: 5px;">תלמוד בבלי, שבועות לט.</p>
+
+        <p style="margin-top: 20px;">
+            <span class="highlight" style="font-size: 1.3em;">בני ישראל. עם אחד. מאה פנים.</span>
+        </p>
+    </div>
+</div>
+
+<div class="section-divider">&#10038; &#10038; &#10038;</div>
+
+<!-- SECTION 10: SOURCES -->
+<div class="str-section" id="sources">
+    <h2>&#128218; מקורות</h2>
+    <div class="stream-card" style="border-right-color: #555;">
+        <h4 style="color: #888;">מקורות תורניים</h4>
+        <p>
+            תלמוד בבלי, סנהדרין לח. (בריאת אדם יחידי) &bull;
+            תלמוד בבלי, שבועות לט. (כל ישראל ערבים) &bull;
+            תלמוד בבלי, כתובות קיא. (שלוש השבועות) &bull;
+            שולחן ערוך, יורה דעה &bull;
+            משנה תורה לרמב"ם
+        </p>
+    </div>
+    <div class="stream-card" style="border-right-color: #555;">
+        <h4 style="color: #888;">מחקר ונתונים</h4>
+        <p>
+            Pew Research Center, &ldquo;Israel&rsquo;s Religiously Divided Society&rdquo; (2016, עדכוני 2025) &bull;
+            Israel Democracy Institute, Statistical Report on Ultra-Orthodox Society (2022) &bull;
+            Hiddush, Religion and State Index (2025) &bull;
+            ADL, &ldquo;Neturei Karta&rdquo; Backgrounder &bull;
+            Jewish Virtual Library, Lithuanian Yeshivot &bull;
+            Union for Reform Judaism (URJ), Western Wall Statement (2026) &bull;
+            Hebrew University / Truman Institute, &ldquo;Growing Divide Between Haredi and Other Religious Groups&rdquo; (2025) &bull;
+            Central Bureau of Statistics, Israel (2024)
+        </p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+    <p><a href="index.html">&#8594; חזרה לאתר הראשי</a></p>
+    <p style="margin-top: 10px;"><a href="bnei-yisrael.html" style="color: #e2b714;">&#128220; בני ישראל</a> &nbsp;|&nbsp; <a href="unity.html" style="color: #e2b714;">&#128170; חיזוק העם</a> &nbsp;|&nbsp; <a href="the-schism.html" style="color: #e2b714;">&#9878; הפילוג הגדול</a></p>
+    <p style="margin-top: 15px;">נבנה על ידי נתנאל אסיס | 2026</p>
+</div>
+
+<!-- Floating Share Button -->
+<div class="share-fab" id="shareFab">
+    <div class="share-fab-menu">
+        <a class="sfab-wa" title="WhatsApp" onclick="fabShare('whatsapp')">W</a>
+        <a class="sfab-tg" title="Telegram" onclick="fabShare('telegram')">T</a>
+        <a class="sfab-tw" title="X / Twitter" onclick="fabShare('twitter')">&#120143;</a>
+        <a class="sfab-fb" title="Facebook" onclick="fabShare('facebook')">f</a>
+        <a class="sfab-cp" title="העתק קישור" onclick="fabShare('copy')">&#128203;</a>
+    </div>
+    <button class="share-fab-btn" aria-label="שתף דף" onclick="document.getElementById('shareFab').classList.toggle('open')" title="שתף">&#10149;</button>
+</div>
+
+<div id="google_translate_element"></div>
+<script src="common.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('streams');</script>
+
+<nav class="mobile-nav" aria-label="ניווט מובייל">
+    <a href="index.html"><span class="mn-icon">&#127968;</span>ראשי</a>
+    <a href="lies.html"><span class="mn-icon">&#10060;</span>שקרים</a>
+    <a href="antisemitism.html"><span class="mn-icon">&#128737;</span>אנטישמיות</a>
+    <a href="october7.html"><span class="mn-icon">&#128293;</span>7.10</a>
+    <a href="facts.html"><span class="mn-icon">&#128269;</span>עובדות</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
+</body>
+</html>
