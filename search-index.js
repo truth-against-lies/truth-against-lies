@@ -1389,5 +1389,19 @@ var SEARCH_INDEX = [
     { title: "The Left's Narrative", url: "left-narrative-en.html", text: "Progressive narratives on Israel. Intersectionality, colonialism framing, media bias, academic discourse.", page: "Left Narrative (EN)" },
     { title: "Sword and Prayer", url: "sword-prayer-en.html", text: "Military action and faith in Jewish tradition. Biblical warriors to modern IDF — the dual identity of the Jewish fighter.", page: "Sword & Prayer (EN)" },
     { title: "The Great Schism", url: "the-schism-en.html", text: "Internal divisions in Israeli society. Secular vs religious, left vs right, Ashkenazi vs Mizrahi — paths toward unity.", page: "The Schism (EN)" },
-    { title: "Knowledge vs Religion", url: "daat-dat-en.html", text: "Tension between secular knowledge (Da'at) and religious faith (Dat). Hebrew linguistics, Kabbalah, bridging the divide.", page: "Knowledge vs Religion (EN)" }
+    { title: "Knowledge vs Religion", url: "daat-dat-en.html", text: "Tension between secular knowledge (Da'at) and religious faith (Dat). Hebrew linguistics, Kabbalah, bridging the divide.", page: "Knowledge vs Religion (EN)" },
+
+    // ==================== bnei-yisrael.html ====================
+    { title: "בני ישראל — לפני שהיינו יהודים", url: "bnei-yisrael.html", text: "המסע ההיסטורי מבני ישראל ליהודים. איך הרומאים, נפוליאון והעולם המערבי הפכו את עם ישראל לדת. למה התורה היא לא דת אלא הבנת המציאות.", page: "בני ישראל" },
+    { title: "המסע ההיסטורי — מבני ישראל ליהודים", url: "bnei-yisrael.html#historical-journey", text: "בני ישראל, יהודה, גלות בבל, מגילת אסתר, חורבן בית שני. איך השם השתנה מבני ישראל ליהודים ומה זה אומר על הזהות.", page: "בני ישראל" },
+    { title: "הגניבה הגדולה — רומא ונפוליאון", url: "bnei-yisrael.html#the-great-theft", text: "הדריאנוס שינה את שם הארץ לפלסטינה. נפוליאון כינס סנהדרין ודרש שיהדות תהיה דת. התנגדות החתם סופר והאדמור הזקן.", page: "בני ישראל" },
+    { title: "מבחן האמת — נצרות ואסלאם", url: "bnei-yisrael.html#test-of-truth", text: "סתירות בנצרות ובאסלאם. שבע מצוות בני נוח. הרמבם על גויים צדיקים. הכוזרי על הענין האלוהי. אמת אוניברסלית כמו מתמטיקה.", page: "בני ישראל" },
+    { title: "ספר יצירה — 32 נתיבות חכמה", url: "bnei-yisrael.html#sefer-yetzirah", text: "22 אותיות ו-10 ספירות. 231 שערים. אלהים בגימטריה שווה הטבע (86). ספר יצירה כמפה של המציאות. בעל הטורים, תניא, הגר״א.", page: "בני ישראל" },
+
+    // ==================== bnei-yisrael-en.html ====================
+    { title: "Children of Israel — Before We Were Jews", url: "bnei-yisrael-en.html", text: "The historical journey from Bnei Yisrael to Jews. How Rome, Napoleon, and the Western world turned the People of Israel into a religion. Why Torah is not a religion but an understanding of reality.", page: "Children of Israel (EN)" },
+    { title: "The Historical Journey", url: "bnei-yisrael-en.html#historical-journey", text: "Bnei Yisrael, Yehudah, Babylonian exile, Megillat Esther, destruction of Second Temple. How the name changed and what it means for identity.", page: "Children of Israel (EN)" },
+    { title: "The Great Theft — Rome and Napoleon", url: "bnei-yisrael-en.html#the-great-theft", text: "Hadrian renamed the land to Palestine. Napoleon convened Sanhedrin and demanded Judaism become a religion. Opposition of Chatam Sofer and Alter Rebbe.", page: "Children of Israel (EN)" },
+    { title: "The Test of Truth", url: "bnei-yisrael-en.html#test-of-truth", text: "Contradictions in Christianity and Islam. Seven Noahide Laws. Rambam on righteous gentiles. Kuzari on the Divine Matter. Universal truth like mathematics.", page: "Children of Israel (EN)" },
+    { title: "Sefer Yetzirah — 32 Paths of Wisdom", url: "bnei-yisrael-en.html#sefer-yetzirah", text: "22 letters and 10 Sefirot. 231 gates. Elohim equals HaTeva in gematria (86). Sefer Yetzirah as a map of reality. Baal HaTurim, Tanya, GRA.", page: "Children of Israel (EN)" }
 ];
