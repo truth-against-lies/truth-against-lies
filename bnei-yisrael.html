@@ -119,11 +119,18 @@
 
         /* === RESPONSIVE === */
         @media (max-width: 768px) {
-            .bi-hero h1 { font-size: 1.8em; }
-            .bi-hero .opening-quote { font-size: 1.3em; }
+            .bi-hero { padding: 80px 16px 40px; }
+            .bi-hero h1 { font-size: 1.6em; }
+            .bi-hero .opening-quote { font-size: 1.2em; }
+            .bi-section { padding: 30px 16px; }
             .bi-section h2 { font-size: 1.3em; }
             .stat-row { grid-template-columns: 1fr; }
-            .compare-table { font-size: 0.85em; }
+            .compare-table { font-size: 0.85em; display: block; overflow-x: auto; }
+            .history-card, .theft-card, .truth-card, .yetzirah-card, .synthesis-card { padding: 18px 14px; }
+            .timeline { padding-right: 24px; }
+            .tl-item { padding-right: 24px; }
+            .tl-item::before { right: -20px; width: 10px; height: 10px; }
+            .covenant-box { padding: 20px 14px; }
         }
 
         /* === LIGHT MODE === */
