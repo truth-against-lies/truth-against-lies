@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v59';
+var CACHE_NAME = 'tal-v60';
 var ASSETS = [
     './',
     'index.html',
@@ -71,7 +71,9 @@ var ASSETS = [
     'sword-prayer-en.html',
     'the-schism-en.html',
     'antisemitic-orgs.html',
-    'antisemitic-orgs-en.html'
+    'antisemitic-orgs-en.html',
+    'orgs-network-data.js',
+    'orgs-network-data-he.js'
 ];
 
 // Install: cache all assets

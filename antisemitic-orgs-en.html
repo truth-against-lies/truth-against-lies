@@ -132,6 +132,28 @@
         }
         .disclaimer-box strong { color: #3498db; }
 
+        /* === MODUS OPERANDI === */
+        .org-mo { border-top: 1px solid rgba(226,183,20,0.15); margin-top: 14px; padding-top: 14px; }
+        .mo-label { color: #e2b714; font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .mo-tactics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .mo-tag { display: inline-block; font-size: 0.72em; padding: 3px 10px; border-radius: 50px; font-weight: 600; }
+        .tag-violence { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .tag-propaganda { background: rgba(230,126,34,0.15); color: #e67e22; }
+        .tag-finance { background: rgba(241,196,15,0.15); color: #f1c40f; }
+        .tag-political { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .tag-legal { background: rgba(155,89,182,0.15); color: #9b59b6; }
+        .tag-cyber { background: rgba(52,152,219,0.15); color: #3498db; }
+        .tag-academic { background: rgba(149,165,166,0.15); color: #95a5a6; }
+        .mo-events { list-style: none; padding: 0; margin: 0 0 12px; }
+        .mo-events li { color: #c0c0c0; font-size: 0.88em; padding: 4px 0; padding-left: 16px; position: relative; line-height: 1.6; }
+        .mo-events li::before { content: "\25B8"; color: #e2b714; position: absolute; left: 0; }
+        .mo-events .ev-date { color: #e2b714; font-weight: 600; }
+        .mo-funding { color: #c0c0c0; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
+        .mo-connections { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+        .mo-conn-link { display: inline-block; font-size: 0.78em; padding: 4px 12px; border: 1px solid rgba(226,183,20,0.3); border-radius: 50px; color: #e2b714; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+        .mo-conn-link:hover { background: rgba(226,183,20,0.1); border-color: #e2b714; }
+        .org-card.flash-highlight { border-color: #e2b714 !important; box-shadow: 0 0 20px rgba(226,183,20,0.3); transition: border-color 0.3s, box-shadow 0.3s; }
+
         @media (max-width: 768px) {
             .stats-bar { grid-template-columns: repeat(2, 1fr); }
             .stat-num { font-size: 1.5em; }
@@ -139,6 +161,7 @@
             .org-body { padding: 0 16px 16px; }
             .cat-header { padding: 16px 18px; }
             .cat-info h3 { font-size: 1.2em; }
+            .mo-events li { padding-left: 14px; }
         }
     </style>
 <script type="application/ld+json">
@@ -283,7 +306,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hamas" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hamas (Harakat al-Muqawama al-Islamiyya) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -294,10 +317,11 @@
                         <p>The Palestinian branch of the Muslim Brotherhood. The Hamas Charter (1988) explicitly called for the destruction of Israel and included antisemitic quotes from "The Protocols of the Elders of Zion." The updated charter (2017) continues to reject Israel's right to exist. Responsible for the October 7, 2023 massacre — 1,200 killed, 251 taken hostage. Carried out dozens of suicide bombings on buses, restaurants, and shopping centers in Israel. Primary funding: Iran ($100-350 million/year) and Qatar ($1.8 billion, 2012-2023).</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UK, Israel, Canada, Japan, Australia | Sources: ADL, US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Suicide Bombings</span> <span class="mo-tag tag-violence">Rocket Attacks</span> <span class="mo-tag tag-violence">Kidnapping</span> <span class="mo-tag tag-propaganda">Propaganda</span> <span class="mo-tag tag-finance">Terror Funding</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1987</span> Founded in Gaza as Muslim Brotherhood branch</li> <li><span class="ev-date">1988</span> Charter calls for destruction of Israel, cites Protocols</li> <li><span class="ev-date">1993-2005</span> Dozens of suicide bombings — buses, restaurants, malls</li> <li><span class="ev-date">Oct 7, 2023</span> Massacred 1,200 people, kidnapped 251 hostages</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran: $100-350M/year | Qatar: $1.8B (2012-2023) | Turkey: diplomatic & logistic support</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (funder)</a> <a class="mo-conn-link" data-target="org-qatar">Qatar (host/funder)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">Muslim Brotherhood (parent)</a> <a class="mo-conn-link" data-target="org-pij">PIJ (co-belligerent)</a> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (ally)</a> <a class="mo-conn-link" data-target="org-pa-fatah">PA/Fatah (rival)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pij" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Islamic Jihad (PIJ) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -308,10 +332,11 @@
                         <p>A pro-Iranian Palestinian terror organization. Unlike Hamas, it does not provide social services — it focuses exclusively on military activity against Israel. Carried out numerous suicide bombings in the 1990s and 2000s. Regularly launches rockets at Israeli civilians. Funded almost entirely by Iran.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UK, Israel, Japan, Canada, Australia | Sources: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Suicide Bombings</span> <span class="mo-tag tag-violence">Rocket Attacks</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1981</span> Founded in Gaza by Fathi Shaqaqi</li> <li><span class="ev-date">1990s-2000s</span> Suicide bombings across Israel</li> <li><span class="ev-date">2023-2024</span> Rocket barrages alongside Hamas</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran: primary funder (estimated $30-70M/year)</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (funder)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> <a class="mo-conn-link" data-target="org-hamas">Hamas (co-belligerent)</a> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hezbollah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hezbollah <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -322,10 +347,11 @@
                         <p>A Lebanese Shiite militia / Iranian proxy army. Responsible for the bombing of the Israeli embassy in Buenos Aires (1992, 29 killed) and the AMIA Jewish community center (1994, 85 killed). Nasrallah declared: "If all the Jews gather in Israel, it will save us the trouble of chasing them around the world." Maintains an arsenal of 150,000+ rockets. Fired thousands of rockets at Israel since October 2023.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, Israel, UK, EU (military wing), Arab League, Canada | Sources: ADL, US State Dept, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Rocket Attacks</span> <span class="mo-tag tag-violence">Bombings</span> <span class="mo-tag tag-political">Political Party</span> <span class="mo-tag tag-political">Iranian Proxy</span> <span class="mo-tag tag-finance">Terror Funding</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1992</span> Bombing of Israeli embassy, Buenos Aires — 29 killed</li> <li><span class="ev-date">1994</span> AMIA Jewish center bombing — 85 killed</li> <li><span class="ev-date">2006</span> Second Lebanon War — 4,000+ rockets at Israel</li> <li><span class="ev-date">2023-2024</span> Thousands of rockets at northern Israel</li> <li><span class="ev-date">2024</span> Nasrallah killed in Israeli airstrike</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran: $700M-1B/year | Also funds from Lebanon, drug trade, diaspora donations</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (funder/patron)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (Quds Force)</a> <a class="mo-conn-link" data-target="org-hamas">Hamas (ally)</a> <a class="mo-conn-link" data-target="org-houthis">Houthis (ally)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">Kata'ib Hezbollah (Iraq)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-houthis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Houthis (Ansar Allah) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -336,10 +362,11 @@
                         <p>A Zaydi Shiite militia that controls Northern Yemen. The official slogan on their flag: "God is great, death to America, death to Israel, curse upon the Jews, victory to Islam." Launched ballistic missiles and drones toward Israel since October 2023. Attacked commercial ships in the Red Sea. Funded and trained by Iran.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA (re-designated 2024), Canada, Saudi Arabia | Sources: US State Dept, CSIS, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Ballistic Missiles</span> <span class="mo-tag tag-violence">Drone Attacks</span> <span class="mo-tag tag-violence">Maritime Attacks</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> Captured Sana'a, started civil war</li> <li><span class="ev-date">2021</span> Expelled last Jews from Yemen</li> <li><span class="ev-date">2023-2024</span> 200+ missiles and drones toward Israel</li> <li><span class="ev-date">2023-2024</span> Attacks on commercial ships in Red Sea</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran: weapons, training, estimated $100M+/year</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (funder/trainer)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (weapons supply)</a> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (training)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-irgc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Islamic Revolutionary Guard Corps (IRGC) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -350,10 +377,11 @@
                         <p>Iran's ideological army. The Quds Force (foreign operations branch) funds, trains, and equips Hamas, Hezbollah, Palestinian Islamic Jihad, the Houthis, and Shiite militias in Iraq. Planned attacks against Israeli and Jewish targets worldwide, including an attempted assassination of the Saudi ambassador in Washington (2011). Qasem Soleimani (killed 2020) was the architect of the "Axis of Resistance" against Israel.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA (2019), Bahrain, Saudi Arabia | Sources: US Treasury, CSIS, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Proxy Wars</span> <span class="mo-tag tag-finance">Terror Funding</span> <span class="mo-tag tag-violence">Assassinations</span> <span class="mo-tag tag-cyber">Cyber Warfare</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1979</span> Founded after Iranian Revolution</li> <li><span class="ev-date">1983</span> Barracks bombing in Beirut via Hezbollah — 241 US Marines killed</li> <li><span class="ev-date">2011</span> Attempted assassination of Saudi ambassador in Washington</li> <li><span class="ev-date">2020</span> Qasem Soleimani killed by US drone strike</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iranian state budget: $20B+/year for IRGC. Distributes billions to proxy network.</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">Hamas (funded)</a> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (funded)</a> <a class="mo-conn-link" data-target="org-pij">PIJ (funded)</a> <a class="mo-conn-link" data-target="org-houthis">Houthis (funded)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">Kata'ib Hezbollah</a> <a class="mo-conn-link" data-target="org-iran">Iran (parent state)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pflp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Popular Front for the Liberation of Palestine (PFLP) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -364,10 +392,11 @@
                         <p>A Marxist-Leninist terror organization. Pioneered international airplane hijackings (1968-1970). Carried out the Lod Airport massacre (1972, 26 killed). Assassinated Israeli Tourism Minister Rehavam Ze'evi (2001). Linked to the Samidoun organization, which was designated as a terror group. Continues to carry out attacks in the West Bank.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, Israel, Canada, Japan | Sources: US State Dept, ADL</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Hijackings</span> <span class="mo-tag tag-violence">Assassinations</span> <span class="mo-tag tag-political">Marxist Ideology</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1968-1970</span> Pioneered international airplane hijackings</li> <li><span class="ev-date">1972</span> Lod Airport massacre — 26 killed</li> <li><span class="ev-date">2001</span> Assassinated Israeli Tourism Minister Ze'evi</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Syria and Iran (historically). Some PFLP front groups received European NGO funding.</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-samidoun">Samidoun (front org)</a> <a class="mo-conn-link" data-target="org-iran">Iran (funder)</a> <a class="mo-conn-link" data-target="org-dflp">DFLP (splinter)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-dflp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Democratic Front for the Liberation of Palestine (DFLP) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -378,10 +407,11 @@
                         <p>A Marxist splinter faction that broke from the PFLP. Responsible for the Ma'alot massacre (1974) — 22 schoolchildren and adults murdered, 68 wounded. The terrorists infiltrated a school and took 105 hostages, most of them children.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, Israel | Sources: US State Dept</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Hostage Taking</span> <span class="mo-tag tag-violence">School Massacres</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1974</span> Ma'alot massacre — 22 schoolchildren murdered</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Syria (historically), limited funding today</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pflp">PFLP (origin)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-aqsa-brigades" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Al-Aqsa Martyrs' Brigades <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -392,10 +422,11 @@
                         <p>The military wing of the Fatah movement (the party of Arafat and Abu Mazen). Carried out numerous suicide bombings during the Second Intifada, despite the Palestinian Authority denying any connection. Continues armed activity in the West Bank.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, Israel | Sources: US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Suicide Bombings</span> <span class="mo-tag tag-violence">Shootings</span> <span class="mo-tag tag-violence">Armed Militia</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2000-2005</span> Dozens of suicide bombings during Second Intifada</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">PA/Fatah (denied), Iran (some factions)</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-fatah">PA/Fatah (parent)</a> <a class="mo-conn-link" data-target="org-iran">Iran (some factions)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-fatah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Authority / Fatah <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -406,10 +437,11 @@
                         <p>A governing body that administers the Palestinian areas in the West Bank. Operates the "Pay for Slay" program — monthly payments to families of terrorists and imprisoned terrorists ($300+ million/year). Palestinian textbooks contain incitement against Israel and Jews (IMPACT-se research). Abu Mazen himself wrote a doctoral dissertation that questions the scope of the Holocaust (Moscow, 1982).</p>
                     </div>
                     <div class="org-sources">Sources: IMPACT-se, Palestinian Media Watch, Taylor Force Act (2018), MEMRI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-finance">Pay for Slay</span> <span class="mo-tag tag-propaganda">Incitement</span> <span class="mo-tag tag-propaganda">Textbook Indoctrination</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1959</span> Fatah founded by Yasser Arafat</li> <li><span class="ev-date">1994</span> PA established under Oslo Accords</li> <li><span class="ev-date">Ongoing</span> Pay for Slay — $300M+/year to terrorist families</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">International aid, Pay for Slay program ($300M+/year)</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-govt">PA (government)</a> <a class="mo-conn-link" data-target="org-al-aqsa-brigades">Al-Aqsa Brigades (military wing)</a> <a class="mo-conn-link" data-target="org-hamas">Hamas (rival)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-qaeda" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Al-Qaeda <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -420,10 +452,11 @@
                         <p>The global jihadist terror organization. Bin Laden identified Jews and Israel as primary targets in his "Letter to America" (2002). September 11 attacks (2001, 2,977 killed). Attacks against synagogues in Tunisia (Djerba, 2002, 21 killed), Turkey (Istanbul, 2003, 57 killed), and Morocco (Casablanca, 2003). The ideology identifies "Crusaders and Jews" as the central enemy.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UN, all Western nations | Sources: US State Dept, 9/11 Commission Report</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Casualty Attacks</span> <span class="mo-tag tag-violence">Suicide Bombings</span> <span class="mo-tag tag-propaganda">Global Jihad</span> <span class="mo-tag tag-finance">Terror Funding</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1998</span> US embassy bombings in Kenya & Tanzania — 224 killed</li> <li><span class="ev-date">2001</span> September 11 attacks — 2,977 killed</li> <li><span class="ev-date">2002</span> Djerba synagogue attack, Tunisia — 21 killed</li> <li><span class="ev-date">2003</span> Istanbul synagogue bombings — 57 killed</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Saudi donors (pre-2001), charities network, criminal enterprises, state sponsors</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-isis">ISIS (split off)</a> <a class="mo-conn-link" data-target="org-al-shabaab">Al-Shabaab (affiliate)</a> <a class="mo-conn-link" data-target="org-ansar-al-islam">Ansar al-Islam (affiliate)</a> <a class="mo-conn-link" data-target="org-boko-haram">Boko Haram (affiliate)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-isis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ISIS (Islamic State) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -434,10 +467,11 @@
                         <p>A terror organization that established a "caliphate" in Iraq and Syria. Explicitly antisemitic propaganda — identifies Jews as apocalyptic enemies. Executed Jews, attacked Jewish sites, and disseminates propaganda calling for attacks against Jewish targets in Europe. Terror attacks in France (Hyper Cacher kosher supermarket, January 2015, 4 Jewish victims killed).</p>
                     </div>
                     <div class="org-sources">Designated as terror by: all UN member states | Sources: US State Dept, UN Security Council, SITE Intelligence</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Genocide</span> <span class="mo-tag tag-violence">Beheadings</span> <span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-propaganda">Propaganda</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> Declared caliphate in Iraq and Syria</li> <li><span class="ev-date">2015</span> Paris attacks — 130 killed; Hyper Cacher — 4 Jews killed</li> <li><span class="ev-date">2015-2019</span> Thousands of attacks worldwide, genocide of Yazidis</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Oil revenue ($1-3M/day at peak), taxation, looting, ransom payments</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-al-qaeda">Al-Qaeda (origin)</a> <a class="mo-conn-link" data-target="org-boko-haram">Boko Haram (pledge)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-muslim-brotherhood" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Muslim Brotherhood <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -448,10 +482,11 @@
                         <p>The parent movement of political Islam. Hamas's parent organization. Its ideology includes structural antisemitism — founder al-Banna supported the Nazis in the 1930s and 1940s. Disseminates "The Protocols of the Elders of Zion" and antisemitic content throughout the Arab world. Branches in 70+ countries.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: Egypt, Saudi Arabia, UAE, Bahrain, Russia | Sources: ADL, Lorenzo Vidino (George Washington University)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Political Islam</span> <span class="mo-tag tag-propaganda">Propaganda</span> <span class="mo-tag tag-political">Institutional Infiltration</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1928</span> Founded in Egypt by Hassan al-Banna</li> <li><span class="ev-date">1930s-40s</span> Al-Banna collaborated with Nazi Germany</li> <li><span class="ev-date">1987</span> Created Hamas as Palestinian branch</li> <li><span class="ev-date">2012-2013</span> Morsi government in Egypt (ousted)</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Qatar, Turkey, member dues, businesses, charities network across 70+ countries</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">Hamas (created)</a> <a class="mo-conn-link" data-target="org-qatar">Qatar (sponsor)</a> <a class="mo-conn-link" data-target="org-turkey">Turkey (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-lashkar-e-taiba" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Lashkar-e-Taiba <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -462,10 +497,11 @@
                         <p>A Pakistani terror organization. Responsible for the Mumbai attacks (2008) — including a targeted assault on the Chabad House in which Rabbi Gavriel and Rivka Holtzberg and 4 other Jews were murdered. The terrorists received explicit instructions to attack the Jewish target.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UN, India, UK | Sources: US State Dept, UN 1267 Committee</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Shootings</span> <span class="mo-tag tag-violence">Targeted Attacks on Jews</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2008</span> Mumbai attacks — 166 killed; Chabad House targeted, 6 Jews murdered</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Pakistani ISI (alleged), charities, donations from diaspora</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pakistan">Pakistan (harbor)</a> <a class="mo-conn-link" data-target="org-al-qaeda">Al-Qaeda (ideology)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kataib-hezbollah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Kata'ib Hezbollah <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -476,10 +512,11 @@
                         <p>A pro-Iranian Iraqi Shiite militia. Part of Iran's "Axis of Resistance." Attacks American bases in Iraq, launches drones toward Israel. Explicitly anti-Israel and antisemitic rhetoric.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UAE | Sources: US Treasury, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Drone Attacks</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2003</span> Founded during Iraq War</li> <li><span class="ev-date">2023-2024</span> Drone attacks on US bases and toward Israel</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran (IRGC Quds Force): weapons, training, funding</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (patron)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (model)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-harakat-al-nujaba" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Harakat al-Nujaba <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -490,10 +527,11 @@
                         <p>An Iraqi Shiite militia operating as an Iranian proxy. Declared its intention to "liberate" Jerusalem. Attacked American forces in Iraq. Part of the Iranian proxy network operating against Israel.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA (2019) | Sources: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Militia</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2013</span> Founded as IRGC proxy in Iraq</li> <li><span class="ev-date">2023-2024</span> Attacks on American bases</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran (IRGC): direct funding and weapons</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (patron)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">Kata'ib Hezbollah (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-asaib-ahl-al-haq" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Asa'ib Ahl al-Haq <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -504,10 +542,11 @@
                         <p>Iraqi Shiite militia with political representation. Operates as an IRGC proxy. Distributes anti-Israel propaganda and attacks American bases. Declares its intention to attack Israel.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA | Sources: US Treasury, Stanford CISAC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Militia</span> <span class="mo-tag tag-political">Political Party</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2006</span> Founded as IRGC proxy</li> <li><span class="ev-date">2023-2024</span> Attacks on US bases, threats against Israel</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran (IRGC): direct funding</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (patron)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-shabaab" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Al-Shabaab <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -518,10 +557,11 @@
                         <p>Somali jihadist terror organization, al-Qaeda affiliate. Westgate Mall attack in Nairobi (2013, 67 killed) — the terrorists separated Muslims from non-Muslims before shooting. Persistent anti-Israel and antisemitic rhetoric.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UN, UK | Sources: US State Dept, UN</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Shootings</span> <span class="mo-tag tag-violence">Bombings</span> <span class="mo-tag tag-political">Al-Qaeda Affiliate</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2013</span> Westgate Mall attack, Nairobi — 67 killed</li> <li><span class="ev-date">2017</span> Mogadishu truck bombing — 587 killed</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Charcoal trade, taxation, piracy, Al-Qaeda funding</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-al-qaeda">Al-Qaeda (parent)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-boko-haram" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Boko Haram <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -532,10 +572,11 @@
                         <p>Nigerian jihadist terror organization. Full name: "Jama'atu Ahlis Sunna Lidda'Awati Wal-Jihad." The organization's charter includes anti-Israel and antisemitic rhetoric. Distributes propaganda against "Jews and Crusaders" in line with global jihadist ideology.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UN | Sources: US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Kidnapping</span> <span class="mo-tag tag-violence">Bombings</span> <span class="mo-tag tag-propaganda">Jihadi Propaganda</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> Kidnapped 276 Chibok schoolgirls</li> <li><span class="ev-date">2015</span> Pledged allegiance to ISIS</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Kidnapping ransoms, bank robbery, taxation in controlled areas</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-isis">ISIS (pledge)</a> <a class="mo-conn-link" data-target="org-al-qaeda">Al-Qaeda (ideology)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-plf" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestine Liberation Front (PLF) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -546,10 +587,11 @@
                         <p>Palestinian terror organization. Responsible for the hijacking of the cruise ship Achille Lauro (1985) — American Jewish passenger Leon Klinghoffer (age 69, in a wheelchair) was shot and thrown overboard.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA | Sources: US State Dept, ADL</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Hijacking</span> <span class="mo-tag tag-violence">Murder of Civilians</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-mahdi-army" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Mahdi Army <span class="org-badge badge-terror">Militia</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -560,10 +602,11 @@
                         <p>Iraqi Shiite militia that fought against coalition forces. Al-Sadr uses persistent anti-Israel and anti-Jewish rhetoric. The militia attacked American targets and was part of Iranian influence in Iraq.</p>
                     </div>
                     <div class="org-sources">Sources: CSIS, Stanford CISAC, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Militia</span> <span class="mo-tag tag-violence">Sectarian Violence</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2003-2008</span> Fought against US coalition in Iraq</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran: weapons and funding via IRGC</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (patron)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (support)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fatemiyoun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Fatemiyoun <span class="org-badge badge-terror">Militia</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -574,10 +617,11 @@
                         <p>Afghan Shiite militia recruited by the Iranian IRGC to fight in Syria. Part of the Iranian proxy network. Anti-Israel ideology as part of the "axis of resistance."</p>
                     </div>
                     <div class="org-sources">Sources: CSIS, Ali Alfoneh (Arab Gulf States Institute)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Militia</span> <span class="mo-tag tag-political">Iranian Proxy</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> Recruited by IRGC for Syrian civil war</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Iran (IRGC): direct recruitment and funding</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-irgc">IRGC (patron)</a> <a class="mo-conn-link" data-target="org-iran">Iran (patron)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hizb-ut-tahrir" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hizb ut-Tahrir <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -588,10 +632,11 @@
                         <p>Global Islamist movement whose goal is the establishment of a worldwide Islamic caliphate. Distributes overt antisemitic propaganda worldwide. Calls for "liberating Palestine" and destroying Israel. Active in 40+ countries, primarily on university campuses.</p>
                     </div>
                     <div class="org-sources">Banned in: Germany, Russia, Turkey, many Arab states | Sources: ADL, SPLC, Quilliam Foundation</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Propaganda</span> <span class="mo-tag tag-academic">Campus Organizing</span> <span class="mo-tag tag-political">Caliphate Ideology</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ansar-al-islam" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Ansar al-Islam <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -602,6 +647,7 @@
                         <p>Kurdish-Sunni jihadist organization. Linked to al-Qaeda. Operated in Iraqi Kurdistan and later joined fighting in Syria. Anti-Israel and antisemitic ideology as part of the global jihadist movement.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA, EU, UN | Sources: US State Dept, Stanford CISAC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Bombings</span> <span class="mo-tag tag-political">Al-Qaeda Affiliate</span></div></div>
                 </div>
             </div>
 
@@ -624,7 +670,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kkk" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Ku Klux Klan (KKK) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -635,10 +681,11 @@
                         <p>The oldest racist organization in the USA — three separate waves. The second KKK (1915-1944) was explicitly antisemitic — reaching 4 million members in the 1920s. They lynched Leo Frank (Jewish, 1915) from a Georgia prison. Today, dozens of small chapters operate with about 3,000 members. They distribute antisemitic, racist, and anti-immigrant propaganda.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Lynching</span> <span class="mo-tag tag-propaganda">Hate Propaganda</span> <span class="mo-tag tag-violence">Intimidation</span> <span class="mo-tag tag-propaganda">Cross Burning</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-alliance" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>National Alliance <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -649,10 +696,11 @@
                         <p>Was the most influential neo-Nazi organization in the USA. Pierce wrote "The Turner Diaries" (1978) — a novel that inspired the Oklahoma City bombing (1995, 168 dead) and The Order's operations. The book depicts a race war and the murder of Jews. The organization weakened after Pierce's death (2002) but its ideological influence continues.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Literature</span> <span class="mo-tag tag-propaganda">Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-order" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Order (Br&uuml;der Schweigen) <span class="org-badge badge-terror">Terror Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -663,10 +711,11 @@
                         <p>A neo-Nazi terror cell that carried out robberies ($3.8 million), counterfeiting, and murder. They assassinated Alan Berg — a Jewish radio journalist (1984). Members were inspired by "The Turner Diaries." Mathews was killed in an FBI standoff. The remaining members were convicted and imprisoned.</p>
                     </div>
                     <div class="org-sources">Classification: FBI Domestic Terrorism | Sources: ADL, FBI, Kevin Flynn &amp; Gary Gerhardt "The Silent Brotherhood" (1989)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Robbery</span> <span class="mo-tag tag-violence">Assassination</span> <span class="mo-tag tag-finance">Counterfeiting</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-aryan-nations" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Aryan Nations <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -677,10 +726,11 @@
                         <p>A neo-Nazi organization that operated a compound in Hayden Lake, Idaho — serving as an annual convention center for neo-Nazis across the USA. Based on "Christian Identity" ideology (Jews = children of Satan). Lost a civil lawsuit ($6.3 million, 2000) and was dismantled. Many members joined The Order.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Hate Compound</span> <span class="mo-tag tag-propaganda">Hate Propaganda</span> <span class="mo-tag tag-propaganda">Christian Identity</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-aryan-brotherhood" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Aryan Brotherhood <span class="org-badge badge-hate">Crime Gang</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -691,10 +741,11 @@
                         <p>A neo-Nazi prison gang — the most violent group in the federal prison system. Symbols: swastika, SS, "666". Despite comprising less than 0.1% of federal inmates, they are responsible for ~18% of prison murders. White racist and antisemitic ideology.</p>
                     </div>
                     <div class="org-sources">Classification: FBI Organized Crime | Sources: FBI, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Prison Violence</span> <span class="mo-tag tag-finance">Organized Crime</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nsm" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NSM (National Socialist Movement) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -705,10 +756,11 @@
                         <p>The largest active neo-Nazi organization in the USA. Members march in SS uniforms with swastika flags. They organized protests in Toledo (2005) that led to riots. In 2019, leader Jeff Schoep was convicted of aiding in murder.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Street Marches</span> <span class="mo-tag tag-propaganda">Nazi Symbols</span> <span class="mo-tag tag-violence">Intimidation</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-atomwaffen" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Atomwaffen Division / National Socialist Order <span class="org-badge badge-terror">Terror Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -719,10 +771,11 @@
                         <p>An accelerationist neo-Nazi organization — believes violence will hasten society's collapse and lead to a white state. Members have murdered 5+ people. They distributed weapons and sabotage manuals. They spread propaganda near synagogues. Renamed to NSO in 2020 after exposures. Ties to the Terrorgram network.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, Designated as terror: Canada, UK | Sources: ADL, SPLC, FBI, SITE Intelligence</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Accelerationism</span> <span class="mo-tag tag-violence">Murder</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-base" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Base <span class="org-badge badge-terror">Terror Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -733,10 +786,11 @@
                         <p>An accelerationist neo-Nazi network. They recruited members through encrypted forums. Members were arrested on suspicion of planning attacks, including an assault on a Virginia rally (2020). Nazzaro was exposed as a former FBI agent — a fact that didn't reduce the danger, as other members operated independently.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, Designated as terror: Canada, UK | Sources: ADL, FBI, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Terror Plots</span> <span class="mo-tag tag-cyber">Online Recruitment</span> <span class="mo-tag tag-violence">Paramilitary Training</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-patriot-front" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Patriot Front <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -747,10 +801,11 @@
                         <p>A white supremacist organization that split from Vanguard America after Charlottesville. Organizes marches with masks, distributes antisemitic flyers, and hangs "Reclaim America" banners. Active in dozens of cities across the USA. An internal data leak (2022) exposed 200+ members.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL Extremist Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Flash Marches</span> <span class="mo-tag tag-propaganda">Flyering</span> <span class="mo-tag tag-propaganda">Banner Drops</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-vanguard-america" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Vanguard America <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -761,10 +816,11 @@
                         <p>A neo-Nazi organization that participated in the "Unite the Right" rally in Charlottesville (2017). James Alex Fields, who attended with the organization, drove his car into protesters and murdered Heather Heyer. Fields was sentenced to life in prison. The organization split after the event — part of it became Patriot Front.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-violence">Vehicle Attack</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-identity-evropa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Identity Evropa / American Identity Movement <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -775,10 +831,11 @@
                         <p>An American Identitarian organization — "you will not replace us." Appeared at Charlottesville with tiki torches. Internal chat leaks (Discord, 2019) revealed overt antisemitism among members. Renamed to AmIM in a rebranding attempt. Nearly completely disbanded.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC, Unicorn Riot (leaks)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Campus Flyering</span> <span class="mo-tag tag-propaganda">Great Replacement Theory</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-gdl" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>GDL (Goyim Defense League) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -789,10 +846,11 @@
                         <p>An antisemitic network distributing flyers, banners, and propaganda on streets and highways across the USA. Focused exclusively on antisemitism — "Name the Jew." They've distributed flyers in 47 states. They protest near synagogues, Jewish events, and institutions. One of the leading distributors of antisemitic propaganda in the USA today.</p>
                     </div>
                     <div class="org-sources">Classification: ADL Extremist Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Flyering</span> <span class="mo-tag tag-propaganda">Banner Drops</span> <span class="mo-tag tag-violence">Synagogue Harassment</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-groypers" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Groypers / Nick Fuentes <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -803,10 +861,11 @@
                         <p>An "America First" movement that denies the Holocaust, spreads antisemitism and white supremacy in a political wrapper. Fuentes said "Jews control the media" and "they created the Holocaust." Organized the AFPAC rally as an alternative to CPAC. Hosted a dinner with Kanye West and Donald Trump (2022) that caused a storm. Fuentes is identified by ADL as one of the 50 most dangerous extremists in the USA.</p>
                     </div>
                     <div class="org-sources">Classification: ADL Extremist, SPLC White Nationalist | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-political">Political Entryism</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nsc-131" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NSC-131 <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -817,10 +876,11 @@
                         <p>A neo-Nazi group in New England. "131" = ACA = "Anti-Communist Action." Members march with masks and swastika flags, protesting near Jewish events and LGBTQ families. They harassed library story hours and pride events.</p>
                     </div>
                     <div class="org-sources">Classification: ADL Extremist Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Street Marches</span> <span class="mo-tag tag-violence">Intimidation</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ram-active-clubs" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>RAM / Active Clubs <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -831,10 +891,11 @@
                         <p>Rise Above Movement — a neo-Nazi street violence group from California. Members assaulted protesters at Charlottesville and other demonstrations. Rundo and 3 members were convicted in 2019. They developed the "Active Clubs" model — neo-Nazi boxing/fitness clubs that spread to 47 chapters in 33 states.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-violence">Fight Clubs</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-twp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>TWP (Traditionalist Worker Party) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -845,10 +906,11 @@
                         <p>A neo-Nazi organization that attempted to recruit the white working class. Heimbach participated in Charlottesville and other violent events. The organization disbanded in 2018 following a personal scandal involving Heimbach.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-propaganda">Working Class Recruitment</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-league-of-the-south" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>League of the South <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -859,10 +921,11 @@
                         <p>A neo-Confederate organization calling for the secession of the Southern USA. Transformed from a "Southern heritage" organization to an explicitly white supremacist and antisemitic one. Participated in Charlottesville. Hill declared support for "white supremacy" and antisemitism.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: SPLC, ADL</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Secessionism</span> <span class="mo-tag tag-propaganda">White Supremacy</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-creativity-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Creativity Movement (WCOTC) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -873,10 +936,11 @@
                         <p>A racist "religion" that believes in "RaHoWa" — Racial Holy War. The primary enemy: Jews. Benjamin Smith, a member, carried out drive-by shootings in Illinois (1999) targeting Jewish and African-American victims — killing 2 and wounding 9. Matt Hale, a former leader, was sentenced to 40 years in prison for attempting to murder a federal judge.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Racial Holy War</span> <span class="mo-tag tag-violence">Mass Shootings</span> <span class="mo-tag tag-propaganda">Pseudo-Religion</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hammerskin-nation" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hammerskin Nation <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -887,10 +951,11 @@
                         <p>An international neo-Nazi skinhead organization — the largest network of its kind. They organize Nazi music festivals ("Hammerfest"). Linked to dozens of acts of violence and murder worldwide. Wade Michael Page, who massacred worshippers at a Sikh gurdwara in Wisconsin (2012, 6 dead), was a Hammerskin member.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Music</span> <span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-political">International Network</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-golden-dawn" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Golden Dawn (Χρυσή Αυγή) <span class="org-badge badge-hate">Neo-Nazi Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -901,10 +966,11 @@
                         <p>A Greek neo-Nazi party that entered parliament with 18 seats (2012). Nazi symbols, overt antisemitism, Holocaust denial. Members murdered rapper Pavlos Fyssas (2013). In 2020, the court declared the organization a "criminal organization" — leaders were sentenced to 13 years in prison.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC, EU Parliament Report | Sources: ADL, BBC, Guardian</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Political Party</span> <span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-violence">Murder</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nrm" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NRM (Nordic Resistance Movement) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -915,10 +981,11 @@
                         <p>The largest neo-Nazi organization in Scandinavia. Active in Sweden, Norway, Finland, and Denmark. Protests near synagogues, harassment of Jews, explicit antisemitism. Distributes Holocaust denial propaganda. Banned in Finland (2020). Members were convicted of bombing a refugee center.</p>
                     </div>
                     <div class="org-sources">Classification: ADL, Banned: Finland | Sources: ADL, Expo (Sweden), SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Street Marches</span> <span class="mo-tag tag-violence">Synagogue Harassment</span> <span class="mo-tag tag-violence">Bombings</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-npd" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NPD / Die Heimat <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -929,10 +996,11 @@
                         <p>A German neo-Nazi party. The German Federal Constitutional Court ruled (2017) that the party is "ideologically similar to Nazism" but did not ban it due to its weakness. Renamed to "Die Heimat" in 2023. Antisemitism, disguised Holocaust denial, and racism.</p>
                     </div>
                     <div class="org-sources">Sources: German Federal Constitutional Court, ADL, Verfassungsschutz</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Political Party</span> <span class="mo-tag tag-propaganda">Holocaust Minimization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-blood-and-honour" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Blood &amp; Honour / Combat 18 <span class="org-badge badge-terror">Terror Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -943,10 +1011,11 @@
                         <p>An international neo-Nazi music network with a terrorist arm (Combat 18 — "18" = AH = Adolf Hitler). Distributes antisemitic hate music and organizes neo-Nazi concerts. Combat 18 carried out bombings and murder in the UK. Banned in Canada (2019). Chapters in 20+ countries.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: Canada | Sources: ADL, SPLC, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Music</span> <span class="mo-tag tag-violence">Bombings</span> <span class="mo-tag tag-political">International Network</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-action" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>National Action <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -957,10 +1026,11 @@
                         <p>A British neo-Nazi organization — the first far-right group banned in the UK since World War II (2016). Celebrated the murder of MP Jo Cox. Members were convicted of planning attacks and terrorist activity.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: UK (2016) | Sources: UK Home Office, BBC, ADL</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Terror Plots</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-identitarian-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Identitarian Movement (Generation Identity) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -971,10 +1041,11 @@
                         <p>A "Great Replacement" movement — claims Muslims are replacing the European population (inspired by Renaud Camus). The Christchurch shooter's manifesto (2019, 51 dead) was titled "The Great Replacement" — the shooter donated money to Generation Identity Austria. Dissolved in France (2021) and Germany.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC, Dissolved: France (2021), Germany | Sources: ADL, SPLC, Europol</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Great Replacement Theory</span> <span class="mo-tag tag-propaganda">Stunts & Activism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-casapound" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>CasaPound <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -985,10 +1056,11 @@
                         <p>An Italian neo-fascist organization. They glorify Mussolini. Antisemitism, racism, anti-immigrant. Members have attacked immigrants and leftists. Active in Rome and other cities. They demonstrate with fascist symbols.</p>
                     </div>
                     <div class="org-sources">Sources: SPLC, Italian Interior Ministry, Europol</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Street Violence</span> <span class="mo-tag tag-propaganda">Neo-Fascist Propaganda</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-jobbik" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Jobbik <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -999,10 +1071,11 @@
                         <p>A Hungarian party that was the largest far-right in Europe. Members called for registering Jews (2012) from the Hungarian parliament floor. The paramilitary "Hungarian Guard" marched in uniforms resembling those of Hungarian Nazis. The party attempted a centrist rebranding from 2018, but the antisemitic history is documented.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, EU Parliament, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Political Party</span> <span class="mo-tag tag-violence">Paramilitary Wing</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-rim" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Russian Imperial Movement (RIM) <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1013,10 +1086,11 @@
                         <p>A Russian white supremacist organization — the first non-Islamist group designated as terrorist by the US State Department (2020). Trains far-right fighters from Europe. Antisemitism, extreme Orthodox Christianity, Tsarist nostalgia. Ties to Azov and Swedish neo-Nazis.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: USA (2020), Canada | Sources: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Paramilitary Training</span> <span class="mo-tag tag-political">International Network</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-patriotic-alternative" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Patriotic Alternative <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1027,10 +1101,11 @@
                         <p>The most significant far-right organization in the UK today. Collett (formerly BNP) spreads antisemitism and "Great Replacement" theory. They organize "whites only" events and distribute propaganda across the UK.</p>
                     </div>
                     <div class="org-sources">Classification: HOPE Not Hate, ADL | Sources: ADL, HOPE Not Hate (UK)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Great Replacement Theory</span> <span class="mo-tag tag-propaganda">Hate Propaganda</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-stormfront" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Stormfront <span class="org-badge badge-digital">Digital Platform</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1041,10 +1116,11 @@
                         <p>The oldest hate site on the internet. A neo-Nazi and antisemitic forum with hundreds of thousands of registered users. SPLC research found that Stormfront users murdered approximately 100 people (2009-2014). Served as a radicalization platform for dozens of mass murderers.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Site | Sources: SPLC, ADL, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-propaganda">Hate Forum</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-daily-stormer" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Daily Stormer <span class="org-badge badge-digital">Digital Platform</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1055,10 +1131,11 @@
                         <p>A neo-Nazi website with the largest community (before being blocked). Named after "Der St&uuml;rmer" — Julius Streicher's Nazi propaganda newspaper. Distributes antisemitic propaganda, Holocaust denial, and white supremacy. Anglin fled a $14 million judgment for harassing a Jewish woman.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Site | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-cyber">Harassment Campaigns</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-terrorgram" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Terrorgram <span class="org-badge badge-terror">Digital Terror Network</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1069,6 +1146,7 @@
                         <p>A network of accelerationist Telegram channels distributing murder manuals, target lists, and neo-Nazi propaganda. Provides practical guidance for carrying out attacks. Linked to several shooting attacks and terror attempts. In 2024, the USA sanctioned 2 members. The UK banned the network.</p>
                     </div>
                     <div class="org-sources">Designated as terror: UK (2024) | Sources: US Treasury, SITE Intelligence, ADL, Tech Against Terrorism</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Murder Manuals</span> <span class="mo-tag tag-violence">Target Lists</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
@@ -1091,7 +1169,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-isupk" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ISUPK (Israelite School of Universal Practical Knowledge) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1102,10 +1180,11 @@
                         <p>One of the most extreme groups in the BHI (Black Hebrew Israelites) movement. They street-preach in New York, vilifying Jews, LGBTQ people, and white people. They distribute YouTube videos with millions of views. They claim that Ashkenazi Jews are "bastards of Edom" and "Khazar imposters."</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Black Separatist Hate Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Street Preaching</span> <span class="mo-tag tag-propaganda">Identity Theft Theology</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-iuic" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>IUIC (Israel United in Christ) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1116,10 +1195,11 @@
                         <p>The largest group in the extremist BHI movement. 50+ "camps" across the USA. They street-preach and produce YouTube videos containing explicit antisemitic statements. They claim the Holocaust was "divine punishment" because Jews "stole the identity." They have expanded operations to Canada, the UK, and Africa.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Black Separatist Hate Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Street Preaching</span> <span class="mo-tag tag-cyber">YouTube Propaganda</span> <span class="mo-tag tag-political">International Expansion</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sicarii" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sicarii / Jersey City Shooting <span class="org-badge badge-terror">Terror</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1130,10 +1210,11 @@
                         <p>An extremist BHI group. On December 10, 2019, David Anderson and Francine Graham (linked to BHI) opened fire on a kosher supermarket in Jersey City, murdering 3 civilians (including 2 Jews) and a police officer. Antisemitic writings and ties to "Sicarii" ideology were found in their possession. The attack shocked the USA.</p>
                     </div>
                     <div class="org-sources">Sources: FBI, ADL, SPLC, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Shooting</span> <span class="mo-tag tag-violence">Antisemitic Terror</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nation-of-islam" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Nation of Islam (NOI) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1144,10 +1225,11 @@
                         <p>A Black nationalist organization with overt antisemitism. Farrakhan called Hitler a "very great man" (1984), referred to Jews as "Satanic Jews" and "termites" (2018). The book "The Secret Relationship Between Blacks and Jews" (1991) is antisemitic propaganda that accuses Jews of dominating the slave trade (a claim debunked by historians). Tens of thousands of members.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL Extremist | Sources: ADL, SPLC, AJC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Propaganda</span> <span class="mo-tag tag-propaganda">Mass Rallies</span> <span class="mo-tag tag-academic">Pseudo-Scholarship</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nbpp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>New Black Panther Party (NBPP) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1158,10 +1240,11 @@
                         <p>A Black nationalist antisemitic organization — no connection to the original Black Panther Party (which opposes it). Members marched with weapons, preached a "war on Jews." Leaders called Jews "bloodsuckers" and white people "cave dwellers." Active in demonstrations and street confrontations.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group, ADL | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Armed Protests</span> <span class="mo-tag tag-propaganda">Hate Preaching</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-five-percent-nation" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Five-Percent Nation (NGE) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1172,10 +1255,11 @@
                         <p>A splinter group from the Nation of Islam. They believe "the Black man is God" and that Jews and white people are "devils." Influenced hip-hop culture. Not all members are antisemitic, but the official ideology includes antisemitic elements.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Supremacist Theology</span> <span class="mo-tag tag-propaganda">Cultural Influence</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-christian-identity" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Christian Identity <span class="org-badge badge-hate">Hate Ideology</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1186,10 +1270,11 @@
                         <p>A theological ideology claiming Jews are "children of Satan" (literally, not metaphorically) and that Anglo-Saxons are the "true Israelites." The ideology behind Aryan Nations, KKK, and The Order. Robert Mathews, Buford Furrow, and many murderers were Christian Identity believers.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, Michael Barkun "Religion and the Racist Right" (1997)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Supremacist Theology</span> <span class="mo-tag tag-violence">Terror Inspiration</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-westboro-baptist" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Westboro Baptist Church <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1200,10 +1285,11 @@
                         <p>A church/cult that protests with signs reading "God Hates Jews," "God Hates Fags," and "Thank God for Dead Soldiers" at military funerals and public events. About 70 members, mostly the Phelps family. They spread extreme religious antisemitism.</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Protests</span> <span class="mo-tag tag-propaganda">Funeral Pickets</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hotep-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hotep Movement <span class="org-badge badge-hate">Hate Movement</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1214,10 +1300,11 @@
                         <p>An Afrocentric movement on social media spreading antisemitic conspiracy theories — "Jews controlled the slave trade," "Jews stole Egyptian culture." They spread viral content on Twitter, YouTube, and TikTok. Influenced Kanye West's statements.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">Social Media Propaganda</span> <span class="mo-tag tag-propaganda">Conspiracy Theories</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-neturei-karta" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Neturei Karta <span class="org-badge badge-hate">Controversial</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1228,10 +1315,11 @@
                         <p>A small ultra-Orthodox Jewish group (~5,000) that opposes Zionism on theological grounds. What makes them problematic: they participated in Ahmadinejad's Holocaust denial conference in Tehran (2006), protest alongside Hamas and Hezbollah, embrace the Iranian president, and provide a "Jewish stamp of approval" for antisemitism. The broader Jewish community condemns them almost unanimously.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, AJC, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Legitimizing Enemies</span> <span class="mo-tag tag-political">Anti-Zionist Protests</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-british-israelism" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>British Israelism <span class="org-badge badge-hate">Hate Ideology</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1242,10 +1330,11 @@
                         <p>An ideology claiming Anglo-Saxons are descendants of the Ten Lost Tribes. The conclusion: Jews are not the true Israel. Served as the basis for Christian Identity and extreme BHI movements. The connection to antisemitism: if Jews are "not Israel" — they are imposters, which justifies hatred.</p>
                     </div>
                     <div class="org-sources">Sources: Michael Barkun, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Replacement Theology</span> <span class="mo-tag tag-propaganda">Identity Theft</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-icgjc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ICGJC (Israelite Church of God in Jesus Christ) <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1256,6 +1345,7 @@
                         <p>Another BHI group. They preach that Jews are the "Synagogue of Satan." Active in distributing hate videos on the internet. Linked to the radicalization of the Jersey City attackers (2019).</p>
                     </div>
                     <div class="org-sources">Classification: SPLC Hate Group | Sources: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">YouTube Propaganda</span> <span class="mo-tag tag-propaganda">Hate Preaching</span></div></div>
                 </div>
             </div>
 
@@ -1278,7 +1368,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-bds" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>BDS Movement <span class="org-badge badge-political">Political Movement</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1289,10 +1379,11 @@
                         <p>A boycott, divestment, and sanctions movement against Israel. Barghouti declared opposition to the two-state solution and supports the "right of return" — which means eliminating Israel as a Jewish state. 35 US states enacted anti-BDS laws. The German parliament declared (2019) the BDS movement antisemitic. Controversial: supporters claim legitimate protest, opponents argue the goal is delegitimization of Israel.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, German Bundestag Resolution (2019), Kenneth Stern (AJC), 35 US state anti-BDS laws</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Academic Boycott</span> <span class="mo-tag tag-finance">Economic Boycott</span> <span class="mo-tag tag-academic">Campus Organizing</span> <span class="mo-tag tag-political">Delegitimization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sjp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>SJP (Students for Justice in Palestine) <span class="org-badge badge-political">Campus Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1303,10 +1394,11 @@
                         <p>The largest pro-Palestinian organization on campuses — 200+ chapters. Organizes "Israel Apartheid Week," protests, and protest encampments. After October 7, many chapters celebrated the massacre with statements like "glory to the resistance." ADL documented hundreds of cases of intimidation and antisemitism toward Jewish students at SJP events. Some chapters investigated for suspected ties to Hamas (through AMP).</p>
                     </div>
                     <div class="org-sources">Sources: ADL, Brandeis Center, AMCHA Initiative</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Campus Protests</span> <span class="mo-tag tag-propaganda">Apartheid Week</span> <span class="mo-tag tag-violence">Student Intimidation</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-jvp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>JVP (Jewish Voice for Peace) <span class="org-badge badge-political">Controversial</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1317,10 +1409,11 @@
                         <p>A Jewish anti-Zionist organization supporting BDS. ADL defines JVP as "one of the ten most influential anti-Israel organizations in the USA." They provide a "Jewish stamp of approval" for extreme anti-Zionism. Members organized the blockade of Grand Central Terminal (2023) and the US Congress. Collaboration with Samidoun and Within Our Lifetime.</p>
                     </div>
                     <div class="org-sources">Sources: ADL (Top 10 Anti-Israel Groups), AJC, StandWithUs</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Jewish Cover</span> <span class="mo-tag tag-political">Civil Disobedience</span> <span class="mo-tag tag-political">BDS Activism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-samidoun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Samidoun <span class="org-badge badge-terror">Designated Terror Org</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1331,10 +1424,11 @@
                         <p>An organization presenting itself as a "Palestinian prisoner solidarity network." Designated as a terror organization by Israel (2021), Canada, and the Netherlands (2024) due to ties to the PFLP. The European branch leader, Khaled Jarrar, is directly linked to the PFLP. They organized protests celebrating October 7 across Europe.</p>
                     </div>
                     <div class="org-sources">Designated as terror by: Israel, Canada, Netherlands | Sources: Public Safety Canada, Israeli MOD</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">PFLP Front</span> <span class="mo-tag tag-propaganda">October 7 Celebrations</span> <span class="mo-tag tag-political">Street Protests</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2021</span> Designated as terror org by Israel</li> <li><span class="ev-date">2024</span> Designated by Canada and Netherlands</li> <li><span class="ev-date">Oct 2023</span> Organized celebrations of October 7 across Europe</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">PFLP funding network, European donations</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pflp">PFLP (parent org)</a> <a class="mo-conn-link" data-target="org-within-our-lifetime">Within Our Lifetime (ally)</a> <a class="mo-conn-link" data-target="org-sjp">SJP (campus ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-within-our-lifetime" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Within Our Lifetime <span class="org-badge badge-hate">Hate Group</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1345,10 +1439,11 @@
                         <p>An extreme pro-Palestinian organization in New York. Slogan: "Globalize the Intifada." They organized protests blocking entrances to the New York Stock Exchange, Brooklyn Museum, and subway stations. After October 7, they organized protests celebrating the attack. They protest near Jewish neighborhoods.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, StandWithUs, NY Post</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Intifada Glorification</span> <span class="mo-tag tag-political">Blockades</span> <span class="mo-tag tag-political">Street Protests</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-amp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>AMP (American Muslims for Palestine) <span class="org-badge badge-political">Controversial</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1359,10 +1454,11 @@
                         <p>The umbrella organization of SJP on campuses. A lawsuit (2024) claimed AMP is a "reincarnation" of the Holy Land Foundation — an organization convicted of funding Hamas ($12 million). AMP leaders previously served in organizations linked to Hamas. The organization denies the connection.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, US v. Holy Land Foundation (2008), Virginia federal lawsuit (2024)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Campus Organizing</span> <span class="mo-tag tag-finance">Hamas Funding Links</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fsjp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>FSJP (Faculty for Justice in Palestine) <span class="org-badge badge-political">Academic Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1373,10 +1469,11 @@
                         <p>A faculty organization supporting academic BDS and backing SJP's activities. Member professors proposed academic boycott resolutions against Israel at several universities. They provide "academic legitimacy" for the delegitimization of Israel.</p>
                     </div>
                     <div class="org-sources">Sources: AMCHA Initiative, Brandeis Center</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Academic Boycott</span> <span class="mo-tag tag-academic">Academic Legitimization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pym" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Youth Movement <span class="org-badge badge-political">Political Organization</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1387,10 +1484,11 @@
                         <p>A radical pro-Palestinian youth organization. Rejects Israel's right to exist. Organized protests with slogans like "From the river to the sea" and "Resistance by any means necessary." Collaboration with Samidoun and Within Our Lifetime.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, NGO Monitor</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Street Protests</span> <span class="mo-tag tag-propaganda">Intifada Glorification</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-academic-boycott" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Academic Boycott (ASA, MESA, AAS) <span class="org-badge badge-institution">Institutions</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1401,10 +1499,11 @@
                         <p>Academic associations that voted in favor of boycotting Israeli institutions: ASA (American Studies Association, 2013), MESA (Middle East Studies Association, 2022), AAS (Asian American Studies). The boycott discriminates against Israeli institutions while ignoring 200+ countries with worse human rights records. AAUP (the professors' association) opposes academic boycotts in principle.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, AAUP, Brandeis Center, Kenneth Marcus</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Academic Boycott</span> <span class="mo-tag tag-legal">Institutional Resolutions</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-electronic-intifada" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Electronic Intifada <span class="org-badge badge-media">Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1415,10 +1514,11 @@
                         <p>An extreme anti-Zionist news site. Abunimah supports the one-state solution (elimination of Israel). Publishes content normalizing Palestinian violence and denying Israel's right to exist. After October 7, published content justifying the attack.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, NGO Monitor, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Anti-Israel Media</span> <span class="mo-tag tag-propaganda">Violence Justification</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-mondoweiss" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Mondoweiss <span class="org-badge badge-media">Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1429,10 +1529,11 @@
                         <p>An anti-Zionist news site. Consistently publishes content delegitimizing Israel. Weiss (Jewish-American) opposes Zionism and the existence of a Jewish state. Criticism: publishes one-sided information without context, and sometimes crosses the line into antisemitism (according to ADL).</p>
                     </div>
                     <div class="org-sources">Sources: ADL, CAMERA, NGO Monitor</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Anti-Israel Media</span> <span class="mo-tag tag-propaganda">Delegitimization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-grayzone" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Grayzone <span class="org-badge badge-media">Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1443,6 +1544,7 @@
                         <p>A site classified as "red-brown media" — combining far-left and authoritarianism. Blumenthal (Jewish-American) publishes extreme anti-Israel content, defends regimes like Assad and China, and spreads conspiracy theories. A regular guest on RT (Russia) and Press TV (Iran).</p>
                     </div>
                     <div class="org-sources">Sources: ADL, The Atlantic, Washington Post</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Authoritarian Defense</span> <span class="mo-tag tag-propaganda">Conspiracy Theories</span> <span class="mo-tag tag-propaganda">State Media Appearances</span></div></div>
                 </div>
             </div>
 
@@ -1465,7 +1567,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-iran" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Iran <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1476,10 +1578,11 @@
                         <p>The most dangerous antisemitic state in the world today. Khamenei called Israel a "cancerous tumor that must be eradicated." Ahmadinejad hosted a Holocaust denial conference (2006). Funds Hamas, Hezbollah, Houthis, PIJ, and more (billions of dollars). Planned attacks against Jewish targets in Buenos Aires (1992, 1994), Bangkok, New Delhi, and Europe. Nuclear program threatening Israel's existence.</p>
                     </div>
                     <div class="org-sources">Sources: US State Dept, IAEA, ADL, AMIA Prosecution (Argentina)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-finance">Terror Funding</span> <span class="mo-tag tag-violence">Nuclear Threat</span> <span class="mo-tag tag-violence">Proxy Wars</span> <span class="mo-tag tag-propaganda">Holocaust Denial</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1979</span> Islamic Revolution — Khomeini declares war on Israel</li> <li><span class="ev-date">1992</span> Buenos Aires embassy bombing (via Hezbollah) — 29 killed</li> <li><span class="ev-date">1994</span> AMIA bombing (via Hezbollah) — 85 killed</li> <li><span class="ev-date">2006</span> Ahmadinejad hosts Holocaust denial conference</li> <li><span class="ev-date">2024</span> Direct missile attack on Israel (300+ missiles/drones)</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">Funds global proxy network: Hamas ($100-350M/yr), Hezbollah ($700M-1B/yr), PIJ ($30-70M/yr), Houthis ($100M+/yr), Iraqi militias</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hezbollah">Hezbollah (primary proxy)</a> <a class="mo-conn-link" data-target="org-hamas">Hamas (funded)</a> <a class="mo-conn-link" data-target="org-pij">PIJ (funded)</a> <a class="mo-conn-link" data-target="org-houthis">Houthis (funded)</a> <a class="mo-conn-link" data-target="org-irgc">IRGC (military arm)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">Kata'ib Hezbollah</a> <a class="mo-conn-link" data-target="org-north-korea">N. Korea (weapons partner)</a> <a class="mo-conn-link" data-target="org-russia">Russia (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-govt" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Authority <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1490,10 +1593,11 @@
                         <p>Administers the "Pay for Slay" program — $300+ million/year to terrorists and their families. Textbooks contain antisemitism, glorification of terror, and maps without Israel (IMPACT-se research). Official media glorifies terrorists. Abbas wrote a doctoral thesis questioning the Holocaust and said "50 Holocausts" against Palestinians (2023). In 2018, delivered a speech blaming Jews for causing antisemitism against themselves.</p>
                     </div>
                     <div class="org-sources">Sources: IMPACT-se, Palestinian Media Watch, Taylor Force Act, MEMRI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-finance">Pay for Slay</span> <span class="mo-tag tag-propaganda">Textbook Incitement</span> <span class="mo-tag tag-propaganda">Holocaust Distortion</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">1994</span> Palestinian Authority established (Oslo Accords)</li> <li><span class="ev-date">2004</span> Taylor Force Act exposes Pay for Slay payments</li> <li><span class="ev-date">2018</span> Abbas blames Jews for causing antisemitism</li> <li><span class="ev-date">2023</span> Abbas says "50 Holocausts" against Palestinians</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">International aid ($600M+/year). Pay for Slay: $300M+/year to terrorist families.</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-fatah">PA/Fatah (party)</a> <a class="mo-conn-link" data-target="org-al-aqsa-brigades">Al-Aqsa Brigades (militia)</a> <a class="mo-conn-link" data-target="org-pa-media">PA Media (propaganda arm)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-yemen-houthis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Yemen / Houthis <span class="org-badge badge-state">De Facto Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1504,10 +1608,11 @@
                         <p>Official slogan: "God is great, death to America, death to Israel, curse upon the Jews, victory to Islam." The Jewish community in Yemen — one of the oldest in the world (2,600 years) — has been almost completely wiped out. In 2021, the Houthis expelled the last Jews from Yemen. Launched 200+ missiles and drones toward Israel since October 2023.</p>
                     </div>
                     <div class="org-sources">Sources: US State Dept, UN, BBC, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Ballistic Missiles</span> <span class="mo-tag tag-violence">Ethnic Cleansing</span> <span class="mo-tag tag-propaganda">Antisemitic Slogan</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-turkey" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Turkey (Erdogan / AKP) <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1518,10 +1623,11 @@
                         <p>Erdogan compared Israel to Nazis multiple times. In 2014 said: "They surpass Hitler in barbarism." Hitler's "Mein Kampf" is a bestseller in Turkey. The TV series "Valley of the Wolves" (state-funded) contains antisemitic content. Severed diplomatic ties with Israel (2024). However, Turkey has a small Jewish community (~15,000) living in relative quiet.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, MEMRI, Reuters, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Nazi Comparisons</span> <span class="mo-tag tag-political">Diplomatic Warfare</span> <span class="mo-tag tag-propaganda">State Media Incitement</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2010</span> Mavi Marmara flotilla incident</li> <li><span class="ev-date">2014</span> Erdogan: Israel "surpasses Hitler in barbarism"</li> <li><span class="ev-date">2024</span> Severed diplomatic ties with Israel</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">State budget. Supports Muslim Brotherhood and Hamas diplomatically.</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">Hamas (diplomatic support)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">Muslim Brotherhood (ally)</a> <a class="mo-conn-link" data-target="org-qatar">Qatar (ally)</a> <a class="mo-conn-link" data-target="org-trt-world">TRT World (media arm)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-malaysia" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Malaysia <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1532,10 +1638,11 @@
                         <p>No diplomatic relations with Israel. Mahathir Mohamad declared: "Jews rule the world by proxy" (2003, before 57 Muslim state leaders). Malaysian citizens banned from entering Israel and vice versa. Malaysian passport includes "Valid to all countries except Israel." Systemic antisemitism in media and education.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, BBC, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Diplomatic Boycott</span> <span class="mo-tag tag-propaganda">State Antisemitism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pakistan" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Pakistan <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1545,10 +1652,11 @@
                         <p>No diplomatic relations with Israel. Pakistani passport states "valid for all countries of the world except Israel." Systemic antisemitism in education and media. Homeland of Lashkar-e-Taiba. Textbooks contain anti-Jewish and anti-Israel propaganda. The Jewish community has been almost completely wiped out.</p>
                     </div>
                     <div class="org-sources">Sources: US State Dept IRF Report, ADL, USCIRF</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Diplomatic Boycott</span> <span class="mo-tag tag-propaganda">Textbook Incitement</span> <span class="mo-tag tag-violence">Terror Harboring</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-qatar" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Qatar <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1558,10 +1666,11 @@
                         <p>The primary funder of Hamas — $1.8 billion (2012-2023). Funds Al Jazeera which distributes anti-Israel content. Hosts Hamas leadership. Textbooks contain antisemitic content (IMPACT-se research). On the other hand: served as mediator in hostage deals, complicating the picture.</p>
                     </div>
                     <div class="org-sources">Sources: US Treasury, IMPACT-se, ADL, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-finance">Terror Funding</span> <span class="mo-tag tag-propaganda">Media Propaganda</span> <span class="mo-tag tag-political">Hamas Hosting</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2012-2023</span> $1.8 billion transferred to Hamas</li> <li><span class="ev-date">2023-2024</span> Mediated hostage negotiations</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">State oil/gas wealth. Hamas: $1.8B. Al Jazeera: $500M+/year. Muslim Brotherhood support.</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">Hamas (funded/hosted)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">Muslim Brotherhood (ally)</a> <a class="mo-conn-link" data-target="org-al-jazeera">Al Jazeera (funded)</a> <a class="mo-conn-link" data-target="org-turkey">Turkey (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-north-korea" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>North Korea <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1571,10 +1680,11 @@
                         <p>Has supported Israel's enemies since the 1960s. Supplied weapons to Syria, Iran, and Hamas. Helped Syria build a nuclear reactor (destroyed by Israel, 2007). State anti-Israel propaganda. No Jewish community. Military cooperation with Iran.</p>
                     </div>
                     <div class="org-sources">Sources: US State Dept, UN Panel of Experts, IAEA</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Weapons Proliferation</span> <span class="mo-tag tag-violence">Nuclear Assistance</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-venezuela" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Venezuela <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1585,10 +1695,11 @@
                         <p>Chavez (2009) and Maduro expelled the Israeli ambassador, severed relations. Chavez accused Jews of "controlling the world." After severing relations, synagogues were attacked. The Jewish community shrank from 22,000 to ~6,000. Maduro compared Israel to Nazis.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, US State Dept, AJC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Diplomatic Warfare</span> <span class="mo-tag tag-propaganda">Nazi Comparisons</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-russia" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Russia <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1599,10 +1710,11 @@
                         <p>Uses antisemitism as a political weapon: Putin claimed Jews and ethnic minorities manipulated US election interference (2017). RT and Russian media spread anti-Israel content. Funds far-right organizations in Europe. Cooperation with Iran. Russia supports anti-Israel resolutions at the UN. However: Russia officially condemns Nazism and has an active Jewish community (~150,000).</p>
                     </div>
                     <div class="org-sources">Sources: ADL, US Intelligence Community, BBC, Moscow Times</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">Information Warfare</span> <span class="mo-tag tag-political">Iran Cooperation</span> <span class="mo-tag tag-finance">Far-Right Funding</span></div><div class="mo-label">KEY EVENTS</div> <ul class="mo-events"> <li><span class="ev-date">2017</span> Putin claimed Jews manipulated US elections</li> <li><span class="ev-date">2022</span> RT banned in EU after Ukraine invasion</li> <li><span class="ev-date">2023-2024</span> Diplomatic support for Iran and anti-Israel positions at UN</li> </ul> <div class="mo-label">FUNDING</div> <div class="mo-funding">State budget for RT ($400M+/year), funding for European far-right parties</div> <div class="mo-label">CONNECTIONS</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">Iran (ally)</a> <a class="mo-conn-link" data-target="org-rt">RT (media arm)</a> <a class="mo-conn-link" data-target="org-rim">RIM (domestic extremists)</a> <a class="mo-conn-link" data-target="org-north-korea">N. Korea (ally)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-south-africa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>South Africa <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1613,10 +1725,11 @@
                         <p>Filed a "genocide" case against Israel at the ICJ (2024). The ANC maintains close ties with Hamas, calling it a "liberation movement." Government offices distributed anti-Israel propaganda. BDS-SA (South Africa) is among the strongest in the world. The Jewish community (~52,000) reports rising antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ICJ Case, SAJBD (South African Jewish Board of Deputies), ADL</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">ICJ Genocide Case</span> <span class="mo-tag tag-political">Hamas Legitimization</span> <span class="mo-tag tag-political">BDS Leadership</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-china" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>China <span class="org-badge badge-state">Government</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1626,6 +1739,7 @@
                         <p>Diplomatic support for Iran and Palestine. Chinese social media contains antisemitic content (Weibo, Douyin). Books about "Jewish wisdom" are bestsellers containing stereotypes. State media publishes one-sided anti-Israel content. China does not directly fund terror but provides diplomatic support to Iran in international forums.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, MEMRI, Asia Times, China Media Project</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Diplomatic Support for Iran</span> <span class="mo-tag tag-cyber">Social Media Antisemitism</span></div></div>
                 </div>
             </div>
 
@@ -1648,7 +1762,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nazi-germany" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Nazi Germany (Third Reich) <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1659,10 +1773,11 @@
                         <p>Carried out the greatest genocide in history — the Holocaust. 6 million Jews were murdered through industrialized killing: extermination camps (Auschwitz, Treblinka, Sobibor, Majdanek, Belzec, Chelmno), shooting forests (Babi Yar — 33,771 Jews in days), death ghettos (Warsaw, Lodz). The Nuremberg Laws (1935) reduced Jews to second-class citizens. The "Final Solution" (1942) — a state-sponsored industrialized plan to murder every Jew in Europe.</p>
                     </div>
                     <div class="org-sources">Sources: Yad Vashem, USHMM, Raul Hilberg "The Destruction of the European Jews" (1961)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Genocide</span> <span class="mo-tag tag-violence">Extermination Camps</span> <span class="mo-tag tag-legal">Racial Laws</span> <span class="mo-tag tag-propaganda">Propaganda Machine</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-soviet-union" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Soviet Union <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1673,10 +1788,11 @@
                         <p>Institutionalized antisemitism under the guise of "anti-Zionism." The "Doctors' Plot" (1953) — Stalin accused Jewish doctors of conspiring to murder leaders. Murder of Solomon Mikhoels (1948) and dismantling of the Jewish Anti-Fascist Committee. A government "Anti-Zionism Department" spreading antisemitic propaganda. Refuseniks — Jews imprisoned for requesting to emigrate to Israel (Natan Sharansky — 9 years). Supported Arab states in wars against Israel.</p>
                     </div>
                     <div class="org-sources">Sources: Yad Vashem, Natan Sharansky "Fear No Evil," Gal Beckerman "When They Come for Us"</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">State Antisemitism</span> <span class="mo-tag tag-legal">Show Trials</span> <span class="mo-tag tag-legal">Emigration Ban</span> <span class="mo-tag tag-propaganda">Anti-Zionist Propaganda</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-russian-empire" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Russian Empire <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1687,10 +1803,11 @@
                         <p>The "Pale of Settlement" — 5 million Jews confined to a restricted area (1791-1917). Waves of pogroms: 1881-1884, 1903-1906, 1918-1921 — thousands of Jews murdered, tens of thousands of homes looted and burned. Kishinev pogrom (1903) — 49 dead, shocked the world. "The Protocols of the Elders of Zion" — a forgery by the Tsarist police (Okhrana) that became the most influential antisemitic text in history (distributed by Henry Ford and Adolf Hitler).</p>
                     </div>
                     <div class="org-sources">Sources: Yad Vashem, John Klier "Pogroms: Anti-Jewish Violence in Modern Russian History" (1992)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Pogroms</span> <span class="mo-tag tag-legal">Pale of Settlement</span> <span class="mo-tag tag-propaganda">Protocols Forgery</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-vichy-france" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Vichy France <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1701,10 +1818,11 @@
                         <p>The Vichy government proactively collaborated with the Nazis — without German pressure. Statut des Juifs (1940) stripped Jews of rights. Deported 76,000 French Jews to extermination camps (only 2,500 survived). The Vel' d'Hiv roundup (1942) — French police arrested 13,152 Jews including 4,115 children. In 1995, Chirac first acknowledged France's responsibility.</p>
                     </div>
                     <div class="org-sources">Sources: Yad Vashem, Robert Paxton "Vichy France" (1972), USHMM</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Deportations</span> <span class="mo-tag tag-legal">Anti-Jewish Laws</span> <span class="mo-tag tag-political">Nazi Collaboration</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fascist-italy" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Fascist Italy <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1715,10 +1833,11 @@
                         <p>The racial laws (Leggi razziali, 1938) stripped 47,000 Italian Jews of rights. After the German occupation (1943), approximately 7,700 Jews were sent to camps — 5,900 were murdered. The Rome ghetto roundup (October 16, 1943) — 1,024 Jews arrested, 16 survived.</p>
                     </div>
                     <div class="org-sources">Sources: Yad Vashem, Susan Zuccotti "The Italians and the Holocaust" (1987), USHMM</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Racial Laws</span> <span class="mo-tag tag-violence">Deportations</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-spanish-inquisition" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Spanish Inquisition <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1729,10 +1848,11 @@
                         <p>The Expulsion Decree (Alhambra Decree, 1492) — 200,000+ Jews expelled from Spain. The Inquisition persecuted "Marranos" — Jews who converted to Christianity but were suspected of secretly practicing Judaism. Punishments included burning at the stake (auto-da-f&eacute;), imprisonment, and property confiscation. "Blood purity laws" (Limpieza de sangre) — ethnic discrimination even against converts. Portugal copied the expulsion (1497). The Spanish decree was officially revoked only in 1968.</p>
                     </div>
                     <div class="org-sources">Sources: Henry Kamen "The Spanish Inquisition" (1997), Yad Vashem, Jane Gerber "The Jews of Spain" (1992)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Expulsion</span> <span class="mo-tag tag-violence">Forced Conversion</span> <span class="mo-tag tag-legal">Blood Purity Laws</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ottoman-empire" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Ottoman Empire <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1743,10 +1863,11 @@
                         <p>"Dhimmi" status — Jews (and Christians) as second-class citizens: jizya tax, dress restrictions, prohibition on horse riding, court testimony restrictions. "Dhimmi" was better than Europe at the time — Jews fled the Spanish Inquisition to the Ottoman Empire. But still: institutionalized discrimination, local pogroms, and the Damascus blood libel (1840).</p>
                     </div>
                     <div class="org-sources">Sources: Bernard Lewis "The Jews of Islam" (1984), Mark Cohen "Under Crescent and Cross" (1994)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Dhimmi Status</span> <span class="mo-tag tag-finance">Jizya Tax</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-arab-states-expulsion" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Arab States — Expulsion of Jews (1948-1970s) <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1757,10 +1878,11 @@
                         <p>~850,000 Jews expelled or fled from Arab states and Iran after Israel's establishment. Iraq: Farhud (1941, 180 dead), expulsion of 130,000 (1950-51). Egypt: expulsion of 80,000 (1956). Libya: pogroms (1945, 1948), expulsion of 36,000. Yemen: "Operation Magic Carpet" — 49,000. Morocco: 250,000 left. Syria: 30,000. Tunisia, Algeria, Lebanon — ancient communities wiped out. Property valued at an estimated $300 billion (2024 values) confiscated.</p>
                     </div>
                     <div class="org-sources">Sources: JIMENA, Adi Schwartz &amp; Einat Wilf "The War of Return," JJAC (Justice for Jews from Arab Countries)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Expulsions</span> <span class="mo-tag tag-finance">Property Confiscation</span> <span class="mo-tag tag-violence">Pogroms</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-communist-poland-1968" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Communist Poland — 1968 Campaign <span class="org-badge badge-historical">Historical</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1771,6 +1893,7 @@
                         <p>An "anti-Zionist" campaign (antisemitic in practice) that led to the expulsion of ~15,000-20,000 Jews from Poland. Holocaust survivors who remained in Poland were expelled a second time. Fired from jobs, stripped of passports, forced to sign away citizenship. All of this 23 years after the Holocaust.</p>
                     </div>
                     <div class="org-sources">Sources: Dariusz Stola "Kampania antysyjonistyczna w Polsce 1967-1968" (2000), Yad Vashem</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Purges</span> <span class="mo-tag tag-violence">Expulsion</span> <span class="mo-tag tag-propaganda">Anti-Zionist Campaign</span></div></div>
                 </div>
             </div>
 
@@ -1793,7 +1916,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-jazeera" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Al Jazeera <span class="org-badge badge-media">State Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1804,10 +1927,11 @@
                         <p>The most-watched Arabic channel in the world. Funded by the Qatari government. Criticism: consistently one-sided coverage against Israel, platforming Hamas representatives, productions containing antisemitism (including a children's show depicting Jews as "apes and pigs"). AJ+ (digital arm) distributed a video with Holocaust denial (2019, removed after criticism). Israel shut down Al Jazeera's offices (2024).</p>
                     </div>
                     <div class="org-sources">Sources: MEMRI, HonestReporting, BBC Media Watch, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">State Propaganda</span> <span class="mo-tag tag-propaganda">Holocaust Denial Content</span> <span class="mo-tag tag-propaganda">One-Sided Coverage</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-press-tv" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Press TV <span class="org-badge badge-media">State Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1818,10 +1942,11 @@
                         <p>Iran's English-language propaganda channel. Systematically distributes Holocaust denial, antisemitic conspiracy theories, and anti-Israel propaganda. Hosts Holocaust deniers (David Duke, Kevin Barrett). Removed from European satellites. US sanctions on the channel.</p>
                     </div>
                     <div class="org-sources">Sources: US Treasury (sanctions), ADL, Ofcom (UK regulator)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-propaganda">State Propaganda</span> <span class="mo-tag tag-propaganda">Conspiracy Theories</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-rt" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>RT (Russia Today) <span class="org-badge badge-media">State Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1832,10 +1957,11 @@
                         <p>Russian propaganda channel. Distributes anti-Israel content and platforms antisemitic conspiracists (David Duke, Nick Griffin). Promotes social division in the West. Banned in the EU after the Ukraine invasion (2022). Identified by US intelligence as a Kremlin "influence tool."</p>
                     </div>
                     <div class="org-sources">Sources: US DNI, EU Council Decision, Ofcom</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">State Propaganda</span> <span class="mo-tag tag-cyber">Information Warfare</span> <span class="mo-tag tag-propaganda">Platforming Extremists</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-trt-world" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>TRT World <span class="org-badge badge-media">State Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1846,10 +1972,11 @@
                         <p>English-language channel of the Turkish government. Consistently anti-Israel coverage reflecting Erdogan's rhetoric. Normalizes Israel-Nazi comparisons. Target audience: English-speaking Muslim world and Europe.</p>
                     </div>
                     <div class="org-sources">Sources: MEMRI, HonestReporting, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">State Propaganda</span> <span class="mo-tag tag-propaganda">Nazi Comparisons</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-media" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Authority Media <span class="org-badge badge-media">State Media</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1859,10 +1986,11 @@
                         <p>PA TV, Al-Hayat Al-Jadida (official newspaper), and official social media systematically distribute: glorification of terrorists, incitement against Jews, denial of Jewish connection to Jerusalem, denial of the Temple, and antisemitic propaganda. Palestinian Media Watch documents thousands of examples annually. Textbooks call for jihad and present maps without Israel.</p>
                     </div>
                     <div class="org-sources">Sources: Palestinian Media Watch (PMW), MEMRI, IMPACT-se</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Terror Glorification</span> <span class="mo-tag tag-propaganda">Incitement</span> <span class="mo-tag tag-propaganda">Temple Denial</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-memri" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>MEMRI — Findings <span class="org-badge badge-institution">Monitoring Source</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1872,10 +2000,11 @@
                         <p>MEMRI (Middle East Media Research Institute) translates and documents antisemitic content from Arab and Islamic media. Findings: thousands of examples of Holocaust denial, blood libel, "Protocols of the Elders of Zion," accusations of world domination — in official TV broadcasts, textbooks, and mosque sermons across the Middle East.</p>
                     </div>
                     <div class="org-sources">Sources: MEMRI.org — archive of 25+ years of translations and documentation</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-academic">Documentation</span> <span class="mo-tag tag-academic">Translation</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-4chan-8kun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>4chan / 8kun <span class="org-badge badge-digital">Digital Platform</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1885,10 +2014,11 @@
                         <p>Anonymous forums serving as a hub for antisemitic radicalization. The /pol/ ("Politically Incorrect") board routinely contains neo-Nazi content, Holocaust denial, and antisemitic conspiracy theories. The perpetrators of the Pittsburgh (2018), Poway (2019), Christchurch (2019), and Buffalo (2022) massacres posted manifestos or messages on these platforms before their attacks.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, FBI, Tech Against Terrorism</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-violence">Shooter Manifestos</span> <span class="mo-tag tag-propaganda">Holocaust Denial</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-qanon" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>QAnon <span class="org-badge badge-digital">Conspiracy Movement</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1899,6 +2029,7 @@
                         <p>A conspiracy movement believing in a "cabal" of elites controlling the world and engaging in pedophilia and blood-drinking (a modern blood libel). While not always explicitly antisemitic, the motifs are identical to the "Protocols of the Elders of Zion" — a secret elite controlling governments, banks, and media. ADL documented significant overlap between QAnon content and traditional antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, FBI (domestic threat designation, 2019), SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Conspiracy Theories</span> <span class="mo-tag tag-propaganda">Blood Libel Motifs</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
@@ -1921,7 +2052,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unhrc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNHRC (UN Human Rights Council) <span class="org-badge badge-institution">International Body</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1931,10 +2062,11 @@
                         <p>The international body with the most severe bias against Israel. Israel is the only country with a permanent agenda item at every session (Agenda Item 7). From 2006 to 2023: 99 resolutions against Israel — more than all other countries combined. Countries like North Korea, China, and Iran receive fewer condemnation resolutions combined. Established a permanent Commission of Inquiry (2021) — the first open-ended one in history.</p>
                     </div>
                     <div class="org-sources">Sources: UN Watch, US State Dept, Hillel Neuer testimony</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Anti-Israel Resolutions</span> <span class="mo-tag tag-legal">Permanent Agenda Item</span> <span class="mo-tag tag-political">Double Standards</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unrwa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNRWA <span class="org-badge badge-institution">International Body</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1944,10 +2076,11 @@
                         <p>The agency for Palestinian refugees. Documented problems: 12+ employees participated in the October 7 massacre (UN investigation, 2024). UNRWA textbooks contain incitement, antisemitism, and glorification of terror (IMPACT-se research). Hamas tunnels found beneath UNRWA facilities. UNRWA perpetuates "refugee" status indefinitely (5.9 million) — the only agency defining refugee status as hereditary.</p>
                     </div>
                     <div class="org-sources">Sources: UN OIOS Investigation (2024), IMPACT-se, US GAO, Israeli intelligence</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Perpetual Refugee Status</span> <span class="mo-tag tag-propaganda">Textbook Incitement</span> <span class="mo-tag tag-violence">Terror Complicity</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-icc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ICC (International Criminal Court) <span class="org-badge badge-institution">International Body</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1957,10 +2090,11 @@
                         <p>Issued arrest warrants against Israel's Prime Minister and Defense Minister (2024). Criticism: Israel (like the USA, Russia, and China) is not an ICC member and doesn't recognize its authority. The ICC didn't issue warrants against leaders of China (Uyghurs), Russia (Mariupol — warrant only in 2023), or Iran. The argument: selectivity normalizing the demonization of Israel.</p>
                     </div>
                     <div class="org-sources">Sources: ICC Rome Statute, US State Dept, Eugene Kontorovich (legal analysis)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Selective Prosecution</span> <span class="mo-tag tag-legal">Political Weaponization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-durban-conference" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Durban Conference (2001) <span class="org-badge badge-institution">Event</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1970,10 +2104,11 @@
                         <p>The UN Conference against Racism (Durban, South Africa) turned into an antisemitic platform. The NGO forum adopted a declaration calling Israel a "racist apartheid state." Copies of "The Protocols of the Elders of Zion" and antisemitic caricatures were distributed. The USA and Israel walked out. The conference is considered the launch point of the modern BDS movement.</p>
                     </div>
                     <div class="org-sources">Sources: US State Dept, ADL, Anne Bayefsky, UN Watch</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Antisemitic Platform</span> <span class="mo-tag tag-political">BDS Launch</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unesco" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNESCO <span class="org-badge badge-institution">International Body</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1983,10 +2118,11 @@
                         <p>Adopted resolutions severing the Jewish connection to Jerusalem: referring to the Temple Mount only as "Haram al-Sharif" (2016). A resolution classifying the Cave of the Patriarchs and the Old Mosque in Hebron as "Palestinian heritage sites" (2017). Israel and the USA left UNESCO (2017, returned later). The resolutions attempt to erase the historical Jewish connection to their most sacred places.</p>
                     </div>
                     <div class="org-sources">Sources: UNESCO Resolutions, US State Dept, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Historical Erasure</span> <span class="mo-tag tag-legal">Anti-Israel Resolutions</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unga" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UN General Assembly (UNGA) <span class="org-badge badge-institution">International Body</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1996,6 +2132,7 @@
                         <p>From 2015 to 2023: 140 condemnation resolutions against Israel, vs. 68 against all other countries combined (including Syria, North Korea, Iran, Russia, China). Resolution 3379 (1975) defined Zionism as "racism" — revoked in 1991. The "Committee on the Inalienable Rights of the Palestinian People" — an unprecedented permanent body. The disproportionality is documented and criticized by international law experts.</p>
                     </div>
                     <div class="org-sources">Sources: UN Watch, US State Dept, Dore Gold "Tower of Babble" (2004)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Disproportionate Resolutions</span> <span class="mo-tag tag-propaganda">Zionism=Racism Resolution</span></div></div>
                 </div>
             </div>
 
@@ -2018,7 +2155,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-afd" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>AfD (Alternative f&uuml;r Deutschland) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2029,10 +2166,11 @@
                         <p>A far-right party — the second largest in Germany (2024). MP Alexander Gauland called the Holocaust "bird droppings" (Vogelschiss) in German history. Bjoern Hoecke (Thuringia) classified as a "proven right-wing extremist" by German intelligence. However: AfD claims to be pro-Israel and opposes Muslim antisemitism — criticism targets Holocaust minimization and ties to neo-Nazis.</p>
                     </div>
                     <div class="org-sources">Sources: German Verfassungsschutz, ADL, DW, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Minimization</span> <span class="mo-tag tag-political">Far-Right Politics</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fpoe" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>FP&Ouml; (Freiheitliche Partei &Ouml;sterreichs) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2043,10 +2181,11 @@
                         <p>A party founded by former Nazis (Anton Reinthaller, SS member). Joerg Haider (1990s-2000s) praised Nazi employment policies. Members participated in events with neo-Nazi symbols. Won elections in 2025. However: the party attempted rebranding and current leaders officially condemn antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, Wiesenthal Center, DW, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Nazi Heritage</span> <span class="mo-tag tag-political">Far-Right Politics</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fidesz" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Fidesz (Hungary / Orban) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2057,10 +2196,11 @@
                         <p>Anti-Soros campaign (2017-2019) — giant billboards with George Soros' face (Hungarian-Jewish, Holocaust survivor) and "Let's not let Soros have the last laugh." ADL and the Hungarian Jewish community protested the campaign fuels antisemitism. Orban praised Miklos Horthy (Hungarian leader who aided the Nazis) as an "outstanding statesman." However: Orban diplomatically supports Israel and officially opposes antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, EU Parliament, Mazsihisz (Hungarian Jewish Federation)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Anti-Soros Campaign</span> <span class="mo-tag tag-propaganda">Historical Revisionism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-labour-uk-corbyn" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Labour UK (Corbyn Era) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2071,10 +2211,11 @@
                         <p>A proven and documented antisemitism scandal. The EHRC (Equality and Human Rights Commission — statutory body) investigated and found (2020): Labour violated the Equality Act — 3 specific breaches of antisemitic harassment and leadership failures. 130+ party members suspended for antisemitism. Corbyn himself: attended a memorial for Palestinian terrorists (Munich), called Hamas and Hezbollah "friends," supported an antisemitic mural. 86% of British Jews said Corbyn was antisemitic (2018 survey).</p>
                     </div>
                     <div class="org-sources">Sources: EHRC Report (2020), Jewish Labour Movement, Campaign Against Antisemitism, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Institutional Antisemitism</span> <span class="mo-tag tag-political">Terror Sympathizing</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-rally-france" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>National Rally (France) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2085,10 +2226,11 @@
                         <p>Jean-Marie Le Pen (founder) convicted 6 times for incitement — including calling the gas chambers "a detail in history" (1987). Marine Le Pen (his daughter) rebranded: changed the name, expelled her father (2015), condemns antisemitism. However: party members still caught making antisemitic statements, and the historical roots are documented.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, CNCDH (French Commission), Le Monde</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial (Founder)</span> <span class="mo-tag tag-political">Far-Right Politics</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-bnp-national-front" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>BNP / National Front (UK) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2099,10 +2241,11 @@
                         <p>BNP (British National Party) led by Nick Griffin — a convicted Holocaust denier. The National Front (1970s-80s) was the leading neo-fascist force in the UK. Both organizations explicitly antisemitic. Griffin convicted in 1998 for inciting racial hatred. BNP has nearly disappeared politically.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, HOPE Not Hate, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-political">Neo-Fascism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sinn-fein" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sinn F&eacute;in <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2113,10 +2256,11 @@
                         <p>An Irish party identifying with "the Palestinian struggle" as parallel to the IRA. Ireland is among the most hardline European countries against Israel. Sinn F&eacute;in MPs participated in protests where antisemitic chants were heard. Expulsion of Israeli ambassadors. However: Sinn F&eacute;in officially distinguishes between anti-Zionism and antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, Irish Times, Jewish Representative Council of Ireland</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">Anti-Israel Diplomacy</span> <span class="mo-tag tag-political">IRA-Palestine Solidarity</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pis-poland" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>PiS (Law and Justice, Poland) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2127,10 +2271,11 @@
                         <p>Enacted the "Holocaust Law" (2018) — imprisonment for attributing Nazi crimes to "the Polish nation." Criticism: the law attempts to obscure Polish collaboration with the Nazis (such as the Jedwabne massacre, 1941). Israel and Yad Vashem protested. The law was later softened (criminal penalty removed). However: PiS supports Israel and officially condemns antisemitism.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, Yad Vashem, US State Dept, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-legal">Holocaust Law</span> <span class="mo-tag tag-propaganda">Historical Revisionism</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-podemos" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Podemos (Spain) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2141,10 +2286,11 @@
                         <p>A Spanish far-left party. Pablo Iglesias (former leader) and Ione Belarra support BDS and use extreme anti-Israel rhetoric. Spain recognized the Palestinian state (2024). Podemos members used antisemitic motifs in criticism of Israel.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, ACOM (Spanish pro-Israel group), El Pa&iacute;s</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-political">BDS Support</span> <span class="mo-tag tag-propaganda">Antisemitic Motifs</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-syriza" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Syriza (Greece) <span class="org-badge badge-political">Political Party</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2155,6 +2301,7 @@
                         <p>A left-wing party in power (2015-2019). Members used anti-Israel and sometimes antisemitic rhetoric. Tsipras compared Gaza to the Warsaw Ghetto. Ties to BDS. Criticism: the comparisons cross the line from legitimate Israel criticism to antisemitic delegitimization.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, KIS (Central Board of Jewish Communities in Greece)</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Nazi Comparisons</span> <span class="mo-tag tag-political">BDS Support</span></div></div>
                 </div>
             </div>
 
@@ -2177,7 +2324,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kanye-west" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Kanye West (Ye) <span class="org-badge badge-hate">Overt Antisemite</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2188,10 +2335,11 @@
                         <p>Rapper and fashion designer with 30+ million followers. In October 2022 declared: "I'm going death con 3 on Jewish people." Praised Hitler in an Alex Jones interview: "I like Hitler." Hosted a dinner with Nick Fuentes and Donald Trump. Lost contracts with Adidas ($1.5 billion), Gap, Balenciaga. The statements led to a 61% spike in antisemitic incidents in the USA (ADL, 2022).</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, NY Times, BBC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Celebrity Antisemitism</span> <span class="mo-tag tag-propaganda">Hitler Praise</span> <span class="mo-tag tag-cyber">Social Media Reach</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-david-duke" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>David Duke <span class="org-badge badge-hate">Overt Antisemite</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2202,10 +2350,11 @@
                         <p>"Grand Wizard" of the KKK (1974-1980). Served as a Louisiana state representative. Holocaust denier, professional antisemite. The book "Jewish Supremacism" (2003) distributed as propaganda. Appears on Press TV (Iran) and RT (Russia). Convicted and imprisoned for tax fraud. Continues spreading antisemitic propaganda online.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-violence">KKK Leadership</span> <span class="mo-tag tag-propaganda">State Media Appearances</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-louis-farrakhan" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Louis Farrakhan <span class="org-badge badge-hate">Overt Antisemite</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2216,10 +2365,11 @@
                         <p>The most influential Black antisemite in the USA. "Hitler was a very great man" (1984). "Jews are termites" (2018). "Satanic Jews." The "Million Man March" rally (1995) drew hundreds of thousands. His books distributed in Black communities. Despite the antisemitism, enjoys legitimacy — politicians and celebrities photographed with him.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, AJC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Hate Preaching</span> <span class="mo-tag tag-propaganda">Mass Rallies</span> <span class="mo-tag tag-propaganda">Hitler Praise</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-antisemitic-shootings" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Antisemitic Shooting Attacks — 2018-2022 <span class="org-badge badge-terror">Terror</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2231,10 +2381,11 @@
                         <strong>Buffalo Massacre (5/14/2022):</strong> Payton Gendron murdered 10 Black people — the manifesto included antisemitic chapters. All killers were radicalized online (4chan, 8chan, Gab, Stormfront).</p>
                     </div>
                     <div class="org-sources">Sources: FBI, ADL, DOJ Indictments, Pittsburgh Post-Gazette</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Shootings</span> <span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-violence">Synagogue Attacks</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nick-fuentes" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Nick Fuentes <span class="org-badge badge-hate">Overt Antisemite</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2245,10 +2396,11 @@
                         <p>Spreads antisemitism and Holocaust denial to young audiences under "America First." Runs the Groypers movement and AFPAC conference. Organized Kanye West's dinner with Trump. Banned from Twitter, YouTube, PayPal. On the USA's "No Fly" list. ADL identifies him as one of the 50 most dangerous extremists in the USA.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Holocaust Denial</span> <span class="mo-tag tag-political">Political Entryism</span> <span class="mo-tag tag-cyber">Online Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-andrew-tate" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Andrew Tate <span class="org-badge badge-hate">Controversial</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2259,10 +2411,11 @@
                         <p>An influencer with billions of views (TikTok). Made statements using antisemitic motifs: "they control the Matrix" (referring to Jews), sharing conspiratorial content. Converted to Islam (2022). Arrested in Romania on suspicion of human trafficking. His influence on young male audiences normalizes antisemitism alongside misogyny.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, HOPE Not Hate, BBC, Institute for Strategic Dialogue</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">Conspiracy Theories</span> <span class="mo-tag tag-cyber">Social Media Reach</span> <span class="mo-tag tag-propaganda">Youth Radicalization</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-incel-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Incel Movement <span class="org-badge badge-digital">Online Movement</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2272,10 +2425,11 @@
                         <p>A movement of men blaming women and society for their sexual loneliness. Significant overlap with antisemitism: "Jews control feminism," "Jews promote race-mixing." Elliot Rodger (2014, 6 dead), Alek Minassian (2018, 10 dead). ADL identifies Incel as an "extremist movement" with antisemitic elements.</p>
                     </div>
                     <div class="org-sources">Sources: ADL, SPLC, FBI, Institute for Strategic Dialogue</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Mass Violence</span> <span class="mo-tag tag-cyber">Online Radicalization</span> <span class="mo-tag tag-propaganda">Conspiracy Theories</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sovereign-citizens" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sovereign Citizens <span class="org-badge badge-hate">Hate Movement</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2285,12 +2439,63 @@
                         <p>A movement claiming the federal government is illegitimate. Some factions believe "Jews control the government" and banks. Ties to Christian Identity and militias. FBI classifies Sovereign Citizens as a "domestic terrorism threat." Members have murdered police officers and committed acts of violence.</p>
                     </div>
                     <div class="org-sources">Sources: FBI, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">TACTICS</div><div class="mo-tactics"><span class="mo-tag tag-violence">Anti-Government Violence</span> <span class="mo-tag tag-propaganda">Conspiracy Theories</span></div></div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- NETWORK MAP -->
+<!-- ═══════════════════════════════════════════ -->
+<section style="margin-top: 50px; margin-bottom: 40px;" id="network-section">
+    <div class="section-header">
+        <h2>Network Map — How They Connect</h2>
+        <div class="section-divider"></div>
+        <p>Interactive visualization of relationships between antisemitic organizations. Click a node to scroll to its card.</p>
+    </div>
+
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <button class="net-filter active" data-group="all" onclick="filterNetwork('all',this)">All</button>
+        <button class="net-filter" data-group="islamist" onclick="filterNetwork('islamist',this)" style="border-color:#e74c3c;color:#e74c3c">Islamist Terror</button>
+        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#e67e22;color:#e67e22">Neo-Nazi</button>
+        <button class="net-filter" data-group="bhi" onclick="filterNetwork('bhi',this)" style="border-color:#9b59b6;color:#9b59b6">BHI &amp; Cults</button>
+        <button class="net-filter" data-group="antizionist" onclick="filterNetwork('antizionist',this)" style="border-color:#2ecc71;color:#2ecc71">Anti-Zionist</button>
+        <button class="net-filter" data-group="govts" onclick="filterNetwork('govts',this)" style="border-color:#3498db;color:#3498db">Governments</button>
+        <button class="net-filter" data-group="media" onclick="filterNetwork('media',this)" style="border-color:#f1c40f;color:#f1c40f">Media</button>
+    </div>
+
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('funding',this.checked)" style="accent-color:#f1c40f"> <span style="color:#f1c40f">Funding</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('ideology',this.checked)" style="accent-color:#95a5a6"> <span style="color:#95a5a6">Ideology</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('cooperation',this.checked)" style="accent-color:#3498db"> <span style="color:#3498db">Cooperation</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('membership',this.checked)" style="accent-color:#e74c3c"> <span style="color:#e74c3c">Membership</span></label>
+    </div>
+
+    <div id="network-map" style="width:100%;height:600px;background:#0a0a1a;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
+        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;">Loading network map...</div>
+    </div>
+
+    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-size: 0.78em; color: #888;">
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-right:4px;vertical-align:middle;"></span>Islamist</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;margin-right:4px;vertical-align:middle;"></span>Neo-Nazi</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;margin-right:4px;vertical-align:middle;"></span>BHI/Cults</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2ecc71;margin-right:4px;vertical-align:middle;"></span>Anti-Zionist</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;margin-right:4px;vertical-align:middle;"></span>Governments</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;margin-right:4px;vertical-align:middle;"></span>Media</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#95a5a6;margin-right:4px;vertical-align:middle;"></span>Institutions</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1abc9c;margin-right:4px;vertical-align:middle;"></span>Political</span>
+    </div>
+</section>
+
+<style>
+.net-filter { background: transparent; border: 1px solid #555; color: #888; padding: 5px 14px; border-radius: 50px; cursor: pointer; font-size: 0.82em; transition: all 0.2s; }
+.net-filter:hover { border-color: #e2b714; color: #e2b714; }
+.net-filter.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
+@media (max-width: 768px) { #network-map { height: 400px !important; } }
+</style>
 
 <!-- ═══════════════════════════════════════════ -->
 <!-- LONE WOLF ATTACKS SECTION -->
@@ -2321,6 +2526,105 @@ function toggleOrg(el, ev) {
     if (ev.target.tagName === 'A') return;
     el.classList.toggle('open');
 }
+function scrollToOrg(orgId) {
+    var card = document.getElementById(orgId);
+    if (!card) return;
+    var cat = card.closest('.cat-section');
+    if (cat && !cat.classList.contains('open')) cat.classList.add('open');
+    if (!card.classList.contains('open')) card.classList.add('open');
+    setTimeout(function() {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.add('flash-highlight');
+        setTimeout(function() { card.classList.remove('flash-highlight'); }, 2000);
+    }, 100);
+}
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('.mo-conn-link');
+    if (link) { e.preventDefault(); e.stopPropagation(); scrollToOrg(link.getAttribute('data-target')); }
+});
+
+/* === NETWORK MAP (lazy-loaded) === */
+var netInstance = null, netData = null, allEdges = [], activeGroup = 'all', hiddenEdgeTypes = {};
+function initNetwork() {
+    if (netInstance) return;
+    var container = document.getElementById('network-map');
+    if (!container) return;
+    var nodes = new vis.DataSet(ORG_NODES.map(function(n) {
+        var g = ORG_GROUPS[n.group] || {};
+        return {id:n.id, label:n.label, title:n.title, group:n.group,
+            color:g.color, shape:g.shape||'dot', font:Object.assign({size:11},g.font||{}), size:14};
+    }));
+    allEdges = ORG_EDGES.map(function(e,i) {
+        var t = EDGE_TYPES[e.type] || {};
+        return {id:i, from:e.from, to:e.to, label:e.label||'', title:e.title||'',
+            color:{color:t.color||'#555',highlight:t.color||'#888'},
+            dashes:t.dashes||false, width:t.width||1, _type:e.type,
+            font:{size:9,color:'#888',strokeWidth:0}};
+    });
+    var edges = new vis.DataSet(allEdges);
+    netData = {nodes:nodes, edges:edges};
+    var options = {
+        physics:{barnesHut:{gravitationalConstant:-4000,centralGravity:0.1,springLength:120,damping:0.15},stabilization:{iterations:200}},
+        interaction:{hover:true,tooltipDelay:200,zoomView:true,dragView:true,navigationButtons:false},
+        layout:{improvedLayout:true},
+        edges:{smooth:{type:'continuous'},arrows:{to:{enabled:true,scaleFactor:0.4}}},
+        nodes:{borderWidth:2}
+    };
+    document.getElementById('network-loading').style.display = 'none';
+    netInstance = new vis.Network(container, netData, options);
+    netInstance.on('click', function(p) {
+        if (p.nodes.length > 0) scrollToOrg(p.nodes[0]);
+    });
+}
+function filterNetwork(group, btn) {
+    activeGroup = group;
+    document.querySelectorAll('.net-filter').forEach(function(b){b.classList.remove('active')});
+    if (btn) btn.classList.add('active');
+    if (!netInstance || !netData) return;
+    var visibleNodes = [];
+    netData.nodes.forEach(function(n) {
+        var show = group === 'all' || n.group === group;
+        netData.nodes.update({id:n.id, hidden:!show});
+        if (show) visibleNodes.push(n.id);
+    });
+    applyEdgeFilters(visibleNodes);
+}
+function toggleEdgeType(type, show) {
+    if (show) delete hiddenEdgeTypes[type]; else hiddenEdgeTypes[type] = true;
+    if (!netInstance || !netData) return;
+    var visibleNodes = [];
+    netData.nodes.forEach(function(n){ if (!n.hidden) visibleNodes.push(n.id); });
+    applyEdgeFilters(visibleNodes);
+}
+function applyEdgeFilters(visibleNodes) {
+    var vSet = {};
+    visibleNodes.forEach(function(id){ vSet[id]=true; });
+    allEdges.forEach(function(e) {
+        var show = vSet[e.from] && vSet[e.to] && !hiddenEdgeTypes[e._type];
+        netData.edges.update({id:e.id, hidden:!show});
+    });
+}
+// Lazy-load vis-network when section scrolls into view
+(function(){
+    var sec = document.getElementById('network-section');
+    if (!sec) return;
+    var loaded = false;
+    var obs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !loaded) {
+            loaded = true; obs.disconnect();
+            var ds = document.createElement('script');
+            ds.src = 'orgs-network-data.js';
+            ds.onload = function() {
+                var s = document.createElement('script');
+                s.src = 'https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js';
+                s.onload = initNetwork;
+                document.head.appendChild(s);
+            };
+            document.head.appendChild(ds);
+        }
+    }, {rootMargin:'200px'});
+    obs.observe(sec);
+})();
 </script>
 </body>
 </html>

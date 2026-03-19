@@ -131,6 +131,28 @@
         }
         .disclaimer-box strong { color: #3498db; }
 
+        /* === MODUS OPERANDI === */
+        .org-mo { border-top: 1px solid rgba(226,183,20,0.15); margin-top: 14px; padding-top: 14px; }
+        .mo-label { color: #e2b714; font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .mo-tactics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+        .mo-tag { display: inline-block; font-size: 0.72em; padding: 3px 10px; border-radius: 50px; font-weight: 600; }
+        .tag-violence { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .tag-propaganda { background: rgba(230,126,34,0.15); color: #e67e22; }
+        .tag-finance { background: rgba(241,196,15,0.15); color: #f1c40f; }
+        .tag-political { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .tag-legal { background: rgba(155,89,182,0.15); color: #9b59b6; }
+        .tag-cyber { background: rgba(52,152,219,0.15); color: #3498db; }
+        .tag-academic { background: rgba(149,165,166,0.15); color: #95a5a6; }
+        .mo-events { list-style: none; padding: 0; margin: 0 0 12px; }
+        .mo-events li { color: #c0c0c0; font-size: 0.88em; padding: 4px 0; padding-right: 16px; position: relative; line-height: 1.6; }
+        .mo-events li::before { content: "\25C2"; color: #e2b714; position: absolute; right: 0; }
+        .mo-events .ev-date { color: #e2b714; font-weight: 600; }
+        .mo-funding { color: #c0c0c0; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
+        .mo-connections { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+        .mo-conn-link { display: inline-block; font-size: 0.78em; padding: 4px 12px; border: 1px solid rgba(226,183,20,0.3); border-radius: 50px; color: #e2b714; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+        .mo-conn-link:hover { background: rgba(226,183,20,0.1); border-color: #e2b714; }
+        .org-card.flash-highlight { border-color: #e2b714 !important; box-shadow: 0 0 20px rgba(226,183,20,0.3); transition: border-color 0.3s, box-shadow 0.3s; }
+
         @media (max-width: 768px) {
             .stats-bar { grid-template-columns: repeat(2, 1fr); }
             .stat-num { font-size: 1.5em; }
@@ -138,6 +160,7 @@
             .org-body { padding: 0 16px 16px; }
             .cat-header { padding: 16px 18px; }
             .cat-info h3 { font-size: 1.2em; }
+            .mo-events li { padding-right: 14px; }
         }
     </style>
 <script type="application/ld+json">
@@ -282,7 +305,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hamas" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חמאס (חרכת אל-מוקאוומה אל-אסלאמיה) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -293,10 +316,11 @@
                         <p>הזרוע הפלסטינית של האחים המוסלמים. אמנת חמאס (1988) קראה במפורש להשמדת ישראל וכללה ציטוטים אנטישמיים מ"פרוטוקולי זקני ציון". האמנה המעודכנת (2017) ממשיכה לדחות את זכות ישראל לקיום. אחראי לטבח 7 באוקטובר 2023 — 1,200 הרוגים, 251 חטופים. ביצע עשרות פיגועי התאבדות באוטובוסים, מסעדות ומרכזי קניות בישראל. מימון עיקרי: איראן ($100-350 מיליון/שנה) וקטאר ($1.8 מיליארד, 2012-2023).</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, בריטניה, ישראל, קנדה, יפן, אוסטרליה | מקורות: ADL, US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פיגועי התאבדות</span> <span class="mo-tag tag-violence">ירי רקטות</span> <span class="mo-tag tag-violence">חטיפות</span> <span class="mo-tag tag-propaganda">תעמולה</span> <span class="mo-tag tag-finance">מימון טרור</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1987</span> הוקם בעזה כסניף האחים המוסלמים</li> <li><span class="ev-date">1988</span> האמנה קוראת להשמדת ישראל, מצטטת את הפרוטוקולים</li> <li><span class="ev-date">1993-2005</span> עשרות פיגועי התאבדות — אוטובוסים, מסעדות, קניונים</li> <li><span class="ev-date">7 באוקטובר 2023</span> טבח 1,200 בני אדם, חטיפת 251 בני ערובה</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן: 100-350 מיליון$/שנה | קטאר: 1.8 מיליארד$ (2012-2023) | טורקיה: תמיכה דיפלומטית ולוגיסטית</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (ממן)</a> <a class="mo-conn-link" data-target="org-qatar">קטאר (מארח/ממן)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">האחים המוסלמים (ארגון אם)</a> <a class="mo-conn-link" data-target="org-pij">ג'יהאד אסלאמי (שותף)</a> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (בעל ברית)</a> <a class="mo-conn-link" data-target="org-pa-fatah">הרש"פ/פתח (יריב)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pij" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>הג'יהאד האסלאמי הפלסטיני (PIJ) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -307,10 +331,11 @@
                         <p>ארגון טרור פלסטיני פרו-איראני. בניגוד לחמאס, אינו מנהל שירותים חברתיים — מתמקד אך ורק בפעילות צבאית נגד ישראל. ביצע פיגועי התאבדות רבים בשנות ה-90 וה-2000. משגר רקטות לעבר אזרחים ישראלים באופן שוטף. ממומן כמעט לחלוטין ע"י איראן.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, בריטניה, ישראל, יפן, קנדה, אוסטרליה | מקורות: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פיגועי התאבדות</span> <span class="mo-tag tag-violence">ירי רקטות</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1981</span> הוקם בעזה על ידי פתחי שקאקי</li> <li><span class="ev-date">שנות ה-90 וה-2000</span> פיגועי התאבדות ברחבי ישראל</li> <li><span class="ev-date">2023-2024</span> מטחי רקטות לצד חמאס</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן: ממן ראשי (הערכה: 30-70 מיליון$/שנה)</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (ממן)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> <a class="mo-conn-link" data-target="org-hamas">חמאס (שותף)</a> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hezbollah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חיזבאללה <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -321,10 +346,11 @@
                         <p>מיליציה שיעית לבנונית / צבא פרוקסי של איראן. אחראי לפיגוע בשגרירות ישראל בבואנוס איירס (1992, 29 הרוגים) ובמרכז היהודי AMIA (1994, 85 הרוגים). נסראללה הצהיר: "אם יתכנסו כל היהודים בישראל, זה יחסוך לנו את הטרחה לרדוף אחריהם ברחבי העולם." מחזיק ארסנל של 150,000+ רקטות. ירה אלפי רקטות על ישראל מאז אוקטובר 2023.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, ישראל, בריטניה, EU (זרוע צבאית), ליגה הערבית, קנדה | מקורות: ADL, US State Dept, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">ירי רקטות</span> <span class="mo-tag tag-violence">פיצוצים</span> <span class="mo-tag tag-political">מפלגה פוליטית</span> <span class="mo-tag tag-political">פרוקסי איראני</span> <span class="mo-tag tag-finance">מימון טרור</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1992</span> פיצוץ שגרירות ישראל בבואנוס איירס — 29 הרוגים</li> <li><span class="ev-date">1994</span> פיצוץ מרכז AMIA — 85 הרוגים</li> <li><span class="ev-date">2006</span> מלחמת לבנון השנייה — 4,000+ רקטות על ישראל</li> <li><span class="ev-date">2023-2024</span> אלפי רקטות על צפון ישראל</li> <li><span class="ev-date">2024</span> נסראללה חוסל בתקיפה ישראלית</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן: 700 מיליון-מיליארד$/שנה | גם ממימון מלבנון, סחר סמים, תרומות תפוצות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (ממן/חסות)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (כוח קודס)</a> <a class="mo-conn-link" data-target="org-hamas">חמאס (בעל ברית)</a> <a class="mo-conn-link" data-target="org-houthis">החות'ים (בעל ברית)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">כתאאב חיזבאללה (עיראק)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-houthis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>החות'ים (אנסאר אללה) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -335,10 +361,11 @@
                         <p>מיליציה שיעית זיידית ששולטת בצפון תימן. הסיסמה הרשמית על הדגל: "אללה אכבר, מוות לאמריקה, מוות לישראל, קללה על היהודים, ניצחון לאסלאם." שיגרו טילים בליסטיים ומל"טים לעבר ישראל מאז אוקטובר 2023. תקפו ספינות מסחריות בים האדום. ממומנים ומאומנים ע"י איראן.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב (מחדש 2024), קנדה, סעודיה | מקורות: US State Dept, CSIS, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">טילים בליסטיים</span> <span class="mo-tag tag-violence">תקיפות מל"טים</span> <span class="mo-tag tag-violence">תקיפות ימיות</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> כבשו את צנעא, פתחו במלחמת אזרחים</li> <li><span class="ev-date">2021</span> גירשו את יהודי תימן האחרונים</li> <li><span class="ev-date">2023-2024</span> 200+ טילים ומל"טים לעבר ישראל</li> <li><span class="ev-date">2023-2024</span> תקיפות על ספינות מסחר בים האדום</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן: נשק, אימון, הערכה: 100+ מיליון$/שנה</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (ממן/מאמן)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (אספקת נשק)</a> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (אימון)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-irgc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>משמרות המהפכה האסלאמית (IRGC) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -349,10 +376,11 @@
                         <p>הצבא האידיאולוגי של איראן. כוח קודס (הזרוע לפעולות חו"ל) מממן, מאמן ומצייד את חמאס, חיזבאללה, הג'יהאד האסלאמי, החות'ים ומיליציות שיעיות בעיראק. תכנן פיגועים נגד מטרות ישראליות ויהודיות ברחבי העולם, כולל ניסיון התנקשות בשגריר סעודיה בוושינגטון (2011). קאסם סולימאני (חוסל 2020) היה האדריכל של "ציר ההתנגדות" נגד ישראל.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב (2019), בחריין, סעודיה | מקורות: US Treasury, CSIS, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מלחמות פרוקסי</span> <span class="mo-tag tag-finance">מימון טרור</span> <span class="mo-tag tag-violence">חיסולים</span> <span class="mo-tag tag-cyber">לוחמת סייבר</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1979</span> הוקם לאחר המהפכה האיראנית</li> <li><span class="ev-date">1983</span> פיצוץ בסיס בביירות דרך חיזבאללה — 241 חיילי ארה"ב נהרגו</li> <li><span class="ev-date">2011</span> ניסיון חיסול שגריר סעודיה בוושינגטון</li> <li><span class="ev-date">2020</span> קאסם סולימאני חוסל בתקיפת מל"ט אמריקאית</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">תקציב המדינה האיראנית: 20+ מיליארד$/שנה ל-IRGC. מחלק מיליארדים לרשת הפרוקסי.</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">חמאס (ממומן)</a> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (ממומן)</a> <a class="mo-conn-link" data-target="org-pij">ג'יהאד אסלאמי (ממומן)</a> <a class="mo-conn-link" data-target="org-houthis">החות'ים (ממומן)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">כתאאב חיזבאללה</a> <a class="mo-conn-link" data-target="org-iran">איראן (מדינת אם)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pflp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>החזית העממית לשחרור פלסטין (PFLP) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -363,10 +391,11 @@
                         <p>ארגון טרור מרקסיסטי-לניניסטי. חלוץ חטיפות המטוסים הבינלאומיות (1968-1970). ביצע את טבח שדה התעופה בלוד (1972, 26 הרוגים). רצח את שר התיירות רחבעם זאבי (2001). קשור לארגון Samidoun שהוכרז כארגון טרור. ממשיך לבצע פיגועים בגדה המערבית.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, ישראל, קנדה, יפן | מקורות: US State Dept, ADL</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">חטיפות מטוסים</span> <span class="mo-tag tag-violence">חיסולים</span> <span class="mo-tag tag-political">אידיאולוגיה מרקסיסטית</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1968-1970</span> חלוצי חטיפות המטוסים הבינלאומיות</li> <li><span class="ev-date">1972</span> טבח נמל התעופה לוד — 26 הרוגים</li> <li><span class="ev-date">2001</span> חיסלו את שר התיירות רחבעם זאבי</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">סוריה ואיראן (היסטורית). חלק מארגוני חזית של PFLP קיבלו מימון מ-NGO אירופיים.</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-samidoun">סמידון (ארגון חזית)</a> <a class="mo-conn-link" data-target="org-iran">איראן (ממן)</a> <a class="mo-conn-link" data-target="org-dflp">החזית הדמוקרטית (פילוג)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-dflp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>החזית הדמוקרטית לשחרור פלסטין (DFLP) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -377,10 +406,11 @@
                         <p>פלג מרקסיסטי שפרש מה-PFLP. אחראי לטבח מעלות (1974) — 22 תלמידי בית ספר ומבוגרים נרצחו, 68 נפצעו. המחבלים חדרו לבית ספר וחטפו 105 בני ערובה, רובם ילדים.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, ישראל | מקורות: US State Dept</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">לקיחת בני ערובה</span> <span class="mo-tag tag-violence">טבח בבתי ספר</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1974</span> טבח מעלות — 22 תלמידים נרצחו</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">סוריה (היסטורית), מימון מוגבל כיום</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pflp">PFLP (מקור)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-aqsa-brigades" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>גדודי שהידי אל-אקצא <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -391,10 +421,11 @@
                         <p>הזרוע הצבאית של תנועת פת"ח (מפלגתו של ערפאת ואבו מאזן). ביצעו פיגועי התאבדות רבים באינתיפאדה השנייה, למרות שהרשות הפלסטינית הכחישה קשר. ממשיכים פעילות חמושה בגדה.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, ישראל | מקורות: US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פיגועי התאבדות</span> <span class="mo-tag tag-violence">ירי</span> <span class="mo-tag tag-violence">מיליציה חמושה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2000-2005</span> עשרות פיגועי התאבדות במהלך האינתיפאדה השנייה</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">הרש"פ/פתח (מוכחש), איראן (חלק מהפלגים)</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-fatah">הרש"פ/פתח (ארגון אם)</a> <a class="mo-conn-link" data-target="org-iran">איראן (חלק מהפלגים)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-fatah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>הרשות הפלסטינית / פת"ח <span class="org-badge badge-state">ממשל</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -405,10 +436,11 @@
                         <p>גוף שלטוני שמנהל את האזורים הפלסטיניים בגדה המערבית. מנהלת תוכנית "Pay for Slay" — תשלומים חודשיים למשפחות מחבלים ולמחבלים כלואים ($300+ מיליון/שנה). ספרי הלימוד הפלסטיניים מכילים הסתה נגד ישראל ויהודים (מחקר IMPACT-se). אבו מאזן בעצמו כתב עבודת דוקטורט שמפקפקת בהיקף השואה (מוסקבה, 1982).</p>
                     </div>
                     <div class="org-sources">מקורות: IMPACT-se, Palestinian Media Watch, Taylor Force Act (2018), MEMRI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-finance">משכורות לטרור</span> <span class="mo-tag tag-propaganda">הסתה</span> <span class="mo-tag tag-propaganda">חינוך לשנאה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1959</span> פתח הוקם על ידי יאסר ערפאת</li> <li><span class="ev-date">1994</span> הרשות הפלסטינית הוקמה תחת הסכמי אוסלו</li> <li><span class="ev-date">מתמשך</span> משכורות למחבלים — 300+ מיליון$/שנה למשפחות מחבלים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">סיוע בינלאומי, תוכנית משכורות למחבלים (300+ מיליון$/שנה)</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-govt">הרש"פ (ממשלה)</a> <a class="mo-conn-link" data-target="org-al-aqsa-brigades">חטיבות אל-אקצא (זרוע צבאית)</a> <a class="mo-conn-link" data-target="org-hamas">חמאס (יריב)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-qaeda" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>אל-קאעידה <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -419,10 +451,11 @@
                         <p>ארגון הטרור הג'יהאדיסטי הגלובלי. בן לאדן ציין יהודים וישראל כמטרות מרכזיות ב"מכתב לאמריקה" (2002). פיגועי 11 בספטמבר (2001, 2,977 הרוגים). פיגועים נגד בתי כנסת בתוניסיה (ג'רבה, 2002, 21 הרוגים), טורקיה (איסטנבול, 2003, 57 הרוגים), ומרוקו (קזבלנקה, 2003). האידיאולוגיה מזהה "צלבנים ויהודים" כאויב המרכזי.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, או"ם, כל המדינות המערביות | מקורות: US State Dept, 9/11 Commission Report</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פיגועי המונים</span> <span class="mo-tag tag-violence">פיגועי התאבדות</span> <span class="mo-tag tag-propaganda">ג'יהאד עולמי</span> <span class="mo-tag tag-finance">מימון טרור</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1998</span> פיצוץ שגרירויות ארה"ב בקניה וטנזניה — 224 הרוגים</li> <li><span class="ev-date">2001</span> פיגועי 11 בספטמבר — 2,977 הרוגים</li> <li><span class="ev-date">2002</span> פיגוע בבית הכנסת בג'רבה, טוניסיה — 21 הרוגים</li> <li><span class="ev-date">2003</span> פיצוץ בתי כנסת באיסטנבול — 57 הרוגים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">תורמים סעודים (לפני 2001), רשת עמותות, ארגוני פשע, מדינות חסות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-isis">דאעש (פילוג)</a> <a class="mo-conn-link" data-target="org-al-shabaab">אל-שבאב (סניף)</a> <a class="mo-conn-link" data-target="org-ansar-al-islam">אנסאר אל-אסלאם (סניף)</a> <a class="mo-conn-link" data-target="org-boko-haram">בוקו חראם (סניף)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-isis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>דאעש (ISIS / המדינה האסלאמית) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -433,10 +466,11 @@
                         <p>ארגון טרור שהקים "חליפות" בעיראק וסוריה. פרופגנדה אנטישמית מובהקת — מזהה יהודים כאויבים אפוקליפטיים. הוציא להורג יהודים, פגע באתרים יהודיים, ומפיץ תעמולה הקוראת לפיגועים נגד מטרות יהודיות באירופה. פיגועי טרור בצרפת (סופרמרקט כשר Hyper Cacher, ינואר 2015, 4 הרוגים יהודים).</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: כל מדינות או"ם | מקורות: US State Dept, UN Security Council, SITE Intelligence</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">רצח עם</span> <span class="mo-tag tag-violence">עריפת ראשים</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-propaganda">תעמולה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> הכריז על חליפות בעיראק וסוריה</li> <li><span class="ev-date">2015</span> פיגועי פריז — 130 הרוגים; היפר כשר — 4 יהודים נרצחו</li> <li><span class="ev-date">2015-2019</span> אלפי פיגועים בעולם, רצח עם של יזידים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">הכנסות נפט (1-3 מיליון$/יום בשיא), מיסוי, ביזה, כופר</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-al-qaeda">אל-קאעידה (מקור)</a> <a class="mo-conn-link" data-target="org-boko-haram">בוקו חראם (שבועת נאמנות)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-muslim-brotherhood" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>האחים המוסלמים <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -447,10 +481,11 @@
                         <p>תנועת האם של האסלאם הפוליטי. ארגון ההורה של חמאס. האידיאולוגיה כוללת אנטישמיות מובנית — המייסד אל-בנא תמך בנאצים בשנות ה-30 וה-40. מפיצה "פרוטוקולי זקני ציון" ותוכן אנטישמי ברחבי העולם הערבי. סניפים ב-70+ מדינות.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: מצרים, סעודיה, UAE, בחריין, רוסיה | מקורות: ADL, Lorenzo Vidino (George Washington University)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">אסלאם פוליטי</span> <span class="mo-tag tag-propaganda">תעמולה</span> <span class="mo-tag tag-political">חדירה למוסדות</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1928</span> הוקם במצרים על ידי חסן אל-בנא</li> <li><span class="ev-date">שנות ה-30-40</span> אל-בנא שיתף פעולה עם גרמניה הנאצית</li> <li><span class="ev-date">1987</span> הקים את חמאס כסניף פלסטיני</li> <li><span class="ev-date">2012-2013</span> ממשלת מורסי במצרים (הודחה)</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">קטאר, טורקיה, דמי חבר, עסקים, רשת עמותות ב-70+ מדינות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">חמאס (הקים)</a> <a class="mo-conn-link" data-target="org-qatar">קטאר (חסות)</a> <a class="mo-conn-link" data-target="org-turkey">טורקיה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-lashkar-e-taiba" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>לשכר-א-טייבה <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -461,10 +496,11 @@
                         <p>ארגון טרור פקיסטני. אחראי לפיגועי מומבאי (2008) — כולל מתקפה ממוקדת על בית חב"ד שבה נרצחו הרב גבריאל ורבקה הולצברג ו-4 יהודים נוספים. המחבלים קיבלו הוראה מפורשת לתקוף את המטרה היהודית.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, או"ם, הודו, בריטניה | מקורות: US State Dept, UN 1267 Committee</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">ירי המוני</span> <span class="mo-tag tag-violence">תקיפות ממוקדות ביהודים</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2008</span> פיגועי מומבאי — 166 הרוגים; בית חב"ד מוקד, 6 יהודים נרצחו</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">ISI פקיסטני (לפי טענות), עמותות, תרומות תפוצות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pakistan">פקיסטן (מקלט)</a> <a class="mo-conn-link" data-target="org-al-qaeda">אל-קאעידה (אידיאולוגיה)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kataib-hezbollah" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>כתאאיב חיזבאללה <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -475,10 +511,11 @@
                         <p>מיליציה שיעית עיראקית פרו-איראנית. חלק מ"ציר ההתנגדות" של איראן. תוקפת בסיסים אמריקאיים בעיראק, משגרת מל"טים לעבר ישראל. רטוריקה אנטי-ישראלית ואנטישמית מובהקת.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, UAE | מקורות: US Treasury, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">תקיפות מל"טים</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2003</span> הוקם במהלך מלחמת עיראק</li> <li><span class="ev-date">2023-2024</span> תקיפות מל"טים על בסיסי ארה"ב ולעבר ישראל</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן (כוח קודס): נשק, אימון, מימון</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (חסות)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (מודל)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-harakat-al-nujaba" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חראכת אל-נוג'בא <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -489,10 +526,11 @@
                         <p>מיליציה שיעית עיראקית שפועלת כפרוקסי של איראן. הכריזה על כוונה "לשחרר" את ירושלים. תקפה כוחות אמריקאיים בעיראק. חלק מרשת הפרוקסים האיראנית הפועלת נגד ישראל.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב (2019) | מקורות: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מיליציה חמושה</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2013</span> הוקם כפרוקסי של IRGC בעיראק</li> <li><span class="ev-date">2023-2024</span> תקיפות על בסיסי ארה"ב</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן (IRGC): מימון ישיר ונשק</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (חסות)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">כתאאב חיזבאללה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-asaib-ahl-al-haq" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>עצאאיב אהל אל-חק <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -503,10 +541,11 @@
                         <p>מיליציה שיעית עיראקית בעלת ייצוג פוליטי. פועלת כפרוקסי של משמרות המהפכה. מפיצה תעמולה אנטי-ישראלית ותוקפת בסיסים אמריקאיים. מצהירה על כוונה לתקוף את ישראל.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב | מקורות: US Treasury, Stanford CISAC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מיליציה חמושה</span> <span class="mo-tag tag-political">מפלגה פוליטית</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2006</span> הוקם כפרוקסי של IRGC</li> <li><span class="ev-date">2023-2024</span> תקיפות על בסיסי ארה"ב, איומים על ישראל</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן (IRGC): מימון ישיר</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (חסות)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-shabaab" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>אל-שבאב <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -517,10 +556,11 @@
                         <p>ארגון טרור ג'יהאדיסטי סומלי, שלוחה של אל-קאעידה. פיגוע קניון ווסטגייט בניירובי (2013, 67 הרוגים) — המחבלים הפרידו מוסלמים מלא-מוסלמים לפני הירי. רטוריקה אנטי-ישראלית ואנטישמית מתמדת.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, או"ם, בריטניה | מקורות: US State Dept, UN</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">ירי המוני</span> <span class="mo-tag tag-violence">פיצוצים</span> <span class="mo-tag tag-political">סניף אל-קאעידה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2013</span> פיגוע קניון ווסטגייט, ניירובי — 67 הרוגים</li> <li><span class="ev-date">2017</span> פיצוץ משאית במוגדישו — 587 הרוגים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">סחר פחם, מיסוי, פיראטיות, מימון אל-קאעידה</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-al-qaeda">אל-קאעידה (ארגון אם)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-boko-haram" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>בוקו חראם <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -531,10 +571,11 @@
                         <p>ארגון טרור ג'יהאדיסטי ניגרי. שמו המלא: "ג'מאעת אהל אל-סונה לדעווה ואל-ג'יהאד." חוקת הארגון כוללת רטוריקה אנטי-ישראלית ואנטישמית. מפיצה תעמולה נגד "יהודים וצלבנים" בהתאם לאידיאולוגיה ג'יהאדיסטית גלובלית.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, או"ם | מקורות: US State Dept, Council on Foreign Relations</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">חטיפות המוניות</span> <span class="mo-tag tag-violence">פיצוצים</span> <span class="mo-tag tag-propaganda">תעמולת ג'יהאד</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> חטפו 276 תלמידות בצ'יבוק</li> <li><span class="ev-date">2015</span> נשבעו נאמנות לדאעש</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">כופר חטיפות, שוד בנקים, מיסוי באזורים בשליטתם</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-isis">דאעש (שבועת נאמנות)</a> <a class="mo-conn-link" data-target="org-al-qaeda">אל-קאעידה (אידיאולוגיה)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-plf" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חזית השחרור הפלסטינית (PLF) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -545,10 +586,11 @@
                         <p>ארגון טרור פלסטיני. אחראי לחטיפת ספינת הנוסעים אכילה לאורו (1985) — חוטף אמריקאי יהודי, ליאון קלינגהופר (בן 69, על כיסא גלגלים), נורה ונזרק לים.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב | מקורות: US State Dept, ADL</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">חטיפה</span> <span class="mo-tag tag-violence">רצח אזרחים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-mahdi-army" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>צבא המהדי <span class="org-badge badge-terror">מיליציה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -559,10 +601,11 @@
                         <p>מיליציה שיעית עיראקית שנלחמה נגד כוחות הקואליציה. אל-צדר משתמש ברטוריקה אנטי-ישראלית ואנטי-יהודית מתמדת. המיליציה תקפה מטרות אמריקאיות והייתה חלק מהשפעה איראנית בעיראק.</p>
                     </div>
                     <div class="org-sources">מקורות: CSIS, Stanford CISAC, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מיליציה חמושה</span> <span class="mo-tag tag-violence">אלימות עדתית</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2003-2008</span> לחם נגד הקואליציה האמריקאית בעיראק</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן: נשק ומימון דרך IRGC</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (חסות)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (תמיכה)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fatemiyoun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>פאטמיון <span class="org-badge badge-terror">מיליציה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -573,10 +616,11 @@
                         <p>מיליציה אפגאנית שיעית שגויסה ע"י משמרות המהפכה האיראנים ללחימה בסוריה. חלק מרשת הפרוקסים האיראנית. אידיאולוגיה אנטי-ישראלית כחלק מ"ציר ההתנגדות."</p>
                     </div>
                     <div class="org-sources">מקורות: CSIS, Ali Alfoneh (Arab Gulf States Institute)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מיליציה חמושה</span> <span class="mo-tag tag-political">פרוקסי איראני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2014</span> גויסו על ידי IRGC למלחמת סוריה</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">איראן (IRGC): גיוס ומימון ישיר</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (חסות)</a> <a class="mo-conn-link" data-target="org-iran">איראן (חסות)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hizb-ut-tahrir" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חזב אל-תחריר <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -587,10 +631,11 @@
                         <p>תנועה איסלאמיסטית גלובלית שמטרתה הקמת חליפות אסלאמית עולמית. מפיצה תעמולה אנטישמית מובהקת ברחבי העולם. קוראת ל"שחרור פלסטין" ולהשמדת ישראל. פעילה ב-40+ מדינות, בעיקר באוניברסיטאות.</p>
                     </div>
                     <div class="org-sources">אסור ב: גרמניה, רוסיה, טורקיה, מדינות ערב רבות | מקורות: ADL, SPLC, Quilliam Foundation</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תעמולה</span> <span class="mo-tag tag-academic">ארגון קמפוסים</span> <span class="mo-tag tag-political">אידיאולוגיית חליפות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ansar-al-islam" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>אנסאר אל-אסלאם <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -601,6 +646,7 @@
                         <p>ארגון ג'יהאדיסטי כורדי-סוני. קשור לאל-קאעידה. פעל בכורדיסטן העיראקית ובהמשך הצטרף ללחימה בסוריה. אידיאולוגיה אנטי-ישראלית ואנטישמית כחלק מהעולם הג'יהאדיסטי.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב, EU, או"ם | מקורות: US State Dept, Stanford CISAC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פיצוצים</span> <span class="mo-tag tag-political">סניף אל-קאעידה</span></div></div>
                 </div>
             </div>
 
@@ -623,7 +669,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kkk" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>קו קלוקס קלאן (KKK) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -634,10 +680,11 @@
                         <p>ארגון הגזענות הוותיק ביותר בארה"ב — שלוש גלים נפרדים. ה-KKK השני (1915-1944) היה מפורשות אנטישמי — הגיע ל-4 מיליון חברים בשנות ה-20. לינצ'ו את ליאו פרנק (יהודי, 1915) מכלא ג'ורג'יה. כיום פועלים עשרות סניפים קטנים עם כ-3,000 חברים. מפיצים תעמולה אנטישמית, גזענית ואנטי-מהגרים.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">לינצ'ים</span> <span class="mo-tag tag-propaganda">תעמולת שנאה</span> <span class="mo-tag tag-violence">הפחדה</span> <span class="mo-tag tag-propaganda">שריפת צלבים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-alliance" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>הברית הלאומית (National Alliance) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -648,10 +695,11 @@
                         <p>היה הארגון הניאו-נאצי המשפיע ביותר בארה"ב. פירס כתב את "The Turner Diaries" (1978) — רומן שהשריה את פיגוע אוקלהומה סיטי (1995, 168 הרוגים) ופעולות The Order. הספר מתאר מלחמת גזע ורצח יהודים. הארגון נחלש לאחר מות פירס (2002) אך השפעתו האידיאולוגית נמשכת.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">ספרות שנאה</span> <span class="mo-tag tag-propaganda">רדיקליזציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-order" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Order (Br&uuml;der Schweigen) <span class="org-badge badge-terror">ארגון טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -662,10 +710,11 @@
                         <p>תא טרור ניאו-נאצי שביצע שודים ($3.8 מיליון), זיוף כסף, ורצח. רצחו את אלן ברג — עיתונאי רדיו יהודי (1984). חברי הארגון הושראו ע"י "The Turner Diaries." מת'יוס נהרג בעימות עם FBI. שאר החברים נשפטו ונכלאו.</p>
                     </div>
                     <div class="org-sources">סיווג: FBI Domestic Terrorism | מקורות: ADL, FBI, Kevin Flynn &amp; Gary Gerhardt "The Silent Brotherhood" (1989)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">שוד מזוין</span> <span class="mo-tag tag-violence">חיסול</span> <span class="mo-tag tag-finance">זיוף כספים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-aryan-nations" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Aryan Nations <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -676,10 +725,11 @@
                         <p>ארגון ניאו-נאצי שהפעיל מתחם בהיידן לייק, אידהו — שימש כמרכז כנסים שנתי לניאו-נאצים מכל ארה"ב. מבוסס על אידיאולוגיית "Christian Identity" (יהודים = ילדי השטן). הפסיד תביעה אזרחית ($6.3 מיליון, 2000) ונפרק. חברים רבים הצטרפו ל-The Order.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מתחם שנאה</span> <span class="mo-tag tag-propaganda">תעמולת שנאה</span> <span class="mo-tag tag-propaganda">זהות נוצרית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-aryan-brotherhood" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>האחווה הארית (Aryan Brotherhood) <span class="org-badge badge-hate">כנופיית פשע</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -690,10 +740,11 @@
                         <p>כנופיית כלא ניאו-נאצית — הקבוצה האלימה ביותר במערכת הכלאות הפדרלית. סמלים: צלב קרס, SS, "666". למרות שמהווים פחות מ-0.1% מאסירים פדרליים, אחראים ל-~18% מרציחות בכלאות. אידיאולוגיה גזענית לבנה ואנטישמית.</p>
                     </div>
                     <div class="org-sources">סיווג: FBI Organized Crime | מקורות: FBI, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות בכלא</span> <span class="mo-tag tag-finance">פשע מאורגן</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nsm" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NSM (National Socialist Movement) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -704,10 +755,11 @@
                         <p>הארגון הניאו-נאצי הפעיל הגדול בארה"ב. חבריו צועדים במדי SS ודגלי צלב קרס. ארגנו הפגנות בטולידו (2005) שהובילו למהומות. ב-2019, המנהיג ג'ף שופ הורשע בסיוע לרצח.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מצעדי רחוב</span> <span class="mo-tag tag-propaganda">סמלים נאציים</span> <span class="mo-tag tag-violence">הפחדה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-atomwaffen" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Atomwaffen Division / National Socialist Order <span class="org-badge badge-terror">ארגון טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -718,10 +770,11 @@
                         <p>ארגון ניאו-נאצי accelerationist — מאמין שאלימות תזרז קריסת החברה ותוביל למדינה לבנה. חברים רצחו 5+ אנשים. הפיצו מדריכי נשק וחבלן. מפיצים תעמולה ליד בתי כנסת. שינו שם ל-NSO ב-2020 לאחר חשיפות. קשרים לרשת Terrorgram.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, מוכרז כטרור: קנדה, בריטניה | מקורות: ADL, SPLC, FBI, SITE Intelligence</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אקסלרציוניזם</span> <span class="mo-tag tag-violence">רצח</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-base" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Base <span class="org-badge badge-terror">ארגון טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -732,10 +785,11 @@
                         <p>רשת ניאו-נאצית accelerationist. גייסו חברים דרך פורומים מוצפנים. חברים נעצרו בחשד לתכנון פיגועים, כולל תקיפת עצרת בוירג'יניה (2020). נזארו נחשף כסוכן FBI לשעבר — עובדה שלא הפחיתה את הסכנה, שכן חברים אחרים פעלו באופן עצמאי.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, מוכרז כטרור: קנדה, בריטניה | מקורות: ADL, FBI, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">תכנון פיגועים</span> <span class="mo-tag tag-cyber">גיוס מקוון</span> <span class="mo-tag tag-violence">אימונים צבאיים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-patriot-front" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Patriot Front <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -746,10 +800,11 @@
                         <p>ארגון ספרמסיסטי לבן שפרש מ-Vanguard America לאחר שארלוטסוויל. מארגן צעדות עם מסכות, מפיץ פליירים אנטישמיים ומפזר באנרים "Reclaim America." פעיל בעשרות ערים ברחבי ארה"ב. דליפת מידע פנימי (2022) חשפה 200+ חברים.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL Extremist Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מצעדי הפתעה</span> <span class="mo-tag tag-propaganda">הפצת כרוזים</span> <span class="mo-tag tag-propaganda">תליית שלטים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-vanguard-america" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Vanguard America <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -760,10 +815,11 @@
                         <p>ארגון ניאו-נאצי שהשתתף בעצרת "Unite the Right" בשארלוטסוויל (2017). ג'יימס אלכס פילדס, שנכח עם הארגון, דרס מפגינים ורצח את הת'ר הייר. פילדס נשפט למאסר עולם. הארגון התפצל לאחר האירוע — חלקו הפך ל-Patriot Front.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-violence">תקיפת רכב</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-identity-evropa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Identity Evropa / American Identity Movement <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -774,10 +830,11 @@
                         <p>ארגון Identitarian אמריקאי — "you will not replace us." הופיע בשארלוטסוויל עם לפידים. דליפת צ'אטים פנימיים (Discord, 2019) חשפה אנטישמיות מובהקת בקרב חברים. שינו שם ל-AmIM בניסיון ריברנדינג. מפורק כמעט לחלוטין.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC, Unicorn Riot (דליפות)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הפצה בקמפוסים</span> <span class="mo-tag tag-propaganda">תיאוריית ההחלפה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-gdl" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>GDL (Goyim Defense League) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -788,10 +845,11 @@
                         <p>רשת אנטישמית שמפיצה פליירים, באנרים ותעמולה ברחובות ובאוטוסטרדות ברחבי ארה"ב. מתמקדים אך ורק באנטישמיות — "Name the Jew." הפיצו פליירים ב-47 מדינות. מפגינים ליד בתי כנסת, אירועים יהודיים, ומוסדות. אחד המפיצים המרכזיים של תעמולה אנטישמית בארה"ב כיום.</p>
                     </div>
                     <div class="org-sources">סיווג: ADL Extremist Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הפצת כרוזים</span> <span class="mo-tag tag-propaganda">תליית שלטים</span> <span class="mo-tag tag-violence">הטרדת בתי כנסת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-groypers" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Groypers / ניק פואנטס <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -802,10 +860,11 @@
                         <p>תנועת "America First" שמכחישה שואה, מפיצה אנטישמיות ועדות לבנה במעטפת פוליטית. פואנטס אמר "יהודים שולטים בתקשורת" ו"הם יצרו את הולוקוסט." ארגן עצרת AFPAC כחלופה ל-CPAC. ארח ארוחת ערב עם קניה ווסט ודונלד טראמפ (2022) שעוררה סערה. פואנטס מזוהה ע"י ADL כאחד ה-50 הקיצוניים המסוכנים ביותר בארה"ב.</p>
                     </div>
                     <div class="org-sources">סיווג: ADL Extremist, SPLC White Nationalist | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-political">חדירה פוליטית</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nsc-131" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NSC-131 <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -816,10 +875,11 @@
                         <p>קבוצה ניאו-נאצית בניו אנגלנד. "131" = ACA = "Anti-Communist Action." חברים צועדים עם מסכות ודגלי צלב קרס, מפגינים ליד אירועים יהודיים ומשפחות LGBTQ. הטרידו שעת סיפור בספריות ואירועי גאווה.</p>
                     </div>
                     <div class="org-sources">סיווג: ADL Extremist Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מצעדי רחוב</span> <span class="mo-tag tag-violence">הפחדה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ram-active-clubs" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>RAM / Active Clubs <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -830,10 +890,11 @@
                         <p>Rise Above Movement — קבוצת אלימות רחוב ניאו-נאצית מקליפורניה. חברים תקפו מפגינים בשארלוטסוויל ובהפגנות אחרות. ראנדו ו-3 חברים הורשעו ב-2019. הצמיחו מודל "Active Clubs" — מועדוני אגרוף/כושר ניאו-נאציים שהתפשטו ל-47 סניפים ב-33 מדינות.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-violence">מועדוני לחימה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-twp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>TWP (Traditionalist Worker Party) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -844,10 +905,11 @@
                         <p>ארגון ניאו-נאצי שניסה לגייס מעמד עובדים לבנים. היימבאך השתתף בשארלוטסוויל ובאירועים אלימים נוספים. הארגון התפרק ב-2018 לאחר סקנדל אישי של היימבאך.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-propaganda">גיוס מעמד פועלים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-league-of-the-south" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>League of the South <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -858,10 +920,11 @@
                         <p>ארגון ניאו-קונפדרטי שקורא להפרדת דרום ארה"ב. הפך מארגון "מורשת דרומית" לארגון ספרמסיסטי לבן ואנטישמי מפורש. השתתף בשארלוטסוויל. היל הצהיר על תמיכה ב"עדות לבנה" ועל אנטישמיות.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: SPLC, ADL</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">בדלנות</span> <span class="mo-tag tag-propaganda">עליונות לבנה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-creativity-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Creativity Movement (WCOTC) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -872,10 +935,11 @@
                         <p>"דת" גזענית שמאמינה ב"RaHoWa" — Racial Holy War. האויב המרכזי: יהודים. בנג'מין סמית', חבר, ביצע ירי drive-by בילינוי (1999) וכיוון למטרות יהודיות ואפריקאים-אמריקאים — רצח 2 ופצע 9. מאט הייל, מנהיג לשעבר, נשפט ל-40 שנות מאסר על ניסיון רצח שופטת פדרלית.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מלחמת גזע קדושה</span> <span class="mo-tag tag-violence">ירי המוני</span> <span class="mo-tag tag-propaganda">פסאודו-דת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hammerskin-nation" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hammerskin Nation <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -886,10 +950,11 @@
                         <p>ארגון סקינהדים ניאו-נאצי בינלאומי — הרשת הגדולה ביותר מסוגה. מארגנים פסטיבלי מוזיקה נאצית ("Hammerfest"). קשורים לעשרות מעשי אלימות ורצח ברחבי העולם. ווייד מייקל פייג', שטבח בגורדוורה סיקית בוויסקונסין (2012, 6 הרוגים), היה חבר Hammerskin.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מוזיקת שנאה</span> <span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-political">רשת בינלאומית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-golden-dawn" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Golden Dawn (Χρυσή Αυγή) <span class="org-badge badge-hate">מפלגה ניאו-נאצית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -900,10 +965,11 @@
                         <p>מפלגה ניאו-נאצית יוונית שנכנסה לפרלמנט עם 18 מושבים (2012). סמלים נאציים, אנטישמיות מובהקת, הכחשת שואה. חברים רצחו את הראפר פאבלוס פיסאס (2013). ב-2020, בית המשפט הכריז על הארגון כ"ארגון פשע" — מנהיגים נשפטו ל-13 שנות מאסר.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC, EU Parliament Report | מקורות: ADL, BBC, Guardian</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">מפלגה פוליטית</span> <span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-violence">רצח</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nrm" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NRM (Nordic Resistance Movement) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -914,10 +980,11 @@
                         <p>הארגון הניאו-נאצי הגדול בסקנדינביה. פעיל בשוודיה, נורבגיה, פינלנד ודנמרק. הפגנות ליד בתי כנסת, הטרדת יהודים, אנטישמיות מפורשת. מפיץ תעמולה הולוקוסט-דניאליסטית. אסור בפינלנד (2020). חברים הורשעו בפיצוץ מרכז פליטים.</p>
                     </div>
                     <div class="org-sources">סיווג: ADL, אסור: פינלנד | מקורות: ADL, Expo (שוודיה), SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מצעדי רחוב</span> <span class="mo-tag tag-violence">הטרדת בתי כנסת</span> <span class="mo-tag tag-violence">פיצוצים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-npd" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>NPD / Die Heimat <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -928,10 +995,11 @@
                         <p>מפלגה ניאו-נאצית גרמנית. בית המשפט החוקתי הגרמני קבע (2017) שהמפלגה "דומה אידיאולוגית לנאציזם" אך לא אסר אותה בשל חולשתה. שינתה שם ל-"Die Heimat" ב-2023. אנטישמיות, הכחשת שואה (מוסווית), וגזענות.</p>
                     </div>
                     <div class="org-sources">מקורות: German Federal Constitutional Court, ADL, Verfassungsschutz</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">מפלגה פוליטית</span> <span class="mo-tag tag-propaganda">הקטנת שואה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-blood-and-honour" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Blood &amp; Honour / Combat 18 <span class="org-badge badge-terror">ארגון טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -942,10 +1010,11 @@
                         <p>רשת מוזיקה ניאו-נאצית בינלאומית עם זרוע טרוריסטית (Combat 18 — "18" = AH = Adolf Hitler). מפיצה מוזיקת שנאה אנטישמית ומארגנת קונצרטים ניאו-נאציים. Combat 18 ביצעה פיצוצים ורצח בבריטניה. אסורה בקנדה (2019). סניפים ב-20+ מדינות.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: קנדה | מקורות: ADL, SPLC, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מוזיקת שנאה</span> <span class="mo-tag tag-violence">פיצוצים</span> <span class="mo-tag tag-political">רשת בינלאומית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-action" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>National Action <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -956,10 +1025,11 @@
                         <p>ארגון ניאו-נאצי בריטי — הארגון הימני הקיצוני הראשון שנאסר בבריטניה מאז מלחמת העולם השנייה (2016). חגג את רצח חברת הפרלמנט ג'ו קוקס. חברים הורשעו בתכנון פיגועים ובפעילות טרוריסטית.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: בריטניה (2016) | מקורות: UK Home Office, BBC, ADL</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">תכנון פיגועים</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-identitarian-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Identitarian Movement (Generation Identity) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -970,10 +1040,11 @@
                         <p>תנועת "Great Replacement" — טוענת שמוסלמים מחליפים את האוכלוסייה האירופית (בהשראת רנו קאמו). המניפסט של הרוצח בכרייסטצ'רץ' (2019, 51 הרוגים) נקרא "The Great Replacement" — הרוצח תרם כסף ל-Generation Identity Austria. בוטלו בצרפת (2021) ובגרמניה.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC, מפורק: צרפת (2021), גרמניה | מקורות: ADL, SPLC, Europol</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאוריית ההחלפה</span> <span class="mo-tag tag-propaganda">פעולות תעמולה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-casapound" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>CasaPound <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -984,10 +1055,11 @@
                         <p>ארגון ניאו-פשיסטי איטלקי. מעריצים את מוסוליני. אנטישמיות, גזענות, אנטי-מהגרים. חברים תקפו מהגרים ושמאלנים. פעילים ברומא ובערים נוספות. מפגינים עם סמלים פשיסטיים.</p>
                     </div>
                     <div class="org-sources">מקורות: SPLC, Italian Interior Ministry, Europol</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות רחוב</span> <span class="mo-tag tag-propaganda">תעמולה ניאו-פשיסטית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-jobbik" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Jobbik <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -998,10 +1070,11 @@
                         <p>מפלגה הונגרית שהייתה הימנית-קיצונית הגדולה באירופה. חברים קראו לרישום יהודים (2012), נשא פרלמנט הונגרי. הזרוע הצבאית "Hungarian Guard" צעדה עם מדים דומים לנאצים הונגריים. המפלגה ניסתה ריברנדינג מרכזי מ-2018, אך ההיסטוריה האנטישמית מתועדת.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, EU Parliament, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">מפלגה פוליטית</span> <span class="mo-tag tag-violence">זרוע חצי-צבאית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-rim" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Russian Imperial Movement (RIM) <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1012,10 +1085,11 @@
                         <p>ארגון ספרמסיסטי רוסי — הארגון הלא-איסלאמי הראשון שהוכרז כטרור ע"י משרד החוץ האמריקאי (2020). מאמן לוחמי ימין קיצוני מאירופה. אנטישמיות, נוצרות אורתודוקסית קיצונית, נוסטלגיה צארית. קשרים לאזוב ולניאו-נאצים שוודים.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ארה"ב (2020), קנדה | מקורות: US State Dept, CSIS</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אימונים צבאיים</span> <span class="mo-tag tag-political">רשת בינלאומית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-patriotic-alternative" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Patriotic Alternative <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1026,10 +1100,11 @@
                         <p>הארגון הימני-קיצוני המשמעותי ביותר בבריטניה כיום. קולט (לשעבר BNP) מפיץ אנטישמיות ו-"Great Replacement." מארגנים אירועי "הלבנה" (Whites Only) ומפיצים תעמולה ברחבי בריטניה.</p>
                     </div>
                     <div class="org-sources">סיווג: HOPE Not Hate, ADL | מקורות: ADL, HOPE Not Hate (UK)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאוריית ההחלפה</span> <span class="mo-tag tag-propaganda">תעמולת שנאה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-stormfront" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Stormfront <span class="org-badge badge-digital">פלטפורמה דיגיטלית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1040,10 +1115,11 @@
                         <p>אתר השנאה הוותיק ביותר באינטרנט. פורום ניאו-נאצי ואנטישמי עם מאות אלפי משתמשים רשומים. מחקר SPLC מצא שמשתמשי Stormfront רצחו כ-100 אנשים (2009-2014). שימש כפלטפורמת רדיקליזציה עבור עשרות רוצחים מאונים.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Site | מקורות: SPLC, ADL, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-propaganda">פורום שנאה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-daily-stormer" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Daily Stormer <span class="org-badge badge-digital">פלטפורמה דיגיטלית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1054,10 +1130,11 @@
                         <p>אתר ניאו-נאצי בעל הקהילה הגדולה ביותר (לפני חסימתו). נקרא על שם "Der St&uuml;rmer" — עיתון התעמולה הנאצי של יוליוס שטרייכר. מפיץ תעמולה אנטישמית, הכחשת שואה, ועדות לבנה. אנגלין נמלט מפסק דין של $14 מיליון בגין הטרדת אישה יהודית.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Site | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-cyber">קמפייני הטרדה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-terrorgram" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Terrorgram <span class="org-badge badge-terror">רשת טרור דיגיטלית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1068,6 +1145,7 @@
                         <p>רשת ערוצי טלגרם accelerationist שמפיצה מדריכי רצח, רשימות מטרות, ותעמולה ניאו-נאצית. מספקת הדרכה מעשית לביצוע פיגועים. קשורה למספר פיגועי ירי ונסיונות טרור. ב-2024, ארה"ב סנקציות על 2 חברים. בריטניה אסרה את הרשת.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור: בריטניה (2024) | מקורות: US Treasury, SITE Intelligence, ADL, Tech Against Terrorism</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">מדריכי רצח</span> <span class="mo-tag tag-violence">רשימות מטרות</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
@@ -1090,7 +1168,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-isupk" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ISUPK (Israelite School of Universal Practical Knowledge) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1101,10 +1179,11 @@
                         <p>אחת הקבוצות הקיצוניות ביותר בתנועת ה-BHI (Black Hebrew Israelites). מטיפים ברחובות ניו יורק ומשמיצים יהודים, להט"בים ולבנים. מפיצים סרטוני YouTube עם מיליוני צפיות. טוענים שיהודים אשכנזים הם "ממזרי אדום" ו"כוזרים מתחזים."</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Black Separatist Hate Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הטפת רחוב</span> <span class="mo-tag tag-propaganda">גניבת זהות תיאולוגית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-iuic" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>IUIC (Israel United in Christ) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1115,10 +1194,11 @@
                         <p>הקבוצה הגדולה ביותר בתנועת ה-BHI הקיצונית. 50+ "מחנות" ברחבי ארה"ב. מטיפים ברחובות ובסרטוני YouTube עם הצהרות אנטישמיות מפורשות. טוענים שהשואה הייתה "עונש אלוהי" כי יהודים "גנבו את הזהות." הרחיבו פעילות לקנדה, בריטניה, ואפריקה.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Black Separatist Hate Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הטפת רחוב</span> <span class="mo-tag tag-cyber">תעמולת יוטיוב</span> <span class="mo-tag tag-political">התפשטות בינלאומית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sicarii" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sicarii / יורי ג'רזי סיטי <span class="org-badge badge-terror">טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1129,10 +1209,11 @@
                         <p>קבוצת BHI קיצונית. ב-10 בדצמבר 2019, דייויד אנדרסון ופרנסין גרהם (קשורים ל-BHI) ירו על סופר כשר בג'רזי סיטי ורצחו 3 אזרחים (כולל 2 יהודים) ושוטר. נמצאו אצלם כתבים אנטישמיים והקשר לאידיאולוגיית "Sicarii." הפיגוע זעזע את ארה"ב.</p>
                     </div>
                     <div class="org-sources">מקורות: FBI, ADL, SPLC, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">ירי המוני</span> <span class="mo-tag tag-violence">טרור אנטישמי</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nation-of-islam" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Nation of Islam (NOI) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1143,10 +1224,11 @@
                         <p>ארגון שחור-לאומני בעל אנטישמיות מובהקת. פאראחאן קרא להיטלר "very great man" (1984), ליהודים "Satanic Jews" ו-"termites" (2018). הספר "The Secret Relationship Between Blacks and Jews" (1991) מהווה תעמולה אנטישמית שמאשימה יהודים בסחר עבדים (טענה המופרכת ע"י היסטוריונים). עשרות אלפי חברים.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL Extremist | מקורות: ADL, SPLC, AJC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תעמולת שנאה</span> <span class="mo-tag tag-propaganda">עצרות המוניות</span> <span class="mo-tag tag-academic">פסאודו-אקדמיה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nbpp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>New Black Panther Party (NBPP) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1157,10 +1239,11 @@
                         <p>ארגון שחור-לאומני אנטישמי — אין קשר למפלגת הפנתרים השחורים המקורית (שמתנגדת לו). חברים צעדו עם נשק, הטיפו ל"מלחמה על היהודים." מנהיגים קראו ליהודים "bloodsuckers" ולאנשים לבנים "cave dwellers." פעילים בהפגנות ובעימותים ברחוב.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group, ADL | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">הפגנות חמושות</span> <span class="mo-tag tag-propaganda">הטפת שנאה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-five-percent-nation" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Five-Percent Nation (NGE) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1171,10 +1254,11 @@
                         <p>פלג מ-Nation of Islam. מאמינים ש-"האדם השחור הוא אלוהים" ושיהודים ולבנים הם "שדים." השפיעו על תרבות ההיפ-הופ. לא כל חברי התנועה אנטישמיים, אך האידיאולוגיה הרשמית כוללת אלמנטים אנטישמיים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאולוגיית עליונות</span> <span class="mo-tag tag-propaganda">השפעה תרבותית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-christian-identity" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Christian Identity <span class="org-badge badge-hate">אידיאולוגיית שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1185,10 +1269,11 @@
                         <p>אידיאולוגיה תיאולוגית שטוענת שיהודים הם "ילדי השטן" (ממש, לא מטפורית) ושהאנגלו-סקסים הם "הישראלים האמיתיים." האידיאולוגיה של Aryan Nations, KKK, ו-The Order. רוברט מת'יוס, בוביון פרי, ורוצחים רבים היו מאמיני Christian Identity.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, Michael Barkun "Religion and the Racist Right" (1997)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאולוגיית עליונות</span> <span class="mo-tag tag-violence">השראה לטרור</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-westboro-baptist" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Westboro Baptist Church <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1199,10 +1284,11 @@
                         <p>כנסייה / כת שמפגינה עם שלטי "God Hates Jews", "God Hates Fags" ו-"Thank God for Dead Soldiers" בהלוויות חיילים ואירועים ציבוריים. כ-70 חברים, רובם משפחת פלפס. מפיצים אנטישמיות דתית קיצונית.</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הפגנות שנאה</span> <span class="mo-tag tag-propaganda">הפרעה להלוויות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-hotep-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Hotep Movement <span class="org-badge badge-hate">תנועת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1213,10 +1299,11 @@
                         <p>תנועה אפרו-צנטרית ברשתות חברתיות שמפיצה תיאוריות קונספירציה אנטישמיות — "יהודים שולטים בסחר העבדים", "יהודים גנבו את התרבות המצרית." מפיצים תוכן ויראלי בטוויטר, YouTube ו-TikTok. השפיעו על הצהרות קניה ווסט.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">תעמולה ברשתות חברתיות</span> <span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-neturei-karta" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>נטורי קרתא <span class="org-badge badge-hate">שנוי במחלוקת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1227,10 +1314,11 @@
                         <p>קבוצה יהודית חרדית קטנה (~5,000) שמתנגדת לציונות מטעמים תיאולוגיים. מה שהופך אותם לבעייתיים: השתתפו בוועידת הכחשת השואה של אחמדינג'אד בטהרן (2006), מפגינים יחד עם חמאס וחיזבאללה, חובקים את נשיא איראן, ומספקים "הכשר יהודי" לאנטישמיות. הקהילה היהודית הרחבה מגנה אותם כמעט פה אחד.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, AJC, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">לגיטימציה לאויבים</span> <span class="mo-tag tag-political">הפגנות אנטי-ציוניות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-british-israelism" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>British Israelism <span class="org-badge badge-hate">אידיאולוגיית שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1241,10 +1329,11 @@
                         <p>אידיאולוגיה שטוענת שהאנגלו-סקסים הם צאצאי עשרת השבטים האבודים. המסקנה: יהודים אינם ישראל האמיתית. שימשה בסיס ל-Christian Identity ולתנועות BHI קיצוניות. הקשר לאנטישמיות: אם היהודים "אינם ישראל" — הם מתחזים, וזה מצדיק שנאה.</p>
                     </div>
                     <div class="org-sources">מקורות: Michael Barkun, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאולוגיית החלפה</span> <span class="mo-tag tag-propaganda">גניבת זהות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-icgjc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ICGJC (Israelite Church of God in Jesus Christ) <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1255,6 +1344,7 @@
                         <p>קבוצת BHI נוספת. מטיפים שיהודים הם "Synagogue of Satan." פעילים בהפצת סרטוני שנאה באינטרנט. נקשרו לרדיקליזציה של התוקפים בג'רזי סיטי (2019).</p>
                     </div>
                     <div class="org-sources">סיווג: SPLC Hate Group | מקורות: ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">תעמולת יוטיוב</span> <span class="mo-tag tag-propaganda">הטפת שנאה</span></div></div>
                 </div>
             </div>
 
@@ -1277,7 +1367,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-bds" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>BDS Movement <span class="org-badge badge-political">תנועה פוליטית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1288,10 +1378,11 @@
                         <p>תנועת חרם, משיכת השקעות וסנקציות נגד ישראל. ברגות'י הצהיר שמתנגד לפתרון שתי מדינות ותומך ב"זכות שיבה" — שמשמעה ביטול ישראל כמדינה יהודית. 35 מדינות בארה"ב חוקקו חוקים נגד BDS. הפרלמנט הגרמני הכריז (2019) שתנועת BDS אנטישמית. שנוי במחלוקת: תומכים טוענים שזו מחאה לגיטימית, מתנגדים טוענים שהמטרה היא דה-לגיטימציה של ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, German Bundestag Resolution (2019), Kenneth Stern (AJC), 35 US state anti-BDS laws</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">חרם אקדמי</span> <span class="mo-tag tag-finance">חרם כלכלי</span> <span class="mo-tag tag-academic">ארגון קמפוסים</span> <span class="mo-tag tag-political">דה-לגיטימציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sjp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>SJP (Students for Justice in Palestine) <span class="org-badge badge-political">ארגון קמפוס</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1302,10 +1393,11 @@
                         <p>הארגון הפרו-פלסטיני הגדול ביותר בקמפוסים — 200+ סניפים. מארגן שבועות "Israel Apartheid Week", הפגנות, ומאהלי מחאה. לאחר 7 באוקטובר, סניפים רבים חגגו את הטבח עם הצהרות כמו "glory to the resistance." ADL תיעדה מאות מקרים של הפחדה ואנטישמיות כלפי סטודנטים יהודים באירועי SJP. חלק מהסניפים נחקרו בחשד לקשרים עם חמאס (דרך AMP).</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, Brandeis Center, AMCHA Initiative</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">הפגנות קמפוס</span> <span class="mo-tag tag-propaganda">שבוע אפרטהייד</span> <span class="mo-tag tag-violence">הפחדת סטודנטים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-jvp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>JVP (Jewish Voice for Peace) <span class="org-badge badge-political">שנוי במחלוקת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1316,10 +1408,11 @@
                         <p>ארגון יהודי אנטי-ציוני שתומך ב-BDS. ADL מגדירה את JVP כ"אחד מעשרת הארגונים האנטי-ישראליים המשפיעים ביותר בארה"ב." מספקים "הכשר יהודי" לאנטי-ציונות קיצונית. חברים ארגנו חסימת Grand Central Terminal (2023) וכנסת הקונגרס. שיתוף פעולה עם Samidoun ו-Within Our Lifetime.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL (Top 10 Anti-Israel Groups), AJC, StandWithUs</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">כיסוי יהודי</span> <span class="mo-tag tag-political">סרבנות אזרחית</span> <span class="mo-tag tag-political">אקטיביזם BDS</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-samidoun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Samidoun <span class="org-badge badge-terror">ארגון טרור מוכרז</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1330,10 +1423,11 @@
                         <p>ארגון שמציג עצמו כ"רשת סולידריות אסירים פלסטיניים." הוכרז כארגון טרור ע"י ישראל (2021), קנדה והולנד (2024) בשל קשרים ל-PFLP. מנהיג הסניף האירופי, חאלדה ג'ראר, קשורה ישירות ל-PFLP. ארגנו הפגנות שחגגו את 7 באוקטובר ברחבי אירופה.</p>
                     </div>
                     <div class="org-sources">מוכרז כטרור ע"י: ישראל, קנדה, הולנד | מקורות: Public Safety Canada, Israeli MOD</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">חזית PFLP</span> <span class="mo-tag tag-propaganda">חגיגות 7 באוקטובר</span> <span class="mo-tag tag-political">הפגנות רחוב</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2021</span> הוכרז כארגון טרור על ידי ישראל</li> <li><span class="ev-date">2024</span> הוכרז על ידי קנדה והולנד</li> <li><span class="ev-date">אוקטובר 2023</span> ארגנו חגיגות ל-7 באוקטובר ברחבי אירופה</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">רשת מימון PFLP, תרומות אירופיות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pflp">PFLP (ארגון אם)</a> <a class="mo-conn-link" data-target="org-within-our-lifetime">Within Our Lifetime (בעל ברית)</a> <a class="mo-conn-link" data-target="org-sjp">SJP (בעל ברית קמפוס)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-within-our-lifetime" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Within Our Lifetime <span class="org-badge badge-hate">קבוצת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1344,10 +1438,11 @@
                         <p>ארגון פרו-פלסטיני קיצוני בניו יורק. סיסמה: "Globalize the Intifada." ארגנו הפגנות שחסמו את הכניסה לבורסת ניו יורק, מוזיאון ברוקלין, ותחנות רכבת. לאחר 7 באוקטובר, ארגנו הפגנות שחגגו את המתקפה. מפגינים ליד שכונות יהודיות.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, StandWithUs, NY Post</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הללת אינתיפאדה</span> <span class="mo-tag tag-political">חסימות</span> <span class="mo-tag tag-political">הפגנות רחוב</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-amp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>AMP (American Muslims for Palestine) <span class="org-badge badge-political">שנוי במחלוקת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1358,10 +1453,11 @@
                         <p>ארגון הגג של SJP בקמפוסים. תביעה משפטית (2024) טענה ש-AMP היא "התגלמות מחדש" של Holy Land Foundation — ארגון שהורשע במימון חמאס ($12 מיליון). מנהיגי AMP שימשו בעבר בארגונים שנקשרו לחמאס. הארגון מכחיש את הקשר.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, US v. Holy Land Foundation (2008), Virginia federal lawsuit (2024)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">ארגון קמפוסים</span> <span class="mo-tag tag-finance">קשרי מימון חמאס</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fsjp" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>FSJP (Faculty for Justice in Palestine) <span class="org-badge badge-political">ארגון אקדמי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1372,10 +1468,11 @@
                         <p>ארגון מרצים שתומך ב-BDS אקדמי ומגבה את פעילות SJP. מרצים חברים הציעו החלטות חרם אקדמי על ישראל במספר אוניברסיטאות. מספקים "לגיטימציה אקדמית" לדה-לגיטימציה של ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: AMCHA Initiative, Brandeis Center</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">חרם אקדמי</span> <span class="mo-tag tag-academic">לגיטימציה אקדמית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pym" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Palestinian Youth Movement <span class="org-badge badge-political">ארגון פוליטי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1386,10 +1483,11 @@
                         <p>ארגון פרו-פלסטיני רדיקלי של צעירים. דוחה את זכות ישראל לקיום. ארגנו הפגנות עם סיסמאות "From the river to the sea" ו-"Resistance by any means necessary." שיתוף פעולה עם Samidoun ו-Within Our Lifetime.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, NGO Monitor</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">הפגנות רחוב</span> <span class="mo-tag tag-propaganda">הללת אינתיפאדה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-academic-boycott" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>חרם אקדמי (ASA, MESA, AAS) <span class="org-badge badge-institution">מוסדות</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1400,10 +1498,11 @@
                         <p>איגודים אקדמיים שהצביעו לטובת חרם על מוסדות ישראליים: ASA (American Studies Association, 2013), MESA (Middle East Studies Association, 2022), AAS (Asian American Studies). החרם מפלה מוסדות ישראליים תוך התעלמות מ-200+ מדינות עם רקורד זכויות אדם חמור יותר. AAUP (איגוד הפרופסורים) מתנגד לחרם אקדמי עקרונית.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, AAUP, Brandeis Center, Kenneth Marcus</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">חרם אקדמי</span> <span class="mo-tag tag-legal">החלטות מוסדיות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-electronic-intifada" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Electronic Intifada <span class="org-badge badge-media">תקשורת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1414,10 +1513,11 @@
                         <p>אתר חדשות אנטי-ציוני קיצוני. אבונימה תומך בפתרון מדינה אחת (ביטול ישראל). מפרסם תוכן שמנרמל אלימות פלסטינית ושולל את זכות ישראל לקיום. לאחר 7 באוקטובר, פירסם תכנים שהצדיקו את המתקפה.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, NGO Monitor, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תקשורת אנטי-ישראלית</span> <span class="mo-tag tag-propaganda">הצדקת אלימות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-mondoweiss" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Mondoweiss <span class="org-badge badge-media">תקשורת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1428,10 +1528,11 @@
                         <p>אתר חדשות אנטי-ציוני. מפרסם תוכן שדה-לגיטימיזם את ישראל באופן עקבי. וייס (יהודי-אמריקאי) מתנגד לציונות ולקיום מדינה יהודית. ביקורת: מפרסם מידע חד-צדדי ללא הקשר, ולעתים חוצה את הקו לאנטישמיות (לפי ADL).</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, CAMERA, NGO Monitor</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תקשורת אנטי-ישראלית</span> <span class="mo-tag tag-propaganda">דה-לגיטימציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-the-grayzone" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>The Grayzone <span class="org-badge badge-media">תקשורת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1442,6 +1543,7 @@
                         <p>אתר שמוגדר כ-"red-brown media" — שילוב של שמאל קיצוני ואוטוריטריזם. בלומנטל (יהודי-אמריקאי) מפרסם תוכן אנטי-ישראלי קיצוני, מגן על משטרים כמו אסד וסין, ומפיץ תיאוריות קונספירציה. אורח קבוע ב-RT (רוסיה) ו-Press TV (איראן).</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, The Atlantic, Washington Post</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הגנה על רודנים</span> <span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span> <span class="mo-tag tag-propaganda">הופעות בתקשורת ממלכתית</span></div></div>
                 </div>
             </div>
 
@@ -1464,7 +1566,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-iran" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>איראן <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1475,10 +1577,11 @@
                         <p>המדינה האנטישמית המסוכנת ביותר בעולם כיום. חמינאי קרא לישראל "גידול סרטני שצריך להיעקר." אחמדינג'אד ארח ועידת הכחשת שואה (2006). מממנת חמאס, חיזבאללה, חות'ים, PIJ ועוד (מיליארדי דולרים). תכננה פיגועים נגד מטרות יהודיות בבואנוס איירס (1992, 1994), בנגקוק, ניו דלהי, ואירופה. תוכנית גרעין שמאיימת על קיום ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: US State Dept, IAEA, ADL, AMIA Prosecution (Argentina)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-finance">מימון טרור</span> <span class="mo-tag tag-violence">איום גרעיני</span> <span class="mo-tag tag-violence">מלחמות פרוקסי</span> <span class="mo-tag tag-propaganda">הכחשת שואה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1979</span> המהפכה האסלאמית — חומייני מכריז מלחמה על ישראל</li> <li><span class="ev-date">1992</span> פיצוץ שגרירות בבואנוס איירס (דרך חיזבאללה) — 29 הרוגים</li> <li><span class="ev-date">1994</span> פיצוץ AMIA (דרך חיזבאללה) — 85 הרוגים</li> <li><span class="ev-date">2006</span> אחמדינג'אד מארח כנס להכחשת שואה</li> <li><span class="ev-date">2024</span> תקיפת טילים ישירה על ישראל (300+ טילים/מל"טים)</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">ממן רשת פרוקסי עולמית: חמאס (100-350 מ'/שנה), חיזבאללה (700 מ'-מיליארד/שנה), ג'יהאד (30-70 מ'/שנה), חות'ים (100+ מ'/שנה), מיליציות עיראקיות</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hezbollah">חיזבאללה (פרוקסי ראשי)</a> <a class="mo-conn-link" data-target="org-hamas">חמאס (ממומן)</a> <a class="mo-conn-link" data-target="org-pij">ג'יהאד אסלאמי (ממומן)</a> <a class="mo-conn-link" data-target="org-houthis">החות'ים (ממומן)</a> <a class="mo-conn-link" data-target="org-irgc">משמרות המהפכה (זרוע צבאית)</a> <a class="mo-conn-link" data-target="org-kataib-hezbollah">כתאאב חיזבאללה</a> <a class="mo-conn-link" data-target="org-north-korea">צפון קוריאה (שותף נשק)</a> <a class="mo-conn-link" data-target="org-russia">רוסיה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-govt" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>הרשות הפלסטינית <span class="org-badge badge-state">ממשל</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1489,10 +1592,11 @@
                         <p>מנהלת תוכנית "Pay for Slay" — $300+ מיליון/שנה למחבלים ומשפחותיהם. ספרי לימוד מכילים אנטישמיות, גלוריפיקציה של טרור, ומפות ללא ישראל (מחקר IMPACT-se). תקשורת רשמית מגלורפת מחבלים. עבאס כתב עבודת דוקטורט שמפקפקת בשואה ואמר "50 שואות" נגד הפלסטינים (2023). ב-2018 נשא נאום שהאשים יהודים בגרימת האנטישמיות נגדם.</p>
                     </div>
                     <div class="org-sources">מקורות: IMPACT-se, Palestinian Media Watch, Taylor Force Act, MEMRI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-finance">משכורות לטרור</span> <span class="mo-tag tag-propaganda">הסתה בספרי לימוד</span> <span class="mo-tag tag-propaganda">עיוות שואה</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">1994</span> הרשות הפלסטינית הוקמה (הסכמי אוסלו)</li> <li><span class="ev-date">2004</span> חוק טיילור פורס חושף תשלומים למחבלים</li> <li><span class="ev-date">2018</span> אבו מאזן מאשים יהודים בגרימת אנטישמיות</li> <li><span class="ev-date">2023</span> אבו מאזן: "50 שואות" נגד הפלסטינים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">סיוע בינלאומי (600+ מיליון$/שנה). משכורות למחבלים: 300+ מיליון$/שנה למשפחות מחבלים.</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-pa-fatah">הרש"פ/פתח (מפלגה)</a> <a class="mo-conn-link" data-target="org-al-aqsa-brigades">חטיבות אל-אקצא (מיליציה)</a> <a class="mo-conn-link" data-target="org-pa-media">תקשורת הרש"פ (זרוע תעמולה)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-yemen-houthis" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>תימן / חות'ים <span class="org-badge badge-state">ממשל דה-פקטו</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1503,10 +1607,11 @@
                         <p>הסיסמה הרשמית: "אללה אכבר, מוות לאמריקה, מוות לישראל, קללה על היהודים, ניצחון לאסלאם." הקהילה היהודית בתימן — אחת העתיקות בעולם (2,600 שנה) — נמחקה כמעט לחלוטין. ב-2021, החות'ים גירשו את היהודים האחרונים מתימן. שיגרו 200+ טילים ומל"טים לעבר ישראל מאז אוקטובר 2023.</p>
                     </div>
                     <div class="org-sources">מקורות: US State Dept, UN, BBC, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">טילים בליסטיים</span> <span class="mo-tag tag-violence">טיהור אתני</span> <span class="mo-tag tag-propaganda">סיסמה אנטישמית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-turkey" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>טורקיה (ארדואן / AKP) <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1517,10 +1622,11 @@
                         <p>ארדואן השווה את ישראל לנאצים מספר פעמים. ב-2014 אמר: "הם עולים על היטלר בברבריות." "Mein Kampf" של היטלר הוא רב-מכר בטורקיה. הסדרה הטלוויזיונית "Valley of the Wolves" (ממומנת ע"י המדינה) כוללת תוכן אנטישמי. ניתק יחסים דיפלומטיים עם ישראל (2024). יחד עם זאת, לטורקיה יש קהילה יהודית קטנה (~15,000) שחיה בשקט יחסי.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, MEMRI, Reuters, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">השוואות לנאצים</span> <span class="mo-tag tag-political">לוחמה דיפלומטית</span> <span class="mo-tag tag-propaganda">הסתה בתקשורת ממלכתית</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2010</span> תקרית ספינת מרמרה</li> <li><span class="ev-date">2014</span> ארדואן: ישראל "עולה על היטלר בברבריות"</li> <li><span class="ev-date">2024</span> ניתק קשרים דיפלומטיים עם ישראל</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">תקציב ממלכתי. תומך באחים המוסלמים ובחמאס דיפלומטית.</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">חמאס (תמיכה דיפלומטית)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">האחים המוסלמים (בעל ברית)</a> <a class="mo-conn-link" data-target="org-qatar">קטאר (בעל ברית)</a> <a class="mo-conn-link" data-target="org-trt-world">TRT World (זרוע תקשורת)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-malaysia" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>מלזיה <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1531,10 +1637,11 @@
                         <p>אין יחסים דיפלומטיים עם ישראל. מהאתיר מוחמד הצהיר: "יהודים שולטים בעולם באמצעות פרוקסים" (2003, בפני 57 מנהיגי מדינות מוסלמיות). אזרחים מלזים אסורים מכניסה לישראל ולהפך. דרכון מלזי כולל כיתוב "Valid to all countries except Israel." אנטישמיות מובנית בתקשורת ובחינוך.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, BBC, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">חרם דיפלומטי</span> <span class="mo-tag tag-propaganda">אנטישמיות ממלכתית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pakistan" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>פקיסטן <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1544,10 +1651,11 @@
                         <p>אין יחסים דיפלומטיים עם ישראל. דרכון פקיסטני מציין "valid for all countries of the world except Israel." אנטישמיות מובנית בחינוך ובתקשורת. מדינת מולדת של לשכר-א-טייבה. ספרי לימוד מכילים תעמולה אנטי-יהודית ואנטי-ישראלית. הקהילה היהודית נמחקה כמעט לחלוטין.</p>
                     </div>
                     <div class="org-sources">מקורות: US State Dept IRF Report, ADL, USCIRF</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">חרם דיפלומטי</span> <span class="mo-tag tag-propaganda">הסתה בספרי לימוד</span> <span class="mo-tag tag-violence">מתן מקלט לטרור</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-qatar" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>קטאר <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1557,10 +1665,11 @@
                         <p>המממנת העיקרית של חמאס — $1.8 מיליארד (2012-2023). מממנת את אל-ג'זירה שמפיצה תוכן אנטי-ישראלי. מארחת את מנהיגות חמאס. ספרי לימוד מכילים תוכן אנטישמי (מחקר IMPACT-se). מנגד: שימשה כמתווכת בעסקאות חטופים, מה שמסבך את התמונה.</p>
                     </div>
                     <div class="org-sources">מקורות: US Treasury, IMPACT-se, ADL, NY Times</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-finance">מימון טרור</span> <span class="mo-tag tag-propaganda">תעמולת תקשורת</span> <span class="mo-tag tag-political">אירוח חמאס</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2012-2023</span> 1.8 מיליארד$ הועברו לחמאס</li> <li><span class="ev-date">2023-2024</span> תיווך במשא ומתן על חטופים</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">עושר נפט/גז ממלכתי. חמאס: 1.8 מיליארד$. אל ג'זירה: 500+ מיליון$/שנה. תמיכה באחים המוסלמים.</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-hamas">חמאס (ממומן/מאורח)</a> <a class="mo-conn-link" data-target="org-muslim-brotherhood">האחים המוסלמים (בעל ברית)</a> <a class="mo-conn-link" data-target="org-al-jazeera">אל ג'זירה (ממומן)</a> <a class="mo-conn-link" data-target="org-turkey">טורקיה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-north-korea" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>צפון קוריאה <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1570,10 +1679,11 @@
                         <p>תומכת באויבי ישראל מאז שנות ה-60. סיפקה נשק לסוריה, איראן, וחמאס. סייעה לסוריה לבנות כור גרעיני (שהושמד ע"י ישראל, 2007). תעמולה ממלכתית אנטי-ישראלית. אין קהילה יהודית. שיתוף פעולה צבאי עם איראן.</p>
                     </div>
                     <div class="org-sources">מקורות: US State Dept, UN Panel of Experts, IAEA</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">הפצת נשק</span> <span class="mo-tag tag-violence">סיוע גרעיני</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-venezuela" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ונצואלה <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1584,10 +1694,11 @@
                         <p>צ'אבס (2009) ומאדורו גירשו את שגריר ישראל, ניתקו יחסים. צ'אבס האשים יהודים ב-"שליטה בעולם." לאחר ניתוק היחסים, בתי כנסת הותקפו. הקהילה היהודית התכווצה מ-22,000 ל-~6,000. מאדורו השווה את ישראל לנאצים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, US State Dept, AJC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">לוחמה דיפלומטית</span> <span class="mo-tag tag-propaganda">השוואות לנאצים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-russia" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>רוסיה <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1598,10 +1709,11 @@
                         <p>שימוש באנטישמיות כנשק פוליטי: פוטין טען שיהודים ומיעוטים אתניים תיפעלו את ההתערבות בבחירות ארה"ב (2017). RT ותקשורת רוסית מפיצות תוכן אנטי-ישראלי. מימון ארגוני ימין קיצוני באירופה. שיתוף פעולה עם איראן. רוסיה תמכה בהחלטות אנטי-ישראליות באו"ם. יחד עם זאת: רוסיה מגנה את הנאציזם באופן רשמי ויש לה קהילה יהודית פעילה (~150,000).</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, US Intelligence Community, BBC, Moscow Times</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">לוחמת מידע</span> <span class="mo-tag tag-political">שיתוף פעולה עם איראן</span> <span class="mo-tag tag-finance">מימון ימין קיצוני</span></div><div class="mo-label">אירועי מפתח</div> <ul class="mo-events"> <li><span class="ev-date">2017</span> פוטין טען שיהודים מניפולו בחירות בארה"ב</li> <li><span class="ev-date">2022</span> RT נאסר באיחוד האירופי לאחר פלישת אוקראינה</li> <li><span class="ev-date">2023-2024</span> תמיכה דיפלומטית באיראן ועמדות אנטי-ישראליות באו"ם</li> </ul> <div class="mo-label">מימון</div> <div class="mo-funding">תקציב ממלכתי ל-RT (400+ מיליון$/שנה), מימון מפלגות ימין קיצוני באירופה</div> <div class="mo-label">קשרים</div> <div class="mo-connections"> <a class="mo-conn-link" data-target="org-iran">איראן (בעל ברית)</a> <a class="mo-conn-link" data-target="org-rt">RT (זרוע תקשורת)</a> <a class="mo-conn-link" data-target="org-rim">RIM (קיצוניים מקומיים)</a> <a class="mo-conn-link" data-target="org-north-korea">צפון קוריאה (בעל ברית)</a> </div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-south-africa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>דרום אפריקה <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1612,10 +1724,11 @@
                         <p>הגישה תביעת "רצח עם" נגד ישראל ב-ICJ (2024). ANC שומרת על קשרים הדוקים עם חמאס וקוראת לו "תנועת שחרור." משרדי ממשלה הפיצו תעמולה אנטי-ישראלית. BDS-SA (דרום אפריקה) הוא מהחזקים בעולם. הקהילה היהודית (~52,000) מדווחת על עלייה באנטישמיות.</p>
                     </div>
                     <div class="org-sources">מקורות: ICJ Case, SAJBD (South African Jewish Board of Deputies), ADL</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">תביעת רצח עם ב-ICJ</span> <span class="mo-tag tag-political">לגיטימציה לחמאס</span> <span class="mo-tag tag-political">הובלת BDS</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-china" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>סין <span class="org-badge badge-state">ממשלה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1625,6 +1738,7 @@
                         <p>תמיכה דיפלומטית באיראן ובפלסטין. רשתות חברתיות סיניות מכילות תוכן אנטישמי (Weibo, Douyin). ספרים על "חוכמה יהודית" ברב-מכר שמכילים סטריאוטיפים. תקשורת ממלכתית מפרסמת תוכן אנטי-ישראלי חד-צדדי. סין אינה מממנת טרור ישירות, אך מספקת תמיכה דיפלומטית לאיראן בפורומים בינלאומיים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, MEMRI, Asia Times, China Media Project</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">תמיכה דיפלומטית באיראן</span> <span class="mo-tag tag-cyber">אנטישמיות ברשתות חברתיות</span></div></div>
                 </div>
             </div>
 
@@ -1647,7 +1761,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nazi-germany" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>גרמניה הנאצית (הרייך השלישי) <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1658,10 +1772,11 @@
                         <p>ביצעה את הרצח העם הגדול בהיסטוריה — השואה. 6 מיליון יהודים נרצחו באופן מתועש: מחנות השמדה (אושוויץ, טרבלינקה, סוביבור, מיידנק, בלז'ץ, חלמנו), יערות ירי (בבי יאר — 33,771 יהודים בימים), גטאות מוות (ורשה, לודז'). חוקי נירנברג (1935) הפכו יהודים לאזרחים מדרגה שנייה. "הפתרון הסופי" (1942) — תוכנית מדינית מתועשת לרצח כל יהודי אירופה.</p>
                     </div>
                     <div class="org-sources">מקורות: Yad Vashem, USHMM, Raul Hilberg "The Destruction of the European Jews" (1961)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">רצח עם</span> <span class="mo-tag tag-violence">מחנות השמדה</span> <span class="mo-tag tag-legal">חוקי גזע</span> <span class="mo-tag tag-propaganda">מכונת תעמולה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-soviet-union" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ברית המועצות <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1672,10 +1787,11 @@
                         <p>אנטישמיות ממוסדת תחת מסווה של "אנטי-ציונות." "פרשת הרופאים" (1953) — סטלין האשים רופאים יהודים בקשירת קשר לרצח מנהיגים. רצח שלומה מיכואלס (1948) ופירוק הוועד האנטי-פשיסטי היהודי. "מחלקת אנטי-ציונות" בממשלה שהפיצה תעמולה אנטישמית. Refuseniks — יהודים שנאסרו כי ביקשו לעלות לישראל (נתן שרנסקי — 9 שנות מאסר). תמכה במדינות ערב במלחמות נגד ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: Yad Vashem, Natan Sharansky "Fear No Evil," Gal Beckerman "When They Come for Us"</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">אנטישמיות ממלכתית</span> <span class="mo-tag tag-legal">משפטי ראווה</span> <span class="mo-tag tag-legal">איסור הגירה</span> <span class="mo-tag tag-propaganda">תעמולה אנטי-ציונית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-russian-empire" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>האימפריה הרוסית <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1686,10 +1802,11 @@
                         <p>"תחום המושב" (Pale of Settlement) — 5 מיליון יהודים נכלאו באזור מגורים מוגבל (1791-1917). גלי פוגרומים: 1881-1884, 1903-1906, 1918-1921 — אלפי יהודים נרצחו, עשרות אלפי בתים נשדדו ונשרפו. פוגרום קישינב (1903) — 49 הרוגים, זעזע את העולם. "פרוטוקולי זקני ציון" — זיוף של המשטרה הצארית (אוכרנה) שהפך לטקסט האנטישמי המשפיע ביותר בהיסטוריה (הופץ ע"י הנרי פורד ואדולף היטלר).</p>
                     </div>
                     <div class="org-sources">מקורות: Yad Vashem, John Klier "Pogroms: Anti-Jewish Violence in Modern Russian History" (1992)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">פוגרומים</span> <span class="mo-tag tag-legal">תחום המושב</span> <span class="mo-tag tag-propaganda">זיוף הפרוטוקולים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-vichy-france" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>צרפת וישי <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1700,10 +1817,11 @@
                         <p>ממשלת וישי שיתפה פעולה יזומה עם הנאצים — ללא לחץ גרמני. Statut des Juifs (1940) שלל זכויות מיהודים. שילחה 76,000 יהודים צרפתיים למחנות השמדה (רק 2,500 שרדו). פשיטת Vel' d'Hiv (1942) — משטרה צרפתית עצרה 13,152 יהודים כולל 4,115 ילדים. ב-1995, שיראק הכיר לראשונה באחריות צרפת.</p>
                     </div>
                     <div class="org-sources">מקורות: Yad Vashem, Robert Paxton "Vichy France" (1972), USHMM</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">גירושים</span> <span class="mo-tag tag-legal">חוקים אנטי-יהודיים</span> <span class="mo-tag tag-political">שיתוף פעולה עם הנאצים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fascist-italy" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>איטליה הפשיסטית <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1714,10 +1832,11 @@
                         <p>חוקי הגזע (Leggi razziali, 1938) שללו זכויות מ-47,000 יהודים איטלקיים. לאחר הכיבוש הגרמני (1943), כ-7,700 יהודים שולחו למחנות — 5,900 נרצחו. פשיטת גטו רומא (16 באוקטובר 1943) — 1,024 יהודים נעצרו, 16 שרדו.</p>
                     </div>
                     <div class="org-sources">מקורות: Yad Vashem, Susan Zuccotti "The Italians and the Holocaust" (1987), USHMM</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">חוקי גזע</span> <span class="mo-tag tag-violence">גירושים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-spanish-inquisition" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>האינקוויזיציה הספרדית <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1728,10 +1847,11 @@
                         <p>צו הגירוש (Alhambra Decree, 1492) — 200,000+ יהודים גורשו מספרד. האינקוויזיציה רדפה "מאראנוס" — יהודים שהמירו דתם לנצרות אך נחשדו בשמירת יהדות בסתר. ענישה כללה שריפה על המוקד (auto-da-f&eacute;), מאסר, החרמת רכוש. "חוקי טהרת הדם" (Limpieza de sangre) — אפליה אתנית גם נגד מומרים. פורטוגל העתיקה את הגירוש (1497). הצו הספרדי בוטל רשמית רק ב-1968.</p>
                     </div>
                     <div class="org-sources">מקורות: Henry Kamen "The Spanish Inquisition" (1997), Yad Vashem, Jane Gerber "The Jews of Spain" (1992)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">גירוש</span> <span class="mo-tag tag-violence">גיור כפוי</span> <span class="mo-tag tag-legal">חוקי טוהר דם</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-ottoman-empire" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>האימפריה העות'מאנית <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1742,10 +1862,11 @@
                         <p>מעמד "ד'ימי" — יהודים (ונוצרים) כאזרחים מדרגה שנייה: מס ג'יזיה, הגבלות לבוש, איסור על רכיבה על סוס, עדות בבית משפט. "ד'ימי" טוב יותר מאירופה באותה תקופה — יהודים ברחו מהאינקוויזיציה הספרדית לאימפריה העות'מאנית. אך עדיין: אפליה ממוסדת, פוגרומים מקומיים, ועלילת דמשק (1840).</p>
                     </div>
                     <div class="org-sources">מקורות: Bernard Lewis "The Jews of Islam" (1984), Mark Cohen "Under Crescent and Cross" (1994)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">סטטוס ד'ימי</span> <span class="mo-tag tag-finance">מס ג'יזיה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-arab-states-expulsion" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>מדינות ערב — גירוש היהודים (1948-1970s) <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1756,10 +1877,11 @@
                         <p>~850,000 יהודים גורשו או נמלטו ממדינות ערב ואיראן לאחר הקמת ישראל. עיראק: פרהוד (1941, 180 הרוגים), גירוש 130,000 (1950-51). מצרים: גירוש 80,000 (1956). לוב: פוגרומים (1945, 1948), גירוש 36,000. תימן: "מבצע מרבד הקסמים" — 49,000. מרוקו: 250,000 עזבו. סוריה: 30,000. טוניסיה, אלג'יריה, לבנון — קהילות עתיקות נמחקו. רכוש בשווי מוערך של $300 מיליארד (בערכי 2024) הוחרם.</p>
                     </div>
                     <div class="org-sources">מקורות: JIMENA, Adi Schwartz &amp; Einat Wilf "The War of Return," JJAC (Justice for Jews from Arab Countries)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">גירושים המוניים</span> <span class="mo-tag tag-finance">חילוט רכוש</span> <span class="mo-tag tag-violence">פוגרומים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-communist-poland-1968" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>פולין הקומוניסטית — מסע 1968 <span class="org-badge badge-historical">היסטורי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1770,6 +1892,7 @@
                         <p>קמפיין "אנטי-ציוני" (אנטישמי בפועל) שהוביל לגירוש ~15,000-20,000 יהודים מפולין. שארית הפליטה של השואה שנשארה בפולין גורשה בשנית. פוטרו מעבודות, שוללו דרכונים, ונאלצו לחתום על ויתור על אזרחות. כל זאת 23 שנה לאחר סיום השואה.</p>
                     </div>
                     <div class="org-sources">מקורות: Dariusz Stola "Kampania antysyjonistyczna w Polsce 1967-1968" (2000), Yad Vashem</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">טיהורים</span> <span class="mo-tag tag-violence">גירוש</span> <span class="mo-tag tag-propaganda">קמפיין אנטי-ציוני</span></div></div>
                 </div>
             </div>
 
@@ -1792,7 +1915,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-al-jazeera" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>אל-ג'זירה <span class="org-badge badge-media">תקשורת ממלכתית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1803,10 +1926,11 @@
                         <p>הערוץ הערבי הנצפה ביותר בעולם. ממומן ע"י ממשלת קטאר. ביקורת: כיסוי חד-צדדי ועקבי נגד ישראל, הנחת במה לנציגי חמאס, הפקות שהכילו אנטישמיות (כולל תוכנית ילדים שהציגה יהודים כ"קופים וחזירים"). AJ+ (הזרוע הדיגיטלית) הפיצה סרטון שמסופק בהכחשת שואה (2019, הוסר לאחר ביקורת). ישראל סגרה את משרדי אל-ג'זירה (2024).</p>
                     </div>
                     <div class="org-sources">מקורות: MEMRI, HonestReporting, BBC Media Watch, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תעמולה ממלכתית</span> <span class="mo-tag tag-propaganda">תוכן הכחשת שואה</span> <span class="mo-tag tag-propaganda">סיקור חד-צדדי</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-press-tv" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Press TV <span class="org-badge badge-media">תקשורת ממלכתית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1817,10 +1941,11 @@
                         <p>ערוץ התעמולה האנגלית של איראן. מפיץ הכחשת שואה, תיאוריות קונספירציה אנטישמיות, ותעמולה נגד ישראל באופן שיטתי. מארח מכחישי שואה (דייויד דיוק, קווין בארט). הורד מלוויינים באירופה. סנקציות אמריקאיות על הערוץ.</p>
                     </div>
                     <div class="org-sources">מקורות: US Treasury (sanctions), ADL, Ofcom (UK regulator)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-propaganda">תעמולה ממלכתית</span> <span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-rt" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>RT (Russia Today) <span class="org-badge badge-media">תקשורת ממלכתית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1831,10 +1956,11 @@
                         <p>ערוץ התעמולה הרוסי. מפיץ תוכן אנטי-ישראלי ונותן במה לקונספירטורים אנטישמיים (דייויד דיוק, ניק גריפין). מעודד פילוג חברתי במערב. נאסר ב-EU לאחר פלישת אוקראינה (2022). זוהה ע"י מודיעין אמריקאי כ"כלי השפעה" של קרמלין.</p>
                     </div>
                     <div class="org-sources">מקורות: US DNI, EU Council Decision, Ofcom</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תעמולה ממלכתית</span> <span class="mo-tag tag-cyber">לוחמת מידע</span> <span class="mo-tag tag-propaganda">במה לקיצוניים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-trt-world" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>TRT World <span class="org-badge badge-media">תקשורת ממלכתית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1845,10 +1971,11 @@
                         <p>ערוץ באנגלית של ממשלת טורקיה. כיסוי אנטי-ישראלי עקבי, שמשקף את הרטוריקה של ארדואן. מנרמל השוואות ישראל-נאצים. קהל יעד: עולם מוסלמי אנגלופוני ואירופה.</p>
                     </div>
                     <div class="org-sources">מקורות: MEMRI, HonestReporting, CAMERA</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תעמולה ממלכתית</span> <span class="mo-tag tag-propaganda">השוואות לנאצים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pa-media" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>תקשורת הרשות הפלסטינית <span class="org-badge badge-media">תקשורת ממלכתית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1858,10 +1985,11 @@
                         <p>PA TV, Al-Hayat Al-Jadida (עיתון רשמי), ורשתות חברתיות רשמיות מפיצים באופן שיטתי: גלוריפיקציה של מחבלים, הסתה נגד יהודים, הכחשת קשר יהודי לירושלים, הכחשת בית המקדש, ותעמולה אנטישמית. Palestinian Media Watch מתעדת אלפי דוגמאות מדי שנה. ספרי לימוד קוראים לג'יהאד ומציגים מפה ללא ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: Palestinian Media Watch (PMW), MEMRI, IMPACT-se</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הילול טרור</span> <span class="mo-tag tag-propaganda">הסתה</span> <span class="mo-tag tag-propaganda">הכחשת המקדש</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-memri" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>MEMRI — ממצאים <span class="org-badge badge-institution">מקור מעקב</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1871,10 +1999,11 @@
                         <p>MEMRI (Middle East Media Research Institute) מתרגם ומתעד תוכן אנטישמי מתקשורת ערבית ואיסלאמית. ממצאים: אלפי דוגמאות של הכחשת שואה, עלילת דם, "פרוטוקולי זקני ציון", האשמות בשליטה עולמית — בשידורי טלוויזיה רשמיים, ספרי לימוד, ודרשות מסגדים ברחבי המזרח התיכון.</p>
                     </div>
                     <div class="org-sources">מקורות: MEMRI.org — ארכיון של 25+ שנים של תרגומים ותיעוד</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-academic">תיעוד</span> <span class="mo-tag tag-academic">תרגום</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-4chan-8kun" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>4chan / 8kun <span class="org-badge badge-digital">פלטפורמה דיגיטלית</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1884,10 +2013,11 @@
                         <p>פורומים אנונימיים שמהווים מוקד רדיקליזציה אנטישמית. לוח /pol/ ("Politically Incorrect") מכיל תוכן ניאו-נאצי, הכחשת שואה, ותיאוריות קונספירציה אנטישמיות באופן שוטף. רוצחי הטבח בפיטסבורג (2018), פאווי (2019), כרייסטצ'רץ' (2019), ובאפלו (2022) פרסמו מניפסטים או הודעות בפלטפורמות אלו לפני הפיגועים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, FBI, Tech Against Terrorism</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-violence">מניפסטים של רוצחים</span> <span class="mo-tag tag-propaganda">הכחשת שואה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-qanon" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>QAnon <span class="org-badge badge-digital">תנועת קונספירציה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1898,6 +2028,7 @@
                         <p>תנועת קונספירציה שמאמינה ב"קבל" (cabal) של אליטות שולטות בעולם ועוסקות בפדופיליה ושתיית דם (עלילת דם מודרנית). למרות שלא תמיד אנטישמית במפורש, המוטיבים זהים ל-"פרוטוקולי זקני ציון" — אליטה סודית ששולטת בממשלות, בנקים ותקשורת. ADL תיעדה חפיפה משמעותית בין תוכן QAnon לאנטישמיות מסורתית.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, FBI (domestic threat designation, 2019), SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span> <span class="mo-tag tag-propaganda">מוטיבים של עלילת דם</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
@@ -1920,7 +2051,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unhrc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNHRC (מועצת זכויות האדם של האו"ם) <span class="org-badge badge-institution">מוסד בינלאומי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1930,10 +2061,11 @@
                         <p>הגוף הבינלאומי עם ההטיה החמורה ביותר נגד ישראל. ישראל היא המדינה היחידה עם סעיף קבוע בכל ישיבה (Agenda Item 7). מ-2006 ועד 2023: 99 החלטות נגד ישראל — יותר מכל שאר מדינות העולם יחד. מדינות כמו צפון קוריאה, סין, ואיראן מקבלות פחות החלטות גינוי ביחד. קבעו Commission of Inquiry קבועה (2021) — הראשונה ללא הגבלת זמן בהיסטוריה.</p>
                     </div>
                     <div class="org-sources">מקורות: UN Watch, US State Dept, Hillel Neuer testimony</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">החלטות אנטי-ישראליות</span> <span class="mo-tag tag-legal">סעיף קבע</span> <span class="mo-tag tag-political">סטנדרטים כפולים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unrwa" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNRWA <span class="org-badge badge-institution">מוסד בינלאומי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1943,10 +2075,11 @@
                         <p>הסוכנות לסיוע לפליטים פלסטיניים. בעיות מתועדות: 12+ עובדים השתתפו בטבח 7 באוקטובר (חקירת או"ם, 2024). ספרי לימוד של UNRWA מכילים הסתה, אנטישמיות, וגלוריפיקציה של טרור (מחקרי IMPACT-se). מנהרות חמאס נמצאו מתחת למתקני UNRWA. UNRWA מנציחה את מעמד "פליט" לנצח (5.9 מיליון) — הסוכנות היחידה בעולם שמגדירה פליטות כתורשתיות.</p>
                     </div>
                     <div class="org-sources">מקורות: UN OIOS Investigation (2024), IMPACT-se, US GAO, Israeli intelligence</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">סטטוס פליט תמידי</span> <span class="mo-tag tag-propaganda">הסתה בספרי לימוד</span> <span class="mo-tag tag-violence">שותפות לטרור</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-icc" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ICC (בית הדין הפלילי הבינלאומי) <span class="org-badge badge-institution">מוסד בינלאומי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1956,10 +2089,11 @@
                         <p>הוציא צווי מעצר נגד ראש ממשלת ישראל ושר הביטחון (2024). ביקורת: ישראל (כמו ארה"ב, רוסיה וסין) אינה חברה ב-ICC ואינה מכירה בסמכותו. ה-ICC לא הוציא צווים נגד מנהיגי סין (אויגורים), רוסיה (מריופול — צו הוצא רק ב-2023), או איראן. הטענה: סלקטיביות שמנרמלת את הדמוניזציה של ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: ICC Rome Statute, US State Dept, Eugene Kontorovich (legal analysis)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">תביעה סלקטיבית</span> <span class="mo-tag tag-legal">נשק פוליטי</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-durban-conference" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ועידת דרבן (2001) <span class="org-badge badge-institution">אירוע</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1969,10 +2103,11 @@
                         <p>ועידת האו"ם נגד גזענות (דרבן, דרום אפריקה) הפכה לפלטפורמה אנטישמית. הפורום הלא-ממשלתי אימץ הצהרה שקוראת לישראל "מדינה גזענית אפרטהיידית." הופצו עותקי "פרוטוקולי זקני ציון" וקריקטורות אנטישמיות. ארה"ב וישראל עזבו. הוועידה נחשבת לנקודת ההשקה של תנועת BDS המודרנית.</p>
                     </div>
                     <div class="org-sources">מקורות: US State Dept, ADL, Anne Bayefsky, UN Watch</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">במה אנטישמית</span> <span class="mo-tag tag-political">השקת BDS</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unesco" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>UNESCO <span class="org-badge badge-institution">מוסד בינלאומי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1982,10 +2117,11 @@
                         <p>אימצה החלטות שמנתקות את הקשר היהודי לירושלים: התייחסות להר הבית רק בשם "חרם אל-שריף" (2016). החלטה שסיווגה את מערת המכפלה והמסגד הישן בחברון כ"אתרי מורשת פלסטיניים" (2017). ישראל וארה"ב עזבו את UNESCO (2017, חזרו מאוחר יותר). ההחלטות מנסות למחוק את הקשר ההיסטורי של יהודים למקומות הקדושים ביותר שלהם.</p>
                     </div>
                     <div class="org-sources">מקורות: UNESCO Resolutions, US State Dept, Times of Israel</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מחיקת היסטוריה</span> <span class="mo-tag tag-legal">החלטות אנטי-ישראליות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-unga" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>העצרת הכללית של האו"ם (UNGA) <span class="org-badge badge-institution">מוסד בינלאומי</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -1995,6 +2131,7 @@
                         <p>מ-2015 ועד 2023: 140 החלטות גינוי נגד ישראל, לעומת 68 נגד כל שאר המדינות יחד (כולל סוריה, צפון קוריאה, איראן, רוסיה, סין). החלטה 3379 (1975) הגדירה ציונות כ"גזענות" — בוטלה ב-1991. "ועדת הזכויות הבלתי-ניתנות לביטול של העם הפלסטיני" — גוף קבוע חסר תקדים. חוסר הפרופורציה מתועד ומבוקר ע"י מומחים במשפט בינלאומי.</p>
                     </div>
                     <div class="org-sources">מקורות: UN Watch, US State Dept, Dore Gold "Tower of Babble" (2004)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">החלטות לא פרופורציונליות</span> <span class="mo-tag tag-propaganda">החלטת ציונות=גזענות</span></div></div>
                 </div>
             </div>
 
@@ -2017,7 +2154,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-afd" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>AfD (Alternative f&uuml;r Deutschland) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2028,10 +2165,11 @@
                         <p>מפלגת ימין קיצוני — שנייה בגודלה בגרמניה (2024). ח"כ אלכסנדר גאולנד אמר שהשואה היא "ליכלוך ציפורים" (Vogelschiss) בהיסטוריה הגרמנית. ב"רן ה"קה (בתורינגיה) סווג כ"ימני קיצוני מוכח" ע"י המודיעין הגרמני. יחד עם זאת: AfD טוענת שהיא פרו-ישראלית ומתנגדת לאנטישמיות מוסלמית — הביקורת מכוונת למינימליזציה של השואה ולקשרים לניאו-נאצים.</p>
                     </div>
                     <div class="org-sources">מקורות: German Verfassungsschutz, ADL, DW, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הקטנת שואה</span> <span class="mo-tag tag-political">פוליטיקת ימין קיצוני</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fpoe" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>FP&Ouml; (Freiheitliche Partei &Ouml;sterreichs) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2042,10 +2180,11 @@
                         <p>מפלגה שהוקמה ע"י נאצים לשעבר (אנטון ריינתלר, חבר SS). י"רג היידר (שנות ה-90-2000) שיבח את מדיניות התעסוקה הנאצית. חברים השתתפו באירועים עם סמלים ניאו-נאציים. ב-2025 ניצחה בבחירות. יחד עם זאת: המפלגה ניסתה ריברנדינג ומנהיגים נוכחיים מגנים אנטישמיות באופן רשמי.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, Wiesenthal Center, DW, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">מורשת נאצית</span> <span class="mo-tag tag-political">פוליטיקת ימין קיצוני</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-fidesz" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Fidesz (הונגריה / אורבן) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2056,10 +2195,11 @@
                         <p>קמפיין אנטי-סורוס (2017-2019) — שלטי חוצות ענקיים עם פניו של ג'ורג' סורוס (יהודי-הונגרי, ניצול שואה) ו-"Let's not let Soros have the last laugh." ADL וקהילה היהודית ההונגרית מחו שהקמפיין מעורר אנטישמיות. אורבן שיבח את מיקלוש הורתי (מנהיג הונגריה שסייע לנאצים) כ-"מדינאי מצוין." יחד עם זאת: אורבן תומך בישראל דיפלומטית ומתנגד לאנטישמיות באופן רשמי.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, EU Parliament, Mazsihisz (Hungarian Jewish Federation)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">קמפיין אנטי-סורוס</span> <span class="mo-tag tag-propaganda">רוויזיוניזם היסטורי</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-labour-uk-corbyn" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Labour בריטניה (תקופת קורבין) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2070,10 +2210,11 @@
                         <p>סקנדל אנטישמיות מוכח ומתועד. EHRC (Equality and Human Rights Commission — גוף סטטוטורי) חקרה ומצאה (2020): Labour הפרה את חוק השוויון — 3 הפרות ספציפיות של הטרדה אנטישמית ומחדלי מנהיגות. 130+ חברי מפלגה הושעו בגין אנטישמיות. קורבין עצמו: השתתף בטקס זיכרון לטרוריסטים פלסטיניים (מינכן), כינה חמאס וחיזבאללה "חברים", ותמך בציור קיר אנטישמי. 86% מיהודים בריטיים אמרו שקורבין אנטישמי (סקר 2018).</p>
                     </div>
                     <div class="org-sources">מקורות: EHRC Report (2020), Jewish Labour Movement, Campaign Against Antisemitism, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">אנטישמיות מוסדית</span> <span class="mo-tag tag-political">הזדהות עם טרור</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-national-rally-france" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>National Rally (צרפת) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2084,10 +2225,11 @@
                         <p>ז'אן-מרי לה פן (מייסד) הורשע 6 פעמים על הסתה — כולל כינוי תאי הגזים "פרט קטן בהיסטוריה" (1987). מרין לה פן (ביתו) עשתה ריברנדינג: שינתה שם, הרחיקה את אביה (2015), ומגנה אנטישמיות. יחד עם זאת: חברי מפלגה עדיין נתפסים בהצהרות אנטישמיות, והשורשים ההיסטוריים מתועדים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, CNCDH (French Commission), Le Monde</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה (מייסד)</span> <span class="mo-tag tag-political">פוליטיקת ימין קיצוני</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-bnp-national-front" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>BNP / National Front (בריטניה) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2098,10 +2240,11 @@
                         <p>BNP (British National Party) בהנהגת ניק גריפין — מכחיש שואה מורשע. National Front (שנות ה-70-80) היה הכוח הניאו-פשיסטי המוביל בבריטניה. שני הארגונים אנטישמיים במפורש. גריפין הורשע ב-1998 על הסתה לשנאה גזעית. BNP כמעט נעלם פוליטית.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, HOPE Not Hate, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-political">ניאו-פשיזם</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sinn-fein" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sinn F&eacute;in <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2112,10 +2255,11 @@
                         <p>מפלגה אירית שמזדהה עם "המאבק הפלסטיני" כמקבילה ל-IRA. אירלנד היא מהמדינות הנוקשות ביותר נגד ישראל באירופה. ח"כ Sinn F&eacute;in השתתפו בהפגנות שבהן נשמעו קריאות אנטישמיות. גירוש שגרירי ישראל. יחד עם זאת: Sinn F&eacute;in מבחינה רשמית בין אנטי-ציונות לאנטישמיות.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, Irish Times, Jewish Representative Council of Ireland</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">דיפלומטיה אנטי-ישראלית</span> <span class="mo-tag tag-political">סולידריות IRA-פלסטין</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-pis-poland" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>PiS (חוק וצדק, פולין) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2126,10 +2270,11 @@
                         <p>חוקקה "חוק השואה" (2018) — עונש מאסר על ייחוס פשעים נאציים ל"אומה הפולנית." ביקורת: החוק מנסה לטשטש את שיתוף הפעולה הפולני עם הנאצים (כמו טבח ידוואבנה, 1941). ישראל ויד ושם מחו. החוק רוכך מאוחר יותר (הוסרה הסנקציה הפלילית). יחד עם זאת: PiS תומכת בישראל ומגנה אנטישמיות באופן רשמי.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, Yad Vashem, US State Dept, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-legal">חוק השואה</span> <span class="mo-tag tag-propaganda">רוויזיוניזם היסטורי</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-podemos" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Podemos (ספרד) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2140,10 +2285,11 @@
                         <p>מפלגת שמאל קיצוני ספרדית. פבלו איגלסיאס (מנהיג לשעבר) ואיונה בלארה תומכים ב-BDS ומשתמשים ברטוריקה אנטי-ישראלית קיצונית. ספרד הכירה במדינה פלסטינית (2024). חברי Podemos השתמשו במוטיבים אנטישמיים בביקורת על ישראל.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, ACOM (Spanish pro-Israel group), El Pa&iacute;s</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-political">תמיכה ב-BDS</span> <span class="mo-tag tag-propaganda">מוטיבים אנטישמיים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-syriza" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Syriza (יוון) <span class="org-badge badge-political">מפלגה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2154,6 +2300,7 @@
                         <p>מפלגת שמאל שהייתה בשלטון (2015-2019). חברים השתמשו ברטוריקה אנטי-ישראלית ולעתים אנטישמית. ציפראס השווה את עזה לגטו ורשה. קשרים עם BDS. ביקורת: ההשוואות חוצות את הקו מביקורת לגיטימית על ישראל לדה-לגיטימציה אנטישמית.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, KIS (Central Board of Jewish Communities in Greece)</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">השוואות לנאצים</span> <span class="mo-tag tag-political">תמיכה ב-BDS</span></div></div>
                 </div>
             </div>
 
@@ -2176,7 +2323,7 @@
     <div class="cat-body">
         <div class="org-grid">
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-kanye-west" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>קניה ווסט (Ye) <span class="org-badge badge-hate">אנטישמי מפורש</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2187,10 +2334,11 @@
                         <p>ראפר ומעצב אופנה עם 30+ מיליון עוקבים. באוקטובר 2022 הצהיר: "I'm going death con 3 on Jewish people." שיבח את היטלר בראיון לאלכס ג'ונס: "I like Hitler." ארח ארוחת ערב עם ניק פואנטס ודונלד טראמפ. איבד חוזים עם Adidas ($1.5 מיליארד), Gap, Balenciaga. ההצהרות הובילו לזינוק של 61% באירועים אנטישמיים בארה"ב (ADL, 2022).</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, NY Times, BBC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">אנטישמיות סלבריטאית</span> <span class="mo-tag tag-propaganda">שבח להיטלר</span> <span class="mo-tag tag-cyber">חשיפה ברשתות חברתיות</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-david-duke" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>דייוויד דיוק <span class="org-badge badge-hate">אנטישמי מפורש</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2201,10 +2349,11 @@
                         <p>"Grand Wizard" של KKK (1974-1980). כיהן כח"כ במדינת לואיזיאנה. מכחיש שואה, אנטישמי מקצועי. הספר "Jewish Supremacism" (2003) מופץ כתעמולה. מתארח ב-Press TV (איראן) ו-RT (רוסיה). נשפט וישב בכלא על הונאת מס. ממשיך להפיץ תעמולה אנטישמית באינטרנט.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-violence">מנהיגות KKK</span> <span class="mo-tag tag-propaganda">הופעות בתקשורת ממלכתית</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-louis-farrakhan" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>לואי פאראחאן <span class="org-badge badge-hate">אנטישמי מפורש</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2215,10 +2364,11 @@
                         <p>האנטישמי השחור המשפיע ביותר בארה"ב. "Hitler was a very great man" (1984). "Jews are termites" (2018). "Satanic Jews." עצרת "Million Man March" (1995) משכה מאות אלפים. ספריו מופצים בקהילות שחורות. למרות האנטישמיות, נהנה מלגיטימציה — ח"כים ומפורסמים צולמו עמו.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, AJC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הטפת שנאה</span> <span class="mo-tag tag-propaganda">עצרות המוניות</span> <span class="mo-tag tag-propaganda">שבח להיטלר</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-antisemitic-shootings" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>פיגועי ירי אנטישמיים — 2018-2022 <span class="org-badge badge-terror">טרור</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2230,10 +2380,11 @@
                         <strong>טבח באפלו (14.5.2022):</strong> פייטון גנדרון רצח 10 שחורים — המניפסט כלל פרקים אנטישמיים. כל הרוצחים רודקלו באינטרנט (4chan, 8chan, Gab, Stormfront).</p>
                     </div>
                     <div class="org-sources">מקורות: FBI, ADL, DOJ Indictments, Pittsburgh Post-Gazette</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">ירי המוני</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-violence">תקיפות בתי כנסת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-nick-fuentes" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>ניק פואנטס <span class="org-badge badge-hate">אנטישמי מפורש</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2244,10 +2395,11 @@
                         <p>מפיץ אנטישמיות והכחשת שואה לקהל צעיר תחת מעטפת "America First." מנהל את תנועת Groypers ואת כנס AFPAC. ארגן את קניה ווסט לארוחת ערב עם טראמפ. נאסר מטוויטר, YouTube, PayPal. נמצא ברשימת "No Fly" של ארה"ב. ADL מזהה אותו כאחד ה-50 הקיצוניים המסוכנים ביותר בארה"ב.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, FBI</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">הכחשת שואה</span> <span class="mo-tag tag-political">חדירה פוליטית</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-andrew-tate" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Andrew Tate <span class="org-badge badge-hate">שנוי במחלוקת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2258,10 +2410,11 @@
                         <p>משפיען עם מיליארדי צפיות (TikTok). פרסם הצהרות שמשתמשות במוטיבים אנטישמיים: "they control the Matrix" (כשהכוונה ליהודים), שיתוף תוכן קונספירטיבי. התאסלם (2022). נעצר ברומניה בחשד לסחר בנשים. ההשפעה על קהל גברים צעירים מנרמלת אנטישמיות יחד עם מיזוגיניה.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, HOPE Not Hate, BBC, Institute for Strategic Dialogue</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span> <span class="mo-tag tag-cyber">חשיפה ברשתות חברתיות</span> <span class="mo-tag tag-propaganda">רדיקליזציה של צעירים</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-incel-movement" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>תנועת Incel <span class="org-badge badge-digital">תנועה מקוונת</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2271,10 +2424,11 @@
                         <p>תנועה של גברים שמאשימים נשים וחברה בבדידותם המינית. חפיפה משמעותית עם אנטישמיות: "Jews control feminism," "Jews promote race-mixing." אליוט רודג'ר (2014, 6 הרוגים), אלק מינסיאן (2018, 10 הרוגים). ADL מזהה Incel כ"תנועה קיצונית" עם אלמנטים אנטישמיים.</p>
                     </div>
                     <div class="org-sources">מקורות: ADL, SPLC, FBI, Institute for Strategic Dialogue</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות המונית</span> <span class="mo-tag tag-cyber">רדיקליזציה מקוונת</span> <span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span></div></div>
                 </div>
             </div>
 
-            <div class="org-card" onclick="toggleOrg(this, event)">
+            <div class="org-card" id="org-sovereign-citizens" onclick="toggleOrg(this, event)">
                 <div class="org-header">
                     <h4>Sovereign Citizens <span class="org-badge badge-hate">תנועת שנאה</span></h4>
                     <span class="org-arrow">&#9660;</span>
@@ -2284,12 +2438,58 @@
                         <p>תנועה שטוענת שהממשלה הפדרלית אינה לגיטימית. חלק מהזרמים מאמינים ש"יהודים שולטים בממשלה" ובבנקים. קשרים ל-Christian Identity ולמיליציות. FBI מגדירה Sovereign Citizens כ"domestic terrorism threat." חברים רצחו שוטרים וביצעו מעשי אלימות.</p>
                     </div>
                     <div class="org-sources">מקורות: FBI, ADL, SPLC</div>
+                    <div class="org-mo"><div class="mo-label">טקטיקות</div><div class="mo-tactics"><span class="mo-tag tag-violence">אלימות אנטי-ממשלתית</span> <span class="mo-tag tag-propaganda">תיאוריות קונספירציה</span></div></div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- NETWORK MAP -->
+<!-- ═══════════════════════════════════════════ -->
+<section style="margin-top: 50px; margin-bottom: 40px;" id="network-section">
+    <div class="section-header">
+        <h2>מפת קשרים — איך הם מחוברים</h2>
+        <div class="section-divider"></div>
+        <p>ויזואליזציה אינטראקטיבית של הקשרים בין ארגונים אנטישמיים. לחצו על נקודה כדי לגלול לכרטיס הארגון.</p>
+    </div>
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <button class="net-filter active" data-group="all" onclick="filterNetwork('all',this)">הכל</button>
+        <button class="net-filter" data-group="islamist" onclick="filterNetwork('islamist',this)" style="border-color:#e74c3c;color:#e74c3c">טרור אסלאמיסטי</button>
+        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#e67e22;color:#e67e22">ניאו-נאצים</button>
+        <button class="net-filter" data-group="bhi" onclick="filterNetwork('bhi',this)" style="border-color:#9b59b6;color:#9b59b6">עברים שחורים</button>
+        <button class="net-filter" data-group="antizionist" onclick="filterNetwork('antizionist',this)" style="border-color:#2ecc71;color:#2ecc71">אנטי-ציונות</button>
+        <button class="net-filter" data-group="govts" onclick="filterNetwork('govts',this)" style="border-color:#3498db;color:#3498db">ממשלות</button>
+        <button class="net-filter" data-group="media" onclick="filterNetwork('media',this)" style="border-color:#f1c40f;color:#f1c40f">תקשורת</button>
+    </div>
+    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('funding',this.checked)" style="accent-color:#f1c40f"> <span style="color:#f1c40f">מימון</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('ideology',this.checked)" style="accent-color:#95a5a6"> <span style="color:#95a5a6">אידיאולוגיה</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('cooperation',this.checked)" style="accent-color:#3498db"> <span style="color:#3498db">שיתוף פעולה</span></label>
+        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('membership',this.checked)" style="accent-color:#e74c3c"> <span style="color:#e74c3c">חברות</span></label>
+    </div>
+    <div id="network-map" style="width:100%;height:600px;background:#0a0a1a;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
+        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;">טוען מפת קשרים...</div>
+    </div>
+    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-size: 0.78em; color: #888;">
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-right:4px;vertical-align:middle;"></span>אסלאמיסטי</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;margin-right:4px;vertical-align:middle;"></span>ניאו-נאצי</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;margin-right:4px;vertical-align:middle;"></span>כתות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2ecc71;margin-right:4px;vertical-align:middle;"></span>אנטי-ציונות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;margin-right:4px;vertical-align:middle;"></span>ממשלות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;margin-right:4px;vertical-align:middle;"></span>תקשורת</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#95a5a6;margin-right:4px;vertical-align:middle;"></span>מוסדות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1abc9c;margin-right:4px;vertical-align:middle;"></span>מפלגות</span>
+    </div>
+</section>
+<style>
+.net-filter { background: transparent; border: 1px solid #555; color: #888; padding: 5px 14px; border-radius: 50px; cursor: pointer; font-size: 0.82em; transition: all 0.2s; }
+.net-filter:hover { border-color: #e2b714; color: #e2b714; }
+.net-filter.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
+@media (max-width: 768px) { #network-map { height: 400px !important; } }
+</style>
 
 <!-- ═══════════════════════════════════════════ -->
 <!-- LONE WOLF ATTACKS SECTION -->
@@ -2320,6 +2520,110 @@ function toggleOrg(el, ev) {
     if (ev.target.tagName === 'A') return;
     el.classList.toggle('open');
 }
+function scrollToOrg(orgId) {
+    var card = document.getElementById(orgId);
+    if (!card) return;
+    var cat = card.closest('.cat-section');
+    if (cat && !cat.classList.contains('open')) cat.classList.add('open');
+    if (!card.classList.contains('open')) card.classList.add('open');
+    setTimeout(function() {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        card.classList.add('flash-highlight');
+        setTimeout(function() { card.classList.remove('flash-highlight'); }, 2000);
+    }, 100);
+}
+document.addEventListener('click', function(e) {
+    var link = e.target.closest('.mo-conn-link');
+    if (link) { e.preventDefault(); e.stopPropagation(); scrollToOrg(link.getAttribute('data-target')); }
+});
+
+/* === NETWORK MAP (lazy-loaded) === */
+var netInstance = null, netData = null, allEdges = [], activeGroup = 'all', hiddenEdgeTypes = {};
+function initNetwork() {
+    if (netInstance) return;
+    var container = document.getElementById('network-map');
+    if (!container) return;
+    var nodes = new vis.DataSet(ORG_NODES.map(function(n) {
+        var g = ORG_GROUPS[n.group] || {};
+        return {id:n.id, label:n.label, title:n.title, group:n.group,
+            color:g.color, shape:g.shape||'dot', font:Object.assign({size:11},g.font||{}), size:14};
+    }));
+    allEdges = ORG_EDGES.map(function(e,i) {
+        var t = EDGE_TYPES[e.type] || {};
+        return {id:i, from:e.from, to:e.to, label:e.label||'', title:e.title||'',
+            color:{color:t.color||'#555',highlight:t.color||'#888'},
+            dashes:t.dashes||false, width:t.width||1, _type:e.type,
+            font:{size:9,color:'#888',strokeWidth:0}};
+    });
+    var edges = new vis.DataSet(allEdges);
+    netData = {nodes:nodes, edges:edges};
+    var options = {
+        physics:{barnesHut:{gravitationalConstant:-4000,centralGravity:0.1,springLength:120,damping:0.15},stabilization:{iterations:200}},
+        interaction:{hover:true,tooltipDelay:200,zoomView:true,dragView:true,navigationButtons:false},
+        layout:{improvedLayout:true},
+        edges:{smooth:{type:'continuous'},arrows:{to:{enabled:true,scaleFactor:0.4}}},
+        nodes:{borderWidth:2}
+    };
+    document.getElementById('network-loading').style.display = 'none';
+    netInstance = new vis.Network(container, netData, options);
+    netInstance.on('click', function(p) {
+        if (p.nodes.length > 0) scrollToOrg(p.nodes[0]);
+    });
+}
+function filterNetwork(group, btn) {
+    activeGroup = group;
+    document.querySelectorAll('.net-filter').forEach(function(b){b.classList.remove('active')});
+    if (btn) btn.classList.add('active');
+    if (!netInstance || !netData) return;
+    var visibleNodes = [];
+    netData.nodes.forEach(function(n) {
+        var show = group === 'all' || n.group === group;
+        netData.nodes.update({id:n.id, hidden:!show});
+        if (show) visibleNodes.push(n.id);
+    });
+    applyEdgeFilters(visibleNodes);
+}
+function toggleEdgeType(type, show) {
+    if (show) delete hiddenEdgeTypes[type]; else hiddenEdgeTypes[type] = true;
+    if (!netInstance || !netData) return;
+    var visibleNodes = [];
+    netData.nodes.forEach(function(n){ if (!n.hidden) visibleNodes.push(n.id); });
+    applyEdgeFilters(visibleNodes);
+}
+function applyEdgeFilters(visibleNodes) {
+    var vSet = {};
+    visibleNodes.forEach(function(id){ vSet[id]=true; });
+    allEdges.forEach(function(e) {
+        var show = vSet[e.from] && vSet[e.to] && !hiddenEdgeTypes[e._type];
+        netData.edges.update({id:e.id, hidden:!show});
+    });
+}
+// Lazy-load vis-network: load EN data (edges/groups) first, then HE data (labels)
+(function(){
+    var sec = document.getElementById('network-section');
+    if (!sec) return;
+    var loaded = false;
+    var obs = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !loaded) {
+            loaded = true; obs.disconnect();
+            var ds1 = document.createElement('script');
+            ds1.src = 'orgs-network-data.js';
+            ds1.onload = function() {
+                var ds2 = document.createElement('script');
+                ds2.src = 'orgs-network-data-he.js';
+                ds2.onload = function() {
+                    var s = document.createElement('script');
+                    s.src = 'https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js';
+                    s.onload = initNetwork;
+                    document.head.appendChild(s);
+                };
+                document.head.appendChild(ds2);
+            };
+            document.head.appendChild(ds1);
+        }
+    }, {rootMargin:'200px'});
+    obs.observe(sec);
+})();
 </script>
 </body>
 </html>
