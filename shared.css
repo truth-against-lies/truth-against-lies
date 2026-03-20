@@ -43,7 +43,7 @@ nav {
     white-space: nowrap;
     margin: 0 auto;
 }
-.nav-menu-wrapper { position: relative; }
+.nav-menu-wrapper { position: relative; order: -1; }
 .hamburger {
     display: flex;
     align-items: center;
