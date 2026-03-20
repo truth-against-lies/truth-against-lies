@@ -1466,5 +1466,29 @@ var SEARCH_INDEX = [
     { title: "Secular vs Haredi — Mutual Hatred", url: "internal-schism-en.html#secular-haredi", text: "Parasites Lapid Lieberman draft exemption 66000 Haredim 1.7% enlistment 44% hatred 89% won't marry Jerusalem Faction.", page: "Internal Schism (EN)" },
     { title: "Left vs Right — War of the Institutions", url: "internal-schism-en.html#left-right", text: "Supreme Court Barak constitutional revolution judges reserve refusal pilots 1100 protest funding 120 million Haaretz family law.", page: "Internal Schism (EN)" },
     { title: "The Ashkenazi Elite — Control Behind the Scenes", url: "internal-schism-en.html#elite", text: "Mapai Altalena Saison Kastner Lavon October 7 Jericho Wall double standard enforcement power monopoly.", page: "Internal Schism (EN)" },
-    { title: "The Healing — Gratuitous Love", url: "internal-schism-en.html#healing", text: "Baseless hatred destruction Kamtza Bar Kamtza love your neighbor all Israel responsible Rabbi Kook Lubavitcher Rebbe Rabbi Sacks 7 practical steps.", page: "Internal Schism (EN)" }
+    { title: "The Healing — Gratuitous Love", url: "internal-schism-en.html#healing", text: "Baseless hatred destruction Kamtza Bar Kamtza love your neighbor all Israel responsible Rabbi Kook Lubavitcher Rebbe Rabbi Sacks 7 practical steps.", page: "Internal Schism (EN)" },
+
+    // ==================== mind-liberation.html ====================
+    { title: "שחרור התודעה — מכבלי השליטה לחירות המחשבה", url: "mind-liberation.html", text: "נוירופלסטיות שליטה מוסדית תעמולה דת מדיטציה Deep Work ספירות קוגניטיביות תוכנית 30 יום שחרור מתכנות מנטלי.", page: "שחרור התודעה" },
+    { title: "נוירופלסטיות — המוח משתנה", url: "mind-liberation.html#neuroplasticity", text: "נהגי מוניות לונדון היפוקמפוס גדל 16% מגוייר 2000 מרזניץ' דוידג' נוירוגנזיס מסלולים עצביים חדשים הב.", page: "שחרור התודעה" },
+    { title: "איך המוסדות שולטים במוח שלך", url: "mind-liberation.html#institutions", text: "חינוך מדיה אלגוריתמים שליטה בשפה פחד אמיגדלה לחץ חברתי אש מילגרם עומס מידע.", page: "שחרור התודעה" },
+    { title: "תעמולה ישראלית — מה עשו לנו", url: "mind-liberation.html#israeli-propaganda", text: "פוסט ציונות היסטוריונים חדשים פפה מוריס ריכוז תקשורתי NGO מימון חיצוני תוכנית לימודים.", page: "שחרור התודעה" },
+    { title: "דת כמנגנון שליטה — לא נגד אלוהים", url: "mind-liberation.html#religion-control", text: "ציות עיוור שבתי צבי אלו ואלו דעת דת מוסד תלות אברהם משה רמבם.", page: "שחרור התודעה" },
+    { title: "מדיטציה ומיינדפולנס — מדע + תורה", url: "mind-liberation.html#meditation", text: "דוידסון 8 שבועות מדיטציה קורטיזול BDNF לזר הרווארד התבודדות התבוננות כוונה אבולעפיה גלי גמא.", page: "שחרור התודעה" },
+    { title: "זיכרון ריכוז יצירתיות", url: "mind-liberation.html#memory-focus", text: "Spaced Repetition ארמון הזיכרון Active Recall פומודורו דטוקס דיגיטלי Flow חשיבה מתפצלת אבינגהאוס.", page: "שחרור התודעה" },
+    { title: "Deep Work + Flow State", url: "mind-liberation.html#deep-work", text: "קאל ניופורט 4 סוגי עבודה עמוקה שארית קשב צ'יקסנטמיהאיי איזון אתגר מיומנות לשמה.", page: "שחרור התודעה" },
+    { title: "10 ספירות כמודל קוגניטיבי", url: "mind-liberation.html#sefirot-cognitive", text: "כתר מטא-תודעה חכמה אינטואיציה בינה ניתוח דעת סינתזה חסד גבורה תפארת נצח הוד יסוד מלכות.", page: "שחרור התודעה" },
+    { title: "תוכנית 30 יום — מדת לדעת", url: "mind-liberation.html#30-day-plan", text: "שבוע 1 מודעות שבוע 2 דטוקס שבוע 3 בניה שבוע 4 שילוב מדיטציה יומן Deep Work ברית.", page: "שחרור התודעה" },
+
+    // ==================== mind-liberation-en.html ====================
+    { title: "Mind Liberation — From Chains of Control to Freedom of Thought", url: "mind-liberation-en.html", text: "Neuroplasticity institutional control propaganda religion meditation Deep Work Sefirot cognitive model 30-day plan mental liberation.", page: "Mind Liberation (EN)" },
+    { title: "Neuroplasticity — The Brain Changes", url: "mind-liberation-en.html#neuroplasticity", text: "London taxi drivers hippocampus 16% Maguire 2000 Merzenich Doidge neurogenesis neural pathways Hebbian learning.", page: "Mind Liberation (EN)" },
+    { title: "How Institutions Control Your Mind", url: "mind-liberation-en.html#institutions", text: "Education media algorithms language control fear amygdala social pressure Asch Milgram information overload.", page: "Mind Liberation (EN)" },
+    { title: "Israeli Propaganda — What They Did to Us", url: "mind-liberation-en.html#israeli-propaganda", text: "Post-Zionism New Historians Pappe Morris media concentration NGO foreign funding curriculum.", page: "Mind Liberation (EN)" },
+    { title: "Religion as Control Mechanism", url: "mind-liberation-en.html#religion-control", text: "Blind obedience Sabbatai Zevi Eilu v'Eilu Daat Dat Abraham Moses Rambam questioning tradition.", page: "Mind Liberation (EN)" },
+    { title: "Meditation & Mindfulness — Science + Torah", url: "mind-liberation-en.html#meditation", text: "Davidson 8 weeks meditation cortisol BDNF Lazar Harvard Hitbodedut Hitbonenut Kavvanah Abulafia gamma waves.", page: "Mind Liberation (EN)" },
+    { title: "Memory Focus Creativity", url: "mind-liberation-en.html#memory-focus", text: "Spaced Repetition Memory Palace Active Recall Pomodoro digital detox Flow divergent thinking Ebbinghaus.", page: "Mind Liberation (EN)" },
+    { title: "Deep Work + Flow State", url: "mind-liberation-en.html#deep-work", text: "Cal Newport 4 types deep work attention residue Csikszentmihalyi challenge skill balance Lishmah.", page: "Mind Liberation (EN)" },
+    { title: "10 Sefirot as Cognitive Model", url: "mind-liberation-en.html#sefirot-cognitive", text: "Keter metacognition Chochmah intuition Binah analysis Daat synthesis Chesed Gevurah Tiferet Netzach Hod Yesod Malchut.", page: "Mind Liberation (EN)" },
+    { title: "30-Day Plan — From Dat to Daat", url: "mind-liberation-en.html#30-day-plan", text: "Week 1 awareness Week 2 detox Week 3 build Week 4 integrate meditation journal Deep Work covenant.", page: "Mind Liberation (EN)" }
 ];
