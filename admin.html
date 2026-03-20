@@ -396,6 +396,7 @@
         <button class="dash-tab" onclick="showDashTab(1)">&#128101; משתמשים</button>
         <button class="dash-tab" onclick="showDashTab(2)">&#128196; תוכן מוגן</button>
         <button class="dash-tab" onclick="showDashTab(3)">&#128176; תרומות</button>
+        <button class="dash-tab" onclick="showDashTab(4)">&#128220; סיפורים</button>
     </div>
 
     <!-- ========== TAB 0: OVERVIEW ========== -->
@@ -484,6 +485,19 @@
         <p id="donationsLoading" class="loading-text">טוען...</p>
     </div>
 
+    <!-- ========== TAB 4: STORIES ========== -->
+    <div id="dashPanel4" class="dash-panel">
+        <div class="stat-cards" id="storiesSummary"></div>
+        <div class="admin-table-wrap">
+            <h3>&#128220; סיפורים שנשלחו</h3>
+            <table class="admin-table">
+                <thead><tr><th>מחבר</th><th>כותרת</th><th>קטגוריה</th><th>תאריך</th><th>סטטוס</th><th>פעולות</th></tr></thead>
+                <tbody id="storiesTable"></tbody>
+            </table>
+        </div>
+        <p id="storiesLoading" class="loading-text">טוען...</p>
+    </div>
+
 </div><!-- /dashboard -->
 
 <!-- ========== CONTENT MODAL ========== -->
@@ -559,6 +573,7 @@ function showDashTab(idx) {
     if (idx === 1) loadUsers();
     if (idx === 2) loadContent();
     if (idx === 3) loadDonations();
+    if (idx === 4) loadStories();
 }
 
 // ========== SECURITY: HTML ESCAPING ==========
@@ -951,6 +966,81 @@ async function deleteDonation(id) {
     if (!confirm('למחוק תרומה זו?')) return;
     await _supabase.from('donations').delete().eq('id', id);
     loadDonations();
+}
+
+// ========== STORIES TAB ==========
+var storyCatLabels = { oct7: '7 באוקטובר', holocaust: 'שואה', aliyah: 'עלייה', antisem: 'אנטישמיות', idf: 'צה"ל', hostages: 'חטופים' };
+
+async function loadStories() {
+    document.getElementById('storiesLoading').style.display = 'block';
+    var result = await _supabase
+        .from('stories')
+        .select('*')
+        .order('created_at', { ascending: false });
+    var stories = result.data || [];
+    document.getElementById('storiesLoading').style.display = 'none';
+
+    // Summary stats
+    var pending = 0, approved = 0, rejected = 0;
+    stories.forEach(function(s) {
+        if (s.status === 'pending') pending++;
+        else if (s.status === 'approved') approved++;
+        else if (s.status === 'rejected') rejected++;
+    });
+    document.getElementById('storiesSummary').innerHTML =
+        '<div class="stat-card"><div class="stat-num">' + stories.length + '</div><div class="stat-label">סה"כ סיפורים</div></div>' +
+        '<div class="stat-card"><div class="stat-num" style="color:#f39c12">' + pending + '</div><div class="stat-label">ממתינים</div></div>' +
+        '<div class="stat-card"><div class="stat-num" style="color:#2ecc71">' + approved + '</div><div class="stat-label">מאושרים</div></div>' +
+        '<div class="stat-card"><div class="stat-num" style="color:#e74c3c">' + rejected + '</div><div class="stat-label">נדחו</div></div>';
+
+    // Table
+    var html = '';
+    stories.forEach(function(s) {
+        var date = new Date(s.created_at).toLocaleDateString('he-IL');
+        var statusBadge = s.status === 'approved'
+            ? '<span class="badge-active">מאושר</span>'
+            : s.status === 'rejected'
+                ? '<span class="badge-blocked">נדחה</span>'
+                : '<span style="color:#f39c12">ממתין</span>';
+        var actions = '';
+        if (s.status === 'pending') {
+            actions = '<button class="btn-success" style="margin-left:5px" onclick="updateStoryStatus(\'' + s.id + '\',\'approved\')">אשר</button>'
+                + '<button class="btn-danger" onclick="updateStoryStatus(\'' + s.id + '\',\'rejected\')">דחה</button>';
+        } else if (s.status === 'approved') {
+            actions = '<button class="btn-danger" onclick="updateStoryStatus(\'' + s.id + '\',\'rejected\')">דחה</button>';
+        } else {
+            actions = '<button class="btn-success" onclick="updateStoryStatus(\'' + s.id + '\',\'approved\')">אשר</button>';
+        }
+        actions += ' <button class="btn-gold" onclick="previewStory(\'' + s.id + '\')" style="margin-right:5px">תצוגה</button>';
+        actions += '<button class="btn-danger" onclick="deleteStory(\'' + s.id + '\')">מחק</button>';
+        html += '<tr>';
+        html += '<td>' + esc(s.is_anonymous ? 'אנונימי' : s.author_name) + '</td>';
+        html += '<td>' + esc(s.title_he) + '</td>';
+        html += '<td>' + (storyCatLabels[s.category] || s.category) + '</td>';
+        html += '<td>' + date + '</td>';
+        html += '<td>' + statusBadge + '</td>';
+        html += '<td>' + actions + '</td>';
+        html += '</tr>';
+    });
+    document.getElementById('storiesTable').innerHTML = html || '<tr><td colspan="6" style="text-align:center;color:#888">אין סיפורים</td></tr>';
+}
+
+async function updateStoryStatus(id, status) {
+    await _supabase.from('stories').update({ status: status, updated_at: new Date().toISOString() }).eq('id', id);
+    loadStories();
+}
+
+async function deleteStory(id) {
+    if (!confirm('למחוק סיפור זה?')) return;
+    await _supabase.from('stories').delete().eq('id', id);
+    loadStories();
+}
+
+async function previewStory(id) {
+    var result = await _supabase.from('stories').select('*').eq('id', id).single();
+    if (!result.data) return;
+    var s = result.data;
+    alert('כותרת: ' + s.title_he + '\n\nקטגוריה: ' + (storyCatLabels[s.category] || s.category) + '\n\nמחבר: ' + (s.is_anonymous ? 'אנונימי' : s.author_name) + '\n\n' + s.content_he + (s.source_citation ? '\n\nמקור: ' + s.source_citation : ''));
 }
 
 // ========== KEYBOARD: Enter to login ==========

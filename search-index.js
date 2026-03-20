@@ -1490,5 +1490,26 @@ var SEARCH_INDEX = [
     { title: "Memory Focus Creativity", url: "mind-liberation-en.html#memory-focus", text: "Spaced Repetition Memory Palace Active Recall Pomodoro digital detox Flow divergent thinking Ebbinghaus.", page: "Mind Liberation (EN)" },
     { title: "Deep Work + Flow State", url: "mind-liberation-en.html#deep-work", text: "Cal Newport 4 types deep work attention residue Csikszentmihalyi challenge skill balance Lishmah.", page: "Mind Liberation (EN)" },
     { title: "10 Sefirot as Cognitive Model", url: "mind-liberation-en.html#sefirot-cognitive", text: "Keter metacognition Chochmah intuition Binah analysis Daat synthesis Chesed Gevurah Tiferet Netzach Hod Yesod Malchut.", page: "Mind Liberation (EN)" },
-    { title: "30-Day Plan — From Dat to Daat", url: "mind-liberation-en.html#30-day-plan", text: "Week 1 awareness Week 2 detox Week 3 build Week 4 integrate meditation journal Deep Work covenant.", page: "Mind Liberation (EN)" }
+    { title: "30-Day Plan — From Dat to Daat", url: "mind-liberation-en.html#30-day-plan", text: "Week 1 awareness Week 2 detox Week 3 build Week 4 integrate meditation journal Deep Work covenant.", page: "Mind Liberation (EN)" },
+
+    // ==================== stories.html ====================
+    { title: "סיפורים אישיים", url: "stories.html", text: "24 סיפורים אישיים של ניצולים חיילים עולים ומשפחות חטופים עדויות אמיתיות 7 באוקטובר שואה עלייה אנטישמיות צה״ל.", page: "סיפורים אישיים" },
+    { title: "רחל אדרי — ניצולת 7 באוקטובר", url: "stories.html#st-rachel-edri", text: "סבתא בת 65 מאופקים הגישה תה ועוגיות למחבלי חמאס 16 שעות עד שהמשטרה הגיעה.", page: "סיפורים אישיים" },
+    { title: "רמי דוידיאן — גיבור נובה", url: "stories.html#st-rami-davidian", text: "חקלאי מפטיש נהג בטנדר לתוך הטבח במסיבת נובה הציל כ-200 אנשים תחת אש.", page: "סיפורים אישיים" },
+    { title: "אלי ויזל — ניצול שואה", url: "stories.html#st-elie-wiesel", text: "חתן פרס נובל ניצול אושוויץ בוכנוולד לילה הקדיש חייו לעדות ולזיכרון.", page: "סיפורים אישיים" },
+    { title: "מבצע שלמה — עליית יהודי אתיופיה", url: "stories.html#st-operation-solomon", text: "14325 יהודי אתיופיה הוטסו ב-36 שעות בואינג 747 נשא 1122 נוסעים שיא עולמי.", page: "סיפורים אישיים" },
+    { title: "נתן שרנסקי — אסיר ציון", url: "stories.html#st-sharansky", text: "אסיר ציון סובייטי 9 שנים בכלא סמל תנועת הרפוסניקים Fear No Evil.", page: "סיפורים אישיים" },
+    { title: "טבח עץ החיים פיטסבורג", url: "stories.html#st-tree-of-life", text: "11 מתפללים נרצחו 2018 הפיגוע האנטישמי הגרוע ביותר בהיסטוריה של ארה״ב.", page: "סיפורים אישיים" },
+    { title: "רועי קליין — גיבור צה״ל", url: "stories.html#st-roi-klein", text: "רס״ן קפץ על רימון מלחמת לבנון 2 2006 להציל חייליו מת עם שמע ישראל.", page: "סיפורים אישיים" },
+    { title: "נועה ארגמני — חטופה ושבה", url: "stories.html#st-noa-argamani", text: "חולצה ביוני 2024 מבצע ארנון התמונה האיקונית מהחטיפה על אופנוע.", page: "סיפורים אישיים" },
+    { title: "כפיר ואריאל ביבס — החטופים הצעירים", url: "stories.html#st-bibas-family", text: "בן 10 חודשים ובן 4 נחטפו עם אמם שירי מקיבוץ ניר עוז.", page: "סיפורים אישיים" },
+
+    // ==================== stories-en.html ====================
+    { title: "Personal Stories", url: "stories-en.html", text: "24 personal stories survivors soldiers immigrants hostage families October 7 Holocaust immigration antisemitism IDF.", page: "Personal Stories (EN)" },
+    { title: "Rachel Edri — October 7 Survivor", url: "stories-en.html#st-rachel-edri-en", text: "65-year-old grandmother Ofakim served tea cookies Hamas terrorists 16 hours police arrived.", page: "Personal Stories (EN)" },
+    { title: "Rami Davidian — Nova Hero", url: "stories-en.html#st-rami-davidian-en", text: "Farmer Patish pickup truck Nova massacre rescued 200 people under fire.", page: "Personal Stories (EN)" },
+    { title: "Elie Wiesel — Holocaust Survivor", url: "stories-en.html#st-elie-wiesel-en", text: "Nobel Peace Prize Auschwitz Buchenwald Night dedicated life testimony memory.", page: "Personal Stories (EN)" },
+    { title: "Operation Solomon — Ethiopian Aliyah", url: "stories-en.html#st-operation-solomon-en", text: "14325 Ethiopian Jews airlifted 36 hours Boeing 747 1122 passengers world record.", page: "Personal Stories (EN)" },
+    { title: "Tree of Life Massacre Pittsburgh", url: "stories-en.html#st-tree-of-life-en", text: "11 worshippers murdered 2018 deadliest antisemitic attack US history.", page: "Personal Stories (EN)" },
+    { title: "Noa Argamani — Hostage Rescued", url: "stories-en.html#st-noa-argamani-en", text: "Rescued June 2024 Operation Arnon iconic kidnapping motorcycle image.", page: "Personal Stories (EN)" }
 ];

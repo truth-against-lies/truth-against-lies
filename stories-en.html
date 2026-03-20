@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Stories | Truth Against Lies</title>
+    <meta name="description" content="24 personal stories of survivors, soldiers, immigrants and families — real testimonies from October 7, the Holocaust, immigration to Israel, antisemitism and more.">
+    <meta name="theme-color" content="#0a0a1a">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:title" content="Personal Stories — Real Testimonies | Truth Against Lies">
+    <meta property="og:description" content="24 personal stories — October 7 survivors, Holocaust survivors, immigration, antisemitism, IDF soldiers and hostage families">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/stories-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Personal Stories — Real Testimonies | Truth Against Lies">
+    <meta name="twitter:description" content="24 personal stories — real testimonies from survivors, soldiers, immigrants and families.">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/stories-en.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/stories-en.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/stories.html">
+
+    <link rel="stylesheet" href="shared-en.css">
+
+    <style>
+        /* === HERO === */
+        .st-hero { text-align: center; padding: 100px 20px 30px; }
+        .st-hero h1 { color: #D97706; font-size: 2.4em; margin-bottom: 10px; }
+        .st-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 650px; margin: 0 auto 10px; line-height: 1.7; }
+        .st-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+
+        /* === TL;DR BOX === */
+        .st-tldr { max-width: 700px; margin: 0 auto 30px; padding: 20px 24px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.25); border-radius: 6px; color: #c0c0c0; font-size: 0.92em; line-height: 1.7; }
+        .st-tldr strong { color: #D97706; }
+
+        /* === FILTER BUTTONS === */
+        .st-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; padding: 0 20px; }
+        .st-filter-btn { padding: 7px 16px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .st-filter-btn.active { background: rgba(217,119,6,0.18); border-color: #D97706; color: #D97706; }
+
+        /* === CARDS GRID === */
+        .st-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+
+        /* === INDIVIDUAL CARD === */
+        .st-card { background: #12172b; border-radius: 3px; padding: 24px 22px 16px; position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .st-card[data-cat="oct7"] { border-top: 4px solid #e74c3c; }
+        .st-card[data-cat="holocaust"] { border-top: 4px solid #888; }
+        .st-card[data-cat="aliyah"] { border-top: 4px solid #3498db; }
+        .st-card[data-cat="antisem"] { border-top: 4px solid #9b59b6; }
+        .st-card[data-cat="idf"] { border-top: 4px solid #2ecc71; }
+        .st-card[data-cat="hostages"] { border-top: 4px solid #f39c12; }
+
+        .st-cat-label { font-size: 0.7em; letter-spacing: 1px; margin-bottom: 8px; opacity: 0.7; }
+        .st-card[data-cat="oct7"] .st-cat-label { color: #e74c3c; }
+        .st-card[data-cat="holocaust"] .st-cat-label { color: #888; }
+        .st-card[data-cat="aliyah"] .st-cat-label { color: #3498db; }
+        .st-card[data-cat="antisem"] .st-cat-label { color: #9b59b6; }
+        .st-card[data-cat="idf"] .st-cat-label { color: #2ecc71; }
+        .st-card[data-cat="hostages"] .st-cat-label { color: #f39c12; }
+
+        .st-name { color: #e2b714; font-size: 1.15em; font-weight: bold; margin-bottom: 6px; }
+        .st-summary { color: #c0c0c0; font-size: 0.9em; line-height: 1.6; margin-bottom: 0; }
+
+        .st-full { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .st-card.open .st-full { display: block; }
+        .st-full-text { color: #b0b0b0; font-size: 0.88em; line-height: 1.7; margin-bottom: 12px; }
+        .st-source { font-size: 0.75em; color: #777; font-style: italic; }
+
+        .st-expand { text-align: center; color: #555; font-size: 0.75em; margin-top: 10px; transition: color 0.2s; }
+        .st-card.open .st-expand { display: none; }
+
+        .st-actions { display: none; gap: 6px; align-items: center; justify-content: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; margin-top: 10px; }
+        .st-card.open .st-actions { display: flex; }
+        .st-actions a, .st-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
+        .st-actions a:hover, .st-actions button:hover { border-color: #D97706; color: #D97706; }
+        .st-actions .wa:hover { border-color: #25D366; color: #25D366; }
+        .st-actions .tw:hover { border-color: #1DA1F2; color: #1DA1F2; }
+        .st-actions .tg:hover { border-color: #0088cc; color: #0088cc; }
+
+        .st-card::after { content: 'truth-against-lies.github.io'; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 0.6em; color: rgba(217,119,6,0.2); letter-spacing: 1px; pointer-events: none; }
+
+        /* === SUBMIT SECTION === */
+        .st-submit { max-width: 700px; margin: 40px auto; padding: 30px 24px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 6px; }
+        .st-submit h2 { color: #D97706; font-size: 1.3em; margin-bottom: 8px; }
+        .st-submit p { color: #999; font-size: 0.9em; margin-bottom: 18px; }
+        .st-submit label { display: block; color: #c0c0c0; font-size: 0.85em; margin-bottom: 4px; margin-top: 14px; }
+        .st-submit input, .st-submit textarea, .st-submit select { width: 100%; padding: 10px 14px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 3px; color: #e0e0e0; font-size: 0.9em; font-family: inherit; }
+        .st-submit input:focus, .st-submit textarea:focus, .st-submit select:focus { outline: none; border-color: #D97706; }
+        .st-submit textarea { min-height: 120px; resize: vertical; }
+        .st-submit .st-char-count { text-align: right; font-size: 0.75em; color: #666; margin-top: 4px; }
+        .st-submit .st-anon-row { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+        .st-submit .st-anon-row input { width: auto; }
+        .st-submit .st-submit-btn { margin-top: 20px; padding: 12px 30px; background: #D97706; color: #0a0a1a; border: none; border-radius: 3px; font-size: 1em; font-weight: bold; cursor: pointer; font-family: inherit; }
+        .st-submit .st-submit-btn:hover { background: #e88a15; }
+        .st-submit .st-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .st-msg { margin-top: 12px; font-size: 0.9em; min-height: 1.2em; }
+        .st-login-gate { text-align: center; padding: 20px 0; }
+        .st-login-gate p { color: #888; margin-bottom: 12px; }
+        .st-login-gate a { color: #D97706; text-decoration: underline; }
+
+        .st-user-section { max-width: 1100px; margin: 20px auto 40px; padding: 0 20px; }
+        .st-user-section h2 { color: #D97706; font-size: 1.3em; margin-bottom: 20px; text-align: center; }
+
+        .st-links { max-width: 700px; margin: 0 auto; padding: 20px 20px 40px; }
+        .st-link-box { display: block; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #D97706; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+        .st-link-box:hover { background: rgba(217,119,6,0.12); }
+        .st-link-box .link-desc { color: #999; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
+
+        @media (max-width: 768px) {
+            .st-hero h1 { font-size: 1.7em; }
+            .st-grid { grid-template-columns: 1fr; padding: 0 12px 30px; }
+            .st-card { padding: 18px 15px 14px; }
+            .st-filters { gap: 6px; }
+            .st-filter-btn { font-size: 0.8em; padding: 6px 12px; }
+        }
+
+        body.light-mode .st-card { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        body.light-mode .st-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        body.light-mode .st-name { color: #b48c0a; }
+        body.light-mode .st-summary { color: #444; }
+        body.light-mode .st-full-text { color: #333; }
+        body.light-mode .st-hero h1 { color: #b45f06; }
+        body.light-mode .st-filter-btn.active { background: rgba(180,95,6,0.12); border-color: #b45f06; color: #b45f06; }
+        body.light-mode .st-card::after { color: rgba(180,95,6,0.15); }
+        body.light-mode .st-tldr { background: rgba(180,95,6,0.05); border-color: #ddd; }
+        body.light-mode .st-submit { background: rgba(180,95,6,0.04); border-color: #ddd; }
+        body.light-mode .st-link-box { background: rgba(180,95,6,0.04); border-color: #ddd; color: #b45f06; }
+    </style>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CollectionPage","name":"Personal Stories — Truth Against Lies","description":"24 personal stories of survivors, soldiers, immigrants and hostage families","publisher":{"@type":"Organization","name":"Truth Against Lies"},"inLanguage":"en"}
+    </script>
+</head>
+<body>
+<div class="reading-progress"></div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="Settings" title="Settings">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">Light Mode</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>Print / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="Navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism-en.html">Antisemitism</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism-en.html">&#128269; What is Antisemitism?</a></li>
+                        <li><a href="antisemitism-en.html#claims">&#128203; Claims &amp; Refutations</a></li>
+                        <li><a href="holocaust-denial-en.html">&#128367; Holocaust Denial</a></li>
+                        <li><a href="statistics-en.html">&#128202; Antisemitism Data</a></li>
+                        <li><a href="antisemitic-orgs-en.html">&#9760; Antisemitic Orgs</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies-en.html">Common Lies</a></li>
+                <li><a href="fact-cards-en.html">&#127183; Fact Cards</a></li>
+                <li><a href="stories-en.html">&#128220; Personal Stories</a></li>
+                <li><a href="timeline-en.html">&#128336; Timeline</a></li>
+                <li><a href="index-en.html#psychology">Psychology</a></li>
+                <li><a href="regions-en.html">Hate by Region</a></li>
+                <li class="has-submenu">
+                    <a href="gallery-en.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="gallery-en.html">&#128444; Historical Archive</a></li>
+                        <li><a href="videos-en.html">&#128249; Watch &amp; Learn</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7-en.html">October 7</a></li>
+                <li class="has-submenu">
+                    <a href="facts-en.html">Facts They Hide</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command-en.html">&#9874; Failed Command</a></li>
+                        <li><a href="facts-knesset-en.html">&#127963; Knesset Members</a></li>
+                        <li><a href="facts-court-en.html">&#9878; Supreme Court</a></li>
+                        <li><a href="facts-policies-en.html">&#128203; Failed Policies</a></li>
+                        <li><a href="facts-media-en.html">&#128249; Lying Media</a></li>
+                        <li><a href="facts-orgs-en.html">&#127970; Orgs &amp; BDS</a></li>
+                        <li><a href="facts-money-en.html">&#128176; Terror Funding</a></li>
+                        <li><a href="facts-iran-en.html">&#128293; Iran's Axis</a></li>
+                        <li><a href="facts-west-en.html">&#127760; Western Betrayals</a></li>
+                        <li><a href="facts-myths-en.html">&#128269; Debunked Myths</a></li>
+                        <li><a href="facts-netanyahu-en.html">&#9878; Netanyahu Paradox</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity-en.html">Strength &amp; Thought</a>
+                    <ul class="submenu">
+                        <li><a href="unity-en.html">&#128170; Jewish Strength</a></li>
+                        <li><a href="consciousness-en.html">&#128293; Consciousness</a></li>
+                        <li><a href="mind-en.html">&#129504; Mind Power</a></li>
+                        <li><a href="mind-liberation-en.html">&#128161; Mind Liberation</a></li>
+                        <li><a href="left-narrative-en.html">&#128240; Left Narrative</a></li>
+                        <li><a href="daat-dat-en.html">&#9878; Daat vs Dat</a></li>
+                        <li><a href="bnei-yisrael-en.html">&#128220; Bnei Yisrael</a></li>
+                        <li><a href="streams-en.html">&#127907; Jewish Streams</a></li>
+                        <li><a href="internal-schism-en.html">&#128148; Internal Schism</a></li>
+                        <li><a href="sword-prayer-en.html">&#9876; Sword &amp; Prayer</a></li>
+                        <li><a href="the-schism-en.html">&#9878; The Great Schism</a></li>
+                        <li><a href="revolving-door-en.html">&#128274; Revolving Door</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-en.html#report">Report Antisemitism</a></li>
+                <li><a href="glossary-en.html">Glossary</a></li>
+                <li><a href="action-en.html">Take Action</a></li>
+            </ul></div>
+        <a href="index-en.html" class="nav-logo">Truth Against Lies</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="Search" title="Search"><span class="search-icon">&#128269;</span><span class="search-label">Search</span></button>
+        <div class="nav-lang">
+            <a href="stories.html" class="nav-lang-btn" title="עברית">HE</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="st-hero">
+    <h1>&#128220; Personal Stories</h1>
+    <div class="subtitle">Behind every number is a name. Behind every name is a story.<br>Real testimonies from people who lived it.</div>
+    <div class="hero-meta">24 stories &bull; 6 categories &bull; documented testimonies</div>
+</section>
+
+<!-- TL;DR -->
+<div class="st-tldr">
+    <strong>In Brief:</strong> This page collects real personal stories from 6 categories &mdash; October 7 survivors, Holocaust survivors, immigration stories, antisemitism abroad, IDF soldiers, and hostage families. Every story is based on documented sources. Click a card to read the full story.
+</div>
+
+<!-- FILTER TABS -->
+<div class="st-filters">
+    <button class="st-filter-btn active" onclick="stFilter('all',this)">All (24)</button>
+    <button class="st-filter-btn" onclick="stFilter('oct7',this)">&#128308; October 7 (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('holocaust',this)">&#9899; Holocaust (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('aliyah',this)">&#128309; Immigration (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('antisem',this)">&#128995; Antisemitism (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('idf',this)">&#128994; IDF Soldiers (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('hostages',this)">&#128992; Hostage Families (4)</button>
+</div>
+
+<!-- STORIES GRID -->
+<div class="st-grid">
+
+<!-- ==================== OCT 7 ==================== -->
+
+<div class="st-card" id="st-rachel-edri-en" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">October 7 Survivors</div>
+    <div class="st-name">Rachel Edri</div>
+    <div class="st-summary">A 65-year-old grandmother from Ofakim who served tea and cookies to Hamas terrorists for 16 hours &mdash; until police arrived.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            On October 7, 2023, when Hamas terrorists broke into Rachel Edri's home in the city of Ofakim, she displayed extraordinary composure. Instead of panicking, Rachel &mdash; a 65-year-old grandmother &mdash; served the terrorists tea and cookies. For 16 long hours, she kept them calm in her living room, chatting with them and preventing them from going out to harm others. Throughout this time, her husband David was tied up in another room. Rachel managed to delay the terrorists until police forces arrived and eliminated them. Her story became a symbol of civilian courage and resourcefulness amid the horror.
+        </div>
+        <div class="st-source">BBC News, Oct 2023 | Channel 12 Israel | Times of Israel</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-rami-davidian-en" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">October 7 Survivors</div>
+    <div class="st-name">Rami Davidian</div>
+    <div class="st-summary">A farmer from Patish who drove his pickup truck into the Nova massacre and rescued ~200 people under fire.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Rami Davidian, a farmer from Moshav Patish, heard the gunfire on October 7 and immediately drove his pickup truck toward the Nova festival. Over many hours, Rami went back and forth to the massacre site, loading young people onto his truck and driving them to safety &mdash; all under live fire from terrorists. By estimates, he rescued approximately 200 people. Rami worked all night and the next day without stopping, even when it was clear his life was in immediate danger. His story became one of the central tales of heroism from that dark day.
+        </div>
+        <div class="st-source">CNN, Dec 2023 | NBC News | The Guardian</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-nova-survivors-en" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">October 7 Survivors</div>
+    <div class="st-name">Nova Festival Survivors</div>
+    <div class="st-summary">3,500 attendees, 364 murdered, hundreds fled on foot &mdash; testimony of Natalie Sanandaji who ran for 5 hours.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            The Nova peace festival ("Supernova") took place near Re'im on October 7, 2023, with approximately 3,500 attendees. When rockets began and terrorists arrived, 364 people were murdered and dozens were kidnapped. Hundreds fled on foot through fields and agricultural land. Natalie Sanandaji, one of the survivors, ran on foot for 5 consecutive hours until she reached safety. Her testimony and those of other survivors were documented by the USC Shoah Foundation as part of the largest documentation project since Holocaust survivor testimonies.
+        </div>
+        <div class="st-source">USC Shoah Foundation | Reuters, Oct 2023 | The New York Times</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-shani-louk-en" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">October 7 Survivors</div>
+    <div class="st-name">Shani Louk</div>
+    <div class="st-summary">A 22-year-old German-Israeli paraded on a Hamas truck &mdash; became a symbol of the massacre.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Shani Nicole Louk, 22, held German-Israeli citizenship and attended the Nova festival. The image of her body on a Hamas truck, with terrorists celebrating around her, became one of the most shocking images of October 7 and a worldwide symbol of the massacre. Her family initially received word that she was injured but alive; her death was later confirmed. Her story triggered a global wave of solidarity and served as a turning point in international awareness of the scope of the atrocity.
+        </div>
+        <div class="st-source">BBC News, Oct 2023 | Times of Israel | DW (Deutsche Welle)</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== HOLOCAUST ==================== -->
+
+<div class="st-card" id="st-edith-eger-en" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">Holocaust Survivors</div>
+    <div class="st-name">Dr. Edith Eva Eger</div>
+    <div class="st-summary">Auschwitz survivor at 16 who danced for Mengele, survived, and became a leading psychologist.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Edith Eva Eger was born in Hungary in 1927. At age 16, she was sent to Auschwitz with her family &mdash; her parents were murdered on arrival. Mengele himself ordered her to dance for him, and she danced to survive. After a death march and unimaginable suffering, she was liberated in 1945, close to death. Edith emigrated to the US, completed a degree in psychology, and became a leading trauma specialist. Her book "The Choice" (2017) became an international bestseller, describing her journey from Auschwitz to forgiveness, and the choice every person can make &mdash; to live as a victim or a survivor.
+        </div>
+        <div class="st-source">Edith Eger, "The Choice" (2017) | The New York Times | USC Shoah Foundation</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-elie-wiesel-en" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">Holocaust Survivors</div>
+    <div class="st-name">Elie Wiesel</div>
+    <div class="st-summary">Nobel Peace Prize laureate, Auschwitz and Buchenwald survivor, who dedicated his life to testimony and memory.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Elie Wiesel (1928&ndash;2016) was a writer, professor, and Nobel Peace Prize laureate (1986). At age 15, he and his family were deported to Auschwitz, where his mother and younger sister were murdered. He and his father were transferred to Buchenwald, where his father died shortly before liberation. His book "Night" (1960) became a seminal work of Holocaust literature &mdash; a short, devastating account of his experiences in the camps. Wiesel dedicated his remaining life to fighting indifference: "The opposite of love is not hate, it's indifference. The opposite of faith is not heresy, it's indifference." He founded the Foundation for Humanity, lectured worldwide, and refused to be silent.
+        </div>
+        <div class="st-source">Elie Wiesel, "Night" (1960) | Nobel Prize Committee, 1986 | USHMM</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-lily-ebert-en" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">Holocaust Survivors</div>
+    <div class="st-name">Lily Ebert</div>
+    <div class="st-summary">Auschwitz survivor who became a TikTok educator at age 98 &mdash; with millions of followers.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Lily Ebert (1923&ndash;2024) was sent to Auschwitz in 1944, where Mengele sent her mother and younger sisters directly to the gas chambers. Lily survived forced labor and a death march, and after the war rebuilt her life. At age 97, her grandson persuaded her to start a TikTok account. Lily became a phenomenon &mdash; with over 2 million followers. In short, moving videos, she shared her experiences directly with the younger generation. Her book "Lily's Promise" (2021), co-written with her grandson, describes the promise she made &mdash; to tell the story so the world would never forget.
+        </div>
+        <div class="st-source">Lily Ebert &amp; Dov Forman, "Lily's Promise" (2021) | TikTok @lilyebert | BBC</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-dina-gottliebova-en" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">Holocaust Survivors</div>
+    <div class="st-name">Dina Gottliebova Babbitt</div>
+    <div class="st-summary">An artist forced by Mengele to paint prisoner portraits &mdash; who survived through her art.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Dina Gottliebova (1923&ndash;2009) was a Czech-Jewish artist sent to Auschwitz in 1943. When Mengele discovered her talent, he ordered her to paint portraits of Roma prisoners &mdash; "to document the races" before they were murdered. Dina painted under coercion, but her paintings saved her life and her mother's. After the war, Dina emigrated to the US and became an animator at Warner Bros. studios. In 1973, she discovered that the paintings she had made at Auschwitz were on display at the Auschwitz Museum and demanded their return &mdash; a battle that lasted until the end of her life. The paintings remain in the museum.
+        </div>
+        <div class="st-source">USHMM | Yad Vashem | The Washington Post | "The Last Album" (2005)</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== ALIYAH ==================== -->
+
+<div class="st-card" id="st-operation-solomon-en" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">Immigration Stories</div>
+    <div class="st-name">Operation Solomon (1991)</div>
+    <div class="st-summary">14,325 Ethiopian Jews airlifted in 36 hours &mdash; a Boeing 747 carried 1,122 passengers (world record).</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Operation Solomon took place on May 24&ndash;25, 1991, as Ethiopia's government was on the brink of collapse. In just 36 hours, the Israeli Air Force flew 14,325 Ethiopian Jews (Beta Israel) from Addis Ababa to Israel in 34 flights. An El Al Boeing 747 carried 1,122 passengers on a single flight &mdash; a world record that stands to this day. Seats were removed to fit more people, and two babies were born during the flight. Operation Solomon is one of the most moving moments in Israeli history &mdash; a country sending planes to rescue Jews from the edge of Africa.
+        </div>
+        <div class="st-source">Israel State Archives | Jewish Agency | Guinness World Records | IAF Archives</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-magic-carpet-en" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">Immigration Stories</div>
+    <div class="st-name">Operation Magic Carpet (1949)</div>
+    <div class="st-summary">49,000 Yemenite Jews &mdash; many had never seen a plane and believed the prophecy "on eagles' wings."</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Between June 1949 and September 1950, approximately 49,000 Yemenite Jews were airlifted to Israel in a covert operation called "Magic Carpet" (On Wings of Eagles). Many Yemenite Jews had never seen an airplane &mdash; and believed the prophecy "I carried you on eagles' wings" (Exodus 19:4) was literally coming true before their eyes. They left all their belongings, walked hundreds of kilometers to a transit camp in Aden, and were flown to Israel. This was the immigration of an entire community &mdash; with a 2,500-year tradition &mdash; uprooted from the diaspora and returned home.
+        </div>
+        <div class="st-source">Israel State Archives | Jewish Agency | Yemenite Heritage Center | AJHS</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-sharansky-en" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">Immigration Stories</div>
+    <div class="st-name">Natan Sharansky</div>
+    <div class="st-summary">Soviet prisoner of Zion whose 9 years in prison couldn't break him &mdash; symbol of the Refusenik movement.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Natan (Anatoly) Sharansky, a Soviet Jewish mathematician, was arrested in 1977 on fabricated espionage charges when his only "crime" was wanting to emigrate to Israel. He spent 9 years in Soviet prison, including periods of complete isolation, endless interrogations, and inhumane conditions. His wife Avital led an international campaign for his release that became one of the symbols of the human rights struggle. Sharansky was released in 1986 and immigrated to Israel, where he served as a government minister and chairman of the Jewish Agency. His book "Fear No Evil" (1988) describes how he maintained his inner freedom even while his body was imprisoned.
+        </div>
+        <div class="st-source">Natan Sharansky, "Fear No Evil" (1988) | The Guardian | Yad Vashem | Knesset Archives</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-french-aliyah-en" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">Immigration Stories</div>
+    <div class="st-name">French Aliyah (2015)</div>
+    <div class="st-summary">After Charlie Hebdo and Hyper Cacher attacks &mdash; 7,900 French Jews made Aliyah, a historic record.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            In January 2015, two terror attacks shook France: the massacre at the Charlie Hebdo office (12 killed) and the hostage-taking at the Hyper Cacher supermarket in Paris, where 4 Jews were murdered simply because they were Jewish. The attacks led French Jewry &mdash; the third largest Jewish community in the world (~500,000) &mdash; to realize that antisemitism had returned to the streets of Europe. In 2015, 7,900 French Jews made Aliyah to Israel, a historic record. Many described a feeling of "living with packed suitcases" &mdash; a sensation they hadn't known since the Vichy era.
+        </div>
+        <div class="st-source">Jewish Agency, 2015 Report | Le Monde | Times of Israel | CRIF</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== ANTISEMITISM ==================== -->
+
+<div class="st-card" id="st-tree-of-life-en" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">Antisemitism Abroad</div>
+    <div class="st-name">Tree of Life Synagogue Massacre (2018)</div>
+    <div class="st-summary">11 worshippers murdered in Pittsburgh &mdash; the deadliest antisemitic attack in US history.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            On October 27, 2018, a gunman entered the Tree of Life synagogue in Pittsburgh, Pennsylvania, during Saturday morning services and opened fire on worshippers. 11 people were killed and 6 wounded, including 4 police officers. The shooter shouted "All Jews must die" during the attack. The victims ranged in age from 54 to 97, including a married couple and two brothers. It was the deadliest antisemitic attack in US history. The gunman was convicted of federal hate crimes and sentenced to death. The attack proved that violent antisemitism is not a matter of history books &mdash; it is here and now.
+        </div>
+        <div class="st-source">ADL, 2018 | FBI Federal Indictment | The New York Times | Pittsburgh Post-Gazette</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-campus-antisemitism-en" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">Antisemitism Abroad</div>
+    <div class="st-name">Campus Antisemitism (2023&ndash;24)</div>
+    <div class="st-summary">ADL documented 8,873 antisemitic incidents (+140%) &mdash; Columbia, MIT, Cornell and more.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            After October 7, 2023, an unprecedented wave of antisemitism flooded American campuses. The ADL documented 8,873 antisemitic incidents in the US in 2023 &mdash; a 140% increase from the previous year. Jewish students at leading universities like Columbia, MIT, Cornell, and Harvard reported harassment, threats, and violence. At Columbia, pro-Palestinian protest camps chanted "Globalize the Intifada" at Jewish students. University presidents were questioned in Congress about their failure to protect Jewish students, and three resigned.
+        </div>
+        <div class="st-source">ADL Audit 2023 | Congressional Hearing, Dec 2023 | The Washington Post | AMCHA Initiative</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-ilan-halimi-en" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">Antisemitism Abroad</div>
+    <div class="st-name">Ilan Halimi (2006)</div>
+    <div class="st-summary">A 23-year-old French Jew kidnapped and tortured for 24 days in suburban Paris &mdash; because "Jews have money."</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Ilan Halimi, a 23-year-old French Jew, was kidnapped on January 21, 2006, by the "Gang of Barbarians" led by Youssouf Fofana. The kidnappers chose him specifically because he was Jewish &mdash; assuming that "Jews have money and the community will pay ransom." Ilan was held in a Paris suburb for 24 days, during which he was horrifically tortured. Approximately 20 people knew about the kidnapping and did not report it to police. Ilan was found near death by a railway track on February 13 and died en route to the hospital. His mother, Ruth Halimi, wrote "24 Days" and became an activist against antisemitism in France.
+        </div>
+        <div class="st-source">Ruth Halimi, "24 Days" (2009) | Le Monde | BBC | CRIF</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-french-teachers-en" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">Antisemitism Abroad</div>
+    <div class="st-name">Jewish Teachers Under Threat in France</div>
+    <div class="st-summary">Jewish teachers in France live in hiding after death threats &mdash; simply because they are Jewish.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            In France, Jewish teachers routinely face death threats and violence. Teachers reported having to hide their Jewish identity or leave schools in Muslim-majority suburbs. After the murder of teacher Samuel Paty (2020) by an Islamist extremist, fear intensified. CRIF (the representative body of French Jewry) reported a sharp increase in threats against Jewish educators in 2024. Le Figaro documented cases of teachers who moved homes and changed their family names. The reality is stark: in 2024, Jewish teachers in the heart of Europe live in fear &mdash; a situation not seen since the 1930s.
+        </div>
+        <div class="st-source">Le Figaro, 2024 | CRIF Report 2024 | France 24 | The Local France</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== IDF ==================== -->
+
+<div class="st-card" id="st-amos-yarkoni-en" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">IDF Soldiers</div>
+    <div class="st-name">Amos Yarkoni (Abd el-Majid Hidr)</div>
+    <div class="st-summary">A Bedouin Israeli who became the first commander of the IDF Minorities Battalion &mdash; symbol of partnership.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Amos Yarkoni (1920&ndash;1991), born Abd el-Majid Hidr, was an Israeli Bedouin who became one of the IDF's most senior non-Jewish officers. He founded and commanded the Minorities Battalion ("Unit 300") &mdash; the first IDF unit composed of Druze, Bedouins, and Circassians. Yarkoni participated in every Israeli war from Independence to the Six-Day War, in which he was severely wounded. He received the award for the IDF's most admired commander. His story represents the true partnership among all Israeli citizens &mdash; beyond religion and ethnicity.
+        </div>
+        <div class="st-source">IDF Archives | Israel Ministry of Defense | Ynet | Jewish Virtual Library</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-kahalani-en" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">IDF Soldiers</div>
+    <div class="st-name">Avigdor Kahalani</div>
+    <div class="st-summary">Tank commander who held the Valley of Tears (1973) with 7 tanks against 500 Syrian tanks.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Lieutenant Colonel Avigdor Kahalani commanded a tank battalion on the Golan Heights in the Yom Kippur War (1973). When Syria launched a surprise attack with approximately 500 tanks, Kahalani was left with only 7 operational tanks in what became known as the "Valley of Tears." For days, he and his soldiers held back the Syrian army and prevented a breakthrough that could have threatened the nation's existence. Kahalani himself was already severely burned from the Six-Day War (1967) &mdash; his face and hands were scarred when his tank was hit. His book "The Heights of Courage" describes the battles. He received the Medal of Valor, Israel's highest military decoration.
+        </div>
+        <div class="st-source">Avigdor Kahalani, "The Heights of Courage" (1984) | IDF Archives | Yad L'Shiryon Museum</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-roi-klein-en" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">IDF Soldiers</div>
+    <div class="st-name">Major Roi Klein</div>
+    <div class="st-summary">Jumped on a grenade in the 2006 Lebanon War to save his soldiers &mdash; died reciting "Shema Yisrael."</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Major Roi Klein, deputy commander of Battalion 51 in the Golani Brigade, fell on July 26, 2006, in a battle in Bint Jbeil, Lebanon, during the Second Lebanon War. When a grenade was thrown toward his group of soldiers, Roi jumped on the grenade and absorbed the explosion with his body to save their lives. Eyewitnesses reported that his last words were "Shema Yisrael, Adonai Eloheinu, Adonai Echad" ("Hear O Israel, the Lord our God, the Lord is One"). He was 31, a father of two. Klein was known as a beloved commander who cared for every soldier. He was posthumously awarded the Medal of Distinguished Service, and schools and streets were named after him.
+        </div>
+        <div class="st-source">IDF Archives | Israel Ministry of Defense | Ynet | Haaretz</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-druze-soldiers-en" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">IDF Soldiers</div>
+    <div class="st-name">Druze Soldiers</div>
+    <div class="st-summary">~10% of Druze men serve in combat &mdash; highest per-capita casualty rate in the IDF.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Israel's Druze community (~150,000) has been conscripted into the IDF since 1956 &mdash; by agreement and at the request of community leaders. Approximately 10% of Druze men serve in combat units, and their per-capita casualty rate is among the highest in the IDF. Druze have served and continue to serve in all military branches, including elite units, and hundreds of Druze officers have reached senior ranks. The covenant of blood between the Druze and the State of Israel is one of the clearest examples of a true partnership of fate &mdash; and a living answer to the "apartheid state" accusation. The Druze defend Israel not because they must &mdash; but because they see it as home.
+        </div>
+        <div class="st-source">IDF Spokesperson | Israel CBS | Journal of Strategic Studies | Al-Monitor</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== HOSTAGES ==================== -->
+
+<div class="st-card" id="st-noa-argamani-en" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">Hostage Families</div>
+    <div class="st-name">Noa Argamani</div>
+    <div class="st-summary">The iconic image of her kidnapping on a motorcycle &mdash; rescued in June 2024 in Operation Arnon.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Noa Argamani, 26, was kidnapped from the Nova festival on October 7, 2023. The video of her being taken on a Hamas motorcycle while screaming "Don't kill me!" became one of the most iconic images of that day &mdash; and a worldwide symbol of the hostages. Her father Yaakov and her boyfriend Avinatan Or fought tirelessly for her release. On June 8, 2024, Noa was rescued in Operation Arnon &mdash; a complex military operation in Nuseirat during which 4 living hostages were rescued. The moment Noa embraced her father became one of the most emotional moments in Israeli history. Tragically, her mother Liora, who had been diagnosed with brain cancer, passed away shortly after her return.
+        </div>
+        <div class="st-source">IDF Spokesperson, June 2024 | BBC | CNN | Times of Israel</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-hersh-goldberg-en" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">Hostage Families</div>
+    <div class="st-name">Hersh Goldberg-Polin</div>
+    <div class="st-summary">American-Israeli, age 23 &mdash; his mother Rachel became a symbol of the struggle. Murdered in captivity August 2024.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Hersh Goldberg-Polin, a 23-year-old American-Israeli, was kidnapped from the Nova festival on October 7. While hiding in a shelter with friends, a grenade severed part of his arm. He was taken to Gaza, and for months his family didn't know if he was alive. His mother Rachel Goldberg-Polin became a leading figure in the campaign to free the hostages &mdash; speaking before Congress, the UN, and at rallies worldwide. "Every day he is there is hell," she said. In August 2024, Hersh was found dead in Gaza &mdash; along with 5 other hostages murdered by Hamas shortly before the IDF reached them.
+        </div>
+        <div class="st-source">CNN | The Washington Post | Times of Israel | US Congressional Record, 2024</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-bibas-family-en" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">Hostage Families</div>
+    <div class="st-name">Kfir and Ariel Bibas</div>
+    <div class="st-summary">10 months old and 4 years old when kidnapped with their mother Shiri &mdash; the youngest hostages.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            Kfir Bibas, 10 months old, and his brother Ariel, 4, were kidnapped on October 7, 2023, from Kibbutz Nir Oz along with their mother Shiri and father Yarden. They were the youngest hostages &mdash; Kfir celebrated his first birthday in captivity in Gaza. Photos of the two red-haired children became a symbol of the horror and a global call for release. Their father Yarden was released in November 2023 as part of the first hostage deal, thin and broken, but Shiri, Kfir, and Ariel remained in captivity. Their fate remained unknown for many agonizing months.
+        </div>
+        <div class="st-source">IDF Spokesperson | BBC | The New York Times | Hostages &amp; Missing Families Forum</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+<div class="st-card" id="st-hostage-forum-en" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">Hostage Families</div>
+    <div class="st-name">Hostages &amp; Missing Families Forum</div>
+    <div class="st-summary">200,000+ Israelis protesting weekly at Hostages Square &mdash; the largest protest movement in history.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            The Hostages and Missing Families Forum was established days after October 7, 2023, as an organization of the families of 251 hostages. The Forum quickly became the largest civic protest movement in Israeli history. Every Saturday, over 200,000 Israelis gathered at "Hostages Square" (Museum Square in Tel Aviv) to demand the hostages' release. The Forum also operated internationally &mdash; families met with the US President, heads of state, the Pope, and the UN. The empty table with chairs in the square &mdash; symbolizing "we're saving your seat" &mdash; became a symbol of all the people of Israel.
+        </div>
+        <div class="st-source">Hostages &amp; Missing Families Forum | Haaretz | BBC | Reuters</div>
+    </div>
+    <div class="st-expand">&#9660; Click to read</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="Copy text">&#128203;</button>
+    </div>
+</div>
+
+</div><!-- /st-grid -->
+
+<!-- SUBMIT SECTION -->
+<section class="st-submit" id="submit">
+    <h2>&#9997; Share Your Story</h2>
+    <p>Do you have a personal story related to antisemitism, immigration, the IDF, or October 7? Share it here. Your story will be reviewed by the site team before publication.</p>
+
+    <div id="stLoginGate" class="st-login-gate">
+        <p>&#128274; You must be logged in to submit a story.</p>
+        <a href="index-en.html#login">Log in here</a>
+    </div>
+
+    <form id="stForm" style="display:none" onsubmit="return stSubmit(event)">
+        <label for="stTitle">Story Title *</label>
+        <input type="text" id="stTitle" required maxlength="150" placeholder="e.g., Grandma Rachel's Story">
+
+        <label for="stCategory">Category *</label>
+        <select id="stCategory" required>
+            <option value="">Choose a category...</option>
+            <option value="oct7">October 7 Survivors</option>
+            <option value="holocaust">Holocaust Survivors</option>
+            <option value="aliyah">Immigration Stories</option>
+            <option value="antisem">Antisemitism Abroad</option>
+            <option value="idf">IDF Soldiers</option>
+            <option value="hostages">Hostage Families</option>
+        </select>
+
+        <label for="stContent">Your Story *</label>
+        <textarea id="stContent" required maxlength="2000" placeholder="Tell your story..." oninput="document.getElementById('stCharCount').textContent=this.value.length+'/2000'"></textarea>
+        <div class="st-char-count" id="stCharCount">0/2000</div>
+
+        <label for="stSource">Source / Citation (optional)</label>
+        <input type="text" id="stSource" maxlength="200" placeholder="e.g., BBC, Oct 2023">
+
+        <label for="stAuthor">Author Name *</label>
+        <input type="text" id="stAuthor" required maxlength="100" placeholder="Your name">
+
+        <div class="st-anon-row">
+            <input type="checkbox" id="stAnon">
+            <label for="stAnon" style="margin:0; cursor:pointer;">Publish anonymously</label>
+        </div>
+
+        <button type="submit" class="st-submit-btn" id="stSubmitBtn">Submit Story</button>
+        <div class="st-msg" id="stMsg"></div>
+    </form>
+</section>
+
+<!-- USER STORIES -->
+<section class="st-user-section" id="userStoriesSection" style="display:none">
+    <h2>&#128172; Community Stories</h2>
+    <div class="st-grid" id="userStoriesGrid"></div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div class="st-links">
+    <a href="october7-en.html" class="st-link-box">&#128293; October 7 &mdash; Full Documentation<span class="link-desc">Timeline, testimonies, data, and comprehensive documentation of October 7 events</span></a>
+    <a href="fact-cards-en.html" class="st-link-box">&#127183; Fact Cards<span class="link-desc">18 cards with myth, fact, and sources &mdash; for quick sharing</span></a>
+    <a href="unity-en.html" class="st-link-box">&#128170; Strengthening the Jewish People<span class="link-desc">What holds us together &mdash; values, unity, and hope</span></a>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+    <p><a href="index-en.html">&larr; Back to Main Site</a></p>
+    <p style="margin-top: 15px;">Built by Nathanael Assis | 2026</p>
+</div>
+
+<!-- Floating Share Button -->
+<div class="share-fab" id="shareFab">
+    <div class="share-fab-menu">
+        <a class="sfab-wa" title="WhatsApp" onclick="fabShare('whatsapp')">W</a>
+        <a class="sfab-tg" title="Telegram" onclick="fabShare('telegram')">T</a>
+        <a class="sfab-tw" title="X / Twitter" onclick="fabShare('twitter')">&#120143;</a>
+        <a class="sfab-fb" title="Facebook" onclick="fabShare('facebook')">f</a>
+        <a class="sfab-cp" title="Copy Link" onclick="fabShare('copy')">&#128203;</a>
+    </div>
+    <button class="share-fab-btn" aria-label="Share page" onclick="document.getElementById('shareFab').classList.toggle('open')" title="Share">&#10149;</button>
+</div>
+
+<div id="google_translate_element"></div>
+
+<script src="common.js"></script>
+
+<script>
+function stFilter(cat, btn) {
+    document.querySelectorAll('.st-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.st-grid:first-of-type .st-card').forEach(function(card) {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+}
+
+function stToggle(card) { card.classList.toggle('open'); }
+
+function stShare(el, platform) {
+    var card = el.closest('.st-card');
+    var name = card.querySelector('.st-name').textContent;
+    var summary = card.querySelector('.st-summary').textContent;
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/stories-en.html#' + card.id;
+    var text = name + '\n' + summary + '\n\n' + url;
+    if (platform === 'whatsapp') window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    else if (platform === 'twitter') window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(name + ' — ' + summary.substring(0, 150)) + '&url=' + encodeURIComponent(url), '_blank');
+    else if (platform === 'telegram') window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(name + ' — ' + summary), '_blank');
+}
+
+function stCopy(btn) {
+    var card = btn.closest('.st-card');
+    var name = card.querySelector('.st-name').textContent;
+    var summary = card.querySelector('.st-summary').textContent;
+    var full = card.querySelector('.st-full-text');
+    var source = card.querySelector('.st-source');
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/stories-en.html#' + card.id;
+    var text = name + '\n\n' + (full ? full.textContent : summary) + '\n\n' + (source ? source.textContent : '') + '\n\n' + url;
+    navigator.clipboard.writeText(text);
+    btn.textContent = '\u2713';
+    setTimeout(function() { btn.innerHTML = '&#128203;'; }, 2000);
+}
+
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500);
+    }
+})();
+
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.st-card').forEach(function(el) { el.classList.add('fade-in'); observer.observe(el); });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+
+<script>
+(async function() {
+    var user = await getCurrentUser();
+    if (user) {
+        document.getElementById('stLoginGate').style.display = 'none';
+        document.getElementById('stForm').style.display = 'block';
+    }
+    onAuthChange(function(event) {
+        if (event === 'SIGNED_IN') {
+            document.getElementById('stLoginGate').style.display = 'none';
+            document.getElementById('stForm').style.display = 'block';
+        } else if (event === 'SIGNED_OUT') {
+            document.getElementById('stLoginGate').style.display = 'block';
+            document.getElementById('stForm').style.display = 'none';
+        }
+    });
+})();
+
+async function stSubmit(e) {
+    e.preventDefault();
+    var btn = document.getElementById('stSubmitBtn');
+    var msg = document.getElementById('stMsg');
+    btn.disabled = true;
+    msg.textContent = 'Submitting...';
+    msg.style.color = '#D97706';
+
+    var user = await getCurrentUser();
+    if (!user) {
+        msg.textContent = 'You must be logged in to submit a story.';
+        msg.style.color = '#e74c3c';
+        btn.disabled = false;
+        return;
+    }
+
+    var obj = {
+        user_id: user.id,
+        title_he: document.getElementById('stTitle').value.trim(),
+        content_he: document.getElementById('stContent').value.trim(),
+        category: document.getElementById('stCategory').value,
+        source_citation: document.getElementById('stSource').value.trim() || null,
+        author_name: document.getElementById('stAuthor').value.trim(),
+        is_anonymous: document.getElementById('stAnon').checked,
+        status: 'pending'
+    };
+
+    if (!obj.title_he || !obj.content_he || !obj.category || !obj.author_name) {
+        msg.textContent = 'Please fill in all required fields.';
+        msg.style.color = '#e74c3c';
+        btn.disabled = false;
+        return;
+    }
+
+    var result = await _supabase.from('stories').insert(obj);
+    if (result.error) {
+        msg.textContent = 'Error: ' + result.error.message;
+        msg.style.color = '#e74c3c';
+    } else {
+        msg.textContent = 'Story submitted successfully! It will be reviewed by the site team before publication.';
+        msg.style.color = '#2ecc71';
+        document.getElementById('stForm').reset();
+        document.getElementById('stCharCount').textContent = '0/2000';
+    }
+    btn.disabled = false;
+}
+
+(async function() {
+    var result = await _supabase
+        .from('stories')
+        .select('*')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false });
+
+    var stories = result.data || [];
+    if (stories.length === 0) return;
+
+    document.getElementById('userStoriesSection').style.display = 'block';
+    var grid = document.getElementById('userStoriesGrid');
+    var catLabels = { oct7: 'October 7 Survivors', holocaust: 'Holocaust Survivors', aliyah: 'Immigration Stories', antisem: 'Antisemitism Abroad', idf: 'IDF Soldiers', hostages: 'Hostage Families' };
+
+    stories.forEach(function(s) {
+        var div = document.createElement('div');
+        div.className = 'st-card';
+        div.dataset.cat = s.category;
+        div.onclick = function() { stToggle(div); };
+        var authorDisplay = s.is_anonymous ? 'Anonymous' : escHtml(s.author_name);
+        div.innerHTML = '<div class="st-cat-label">' + (catLabels[s.category] || '') + '</div>'
+            + '<div class="st-name">' + escHtml(s.title_he) + '</div>'
+            + '<div class="st-summary">By: ' + authorDisplay + '</div>'
+            + '<div class="st-full"><div class="st-full-text">' + escHtml(s.content_he) + '</div>'
+            + (s.source_citation ? '<div class="st-source">' + escHtml(s.source_citation) + '</div>' : '')
+            + '</div><div class="st-expand">&#9660; Click to read</div>';
+        grid.appendChild(div);
+    });
+})();
+
+function escHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str == null ? '' : String(str)));
+    return div.innerHTML;
+}
+</script>
+
+</body>
+</html>

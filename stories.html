@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>סיפורים אישיים | האמת נגד השקר</title>
+    <meta name="description" content="24 סיפורים אישיים של ניצולים, חיילים, עולים ומשפחות — עדויות אמיתיות מ-7 באוקטובר, השואה, עלייה לישראל, אנטישמיות ועוד.">
+    <meta name="theme-color" content="#0a0a1a">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <meta property="og:title" content="סיפורים אישיים — עדויות אמיתיות | האמת נגד השקר">
+    <meta property="og:description" content="24 סיפורים אישיים — ניצולי 7 באוקטובר, ניצולי שואה, סיפורי עלייה, אנטישמיות, חיילי צה״ל ומשפחות חטופים">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/stories.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="סיפורים אישיים — עדויות אמיתיות | האמת נגד השקר">
+    <meta name="twitter:description" content="24 סיפורים אישיים — עדויות של אנשים אמיתיים. ניצולים, חיילים, עולים, משפחות.">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/stories.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/stories.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/stories-en.html">
+
+    <link rel="stylesheet" href="shared.css">
+
+    <style>
+        /* === HERO === */
+        .st-hero { text-align: center; padding: 100px 20px 30px; }
+        .st-hero h1 { color: #D97706; font-size: 2.4em; margin-bottom: 10px; }
+        .st-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 650px; margin: 0 auto 10px; line-height: 1.7; }
+        .st-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+
+        /* === TL;DR BOX === */
+        .st-tldr { max-width: 700px; margin: 0 auto 30px; padding: 20px 24px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.25); border-radius: 6px; color: #c0c0c0; font-size: 0.92em; line-height: 1.7; }
+        .st-tldr strong { color: #D97706; }
+
+        /* === FILTER BUTTONS === */
+        .st-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; padding: 0 20px; }
+        .st-filter-btn { padding: 7px 16px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .st-filter-btn.active { background: rgba(217,119,6,0.18); border-color: #D97706; color: #D97706; }
+
+        /* === CARDS GRID === */
+        .st-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+
+        /* === INDIVIDUAL CARD === */
+        .st-card { background: #12172b; border-radius: 3px; padding: 24px 22px 16px; position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .st-card[data-cat="oct7"] { border-top: 4px solid #e74c3c; }
+        .st-card[data-cat="holocaust"] { border-top: 4px solid #888; }
+        .st-card[data-cat="aliyah"] { border-top: 4px solid #3498db; }
+        .st-card[data-cat="antisem"] { border-top: 4px solid #9b59b6; }
+        .st-card[data-cat="idf"] { border-top: 4px solid #2ecc71; }
+        .st-card[data-cat="hostages"] { border-top: 4px solid #f39c12; }
+
+        /* Card header */
+        .st-cat-label { font-size: 0.7em; letter-spacing: 1px; margin-bottom: 8px; opacity: 0.7; }
+        .st-card[data-cat="oct7"] .st-cat-label { color: #e74c3c; }
+        .st-card[data-cat="holocaust"] .st-cat-label { color: #888; }
+        .st-card[data-cat="aliyah"] .st-cat-label { color: #3498db; }
+        .st-card[data-cat="antisem"] .st-cat-label { color: #9b59b6; }
+        .st-card[data-cat="idf"] .st-cat-label { color: #2ecc71; }
+        .st-card[data-cat="hostages"] .st-cat-label { color: #f39c12; }
+
+        .st-name { color: #e2b714; font-size: 1.15em; font-weight: bold; margin-bottom: 6px; }
+        .st-summary { color: #c0c0c0; font-size: 0.9em; line-height: 1.6; margin-bottom: 0; }
+
+        /* Expanded content (hidden by default) */
+        .st-full { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
+        .st-card.open .st-full { display: block; }
+        .st-full-text { color: #b0b0b0; font-size: 0.88em; line-height: 1.7; margin-bottom: 12px; }
+        .st-source { font-size: 0.75em; color: #777; font-style: italic; }
+
+        /* Expand indicator */
+        .st-expand { text-align: center; color: #555; font-size: 0.75em; margin-top: 10px; transition: color 0.2s; }
+        .st-card.open .st-expand { display: none; }
+
+        /* Actions row */
+        .st-actions { display: none; gap: 6px; align-items: center; justify-content: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; margin-top: 10px; }
+        .st-card.open .st-actions { display: flex; }
+        .st-actions a, .st-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
+        .st-actions a:hover, .st-actions button:hover { border-color: #D97706; color: #D97706; }
+        .st-actions .wa:hover { border-color: #25D366; color: #25D366; }
+        .st-actions .tw:hover { border-color: #1DA1F2; color: #1DA1F2; }
+        .st-actions .tg:hover { border-color: #0088cc; color: #0088cc; }
+
+        /* URL watermark */
+        .st-card::after { content: 'truth-against-lies.github.io'; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 0.6em; color: rgba(217,119,6,0.2); letter-spacing: 1px; pointer-events: none; }
+
+        /* === SUBMIT SECTION === */
+        .st-submit { max-width: 700px; margin: 40px auto; padding: 30px 24px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 6px; }
+        .st-submit h2 { color: #D97706; font-size: 1.3em; margin-bottom: 8px; }
+        .st-submit p { color: #999; font-size: 0.9em; margin-bottom: 18px; }
+        .st-submit label { display: block; color: #c0c0c0; font-size: 0.85em; margin-bottom: 4px; margin-top: 14px; }
+        .st-submit input, .st-submit textarea, .st-submit select { width: 100%; padding: 10px 14px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 3px; color: #e0e0e0; font-size: 0.9em; font-family: inherit; }
+        .st-submit input:focus, .st-submit textarea:focus, .st-submit select:focus { outline: none; border-color: #D97706; }
+        .st-submit textarea { min-height: 120px; resize: vertical; }
+        .st-submit .st-char-count { text-align: left; font-size: 0.75em; color: #666; margin-top: 4px; }
+        .st-submit .st-anon-row { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+        .st-submit .st-anon-row input { width: auto; }
+        .st-submit .st-submit-btn { margin-top: 20px; padding: 12px 30px; background: #D97706; color: #0a0a1a; border: none; border-radius: 3px; font-size: 1em; font-weight: bold; cursor: pointer; font-family: inherit; }
+        .st-submit .st-submit-btn:hover { background: #e88a15; }
+        .st-submit .st-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .st-msg { margin-top: 12px; font-size: 0.9em; min-height: 1.2em; }
+        .st-login-gate { text-align: center; padding: 20px 0; }
+        .st-login-gate p { color: #888; margin-bottom: 12px; }
+        .st-login-gate a { color: #D97706; text-decoration: underline; }
+
+        /* === USER STORIES SECTION === */
+        .st-user-section { max-width: 1100px; margin: 20px auto 40px; padding: 0 20px; }
+        .st-user-section h2 { color: #D97706; font-size: 1.3em; margin-bottom: 20px; text-align: center; }
+
+        /* === BOTTOM LINKS === */
+        .st-links { max-width: 700px; margin: 0 auto; padding: 20px 20px 40px; }
+        .st-link-box { display: block; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #D97706; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+        .st-link-box:hover { background: rgba(217,119,6,0.12); }
+        .st-link-box .link-desc { color: #999; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .st-hero h1 { font-size: 1.7em; }
+            .st-grid { grid-template-columns: 1fr; padding: 0 12px 30px; }
+            .st-card { padding: 18px 15px 14px; }
+            .st-filters { gap: 6px; }
+            .st-filter-btn { font-size: 0.8em; padding: 6px 12px; }
+        }
+
+        /* === LIGHT MODE === */
+        body.light-mode .st-card { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+        body.light-mode .st-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        body.light-mode .st-name { color: #b48c0a; }
+        body.light-mode .st-summary { color: #444; }
+        body.light-mode .st-full-text { color: #333; }
+        body.light-mode .st-hero h1 { color: #b45f06; }
+        body.light-mode .st-filter-btn.active { background: rgba(180,95,6,0.12); border-color: #b45f06; color: #b45f06; }
+        body.light-mode .st-card::after { color: rgba(180,95,6,0.15); }
+        body.light-mode .st-tldr { background: rgba(180,95,6,0.05); border-color: #ddd; }
+        body.light-mode .st-submit { background: rgba(180,95,6,0.04); border-color: #ddd; }
+        body.light-mode .st-link-box { background: rgba(180,95,6,0.04); border-color: #ddd; color: #b45f06; }
+    </style>
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"CollectionPage","name":"סיפורים אישיים — האמת נגד השקר","description":"24 סיפורים אישיים של ניצולים, חיילים, עולים ומשפחות חטופים","publisher":{"@type":"Organization","name":"Truth Against Lies"},"inLanguage":"he"}
+    </script>
+</head>
+<body>
+<div class="reading-progress"></div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism.html">אנטישמיות</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism.html">&#128269; מה זה אנטישמיות?</a></li>
+                        <li><a href="antisemitism.html#claims">&#128203; עלילות והפרכות</a></li>
+                        <li><a href="holocaust-denial.html">&#128367; הכחשת השואה</a></li>
+                        <li><a href="statistics.html">&#128202; נתוני אנטישמיות</a></li>
+                        <li><a href="antisemitic-orgs.html">&#9760; ארגונים אנטישמיים</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="fact-cards.html">&#127183; כרטיסי עובדות</a></li>
+                <li><a href="stories.html">&#128220; סיפורים אישיים</a></li>
+                <li><a href="timeline.html">&#128336; ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li class="has-submenu">
+                    <a href="gallery.html">מדיה</a>
+                    <ul class="submenu">
+                        <li><a href="gallery.html">&#128444; תיעוד היסטורי</a></li>
+                        <li><a href="videos.html">&#128249; צפה והתעדכן</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li class="has-submenu">
+                    <a href="facts.html">עובדות שלא מספרים לך</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command.html">&#9874; פיקוד כושל ובוגד</a></li>
+                        <li><a href="facts-knesset.html">&#127963; חברי כנסת</a></li>
+                        <li><a href="facts-court.html">&#9878; בג"ץ ומערכת המשפט</a></li>
+                        <li><a href="facts-policies.html">&#128203; חוקים ומדיניות כושלת</a></li>
+                        <li><a href="facts-media.html">&#128249; תקשורת שקרנית</a></li>
+                        <li><a href="facts-orgs.html">&#127970; ארגונים, אקדמיה ו-BDS</a></li>
+                        <li><a href="facts-money.html">&#128176; הכסף — מימון הטרור</a></li>
+                        <li><a href="facts-iran.html">&#128293; ציר ההרס של איראן</a></li>
+                        <li><a href="facts-west.html">&#127760; בגידות המערב</a></li>
+                        <li><a href="facts-myths.html">&#128269; שקרים שהמציאות הפריכה</a></li>
+                        <li><a href="facts-netanyahu.html">&#9878; הפרדוקס של נתניהו</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity.html">חיזוק ומחשבה</a>
+                    <ul class="submenu">
+                        <li><a href="unity.html">&#128170; חיזוק העם היהודי</a></li>
+                        <li><a href="consciousness.html">&#128293; שינוי תודעה</a></li>
+                        <li><a href="mind.html">&#129504; חיזוק המוח</a></li>
+                        <li><a href="mind-liberation.html">&#128161; שחרור התודעה</a></li>
+                        <li><a href="left-narrative.html">&#128240; הנרטיב של השמאל</a></li>
+                        <li><a href="daat-dat.html">&#9878; דעת vs דת</a></li>
+                        <li><a href="bnei-yisrael.html">&#128220; בני ישראל</a></li>
+                        <li><a href="streams.html">&#127907; זרמים ומגזרים</a></li>
+                        <li><a href="internal-schism.html">&#128148; הפילוג הפנימי</a></li>
+                        <li><a href="sword-prayer.html">&#9876; חרב ותפילה</a></li>
+                        <li><a href="the-schism.html">&#9878; הפילוג הגדול</a></li>
+                        <li><a href="revolving-door.html">&#128274; הדלת המסתובבת</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="glossary.html">מילון מונחים</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul></div>
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
+        <div class="nav-lang">
+            <a href="stories-en.html" class="nav-lang-btn" title="English">EN</a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="st-hero">
+    <h1>&#128220; סיפורים אישיים</h1>
+    <div class="subtitle">מאחורי כל מספר יש שם. מאחורי כל שם יש סיפור.<br>העדויות האמיתיות של אנשים שחיו את זה.</div>
+    <div class="hero-meta">24 סיפורים &bull; 6 קטגוריות &bull; עדויות מתועדות</div>
+</section>
+
+<!-- TL;DR -->
+<div class="st-tldr">
+    <strong>בקצרה:</strong> דף זה מרכז סיפורים אישיים אמיתיים מ-6 קטגוריות &mdash; ניצולי 7 באוקטובר, ניצולי שואה, סיפורי עלייה, אנטישמיות בחו"ל, חיילי צה"ל ומשפחות חטופים. כל סיפור מבוסס על מקורות מתועדים. לחצו על כרטיס כדי לקרוא את הסיפור המלא.
+</div>
+
+<!-- FILTER TABS -->
+<div class="st-filters">
+    <button class="st-filter-btn active" onclick="stFilter('all',this)">הכל (24)</button>
+    <button class="st-filter-btn" onclick="stFilter('oct7',this)">&#128308; ניצולי 7 באוקטובר (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('holocaust',this)">&#9899; ניצולי שואה (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('aliyah',this)">&#128309; סיפורי עלייה (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('antisem',this)">&#128995; אנטישמיות בחו"ל (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('idf',this)">&#128994; חיילי צה"ל (4)</button>
+    <button class="st-filter-btn" onclick="stFilter('hostages',this)">&#128992; משפחות חטופים (4)</button>
+</div>
+
+<!-- STORIES GRID -->
+<div class="st-grid">
+
+<!-- ==================== OCT 7 ==================== -->
+
+<!-- 1. רחל אדרי -->
+<div class="st-card" id="st-rachel-edri" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי 7 באוקטובר</div>
+    <div class="st-name">רחל אדרי</div>
+    <div class="st-summary">סבתא בת 65 מאופקים שהגישה תה ועוגיות למחבלי חמאס במשך 16 שעות &mdash; עד שהמשטרה הגיעה.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            ב-7 באוקטובר 2023, כשמחבלי חמאס פרצו לביתה של רחל אדרי בעיר אופקים, היא גילתה קור רוח יוצא דופן. במקום להיכנס לפאניקה, רחל &mdash; סבתא בת 65 &mdash; הגישה למחבלים תה ועוגיות. במשך 16 שעות ארוכות היא שמרה עליהם רגועים בסלון ביתה, שוחחה איתם ומנעה מהם לצאת ולפגוע באחרים. לאורך כל הזמן הזה, בעלה דוד היה כבול בחדר אחר. רחל הצליחה לעכב את המחבלים עד שכוחות המשטרה הגיעו וחיסלו אותם. הסיפור שלה הפך לסמל של אומץ ותושייה אזרחית בתוך האימה.
+        </div>
+        <div class="st-source">BBC News, Oct 2023 | ערוץ 12 | Times of Israel</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 2. רמי דוידיאן -->
+<div class="st-card" id="st-rami-davidian" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי 7 באוקטובר</div>
+    <div class="st-name">רמי דוידיאן</div>
+    <div class="st-summary">חקלאי מפטיש שנהג בטנדר לתוך הטבח במסיבת נובה והציל כ-200 אנשים תחת אש.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            רמי דוידיאן, חקלאי ממושב פטיש, שמע את הירי ב-7 באוקטובר ומיד נסע עם הטנדר שלו לכיוון מסיבת נובה. במהלך שעות ארוכות, רמי חזר שוב ושוב לאזור הטבח, העמיס צעירים על הטנדר והעביר אותם למקום מוגן &mdash; הכל תחת אש חיה של מחבלים. לפי הערכות, הוא הציל כ-200 אנשים. רמי עבד כל הלילה ולמחרת בלי הפסקה, גם כשהיה ברור שהסכנה לחייו היא מיידית. הסיפור שלו הפך לאחד מסיפורי הגבורה המרכזיים של אותו יום שחור.
+        </div>
+        <div class="st-source">CNN, Dec 2023 | NBC News | The Guardian</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 3. ניצולי נובה -->
+<div class="st-card" id="st-nova-survivors" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי 7 באוקטובר</div>
+    <div class="st-name">ניצולי מסיבת נובה</div>
+    <div class="st-summary">3,500 משתתפים, 364 נרצחו, מאות ברחו ברגל &mdash; עדות נטלי סננדג'י שרצה 5 שעות.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            מסיבת נובה לשלום ("סופרנובה") התקיימה באזור רעים ב-7 באוקטובר 2023, עם כ-3,500 משתתפים. כשהרקטות החלו והמחבלים הגיעו, 364 אנשים נרצחו ועשרות נחטפו. מאות ברחו ברגל דרך שדות ואדמות חקלאיות. נטלי סננדג'י, אחת הניצולות, רצה ברגל במשך 5 שעות רצופות עד שהגיעה למקום מבטחים. עדותה ועדויות ניצולים אחרים תועדו על ידי קרן USC Shoah Foundation כחלק מפרויקט התיעוד הגדול ביותר מאז עדויות ניצולי השואה.
+        </div>
+        <div class="st-source">USC Shoah Foundation | Reuters, Oct 2023 | The New York Times</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 4. שני לוק -->
+<div class="st-card" id="st-shani-louk" data-cat="oct7" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי 7 באוקטובר</div>
+    <div class="st-name">שני לוק</div>
+    <div class="st-summary">גרמנית-ישראלית בת 22 שהובלה על טנדר חמאס &mdash; הפכה לסמל הטבח.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            שני ניקול לוק, בת 22, בעלת אזרחות גרמנית-ישראלית, השתתפה במסיבת נובה. התמונה של גופה המוטל על טנדר של חמאס, כשמחבלים חוגגים סביבה, הפכה לאחת התמונות המזעזעות ביותר מ-7 באוקטובר ולסמל הטבח ברחבי העולם. משפחתה קיבלה הודעה ראשונית שהיא פצועה וחיה, אך בהמשך אושר מותה. סיפורה עורר גל הזדהות עולמי ושימש כנקודת מפנה בתודעה הבינלאומית לגבי היקף הזוועה.
+        </div>
+        <div class="st-source">BBC News, Oct 2023 | Times of Israel | DW (Deutsche Welle)</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== HOLOCAUST ==================== -->
+
+<!-- 5. אדית אווה אגר -->
+<div class="st-card" id="st-edith-eger" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי שואה</div>
+    <div class="st-name">ד"ר אדית אווה אגר</div>
+    <div class="st-summary">ניצולת אושוויץ בת 16 שרקדה למנגלה, שרדה ובסופו של דבר הפכה לפסיכולוגית בכירה.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            אדית אווה אגר נולדה בהונגריה ב-1927. בגיל 16 נשלחה לאושוויץ עם משפחתה &mdash; הוריה נרצחו ביום ההגעה. מנגלה עצמו ציווה עליה לרקוד עבורו, והיא רקדה כדי לשרוד. אחרי מסע מוות וסבל בלתי נתפס, היא שוחררה ב-1945 כשהייתה קרובה למוות. אדית היגרה לארה"ב, סיימה תואר בפסיכולוגיה והפכה למומחית מובילה לטיפול בטראומה. ספרה "The Choice" (2017) הפך לרב-מכר בינלאומי ומתאר את המסע שלה מאושוויץ לסליחה, ואת הבחירה שכל אדם יכול לעשות &mdash; לחיות כקורבן או כניצול.
+        </div>
+        <div class="st-source">Edith Eger, "The Choice" (2017) | The New York Times | USC Shoah Foundation</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 6. אלי ויזל -->
+<div class="st-card" id="st-elie-wiesel" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי שואה</div>
+    <div class="st-name">אלי ויזל</div>
+    <div class="st-summary">חתן פרס נובל, ניצול אושוויץ ובוכנוולד, שהקדיש את חייו לעדות ולזיכרון.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            אלי ויזל (1928&ndash;2016) היה סופר, פרופסור וחתן פרס נובל לשלום (1986). בגיל 15, הוא ומשפחתו גורשו לאושוויץ, שם אמו ואחותו הצעירה נרצחו. הוא ואביו הועברו לבוכנוולד, שם אביו מת זמן קצר לפני השחרור. ספרו "לילה" (1960) הפך ליצירה מכוננת בספרות השואה &mdash; תיאור קצר ומזעזע של חוויותיו במחנות. ויזל הקדיש את שארית חייו למלחמה באדישות: "ההפך מאהבה זה לא שנאה, אלא אדישות. ההפך מאמונה זה לא כפירה, אלא אדישות." הוא הקים את הקרן לאנושות, הרצה ברחבי העולם וסירב לשתוק.
+        </div>
+        <div class="st-source">Elie Wiesel, "Night" (1960) | Nobel Prize Committee, 1986 | USHMM</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 7. לילי אברט -->
+<div class="st-card" id="st-lily-ebert" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי שואה</div>
+    <div class="st-name">לילי אברט</div>
+    <div class="st-summary">ניצולת אושוויץ שהפכה למחנכת בטיקטוק בגיל 98 &mdash; עם מיליוני עוקבים.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            לילי אברט (1923&ndash;2024) נשלחה לאושוויץ ב-1944, שם מנגלה שלח את אמה ואחיותיה הצעירות ישירות לתאי הגזים. לילי שרדה עבודת כפייה ומסע מוות, ואחרי המלחמה בנתה את חייה מחדש. בגיל 97, נכדהּ שכנע אותה להתחיל חשבון טיקטוק. לילי הפכה לתופעה &mdash; עם למעלה מ-2 מיליון עוקבים. בסרטונים קצרים ונוגעים ללב, היא סיפרה את חוויותיה ישירות לדור הצעיר. ספרה "Lily's Promise" (2021), שנכתב עם נכדה, מתאר את ההבטחה שנתנה &mdash; לספר את הסיפור כדי שהעולם לא ישכח.
+        </div>
+        <div class="st-source">Lily Ebert &amp; Dov Forman, "Lily's Promise" (2021) | TikTok @lilyebert | BBC</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 8. דינה גוטליבובה באביט -->
+<div class="st-card" id="st-dina-gottliebova" data-cat="holocaust" onclick="stToggle(this)">
+    <div class="st-cat-label">ניצולי שואה</div>
+    <div class="st-name">דינה גוטליבובה באביט</div>
+    <div class="st-summary">אמנית שמנגלה אילץ לצייר דיוקנאות של אסירים &mdash; ושרדה בזכות האמנות שלה.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            דינה גוטליבובה (1923&ndash;2009) הייתה אמנית צ'כית-יהודייה שנשלחה לאושוויץ ב-1943. כשמנגלה גילה את כישרונה, הוא ציווה עליה לצייר דיוקנאות של אסירים רומים &mdash; "כדי לתעד את הגזעים" לפני שנרצחו. דינה ציירה תחת כפייה, אבל הציורים שלה הצילו את חייה ואת חיי אמה. אחרי המלחמה, דינה היגרה לארה"ב והפכה לאנימטורית באולפני וורנר ברוס. ב-1973, היא גילתה שהציורים שציירה באושוויץ מוצגים במוזיאון אושוויץ ודרשה לקבלם בחזרה &mdash; מאבק שנמשך עד סוף חייה. הציורים נותרו במוזיאון.
+        </div>
+        <div class="st-source">USHMM | Yad Vashem | The Washington Post | "The Last Album" (2005)</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== ALIYAH ==================== -->
+
+<!-- 9. מבצע שלמה -->
+<div class="st-card" id="st-operation-solomon" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">סיפורי עלייה</div>
+    <div class="st-name">מבצע שלמה (1991)</div>
+    <div class="st-summary">14,325 יהודי אתיופיה הוטסו ב-36 שעות &mdash; בואינג 747 נשא 1,122 נוסעים (שיא עולמי).</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            מבצע שלמה התקיים ב-24&ndash;25 במאי 1991, ברגע שבו ממשלת אתיופיה הייתה על סף קריסה. במהלך 36 שעות בלבד, חיל האוויר הישראלי הטיס 14,325 יהודי אתיופיה (ביתא ישראל) מאדיס אבבה לישראל ב-34 טיסות. מטוס בואינג 747 של אל-על נשא 1,122 נוסעים בטיסה אחת &mdash; שיא עולמי שלא נשבר עד היום. הושארו מושבים כדי להכנס עוד אנשים, ושני תינוקות נולדו במהלך הטיסה. מבצע שלמה הוא אחד הרגעים המרגשים ביותר בהיסטוריה הישראלית &mdash; מדינה ששולחת מטוסים להציל יהודים מהקצה של אפריקה.
+        </div>
+        <div class="st-source">Israel State Archives | Jewish Agency | Guinness World Records | IAF Archives</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 10. מבצע מרבד הקסמים -->
+<div class="st-card" id="st-magic-carpet" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">סיפורי עלייה</div>
+    <div class="st-name">מבצע מרבד הקסמים (1949)</div>
+    <div class="st-summary">49,000 יהודי תימן &mdash; רבים לא ראו מטוס מעולם והאמינו בנבואה "על כנפי נשרים".</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            בין יוני 1949 לספטמבר 1950, כ-49,000 יהודי תימן הוטסו לישראל במבצע סודי שכונה "מרבד הקסמים" (On Wings of Eagles). רבים מיהודי תימן מעולם לא ראו מטוס &mdash; והאמינו שהנבואה "ואשא אתכם על כנפי נשרים" (שמות יט:ד) מתגשמת ממש לנגד עיניהם. הם השאירו את כל רכושם, הלכו ברגל מאות קילומטרים למחנה המעבר בעדן, ומשם הוטסו לישראל. זו הייתה עלייה של קהילה שלמה &mdash; עם מסורת של 2,500 שנה &mdash; שנעקרה מהתפוצה וחזרה הביתה.
+        </div>
+        <div class="st-source">Israel State Archives | Jewish Agency | Yemenite Heritage Center | AJHS</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 11. נתן שרנסקי -->
+<div class="st-card" id="st-sharansky" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">סיפורי עלייה</div>
+    <div class="st-name">נתן שרנסקי</div>
+    <div class="st-summary">אסיר ציון סובייטי ש-9 שנות כלא לא שברו &mdash; סמל תנועת הרפוסניקים.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            נתן (אנטולי) שרנסקי, מתמטיקאי יהודי-סובייטי, נעצר ב-1977 באשמות ריגול בדויות כשכל "פשעו" היה שרצה לעלות לישראל. הוא בילה 9 שנים בכלא סובייטי, כולל תקופות של בידוד מוחלט, חקירות אינסופיות ותנאים לא אנושיים. אשתו אביטל ניהלה מסע בינלאומי לשחרורו שהפך לאחד מסמלי המאבק לזכויות אדם. שרנסקי שוחרר ב-1986 ועלה לישראל, שם שימש כשר וכיו"ר הסוכנות היהודית. ספרו "Fear No Evil" (1988) מתאר כיצד שמר על חירותו הפנימית גם כשגופו היה כלוא.
+        </div>
+        <div class="st-source">Natan Sharansky, "Fear No Evil" (1988) | The Guardian | Yad Vashem | Knesset Archives</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 12. עלייה צרפתית 2015 -->
+<div class="st-card" id="st-french-aliyah" data-cat="aliyah" onclick="stToggle(this)">
+    <div class="st-cat-label">סיפורי עלייה</div>
+    <div class="st-name">העלייה הצרפתית (2015)</div>
+    <div class="st-summary">אחרי פיגועי שארלי הבדו והיפר כשר &mdash; 7,900 יהודים צרפתים עלו לישראל, שיא היסטורי.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            בינואר 2015, שני פיגועי טרור זעזעו את צרפת: הטבח במערכת שארלי הבדו (12 הרוגים) ולקיחת בני ערובה בסופר ההיפר כשר בפריז, שם 4 יהודים נרצחו רק בגלל שהיו יהודים. הפיגועים הביאו את יהדות צרפת &mdash; הקהילה היהודית השלישית בגודלה בעולם (כ-500,000) &mdash; להבנה שהאנטישמיות חזרה לרחובות אירופה. ב-2015, 7,900 יהודים צרפתים עלו לישראל, שיא היסטורי. רבים מהם תיארו תחושה של "לחיות עם מזוודות ארוזות" &mdash; הרגשה שלא הכירו מאז ימי וישי.
+        </div>
+        <div class="st-source">Jewish Agency, 2015 Report | Le Monde | Times of Israel | CRIF</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== ANTISEMITISM ==================== -->
+
+<!-- 13. עץ החיים, פיטסבורג -->
+<div class="st-card" id="st-tree-of-life" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">אנטישמיות בחו"ל</div>
+    <div class="st-name">טבח בית הכנסת עץ החיים (2018)</div>
+    <div class="st-summary">11 מתפללים נרצחו בפיטסבורג &mdash; הפיגוע האנטישמי הגרוע ביותר בהיסטוריה של ארה"ב.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            ב-27 באוקטובר 2018, רוצח נכנס לבית הכנסת "עץ החיים" בפיטסבורג, פנסילבניה, בזמן תפילת שבת בבוקר וירה במתפללים. 11 אנשים נרצחו ו-6 נפצעו, כולל 4 שוטרים. הרוצח צעק "כל היהודים חייבים למות" בזמן הירי. הקורבנות היו בגילאי 54 עד 97, כולל זוג נשוי ושני אחים. זה היה הפיגוע האנטישמי הקטלני ביותר בהיסטוריה של ארצות הברית. הרוצח הורשע בפשעי שנאה פדרליים ונידון למוות. הפיגוע הוכיח שאנטישמיות אלימה אינה עניין של ספרי היסטוריה &mdash; היא כאן ועכשיו.
+        </div>
+        <div class="st-source">ADL, 2018 | FBI Federal Indictment | The New York Times | Pittsburgh Post-Gazette</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 14. אנטישמיות בקמפוסים -->
+<div class="st-card" id="st-campus-antisemitism" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">אנטישמיות בחו"ל</div>
+    <div class="st-name">אנטישמיות בקמפוסים (2023&ndash;24)</div>
+    <div class="st-summary">ADL תיעדה 8,873 אירועים אנטישמיים (+140%) &mdash; Columbia, MIT, Cornell ועוד.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            אחרי ה-7 באוקטובר 2023, גל אנטישמיות חסר תקדים הציף את הקמפוסים האמריקאיים. ה-ADL תיעדה 8,873 אירועים אנטישמיים בארה"ב ב-2023 &mdash; עלייה של 140% לעומת השנה הקודמת. סטודנטים יהודים באוניברסיטאות מובילות כמו Columbia, MIT, Cornell ו-Harvard דיווחו על הטרדות, איומים ואלימות. בקולומביה, מחנות מחאה פרו-פלסטיניים צעקו "Globalize the Intifada" מול סטודנטים יהודים. נשיאות אוניברסיטאות נחקרו בקונגרס על כישלונן להגן על סטודנטים יהודים, ושלוש מהן התפטרו.
+        </div>
+        <div class="st-source">ADL Audit 2023 | Congressional Hearing, Dec 2023 | The Washington Post | AMCHA Initiative</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 15. אילן חלימי -->
+<div class="st-card" id="st-ilan-halimi" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">אנטישמיות בחו"ל</div>
+    <div class="st-name">אילן חלימי (2006)</div>
+    <div class="st-summary">צרפתי יהודי בן 23 שנחטף ועונה 24 יום בפרברי פריז &mdash; כי "ליהודים יש כסף".</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            אילן חלימי, צרפתי יהודי בן 23, נחטף ב-21 בינואר 2006 על ידי "כנופיית הברברים" בראשות יוסוף פופנה. החוטפים בחרו בו במפורש כי הוא יהודי &mdash; בהנחה ש"ליהודים יש כסף והקהילה תשלם כופר". אילן הוחזק בפרברי פריז במשך 24 יום, שבהם עונה באכזריות נוראית. כ-20 אנשים ידעו על החטיפה ולא דיווחו למשטרה. אילן נמצא קרוב למוות ליד מסילת רכבת ב-13 בפברואר ומת בדרך לבית החולים. אמו, רות חלימי, כתבה את הספר "24 Days" והפכה לפעילה נגד אנטישמיות בצרפת.
+        </div>
+        <div class="st-source">Ruth Halimi, "24 Days" (2009) | Le Monde | BBC | CRIF</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 16. איומים על מורים יהודים -->
+<div class="st-card" id="st-french-teachers" data-cat="antisem" onclick="stToggle(this)">
+    <div class="st-cat-label">אנטישמיות בחו"ל</div>
+    <div class="st-name">מורים יהודים תחת איום בצרפת</div>
+    <div class="st-summary">מורים יהודים בצרפת חיים במחבוא אחרי איומי מוות &mdash; רק כי הם יהודים.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            בצרפת, מורים יהודים מתמודדים עם איומי מוות ואלימות באופן שוטף. מורים דיווחו שנאלצו להחביא את זהותם היהודית או לעזוב בתי ספר בפרברים מוסלמיים. אחרי רצח המורה סמואל פאטי (2020) על ידי קיצוני איסלאמי, הפחד התעצם. CRIF (הגוף המייצג של יהדות צרפת) דיווח ב-2024 על עלייה חדה באיומים נגד אנשי חינוך יהודים. Le Figaro תיעד מקרים של מורים שעברו דירה ושינו את שם המשפחה שלהם. המציאות ברורה: בשנת 2024, מורים יהודים בלב אירופה חיים בפחד &mdash; תמונה שלא הייתה מאז שנות ה-30.
+        </div>
+        <div class="st-source">Le Figaro, 2024 | CRIF Report 2024 | France 24 | The Local France</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== IDF ==================== -->
+
+<!-- 17. עמוס ירקוני -->
+<div class="st-card" id="st-amos-yarkoni" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">חיילי צה"ל</div>
+    <div class="st-name">עמוס ירקוני (עבד אל-מג'יד חידר)</div>
+    <div class="st-summary">בדואי ישראלי שהפך למפקד גדוד המיעוטים הראשון בצה"ל &mdash; סמל השותפות.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            עמוס ירקוני (1920&ndash;1991), ששמו המקורי עבד אל-מג'יד חידר, היה בדואי ישראלי שהפך לאחד מקציני צה"ל הבכירים ממוצא לא-יהודי. הוא הקים ופיקד על גדוד המיעוטים ("יחידה 300") &mdash; יחידת צה"ל הראשונה שמורכבת מדרוזים, בדואים וצ'רקסים. ירקוני השתתף בכל מלחמות ישראל ממלחמת העצמאות ועד מלחמת ששת הימים, שבה נפצע קשה. הוא קיבל את אות המפקד הנערץ ביותר בצה"ל. סיפורו מייצג את השותפות האמיתית בין כל אזרחי ישראל &mdash; מעבר לדת ולאתניות.
+        </div>
+        <div class="st-source">IDF Archives | Israel Ministry of Defense | Ynet | Jewish Virtual Library</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 18. אביגדור כהלני -->
+<div class="st-card" id="st-kahalani" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">חיילי צה"ל</div>
+    <div class="st-name">אביגדור כהלני</div>
+    <div class="st-summary">מפקד טנקים שהחזיק בעמק הבכא (1973) עם 7 טנקים מול 500 טנקים סוריים.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            סגן-אלוף אביגדור כהלני פיקד על גדוד טנקים ברמת הגולן במלחמת יום כיפור (1973). כשסוריה תקפה בהפתעה עם כ-500 טנקים, כהלני נותר עם 7 טנקים תקינים בלבד בעמק שכונה מאז "עמק הבכא". במשך ימים, הוא והחיילים שלו עיכבו את הצבא הסורי ומנעו פריצה שהייתה יכולה לאיים על קיום המדינה. כהלני עצמו כבר היה שרוף קשה ממלחמת ששת הימים (1967) &mdash; פניו וידיו נשרפו כשטנק שלו נפגע. ספרו "The Heights of Courage" מתאר את הקרבות. הוא קיבל את עיטור הגבורה, העיטור הצבאי הגבוה ביותר בישראל.
+        </div>
+        <div class="st-source">Avigdor Kahalani, "The Heights of Courage" (1984) | IDF Archives | Yad L'Shiryon Museum</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 19. רועי קליין -->
+<div class="st-card" id="st-roi-klein" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">חיילי צה"ל</div>
+    <div class="st-name">רס"ן רועי קליין</div>
+    <div class="st-summary">קפץ על רימון במלחמת לבנון 2 כדי להציל את חייליו &mdash; מת עם "שמע ישראל" על שפתיו.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            רס"ן רועי קליין, סגן מפקד גדוד 51 בחטיבת גולני, נפל ב-26 ביולי 2006 בקרב בבינת ג'בייל, לבנון, במלחמת לבנון השנייה. כשרימון נזרק לעבר קבוצת החיילים שלו, רועי קפץ על הרימון וספג את הפיצוץ בגופו כדי להציל את חייליהם. עדי ראייה סיפרו שהמילים האחרונות שלו היו "שמע ישראל, ה' אלוהינו, ה' אחד". הוא היה בן 31, אב לשני ילדים. קליין הצטיין כמפקד אהוב שדאג לכל חייל. הוא קיבל את עיטור המופת, ובית ספר ורחובות נקראו על שמו.
+        </div>
+        <div class="st-source">IDF Archives | Israel Ministry of Defense | Ynet | Haaretz</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 20. חיילים דרוזים -->
+<div class="st-card" id="st-druze-soldiers" data-cat="idf" onclick="stToggle(this)">
+    <div class="st-cat-label">חיילי צה"ל</div>
+    <div class="st-name">החיילים הדרוזים</div>
+    <div class="st-summary">כ-10% מהגברים הדרוזים בקרביים &mdash; שיעור הנפגעים הגבוה ביותר פר-קפיטה בצה"ל.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            הקהילה הדרוזית בישראל (כ-150,000) מגוייסת לצה"ל מאז 1956 &mdash; בהסכמה ובבקשת מנהיגי הקהילה. כ-10% מהגברים הדרוזים משרתים ביחידות קרביות, ושיעור הנפגעים שלהם פר-קפיטה הוא מהגבוהים ביותר בצה"ל. דרוזים שירתו ומשרתים בכל יחידות הצבא, כולל יחידות מובחרות, ומאות קצינים דרוזים הגיעו לדרגות בכירות. ברית הדם בין הדרוזים למדינת ישראל היא אחת הדוגמאות המובהקות ביותר לשותפות גורל אמיתית &mdash; ותשובה חיה לטענת "מדינת אפרטהייד". הדרוזים מגינים על ישראל לא כי הם חייבים &mdash; אלא כי הם רואים בה בית.
+        </div>
+        <div class="st-source">IDF Spokesperson | Israel CBS | Journal of Strategic Studies | Al-Monitor</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- ==================== HOSTAGES ==================== -->
+
+<!-- 21. נועה ארגמני -->
+<div class="st-card" id="st-noa-argamani" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">משפחות חטופים</div>
+    <div class="st-name">נועה ארגמני</div>
+    <div class="st-summary">התמונה האיקונית מהחטיפה על אופנוע &mdash; חולצה ביוני 2024 במבצע ארנון.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            נועה ארגמני, בת 26, נחטפה ממסיבת נובה ב-7 באוקטובר 2023. הסרטון שבו היא מובלת על אופנוע של חמאס כשהיא צועקת "אל תהרגו אותי!" הפך לאחת התמונות האיקוניות ביותר של אותו יום &mdash; וסמל החטופים ברחבי העולם. אביה, יעקב, וחברה, אבינתן אור, נלחמו ללא הרף לשחרורה. ב-8 ביוני 2024, נועה חולצה במבצע ארנון &mdash; מבצע צבאי מורכב בנוסייראת שבמהלכו חולצו 4 חטופים חיים. הרגע שבו נועה חיבקה את אביה הפך לאחד הרגעים המרגשים ביותר בהיסטוריה הישראלית. למרבה הצער, אמה ליורה שחלתה בסרטן מוחי, נפטרה זמן קצר אחרי ששבה.
+        </div>
+        <div class="st-source">IDF Spokesperson, June 2024 | BBC | CNN | Times of Israel</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 22. הירש גולדברג-פולין -->
+<div class="st-card" id="st-hersh-goldberg" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">משפחות חטופים</div>
+    <div class="st-name">הירש גולדברג-פולין</div>
+    <div class="st-summary">אמריקאי-ישראלי בן 23 &mdash; אמו רייצ'ל הפכה לסמל המאבק. נרצח בשבי באוגוסט 2024.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            הירש גולדברג-פולין, אמריקאי-ישראלי בן 23, נחטף ממסיבת נובה ב-7 באוקטובר. כשהסתתר במקלט עם חברים, רימון קטע את חלק מזרועו. הוא נחטף לעזה ולמשך חודשים ארוכים משפחתו לא ידעה אם הוא חי. אמו רייצ'ל גולדברג-פולין הפכה לדמות מובילה בקמפיין לשחרור החטופים &mdash; נאמה בפני הקונגרס, האו"ם ובעצרות ברחבי העולם. "כל יום שהוא שם הוא גיהינום," אמרה. באוגוסט 2024, הירש נמצא מת בעזה &mdash; יחד עם 5 חטופים נוספים שנרצחו על ידי חמאס זמן קצר לפני שצה"ל הגיע אליהם.
+        </div>
+        <div class="st-source">CNN | The Washington Post | Times of Israel | US Congressional Record, 2024</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 23. כפיר ואריאל ביבס -->
+<div class="st-card" id="st-bibas-family" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">משפחות חטופים</div>
+    <div class="st-name">כפיר ואריאל ביבס</div>
+    <div class="st-summary">בן 10 חודשים ובן 4 כשנחטפו עם אמם שירי &mdash; החטופים הצעירים ביותר.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            כפיר ביבס, בן 10 חודשים, ואחיו אריאל, בן 4, נחטפו ב-7 באוקטובר 2023 מקיבוץ ניר עוז יחד עם אמם שירי ואביהם יארדן. הם היו החטופים הצעירים ביותר &mdash; כפיר חגג את יום הולדתו הראשון בשבי בעזה. התמונות של שני הילדים האדומים הפכו לסמל הזוועה ולקריאה עולמית לשחרור. אביהם יארדן שוחרר בנובמבר 2023 במסגרת עסקת חטופים ראשונה, כשהוא רזה ומדוכא, אך שירי, כפיר ואריאל נותרו בשבי. גורלם נותר לא ידוע למשך חודשים ארוכים ומייסרים.
+        </div>
+        <div class="st-source">IDF Spokesperson | BBC | The New York Times | Hostages &amp; Missing Families Forum</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+<!-- 24. פורום המשפחות -->
+<div class="st-card" id="st-hostage-forum" data-cat="hostages" onclick="stToggle(this)">
+    <div class="st-cat-label">משפחות חטופים</div>
+    <div class="st-name">פורום משפחות החטופים</div>
+    <div class="st-summary">200,000+ ישראלים מפגינים מדי שבוע בכיכר החטופים &mdash; תנועת המחאה הגדולה ביותר בהיסטוריה.</div>
+    <div class="st-full">
+        <div class="st-full-text">
+            פורום משפחות החטופים והנעדרים הוקם ימים ספורים אחרי ה-7 באוקטובר 2023 כארגון של משפחות 251 החטופים. הפורום הפך במהרה לתנועת המחאה האזרחית הגדולה ביותר בהיסטוריה הישראלית. מדי שבת, למעלה מ-200,000 ישראלים התכנסו ב"כיכר החטופים" (כיכר המוזיאונים בתל אביב) לדרוש את שחרור החטופים. הפורום פעל גם בזירה הבינלאומית &mdash; משפחות נפגשו עם נשיא ארה"ב, ראשי מדינות, האפיפיור והאו"ם. השולחן הריק עם הכיסאות בכיכר &mdash; שהסמל "אנחנו שומרים לכם מקום" &mdash; הפך לסמל של כל עם ישראל.
+        </div>
+        <div class="st-source">Hostages &amp; Missing Families Forum | Haaretz | BBC | Reuters</div>
+    </div>
+    <div class="st-expand">&#9660; לחצו לקריאה</div>
+    <div class="st-actions">
+        <a class="wa" onclick="event.stopPropagation();stShare(this,'whatsapp')" title="WhatsApp">W</a>
+        <a class="tw" onclick="event.stopPropagation();stShare(this,'twitter')" title="X">&#120143;</a>
+        <a class="tg" onclick="event.stopPropagation();stShare(this,'telegram')" title="Telegram">T</a>
+        <button onclick="event.stopPropagation();stCopy(this)" title="העתק טקסט">&#128203;</button>
+    </div>
+</div>
+
+</div><!-- /st-grid -->
+
+<!-- SUBMIT SECTION -->
+<section class="st-submit" id="submit">
+    <h2>&#9997; שתפו את הסיפור שלכם</h2>
+    <p>יש לכם סיפור אישי שקשור לאנטישמיות, לעלייה, לצה"ל או ל-7 באוקטובר? שתפו אותו כאן. הסיפור ייבדק על ידי צוות האתר לפני פרסום.</p>
+
+    <div id="stLoginGate" class="st-login-gate">
+        <p>&#128274; יש להתחבר כדי לשלוח סיפור.</p>
+        <a href="index.html#login">התחברו כאן</a>
+    </div>
+
+    <form id="stForm" style="display:none" onsubmit="return stSubmit(event)">
+        <label for="stTitle">כותרת הסיפור *</label>
+        <input type="text" id="stTitle" required maxlength="150" placeholder="למשל: הסיפור של סבתא רחל">
+
+        <label for="stCategory">קטגוריה *</label>
+        <select id="stCategory" required>
+            <option value="">בחרו קטגוריה...</option>
+            <option value="oct7">ניצולי 7 באוקטובר</option>
+            <option value="holocaust">ניצולי שואה</option>
+            <option value="aliyah">סיפורי עלייה</option>
+            <option value="antisem">אנטישמיות בחו"ל</option>
+            <option value="idf">חיילי צה"ל</option>
+            <option value="hostages">משפחות חטופים</option>
+        </select>
+
+        <label for="stContent">הסיפור *</label>
+        <textarea id="stContent" required maxlength="2000" placeholder="ספרו את הסיפור..." oninput="document.getElementById('stCharCount').textContent=this.value.length+'/2000'"></textarea>
+        <div class="st-char-count" id="stCharCount">0/2000</div>
+
+        <label for="stSource">מקור / ציטוט (אופציונלי)</label>
+        <input type="text" id="stSource" maxlength="200" placeholder="למשל: BBC, Oct 2023">
+
+        <label for="stAuthor">שם המחבר *</label>
+        <input type="text" id="stAuthor" required maxlength="100" placeholder="השם שלכם">
+
+        <div class="st-anon-row">
+            <input type="checkbox" id="stAnon">
+            <label for="stAnon" style="margin:0; cursor:pointer;">פרסום אנונימי</label>
+        </div>
+
+        <button type="submit" class="st-submit-btn" id="stSubmitBtn">שלחו סיפור</button>
+        <div class="st-msg" id="stMsg"></div>
+    </form>
+</section>
+
+<!-- USER STORIES (dynamic from Supabase) -->
+<section class="st-user-section" id="userStoriesSection" style="display:none">
+    <h2>&#128172; סיפורים מהקהילה</h2>
+    <div class="st-grid" id="userStoriesGrid"></div>
+</section>
+
+<!-- BOTTOM LINKS -->
+<div class="st-links">
+    <a href="october7.html" class="st-link-box">&#128293; 7 באוקטובר &mdash; התיעוד המלא<span class="link-desc">ציר זמן, עדויות, נתונים ותיעוד מקיף של אירועי ה-7 באוקטובר</span></a>
+    <a href="fact-cards.html" class="st-link-box">&#127183; כרטיסי עובדות<span class="link-desc">18 כרטיסים עם מיתוס, עובדה ומקורות &mdash; לשיתוף מהיר</span></a>
+    <a href="unity.html" class="st-link-box">&#128170; חיזוק העם היהודי<span class="link-desc">מה שמחזיק אותנו ביחד &mdash; ערכים, אחדות ותקווה</span></a>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+    <p><a href="index.html">&#8594; חזרה לאתר הראשי</a></p>
+    <p style="margin-top: 15px;">נבנה על ידי נתנאל אסיס | 2026</p>
+</div>
+
+<!-- Floating Share Button -->
+<div class="share-fab" id="shareFab">
+    <div class="share-fab-menu">
+        <a class="sfab-wa" title="WhatsApp" onclick="fabShare('whatsapp')">W</a>
+        <a class="sfab-tg" title="Telegram" onclick="fabShare('telegram')">T</a>
+        <a class="sfab-tw" title="X / Twitter" onclick="fabShare('twitter')">&#120143;</a>
+        <a class="sfab-fb" title="Facebook" onclick="fabShare('facebook')">f</a>
+        <a class="sfab-cp" title="העתק קישור" onclick="fabShare('copy')">&#128203;</a>
+    </div>
+    <button class="share-fab-btn" aria-label="שתף דף" onclick="document.getElementById('shareFab').classList.toggle('open')" title="שתף">&#10149;</button>
+</div>
+
+<div id="google_translate_element"></div>
+
+<script src="common.js"></script>
+
+<script>
+// ========== FILTER ==========
+function stFilter(cat, btn) {
+    document.querySelectorAll('.st-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.st-grid:first-of-type .st-card').forEach(function(card) {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+}
+
+// ========== CARD TOGGLE ==========
+function stToggle(card) {
+    card.classList.toggle('open');
+}
+
+// ========== SHARE ==========
+function stShare(el, platform) {
+    var card = el.closest('.st-card');
+    var name = card.querySelector('.st-name').textContent;
+    var summary = card.querySelector('.st-summary').textContent;
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/stories.html#' + card.id;
+    var text = name + '\n' + summary + '\n\n' + url;
+    if (platform === 'whatsapp') window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank');
+    else if (platform === 'twitter') window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(name + ' — ' + summary.substring(0, 150)) + '&url=' + encodeURIComponent(url), '_blank');
+    else if (platform === 'telegram') window.open('https://t.me/share/url?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(name + ' — ' + summary), '_blank');
+}
+
+// ========== COPY TEXT ==========
+function stCopy(btn) {
+    var card = btn.closest('.st-card');
+    var name = card.querySelector('.st-name').textContent;
+    var summary = card.querySelector('.st-summary').textContent;
+    var full = card.querySelector('.st-full-text');
+    var source = card.querySelector('.st-source');
+    var url = 'https://truth-against-lies.github.io/truth-against-lies/stories.html#' + card.id;
+    var text = name + '\n\n' + (full ? full.textContent : summary) + '\n\n' + (source ? source.textContent : '') + '\n\n' + url;
+    navigator.clipboard.writeText(text);
+    btn.textContent = '\u2713';
+    setTimeout(function() { btn.innerHTML = '&#128203;'; }, 2000);
+}
+
+// ========== ANCHOR SCROLL ==========
+(function() {
+    if (location.hash) {
+        var el = document.querySelector(location.hash);
+        if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500);
+    }
+})();
+
+// ========== FADE-IN ==========
+var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.st-card').forEach(function(el) { el.classList.add('fade-in'); observer.observe(el); });
+</script>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+
+<script>
+// ========== AUTH-GATED SUBMISSION ==========
+(async function() {
+    var user = await getCurrentUser();
+    if (user) {
+        document.getElementById('stLoginGate').style.display = 'none';
+        document.getElementById('stForm').style.display = 'block';
+    }
+    // Listen for auth changes
+    onAuthChange(function(event) {
+        if (event === 'SIGNED_IN') {
+            document.getElementById('stLoginGate').style.display = 'none';
+            document.getElementById('stForm').style.display = 'block';
+        } else if (event === 'SIGNED_OUT') {
+            document.getElementById('stLoginGate').style.display = 'block';
+            document.getElementById('stForm').style.display = 'none';
+        }
+    });
+})();
+
+// ========== SUBMIT STORY ==========
+async function stSubmit(e) {
+    e.preventDefault();
+    var btn = document.getElementById('stSubmitBtn');
+    var msg = document.getElementById('stMsg');
+    btn.disabled = true;
+    msg.textContent = 'שולח...';
+    msg.style.color = '#D97706';
+
+    var user = await getCurrentUser();
+    if (!user) {
+        msg.textContent = 'יש להתחבר כדי לשלוח סיפור.';
+        msg.style.color = '#e74c3c';
+        btn.disabled = false;
+        return;
+    }
+
+    var obj = {
+        user_id: user.id,
+        title_he: document.getElementById('stTitle').value.trim(),
+        content_he: document.getElementById('stContent').value.trim(),
+        category: document.getElementById('stCategory').value,
+        source_citation: document.getElementById('stSource').value.trim() || null,
+        author_name: document.getElementById('stAuthor').value.trim(),
+        is_anonymous: document.getElementById('stAnon').checked,
+        status: 'pending'
+    };
+
+    if (!obj.title_he || !obj.content_he || !obj.category || !obj.author_name) {
+        msg.textContent = 'יש למלא את כל שדות החובה.';
+        msg.style.color = '#e74c3c';
+        btn.disabled = false;
+        return;
+    }
+
+    var result = await _supabase.from('stories').insert(obj);
+    if (result.error) {
+        msg.textContent = 'שגיאה: ' + result.error.message;
+        msg.style.color = '#e74c3c';
+    } else {
+        msg.textContent = 'הסיפור נשלח בהצלחה! הוא ייבדק על ידי צוות האתר לפני פרסום.';
+        msg.style.color = '#2ecc71';
+        document.getElementById('stForm').reset();
+        document.getElementById('stCharCount').textContent = '0/2000';
+    }
+    btn.disabled = false;
+}
+
+// ========== LOAD APPROVED USER STORIES ==========
+(async function() {
+    var result = await _supabase
+        .from('stories')
+        .select('*')
+        .eq('status', 'approved')
+        .order('created_at', { ascending: false });
+
+    var stories = result.data || [];
+    if (stories.length === 0) return;
+
+    document.getElementById('userStoriesSection').style.display = 'block';
+    var grid = document.getElementById('userStoriesGrid');
+    var catLabels = { oct7: 'ניצולי 7 באוקטובר', holocaust: 'ניצולי שואה', aliyah: 'סיפורי עלייה', antisem: 'אנטישמיות בחו"ל', idf: 'חיילי צה"ל', hostages: 'משפחות חטופים' };
+
+    stories.forEach(function(s) {
+        var div = document.createElement('div');
+        div.className = 'st-card';
+        div.dataset.cat = s.category;
+        div.onclick = function() { stToggle(div); };
+        var authorDisplay = s.is_anonymous ? 'אנונימי' : escHtml(s.author_name);
+        div.innerHTML = '<div class="st-cat-label">' + (catLabels[s.category] || '') + '</div>'
+            + '<div class="st-name">' + escHtml(s.title_he) + '</div>'
+            + '<div class="st-summary">מאת: ' + authorDisplay + '</div>'
+            + '<div class="st-full"><div class="st-full-text">' + escHtml(s.content_he) + '</div>'
+            + (s.source_citation ? '<div class="st-source">' + escHtml(s.source_citation) + '</div>' : '')
+            + '</div><div class="st-expand">&#9660; לחצו לקריאה</div>';
+        grid.appendChild(div);
+    });
+})();
+
+function escHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str == null ? '' : String(str)));
+    return div.innerHTML;
+}
+</script>
+
+</body>
+</html>
