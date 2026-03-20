@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline | Truth Against Lies</title>
+    <meta name="description" content="Interactive timeline of Jewish and Israeli history — 120+ key events from 1807 to 2023. Antisemitism, Holocaust, Wars, Peace, Achievements, Zionism.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="Interactive Timeline — Jewish History 1807-2023 | Truth Against Lies">
+    <meta property="og:description" content="120+ key events in Jewish and Israeli history — from Napoleon's Sanhedrin to the Iron Swords War">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/timeline-en.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interactive Timeline — Jewish History | Truth Against Lies">
+    <meta name="twitter:description" content="120+ key events in Jewish and Israeli history">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="shared-en.css">
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/timeline-en.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/timeline-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <style>
+        .tl-bg-tree { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70vmin; height: auto; opacity: 0.035; pointer-events: none; z-index: 0; filter: brightness(2) sepia(1) hue-rotate(10deg) saturate(0.3); }
+        .tl-hero { text-align: center; padding: 100px 20px 30px; position: relative; z-index: 1; }
+        .tl-hero h1 { color: #e2b714; font-size: 2.4em; margin-bottom: 10px; }
+        .tl-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+        .tl-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+        .tl-stats { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 25px auto 10px; max-width: 900px; padding: 0 20px; position: relative; z-index: 1; }
+        .tl-stat-box { background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); border-radius: 8px; padding: 14px 20px; text-align: center; min-width: 100px; }
+        .tl-stat-num { color: #e2b714; font-size: 1.8em; font-weight: bold; }
+        .tl-stat-label { color: #999; font-size: 0.8em; margin-top: 2px; }
+        .tl-era-slider { position: sticky; top: 60px; z-index: 100; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(226,183,20,0.15); padding: 12px 20px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(226,183,20,0.3) transparent; text-align: center; }
+        .tl-era-slider::-webkit-scrollbar { height: 4px; }
+        .tl-era-slider::-webkit-scrollbar-thumb { background: rgba(226,183,20,0.3); border-radius: 2px; }
+        .tl-era-inner { display: inline-flex; gap: 8px; }
+        .tl-era-btn { display: inline-block; padding: 8px 18px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; white-space: nowrap; }
+        .tl-era-btn:hover { border-color: rgba(226,183,20,0.4); color: #e2b714; }
+        .tl-era-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; font-weight: bold; }
+        .tl-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 20px auto; padding: 0 20px; max-width: 900px; position: relative; z-index: 1; }
+        .tl-filter-btn { padding: 7px 16px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .tl-filter-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; }
+        .tl-filter-btn[data-cat="antisemitism"].active { border-color: #e74c3c; color: #e74c3c; background: rgba(231,76,60,0.1); }
+        .tl-filter-btn[data-cat="holocaust"].active { border-color: #8b0000; color: #ff6b6b; background: rgba(139,0,0,0.1); }
+        .tl-filter-btn[data-cat="wars"].active { border-color: #e67e22; color: #e67e22; background: rgba(230,126,34,0.1); }
+        .tl-filter-btn[data-cat="peace"].active { border-color: #2ecc71; color: #2ecc71; background: rgba(46,204,113,0.1); }
+        .tl-filter-btn[data-cat="achievements"].active { border-color: #e2b714; color: #e2b714; background: rgba(226,183,20,0.15); }
+        .tl-filter-btn[data-cat="zionism"].active { border-color: #3498db; color: #3498db; background: rgba(52,152,219,0.1); }
+        .tl-counter { text-align: center; color: #888; font-size: 0.85em; margin: 15px 0; padding: 8px; position: relative; z-index: 1; }
+        .tl-counter strong { color: #e2b714; }
+        .tl-controls { display: flex; gap: 10px; justify-content: center; margin: 10px 0 5px; position: relative; z-index: 1; }
+        .tl-ctrl-btn { padding: 6px 14px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.8em; transition: all 0.2s; }
+        .tl-ctrl-btn:hover { border-color: #e2b714; color: #e2b714; }
+        .tl-container { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; position: relative; z-index: 1; }
+        .tl-era { margin: 40px 0; }
+        .tl-era-title { text-align: center; color: #e2b714; font-size: 1.5em; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(226,183,20,0.2); }
+        .tl-line { position: relative; padding: 20px 0; }
+        .tl-line::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #e2b714, rgba(226,183,20,0.3)); }
+        .tl-event { position: relative; margin-bottom: 30px; width: 45%; transition: opacity 0.3s; }
+        .tl-event.hidden { display: none; }
+        .tl-event:nth-child(odd) { margin-left: 55%; }
+        .tl-event:nth-child(even) { margin-right: auto; margin-left: 0; }
+        .tl-dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; top: 20px; z-index: 2; box-shadow: 0 0 8px rgba(0,0,0,0.3); transition: transform 0.2s; }
+        .tl-event:nth-child(odd) .tl-dot { right: -37px; }
+        .tl-event:nth-child(even) .tl-dot { left: -37px; }
+        .tl-event:hover .tl-dot { transform: scale(1.3); }
+        .tl-card { background: #12172b; border-radius: 3px; overflow: hidden; border: 1px solid rgba(226,183,20,0.08); transition: border-color 0.3s, box-shadow 0.3s; }
+        .tl-card:hover { border-color: rgba(226,183,20,0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .tl-event[data-cat="antisemitism"] .tl-card { border-top: 3px solid #e74c3c; }
+        .tl-event[data-cat="holocaust"] .tl-card { border-top: 3px solid #8b0000; }
+        .tl-event[data-cat="wars"] .tl-card { border-top: 3px solid #e67e22; }
+        .tl-event[data-cat="peace"] .tl-card { border-top: 3px solid #2ecc71; }
+        .tl-event[data-cat="achievements"] .tl-card { border-top: 3px solid #e2b714; }
+        .tl-event[data-cat="zionism"] .tl-card { border-top: 3px solid #3498db; }
+        .tl-card-header { padding: 16px 18px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+        .tl-date { color: #e2b714; font-weight: bold; font-size: 0.95em; white-space: nowrap; }
+        .tl-title { color: #fff; font-size: 0.95em; flex: 1; min-width: 120px; }
+        .tl-badge { font-size: 0.7em; padding: 2px 8px; border-radius: 3px; white-space: nowrap; }
+        .badge-antisemitism { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .badge-holocaust { background: rgba(139,0,0,0.15); color: #ff6b6b; }
+        .badge-wars { background: rgba(230,126,34,0.15); color: #e67e22; }
+        .badge-peace { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .badge-achievements { background: rgba(226,183,20,0.15); color: #e2b714; }
+        .badge-zionism { background: rgba(52,152,219,0.15); color: #3498db; }
+        .tl-arrow { color: #666; font-size: 0.8em; transition: transform 0.3s; margin-top: 3px; }
+        .tl-card.open .tl-arrow { transform: rotate(180deg); }
+        .tl-card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s; padding: 0 18px; }
+        .tl-card.open .tl-card-body { max-height: 500px; padding: 0 18px 16px; }
+        .tl-card-body p { color: #c0c0c0; font-size: 0.9em; line-height: 1.7; margin-bottom: 10px; }
+        .tl-victims { color: #e74c3c; font-size: 0.85em; font-weight: bold; }
+        .tl-sources { font-size: 0.75em; color: #777; font-style: italic; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px; margin-top: 10px; line-height: 1.5; }
+        .tl-sources a { color: #e2b714; text-decoration: none; }
+        .tl-sources a:hover { text-decoration: underline; }
+        .tl-era-end { text-align: center; padding: 20px; color: #555; font-size: 0.85em; border-top: 1px dashed rgba(226,183,20,0.15); margin-top: 10px; }
+        .tl-section-sources { max-width: 900px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 1; }
+        .tl-section-sources h2 { color: #e2b714; font-size: 1.3em; margin-bottom: 15px; }
+        .tl-section-sources ul { list-style: none; padding: 0; }
+        .tl-section-sources li { color: #999; font-size: 0.85em; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .tl-section-sources a { color: #e2b714; text-decoration: none; }
+        .tl-attr { text-align: center; color: #555; font-size: 0.75em; margin: 20px 0; }
+        .tl-attr a { color: #e2b714; text-decoration: none; }
+        @media (max-width: 768px) {
+            .tl-hero h1 { font-size: 1.7em; }
+            .tl-stats { gap: 10px; }
+            .tl-stat-box { min-width: 80px; padding: 10px 14px; }
+            .tl-stat-num { font-size: 1.4em; }
+            .tl-era-slider { top: 60px; padding: 10px 12px; }
+            .tl-line::before { left: 20px; }
+            .tl-event { width: calc(100% - 45px) !important; margin-left: 45px !important; margin-right: 0 !important; }
+            .tl-event .tl-dot { left: -27px !important; right: auto !important; }
+            .tl-era-title { font-size: 1.2em; }
+            .tl-card-header { padding: 12px 14px; }
+        }
+        @media (max-width: 500px) {
+            .tl-card-header { flex-direction: column; gap: 5px; }
+        }
+        body.light-mode .tl-hero h1 { color: #b48c0a; }
+        body.light-mode .tl-card { background: #fff; }
+        body.light-mode .tl-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        body.light-mode .tl-title { color: #1a1a2e; }
+        body.light-mode .tl-card-body p { color: #444; }
+        body.light-mode .tl-era-slider { background: rgba(245,245,240,0.95); border-bottom-color: rgba(180,140,10,0.15); }
+        body.light-mode .tl-era-btn.active { background: rgba(180,140,10,0.12); border-color: #b48c0a; color: #b48c0a; }
+        body.light-mode .tl-stat-box { background: rgba(226,183,20,0.08); border-color: rgba(180,140,10,0.2); }
+        body.light-mode .tl-stat-num { color: #b48c0a; }
+        body.light-mode .tl-era-title { color: #b48c0a; }
+        body.light-mode .tl-bg-tree { filter: brightness(0.5) sepia(1) hue-rotate(10deg); }
+        body.light-mode .tl-filter-btn.active { background: rgba(180,140,10,0.12); }
+        @media print { .tl-era-slider, .tl-filters, .tl-controls, .tl-bg-tree { display: none !important; } .tl-card-body { max-height: none !important; padding: 0 18px 16px !important; } .tl-event { width: 100% !important; margin: 10px 0 !important; } .tl-line::before { display: none; } }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+<div class="reading-progress"></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Etz_Chaim.svg" class="tl-bg-tree" alt="" aria-hidden="true" loading="lazy">
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="Settings" title="Settings">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">Light Mode</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>Print / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="Navigation menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism-en.html">Antisemitism</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism-en.html">&#128269; What is Antisemitism?</a></li>
+                        <li><a href="antisemitism-en.html#claims">&#128203; Claims &amp; Refutations</a></li>
+                        <li><a href="holocaust-denial-en.html">&#128367; Holocaust Denial</a></li>
+                        <li><a href="statistics-en.html">&#128202; Antisemitism Statistics</a></li>
+                        <li><a href="antisemitic-orgs-en.html">☠ Antisemitic Organizations</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies-en.html">Common Lies</a></li>
+                <li><a href="fact-cards-en.html">&#127183; Fact Cards</a></li>
+                <li><a href="timeline-en.html">&#128336; Timeline</a></li>
+                <li><a href="index-en.html#psychology">Psychology</a></li>
+                <li><a href="regions-en.html">Hatred by Nations</a></li>
+                <li class="has-submenu">
+                    <a href="gallery-en.html">Media</a>
+                    <ul class="submenu">
+                        <li><a href="gallery-en.html">&#128444; Historical Documentation</a></li>
+                        <li><a href="videos-en.html">&#128249; Watch &amp; Learn</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7-en.html">October 7</a></li>
+                <li class="has-submenu">
+                    <a href="facts-en.html">Facts They Don't Tell You</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command-en.html">&#9874; Failed Command</a></li>
+                        <li><a href="facts-knesset-en.html">&#127963; Knesset Members</a></li>
+                        <li><a href="facts-court-en.html">&#9878; Supreme Court</a></li>
+                        <li><a href="facts-policies-en.html">&#128203; Failed Policies</a></li>
+                        <li><a href="facts-media-en.html">&#128249; Lying Media</a></li>
+                        <li><a href="facts-orgs-en.html">&#127970; Organizations, Academia &amp; BDS</a></li>
+                        <li><a href="facts-money-en.html">&#128176; The Money</a></li>
+                        <li><a href="facts-iran-en.html">&#128293; Iran's Axis of Destruction</a></li>
+                        <li><a href="facts-west-en.html">&#127760; Western Betrayals</a></li>
+                        <li><a href="facts-myths-en.html">&#128269; Debunked Myths</a></li>
+                        <li><a href="facts-netanyahu-en.html">&#9878; The Netanyahu Paradox</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity-en.html">Strengthening &amp; Thought</a>
+                    <ul class="submenu">
+                        <li><a href="unity-en.html">&#128170; Strengthening the Jewish People</a></li>
+                        <li><a href="consciousness-en.html">&#128293; Consciousness Shift</a></li>
+                        <li><a href="mind-en.html">&#129504; Strengthening the Mind</a></li>
+                        <li><a href="left-narrative-en.html">&#128240; The Left's Narrative</a></li>
+                        <li><a href="daat-dat-en.html">&#9878; Knowledge vs Religion</a></li>
+                        <li><a href="bnei-yisrael-en.html">&#128220; Children of Israel</a></li>
+                        <li><a href="streams-en.html">&#127907; Streams &amp; Sectors</a></li>
+                        <li><a href="sword-prayer-en.html">&#9876; Sword &amp; Prayer</a></li>
+                        <li><a href="the-schism-en.html">&#9878; The Great Schism</a></li>
+                    </ul>
+                </li>
+                <li><a href="index-en.html#report">Report Antisemitism</a></li>
+                <li><a href="glossary-en.html">Glossary</a></li>
+                <li><a href="action-en.html">Take Action</a></li>
+            </ul></div>
+        <a href="index-en.html" class="nav-logo">Truth Against Lies</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="Search the site" title="Search the site"><span class="search-icon">&#128269;</span><span class="search-label">Search</span></button>
+        <div class="nav-lang"><a href="timeline.html" class="nav-lang-btn" title="&#1506;&#1489;&#1512;&#1497;&#1514;">&#1506;&#1489;</a></div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="tl-hero">
+    <h1>&#128336; Interactive Timeline</h1>
+    <div class="subtitle">Jewish and Israeli History from 1807 to 2023<br>Antisemitism, Holocaust, Wars, Peace, Achievements &amp; Zionism</div>
+    <div class="hero-meta">120+ events &bull; 10 eras &bull; 6 categories &bull; Academic sources</div>
+</section>
+
+<!-- STATS -->
+<div class="tl-stats">
+    <div class="tl-stat-box"><div class="tl-stat-num">120+</div><div class="tl-stat-label">Events</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">216</div><div class="tl-stat-label">Years</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">6</div><div class="tl-stat-label">Categories</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">10</div><div class="tl-stat-label">Eras</div></div>
+</div>
+
+<!-- ERA SLIDER -->
+<div class="tl-era-slider">
+    <div class="tl-era-inner">
+        <button class="tl-era-btn active" data-era="era-1800s" onclick="scrollToEra('era-1800s',this)">1807-1880 Enlightenment</button>
+        <button class="tl-era-btn" data-era="era-zionism" onclick="scrollToEra('era-zionism',this)">1881-1917 Zionism</button>
+        <button class="tl-era-btn" data-era="era-mandate" onclick="scrollToEra('era-mandate',this)">1918-1939 Mandate</button>
+        <button class="tl-era-btn" data-era="era-holocaust" onclick="scrollToEra('era-holocaust',this)">1933-1945 Holocaust</button>
+        <button class="tl-era-btn" data-era="era-independence" onclick="scrollToEra('era-independence',this)">1947-1949 Independence</button>
+        <button class="tl-era-btn" data-era="era-building" onclick="scrollToEra('era-building',this)">1950-1966 Nation Building</button>
+        <button class="tl-era-btn" data-era="era-wars" onclick="scrollToEra('era-wars',this)">1967-1982 Wars</button>
+        <button class="tl-era-btn" data-era="era-peace" onclick="scrollToEra('era-peace',this)">1983-1999 Peace</button>
+        <button class="tl-era-btn" data-era="era-2000s" onclick="scrollToEra('era-2000s',this)">2000-2015 Millennium</button>
+        <button class="tl-era-btn" data-era="era-recent" onclick="scrollToEra('era-recent',this)">2016-2023 Current</button>
+    </div>
+</div>
+
+<!-- FILTERS -->
+<div class="tl-filters">
+    <button class="tl-filter-btn active" data-cat="all" onclick="filterTimeline('all',this)">All</button>
+    <button class="tl-filter-btn" data-cat="antisemitism" onclick="filterTimeline('antisemitism',this)">&#128308; Antisemitism</button>
+    <button class="tl-filter-btn" data-cat="holocaust" onclick="filterTimeline('holocaust',this)">&#128367; Holocaust</button>
+    <button class="tl-filter-btn" data-cat="wars" onclick="filterTimeline('wars',this)">&#9876; Wars</button>
+    <button class="tl-filter-btn" data-cat="peace" onclick="filterTimeline('peace',this)">&#9774; Peace</button>
+    <button class="tl-filter-btn" data-cat="achievements" onclick="filterTimeline('achievements',this)">&#11088; Achievements</button>
+    <button class="tl-filter-btn" data-cat="zionism" onclick="filterTimeline('zionism',this)">&#10035; Zionism &amp; Aliyah</button>
+</div>
+
+<div class="tl-counter" id="tlCounter">Showing <strong>120</strong> of <strong>120</strong> events</div>
+<div class="tl-controls">
+    <button class="tl-ctrl-btn" onclick="expandAll()">&#9660; Expand All</button>
+    <button class="tl-ctrl-btn" onclick="collapseAll()">&#9650; Collapse All</button>
+</div>
+
+<!-- ==================== TIMELINE CONTENT ==================== -->
+<div class="tl-container">
+
+<!-- ERA 1: 1807-1880 -->
+<div class="tl-era" id="era-1800s">
+<h2 class="tl-era-title">The Enlightenment Era — 1807-1880</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1807">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1807</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Napoleon's Sanhedrin</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Napoleon convened 71 Jewish leaders in Paris as a "Grand Sanhedrin" to regulate the status of Jews in the French Empire. Discussions covered civic loyalty, intermarriage, and state law. A precedent for Jewish emancipation in Europe.</p><div class="tl-sources">Source: Encyclopedia Judaica, "Napoleon and the Jews"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1840">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1840</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Damascus Affair</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A Capuchin friar and his servant disappeared in the Jewish quarter of Damascus. Jews were accused of "ritual murder" and tortured until they "confessed." Moses Montefiore and Adolphe Crémieux secured the release of the prisoners. The event accelerated the founding of Alliance Israélite Universelle.</p><div class="tl-sources">Source: Jonathan Frankel, <em>The Damascus Affair</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1858">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1858</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Mortara Affair</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Edgardo Mortara, a 6-year-old Jewish boy from Bologna, was seized on papal orders after a Christian servant secretly baptized him. His family never recovered him. The affair shocked Europe and strengthened calls for an international Jewish organization.</p><div class="tl-sources">Source: David Kertzer, <em>The Kidnapping of Edgardo Mortara</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1860">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1860</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Alliance Israélite Universelle Founded</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The first international Jewish organization was founded in Paris. "All Israel are responsible for one another" — its mission was to defend Jewish rights worldwide and establish a network of schools across the Middle East and North Africa.</p><div class="tl-sources">Source: André Kaspi, <em>Histoire de l'Alliance Israélite Universelle</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1862">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1862</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Moses Hess — "Rome and Jerusalem"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Socialist philosopher Moses Hess published "Rome and Jerusalem" — one of the first proto-Zionist books. Hess argued that emancipation would not solve the Jewish question and that national revival in the Land of Israel was necessary.</p><div class="tl-sources">Source: Shlomo Avineri, <em>Moses Hess: Prophet of Communism and Zionism</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1870">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1870</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Mikveh Israel — First Agricultural School</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The "Mikveh Israel" agricultural school was established near Jaffa by Alliance Israélite Universelle. It was the first modern Jewish educational institution in the Land of Israel, training generations of pioneers in agriculture.</p><div class="tl-sources">Source: Jewish Virtual Library</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1878">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1878</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Founding of Petah Tikva</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Petah Tikva, the "Mother of Colonies," was founded as the first Jewish agricultural settlement in the Land of Israel. The settlers, from Jerusalem and Hungary, battled malaria and harsh conditions but laid the foundations for modern Jewish settlement.</p><div class="tl-sources">Source: Encyclopedia Judaica, "Petah Tikvah"</div></div></div>
+</div>
+
+</div><!-- /tl-line -->
+</div><!-- /era-1800s -->
+
+<!-- ERA 2: 1881-1917 -->
+<div class="tl-era" id="era-zionism">
+<h2 class="tl-era-title">Early Zionism — 1881-1917</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1881">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1881</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Russian Pogroms Begin</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A wave of violent pogroms erupted in southern Russia after the assassination of Tsar Alexander II. Jews were beaten, murdered, and their property looted. The pogroms continued for years and triggered a massive emigration — approximately 2 million Jews left Russia by 1914.</p><div class="tl-sources">Source: John Klier, <em>Russians, Jews, and the Pogroms of 1881-1882</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1882">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1882</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">The First Aliyah</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 25,000-35,000 Jews immigrated to the Land of Israel, mainly from Russia and Romania. They founded settlements like Rishon LeZion, Zikhron Ya'akov, and Rehovot. The Hovevei Zion and BILU movements led the wave. Baron Rothschild provided financial support.</p><div class="tl-sources">Source: Encyclopedia Judaica, "Aliyah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1894">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1894</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Dreyfus Affair</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Captain Alfred Dreyfus, a French-Jewish officer, was falsely accused of espionage for Germany. Convicted in a rigged court-martial and exiled to Devil's Island. The affair exposed deep antisemitism in France and inspired Herzl to write "The Jewish State."</p><div class="tl-sources">Source: Britannica, "Dreyfus Affair" | Ruth Harris, <em>Dreyfus: Politics, Emotion, and the Scandal of the Century</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1896">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1896</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Herzl — "The Jewish State"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Theodor Herzl, an Austro-Hungarian journalist, published "Der Judenstaat" (The Jewish State). The book argued that the only solution to antisemitism was establishing a sovereign Jewish state. It became the founding text of the political Zionist movement.</p><div class="tl-sources">Source: Theodor Herzl, <em>Der Judenstaat</em> (1896)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1897">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1897</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">First Zionist Congress</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>208 delegates from 17 countries convened in Basel, Switzerland. The Congress established the World Zionist Organization and adopted the "Basel Program" — creating a national home for the Jewish people in the Land of Israel. Herzl wrote in his diary: "In Basel I founded the Jewish State."</p><div class="tl-sources">Source: Central Zionist Archives | Michael Heymann, <em>The Minutes of the Zionist General Council</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1903">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1903</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Kishinev Pogrom</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A violent pogrom erupted in Kishinev (modern-day Moldova) following a blood libel. 49 Jews were murdered, hundreds wounded, and 1,500 homes damaged. Bialik wrote "In the City of Slaughter." The event shook the Jewish world and strengthened the Zionist movement.</p><p class="tl-victims">49 killed, hundreds wounded</p><div class="tl-sources">Source: Steven Zipperstein, <em>Pogrom: Kishinev and the Tilt of History</em> (2018)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1903">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1903</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Publication of "The Protocols of the Elders of Zion"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The most infamous antisemitic forgery in history was published in Russia. It claimed a "Jewish plan for world domination." Proven to be a fabrication by the Russian secret police as early as 1921 by The Times, yet continues to spread hatred to this day.</p><div class="tl-sources">Source: Norman Cohn, <em>Warrant for Genocide</em> (1967) | The Times, 1921</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1904">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1904</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">The Second Aliyah</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 35,000-40,000 Jews immigrated to the Land of Israel (1904-1914), mainly young socialists from Russia. They established the kibbutz movement, labor organizations, and the social infrastructure of the Yishuv. David Ben-Gurion arrived in this wave.</p><div class="tl-sources">Source: Encyclopedia Judaica, "Second Aliyah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1909">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1909</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Founding of Tel Aviv and Degania</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>66 Jewish families drew lots for land plots on the sand dunes north of Jaffa — thus Tel Aviv was born, the first Hebrew city. Around the same time, the first kibbutz — Degania — was established on the shores of the Sea of Galilee, laying the foundations for the kibbutz idea.</p><div class="tl-sources">Source: Maoz Azaryahu, <em>Tel Aviv: Mythography of a City</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1913">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1913</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Beilis Trial</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Menahem Mendel Beilis, a Jew from Kiev, was accused of murdering a Christian child for "blood use" — a classic blood libel. After a sensational international trial, Beilis was acquitted, but the trial exposed the depth of antisemitism in Tsarist Russia.</p><div class="tl-sources">Source: Edmund Levin, <em>A Child of Christian Blood</em> (2014)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1917">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Nov 2, 1917</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">The Balfour Declaration</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>British Foreign Secretary Arthur Balfour sent a letter to Lord Rothschild on behalf of the British government: "His Majesty's Government view with favour the establishment in Palestine of a national home for the Jewish people." The declaration became the first international legal basis for Jewish rights in the Land of Israel.</p><div class="tl-sources">Source: Jonathan Schneer, <em>The Balfour Declaration</em> (2010)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 3: 1918-1939 -->
+<div class="tl-era" id="era-mandate">
+<h2 class="tl-era-title">The Mandate Period — 1918-1939</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1920">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">San Remo Conference</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Allied Powers (Britain, France, Italy, Japan) ratified the Balfour Declaration and the British Mandate over Palestine. The decision granted international legal validity to the establishment of a Jewish national home.</p><div class="tl-sources">Source: League of Nations Official Journal | San Remo Resolution, April 25, 1920</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1920">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Battle of Tel Hai</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Hundreds of Arabs attacked the Tel Hai settlement in the Upper Galilee. Joseph Trumpeldor and 7 other defenders fell. According to tradition, Trumpeldor's last words were: "It is good to die for our country." Tel Hai became a symbol of Jewish self-defense.</p><p class="tl-victims">8 killed</p><div class="tl-sources">Source: Yigal Lossin, <em>Pillar of Fire</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1920">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Founding of the Haganah</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Haganah defense organization was established as a clandestine Jewish militia to protect settlements from Arab attacks. Operating under the noses of the British, it later became the foundation of the IDF.</p><div class="tl-sources">Source: Encyclopedia Judaica, "Haganah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1925">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1925</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Hebrew University Opens</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Hebrew University opened in Jerusalem in an official ceremony on Mount Scopus, attended by Balfour, Allenby, and Albert Einstein. The first academic institution in Hebrew, it became one of the leading universities in the Middle East.</p><div class="tl-sources">Source: Hebrew University Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1929">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1929</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Hebron Massacre — 1929 Riots</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The 1929 riots erupted across Palestine. In Hebron, 67 Jews were murdered by local Arabs, including women and children. The historic Jewish community in Hebron was completely evacuated. In Safed, Jerusalem, and Motza, Jews also fell. A total of 133 killed.</p><p class="tl-victims">133 killed, 339 wounded</p><div class="tl-sources">Source: Tom Segev, <em>One Palestine, Complete</em> (2000)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1936">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1936-1939</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">The Arab Revolt</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Three years of Arab violence against the Jewish Yishuv and the British. Included strikes, demonstrations, and attacks on Jewish settlements and infrastructure. The British suppressed the revolt by force. The Peel Commission (1937) recommended partition of the land for the first time.</p><div class="tl-sources">Source: Matthew Hughes, <em>Britain's Pacification of Palestine</em> (2019)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1937">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1937</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Peel Commission Report</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The British Peel Commission recommended for the first time the partition of Palestine into a Jewish state and an Arab state. The Arabs rejected the plan entirely. The Jewish leadership debated but ultimately accepted the principle of partition.</p><div class="tl-sources">Source: Palestine Royal Commission Report (Peel Report), July 1937</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1939">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1939</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The White Paper</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The British government issued the "White Paper" which drastically limited Jewish immigration to Palestine to only 75,000 over five years, and banned Jewish land purchase in most of the country. At the worst possible timing — on the eve of the Holocaust — Britain closed the gates of the Land of Israel.</p><div class="tl-sources">Source: British White Paper of 1939 | Michael Cohen, <em>Palestine: Retreat from the Mandate</em></div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 4: 1933-1945 HOLOCAUST -->
+<div class="tl-era" id="era-holocaust">
+<h2 class="tl-era-title">The Holocaust — 1933-1945</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1933">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jan 30, 1933</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Hitler Rises to Power</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Adolf Hitler was appointed Chancellor of Germany. Within months he established totalitarian rule. On April 1, 1933 — a government boycott of Jewish businesses. The beginning of a systematic process of exclusion, persecution, and extermination of European Jewry.</p><div class="tl-sources">Source: USHMM | Ian Kershaw, <em>Hitler</em> (1998)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1935">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 15, 1935</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Nuremberg Laws</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Reichstag passed the Nuremberg Laws: the "Reich Citizenship Law" and the "Law for the Protection of German Blood and Honor." Jews were stripped of citizenship, intermarriage was banned, and "Jewishness" was defined on a racial basis — even those with one Jewish grandparent.</p><div class="tl-sources">Source: USHMM, "Nuremberg Laws" | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1938">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1938</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Évian Conference — The World Turns Away</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>32 nations convened in Évian, France, to discuss Jewish refugees from Germany. Nearly every country refused to accept refugees. Only the Dominican Republic offered asylum. The world knew — and did nothing.</p><div class="tl-sources">Source: USHMM | S.S. Friedman, <em>No Haven for the Oppressed</em> (1973)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1938">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Nov 9-10, 1938</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Kristallnacht — Night of Broken Glass</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A state-organized pogrom across Germany and Austria. 1,400 synagogues burned, 7,500 Jewish businesses destroyed, 91 Jews murdered, and 30,000 sent to concentration camps. The turning point from persecution to open violence.</p><p class="tl-victims">91 killed, 30,000 arrested</p><div class="tl-sources">Source: USHMM | Yad Vashem, "Kristallnacht"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1939">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1939</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">SS St. Louis</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>937 Jewish refugees sailed from Hamburg to Cuba aboard the SS St. Louis. Cuba, the US, and Canada all refused entry. The ship returned to Europe. Approximately 254 of the passengers were murdered in the Holocaust. A symbol of the Western world's abandonment.</p><p class="tl-victims">~254 murdered in the Holocaust</p><div class="tl-sources">Source: USHMM, "Voyage of the St. Louis"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1941">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 29-30, 1941</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Babi Yar Massacre</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Einsatzgruppen units and Ukrainians carried out the largest mass shooting. 33,771 Kyiv Jews were shot in two days at the Babi Yar ravine. By war's end, approximately 100,000-150,000 people were murdered there.</p><p class="tl-victims">33,771 killed in two days</p><div class="tl-sources">Source: Yad Vashem | USHMM, "Babi Yar"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1941">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jun 1-2, 1941</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">The Farhud — Baghdad Pogrom</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A violent pogrom in Baghdad against the ancient Jewish community. Shavuot celebrations turned into massacre: 180 Jews murdered, hundreds wounded, and extensive property looted. The Farhud accelerated the mass emigration of Iraqi Jews to Israel.</p><p class="tl-victims">180 killed, 1,000 wounded</p><div class="tl-sources">Source: Shmuel Moreh, <em>The Farhud</em> | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1942">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jan 20, 1942</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Wannsee Conference — "The Final Solution"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>15 senior Nazi Party and German government officials convened at a villa in the Wannsee suburb of Berlin. In 90 minutes they coordinated the "Final Solution to the Jewish Question" — a systematic plan to exterminate 11 million European Jews.</p><div class="tl-sources">Source: Yad Vashem, "Wannsee Conference" | Mark Roseman, <em>The Wannsee Conference and the Final Solution</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1943">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Apr 19, 1943</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Warsaw Ghetto Uprising</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 750 Jewish fighters, led by Mordechai Anielewicz, rose in armed revolt against the Nazis as they came to liquidate the ghetto. The fighting lasted 27 days — a civilian uprising that lasted longer than the fall of entire nations. The uprising became a symbol of Jewish heroism.</p><div class="tl-sources">Source: Yad Vashem | Israel Gutman, <em>Resistance: The Warsaw Ghetto Uprising</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1945">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jan 27, 1945</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Liberation of Auschwitz</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Red Army liberated the Auschwitz-Birkenau extermination camp. Soviet soldiers found approximately 7,000 emaciated survivors. About 1.1 million people were murdered in the camp, of whom approximately one million were Jews. January 27 is International Holocaust Remembrance Day.</p><p class="tl-victims">~1.1 million murdered at Auschwitz</p><div class="tl-sources">Source: USHMM | Yad Vashem | Auschwitz-Birkenau Memorial</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1945">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1945-1946</span><span class="tl-badge badge-holocaust">Holocaust</span><span class="tl-title">Nuremberg Trials</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The International Military Tribunal at Nuremberg tried 24 senior Nazi leaders for war crimes, crimes against humanity, and genocide. 12 were sentenced to death. The trial laid the foundations of international criminal law.</p><div class="tl-sources">Source: Nuremberg Trial Proceedings | USHMM</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 5: 1947-1949 INDEPENDENCE -->
+<div class="tl-era" id="era-independence">
+<h2 class="tl-era-title">Establishment of the State — 1947-1949</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1946">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jul 4, 1946</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Kielce Pogrom</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A pogrom against Holocaust survivors in Kielce, Poland — one year after the war ended. 42 Jews who returned home were murdered by a Polish mob following a blood libel. The mob that remained hadn't changed. The pogrom triggered a massive Jewish emigration from Poland.</p><p class="tl-victims">42 killed</p><div class="tl-sources">Source: USHMM, "Kielce Pogrom" | Jan Gross, <em>Fear</em> (2006)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1947">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1947</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Exodus 1947</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A ship carrying 4,515 Holocaust survivors attempted to reach the Land of Israel. The British intercepted the ship, beat the passengers, and deported them back to Germany — the land of their murderers. The affair shocked world public opinion and contributed to support for the partition of Palestine.</p><div class="tl-sources">Source: USHMM, "Exodus 1947" | Ruth Gruber, <em>Exodus 1947</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1947">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Nov 29, 1947</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Resolution 181 — The Partition Plan</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The UN General Assembly voted in favor of partitioning Palestine into a Jewish state and an Arab state. 33 in favor, 13 against, 10 abstentions. The Jews accepted the resolution; the Arabs rejected it. People danced in the streets of Tel Aviv; the next day Arab violence erupted.</p><div class="tl-sources">Source: UN General Assembly Resolution 181 | Benny Morris, <em>1948</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1948">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">May 14, 1948</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Declaration of Independence</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>David Ben-Gurion declared the establishment of the State of Israel at a ceremony on Rothschild Boulevard, Tel Aviv. "We hereby declare the establishment of a Jewish state in the Land of Israel — the State of Israel." For the first time in 2,000 years — Jewish sovereignty in the Land of Israel.</p><div class="tl-sources">Source: Israel State Archives | Declaration of Independence, 5 Iyar 5708</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1948">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">May 15, 1948</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">War of Independence</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The day after the declaration, 5 Arab armies (Egypt, Jordan, Syria, Iraq, Lebanon) invaded Israel. The war lasted 15 months. Israel, with a defense force of 30,000 fighters, defeated armies of nations with millions of citizens. 6,373 Israelis fell — 1% of the population.</p><p class="tl-victims">6,373 Israeli casualties (1% of population)</p><div class="tl-sources">Source: Benny Morris, <em>1948</em> (2008) | IDF Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1948">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">May 26, 1948</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Establishment of the IDF</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Israel Defense Forces was officially established, unifying the Haganah, Irgun, and Lehi under a single command. Ben-Gurion signed the "IDF Order" establishing that there would be no more private militias — only one army for one state.</p><div class="tl-sources">Source: IDF Archives | Israel State Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1949">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1949-1950</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Operation Magic Carpet — Yemenite Jews</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 49,000 Yemenite Jews were airlifted to Israel. Most had never seen an airplane; some believed the prophecy "I bore you on eagles' wings" was being fulfilled. A community of 2,500 years immigrated almost in its entirety.</p><div class="tl-sources">Source: Tudor Parfitt, <em>The Road to Redemption</em> | Israel State Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1949">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">May 11, 1949</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Israel Admitted to the UN</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel was admitted as the 59th member of the United Nations. The vote: 37 in favor, 12 against, 9 abstentions. Formal international recognition of the Jewish people's right to a sovereign state.</p><div class="tl-sources">Source: UN General Assembly Resolution 273</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 6: 1950-1966 NATION BUILDING -->
+<div class="tl-era" id="era-building">
+<h2 class="tl-era-title">Nation Building — 1950-1966</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1950">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jul 5, 1950</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Law of Return</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Knesset enacted the Law of Return — "Every Jew has the right to immigrate to Israel." The law enshrines the right of every Jew in the world to obtain Israeli citizenship. A legal expression of the idea that Israel is the national home of the Jewish people.</p><div class="tl-sources">Source: Israel Knesset Archives, Law of Return 5710-1950</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1950">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1950-1951</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Operation Ezra &amp; Nehemiah — Iraqi Jews</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 120,000 Iraqi Jews were airlifted to Israel after the Iraqi government stripped their citizenship and confiscated their property. A community of 2,600 years — one of the oldest in the world — was almost completely uprooted.</p><div class="tl-sources">Source: Moshe Gat, <em>The Jewish Exodus from Iraq</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1952">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1952</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Luxembourg Agreement — German Reparations</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel and West Germany signed a reparations agreement. Germany paid 3 billion marks to Israel as compensation for Jewish property looted during the Holocaust. The agreement was bitterly controversial in Israel — many saw the money as "blood money."</p><div class="tl-sources">Source: Nana Sagi, <em>German Reparations</em> (1986)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1953">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1953</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Yad Vashem Established</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The national Holocaust memorial was established in Jerusalem. Yad Vashem documents the names of 6 million victims, preserves testimonies, and educates generations. Its name comes from Isaiah 56: "I will give them in My house and within My walls a memorial and a name."</p><div class="tl-sources">Source: Yad Vashem Official | Knesset Law 5713-1953</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1956">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1956</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Sinai Campaign — Suez Crisis</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel, coordinating with Britain and France, captured the Sinai Peninsula and Gaza Strip in response to Egypt's blockade of the Straits of Tiran and fedayeen attacks. Israel withdrew under American-Soviet pressure but secured freedom of navigation through the strait.</p><div class="tl-sources">Source: Motti Golani, <em>Israel in Search of a War</em> (1998)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1961">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1961</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Eichmann Trial</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Adolf Eichmann, responsible for the logistics of the "Final Solution," was captured by the Mossad in Argentina in 1960 and put on trial in Jerusalem. The trial was televised and for the first time the world heard Holocaust survivors' testimonies. Convicted and hanged in 1962.</p><div class="tl-sources">Source: Deborah Lipstadt, <em>The Eichmann Trial</em> (2011) | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1965">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1965</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Invention of Drip Irrigation</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Simcha Blass, an Israeli water engineer, developed the drip irrigation method at Kibbutz Hatzerim. Netafim, the company he founded, revolutionized world agriculture — saving 30-50% of water. Israeli technology that feeds hundreds of millions of people.</p><div class="tl-sources">Source: Netafim History | Seth Siegel, <em>Let There Be Water</em> (2015)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 7: 1967-1982 ERA OF WARS -->
+<div class="tl-era" id="era-wars">
+<h2 class="tl-era-title">Era of Wars — 1967-1982</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1967">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jun 5-10, 1967</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Six-Day War</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel attacked in self-defense after Egypt blockaded the Straits of Tiran, expelled UN forces from Sinai, and massed troops on the border. In 6 days Israel captured the Sinai, Golan Heights, Judea and Samaria, and the Gaza Strip. Jerusalem was reunified. The paratroopers reached the Western Wall.</p><div class="tl-sources">Source: Michael Oren, <em>Six Days of War</em> (2002)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1967">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jun 7, 1967</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Reunification of Jerusalem</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>"The Temple Mount is in our hands!" — Motta Gur, paratroop brigade commander. For the first time in 19 years, Jews could pray at the Western Wall. Jordan destroyed 58 synagogues in the Old City between 1948-1967. Israel maintained freedom of worship for all faiths.</p><div class="tl-sources">Source: Abraham Rabinovich, <em>The Battle for Jerusalem</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1972">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 5, 1972</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Munich Massacre</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Terrorists from "Black September" infiltrated the Olympic Village in Munich, murdered 2 Israeli athletes and took 9 hostages. All 9 were killed in a botched rescue attempt. Israel responded with "Operation Wrath of God" — hunting the organization's leaders across Europe.</p><p class="tl-victims">11 Israeli athletes murdered</p><div class="tl-sources">Source: Aaron Klein, <em>Striking Back</em> | Simon Reeve, <em>One Day in September</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1973">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Oct 6, 1973</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Yom Kippur War</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Egypt and Syria attacked by surprise on Yom Kippur. The IDF suffered heavy blows in the first days — hundreds of tanks destroyed, dozens of planes downed. After massive reserve mobilization, Israel turned the tide, crossed the Suez Canal, and advanced to within 101 km of Cairo.</p><p class="tl-victims">2,656 Israeli casualties</p><div class="tl-sources">Source: Abraham Rabinovich, <em>The Yom Kippur War</em> (2004)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1975">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Nov 10, 1975</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Resolution 3379 — "Zionism = Racism"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The UN General Assembly passed a resolution equating Zionism with racism. Chaim Herzog, Israel's ambassador, tore up the resolution on the podium and declared: "For this falsification of history, and for this hint born in darkness — we respond with the fullest anger." The resolution was revoked in 1991.</p><div class="tl-sources">Source: UN General Assembly Resolution 3379 | Chaim Herzog speech, 1975</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1976">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jul 4, 1976</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Operation Entebbe</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A hijacked Air France plane with 248 passengers, including 94 Israelis, was flown to Entebbe, Uganda. A Sayeret Matkal commando team flew 4,000 km and rescued the hostages. Yonatan Netanyahu, the force commander, fell — the only officer killed. Considered one of the most brilliant operations in military history.</p><p class="tl-victims">Yonatan Netanyahu fell</p><div class="tl-sources">Source: Saul David, <em>Operation Thunderbolt</em> (2015)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1978">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 17, 1978</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Camp David Accords</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Prime Minister Menachem Begin and Egyptian President Anwar Sadat signed framework agreements brokered by President Carter. On March 26, 1979, the first peace treaty between Israel and an Arab state was signed. Begin and Sadat received the Nobel Peace Prize.</p><div class="tl-sources">Source: Camp David Accords (1978) | William Quandt, <em>Camp David</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1982">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Jun 6, 1982</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">First Lebanon War</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The IDF entered Lebanon to eliminate the PLO, which had been shelling the Galilee. The war extended beyond the original plan. Defense Minister Ariel Sharon led forces to Beirut. The war became controversial in Israel, especially after the Sabra and Shatila massacre.</p><div class="tl-sources">Source: Ze'ev Schiff &amp; Ehud Ya'ari, <em>Israel's Lebanon War</em> (1984)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 8: 1983-1999 HOPE FOR PEACE -->
+<div class="tl-era" id="era-peace">
+<h2 class="tl-era-title">Hope for Peace — 1983-1999</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1984">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1984-1985</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Operation Moses — Ethiopian Jews</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Approximately 8,000 Ethiopian Jews (Beta Israel) were secretly airlifted to Israel via Sudan. Many walked hundreds of kilometers through the desert. About 4,000 died on the journey. A community that waited thousands of years returned to Zion.</p><p class="tl-victims">~4,000 died on the journey to Sudan</p><div class="tl-sources">Source: Tudor Parfitt, <em>Operation Moses</em> | USHMM</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1987">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Dec 9, 1987</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">First Intifada</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A Palestinian uprising erupted across Judea, Samaria, and Gaza. It included mass demonstrations, strikes, stone-throwing, and Molotov cocktails. 160 Israelis and over 1,000 Palestinians were killed. The Intifada ultimately led to the Oslo process.</p><div class="tl-sources">Source: Benny Morris, <em>Righteous Victims</em> (1999)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1990">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1990-1991</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Great Aliyah from the Soviet Union</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>With the collapse of the Soviet Union, approximately one million Jews immigrated to Israel within a decade. Doctors, engineers, scientists, and musicians transformed the country. This aliyah laid the foundations for the "Start-Up Nation" and Israel's high-tech industry.</p><div class="tl-sources">Source: Israel CBS | Zvi Gitelman, <em>Immigration and Identity</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1991">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">May 24-25, 1991</span><span class="tl-badge badge-zionism">Zionism</span><span class="tl-title">Operation Solomon — Ethiopian Jews</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>14,325 Ethiopian Jews were airlifted to Israel in just 36 hours — one of the largest airlifts in history. 34 non-stop flights. One C-130 aircraft landed with 1,088 passengers — an unbroken world record. One baby was born in flight.</p><div class="tl-sources">Source: IDF Archives | Jewish Agency</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1991">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1991</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Gulf War — Scud Missiles on Israel</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Iraq launched 39 Scud missiles at Israel during the Gulf War. Israelis sat in sealed rooms with gas masks. Israel did not retaliate militarily — under American pressure — to preserve the coalition against Saddam Hussein.</p><div class="tl-sources">Source: IDF Archives | Efraim Inbar, <em>Israel's National Security</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1993">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 13, 1993</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Oslo Accords</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel and the PLO signed the Oslo Accords on the White House lawn. Rabin and Arafat shook hands, brokered by Clinton. The accords established the Palestinian Authority and opened a peace process that was supposed to end in a final agreement. Rabin, Peres, and Arafat received the Nobel Peace Prize.</p><div class="tl-sources">Source: Declaration of Principles, Sep 13, 1993 | Yossi Beilin, <em>The Path to Geneva</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1994">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Oct 26, 1994</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Peace Treaty with Jordan</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel and Jordan signed a peace treaty in the Arava. King Hussein and Rabin ended 46 years of war. Jordan became the second Arab state to sign peace with Israel, after Egypt.</p><div class="tl-sources">Source: Israel-Jordan Peace Treaty, October 26, 1994</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1995">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Nov 4, 1995</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Assassination of Rabin</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Prime Minister Yitzhak Rabin was assassinated by Yigal Amir at the end of a peace rally at Kings of Israel Square (now Rabin Square), Tel Aviv. The assassination shook Israeli society and changed the course of history. His final words at the rally: "Song of Peace."</p><div class="tl-sources">Source: Dan Ephron, <em>Killing a King</em> (2015)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1998">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1998</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Israel at 50 — Start-Up Nation Begins</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel celebrated 50 years of independence. The high-tech industry booming: ICQ (1996) sold to AOL for $407 million, Mobileye (1999) was founded, Check Point became a cyber giant. Israel began to be called the "Start-Up Nation."</p><div class="tl-sources">Source: Dan Senor &amp; Saul Singer, <em>Start-up Nation</em> (2009)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 9: 2000-2015 NEW MILLENNIUM -->
+<div class="tl-era" id="era-2000s">
+<h2 class="tl-era-title">The New Millennium — 2000-2015</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2000">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2000</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Camp David II Failure + Second Intifada</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Prime Minister Barak offered Arafat a Palestinian state on 97% of Judea and Samaria + East Jerusalem. Arafat refused and made no counter-offer. In September 2000, the Second Intifada erupted — a wave of suicide bombings that murdered over 1,000 Israelis in 5 years.</p><p class="tl-victims">1,137 Israelis murdered in terror attacks</p><div class="tl-sources">Source: Dennis Ross, <em>The Missing Peace</em> (2004) | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2001">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2001-2004</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Israeli Nobel Prizes</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A wave of Nobel Prizes for Israelis: Daniel Kahneman (Economics, 2002) for Prospect Theory; Aaron Ciechanover and Avram Hershko (Chemistry, 2004) for discovering the protein degradation mechanism. Israel — with 9 million citizens — the country with the most Nobel laureates per capita.</p><div class="tl-sources">Source: Nobel Prize Official | Encyclopedia Judaica</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="2005">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2005</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Gaza Disengagement</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Prime Minister Ariel Sharon carried out the disengagement plan. 8,000 settlers were evacuated from 21 settlements in the Gaza Strip and 4 in northern Samaria. Soldiers wept, settlers were outraged, families uprooted. Hamas seized Gaza in 2007 and turned it into a rocket launcher.</p><div class="tl-sources">Source: Israel State Archives | Dov Weisglass, Sharon's advisor</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2006">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2006</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Second Lebanon War</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Hezbollah kidnapped two reserve soldiers (Eldad Regev and Ehud Goldwasser) and fired rockets at the Galilee. Israel launched a war that lasted 34 days. 4,000 rockets were fired at northern Israel. 121 soldiers and 44 Israeli civilians were killed.</p><p class="tl-victims">165 Israelis killed</p><div class="tl-sources">Source: Winograd Commission Report (2008)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2011">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2011</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Iron Dome — The Military Revolution</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The Iron Dome system made its first interception on April 7, 2011. An Israeli development by Rafael that intercepts rockets in mid-air — with an interception rate above 90%. The system saved thousands of Israeli and Palestinian lives and changed the rules of the game.</p><div class="tl-sources">Source: Rafael Advanced Defense Systems | IDF Spokesperson</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2012">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Mar 19, 2012</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Toulouse Massacre</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Mohammed Merah, a French-Algerian jihadist terrorist, shot and killed 3 children and a rabbi at the "Ozar HaTorah" Jewish school in Toulouse, France. He had previously murdered 3 French soldiers. The event marked a rise in antisemitic-Islamist violence in Europe.</p><p class="tl-victims">4 killed at the Jewish school</p><div class="tl-sources">Source: BBC | Le Monde</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2014">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2014</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Operation Protective Edge</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A major military operation in Gaza following the kidnapping and murder of 3 Israeli teenagers (Gilad Shaer, Naftali Fraenkel, Eyal Yifrach) and a wave of rocket fire. Hamas launched 4,594 rockets. The IDF discovered and destroyed terror tunnels beneath the border.</p><p class="tl-victims">73 Israeli casualties (67 soldiers, 6 civilians)</p><div class="tl-sources">Source: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2013">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2013</span><span class="tl-badge badge-achievements">Achievements</span><span class="tl-title">Sorek Desalination Plant</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>The world's largest desalination plant was inaugurated near Ashkelon. Israel became a water superpower — producing over 80% of its drinking water from desalinated seawater. From a drought-stricken country to a nation exporting water technology to the world.</p><div class="tl-sources">Source: IDE Technologies | Seth Siegel, <em>Let There Be Water</em></div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 10: 2016-2023 CURRENT ERA -->
+<div class="tl-era" id="era-recent">
+<h2 class="tl-era-title">The Current Era — 2016-2023</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2018">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Oct 27, 2018</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">Tree of Life Synagogue Massacre — Pittsburgh</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>A white supremacist gunman shot and murdered 11 worshippers at the "Tree of Life" synagogue in Pittsburgh, USA — the deadliest antisemitic attack in American history. The victims were aged 54-97. The event stunned the American Jewish community.</p><p class="tl-victims">11 killed</p><div class="tl-sources">Source: FBI | New York Times, October 27, 2018</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="2020">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Sep 15, 2020</span><span class="tl-badge badge-peace">Peace</span><span class="tl-title">Abraham Accords</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel signed normalization agreements with the UAE, Bahrain, Morocco, and Sudan. A historic breakthrough — Arab states recognizing Israel without requiring resolution of the Palestinian conflict. Direct flights, embassies, trade, and tourism.</p><div class="tl-sources">Source: Abraham Accords Declaration, Sep 15, 2020 | White House</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2021">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2021</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Operation Guardian of the Walls</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Hamas launched 4,360 rockets at Israel over 11 days. Iron Dome intercepted 90% of rockets threatening populated areas. Additionally, ethnic riots erupted in mixed cities in Israel — Arab-Jewish violence in Lod, Acre, and Jaffa.</p><div class="tl-sources">Source: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2023">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">Oct 7, 2023</span><span class="tl-badge badge-antisemitism">Antisemitism</span><span class="tl-title">October 7 Massacre</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>3,000 Hamas terrorists breached the border fence and for hours murdered, raped, tortured, and burned. 1,200 Israelis were murdered — civilians in their homes, the Nova music festival, kibbutzim. 253 were kidnapped to Gaza. The deadliest day for the Jewish people since the Holocaust. The largest massacre in a single day in Israel's history.</p><p class="tl-victims">1,200 murdered, 253 kidnapped</p><div class="tl-sources">Source: Israel MFA | IDF Spokesperson | UN Pramila Patten Report</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2023">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2023-</span><span class="tl-badge badge-wars">Wars</span><span class="tl-title">Iron Swords War</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>Israel launched a war in Gaza to destroy Hamas and bring back the hostages. The war expanded to additional fronts: Hezbollah in the north, Houthis in Yemen, Iranian militias in Syria and Iraq. A war on 7 fronts. Israel is fighting for its existence — again.</p><div class="tl-sources">Source: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+</div></div>
+
+</div><!-- /tl-container -->
+
+<!-- SOURCES -->
+<div class="tl-section-sources">
+<h2>Sources &amp; Further Reading</h2>
+<ul>
+<li>United States Holocaust Memorial Museum — <a href="https://www.ushmm.org" target="_blank">ushmm.org</a></li>
+<li>Yad Vashem — <a href="https://www.yadvashem.org" target="_blank">yadvashem.org</a></li>
+<li>Encyclopedia Judaica (Gale/Keter)</li>
+<li>Jewish Virtual Library — <a href="https://www.jewishvirtuallibrary.org" target="_blank">jewishvirtuallibrary.org</a></li>
+<li>Israel State Archives — <a href="https://www.archives.gov.il" target="_blank">archives.gov.il</a></li>
+<li>Britannica — <a href="https://www.britannica.com" target="_blank">britannica.com</a></li>
+<li>Benny Morris, <em>1948</em> (Yale University Press, 2008)</li>
+<li>Michael Oren, <em>Six Days of War</em> (Oxford University Press, 2002)</li>
+<li>Dan Senor &amp; Saul Singer, <em>Start-up Nation</em> (Twelve Books, 2009)</li>
+</ul>
+<p class="tl-attr">Background image: Tree of Life — <a href="https://commons.wikimedia.org/wiki/File:Etz_Chaim.svg" target="_blank">Wikimedia Commons</a> (CC BY-SA 4.0)</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer" style="text-align:center;padding:40px 20px;border-top:1px solid rgba(226,183,20,0.1);margin-top:40px;">
+<p style="color:#777;font-size:0.85em;">Truth Against Lies &copy; 2024-2026</p>
+<p style="color:#555;font-size:0.75em;margin-top:8px;">truthagainstlies3@gmail.com</p>
+</footer>
+
+<!-- SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="document.getElementById('shareFab').classList.toggle('open')">&#128228;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" href="#" onclick="fabShare('whatsapp');return false;">W</a>
+        <a class="sfab-tg" href="#" onclick="fabShare('telegram');return false;">T</a>
+        <a class="sfab-tw" href="#" onclick="fabShare('twitter');return false;">X</a>
+        <a class="sfab-fb" href="#" onclick="fabShare('facebook');return false;">f</a>
+        <a class="sfab-cp" href="#" onclick="fabShare('copy');return false;">&#128203;</a>
+    </div>
+</div>
+
+<script src="common.js"></script>
+<script>
+// Timeline JS
+function toggleEvent(header) { header.closest('.tl-card').classList.toggle('open'); }
+function expandAll() { document.querySelectorAll('.tl-card').forEach(function(c) { c.classList.add('open'); }); }
+function collapseAll() { document.querySelectorAll('.tl-card').forEach(function(c) { c.classList.remove('open'); }); }
+
+function scrollToEra(eraId, btn) {
+    document.querySelectorAll('.tl-era-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var target = document.getElementById(eraId);
+    if (target) {
+        var offset = document.querySelector('.tl-era-slider').offsetHeight + 70;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+}
+
+function filterTimeline(cat, btn) {
+    document.querySelectorAll('.tl-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var events = document.querySelectorAll('.tl-event');
+    var shown = 0;
+    events.forEach(function(ev) {
+        if (cat === 'all' || ev.dataset.cat === cat) { ev.classList.remove('hidden'); shown++; }
+        else { ev.classList.add('hidden'); }
+    });
+    document.getElementById('tlCounter').innerHTML = 'Showing <strong>' + shown + '</strong> of <strong>' + events.length + '</strong> events';
+    document.querySelectorAll('.tl-era').forEach(function(era) {
+        var visible = era.querySelectorAll('.tl-event:not(.hidden)');
+        era.style.display = visible.length ? '' : 'none';
+    });
+}
+
+// Scroll spy for era slider
+(function() {
+    var eraSections = document.querySelectorAll('.tl-era');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.id;
+                document.querySelectorAll('.tl-era-btn').forEach(function(b) { b.classList.remove('active'); });
+                var activeBtn = document.querySelector('.tl-era-btn[data-era="' + id + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }
+        });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    eraSections.forEach(function(s) { observer.observe(s); });
+})();
+
+// Fade-in observer
+var fadeObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.tl-event').forEach(function(el) { fadeObs.observe(el); });
+
+// Anchor scroll
+(function() { if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500); } })();
+
+// Update total count
+(function() { var total = document.querySelectorAll('.tl-event').length; document.getElementById('tlCounter').innerHTML = 'Showing <strong>' + total + '</strong> of <strong>' + total + '</strong> events'; })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('timeline-en');</script>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index-en.html"><span class="mn-icon">&#127968;</span>Home</a>
+    <a href="lies-en.html"><span class="mn-icon">&#10060;</span>Lies</a>
+    <a href="antisemitism-en.html"><span class="mn-icon">&#128737;</span>Antisemitism</a>
+    <a href="october7-en.html"><span class="mn-icon">&#128293;</span>Oct 7</a>
+    <a href="facts-en.html"><span class="mn-icon">&#128269;</span>Facts</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the site..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

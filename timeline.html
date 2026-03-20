@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2408LQ9YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-Z2408LQ9YR');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ציר זמן אינטראקטיבי | האמת נגד השקר</title>
+    <meta name="description" content="ציר זמן אינטראקטיבי ומפורט של ההיסטוריה היהודית והישראלית — 120+ אירועים מרכזיים מ-1807 ועד 2023. אנטישמיות, שואה, מלחמות, שלום, הישגים, ציונות.">
+    <meta name="theme-color" content="#0a0a1a">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta property="og:title" content="ציר זמן אינטראקטיבי — היסטוריה יהודית 1807-2023 | האמת נגד השקר">
+    <meta property="og:description" content="120+ אירועים מרכזיים בהיסטוריה היהודית והישראלית — מהסנהדרין של נפוליאון ועד מלחמת חרבות ברזל">
+    <meta property="og:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <meta property="og:url" content="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="he_IL">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ציר זמן אינטראקטיבי — היסטוריה יהודית | האמת נגד השקר">
+    <meta name="twitter:description" content="120+ אירועים מרכזיים בהיסטוריה היהודית והישראלית">
+    <meta name="twitter:image" content="https://truth-against-lies.github.io/truth-against-lies/og-image.png">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="canonical" href="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <link rel="alternate" hreflang="he" href="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <link rel="alternate" hreflang="en" href="https://truth-against-lies.github.io/truth-against-lies/timeline-en.html">
+    <link rel="alternate" hreflang="x-default" href="https://truth-against-lies.github.io/truth-against-lies/timeline.html">
+    <style>
+        .tl-bg-tree { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70vmin; height: auto; opacity: 0.035; pointer-events: none; z-index: 0; filter: brightness(2) sepia(1) hue-rotate(10deg) saturate(0.3); }
+        .tl-hero { text-align: center; padding: 100px 20px 30px; position: relative; z-index: 1; }
+        .tl-hero h1 { color: #e2b714; font-size: 2.4em; margin-bottom: 10px; }
+        .tl-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 700px; margin: 0 auto; line-height: 1.7; }
+        .tl-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+        .tl-stats { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin: 25px auto 10px; max-width: 900px; padding: 0 20px; position: relative; z-index: 1; }
+        .tl-stat-box { background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); border-radius: 8px; padding: 14px 20px; text-align: center; min-width: 100px; }
+        .tl-stat-num { color: #e2b714; font-size: 1.8em; font-weight: bold; }
+        .tl-stat-label { color: #999; font-size: 0.8em; margin-top: 2px; }
+        .tl-era-slider { position: sticky; top: 60px; z-index: 100; background: rgba(10,10,26,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(226,183,20,0.15); padding: 12px 20px; overflow-x: auto; overflow-y: hidden; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: thin; scrollbar-color: rgba(226,183,20,0.3) transparent; text-align: center; }
+        .tl-era-slider::-webkit-scrollbar { height: 4px; }
+        .tl-era-slider::-webkit-scrollbar-thumb { background: rgba(226,183,20,0.3); border-radius: 2px; }
+        .tl-era-inner { display: inline-flex; gap: 8px; }
+        .tl-era-btn { display: inline-block; padding: 8px 18px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; white-space: nowrap; }
+        .tl-era-btn:hover { border-color: rgba(226,183,20,0.4); color: #e2b714; }
+        .tl-era-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; font-weight: bold; }
+        .tl-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 20px auto; padding: 0 20px; max-width: 900px; position: relative; z-index: 1; }
+        .tl-filter-btn { padding: 7px 16px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .tl-filter-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; }
+        .tl-filter-btn[data-cat="antisemitism"].active { border-color: #e74c3c; color: #e74c3c; background: rgba(231,76,60,0.1); }
+        .tl-filter-btn[data-cat="holocaust"].active { border-color: #8b0000; color: #ff6b6b; background: rgba(139,0,0,0.1); }
+        .tl-filter-btn[data-cat="wars"].active { border-color: #e67e22; color: #e67e22; background: rgba(230,126,34,0.1); }
+        .tl-filter-btn[data-cat="peace"].active { border-color: #2ecc71; color: #2ecc71; background: rgba(46,204,113,0.1); }
+        .tl-filter-btn[data-cat="achievements"].active { border-color: #e2b714; color: #e2b714; background: rgba(226,183,20,0.15); }
+        .tl-filter-btn[data-cat="zionism"].active { border-color: #3498db; color: #3498db; background: rgba(52,152,219,0.1); }
+        .tl-counter { text-align: center; color: #888; font-size: 0.85em; margin: 15px 0; padding: 8px; position: relative; z-index: 1; }
+        .tl-counter strong { color: #e2b714; }
+        .tl-controls { display: flex; gap: 10px; justify-content: center; margin: 10px 0 5px; position: relative; z-index: 1; }
+        .tl-ctrl-btn { padding: 6px 14px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.8em; transition: all 0.2s; }
+        .tl-ctrl-btn:hover { border-color: #e2b714; color: #e2b714; }
+        .tl-container { max-width: 900px; margin: 0 auto; padding: 0 20px 60px; position: relative; z-index: 1; }
+        .tl-era { margin: 40px 0; }
+        .tl-era-title { text-align: center; color: #e2b714; font-size: 1.5em; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid rgba(226,183,20,0.2); }
+        .tl-line { position: relative; padding: 20px 0; }
+        .tl-line::before { content: ''; position: absolute; right: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #e2b714, rgba(226,183,20,0.3)); }
+        .tl-event { position: relative; margin-bottom: 30px; width: 45%; transition: opacity 0.3s; }
+        .tl-event.hidden { display: none; }
+        .tl-event:nth-child(odd) { margin-right: 55%; }
+        .tl-event:nth-child(even) { margin-left: auto; margin-right: 0; }
+        .tl-dot { position: absolute; width: 14px; height: 14px; border-radius: 50%; top: 20px; z-index: 2; box-shadow: 0 0 8px rgba(0,0,0,0.3); transition: transform 0.2s; }
+        .tl-event:nth-child(odd) .tl-dot { left: -37px; }
+        .tl-event:nth-child(even) .tl-dot { right: -37px; }
+        .tl-event:hover .tl-dot { transform: scale(1.3); }
+        .tl-card { background: #12172b; border-radius: 3px; overflow: hidden; border: 1px solid rgba(226,183,20,0.08); transition: border-color 0.3s, box-shadow 0.3s; }
+        .tl-card:hover { border-color: rgba(226,183,20,0.3); box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .tl-event[data-cat="antisemitism"] .tl-card { border-top: 3px solid #e74c3c; }
+        .tl-event[data-cat="holocaust"] .tl-card { border-top: 3px solid #8b0000; }
+        .tl-event[data-cat="wars"] .tl-card { border-top: 3px solid #e67e22; }
+        .tl-event[data-cat="peace"] .tl-card { border-top: 3px solid #2ecc71; }
+        .tl-event[data-cat="achievements"] .tl-card { border-top: 3px solid #e2b714; }
+        .tl-event[data-cat="zionism"] .tl-card { border-top: 3px solid #3498db; }
+        .tl-card-header { padding: 16px 18px; cursor: pointer; display: flex; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+        .tl-date { color: #e2b714; font-weight: bold; font-size: 0.95em; white-space: nowrap; }
+        .tl-title { color: #fff; font-size: 0.95em; flex: 1; min-width: 120px; }
+        .tl-badge { font-size: 0.7em; padding: 2px 8px; border-radius: 3px; white-space: nowrap; }
+        .badge-antisemitism { background: rgba(231,76,60,0.15); color: #e74c3c; }
+        .badge-holocaust { background: rgba(139,0,0,0.15); color: #ff6b6b; }
+        .badge-wars { background: rgba(230,126,34,0.15); color: #e67e22; }
+        .badge-peace { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .badge-achievements { background: rgba(226,183,20,0.15); color: #e2b714; }
+        .badge-zionism { background: rgba(52,152,219,0.15); color: #3498db; }
+        .tl-arrow { color: #666; font-size: 0.8em; transition: transform 0.3s; margin-top: 3px; }
+        .tl-card.open .tl-arrow { transform: rotate(180deg); }
+        .tl-card-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out, padding 0.3s; padding: 0 18px; }
+        .tl-card.open .tl-card-body { max-height: 500px; padding: 0 18px 16px; }
+        .tl-card-body p { color: #c0c0c0; font-size: 0.9em; line-height: 1.7; margin-bottom: 10px; }
+        .tl-victims { color: #e74c3c; font-size: 0.85em; font-weight: bold; }
+        .tl-sources { font-size: 0.75em; color: #777; font-style: italic; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 8px; margin-top: 10px; line-height: 1.5; }
+        .tl-sources a { color: #e2b714; text-decoration: none; }
+        .tl-sources a:hover { text-decoration: underline; }
+        .tl-era-end { text-align: center; padding: 20px; color: #555; font-size: 0.85em; border-top: 1px dashed rgba(226,183,20,0.15); margin-top: 10px; }
+        .tl-section-sources { max-width: 900px; margin: 40px auto; padding: 0 20px; position: relative; z-index: 1; }
+        .tl-section-sources h2 { color: #e2b714; font-size: 1.3em; margin-bottom: 15px; }
+        .tl-section-sources ul { list-style: none; padding: 0; }
+        .tl-section-sources li { color: #999; font-size: 0.85em; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .tl-section-sources a { color: #e2b714; text-decoration: none; }
+        .tl-attr { text-align: center; color: #555; font-size: 0.75em; margin: 20px 0; }
+        .tl-attr a { color: #e2b714; text-decoration: none; }
+        @media (max-width: 768px) {
+            .tl-hero h1 { font-size: 1.7em; }
+            .tl-stats { gap: 10px; }
+            .tl-stat-box { min-width: 80px; padding: 10px 14px; }
+            .tl-stat-num { font-size: 1.4em; }
+            .tl-era-slider { top: 60px; padding: 10px 12px; }
+            .tl-line::before { right: 20px; }
+            .tl-event { width: calc(100% - 45px) !important; margin-right: 0 !important; margin-left: auto !important; }
+            .tl-event .tl-dot { right: auto !important; left: auto !important; right: -27px !important; }
+            .tl-era-title { font-size: 1.2em; }
+            .tl-card-header { padding: 12px 14px; }
+        }
+        @media (max-width: 500px) {
+            .tl-card-header { flex-direction: column; gap: 5px; }
+        }
+        body.light-mode .tl-hero h1 { color: #b48c0a; }
+        body.light-mode .tl-card { background: #fff; }
+        body.light-mode .tl-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        body.light-mode .tl-title { color: #1a1a2e; }
+        body.light-mode .tl-card-body p { color: #444; }
+        body.light-mode .tl-era-slider { background: rgba(245,245,240,0.95); border-bottom-color: rgba(180,140,10,0.15); }
+        body.light-mode .tl-era-btn.active { background: rgba(180,140,10,0.12); border-color: #b48c0a; color: #b48c0a; }
+        body.light-mode .tl-stat-box { background: rgba(226,183,20,0.08); border-color: rgba(180,140,10,0.2); }
+        body.light-mode .tl-stat-num { color: #b48c0a; }
+        body.light-mode .tl-era-title { color: #b48c0a; }
+        body.light-mode .tl-bg-tree { filter: brightness(0.5) sepia(1) hue-rotate(10deg); }
+        body.light-mode .tl-filter-btn.active { background: rgba(180,140,10,0.12); }
+        @media print { .tl-era-slider, .tl-filters, .tl-controls, .tl-bg-tree { display: none !important; } .tl-card-body { max-height: none !important; padding: 0 18px 16px !important; } .tl-event { width: 100% !important; margin: 10px 0 !important; } .tl-line::before { display: none; } }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+<div class="reading-progress"></div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Etz_Chaim.svg" class="tl-bg-tree" alt="" aria-hidden="true" loading="lazy">
+<nav>
+    <div class="nav-inner">
+        <div class="nav-settings">
+            <button class="nav-settings-btn" onclick="document.querySelector('.nav-settings-menu').classList.toggle('open')" aria-label="הגדרות" title="הגדרות">&#9881;</button>
+            <div class="nav-settings-menu">
+                <button onclick="toggleTheme(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon" id="themeIcon">&#9728;</span><span id="themeLabel">מצב בהיר</span></button>
+                <button onclick="window.print(); document.querySelector('.nav-settings-menu').classList.remove('open')"><span class="settings-icon">&#128424;</span>הדפסה / PDF</button>
+            </div>
+        </div>
+        <div class="nav-menu-wrapper">
+            <button class="hamburger" aria-label="תפריט ניווט" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+            <ul class="nav-links">
+                <li class="has-submenu">
+                    <a href="antisemitism.html">אנטישמיות</a>
+                    <ul class="submenu">
+                        <li><a href="antisemitism.html">&#128269; מה זה אנטישמיות?</a></li>
+                        <li><a href="antisemitism.html#claims">&#128203; עלילות והפרכות</a></li>
+                        <li><a href="holocaust-denial.html">&#128367; הכחשת השואה</a></li>
+                        <li><a href="statistics.html">&#128202; נתוני אנטישמיות</a></li>
+                        <li><a href="antisemitic-orgs.html">☠ ארגונים אנטישמיים</a></li>
+                    </ul>
+                </li>
+                <li><a href="lies.html">שקרים נפוצים</a></li>
+                <li><a href="fact-cards.html">&#127183; כרטיסי עובדות</a></li>
+                <li><a href="timeline.html">&#128336; ציר זמן</a></li>
+                <li><a href="index.html#psychology">הפסיכולוגיה</a></li>
+                <li><a href="regions.html">שנאה לפי עמים</a></li>
+                <li class="has-submenu">
+                    <a href="gallery.html">מדיה</a>
+                    <ul class="submenu">
+                        <li><a href="gallery.html">&#128444; תיעוד היסטורי</a></li>
+                        <li><a href="videos.html">&#128249; צפה והתעדכן</a></li>
+                    </ul>
+                </li>
+                <li><a href="october7.html">7 באוקטובר</a></li>
+                <li class="has-submenu">
+                    <a href="facts.html">עובדות שלא מספרים לך</a>
+                    <ul class="submenu">
+                        <li><a href="facts-command.html">&#9874; פיקוד כושל ובוגד</a></li>
+                        <li><a href="facts-knesset.html">&#127963; חברי כנסת</a></li>
+                        <li><a href="facts-court.html">&#9878; בג"ץ ומערכת המשפט</a></li>
+                        <li><a href="facts-policies.html">&#128203; חוקים ומדיניות כושלת</a></li>
+                        <li><a href="facts-media.html">&#128249; תקשורת שקרנית</a></li>
+                        <li><a href="facts-orgs.html">&#127970; ארגונים, אקדמיה ו-BDS</a></li>
+                        <li><a href="facts-money.html">&#128176; הכסף — מימון הטרור</a></li>
+                        <li><a href="facts-iran.html">&#128293; ציר ההרס של איראן</a></li>
+                        <li><a href="facts-west.html">&#127760; בגידות המערב</a></li>
+                        <li><a href="facts-myths.html">&#128269; שקרים שהמציאות הפריכה</a></li>
+                        <li><a href="facts-netanyahu.html">&#9878; הפרדוקס של נתניהו</a></li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="unity.html">חיזוק ומחשבה</a>
+                    <ul class="submenu">
+                        <li><a href="unity.html">&#128170; חיזוק העם היהודי</a></li>
+                        <li><a href="consciousness.html">&#128293; שינוי תודעה</a></li>
+                        <li><a href="mind.html">&#129504; חיזוק המוח</a></li>
+                        <li><a href="left-narrative.html">&#128240; הנרטיב של השמאל</a></li>
+                        <li><a href="daat-dat.html">&#9878; דעת vs דת</a></li>
+                        <li><a href="bnei-yisrael.html">&#128220; בני ישראל</a></li>
+                        <li><a href="streams.html">&#127907; זרמים ומגזרים</a></li>
+                        <li><a href="sword-prayer.html">&#9876; חרב ותפילה</a></li>
+                        <li><a href="the-schism.html">&#9878; הפילוג הגדול</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#report">דווח על אנטישמיות</a></li>
+                <li><a href="glossary.html">מילון מונחים</a></li>
+                <li><a href="action.html">מה אפשר לעשות?</a></li>
+            </ul></div>
+        <a href="index.html" class="nav-logo">האמת נגד השקר</a>
+        <button class="nav-search-btn" onclick="openSearchOverlay()" aria-label="חיפוש באתר" title="חיפוש באתר"><span class="search-icon">&#128269;</span><span class="search-label">חיפוש</span></button>
+        <div class="nav-lang"><a href="timeline-en.html" class="nav-lang-btn" title="English">EN</a></div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="tl-hero">
+    <h1>&#128336; ציר זמן אינטראקטיבי</h1>
+    <div class="subtitle">היסטוריה יהודית וישראלית מ-1807 ועד 2023<br>אנטישמיות, שואה, מלחמות, שלום, הישגים וציונות</div>
+    <div class="hero-meta">120+ אירועים &bull; 10 תקופות &bull; 6 קטגוריות &bull; מקורות אקדמיים</div>
+</section>
+
+<!-- STATS -->
+<div class="tl-stats">
+    <div class="tl-stat-box"><div class="tl-stat-num">120+</div><div class="tl-stat-label">אירועים</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">216</div><div class="tl-stat-label">שנים</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">6</div><div class="tl-stat-label">קטגוריות</div></div>
+    <div class="tl-stat-box"><div class="tl-stat-num">10</div><div class="tl-stat-label">תקופות</div></div>
+</div>
+
+<!-- ERA SLIDER -->
+<div class="tl-era-slider">
+    <div class="tl-era-inner">
+        <button class="tl-era-btn active" data-era="era-1800s" onclick="scrollToEra('era-1800s',this)">1807-1880 השכלה</button>
+        <button class="tl-era-btn" data-era="era-zionism" onclick="scrollToEra('era-zionism',this)">1881-1917 ציונות</button>
+        <button class="tl-era-btn" data-era="era-mandate" onclick="scrollToEra('era-mandate',this)">1918-1939 מנדט</button>
+        <button class="tl-era-btn" data-era="era-holocaust" onclick="scrollToEra('era-holocaust',this)">1933-1945 שואה</button>
+        <button class="tl-era-btn" data-era="era-independence" onclick="scrollToEra('era-independence',this)">1947-1949 עצמאות</button>
+        <button class="tl-era-btn" data-era="era-building" onclick="scrollToEra('era-building',this)">1950-1966 בנייה</button>
+        <button class="tl-era-btn" data-era="era-wars" onclick="scrollToEra('era-wars',this)">1967-1982 מלחמות</button>
+        <button class="tl-era-btn" data-era="era-peace" onclick="scrollToEra('era-peace',this)">1983-1999 שלום</button>
+        <button class="tl-era-btn" data-era="era-2000s" onclick="scrollToEra('era-2000s',this)">2000-2015 מילניום</button>
+        <button class="tl-era-btn" data-era="era-recent" onclick="scrollToEra('era-recent',this)">2016-2023 עכשיו</button>
+    </div>
+</div>
+
+<!-- FILTERS -->
+<div class="tl-filters">
+    <button class="tl-filter-btn active" data-cat="all" onclick="filterTimeline('all',this)">הכל</button>
+    <button class="tl-filter-btn" data-cat="antisemitism" onclick="filterTimeline('antisemitism',this)">&#128308; אנטישמיות</button>
+    <button class="tl-filter-btn" data-cat="holocaust" onclick="filterTimeline('holocaust',this)">&#128367; שואה</button>
+    <button class="tl-filter-btn" data-cat="wars" onclick="filterTimeline('wars',this)">&#9876; מלחמות</button>
+    <button class="tl-filter-btn" data-cat="peace" onclick="filterTimeline('peace',this)">&#9774; שלום</button>
+    <button class="tl-filter-btn" data-cat="achievements" onclick="filterTimeline('achievements',this)">&#11088; הישגים</button>
+    <button class="tl-filter-btn" data-cat="zionism" onclick="filterTimeline('zionism',this)">&#10035; ציונות ועלייה</button>
+</div>
+
+<div class="tl-counter" id="tlCounter">מציג <strong>120</strong> מתוך <strong>120</strong> אירועים</div>
+<div class="tl-controls">
+    <button class="tl-ctrl-btn" onclick="expandAll()">&#9660; פתח הכל</button>
+    <button class="tl-ctrl-btn" onclick="collapseAll()">&#9650; סגור הכל</button>
+</div>
+
+<!-- ==================== TIMELINE CONTENT ==================== -->
+<div class="tl-container">
+
+<!-- ERA 1: 1807-1880 -->
+<div class="tl-era" id="era-1800s">
+<h2 class="tl-era-title">עידן ההשכלה — 1807-1880</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1807">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1807</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">הסנהדרין של נפוליאון</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>נפוליאון כינס 71 מנהיגים יהודים בפריז כ"סנהדרין גדולה" כדי להסדיר את מעמד היהודים באימפריה הצרפתית. הדיונים עסקו בנאמנות אזרחית, נישואי תערובת וחוקי המדינה. תקדים לאמנסיפציה יהודית באירופה.</p><div class="tl-sources">מקור: Encyclopedia Judaica, "Napoleon and the Jews"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1840">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1840</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">עלילת דמשק</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>נזיר קפוצ'יני ומשרתו נעלמו ברובע היהודי בדמשק. יהודים הואשמו ב"רצח טקסי" ועונו עד ש"הודו". משה מונטיפיורי ואדולף כרמיה פעלו לשחרור העצורים. האירוע זרז את הקמת Alliance Israélite Universelle.</p><div class="tl-sources">מקור: Jonathan Frankel, <em>The Damascus Affair</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1858">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1858</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">פרשת מורטרה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>אדגרדו מורטרה, ילד יהודי בן 6 מבולוניה, נחטף בפקודת האפיפיור לאחר שמשרתת נוצרייה טבלה אותו בסתר. משפחתו לא הצליחה להשיבו. הפרשה זעזעה את אירופה וחיזקה את הקריאה לארגון יהודי בינלאומי.</p><div class="tl-sources">מקור: David Kertzer, <em>The Kidnapping of Edgardo Mortara</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1860">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1860</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הקמת Alliance Israélite Universelle</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הארגון היהודי הבינלאומי הראשון הוקם בפריז. "כל ישראל חברים" — מטרתו להגן על זכויות יהודים ברחבי העולם ולהקים רשת בתי ספר במזרח התיכון וצפון אפריקה.</p><div class="tl-sources">מקור: André Kaspi, <em>Histoire de l'Alliance Israélite Universelle</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1862">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1862</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">משה הס — "רומא וירושלים"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הפילוסוף הסוציאליסט משה הס פרסם את "רומא וירושלים" — מהספרים הפרוטו-ציוניים הראשונים. הס טען שהאמנסיפציה לא תפתור את הבעיה היהודית ושיש צורך בתחייה לאומית בארץ ישראל.</p><div class="tl-sources">מקור: Shlomo Avineri, <em>Moses Hess: Prophet of Communism and Zionism</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1870">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1870</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">מקווה ישראל — בית הספר החקלאי הראשון</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>בית הספר החקלאי "מקווה ישראל" הוקם ליד יפו על ידי Alliance Israélite Universelle. זה היה המוסד החינוכי היהודי המודרני הראשון בארץ ישראל, שהכשיר דורות של חלוצים בחקלאות.</p><div class="tl-sources">מקור: Jewish Virtual Library</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1878">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1878</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">הקמת פתח תקווה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>פתח תקווה, "אם המושבות", הוקמה כמושבה חקלאית יהודית ראשונה בארץ ישראל. המתיישבים, שהגיעו מירושלים ומהונגריה, התמודדו עם מלריה ותנאים קשים אך הניחו את היסודות להתיישבות היהודית המודרנית.</p><div class="tl-sources">מקור: Encyclopedia Judaica, "Petah Tikvah"</div></div></div>
+</div>
+
+</div><!-- /tl-line -->
+</div><!-- /era-1800s -->
+
+<!-- ERA 2: 1881-1917 -->
+<div class="tl-era" id="era-zionism">
+<h2 class="tl-era-title">ראשית הציונות — 1881-1917</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1881">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1881</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הפרעות ברוסיה מתחילות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>גל פוגרומים אלים פרץ בדרום רוסיה לאחר רצח הצאר אלכסנדר השני. יהודים הוכו, נרצחו ורכושם נבזז. הפוגרומים נמשכו שנים וגרמו לגל הגירה עצום — כ-2 מיליון יהודים עזבו את רוסיה עד 1914.</p><div class="tl-sources">מקור: John Klier, <em>Russians, Jews, and the Pogroms of 1881-1882</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1882">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1882</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">העלייה הראשונה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-25,000-35,000 יהודים עלו לארץ ישראל, בעיקר מרוסיה ורומניה. הקימו מושבות כמו ראשון לציון, זכרון יעקב ורחובות. תנועות "חיבת ציון" ו"ביל"ו" הובילו את הגל. הברון רוטשילד תמך כלכלית.</p><div class="tl-sources">מקור: Encyclopedia Judaica, "Aliyah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1894">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1894</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">פרשת דרייפוס</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>קפטן אלפרד דרייפוס, קצין יהודי-צרפתי, הואשם שווא בריגול לטובת גרמניה. הורשע בדין צבאי מזויף והוגלה לאי השד. הפרשה חשפה אנטישמיות עמוקה בצרפת ועוררה את הרצל לכתוב את "מדינת היהודים".</p><div class="tl-sources">מקור: Britannica, "Dreyfus Affair" | Ruth Harris, <em>Dreyfus: Politics, Emotion, and the Scandal of the Century</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1896">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1896</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">הרצל — "מדינת היהודים"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>תאודור הרצל, עיתונאי יהודי-אוסטרי, פרסם את "Der Judenstaat" (מדינת היהודים). הספר טען שהפתרון היחידי לבעיית האנטישמיות הוא הקמת מדינה יהודית ריבונית. הפך לטקסט המכונן של התנועה הציונית המדינית.</p><div class="tl-sources">מקור: Theodor Herzl, <em>Der Judenstaat</em> (1896)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1897">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1897</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">הקונגרס הציוני הראשון</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>208 צירים מ-17 מדינות התכנסו בבאזל, שווייץ. הקונגרס ייסד את ההסתדרות הציונית העולמית ואימץ את "תוכנית באזל" — יצירת בית לאומי לעם היהודי בארץ ישראל. הרצל כתב ביומנו: "בבאזל ייסדתי את מדינת היהודים."</p><div class="tl-sources">מקור: Central Zionist Archives | Michael Heymann, <em>The Minutes of the Zionist General Council</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1903">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1903</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הפוגרום בקישינב</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>פוגרום אלים פרץ בקישינב (מולדובה כיום) בעקבות עלילת דם. 49 יהודים נרצחו, מאות נפצעו, ו-1,500 בתים ניזוקו. ביאליק כתב את "בעיר ההריגה". האירוע זעזע את העולם היהודי וחיזק את התנועה הציונית.</p><p class="tl-victims">49 הרוגים, מאות פצועים</p><div class="tl-sources">מקור: Steven Zipperstein, <em>Pogrom: Kishinev and the Tilt of History</em> (2018)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1903">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1903</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">פרסום "הפרוטוקולים של זקני ציון"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הזיוף האנטישמי המפורסם ביותר בהיסטוריה פורסם ברוסיה. טען ל"תוכנית יהודית לשלוט בעולם". הוכח כזיוף של המשטרה החשאית הרוסית כבר ב-1921 על ידי The Times, אך ממשיך להפיץ שנאה עד היום.</p><div class="tl-sources">מקור: Norman Cohn, <em>Warrant for Genocide</em> (1967) | The Times, 1921</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1904">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1904</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">העלייה השנייה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-35,000-40,000 יהודים עלו לארץ ישראל (1904-1914), בעיקר סוציאליסטים צעירים מרוסיה. הקימו את התנועה הקיבוצית, ארגוני הפועלים, ואת הבסיס לתשתית החברתית של היישוב. דוד בן-גוריון הגיע בגל זה.</p><div class="tl-sources">מקור: Encyclopedia Judaica, "Second Aliyah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1909">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1909</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הקמת תל אביב ודגניה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>66 משפחות יהודיות הגרילו חלקות אדמה על חולות צפון יפו — כך נולדה תל אביב, העיר העברית הראשונה. באותה תקופה הוקם גם הקיבוץ הראשון — דגניה — על שפת הכנרת, שהניח את היסודות לרעיון הקיבוצי.</p><div class="tl-sources">מקור: Maoz Azaryahu, <em>Tel Aviv: Mythography of a City</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1913">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1913</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">משפט בייליס</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מנחם מנדל בייליס, יהודי מקייב, הואשם ברצח ילד נוצרי לצורך "שימוש בדם" — עלילת דם קלאסית. לאחר משפט בינלאומי סוער זוכה בייליס, אך המשפט חשף את עומק האנטישמיות ברוסיה הצארית.</p><div class="tl-sources">מקור: Edmund Levin, <em>A Child of Christian Blood</em> (2014)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1917">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2.11.1917</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">הצהרת בלפור</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>שר החוץ הבריטי ארתור בלפור שלח מכתב לורד רוטשילד בשם הממשלה הבריטית: "ממשלת הוד מלכותו רואה בעין יפה הקמת בית לאומי לעם היהודי בארץ ישראל." ההצהרה הפכה לבסיס המשפטי הבינלאומי הראשון לזכות היהודים בארץ ישראל.</p><div class="tl-sources">מקור: Jonathan Schneer, <em>The Balfour Declaration</em> (2010)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 3: 1918-1939 -->
+<div class="tl-era" id="era-mandate">
+<h2 class="tl-era-title">תקופת המנדט — 1918-1939</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1920">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">ועידת סן רמו</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מעצמות ההסכמה (בריטניה, צרפת, איטליה, יפן) אישרו את הצהרת בלפור ומנדט בריטי על ארץ ישראל. ההחלטה העניקה תוקף משפטי בינלאומי להקמת בית לאומי יהודי.</p><div class="tl-sources">מקור: League of Nations Official Journal | San Remo Resolution, April 25, 1920</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1920">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">קרב תל חי</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מאות ערבים תקפו את יישוב תל חי בגליל העליון. יוסף טרומפלדור ו-7 מגנים נוספים נפלו. לפי המסורת, דבריו האחרונים של טרומפלדור: "אין דבר, כדאי למות בעד ארצנו." תל חי הפכה לסמל ההגנה העצמית היהודית.</p><p class="tl-victims">8 הרוגים</p><div class="tl-sources">מקור: Yigal Lossin, <em>Pillar of Fire</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1920">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1920</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הקמת ההגנה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ארגון ההגנה הוקם כמיליציה יהודית חשאית להגנה על היישובים מפני תקיפות ערביות. פעל מתחת לאף הבריטים ולימים הפך לבסיס של צה"ל.</p><div class="tl-sources">מקור: Encyclopedia Judaica, "Haganah"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1925">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1925</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">פתיחת האוניברסיטה העברית</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>האוניברסיטה העברית נפתחה בירושלים בטקס רשמי על הר הצופים בנוכחות בלפור, אלנבי ואלברט איינשטיין. המוסד האקדמי הראשון בעברית, שהפך לאחד האוניברסיטאות המובילות במזרח התיכון.</p><div class="tl-sources">מקור: Hebrew University Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1929">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1929</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">טבח חברון — מאורעות תרפ"ט</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מאורעות תרפ"ט פרצו ברחבי ארץ ישראל. בחברון נרצחו 67 יהודים על ידי ערבים מקומיים, כולל נשים וילדים. הקהילה היהודית ההיסטורית בחברון פונתה כליל. גם בצפת, בירושלים ובמוצא נפלו יהודים. סך הכל 133 הרוגים.</p><p class="tl-victims">133 הרוגים, 339 פצועים</p><div class="tl-sources">מקור: Tom Segev, <em>One Palestine, Complete</em> (2000)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1936">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1936-1939</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">המרד הערבי</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>שלוש שנות אלימות ערבית נגד היישוב היהודי ונגד הבריטים. כללו שביתות, הפגנות, ותקיפות על יישובים יהודיים ותשתיות. הבריטים דיכאו את המרד בכוח. ועדת פיל (1937) המליצה לראשונה על חלוקת הארץ.</p><div class="tl-sources">מקור: Matthew Hughes, <em>Britain's Pacification of Palestine</em> (2019)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1937">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1937</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">דו"ח ועדת פיל</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ועדת פיל הבריטית המליצה לראשונה על חלוקת ארץ ישראל למדינה יהודית ומדינה ערבית. הערבים דחו את התוכנית לחלוטין. המנהיגות היהודית התלבטה אך בסופו של דבר הסכימה לעקרון החלוקה.</p><div class="tl-sources">מקור: Palestine Royal Commission Report (Peel Report), July 1937</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1939">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1939</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הספר הלבן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הממשלה הבריטית פרסמה את "הספר הלבן" שהגביל בצורה דרסטית את העלייה היהודית לארץ ישראל ל-75,000 בלבד לחמש שנים, ואסר רכישת קרקעות יהודית ברוב הארץ. בעיתוי הגרוע ביותר — ערב השואה — בריטניה סגרה את שערי ארץ ישראל.</p><div class="tl-sources">מקור: British White Paper of 1939 | Michael Cohen, <em>Palestine: Retreat from the Mandate</em></div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 4: 1933-1945 HOLOCAUST -->
+<div class="tl-era" id="era-holocaust">
+<h2 class="tl-era-title">השואה — 1933-1945</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1933">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">30.1.1933</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">היטלר עולה לשלטון</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>אדולף היטלר מונה לקנצלר גרמניה. תוך חודשים ביסס שלטון טוטליטרי. ב-1 באפריל 1933 — חרם ממשלתי על עסקים יהודיים. תחילתו של תהליך שיטתי של הדרה, רדיפה והשמדת יהודי אירופה.</p><div class="tl-sources">מקור: USHMM | Ian Kershaw, <em>Hitler</em> (1998)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1935">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">15.9.1935</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">חוקי נירנברג</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הרייכסטאג אישר את חוקי נירנברג: "חוק אזרחות הרייך" ו"חוק הגנת הדם והכבוד הגרמני". היהודים נשללו מאזרחותם, נאסרו נישואי תערובת, ונקבע מיהו "יהודי" על בסיס גזעי — גם מי שלו סב או סבתא יהודיים אחד.</p><div class="tl-sources">מקור: USHMM, "Nuremberg Laws" | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1938">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1938</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">ועידת אוויאן — העולם מפנה עורף</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>32 מדינות התכנסו באוויאן, צרפת, לדון בבעיית הפליטים היהודים מגרמניה. כמעט כל המדינות סירבו לקלוט פליטים. רק הרפובליקה הדומיניקנית הציעה מקלט. העולם ידע — ולא עשה דבר.</p><div class="tl-sources">מקור: USHMM | S.S. Friedman, <em>No Haven for the Oppressed</em> (1973)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1938">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">9-10.11.1938</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">ליל הבדולח — קריסטלנאכט</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>פוגרום ממשלתי מאורגן ברחבי גרמניה ואוסטריה. 1,400 בתי כנסת הוצתו, 7,500 עסקים יהודיים נהרסו, 91 יהודים נרצחו ו-30,000 נשלחו למחנות ריכוז. נקודת המפנה מרדיפה לאלימות פתוחה.</p><p class="tl-victims">91 הרוגים, 30,000 נעצרו</p><div class="tl-sources">מקור: USHMM | Yad Vashem, "Kristallnacht"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1939">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1939</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">אוניית סנט לואיס</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>937 פליטים יהודים הפליגו מהמבורג לקובה על האנייה SS St. Louis. קובה, ארה"ב וקנדה סירבו לקלוט אותם. האנייה חזרה לאירופה. כ-254 מהנוסעים נרצחו בשואה. סמל הדוחק של העולם המערבי.</p><p class="tl-victims">~254 נרצחו בשואה</p><div class="tl-sources">מקור: USHMM, "Voyage of the St. Louis"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1941">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">29-30.9.1941</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">טבח באבי יאר</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>יחידות אייזנטצגרופן ואוקראינים ביצעו את הטבח ההמוני הגדול ביותר ביריות. 33,771 יהודי קייב נורו תוך יומיים בעמק באבי יאר. עד סוף המלחמה נרצחו שם כ-100,000-150,000 בני אדם.</p><p class="tl-victims">33,771 הרוגים ביומיים</p><div class="tl-sources">מקור: Yad Vashem | USHMM, "Babi Yar"</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1941">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1-2.6.1941</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הפרהוד — פוגרום בגדד</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>פוגרום אלים בבגדד כנגד הקהילה היהודית העתיקה. חגיגות חג השבועות הפכו לטבח: 180 יהודים נרצחו, מאות נפצעו, ורכוש רב נבזז. הפרהוד זרז את ההגירה ההמונית של יהודי עיראק לישראל.</p><p class="tl-victims">180 הרוגים, 1,000 פצועים</p><div class="tl-sources">מקור: Shmuel Moreh, <em>The Farhud</em> | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1942">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">20.1.1942</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">ועידת ואנזה — "הפתרון הסופי"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>15 בכירי המפלגה הנאצית והממשל הגרמני התכנסו בווילה בפרבר ואנזה בברלין. תוך 90 דקות תיאמו את "הפתרון הסופי לשאלה היהודית" — תוכנית שיטתית להשמדת 11 מיליון יהודי אירופה.</p><div class="tl-sources">מקור: Yad Vashem, "Wannsee Conference" | Mark Roseman, <em>The Wannsee Conference and the Final Solution</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1943">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">19.4.1943</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">מרד גטו ורשה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-750 לוחמים יהודים, בפיקוד מרדכי אנילביץ', קמו למרד מזוין נגד הנאצים כשאלה באו לחסל את הגטו. הקרבות נמשכו 27 יום — מרד אזרחי ממושך יותר מנפילת מדינות שלמות. המרד הפך לסמל הגבורה היהודית.</p><div class="tl-sources">מקור: Yad Vashem | Israel Gutman, <em>Resistance: The Warsaw Ghetto Uprising</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1945">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">27.1.1945</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">שחרור אושוויץ</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הצבא האדום שחרר את מחנה ההשמדה אושוויץ-בירקנאו. חיילים סובייטים מצאו כ-7,000 ניצולים כחושים. במחנה נרצחו כ-1.1 מיליון בני אדם, מתוכם כמיליון יהודים. ה-27 בינואר הוא יום הזיכרון הבינלאומי לשואה.</p><p class="tl-victims">~1.1 מיליון נרצחו באושוויץ</p><div class="tl-sources">מקור: USHMM | Yad Vashem | Auschwitz-Birkenau Memorial</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="holocaust" data-year="1945">
+<div class="tl-dot" style="background:#8b0000"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1945-1946</span><span class="tl-badge badge-holocaust">שואה</span><span class="tl-title">משפטי נירנברג</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>בית הדין הבינלאומי הצבאי בנירנברג שפט 24 מנהיגים נאצים בכירים על פשעי מלחמה, פשעים נגד האנושות ורצח עם. 12 נידונו למוות. המשפט הניח את יסודות המשפט הפלילי הבינלאומי.</p><div class="tl-sources">מקור: Nuremberg Trial Proceedings | USHMM</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 5: 1947-1949 INDEPENDENCE -->
+<div class="tl-era" id="era-independence">
+<h2 class="tl-era-title">הקמת המדינה — 1947-1949</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1946">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">4.7.1946</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הפוגרום בקיילצה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>פוגרום נגד ניצולי שואה בקיילצה, פולין — שנה אחרי סוף המלחמה. 42 יהודים שחזרו לביתם נרצחו על ידי המון פולני בעקבות עלילת דם. ההמון שנשאר לא השתנה. הפוגרום הניע גל הגירה יהודית מאסיבי מפולין.</p><p class="tl-victims">42 הרוגים</p><div class="tl-sources">מקור: USHMM, "Kielce Pogrom" | Jan Gross, <em>Fear</em> (2006)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1947">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1947</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">אקסודוס 1947</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>אנייה עם 4,515 ניצולי שואה ניסתה להגיע לארץ ישראל. הבריטים עצרו את האנייה, הכו את הנוסעים וגירשו אותם חזרה לגרמניה — ארץ הרוצחים. הפרשה זעזעה את דעת הקהל העולמית ותרמה לתמיכה בחלוקת ארץ ישראל.</p><div class="tl-sources">מקור: USHMM, "Exodus 1947" | Ruth Gruber, <em>Exodus 1947</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1947">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">29.11.1947</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">החלטה 181 — תוכנית החלוקה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>עצרת האו"ם הצביעה בעד חלוקת ארץ ישראל למדינה יהודית ומדינה ערבית. 33 בעד, 13 נגד, 10 נמנעו. היהודים קיבלו את ההחלטה, הערבים דחו אותה. ברחובות תל אביב רקדו; למחרת פרצה אלימות ערבית.</p><div class="tl-sources">מקור: UN General Assembly Resolution 181 | Benny Morris, <em>1948</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1948">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">14.5.1948</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הכרזת העצמאות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>דוד בן-גוריון הכריז על הקמת מדינת ישראל בטקס בשד' רוטשילד, תל אביב. "אנו מכריזים בזאת על הקמת מדינה יהודית בארץ ישראל — היא מדינת ישראל." לראשונה מזה 2,000 שנה — ריבונות יהודית בארץ ישראל.</p><div class="tl-sources">מקור: Israel State Archives | Declaration of Independence, 5 Iyar 5708</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1948">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">15.5.1948</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת העצמאות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>למחרת ההכרזה, 5 צבאות ערביים (מצרים, ירדן, סוריה, עיראק, לבנון) פלשו לישראל. המלחמה נמשכה 15 חודשים. ישראל, עם כוח מגן של 30,000 לוחמים, ניצחה צבאות של מיליוני אזרחים. 6,373 ישראלים נפלו — 1% מהאוכלוסייה.</p><p class="tl-victims">6,373 חללים ישראלים (1% מהאוכלוסייה)</p><div class="tl-sources">מקור: Benny Morris, <em>1948</em> (2008) | IDF Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1948">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">26.5.1948</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הקמת צה"ל</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>צבא ההגנה לישראל הוקם רשמית, תוך איחוד ההגנה, האצ"ל והלח"י תחת מפקדה אחת. בן-גוריון חתם על "פקודת צה"ל" שקבעה שאין עוד מיליציות פרטיות — רק צבא אחד למדינה אחת.</p><div class="tl-sources">מקור: IDF Archives | Israel State Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1949">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1949-1950</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">מבצע מרבד הקסמים — יהודי תימן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-49,000 יהודי תימן הועלו לישראל בגשר אווירי. רובם לא ראו מטוס מעולם וחלקם האמינו שהנבואה "ואשא אתכם על כנפי נשרים" מתגשמת. קהילה בת 2,500 שנה עלתה כמעט במלואה.</p><div class="tl-sources">מקור: Tudor Parfitt, <em>The Road to Redemption</em> | Israel State Archives</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1949">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">11.5.1949</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">ישראל מתקבלת לאו"ם</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל התקבלה כחברה ה-59 באומות המאוחדות. ההצבעה: 37 בעד, 12 נגד, 9 נמנעו. הכרה בינלאומית רשמית בזכותו של העם היהודי למדינה ריבונית.</p><div class="tl-sources">מקור: UN General Assembly Resolution 273</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 6: 1950-1966 NATION BUILDING -->
+<div class="tl-era" id="era-building">
+<h2 class="tl-era-title">בניין האומה — 1950-1966</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1950">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">5.7.1950</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">חוק השבות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>הכנסת חוקקה את חוק השבות — "כל יהודי זכאי לעלות ארצה." החוק מעגן את זכותו של כל יהודי בעולם לקבל אזרחות ישראלית. ביטוי משפטי לרעיון שישראל היא בית לאומי לעם היהודי.</p><div class="tl-sources">מקור: Israel Knesset Archives, Law of Return 5710-1950</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1950">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1950-1951</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">מבצע עזרא ונחמיה — יהודי עיראק</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-120,000 יהודי עיראק עלו לישראל בגשר אווירי לאחר שהממשלה העיראקית שללה את אזרחותם והחרימה את רכושם. קהילה בת 2,600 שנה — מהוותיקות בעולם — נעקרה כמעט לחלוטין.</p><div class="tl-sources">מקור: Moshe Gat, <em>The Jewish Exodus from Iraq</em> (1997)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1952">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1952</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">הסכם לוקסמבורג — פיצויים מגרמניה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל וגרמניה המערבית חתמו על הסכם שילומים. גרמניה שילמה 3 מיליארד מארק לישראל כפיצוי על רכוש יהודי שנבזז בשואה. ההסכם היה שנוי במחלוקת עזה בישראל — רבים ראו בכסף "דמי דם".</p><div class="tl-sources">מקור: Nana Sagi, <em>German Reparations</em> (1986)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1953">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1953</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">הקמת יד ושם</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מוסד הזיכרון הלאומי לשואה הוקם בירושלים. יד ושם מתעד את שמות 6 מיליון הקורבנות, שומר על עדויות, ומחנך דורות. שמו מתוך ישעיהו נ"ו: "ונתתי להם בביתי ובחומותי יד ושם."</p><div class="tl-sources">מקור: Yad Vashem Official | Knesset Law 5713-1953</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1956">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1956</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מבצע סיני — מלחמת סואץ</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל, בתיאום עם בריטניה וצרפת, כבשה את חצי האי סיני ורצועת עזה בתגובה לחסימת מצרים את מצר טיראן ותקיפות פדאיין. ישראל נסוגה תחת לחץ אמריקני-סובייטי אך השיגה חופש שיט במצר.</p><div class="tl-sources">מקור: Motti Golani, <em>Israel in Search of a War</em> (1998)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1961">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1961</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">משפט אייכמן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>אדולף אייכמן, אחראי על הלוגיסטיקה של "הפתרון הסופי", נחטף על ידי המוסד בארגנטינה ב-1960 והועמד לדין בירושלים. המשפט שודר בטלוויזיה ולראשונה העולם שמע את עדויות ניצולי השואה. הורשע ונתלה ב-1962.</p><div class="tl-sources">מקור: Deborah Lipstadt, <em>The Eichmann Trial</em> (2011) | Yad Vashem</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1965">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1965</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">המצאת ההשקיה בטפטוף</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>שמחה בלאס, מהנדס מים ישראלי, פיתח את שיטת ההשקיה בטפטוף בקיבוץ חצרים. נטפים, החברה שהקים, חוללה מהפכה בחקלאות העולמית — חיסכון של 30-50% במים. טכנולוגיה ישראלית שמאכילה מאות מיליוני אנשים.</p><div class="tl-sources">מקור: Netafim History | Seth Siegel, <em>Let There Be Water</em> (2015)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 7: 1967-1982 ERA OF WARS -->
+<div class="tl-era" id="era-wars">
+<h2 class="tl-era-title">עידן המלחמות — 1967-1982</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1967">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">5-10.6.1967</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת ששת הימים</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל תקפה מתוך הגנה עצמית לאחר שמצרים חסמה את מצר טיראן, גירשה את כוחות האו"ם מסיני ורכזה כוחות על הגבול. תוך 6 ימים ישראל כבשה את סיני, רמת הגולן, יהודה ושומרון ורצועת עזה. ירושלים אוחדה. הצנחנים הגיעו לכותל המערבי.</p><div class="tl-sources">מקור: Michael Oren, <em>Six Days of War</em> (2002)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1967">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">7.6.1967</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">איחוד ירושלים</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>"הר הבית בידינו!" — מוטה גור, מפקד חטיבת הצנחנים. לראשונה מזה 19 שנה יהודים יכולים להתפלל ליד הכותל המערבי. ירדן הרסה 58 בתי כנסת בעיר העתיקה בין 1948-1967. ישראל שמרה על חופש פולחן לכל הדתות.</p><div class="tl-sources">מקור: Abraham Rabinovich, <em>The Battle for Jerusalem</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1972">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">5.9.1972</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">טבח מינכן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מחבלים מארגון "ספטמבר השחור" חדרו לכפר האולימפי במינכן, רצחו 2 ספורטאים ישראלים ולקחו 9 בני ערובה. כל 9 נרצחו בניסיון חילוץ כושל. ישראל ענתה ב"מבצע זעם האל" — ציד בכירי הארגון ברחבי אירופה.</p><p class="tl-victims">11 ספורטאים ישראלים נרצחו</p><div class="tl-sources">מקור: Aaron Klein, <em>Striking Back</em> | Simon Reeve, <em>One Day in September</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1973">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">6.10.1973</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת יום הכיפורים</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מצרים וסוריה תקפו בהפתעה ביום הכיפורים. צה"ל ספג מכה קשה בימים הראשונים — מאות טנקים נהרסו, עשרות מטוסים הופלו. לאחר גיוס מילואים מאסיבי ישראל הפכה את המגמה, חצתה את תעלת סואץ והגיעה ל-101 ק"מ מקהיר.</p><p class="tl-victims">2,656 חללים ישראלים</p><div class="tl-sources">מקור: Abraham Rabinovich, <em>The Yom Kippur War</em> (2004)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="1975">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">10.11.1975</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">החלטה 3379 — "ציונות = גזענות"</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>עצרת האו"ם אישרה החלטה המשווה ציונות לגזענות. חיים הרצוג, שגריר ישראל, קרע את ההחלטה על הבמה ואמר: "לזיוף זה של ההיסטוריה, ולרמיזה שנולדה בחושך — אנחנו מגיבים במלוא הזעם." ההחלטה בוטלה ב-1991.</p><div class="tl-sources">מקור: UN General Assembly Resolution 3379 | Chaim Herzog speech, 1975</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1976">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">4.7.1976</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">מבצע אנטבה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מטוס אייר פראנס חוטף עם 248 נוסעים, מתוכם 94 ישראלים, הוטס לאנטבה, אוגנדה. קומנדו סיירת מטכ"ל טס 4,000 ק"מ וחילץ את בני הערובה. יונתן נתניהו, מפקד הכוח, נפל — הקצין היחיד שנהרג. מבצע שנחשב לאחד המבריקים בהיסטוריה הצבאית.</p><p class="tl-victims">יונתן נתניהו ז"ל נפל</p><div class="tl-sources">מקור: Saul David, <em>Operation Thunderbolt</em> (2015)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1978">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">17.9.1978</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">הסכמי קמפ דיוויד</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ראש הממשלה מנחם בגין ונשיא מצרים אנואר סאדאת חתמו על הסכמי מסגרת בתיווך הנשיא קרטר. ב-26 במרץ 1979 נחתם הסכם השלום הראשון בין ישראל למדינה ערבית. בגין וסאדאת קיבלו את פרס נובל לשלום.</p><div class="tl-sources">מקור: Camp David Accords (1978) | William Quandt, <em>Camp David</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1982">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">6.6.1982</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת לבנון הראשונה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>צה"ל נכנס ללבנון כדי לסלק את אש"ף שהפגיז את הגליל. המלחמה התמשכה מעבר לתכנון המקורי. אריאל שרון, שר הביטחון, הוביל את הכוחות עד ביירות. המלחמה הפכה לשנויה במחלוקת בישראל, בעיקר לאחר טבח סברה ושתילה.</p><div class="tl-sources">מקור: Ze'ev Schiff & Ehud Ya'ari, <em>Israel's Lebanon War</em> (1984)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 8: 1983-1999 HOPE FOR PEACE -->
+<div class="tl-era" id="era-peace">
+<h2 class="tl-era-title">תקוות שלום — 1983-1999</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1984">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1984-1985</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">מבצע משה — יהודי אתיופיה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>כ-8,000 יהודי אתיופיה (ביתא ישראל) הוברחו לישראל בגשר אווירי חשאי דרך סודן. רבים הלכו ברגל מאות קילומטרים דרך המדבר. כ-4,000 מתו בדרך. קהילה שחיכתה אלפי שנים חזרה לציון.</p><p class="tl-victims">~4,000 מתו בדרך לסודן</p><div class="tl-sources">מקור: Tudor Parfitt, <em>Operation Moses</em> | USHMM</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1987">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">9.12.1987</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">האינתיפאדה הראשונה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>התקוממות פלסטינית פרצה ברחבי יהודה, שומרון ועזה. כללה הפגנות המוניות, שביתות, יידוי אבנים ובקבוקי תבערה. 160 ישראלים ומעל 1,000 פלסטינים נהרגו. האינתיפאדה הובילה בסופו של דבר לתהליך אוסלו.</p><div class="tl-sources">מקור: Benny Morris, <em>Righteous Victims</em> (1999)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1990">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1990-1991</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">העלייה הגדולה מברית המועצות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>עם קריסת ברית המועצות, כמיליון יהודים עלו לישראל תוך עשור. רופאים, מהנדסים, מדענים ומוזיקאים שינו את פני המדינה. העלייה הזו הניחה את היסודות ל"אומת הסטארט-אפ" ולתעשיית ההייטק הישראלית.</p><div class="tl-sources">מקור: Israel CBS | Zvi Gitelman, <em>Immigration and Identity</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="zionism" data-year="1991">
+<div class="tl-dot" style="background:#3498db"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">24-25.5.1991</span><span class="tl-badge badge-zionism">ציונות</span><span class="tl-title">מבצע שלמה — יהודי אתיופיה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>14,325 יהודי אתיופיה הועלו לישראל ב-36 שעות בלבד — אחד הגשרים האוויריים הגדולים בהיסטוריה. 34 טיסות ללא הפסקה. מטוס C-130 אחד נחת עם 1,088 נוסעים — שיא עולמי שלא נשבר. תינוק אחד נולד בטיסה.</p><div class="tl-sources">מקור: IDF Archives | Jewish Agency</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1991">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1991</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת המפרץ — טילי סקאד על ישראל</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>עיראק שיגרה 39 טילי סקאד על ישראל במהלך מלחמת המפרץ. ישראלים ישבו בחדרים אטומים עם מסכות גז. ישראל לא הגיבה צבאית — בלחץ אמריקני — כדי לשמור על הקואליציה נגד סדאם חוסיין.</p><div class="tl-sources">מקור: IDF Archives | Efraim Inbar, <em>Israel's National Security</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1993">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">13.9.1993</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">הסכמי אוסלו</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל ואש"ף חתמו על הסכמי אוסלו בדשא הבית הלבן. רבין וערפאת לחצו ידיים בתיווך קלינטון. ההסכמים הקימו את הרשות הפלסטינית ופתחו תהליך שלום שהיה אמור להסתיים בהסכם קבע. רבין, פרס וערפאת קיבלו פרס נובל לשלום.</p><div class="tl-sources">מקור: Declaration of Principles, Sept 13, 1993 | Yossi Beilin, <em>The Path to Geneva</em></div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="1994">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">26.10.1994</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">הסכם השלום עם ירדן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל וירדן חתמו על הסכם שלום בערבה. המלך חוסיין ורבין סיימו מצב מלחמה של 46 שנים. ירדן הפכה למדינה הערבית השנייה שחותמת שלום עם ישראל, אחרי מצרים.</p><div class="tl-sources">מקור: Israel-Jordan Peace Treaty, October 26, 1994</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="1995">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">4.11.1995</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">רצח רבין</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ראש הממשלה יצחק רבין נרצח בידי יגאל עמיר בסיום עצרת שלום בכיכר מלכי ישראל (כיום כיכר רבין), תל אביב. הרצח זעזע את החברה הישראלית ושינה את מהלך ההיסטוריה. דבריו האחרונים בעצרת: "שיר לשלום."</p><div class="tl-sources">מקור: Dan Ephron, <em>Killing a King</em> (2015)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="1998">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">1998</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">ישראל חוגגת 50 — אומת הסטארט-אפ מתחילה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל חגגה 50 שנות עצמאות. תעשיית ההייטק בפריחה: ICQ (1996) נמכר ל-AOL ב-407 מיליון דולר, Mobileye (1999) הוקם, Check Point הפכה לענקית סייבר. ישראל מתחילה להיקרא "אומת הסטארט-אפ".</p><div class="tl-sources">מקור: Dan Senor & Saul Singer, <em>Start-up Nation</em> (2009)</div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 9: 2000-2015 NEW MILLENNIUM -->
+<div class="tl-era" id="era-2000s">
+<h2 class="tl-era-title">המילניום החדש — 2000-2015</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2000">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2000</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">כישלון קמפ דיוויד II + האינתיפאדה השנייה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ראש הממשלה ברק הציע לערפאת מדינה פלסטינית על 97% מיהודה ושומרון + מזרח ירושלים. ערפאת סירב ולא הציע הצעה נגדית. בספטמבר 2000 פרצה האינתיפאדה השנייה — גל פיגועי התאבדות שרצח מעל 1,000 ישראלים תוך 5 שנים.</p><p class="tl-victims">1,137 ישראלים נרצחו בפיגועי טרור</p><div class="tl-sources">מקור: Dennis Ross, <em>The Missing Peace</em> (2004) | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2001">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2001-2004</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">פרסי נובל ישראליים</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>גל פרסי נובל לישראלים: דניאל כהנמן (כלכלה, 2002) על תיאוריית הפרוספקט; אהרן צ'חנובר ואברהם הרשקו (כימיה, 2004) על גילוי מנגנון פירוק החלבונים. ישראל — עם 9 מיליון אזרחים — מדינה עם הכי הרבה זוכי נובל per capita.</p><div class="tl-sources">מקור: Nobel Prize Official | Encyclopedia Judaica</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="2005">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2005</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">ההתנתקות מעזה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ראש הממשלה אריאל שרון הוציא לפועל את תוכנית ההתנתקות. 8,000 מתיישבים פונו מ-21 יישובים ברצועת עזה ו-4 בצפון השומרון. חיילים בכו, מתנחלים השתוללו, משפחות נעקרו. חמאס השתלט על עזה ב-2007 והפך אותה למשגר טילים.</p><div class="tl-sources">מקור: Israel State Archives | Dov Weisglass, Sharon's advisor</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2006">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2006</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת לבנון השנייה</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>חיזבאללה חטף שני חיילי מילואים (אלדד רגב ואהוד גולדווסר) וירה רקטות על הגליל. ישראל פתחה במלחמה שנמשכה 34 יום. 4,000 רקטות נורו על צפון ישראל. 121 חיילים ו-44 אזרחים ישראלים נהרגו.</p><p class="tl-victims">165 ישראלים נהרגו</p><div class="tl-sources">מקור: Winograd Commission Report (2008)</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2011">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2011</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">כיפת ברזל — המהפכה הצבאית</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מערכת כיפת ברזל ביצעה את היירוט הראשון שלה ב-7 באפריל 2011. פיתוח ישראלי של רפאל שמיירט רקטות באוויר — אחוז יירוט של מעל 90%. המערכת הצילה אלפי חיים ישראלים ופלסטינים ושינתה את כללי המשחק.</p><div class="tl-sources">מקור: Rafael Advanced Defense Systems | IDF Spokesperson</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2012">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">19.3.2012</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הטבח בטולוז</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מוחמד מרע, מחבל ג'יהאדיסט צרפתי-אלג'ירי, ירה למוות 3 ילדים ורב בבית הספר היהודי "אוצר התורה" בטולוז, צרפת. קודם לכן רצח 3 חיילים צרפתים. האירוע סימן עלייה באלימות אנטישמית-אסלאמיסטית באירופה.</p><p class="tl-victims">4 הרוגים בבית הספר היהודי</p><div class="tl-sources">מקור: BBC | Le Monde</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2014">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2014</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מבצע צוק איתן</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מבצע צבאי גדול בעזה לאחר חטיפת ורצח 3 נערים ישראלים (גלעד שער, נפתלי פרנקל, איל יפרח) וגל ירי רקטות. חמאס שיגר 4,594 רקטות. צה"ל גילה והרס מנהרות טרור מתחת לגבול.</p><p class="tl-victims">73 חללים ישראלים (67 חיילים, 6 אזרחים)</p><div class="tl-sources">מקור: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="achievements" data-year="2013">
+<div class="tl-dot" style="background:#e2b714"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2013</span><span class="tl-badge badge-achievements">הישגים</span><span class="tl-title">מפעל ההתפלה שורק</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>מפעל ההתפלה הגדול בעולם נחנך ליד אשקלון. ישראל הפכה למעצמת מים — מייצרת מעל 80% ממי השתייה שלה מהתפלת מי ים. ממדינה יבשתית שסבלה מבצורת כרונית למדינה שמייצאת טכנולוגיית מים לעולם.</p><div class="tl-sources">מקור: IDE Technologies | Seth Siegel, <em>Let There Be Water</em></div></div></div>
+</div>
+
+</div></div>
+
+<!-- ERA 10: 2016-2023 CURRENT ERA -->
+<div class="tl-era" id="era-recent">
+<h2 class="tl-era-title">העידן הנוכחי — 2016-2023</h2>
+<div class="tl-line">
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2018">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">27.10.2018</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">הטבח בבית הכנסת "עץ החיים" — פיטסבורג</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>רוצח לבן-על-עליונותי ירה ורצח 11 מתפללים בבית הכנסת "עץ החיים" בפיטסבורג, ארה"ב — הפיגוע האנטישמי הקטלני ביותר בהיסטוריה האמריקנית. הקורבנות היו בגילאי 54-97. האירוע הדהים את הקהילה היהודית האמריקנית.</p><p class="tl-victims">11 הרוגים</p><div class="tl-sources">מקור: FBI | New York Times, October 27, 2018</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="peace" data-year="2020">
+<div class="tl-dot" style="background:#2ecc71"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">15.9.2020</span><span class="tl-badge badge-peace">שלום</span><span class="tl-title">הסכמי אברהם</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל חתמה על הסכמי נורמליזציה עם איחוד האמירויות, בחריין, מרוקו וסודן. פריצת דרך היסטורית — מדינות ערביות מכירות בישראל ללא דרישה לפתרון הסכסוך הפלסטיני. טיסות ישירות, שגרירויות, סחר ותיירות.</p><div class="tl-sources">מקור: Abraham Accords Declaration, Sept 15, 2020 | White House</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2021">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2021</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מבצע שומר החומות</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>חמאס שיגר 4,360 רקטות על ישראל תוך 11 יום. כיפת ברזל יירטה 90% מהרקטות שאיימו על אזורים מיושבים. בנוסף, פרצו מהומות אתניות בערים מעורבות בישראל — אלימות בין ערבים ליהודים בלוד, עכו ויפו.</p><div class="tl-sources">מקור: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="antisemitism" data-year="2023">
+<div class="tl-dot" style="background:#e74c3c"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">7.10.2023</span><span class="tl-badge badge-antisemitism">אנטישמיות</span><span class="tl-title">טבח 7 באוקטובר</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>3,000 מחבלי חמאס פרצו את גדר הגבול ובמשך שעות רצחו, אנסו, עינו ושרפו. 1,200 ישראלים נרצחו — אזרחים בבתיהם, מסיבת נובה, קיבוצים. 253 נחטפו לעזה. היום הקטלני ביותר לעם היהודי מאז השואה. הטבח הגדול ביותר ביום אחד בתולדות ישראל.</p><p class="tl-victims">1,200 נרצחו, 253 נחטפו</p><div class="tl-sources">מקור: Israel MFA | IDF Spokesperson | UN Pramila Patten Report</div></div></div>
+</div>
+
+<div class="tl-event fade-in" data-cat="wars" data-year="2023">
+<div class="tl-dot" style="background:#e67e22"></div>
+<div class="tl-card"><div class="tl-card-header" onclick="toggleEvent(this)">
+<span class="tl-date">2023-</span><span class="tl-badge badge-wars">מלחמות</span><span class="tl-title">מלחמת חרבות ברזל</span><span class="tl-arrow">&#9660;</span>
+</div><div class="tl-card-body"><p>ישראל פתחה במלחמה בעזה להשמדת חמאס ולהחזרת החטופים. המלחמה התרחבה לחזיתות נוספות: חיזבאללה בצפון, החות'ים בתימן, מיליציות איראניות בסוריה ועיראק. מלחמה על 7 חזיתות. ישראל נלחמת על קיומה — שוב.</p><div class="tl-sources">מקור: IDF Spokesperson | Israel MFA</div></div></div>
+</div>
+
+</div></div>
+
+</div><!-- /tl-container -->
+
+<!-- SOURCES -->
+<div class="tl-section-sources">
+<h2>מקורות ומידע נוסף</h2>
+<ul>
+<li>United States Holocaust Memorial Museum — <a href="https://www.ushmm.org" target="_blank">ushmm.org</a></li>
+<li>Yad Vashem — <a href="https://www.yadvashem.org" target="_blank">yadvashem.org</a></li>
+<li>Encyclopedia Judaica (Gale/Keter)</li>
+<li>Jewish Virtual Library — <a href="https://www.jewishvirtuallibrary.org" target="_blank">jewishvirtuallibrary.org</a></li>
+<li>Israel State Archives — <a href="https://www.archives.gov.il" target="_blank">archives.gov.il</a></li>
+<li>Britannica — <a href="https://www.britannica.com" target="_blank">britannica.com</a></li>
+<li>Benny Morris, <em>1948</em> (Yale University Press, 2008)</li>
+<li>Michael Oren, <em>Six Days of War</em> (Oxford University Press, 2002)</li>
+<li>Dan Senor & Saul Singer, <em>Start-up Nation</em> (Twelve Books, 2009)</li>
+</ul>
+<p class="tl-attr">תמונת רקע: עץ החיים — <a href="https://commons.wikimedia.org/wiki/File:Etz_Chaim.svg" target="_blank">Wikimedia Commons</a> (CC BY-SA 4.0)</p>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer" style="text-align:center;padding:40px 20px;border-top:1px solid rgba(226,183,20,0.1);margin-top:40px;">
+<p style="color:#777;font-size:0.85em;">האמת נגד השקר — Truth Against Lies &copy; 2024-2026</p>
+<p style="color:#555;font-size:0.75em;margin-top:8px;">truthagainstlies3@gmail.com</p>
+</footer>
+
+<!-- SHARE FAB -->
+<div class="share-fab" id="shareFab">
+    <button class="share-fab-btn" onclick="document.getElementById('shareFab').classList.toggle('open')">&#128228;</button>
+    <div class="share-fab-menu">
+        <a class="sfab-wa" href="#" onclick="fabShare('whatsapp');return false;">W</a>
+        <a class="sfab-tg" href="#" onclick="fabShare('telegram');return false;">T</a>
+        <a class="sfab-tw" href="#" onclick="fabShare('twitter');return false;">X</a>
+        <a class="sfab-fb" href="#" onclick="fabShare('facebook');return false;">f</a>
+        <a class="sfab-cp" href="#" onclick="fabShare('copy');return false;">&#128203;</a>
+    </div>
+</div>
+
+<script src="common.js"></script>
+<script>
+// Timeline JS
+function toggleEvent(header) { header.closest('.tl-card').classList.toggle('open'); }
+function expandAll() { document.querySelectorAll('.tl-card').forEach(function(c) { c.classList.add('open'); }); }
+function collapseAll() { document.querySelectorAll('.tl-card').forEach(function(c) { c.classList.remove('open'); }); }
+
+function scrollToEra(eraId, btn) {
+    document.querySelectorAll('.tl-era-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var target = document.getElementById(eraId);
+    if (target) {
+        var offset = document.querySelector('.tl-era-slider').offsetHeight + 70;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+}
+
+function filterTimeline(cat, btn) {
+    document.querySelectorAll('.tl-filter-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    var events = document.querySelectorAll('.tl-event');
+    var shown = 0;
+    events.forEach(function(ev) {
+        if (cat === 'all' || ev.dataset.cat === cat) { ev.classList.remove('hidden'); shown++; }
+        else { ev.classList.add('hidden'); }
+    });
+    document.getElementById('tlCounter').innerHTML = 'מציג <strong>' + shown + '</strong> מתוך <strong>' + events.length + '</strong> אירועים';
+    document.querySelectorAll('.tl-era').forEach(function(era) {
+        var visible = era.querySelectorAll('.tl-event:not(.hidden)');
+        era.style.display = visible.length ? '' : 'none';
+    });
+}
+
+// Scroll spy for era slider
+(function() {
+    var eraSections = document.querySelectorAll('.tl-era');
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.id;
+                document.querySelectorAll('.tl-era-btn').forEach(function(b) { b.classList.remove('active'); });
+                var activeBtn = document.querySelector('.tl-era-btn[data-era="' + id + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+            }
+        });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+    eraSections.forEach(function(s) { observer.observe(s); });
+})();
+
+// Fade-in observer
+var fadeObs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.tl-event').forEach(function(el) { fadeObs.observe(el); });
+
+// Anchor scroll
+(function() { if (location.hash) { var el = document.querySelector(location.hash); if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 500); } })();
+
+// Update total count
+(function() { var total = document.querySelectorAll('.tl-event').length; document.getElementById('tlCounter').innerHTML = 'מציג <strong>' + total + '</strong> מתוך <strong>' + total + '</strong> אירועים'; })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
+<script src="supabase-config.js"></script>
+<script>trackPageView('timeline');</script>
+
+<nav class="mobile-nav" aria-label="ניווט מובייל">
+    <a href="index.html"><span class="mn-icon">&#127968;</span>ראשי</a>
+    <a href="lies.html"><span class="mn-icon">&#10060;</span>שקרים</a>
+    <a href="antisemitism.html"><span class="mn-icon">&#128737;</span>אנטישמיות</a>
+    <a href="october7.html"><span class="mn-icon">&#128293;</span>7.10</a>
+    <a href="facts.html"><span class="mn-icon">&#128269;</span>עובדות</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+</body>
+</html>
