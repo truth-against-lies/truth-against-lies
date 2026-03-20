@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v66';
+var CACHE_NAME = 'tal-v67';
 var ASSETS = [
     './',
     'index.html',
@@ -81,7 +81,9 @@ var ASSETS = [
     'streams.html',
     'streams-en.html',
     'timeline.html',
-    'timeline-en.html'
+    'timeline-en.html',
+    'revolving-door.html',
+    'revolving-door-en.html'
 ];
 
 // Install: cache all assets

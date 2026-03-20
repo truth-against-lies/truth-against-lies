@@ -1435,5 +1435,20 @@ var SEARCH_INDEX = [
     { title: "Independence and Statehood", url: "timeline-en.html#era-independence", text: "Declaration of Independence Ben-Gurion 1948 War of Independence Law of Return Operation Magic Carpet Yemenite Jews Exodus.", page: "Timeline (EN)" },
     { title: "Six-Day War and Yom Kippur War", url: "timeline-en.html#era-wars", text: "Six Day War 1967 reunification Jerusalem Western Wall Yom Kippur War 1973 Munich Massacre Entebbe Camp David.", page: "Timeline (EN)" },
     { title: "Peace Agreements — Oslo and Abraham Accords", url: "timeline-en.html#era-peace", text: "Oslo Accords 1993 Rabin Arafat Jordan peace Abraham Accords 2020 UAE Bahrain Morocco.", page: "Timeline (EN)" },
-    { title: "October 7 and Iron Swords War", url: "timeline-en.html#era-recent", text: "October 7 massacre 2023 Hamas 1200 murdered 253 kidnapped Iron Swords War Gaza Hezbollah.", page: "Timeline (EN)" }
+    { title: "October 7 and Iron Swords War", url: "timeline-en.html#era-recent", text: "October 7 massacre 2023 Hamas 1200 murdered 253 kidnapped Iron Swords War Gaza Hezbollah.", page: "Timeline (EN)" },
+
+    // ==================== revolving-door.html ====================
+    { title: "הדלת המסתובבת — שחרור מחבלים תמורת שלום שקרי", url: "revolving-door.html", text: "שחרור מחבלים אסירים עסקאות חילופים חטופים שבויים 12900 מחבלים שוחררו 82% חזרו לטרור סינוואר שליט.", page: "הדלת המסתובבת" },
+    { title: "עסקת שליט — 1027 מחבלים תמורת חייל אחד", url: "revolving-door.html#deals", text: "גלעד שליט 1027 מחבלים יחיא סינוואר מאסר עולם 280 רוצחים 7 באוקטובר עסקת חילופים.", page: "הדלת המסתובבת" },
+    { title: "עסקת ג'יבריל — הקמת חמאס", url: "revolving-door.html#deals", text: "ג'יבריל 1985 1150 אסירים שייח אחמד יאסין חמאס אינתיפאדה ראשונה.", page: "הדלת המסתובבת" },
+    { title: "הדלת המסתובבת — מחזורים", url: "revolving-door.html#revolving", text: "סינוואר יאסין קוואסמה נג'אר אבו חמיד שוחררו חזרו לטרור רצחו שוב מחזור.", page: "הדלת המסתובבת" },
+    { title: "סמיר קונטר — רוצח הילדים", url: "revolving-door.html#kuntar", text: "סמיר קונטר נהריה משפחת הרן עינת דני יעל רוצח ילדים גיבור לאומי לבנון 2008.", page: "הדלת המסתובבת" },
+    { title: "82% חוזרים לטרור — סטטיסטיקות", url: "revolving-door.html#statistics", text: "82% רצידיביזם חזרו לטרור שב\"כ רונן בר 15% פיגועים 76 נעצרו מחדש.", page: "הדלת המסתובבת" },
+    { title: "השוואה בינלאומית — ישראל לבד", url: "revolving-door.html#comparison", text: "ארה\"ב בריטניה צרפת לא מנהלים מו\"מ עם טרוריסטים ישראל המדינה היחידה ששחררה רוצחים.", page: "הדלת המסתובבת" },
+
+    // ==================== revolving-door-en.html ====================
+    { title: "The Revolving Door — Releasing Terrorists for False Peace", url: "revolving-door-en.html", text: "Prisoner exchanges released terrorists 12900 prisoners 82% returned to terror Sinwar Shalit deal.", page: "Revolving Door (EN)" },
+    { title: "Gilad Shalit Deal — 1027 for 1", url: "revolving-door-en.html#deals", text: "Gilad Shalit 1027 terrorists Yahya Sinwar life sentences 280 murderers October 7.", page: "Revolving Door (EN)" },
+    { title: "Samir Kuntar — Child Killer Released as Hero", url: "revolving-door-en.html#kuntar", text: "Samir Kuntar Nahariya Haran family Einat Danny murdered children released hero Lebanon.", page: "Revolving Door (EN)" },
+    { title: "82% Return to Terror — Statistics", url: "revolving-door-en.html#statistics", text: "82% recidivism Shin Bet Ronen Bar 15% attacks 76 re-arrested.", page: "Revolving Door (EN)" }
 ];
