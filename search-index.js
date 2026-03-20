@@ -1450,5 +1450,21 @@ var SEARCH_INDEX = [
     { title: "The Revolving Door — Releasing Terrorists for False Peace", url: "revolving-door-en.html", text: "Prisoner exchanges released terrorists 12900 prisoners 82% returned to terror Sinwar Shalit deal.", page: "Revolving Door (EN)" },
     { title: "Gilad Shalit Deal — 1027 for 1", url: "revolving-door-en.html#deals", text: "Gilad Shalit 1027 terrorists Yahya Sinwar life sentences 280 murderers October 7.", page: "Revolving Door (EN)" },
     { title: "Samir Kuntar — Child Killer Released as Hero", url: "revolving-door-en.html#kuntar", text: "Samir Kuntar Nahariya Haran family Einat Danny murdered children released hero Lebanon.", page: "Revolving Door (EN)" },
-    { title: "82% Return to Terror — Statistics", url: "revolving-door-en.html#statistics", text: "82% recidivism Shin Bet Ronen Bar 15% attacks 76 re-arrested.", page: "Revolving Door (EN)" }
+    { title: "82% Return to Terror — Statistics", url: "revolving-door-en.html#statistics", text: "82% recidivism Shin Bet Ronen Bar 15% attacks 76 re-arrested.", page: "Revolving Door (EN)" },
+
+    // ==================== internal-schism.html ====================
+    { title: "הפילוג הפנימי — כשעם ישראל שונא את עצמו", url: "internal-schism.html", text: "פילוג פנימי שנאת חינם אשכנזים מזרחים חילונים חרדים שמאל ימין אליטה בג\"ץ מוסדות אפליה גיוס 7 קווי שבר.", page: "הפילוג הפנימי" },
+    { title: "אשכנזים מול מזרחים — אפליה שיטתית", url: "internal-schism.html#ethnic", text: "בן-גוריון מעברות DDT ילדי תימן גזזת פנתרים שחורים ואדי סאליב ש\"ס רבי עובדיה פער שכר 42% 0 ראשי ממשלה מזרחים.", page: "הפילוג הפנימי" },
+    { title: "חילונים מול חרדים — שנאה הדדית", url: "internal-schism.html#secular-haredi", text: "טפילים לפיד ליברמן פטור גיוס 66000 חרדים 1.7% גיוס 44% שנאה 89% לא יתחתנו פלג ירושלמי.", page: "הפילוג הפנימי" },
+    { title: "שמאל מול ימין — מלחמת המוסדות", url: "internal-schism.html#left-right", text: "בג\"ץ ברק מהפכה חוקתית שופטים סירוב מילואים טייסים 1100 מימון הפגנות 120 מיליון הארץ חוקי משפחה.", page: "הפילוג הפנימי" },
+    { title: "האליטה האשכנזית — שליטה מאחורי הקלעים", url: "internal-schism.html#elite", text: "מפא\"י אלטלנה סזון קסטנר לבון 7 באוקטובר חומת יריחו אכיפה כפולה מונופול כוח.", page: "הפילוג הפנימי" },
+    { title: "הריפוי — אהבת חינם", url: "internal-schism.html#healing", text: "שנאת חינם חורבן קמצא בר קמצא ואהבת לרעך כמוך כל ישראל ערבים רב קוק רבי מלובביץ\' רב סאקס 7 צעדים מעשיים.", page: "הפילוג הפנימי" },
+
+    // ==================== internal-schism-en.html ====================
+    { title: "The Internal Schism — When the Jewish People Hates Itself", url: "internal-schism-en.html", text: "Internal schism baseless hatred Ashkenazi Mizrahi secular Haredi left right elite Supreme Court institutions discrimination draft 7 fracture lines.", page: "Internal Schism (EN)" },
+    { title: "Ashkenazi vs Mizrahi — Systematic Discrimination", url: "internal-schism-en.html#ethnic", text: "Ben-Gurion ma'abarot DDT Yemenite children ringworm Black Panthers Wadi Salib Shas Rabbi Ovadia 42% wage gap 0 Mizrahi Prime Ministers.", page: "Internal Schism (EN)" },
+    { title: "Secular vs Haredi — Mutual Hatred", url: "internal-schism-en.html#secular-haredi", text: "Parasites Lapid Lieberman draft exemption 66000 Haredim 1.7% enlistment 44% hatred 89% won't marry Jerusalem Faction.", page: "Internal Schism (EN)" },
+    { title: "Left vs Right — War of the Institutions", url: "internal-schism-en.html#left-right", text: "Supreme Court Barak constitutional revolution judges reserve refusal pilots 1100 protest funding 120 million Haaretz family law.", page: "Internal Schism (EN)" },
+    { title: "The Ashkenazi Elite — Control Behind the Scenes", url: "internal-schism-en.html#elite", text: "Mapai Altalena Saison Kastner Lavon October 7 Jericho Wall double standard enforcement power monopoly.", page: "Internal Schism (EN)" },
+    { title: "The Healing — Gratuitous Love", url: "internal-schism-en.html#healing", text: "Baseless hatred destruction Kamtza Bar Kamtza love your neighbor all Israel responsible Rabbi Kook Lubavitcher Rebbe Rabbi Sacks 7 practical steps.", page: "Internal Schism (EN)" }
 ];
