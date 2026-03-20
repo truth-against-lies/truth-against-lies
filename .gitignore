@@ -1,3 +1,8 @@
 .DS_Store
 *.log
 test-results/
+.env*
+*.key
+*.pem
+secrets.*
+credentials.*

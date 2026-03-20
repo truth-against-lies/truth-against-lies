@@ -10,6 +10,7 @@
       gtag('config', 'G-Z2408LQ9YR');
     </script>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>האמת נגד השקר - מאבק באנטישמיות</title>
     <meta name="description" content="פלטפורמה מבוססת מקורות לבחינת 34 עלילות אנטישמיות לאור עובדות, מדע והיסטוריה.">
@@ -3260,7 +3261,10 @@ async function loadAndDisplayProtectedContent() {
     content.forEach(function(item) {
         var div = document.createElement('div');
         div.className = 'protected-card fade-in';
-        div.innerHTML = '<h3>' + item.title + '</h3>' + item.content_html;
+        var safeTitle = document.createElement('span');
+        safeTitle.textContent = item.title;
+        var safeHtml = (item.content_html || '').replace(/<script[\s\S]*?<\/script>/gi, '').replace(/on\w+\s*=/gi, 'data-removed=');
+        div.innerHTML = '<h3>' + safeTitle.innerHTML + '</h3>' + safeHtml;
         container.appendChild(div);
     });
 }

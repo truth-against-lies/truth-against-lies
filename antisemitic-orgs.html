@@ -10,6 +10,7 @@
       gtag('config', 'G-Z2408LQ9YR');
     </script>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ארגונים אנטישמיים וקבוצות טרור | האמת נגד השקר</title>
     <meta name="description" content="מיפוי מקיף של 136 ארגונים, תנועות וממשלות הפועלים נגד היהודים — מטרור איסלאמיסטי ועד ניאו-נאצים, ממוסדות בינלאומיים ועד תנועות אינטרנט">
@@ -2516,9 +2517,10 @@
 
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
 <script src="supabase-config.js"></script>
 <script src="common.js"></script>
-<script src="search.js"></script>
+<script>trackPageView('antisemitic-orgs');</script>
 <script>
 function toggleCat(el) { el.classList.toggle('open'); }
 function toggleOrg(el, ev) {
@@ -2630,5 +2632,24 @@ function applyEdgeFilters(visibleNodes) {
     obs.observe(sec);
 })();
 </script>
+
+<nav class="mobile-nav" aria-label="ניווט מובייל">
+    <a href="index.html"><span class="mn-icon">&#127968;</span>ראשי</a>
+    <a href="lies.html"><span class="mn-icon">&#10060;</span>שקרים</a>
+    <a href="antisemitism.html"><span class="mn-icon">&#128737;</span>אנטישמיות</a>
+    <a href="october7.html"><span class="mn-icon">&#128293;</span>7.10</a>
+    <a href="facts.html"><span class="mn-icon">&#128269;</span>עובדות</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="חפש בכל האתר..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
 </body>
 </html>

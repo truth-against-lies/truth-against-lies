@@ -2,13 +2,14 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Admin | האמת נגד השקר</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" integrity="sha384-vsrfeLOOY6KuIYKDlmVH5UiBmgIdB1oEf7p01YgWHuqmOHfZr374+odEv96n9tNC" crossorigin="anonymous"></script>
     <script src="supabase-config.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -560,6 +561,13 @@ function showDashTab(idx) {
     if (idx === 3) loadDonations();
 }
 
+// ========== SECURITY: HTML ESCAPING ==========
+function esc(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str == null ? '' : String(str)));
+    return div.innerHTML;
+}
+
 // ========== ADMIN AUTH ==========
 async function handleAdminLogin() {
     var email = document.getElementById('adminEmail').value;
@@ -704,7 +712,7 @@ async function loadOverview() {
     var topPages = Object.keys(pageCounts).sort(function(a, b) { return pageCounts[b] - pageCounts[a]; });
     var tpHtml = '';
     topPages.forEach(function(p) {
-        tpHtml += '<tr><td>' + p + '</td><td>' + pageCounts[p] + '</td><td>' + Object.keys(pageUnique[p] || {}).length + '</td></tr>';
+        tpHtml += '<tr><td>' + esc(p) + '</td><td>' + pageCounts[p] + '</td><td>' + Object.keys(pageUnique[p] || {}).length + '</td></tr>';
     });
     document.getElementById('topPagesTable').innerHTML = tpHtml || '<tr><td colspan="3" style="text-align:center;color:#888">אין נתונים עדיין</td></tr>';
 
@@ -713,7 +721,7 @@ async function loadOverview() {
     var rvHtml = '';
     recent.forEach(function(v) {
         var time = new Date(v.created_at).toLocaleString('he-IL');
-        rvHtml += '<tr><td>' + v.page + '</td><td>' + (v.language || '-') + '</td><td>' + (v.screen_width || '-') + '</td><td>' + time + '</td></tr>';
+        rvHtml += '<tr><td>' + esc(v.page) + '</td><td>' + esc(v.language || '-') + '</td><td>' + esc(v.screen_width || '-') + '</td><td>' + esc(time) + '</td></tr>';
     });
     document.getElementById('recentVisitorsTable').innerHTML = rvHtml || '<tr><td colspan="4" style="text-align:center;color:#888">אין נתונים עדיין</td></tr>';
 }
@@ -742,7 +750,7 @@ async function loadUsers() {
                 : '<button class="btn-danger" onclick="toggleBlock(\'' + u.id + '\', true)">חסום</button>')
             : '';
         var date = new Date(u.created_at).toLocaleDateString('he-IL');
-        html += '<tr><td>' + (u.email || '-') + '</td><td>' + (u.display_name || '-') + '</td><td>' + roleBadge + '</td><td>' + statusBadge + '</td><td>' + date + '</td><td>' + actionBtn + '</td></tr>';
+        html += '<tr><td>' + esc(u.email || '-') + '</td><td>' + esc(u.display_name || '-') + '</td><td>' + roleBadge + '</td><td>' + statusBadge + '</td><td>' + esc(date) + '</td><td>' + actionBtn + '</td></tr>';
     });
     document.getElementById('usersTable').innerHTML = html || '<tr><td colspan="6" style="text-align:center;color:#888">אין משתמשים רשומים</td></tr>';
 }
@@ -769,8 +777,8 @@ async function loadContent() {
             : '<span class="badge-blocked">מושבת</span>';
         var date = new Date(item.created_at).toLocaleDateString('he-IL');
         html += '<tr>';
-        html += '<td>' + item.title + '</td>';
-        html += '<td>' + (item.section || '-') + '</td>';
+        html += '<td>' + esc(item.title) + '</td>';
+        html += '<td>' + esc(item.section || '-') + '</td>';
         html += '<td>' + item.display_order + '</td>';
         html += '<td>' + activeBadge + '</td>';
         html += '<td>' + date + '</td>';
@@ -887,9 +895,9 @@ async function loadDonations() {
         html += '<td>' + date + '</td>';
         html += '<td>' + Number(d.amount).toFixed(2) + '</td>';
         html += '<td>' + (d.currency || 'USD') + '</td>';
-        html += '<td>' + (d.donor_name || 'אנונימי') + '</td>';
-        html += '<td>' + (d.note || '-') + '</td>';
-        html += '<td>' + (d.source || '-') + '</td>';
+        html += '<td>' + esc(d.donor_name || 'אנונימי') + '</td>';
+        html += '<td>' + esc(d.note || '-') + '</td>';
+        html += '<td>' + esc(d.source || '-') + '</td>';
         html += '<td><button class="btn-danger" onclick="deleteDonation(\'' + d.id + '\')">מחק</button></td>';
         html += '</tr>';
     });

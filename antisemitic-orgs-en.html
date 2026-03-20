@@ -10,6 +10,7 @@
       gtag('config', 'G-Z2408LQ9YR');
     </script>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co www.google-analytics.com; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antisemitic Organizations &amp; Terror Groups | Truth Against Lies</title>
     <meta name="description" content="Comprehensive mapping of 136 organizations, movements and governments acting against Jews — from Islamist terror to neo-Nazis, from international institutions to internet movements">
@@ -197,7 +198,7 @@
                     <a href="antisemitism-en.html">Antisemitism</a>
                     <ul class="submenu">
                         <li><a href="antisemitism-en.html">&#128270; What is Antisemitism?</a></li>
-                        <li><a href="antisemitism.html#claims">&#128203; Claims &amp; Refutations</a></li>
+                        <li><a href="antisemitism-en.html#claims">&#128203; Claims &amp; Refutations</a></li>
                         <li><a href="holocaust-denial-en.html">&#128367; Holocaust Denial</a></li>
                         <li><a href="statistics-en.html">&#128202; Antisemitism Statistics</a></li>
                         <li><a href="antisemitic-orgs-en.html">&#9760; Antisemitic Organizations</a></li>
@@ -2522,9 +2523,10 @@
 
 </main>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
 <script src="supabase-config.js"></script>
 <script src="common.js"></script>
-<script src="search.js"></script>
+<script>trackPageView('antisemitic-orgs-en');</script>
 <script>
 function toggleCat(el) { el.classList.toggle('open'); }
 function toggleOrg(el, ev) {
@@ -2631,5 +2633,24 @@ function applyEdgeFilters(visibleNodes) {
     obs.observe(sec);
 })();
 </script>
+
+<nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index-en.html"><span class="mn-icon">&#127968;</span>Home</a>
+    <a href="lies-en.html"><span class="mn-icon">&#10060;</span>Lies</a>
+    <a href="antisemitism-en.html"><span class="mn-icon">&#128737;</span>Antisemitism</a>
+    <a href="october7-en.html"><span class="mn-icon">&#128293;</span>Oct 7</a>
+    <a href="facts-en.html"><span class="mn-icon">&#128269;</span>Facts</a>
+</nav>
+<div class="search-overlay" id="searchOverlay">
+    <button class="search-close" onclick="closeSearchOverlay()">&times;</button>
+    <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the entire site..." autocomplete="off">
+        <div class="search-count" id="searchCount"></div>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+</div>
+<script src="search-index.js"></script>
+<script src="search.js"></script>
+
 </body>
 </html>
