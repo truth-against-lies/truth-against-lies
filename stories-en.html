@@ -16,7 +16,7 @@
 
     <title>Personal Stories | Truth Against Lies</title>
     <meta name="description" content="24 personal stories of survivors, soldiers, immigrants and families — real testimonies from October 7, the Holocaust, immigration to Israel, antisemitism and more.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#eef4fc">
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -41,27 +41,30 @@
     <link rel="stylesheet" href="shared-en.css">
 
     <style>
+        /* === SKY BLUE PAGE OVERRIDE === */
+        body { background: #eef4fc !important; }
+
         /* === HERO === */
-        .st-hero { text-align: center; padding: 100px 20px 30px; }
-        .st-hero h1 { color: #D97706; font-size: 2.4em; margin-bottom: 10px; }
-        .st-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 650px; margin: 0 auto 10px; line-height: 1.7; }
-        .st-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
+        .st-hero { text-align: center; padding: 100px 20px 30px; background: linear-gradient(180deg, #d0e2f7 0%, #eef4fc 100%); }
+        .st-hero h1 { color: #1e40af; font-size: 2.4em; margin-bottom: 10px; }
+        .st-hero .subtitle { color: #4a6078; font-size: 1.05em; max-width: 650px; margin: 0 auto 10px; line-height: 1.7; }
+        .st-hero .hero-meta { color: #7a94ab; font-size: 0.85em; margin-top: 15px; }
 
         /* === TL;DR BOX === */
-        .st-tldr { max-width: 700px; margin: 0 auto 30px; padding: 20px 24px; background: rgba(217,119,6,0.08); border: 1px solid rgba(217,119,6,0.25); border-radius: 6px; color: #c0c0c0; font-size: 0.92em; line-height: 1.7; }
-        .st-tldr strong { color: #D97706; }
+        .st-tldr { max-width: 700px; margin: 0 auto 30px; padding: 20px 24px; background: rgba(37,99,235,0.06); border: 1px solid rgba(37,99,235,0.15); border-radius: 6px; color: #4a6078; font-size: 0.92em; line-height: 1.7; }
+        .st-tldr strong { color: #1e40af; }
 
         /* === FILTER BUTTONS === */
         .st-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; padding: 0 20px; }
-        .st-filter-btn { padding: 7px 16px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
-        .st-filter-btn.active { background: rgba(217,119,6,0.18); border-color: #D97706; color: #D97706; }
+        .st-filter-btn { padding: 7px 16px; background: #fff; border: 1px solid rgba(37,99,235,0.18); color: #7a94ab; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .st-filter-btn.active { background: rgba(37,99,235,0.1); border-color: #2563eb; color: #2563eb; }
 
         /* === CARDS GRID === */
         .st-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
 
         /* === INDIVIDUAL CARD === */
-        .st-card { background: #12172b; border-radius: 3px; padding: 24px 22px 16px; position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-        .st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .st-card { background: #fff; border-radius: 8px; padding: 24px 22px 16px; position: relative; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 2px 10px rgba(37,99,235,0.08); }
+        .st-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,99,235,0.15); }
         .st-card[data-cat="oct7"] { border-top: 4px solid #e74c3c; }
         .st-card[data-cat="holocaust"] { border-top: 4px solid #888; }
         .st-card[data-cat="aliyah"] { border-top: 4px solid #3498db; }
@@ -69,62 +72,70 @@
         .st-card[data-cat="idf"] { border-top: 4px solid #2ecc71; }
         .st-card[data-cat="hostages"] { border-top: 4px solid #f39c12; }
 
-        .st-cat-label { font-size: 0.7em; letter-spacing: 1px; margin-bottom: 8px; opacity: 0.7; }
-        .st-card[data-cat="oct7"] .st-cat-label { color: #e74c3c; }
-        .st-card[data-cat="holocaust"] .st-cat-label { color: #888; }
-        .st-card[data-cat="aliyah"] .st-cat-label { color: #3498db; }
-        .st-card[data-cat="antisem"] .st-cat-label { color: #9b59b6; }
-        .st-card[data-cat="idf"] .st-cat-label { color: #2ecc71; }
-        .st-card[data-cat="hostages"] .st-cat-label { color: #f39c12; }
+        /* Card header */
+        .st-cat-label { font-size: 0.7em; letter-spacing: 1px; margin-bottom: 8px; opacity: 0.8; }
+        .st-card[data-cat="oct7"] .st-cat-label { color: #dc2626; }
+        .st-card[data-cat="holocaust"] .st-cat-label { color: #6b7280; }
+        .st-card[data-cat="aliyah"] .st-cat-label { color: #2563eb; }
+        .st-card[data-cat="antisem"] .st-cat-label { color: #7c3aed; }
+        .st-card[data-cat="idf"] .st-cat-label { color: #059669; }
+        .st-card[data-cat="hostages"] .st-cat-label { color: #d97706; }
 
-        .st-name { color: #e2b714; font-size: 1.15em; font-weight: bold; margin-bottom: 6px; }
-        .st-summary { color: #c0c0c0; font-size: 0.9em; line-height: 1.6; margin-bottom: 0; }
+        .st-name { color: #1e3a5f; font-size: 1.15em; font-weight: bold; margin-bottom: 6px; }
+        .st-summary { color: #4a6078; font-size: 0.9em; line-height: 1.6; margin-bottom: 0; }
 
-        .st-full { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); }
+        /* Expanded content (hidden by default) */
+        .st-full { display: none; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(37,99,235,0.1); }
         .st-card.open .st-full { display: block; }
-        .st-full-text { color: #b0b0b0; font-size: 0.88em; line-height: 1.7; margin-bottom: 12px; }
-        .st-source { font-size: 0.75em; color: #777; font-style: italic; }
+        .st-full-text { color: #3a5a7a; font-size: 0.88em; line-height: 1.7; margin-bottom: 12px; }
+        .st-source { font-size: 0.75em; color: #7a94ab; font-style: italic; }
 
-        .st-expand { text-align: center; color: #555; font-size: 0.75em; margin-top: 10px; transition: color 0.2s; }
+        /* Expand indicator */
+        .st-expand { text-align: center; color: #7a94ab; font-size: 0.75em; margin-top: 10px; transition: color 0.2s; }
         .st-card.open .st-expand { display: none; }
 
-        .st-actions { display: none; gap: 6px; align-items: center; justify-content: center; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; margin-top: 10px; }
+        /* Actions row */
+        .st-actions { display: none; gap: 6px; align-items: center; justify-content: center; padding-top: 10px; border-top: 1px solid rgba(37,99,235,0.08); flex-wrap: wrap; margin-top: 10px; }
         .st-card.open .st-actions { display: flex; }
-        .st-actions a, .st-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
-        .st-actions a:hover, .st-actions button:hover { border-color: #D97706; color: #D97706; }
+        .st-actions a, .st-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(37,99,235,0.15); background: transparent; color: #7a94ab; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
+        .st-actions a:hover, .st-actions button:hover { border-color: #2563eb; color: #2563eb; }
         .st-actions .wa:hover { border-color: #25D366; color: #25D366; }
         .st-actions .tw:hover { border-color: #1DA1F2; color: #1DA1F2; }
         .st-actions .tg:hover { border-color: #0088cc; color: #0088cc; }
 
-        .st-card::after { content: 'truth-against-lies.github.io'; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 0.6em; color: rgba(217,119,6,0.2); letter-spacing: 1px; pointer-events: none; }
+        /* URL watermark */
+        .st-card::after { content: 'truth-against-lies.github.io'; position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); font-size: 0.6em; color: rgba(37,99,235,0.12); letter-spacing: 1px; pointer-events: none; }
 
         /* === SUBMIT SECTION === */
-        .st-submit { max-width: 700px; margin: 40px auto; padding: 30px 24px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 6px; }
-        .st-submit h2 { color: #D97706; font-size: 1.3em; margin-bottom: 8px; }
-        .st-submit p { color: #999; font-size: 0.9em; margin-bottom: 18px; }
-        .st-submit label { display: block; color: #c0c0c0; font-size: 0.85em; margin-bottom: 4px; margin-top: 14px; }
-        .st-submit input, .st-submit textarea, .st-submit select { width: 100%; padding: 10px 14px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.2); border-radius: 3px; color: #e0e0e0; font-size: 0.9em; font-family: inherit; }
-        .st-submit input:focus, .st-submit textarea:focus, .st-submit select:focus { outline: none; border-color: #D97706; }
+        .st-submit { max-width: 700px; margin: 40px auto; padding: 30px 24px; background: #fff; border: 1px solid rgba(37,99,235,0.15); border-radius: 6px; box-shadow: 0 2px 10px rgba(37,99,235,0.06); }
+        .st-submit h2 { color: #1e40af; font-size: 1.3em; margin-bottom: 8px; }
+        .st-submit p { color: #7a94ab; font-size: 0.9em; margin-bottom: 18px; }
+        .st-submit label { display: block; color: #4a6078; font-size: 0.85em; margin-bottom: 4px; margin-top: 14px; }
+        .st-submit input, .st-submit textarea, .st-submit select { width: 100%; padding: 10px 14px; background: #f8fafd; border: 1px solid rgba(37,99,235,0.2); border-radius: 3px; color: #1e3a5f; font-size: 0.9em; font-family: inherit; }
+        .st-submit input:focus, .st-submit textarea:focus, .st-submit select:focus { outline: none; border-color: #2563eb; }
         .st-submit textarea { min-height: 120px; resize: vertical; }
-        .st-submit .st-char-count { text-align: right; font-size: 0.75em; color: #666; margin-top: 4px; }
+        .st-submit .st-char-count { text-align: right; font-size: 0.75em; color: #7a94ab; margin-top: 4px; }
         .st-submit .st-anon-row { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
         .st-submit .st-anon-row input { width: auto; }
-        .st-submit .st-submit-btn { margin-top: 20px; padding: 12px 30px; background: #D97706; color: #0a0a1a; border: none; border-radius: 3px; font-size: 1em; font-weight: bold; cursor: pointer; font-family: inherit; }
-        .st-submit .st-submit-btn:hover { background: #e88a15; }
+        .st-submit .st-submit-btn { margin-top: 20px; padding: 12px 30px; background: #2563eb; color: #fff; border: none; border-radius: 3px; font-size: 1em; font-weight: bold; cursor: pointer; font-family: inherit; }
+        .st-submit .st-submit-btn:hover { background: #1d4ed8; }
         .st-submit .st-submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
         .st-msg { margin-top: 12px; font-size: 0.9em; min-height: 1.2em; }
         .st-login-gate { text-align: center; padding: 20px 0; }
-        .st-login-gate p { color: #888; margin-bottom: 12px; }
-        .st-login-gate a { color: #D97706; text-decoration: underline; }
+        .st-login-gate p { color: #7a94ab; margin-bottom: 12px; }
+        .st-login-gate a { color: #2563eb; text-decoration: underline; }
 
+        /* === USER STORIES SECTION === */
         .st-user-section { max-width: 1100px; margin: 20px auto 40px; padding: 0 20px; }
-        .st-user-section h2 { color: #D97706; font-size: 1.3em; margin-bottom: 20px; text-align: center; }
+        .st-user-section h2 { color: #1e40af; font-size: 1.3em; margin-bottom: 20px; text-align: center; }
 
+        /* === BOTTOM LINKS === */
         .st-links { max-width: 700px; margin: 0 auto; padding: 20px 20px 40px; }
-        .st-link-box { display: block; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #D97706; text-decoration: none; font-weight: bold; transition: background 0.2s; }
-        .st-link-box:hover { background: rgba(217,119,6,0.12); }
-        .st-link-box .link-desc { color: #999; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
+        .st-link-box { display: block; background: #fff; border: 1px solid rgba(37,99,235,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #2563eb; text-decoration: none; font-weight: bold; transition: background 0.2s; box-shadow: 0 1px 4px rgba(37,99,235,0.06); }
+        .st-link-box:hover { background: rgba(37,99,235,0.04); }
+        .st-link-box .link-desc { color: #7a94ab; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
 
+        /* === RESPONSIVE === */
         @media (max-width: 768px) {
             .st-hero h1 { font-size: 1.7em; }
             .st-grid { grid-template-columns: 1fr; padding: 0 12px 30px; }
@@ -133,17 +144,17 @@
             .st-filter-btn { font-size: 0.8em; padding: 6px 12px; }
         }
 
-        body.light-mode .st-card { background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-        body.light-mode .st-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-        body.light-mode .st-name { color: #b48c0a; }
-        body.light-mode .st-summary { color: #444; }
-        body.light-mode .st-full-text { color: #333; }
-        body.light-mode .st-hero h1 { color: #b45f06; }
-        body.light-mode .st-filter-btn.active { background: rgba(180,95,6,0.12); border-color: #b45f06; color: #b45f06; }
-        body.light-mode .st-card::after { color: rgba(180,95,6,0.15); }
-        body.light-mode .st-tldr { background: rgba(180,95,6,0.05); border-color: #ddd; }
-        body.light-mode .st-submit { background: rgba(180,95,6,0.04); border-color: #ddd; }
-        body.light-mode .st-link-box { background: rgba(180,95,6,0.04); border-color: #ddd; color: #b45f06; }
+        /* === LIGHT MODE (already light, just ensure consistency) === */
+        body.light-mode .st-card { background: #fff; }
+        body.light-mode .st-name { color: #1e3a5f; }
+        body.light-mode .st-summary { color: #4a6078; }
+        body.light-mode .st-full-text { color: #3a5a7a; }
+        body.light-mode .st-hero h1 { color: #1e40af; }
+        body.light-mode .st-filter-btn.active { background: rgba(37,99,235,0.1); border-color: #2563eb; color: #2563eb; }
+        body.light-mode .st-card::after { color: rgba(37,99,235,0.12); }
+        body.light-mode .st-tldr { background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.15); }
+        body.light-mode .st-submit { background: #fff; border-color: rgba(37,99,235,0.15); }
+        body.light-mode .st-link-box { background: #fff; border-color: rgba(37,99,235,0.15); color: #2563eb; }
     </style>
 
     <script type="application/ld+json">
@@ -886,7 +897,7 @@ async function stSubmit(e) {
     var msg = document.getElementById('stMsg');
     btn.disabled = true;
     msg.textContent = 'Submitting...';
-    msg.style.color = '#D97706';
+    msg.style.color = '#2563eb';
 
     var user = await getCurrentUser();
     if (!user) {
