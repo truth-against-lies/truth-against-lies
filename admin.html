@@ -489,7 +489,7 @@
     <div id="dashPanel4" class="dash-panel">
         <div class="stat-cards" id="storiesSummary"></div>
         <div class="admin-table-wrap">
-            <h3>&#128220; סיפורים שנשלחו</h3>
+            <h3>&#128220; סיפורים שנשלחו <span id="storiesRefreshTime" style="font-size:0.65em;color:#888;font-weight:normal;margin-right:10px"></span></h3>
             <table class="admin-table">
                 <thead><tr><th>מחבר</th><th>כותרת</th><th>קטגוריה</th><th>תאריך</th><th>סטטוס</th><th>פעולות</th></tr></thead>
                 <tbody id="storiesTable"></tbody>
@@ -986,6 +986,8 @@ async function loadStories() {
         .order('created_at', { ascending: false });
     var stories = result.data || [];
     document.getElementById('storiesLoading').style.display = 'none';
+    var timeEl = document.getElementById('storiesRefreshTime');
+    if (timeEl) timeEl.textContent = '(עדכון: ' + new Date().toLocaleTimeString('he-IL') + ')';
 
     // Summary stats
     var pending = 0, approved = 0, rejected = 0;
