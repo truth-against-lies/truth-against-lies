@@ -1043,6 +1043,17 @@ async function previewStory(id) {
     alert('כותרת: ' + s.title_he + '\n\nקטגוריה: ' + (storyCatLabels[s.category] || s.category) + '\n\nמחבר: ' + (s.is_anonymous ? 'אנונימי' : s.author_name) + '\n\n' + s.content_he + (s.source_citation ? '\n\nמקור: ' + s.source_citation : ''));
 }
 
+// ========== REALTIME: Auto-refresh stories ==========
+_supabase
+    .channel('admin-stories')
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'stories' }, function() {
+        var panel = document.getElementById('dashPanel4');
+        if (panel && panel.classList.contains('active')) {
+            loadStories();
+        }
+    })
+    .subscribe();
+
 // ========== KEYBOARD: Enter to login ==========
 document.getElementById('adminPassword').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') handleAdminLogin();
