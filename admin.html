@@ -618,16 +618,13 @@ function showDashboard(profile) {
     document.getElementById('dashboard').style.display = 'block';
     document.getElementById('adminName').textContent = profile.display_name || profile.email;
     loadOverview();
-    // Subscribe to realtime stories updates after auth
-    _supabase
-        .channel('admin-stories')
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'stories' }, function() {
-            var panel = document.getElementById('dashPanel4');
-            if (panel && panel.classList.contains('active')) {
-                loadStories();
-            }
-        })
-        .subscribe();
+    // Auto-refresh stories tab every 10 seconds
+    setInterval(function() {
+        var panel = document.getElementById('dashPanel4');
+        if (panel && panel.classList.contains('active')) {
+            loadStories();
+        }
+    }, 10000);
 }
 
 // Check if already logged in
