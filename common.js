@@ -24,17 +24,11 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ========== SUBMENU: CLICK ACCORDION (ALL SIZES) + HOVER FLYOUT (DESKTOP) ==========
+// ========== SUBMENU: CLICK ACCORDION (hamburger is always used) ==========
 (function() {
     var parents = document.querySelectorAll('.has-submenu');
     if (!parents.length) return;
-    var flyouts = [];
 
-    function hideAll() {
-        flyouts.forEach(function(f) { f.el.classList.remove('visible'); });
-    }
-
-    // Close all open submenus
     function closeAllSubmenus() {
         parents.forEach(function(p) { p.classList.remove('open'); });
     }
@@ -43,41 +37,8 @@ document.addEventListener('click', function(e) {
         var submenu = parent.querySelector('.submenu');
         if (!submenu) return;
         var link = parent.querySelector('a');
-        var hideTimer = null;
 
-        // Clone submenu to body for desktop hover flyout
-        var flyout = submenu.cloneNode(true);
-        flyout.classList.add('submenu-flyout');
-        document.body.appendChild(flyout);
-        flyouts.push({ el: flyout, parent: parent });
-
-        function showFlyout() {
-            if (window.innerWidth <= 768) return;
-            clearTimeout(hideTimer);
-            hideAll();
-            var navLinks = document.querySelector('.nav-links');
-            var navRect = navLinks.getBoundingClientRect();
-            var itemRect = parent.getBoundingClientRect();
-            flyout.style.top = itemRect.top + 'px';
-            flyout.style.right = (window.innerWidth - navRect.left) + 'px';
-            flyout.classList.add('visible');
-            var fRect = flyout.getBoundingClientRect();
-            if (fRect.bottom > window.innerHeight) {
-                flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
-            }
-        }
-        function startHide() {
-            if (window.innerWidth <= 768) return;
-            hideTimer = setTimeout(function() { flyout.classList.remove('visible'); }, 200);
-        }
-        function cancelHide() { clearTimeout(hideTimer); }
-
-        parent.addEventListener('mouseenter', showFlyout);
-        parent.addEventListener('mouseleave', startHide);
-        flyout.addEventListener('mouseenter', cancelHide);
-        flyout.addEventListener('mouseleave', startHide);
-
-        // Click toggles accordion at ALL viewport sizes (hamburger is always used)
+        // Click toggles accordion — first click opens submenu, second navigates
         link.addEventListener('click', function(e) {
             if (!parent.classList.contains('open')) {
                 e.preventDefault();

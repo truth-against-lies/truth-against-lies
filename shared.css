@@ -92,23 +92,9 @@ nav {
 /* Submenu hidden by default, shown via accordion click */
 .submenu { display: none; list-style: none; background: rgba(226, 183, 20, 0.05); border-right: 2px solid rgba(226, 183, 20, 0.3); margin-right: 10px; }
 .has-submenu.open > .submenu { display: block; }
-/* Flyout clone appended to body — escapes backdrop-filter stacking context */
-.submenu-flyout {
-    display: none;
-    position: fixed;
-    list-style: none;
-    background: rgba(10, 10, 26, 0.98);
-    border: 1px solid rgba(226, 183, 20, 0.2);
-    border-radius: 3px;
-    min-width: 220px;
-    padding: 6px 0;
-    z-index: 9999;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    max-height: 80vh;
-    overflow-y: auto;
-}
-.submenu-flyout.visible { display: block; }
-.submenu-flyout li a, .submenu li a {
+/* Flyout (legacy, hidden) */
+.submenu-flyout { display: none !important; }
+.submenu li a {
     display: block;
     padding: 9px 20px;
     color: #ccc;
@@ -118,8 +104,8 @@ nav {
     border-bottom: 1px solid rgba(226, 183, 20, 0.06);
     transition: color 0.2s, background 0.2s;
 }
-.submenu-flyout li:last-child a, .submenu li:last-child a { border-bottom: none; }
-.submenu-flyout li a:hover, .submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
+.submenu li:last-child a { border-bottom: none; }
+.submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
 
 .nav-donate {
     padding: 6px 14px;
