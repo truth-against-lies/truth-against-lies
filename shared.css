@@ -88,9 +88,10 @@ nav {
 .nav-links li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
 
 /* === SUBMENU === */
-.has-submenu > a::after { content: ' ◂'; font-size: 0.7em; opacity: 0.5; }
-/* Original submenu inside nav — hidden on desktop, used as accordion on mobile */
-.submenu { display: none; list-style: none; }
+.has-submenu > a::after { content: ' ▾'; font-size: 0.7em; opacity: 0.5; }
+/* Submenu hidden by default, shown via accordion click */
+.submenu { display: none; list-style: none; background: rgba(226, 183, 20, 0.05); border-right: 2px solid rgba(226, 183, 20, 0.3); margin-right: 10px; }
+.has-submenu.open > .submenu { display: block; }
 /* Flyout clone appended to body — escapes backdrop-filter stacking context */
 .submenu-flyout {
     display: none;
@@ -119,17 +120,6 @@ nav {
 }
 .submenu-flyout li:last-child a, .submenu li:last-child a { border-bottom: none; }
 .submenu-flyout li a:hover, .submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
-/* Mobile: accordion inside nav, flyout hidden */
-@media (max-width: 768px) {
-    .has-submenu > a::after { content: ' ▾'; }
-    .submenu-flyout { display: none !important; }
-    .submenu {
-        background: rgba(226, 183, 20, 0.05);
-        border-right: 2px solid rgba(226, 183, 20, 0.3);
-        margin-right: 10px;
-    }
-    .has-submenu.open > .submenu { display: block; }
-}
 
 .nav-donate {
     padding: 6px 14px;

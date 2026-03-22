@@ -24,7 +24,7 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ========== SUBMENU: FLYOUT (DESKTOP) + ACCORDION (MOBILE) ==========
+// ========== SUBMENU: CLICK ACCORDION (ALL SIZES) + HOVER FLYOUT (DESKTOP) ==========
 (function() {
     var parents = document.querySelectorAll('.has-submenu');
     if (!parents.length) return;
@@ -34,13 +34,18 @@ document.addEventListener('click', function(e) {
         flyouts.forEach(function(f) { f.el.classList.remove('visible'); });
     }
 
+    // Close all open submenus
+    function closeAllSubmenus() {
+        parents.forEach(function(p) { p.classList.remove('open'); });
+    }
+
     parents.forEach(function(parent) {
         var submenu = parent.querySelector('.submenu');
         if (!submenu) return;
         var link = parent.querySelector('a');
         var hideTimer = null;
 
-        // Clone submenu to body to escape backdrop-filter stacking context
+        // Clone submenu to body for desktop hover flyout
         var flyout = submenu.cloneNode(true);
         flyout.classList.add('submenu-flyout');
         document.body.appendChild(flyout);
@@ -72,13 +77,12 @@ document.addEventListener('click', function(e) {
         flyout.addEventListener('mouseenter', cancelHide);
         flyout.addEventListener('mouseleave', startHide);
 
-        // Mobile: click toggles accordion
+        // Click toggles accordion at ALL viewport sizes (hamburger is always used)
         link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                if (!parent.classList.contains('open')) {
-                    e.preventDefault();
-                    parent.classList.toggle('open');
-                }
+            if (!parent.classList.contains('open')) {
+                e.preventDefault();
+                closeAllSubmenus();
+                parent.classList.add('open');
             }
         });
     });

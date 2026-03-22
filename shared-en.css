@@ -21,20 +21,15 @@ body {
     left: 0;
 }
 
-/* === SUBMENU ARROW === */
+/* === SUBMENU ARROW + LTR BORDER === */
 .has-submenu > a::after {
-    content: ' \25B8' !important; /* ▸ right-pointing arrow for LTR */
+    content: ' \25BE' !important; /* ▾ down arrow (hamburger always used) */
 }
-@media (max-width: 768px) {
-    .has-submenu > a::after {
-        content: ' \25BE' !important; /* ▾ down arrow on mobile */
-    }
-    .submenu {
-        border-right: none;
-        border-left: 2px solid rgba(226, 183, 20, 0.3);
-        margin-right: 0;
-        margin-left: 10px;
-    }
+.submenu {
+    border-right: none;
+    border-left: 2px solid rgba(226, 183, 20, 0.3);
+    margin-right: 0;
+    margin-left: 10px;
 }
 
 /* === SETTINGS MENU === */
