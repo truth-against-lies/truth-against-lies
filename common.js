@@ -69,14 +69,36 @@ document.addEventListener('click', function(e) {
             }
         }
 
-        // Click opens flyout to the side
+        var hideTimer = null;
+
+        function showFlyout() {
+            clearTimeout(hideTimer);
+            hideAll();
+            parent.classList.add('open');
+            flyout.classList.add('visible');
+            positionFlyout();
+        }
+
+        function startHide() {
+            hideTimer = setTimeout(function() {
+                flyout.classList.remove('visible');
+                parent.classList.remove('open');
+            }, 200);
+        }
+
+        function cancelHide() { clearTimeout(hideTimer); }
+
+        // Hover opens flyout
+        parent.addEventListener('mouseenter', showFlyout);
+        parent.addEventListener('mouseleave', startHide);
+        flyout.addEventListener('mouseenter', cancelHide);
+        flyout.addEventListener('mouseleave', startHide);
+
+        // Click also opens flyout (for touch devices)
         link.addEventListener('click', function(e) {
             if (!parent.classList.contains('open')) {
                 e.preventDefault();
-                hideAll();
-                parent.classList.add('open');
-                flyout.classList.add('visible');
-                positionFlyout();
+                showFlyout();
             }
         });
     });
