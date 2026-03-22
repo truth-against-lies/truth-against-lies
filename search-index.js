@@ -1511,5 +1511,29 @@ var SEARCH_INDEX = [
     { title: "Elie Wiesel — Holocaust Survivor", url: "stories-en.html#st-elie-wiesel-en", text: "Nobel Peace Prize Auschwitz Buchenwald Night dedicated life testimony memory.", page: "Personal Stories (EN)" },
     { title: "Operation Solomon — Ethiopian Aliyah", url: "stories-en.html#st-operation-solomon-en", text: "14325 Ethiopian Jews airlifted 36 hours Boeing 747 1122 passengers world record.", page: "Personal Stories (EN)" },
     { title: "Tree of Life Massacre Pittsburgh", url: "stories-en.html#st-tree-of-life-en", text: "11 worshippers murdered 2018 deadliest antisemitic attack US history.", page: "Personal Stories (EN)" },
-    { title: "Noa Argamani — Hostage Rescued", url: "stories-en.html#st-noa-argamani-en", text: "Rescued June 2024 Operation Arnon iconic kidnapping motorcycle image.", page: "Personal Stories (EN)" }
+    { title: "Noa Argamani — Hostage Rescued", url: "stories-en.html#st-noa-argamani-en", text: "Rescued June 2024 Operation Arnon iconic kidnapping motorcycle image.", page: "Personal Stories (EN)" },
+
+    // ==================== mishpacha.html ====================
+    { title: "המשפחה — הבסיס של הכל", url: "mishpacha.html", text: "משפחה תורה מדע פסיכולוגיה נישואים ילדים מזונות גירושים בית משפט למשפחה ניכור הורי שלום בית חינוך ילדים.", page: "המשפחה" },
+    { title: "פרו ורבו — המצווה הראשונה", url: "mishpacha.html#mp-pru-urvu", text: "פרו ורבו מצווה ראשונה בתורה בראשית בית שמאי בית הלל רמב״ם הלכות אישות.", page: "המשפחה" },
+    { title: "הנישואים בהלכה", url: "mishpacha.html#mp-marriage-halacha", text: "חובת נישואים קידושין מי שאין לו אשה שרוי בלא שמחה בלא ברכה בלא טובה יבמות.", page: "המשפחה" },
+    { title: "השכינה בין בעל לאשה", url: "mishpacha.html#mp-shechina", text: "איש ואשה שכינה ביניהם סוטה זוהר חצי גוף שותפות רוחנית.", page: "המשפחה" },
+    { title: "נישואים ואריכות ימים", url: "mishpacha.html#mp-longevity", text: "נישואים מאריכים חיים 50% מטא-אנליזה 148 מחקרים 308000 אנשים הולט-לונסטד.", page: "המשפחה" },
+    { title: "מה קורה לילדים בלי אבא", url: "mishpacha.html#mp-fatherless", text: "ילדים ללא אב עוני התנהגות התאבדות נוער כליאה NFI אב חסר.", page: "המשפחה" },
+    { title: "חזקת הגיל הרך", url: "mishpacha.html#mp-tender-years", text: "חזקת גיל רך ילדים מתחת ל-6 אוטומטית לאם ועדת שניט 2011 לא בוטל.", page: "המשפחה" },
+    { title: "מזונות ילדים — חוק מפלה", url: "mishpacha.html#mp-mezonot-law", text: "מזונות ילדים חוק הלכתי אב משלם 100% גיל 0-6 ללא קשר להכנסת האם.", page: "המשפחה" },
+    { title: "ניכור הורי — 2000% עלייה", url: "mishpacha.html#mp-alienation", text: "ניכור הורי 30000 ילדים ללא קשר עם הורה 2000 אחוז עלייה כנסת.", page: "המשפחה" },
+    { title: "התאבדויות — הנתון שמסתירים", url: "mishpacha.html#mp-suicide", text: "גברים גרושים 8 פי שיעור התאבדות שליש אבות לילדים מתחת 18.", page: "המשפחה" },
+    { title: "תעשיית הגירושים", url: "mishpacha.html#mp-lawyers", text: "עורכי דין גירושים ליטיגציה 15000 עד 100000 שקל עלות הסבל.", page: "המשפחה" },
+
+    // ==================== mishpacha-en.html ====================
+    { title: "Family — The Foundation of Everything", url: "mishpacha-en.html", text: "Family Torah science psychology marriage children child support divorce family court parental alienation shalom bayit.", page: "Family (EN)" },
+    { title: "Be Fruitful and Multiply — The First Commandment", url: "mishpacha-en.html#mp-pru-urvu", text: "Be fruitful multiply first commandment Torah Genesis Beit Shammai Beit Hillel Rambam.", page: "Family (EN)" },
+    { title: "Marriage and Longevity", url: "mishpacha-en.html#mp-longevity", text: "Marriage increases survival 50% meta-analysis 148 studies 308000 people Holt-Lunstad.", page: "Family (EN)" },
+    { title: "What Happens to Children Without a Father", url: "mishpacha-en.html#mp-fatherless", text: "Fatherless children poverty behavior suicide juvenile detention NFI father absence.", page: "Family (EN)" },
+    { title: "Tender Years Doctrine — Still Law", url: "mishpacha-en.html#mp-tender-years", text: "Tender years doctrine children under 6 automatically mother Schnitt Committee 2011 never abolished.", page: "Family (EN)" },
+    { title: "Child Support — Discriminatory Law", url: "mishpacha-en.html#mp-mezonot-law", text: "Child support mezonot father pays 100% ages 0-6 regardless mother income halakhic law.", page: "Family (EN)" },
+    { title: "Parental Alienation — 2000% Increase", url: "mishpacha-en.html#mp-alienation", text: "Parental alienation 30000 children no contact parent 2000 percent increase Knesset.", page: "Family (EN)" },
+    { title: "Suicide — The Hidden Statistic", url: "mishpacha-en.html#mp-suicide", text: "Divorced men 8x higher suicide rate one-third fathers children under 18.", page: "Family (EN)" },
+    { title: "The Divorce Industry", url: "mishpacha-en.html#mp-lawyers", text: "Divorce lawyers litigation NIS 15000 to 100000 cost of suffering adversarial system.", page: "Family (EN)" }
 ];
