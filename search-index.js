@@ -1535,5 +1535,31 @@ var SEARCH_INDEX = [
     { title: "Child Support — Discriminatory Law", url: "mishpacha-en.html#mp-mezonot-law", text: "Child support mezonot father pays 100% ages 0-6 regardless mother income halakhic law.", page: "Family (EN)" },
     { title: "Parental Alienation — 2000% Increase", url: "mishpacha-en.html#mp-alienation", text: "Parental alienation 30000 children no contact parent 2000 percent increase Knesset.", page: "Family (EN)" },
     { title: "Suicide — The Hidden Statistic", url: "mishpacha-en.html#mp-suicide", text: "Divorced men 8x higher suicide rate one-third fathers children under 18.", page: "Family (EN)" },
-    { title: "The Divorce Industry", url: "mishpacha-en.html#mp-lawyers", text: "Divorce lawyers litigation NIS 15000 to 100000 cost of suffering adversarial system.", page: "Family (EN)" }
+    { title: "The Divorce Industry", url: "mishpacha-en.html#mp-lawyers", text: "Divorce lawyers litigation NIS 15000 to 100000 cost of suffering adversarial system.", page: "Family (EN)" },
+
+    // ==================== zivug.html ====================
+    { title: "הזיווג — כשהפילוג הורס את המשפחה", url: "zivug.html", text: "זיווג פילוג נישואים שידוכים אפליה עדתית אשכנזי מזרחי חרדי חילוני גיור רבנות נישואים אזרחיים.", page: "הזיווג" },
+    { title: "אחדות עם ישראל", url: "zivug.html#zv-unity", text: "כל ישראל ערבים זה בזה שבועות אחדות תורה אחת לכולם.", page: "הזיווג" },
+    { title: "נישואים בין שבטים — מותר ומבורך", url: "zivug.html#zv-intermarriage-torah", text: "אין איסור נישואים בין שבטים יהודים אתניים רות המואביה בועז דוד המלך.", page: "הזיווג" },
+    { title: "ואהבתם את הגר — 36 פעמים", url: "zivug.html#zv-ger", text: "אהבת הגר 36 פעמים בתורה תורה אחת לאזרח ולגר גיור רמב״ם.", page: "הזיווג" },
+    { title: "שנאת חינם — הסיבה לחורבן", url: "zivug.html#zv-sinat-chinam", text: "שנאת חינם חורבן בית שני יומא שקולה כנגד שלוש עבירות נצי״ב.", page: "הזיווג" },
+    { title: "הפער האשכנזי-מזרחי", url: "zivug.html#zv-ashkenazi-sephardi", text: "אפליה עדתית אשכנזי מזרחי ספרדי סנוביזם לא הלכה גזענות שידוכים.", page: "הזיווג" },
+    { title: "פרשת עמנואל", url: "zivug.html#zv-emmanuel", text: "עמנואל סלונים חסידים כלא הפרדה ספרדיות בג״ץ 100000 הפגנה.", page: "הזיווג" },
+    { title: "משבר השידוכים — פער הגילאים", url: "zivug.html#zv-age-gap", text: "שידוכים משבר פער גילאים בנות בנים עודף מתמטי חרדי.", page: "הזיווג" },
+    { title: "אין נישואים אזרחיים בישראל", url: "zivug.html#zv-no-civil", text: "נישואים אזרחיים ישראל רבנות 450000 לא יכולים להתחתן קפריסין.", page: "הזיווג" },
+    { title: "מיהו יהודי — הפצע הפתוח", url: "zivug.html#zv-who-is-jew", text: "מיהו יהודי חוק השבות רבנות 400000 רוסים צבא גיור.", page: "הזיווג" },
+    { title: "72% התבוללות", url: "zivug.html#zv-intermarriage", text: "התבוללות 72% יהודים לא אורתודוקסים ארה״ב נישואים מעורבים Pew.", page: "הזיווג" },
+
+    // ==================== zivug-en.html ====================
+    { title: "Finding Your Match — When Division Destroys", url: "zivug-en.html", text: "Zivug match division marriage shidduch ethnic discrimination Ashkenazi Mizrahi Haredi secular conversion Rabbinate civil marriage.", page: "Finding a Match (EN)" },
+    { title: "Unity of the Jewish People", url: "zivug-en.html#zv-unity", text: "All Israel responsible one another Shevuot unity one law for all.", page: "Finding a Match (EN)" },
+    { title: "Marriage Between Tribes — Permitted and Blessed", url: "zivug-en.html#zv-intermarriage-torah", text: "No prohibition marriage between Jewish tribes ethnic groups Ruth Moabite Boaz King David.", page: "Finding a Match (EN)" },
+    { title: "Love the Convert — 36 Times", url: "zivug-en.html#zv-ger", text: "Love convert 36 times Torah one law citizen stranger conversion Maimonides.", page: "Finding a Match (EN)" },
+    { title: "Baseless Hatred — Reason for Destruction", url: "zivug-en.html#zv-sinat-chinam", text: "Baseless hatred Second Temple destruction Yoma equivalent three sins Netziv.", page: "Finding a Match (EN)" },
+    { title: "The Ashkenazi-Mizrahi Gap", url: "zivug-en.html#zv-ashkenazi-sephardi", text: "Ethnic discrimination Ashkenazi Mizrahi Sephardi snobbery not halacha racism matchmaking.", page: "Finding a Match (EN)" },
+    { title: "The Emmanuel Affair", url: "zivug-en.html#zv-emmanuel", text: "Emmanuel Slonim Hassidic prison segregation Sephardi girls Supreme Court 100000 rally.", page: "Finding a Match (EN)" },
+    { title: "The Shidduch Crisis — Age Gap", url: "zivug-en.html#zv-age-gap", text: "Shidduch crisis age gap boys girls mathematical surplus Haredi.", page: "Finding a Match (EN)" },
+    { title: "No Civil Marriage in Israel", url: "zivug-en.html#zv-no-civil", text: "Civil marriage Israel Rabbinate 450000 cannot marry Cyprus.", page: "Finding a Match (EN)" },
+    { title: "Who Is a Jew — The Open Wound", url: "zivug-en.html#zv-who-is-jew", text: "Who is Jew Law Return Rabbinate 400000 Russians army conversion.", page: "Finding a Match (EN)" },
+    { title: "72% Intermarriage", url: "zivug-en.html#zv-intermarriage", text: "Intermarriage 72% non-Orthodox American Jews mixed marriage Pew.", page: "Finding a Match (EN)" }
 ];
