@@ -79,6 +79,7 @@
 .toc-link{display:block;color:#888;font-size:0.75em;padding:5px 8px;text-decoration:none;border-radius:3px;margin-bottom:2px;transition:all 0.2s;line-height:1.4}
 .toc-link:hover,.toc-link.active{color:#e2b714;background:rgba(226,183,20,0.06)}
 @media(max-width:1200px){.toc-panel{display:none}}
+.toc-panel.open{display:block;left:0}
 .toc-fab{display:none;position:fixed;bottom:70px;right:15px;z-index:50;background:#12172b;border:1px solid rgba(226,183,20,0.2);border-radius:50%;width:44px;height:44px;cursor:pointer;font-size:1.2em;color:#e2b714;transition:all 0.3s;box-shadow:0 2px 10px rgba(0,0,0,0.3)}
 @media(max-width:1200px){.toc-fab{display:flex;align-items:center;justify-content:center}}
 @media(max-width:768px){.rd-hero h1{font-size:1.7em}.rd-stats{gap:10px}.rd-stat-box{min-width:80px;padding:10px 14px}.rd-stat-num{font-size:1.4em}.deal-header{flex-direction:column}.deal-ratio{font-size:1.3em}}
@@ -201,7 +202,7 @@ body.light-mode .rd-hero h1{color:#c0392b}body.light-mode .deal-card{background:
 <a href="#shamgar" class="toc-link">ועדת שמגר</a>
 <a href="#summary" class="toc-link">המחיר האמיתי</a>
 </div>
-<button class="toc-fab" id="tocFab" onclick="document.getElementById('tocPanel').classList.toggle('show')">&#9776;</button>
+<button class="toc-fab" id="tocFab" onclick="document.getElementById('tocPanel').classList.toggle('open')">&#9776;</button>
 
 <div class="rd-container">
 <!-- SECTION 1: THE MAJOR DEALS -->
