@@ -25,11 +25,8 @@ body {
 .has-submenu > a::after {
     content: ' \25BE' !important; /* ▾ down arrow (hamburger always used) */
 }
-.submenu {
-    border-right: none;
-    border-left: 2px solid rgba(226, 183, 20, 0.3);
-    margin-right: 0;
-    margin-left: 10px;
+.submenu li a {
+    padding: 9px 20px 9px 40px;
 }
 
 /* === SETTINGS MENU === */

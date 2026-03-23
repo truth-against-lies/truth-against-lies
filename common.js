@@ -24,89 +24,41 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ========== SUBMENU: FLYOUT TO THE SIDE OF NAV ==========
+// ========== SUBMENU: INLINE EXPAND/COLLAPSE ==========
 (function() {
     var parents = document.querySelectorAll('.has-submenu');
     if (!parents.length) return;
-    var flyouts = [];
-    var isRTL = document.documentElement.dir === 'rtl' || getComputedStyle(document.body).direction === 'rtl';
-
-    function hideAll() {
-        flyouts.forEach(function(f) { f.el.classList.remove('visible'); });
-        parents.forEach(function(p) { p.classList.remove('open'); });
-    }
 
     parents.forEach(function(parent) {
         var submenu = parent.querySelector('.submenu');
         if (!submenu) return;
         var link = parent.querySelector('a');
 
-        // Clone submenu to body so it escapes nav stacking context
-        var flyout = submenu.cloneNode(true);
-        flyout.classList.add('submenu-flyout');
-        document.body.appendChild(flyout);
-        flyouts.push({ el: flyout, parent: parent });
-
-        function positionFlyout() {
-            var navLinks = document.querySelector('.nav-links');
-            var navRect = navLinks.getBoundingClientRect();
-            var itemRect = parent.getBoundingClientRect();
-            flyout.style.top = itemRect.top + 'px';
-            if (isRTL) {
-                // Nav is on the right → flyout goes to the left
-                flyout.style.right = '';
-                flyout.style.left = '';
-                flyout.style.right = (window.innerWidth - navRect.left) + 'px';
-            } else {
-                // Nav is on the left → flyout goes to the right
-                flyout.style.right = '';
-                flyout.style.left = navRect.right + 'px';
-            }
-            // Prevent flyout from going off-screen bottom
-            var fRect = flyout.getBoundingClientRect();
-            if (fRect.bottom > window.innerHeight) {
-                flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
-            }
-        }
-
-        var hideTimer = null;
-
-        function showFlyout() {
-            clearTimeout(hideTimer);
-            hideAll();
-            parent.classList.add('open');
-            flyout.classList.add('visible');
-            positionFlyout();
-        }
-
-        function startHide() {
-            hideTimer = setTimeout(function() {
-                flyout.classList.remove('visible');
-                parent.classList.remove('open');
-            }, 200);
-        }
-
-        function cancelHide() { clearTimeout(hideTimer); }
-
-        // Hover opens flyout
-        parent.addEventListener('mouseenter', showFlyout);
-        parent.addEventListener('mouseleave', startHide);
-        flyout.addEventListener('mouseenter', cancelHide);
-        flyout.addEventListener('mouseleave', startHide);
-
-        // Click also opens flyout (for touch devices)
         link.addEventListener('click', function(e) {
-            if (!parent.classList.contains('open')) {
-                e.preventDefault();
-                showFlyout();
+            e.preventDefault();
+            var isOpen = parent.classList.contains('open');
+            // Close all other open submenus
+            parents.forEach(function(p) {
+                p.classList.remove('open');
+                var s = p.querySelector('.submenu');
+                if (s) s.classList.remove('open');
+            });
+            // Toggle this one
+            if (!isOpen) {
+                parent.classList.add('open');
+                submenu.classList.add('open');
             }
         });
     });
 
-    // Close flyouts when clicking outside
+    // Close submenus when clicking outside nav
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.has-submenu') && !e.target.closest('.submenu-flyout')) {
-            hideAll();
+        if (!e.target.closest('.has-submenu')) {
+            parents.forEach(function(p) {
+                p.classList.remove('open');
+                var s = p.querySelector('.submenu');
+                if (s) s.classList.remove('open');
+            });
         }
     });
 })();
