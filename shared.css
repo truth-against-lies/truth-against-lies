@@ -90,25 +90,16 @@ nav {
 /* === SUBMENU === */
 .has-submenu > a::after { content: ' ▾'; font-size: 0.7em; opacity: 0.5; transition: transform 0.3s; }
 .has-submenu.open > a::after { transform: rotate(180deg); }
-/* Submenu hidden inside nav — expands inline on click */
-.submenu {
-    display: none;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* Submenu hidden by default */
+.submenu { display: none; list-style: none; padding: 0; margin: 0; }
+/* --- MOBILE: inline expand inside nav --- */
+.submenu.mobile-open {
+    display: block;
     background: rgba(0, 0, 0, 0.25);
     border-top: 1px solid rgba(226, 183, 20, 0.1);
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.35s ease;
-}
-.submenu.open {
-    display: block;
-    max-height: 800px;
 }
 .submenu li a {
     display: block;
-    padding: 9px 20px 9px 40px;
     color: #bbb;
     text-decoration: none;
     font-size: 0.85em;
@@ -120,6 +111,35 @@ nav {
 html:not([dir="rtl"]) .submenu li a { padding: 9px 20px 9px 40px; }
 .submenu li:last-child a { border-bottom: none; }
 .submenu li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
+/* --- DESKTOP: flyout to the side of nav --- */
+.submenu-flyout {
+    display: none;
+    position: fixed;
+    list-style: none;
+    background: rgba(10, 10, 26, 0.98);
+    border: 1px solid rgba(226, 183, 20, 0.2);
+    border-radius: 3px;
+    min-width: 220px;
+    padding: 6px 0;
+    z-index: 10002;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-height: 80vh;
+    overflow-y: auto;
+    backdrop-filter: blur(10px);
+}
+.submenu-flyout.visible { display: block; }
+.submenu-flyout li a {
+    display: block;
+    padding: 9px 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85em;
+    white-space: nowrap;
+    border-bottom: 1px solid rgba(226, 183, 20, 0.06);
+    transition: color 0.2s, background 0.2s;
+}
+.submenu-flyout li:last-child a { border-bottom: none; }
+.submenu-flyout li a:hover { color: #e2b714; background: rgba(226, 183, 20, 0.08); }
 
 .nav-donate {
     padding: 6px 14px;

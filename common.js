@@ -24,41 +24,103 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// ========== SUBMENU: INLINE EXPAND/COLLAPSE ==========
+// ========== SUBMENU: DESKTOP FLYOUT + MOBILE INLINE ==========
 (function() {
     var parents = document.querySelectorAll('.has-submenu');
     if (!parents.length) return;
+    var flyouts = [];
+    var isRTL = document.documentElement.dir === 'rtl' || getComputedStyle(document.body).direction === 'rtl';
+    var MOBILE_BP = 900; // breakpoint: <= this = mobile (inline), > this = desktop (flyout)
+
+    function isMobile() { return window.innerWidth <= MOBILE_BP; }
+
+    function hideAllFlyouts() {
+        flyouts.forEach(function(f) { f.el.classList.remove('visible'); });
+        parents.forEach(function(p) { p.classList.remove('open'); });
+    }
+
+    function hideAllInline() {
+        parents.forEach(function(p) {
+            p.classList.remove('open');
+            var s = p.querySelector('.submenu');
+            if (s) s.classList.remove('mobile-open');
+        });
+    }
 
     parents.forEach(function(parent) {
         var submenu = parent.querySelector('.submenu');
         if (!submenu) return;
         var link = parent.querySelector('a');
 
+        // --- Desktop: flyout cloned to body ---
+        var flyout = submenu.cloneNode(true);
+        flyout.classList.add('submenu-flyout');
+        document.body.appendChild(flyout);
+        flyouts.push({ el: flyout, parent: parent });
+
+        function positionFlyout() {
+            var navLinks = document.querySelector('.nav-links');
+            var navRect = navLinks.getBoundingClientRect();
+            var itemRect = parent.getBoundingClientRect();
+            flyout.style.top = itemRect.top + 'px';
+            if (isRTL) {
+                flyout.style.right = ''; flyout.style.left = '';
+                flyout.style.right = (window.innerWidth - navRect.left) + 'px';
+            } else {
+                flyout.style.right = ''; flyout.style.left = navRect.right + 'px';
+            }
+            var fRect = flyout.getBoundingClientRect();
+            if (fRect.bottom > window.innerHeight) {
+                flyout.style.top = Math.max(0, window.innerHeight - fRect.height) + 'px';
+            }
+        }
+
+        var hideTimer = null;
+        function showFlyout() {
+            clearTimeout(hideTimer);
+            hideAllFlyouts();
+            parent.classList.add('open');
+            flyout.classList.add('visible');
+            positionFlyout();
+        }
+        function startHide() {
+            hideTimer = setTimeout(function() {
+                flyout.classList.remove('visible');
+                parent.classList.remove('open');
+            }, 200);
+        }
+        function cancelHide() { clearTimeout(hideTimer); }
+
+        // Desktop hover
+        parent.addEventListener('mouseenter', function() { if (!isMobile()) showFlyout(); });
+        parent.addEventListener('mouseleave', function() { if (!isMobile()) startHide(); });
+        flyout.addEventListener('mouseenter', function() { if (!isMobile()) cancelHide(); });
+        flyout.addEventListener('mouseleave', function() { if (!isMobile()) startHide(); });
+
+        // Click handler — mobile: inline toggle, desktop: first click opens flyout
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var isOpen = parent.classList.contains('open');
-            // Close all other open submenus
-            parents.forEach(function(p) {
-                p.classList.remove('open');
-                var s = p.querySelector('.submenu');
-                if (s) s.classList.remove('open');
-            });
-            // Toggle this one
-            if (!isOpen) {
-                parent.classList.add('open');
-                submenu.classList.add('open');
+            if (isMobile()) {
+                e.preventDefault();
+                var isOpen = parent.classList.contains('open');
+                hideAllInline();
+                if (!isOpen) {
+                    parent.classList.add('open');
+                    submenu.classList.add('mobile-open');
+                }
+            } else {
+                if (!parent.classList.contains('open')) {
+                    e.preventDefault();
+                    showFlyout();
+                }
             }
         });
     });
 
-    // Close submenus when clicking outside nav
+    // Close all when clicking outside
     document.addEventListener('click', function(e) {
-        if (!e.target.closest('.has-submenu')) {
-            parents.forEach(function(p) {
-                p.classList.remove('open');
-                var s = p.querySelector('.submenu');
-                if (s) s.classList.remove('open');
-            });
+        if (!e.target.closest('.has-submenu') && !e.target.closest('.submenu-flyout')) {
+            hideAllFlyouts();
+            hideAllInline();
         }
     });
 })();
