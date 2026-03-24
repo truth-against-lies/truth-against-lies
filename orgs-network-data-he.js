@@ -151,8 +151,25 @@ var ORG_NODES = [
   {id:"org-china",label:"סין",group:"govts",lat:39.90,lng:116.40,founded:1949,title:"סין, 1949"},
 
   // ═══════════════════════════════════════════════════════════════
-  // Category 6: Historical (30 nodes)
+  // Category 6: Historical (47 nodes)
   // ═══════════════════════════════════════════════════════════════
+  {id:"org-haman-persia",label:"גזירת המן (פרס)",group:"historical",lat:32.19,lng:48.26,founded:-473,title:"גזירת המן — פרס, ~473 לפנה\"ס"},
+  {id:"org-elephantine",label:"חורבן מקדש אלפנטינה",group:"historical",lat:24.09,lng:32.89,founded:-410,title:"חורבן המקדש היהודי באלפנטינה — מצרים, 410 לפנה\"ס"},
+  {id:"org-antiochus",label:"אנטיוכוס אפיפנס",group:"historical",lat:31.78,lng:35.24,founded:-167,title:"גזירות אנטיוכוס — חילול בית המקדש, 167 לפנה\"ס"},
+  {id:"org-alexandria-pogrom",label:"הפוגרום באלכסנדריה",group:"historical",lat:31.21,lng:29.92,founded:38,title:"הפוגרום הראשון בהיסטוריה — אלכסנדריה, 38 לספירה"},
+  {id:"org-temple-destruction",label:"חורבן בית שני",group:"historical",lat:31.78,lng:35.24,founded:70,title:"חורבן בית המקדש השני — ירושלים, 70 לספירה"},
+  {id:"org-hadrian",label:"אדריאנוס / בר כוכבא",group:"historical",lat:31.77,lng:35.23,founded:135,title:"גזירות אדריאנוס — גירוש מירושלים, שינוי השם לפלסטינה, 135"},
+  {id:"org-chrysostom",label:"דרשות כריסוסטומוס",group:"historical",lat:36.21,lng:36.16,founded:386,title:"\"נגד היהודים\" — אנטיוכיה, 386-387"},
+  {id:"org-codex-theodosianus",label:"הקודקס התאודוסיאני",group:"historical",lat:41.01,lng:28.98,founded:438,title:"חוקים אנטי-יהודיים ברומא — 438"},
+  {id:"org-justinian",label:"הנובלה 146 של יוסטיניאנוס",group:"historical",lat:41.01,lng:28.98,founded:553,title:"איסור לימוד המשנה — קונסטנטינופול, 553"},
+  {id:"org-clermont",label:"המרה בכפייה בקלרמון",group:"historical",lat:45.78,lng:3.09,founded:576,title:"המרת דת בכפייה — קלרמון-פראן, 576"},
+  {id:"org-visigoth-toledo",label:"הסינוד של טולדו",group:"historical",lat:39.86,lng:-4.02,founded:589,title:"גזירות נגד יהודים — ספרד הוויזיגותית, 589"},
+  {id:"org-sisebut",label:"גזירת המלך סיסבוט",group:"historical",lat:39.86,lng:-4.02,founded:613,title:"כפיית המרת דת ראשונה באירופה — ~90,000 יהודים, 613"},
+  {id:"org-banu-qurayza",label:"טבח בני קורייזה",group:"historical",lat:24.47,lng:39.61,founded:627,title:"הוצאה להורג המונית של שבט יהודי — מדינה, 627"},
+  {id:"org-heraclius",label:"גזירת הרקליוס",group:"historical",lat:41.01,lng:28.98,founded:632,title:"טבילה בכפייה בכל האימפריה הביזנטית — 632"},
+  {id:"org-granada-massacre",label:"טבח גרנדה",group:"historical",lat:37.19,lng:-3.61,founded:1066,title:"הפוגרום הראשון באירופה — ~4,000 נרצחים, 1066"},
+  {id:"org-blood-libel-norwich",label:"עלילת דם נוריץ'",group:"historical",lat:52.63,lng:1.30,founded:1144,title:"עלילת הדם הראשונה בהיסטוריה — נוריץ', אנגליה, 1144"},
+  {id:"org-france-expulsion",label:"גירוש יהודי צרפת",group:"historical",lat:48.86,lng:2.35,founded:1182,title:"פיליפ השני מגרש יהודים מצרפת — 1182"},
   {id:"org-nazi-germany",label:"גרמניה הנאצית",group:"historical",lat:52.52,lng:13.41,founded:1933,title:"גרמניה הנאצית — 1933-1945"},
   {id:"org-soviet-union",label:"ברית המועצות",group:"historical",lat:55.76,lng:37.62,founded:1917,title:"ברית המועצות — 1917-1991"},
   {id:"org-russian-empire",label:"האימפריה הרוסית",group:"historical",lat:59.93,lng:30.32,founded:1721,title:"האימפריה הרוסית — ~1791-1917"},

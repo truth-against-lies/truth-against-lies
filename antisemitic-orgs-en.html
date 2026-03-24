@@ -3932,7 +3932,7 @@
     <div class="section-header">
         <h2>World Map — Global Antisemitism Network</h2>
         <div class="section-divider"></div>
-        <p>Interactive world map showing <span id="map-stats" style="color:#e2b714;font-weight:bold;">245</span> antisemitic organizations at their real geographic locations. Click a marker to scroll to its card.</p>
+        <p>Interactive world map showing <span id="map-stats" style="color:#e2b714;font-weight:bold;">262</span> antisemitic organizations at their real geographic locations. Click a marker to scroll to its card.</p>
     </div>
     <!-- Search -->
     <div style="margin-bottom: 12px; text-align: center;">
@@ -3973,8 +3973,8 @@
     <div style="margin-bottom: 16px; text-align: center;">
         <label style="font-size:0.82em;color:#888;">Timeline: <span id="timeline-year" style="color:#e2b714;font-weight:bold;">2025</span></label>
         <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:4px;">
-            <span style="font-size:0.75em;color:#666;">600</span>
-            <input type="range" id="timeline-slider" min="600" max="2025" value="2025" style="width:50%;max-width:350px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
+            <span style="font-size:0.75em;color:#666;">473 BCE</span>
+            <input type="range" id="timeline-slider" min="-473" max="2025" value="2025" style="width:50%;max-width:350px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
             <span style="font-size:0.75em;color:#666;">2025</span>
             <button id="play-btn" onclick="togglePlay()" style="background:transparent;border:1px solid #e2b714;color:#e2b714;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:0.9em;display:flex;align-items:center;justify-content:center;" title="Play animation">&#9654;</button>
         </div>
@@ -3983,6 +3983,10 @@
     <div id="network-map" style="width:100%;height:600px;background:#0a1628;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
         <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;z-index:500;">Loading world map...</div>
         <button onclick="toggleFullscreen()" style="position:absolute;top:10px;left:50px;z-index:500;background:#1a1a2e;border:1px solid #333;color:#e0e0e0;border-radius:4px;width:30px;height:30px;cursor:pointer;font-size:1em;" title="Fullscreen">&#x26F6;</button>
+    </div>
+    <!-- Ticker -->
+    <div id="map-ticker" style="height:28px;overflow:hidden;background:rgba(10,10,26,0.8);border:1px solid #333;border-radius:3px;margin-top:4px;display:none;">
+        <div id="map-ticker-content" style="white-space:nowrap;color:#e2b714;font-size:0.78em;line-height:28px;padding:0 12px;animation:ticker-scroll 20s linear infinite;"></div>
     </div>
     <!-- Legend -->
     <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 0.75em; color: #888;">
@@ -4025,6 +4029,7 @@
 #map-search-results { max-height: 200px; overflow-y: auto; }
 #map-search-results .sr-item { background: #1a1a2e; border: 1px solid #333; padding: 6px 12px; cursor: pointer; font-size: 0.8em; color: #e0e0e0; margin-top: -1px; }
 #map-search-results .sr-item:hover { background: #2a2a3e; color: #e2b714; }
+@keyframes ticker-scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 #network-map:fullscreen, #network-map:-webkit-full-screen { height: 100vh !important; width: 100vw !important; }
 @media (max-width: 768px) { #network-map { height: 400px !important; } }
 </style>
@@ -4220,9 +4225,10 @@ function toggleEdgeType(type, show) {
     applyAllFilters();
 }
 
+function formatYear(y) { return y < 0 ? Math.abs(y) + ' BCE' : y + ''; }
 function filterTimeline(val) {
     timelineMax = parseInt(val);
-    document.getElementById('timeline-year').textContent = val;
+    document.getElementById('timeline-year').textContent = formatYear(timelineMax);
     applyAllFilters();
 }
 
@@ -4304,17 +4310,34 @@ function flyToOrg(orgId) {
 }
 
 // Play animation
+var tickerItems = [];
 function togglePlay() {
     var btn = document.getElementById('play-btn');
     var slider = document.getElementById('timeline-slider');
-    if (playInterval) { clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; return; }
+    var ticker = document.getElementById('map-ticker');
+    var tickerContent = document.getElementById('map-ticker-content');
+    if (playInterval) { clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; ticker.style.display = 'none'; return; }
     btn.innerHTML = '&#9646;&#9646;';
-    slider.value = 600; filterTimeline(600);
+    ticker.style.display = 'block';
+    tickerItems = [];
+    tickerContent.textContent = '';
+    slider.value = -473; filterTimeline(-473);
+    var prevVisible = {};
     playInterval = setInterval(function() {
-        var v = parseInt(slider.value) + 10;
+        var v = parseInt(slider.value) + 8;
         if (v > 2025) { v = 2025; clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; }
         slider.value = v; filterTimeline(v);
-    }, 80);
+        allMarkers.forEach(function(m) {
+            var id = m.options._orgId;
+            if (m.options._orgFounded <= v && (activeGroup === 'all' || m.options._orgGroup === activeGroup) && !prevVisible[id]) {
+                prevVisible[id] = true;
+                var yr = m.options._orgFounded;
+                var label = m._orgData ? m._orgData.label : id;
+                tickerItems.push(formatYear(yr) + ': ' + label);
+                tickerContent.textContent = tickerItems.slice(-30).join('  ●  ');
+            }
+        });
+    }, 60);
 }
 
 // Fullscreen

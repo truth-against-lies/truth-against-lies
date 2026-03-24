@@ -1,5 +1,5 @@
 /* Network map data for antisemitic organizations — English */
-/* 245 org nodes, 13 categories, ~150 edges */
+/* 262 org nodes, 13 categories, ~160 edges */
 var ORG_NODES = [
   // ═══════════════════════════════════════════════════════════════
   // Category 1: Islamist Terror (43 nodes)
@@ -151,8 +151,27 @@ var ORG_NODES = [
   {id:"org-china",label:"China",group:"govts",lat:39.90,lng:116.40,founded:1949,title:"China — Beijing"},
 
   // ═══════════════════════════════════════════════════════════════
-  // Category 6: Historical (30 nodes)
+  // Category 6: Historical (47 nodes)
   // ═══════════════════════════════════════════════════════════════
+  // Ancient & Early Medieval
+  {id:"org-haman-persia",label:"Haman's Plot (Persia)",group:"historical",lat:32.19,lng:48.26,founded:-473,title:"Haman's Genocidal Plot — Persia, ~473 BCE"},
+  {id:"org-elephantine",label:"Elephantine Temple Destruction",group:"historical",lat:24.09,lng:32.89,founded:-410,title:"Destruction of Jewish Temple at Elephantine — Egypt, 410 BCE"},
+  {id:"org-antiochus",label:"Antiochus IV Epiphanes",group:"historical",lat:31.78,lng:35.24,founded:-167,title:"Seleucid Persecution — Temple Desecration, 167 BCE"},
+  {id:"org-alexandria-pogrom",label:"Alexandrian Pogrom",group:"historical",lat:31.21,lng:29.92,founded:38,title:"First Pogrom in History — Alexandria, 38 CE"},
+  {id:"org-temple-destruction",label:"Destruction of Second Temple",group:"historical",lat:31.78,lng:35.24,founded:70,title:"Roman Destruction of the Second Temple — Jerusalem, 70 CE"},
+  {id:"org-hadrian",label:"Hadrian / Bar Kokhba",group:"historical",lat:31.77,lng:35.23,founded:135,title:"Hadrian's Decrees — Expulsion from Jerusalem, Renamed to Palaestina, 135 CE"},
+  {id:"org-chrysostom",label:"John Chrysostom Sermons",group:"historical",lat:36.21,lng:36.16,founded:386,title:"Adversus Judaeos — Antioch, 386-387 CE"},
+  {id:"org-codex-theodosianus",label:"Codex Theodosianus",group:"historical",lat:41.01,lng:28.98,founded:438,title:"Codex Theodosianus — Anti-Jewish Roman Law, 438 CE"},
+  {id:"org-justinian",label:"Justinian's Novella 146",group:"historical",lat:41.01,lng:28.98,founded:553,title:"Ban on Mishnah Study — Constantinople, 553 CE"},
+  {id:"org-clermont",label:"Clermont-Ferrand Conversion",group:"historical",lat:45.78,lng:3.09,founded:576,title:"Forced Conversion — Clermont-Ferrand, 576 CE"},
+  {id:"org-visigoth-toledo",label:"Third Council of Toledo",group:"historical",lat:39.86,lng:-4.02,founded:589,title:"Anti-Jewish Decrees — Visigothic Spain, 589 CE"},
+  {id:"org-sisebut",label:"King Sisebut's Decree",group:"historical",lat:39.86,lng:-4.02,founded:613,title:"First Mass Forced Conversion in Europe — ~90,000 Jews, 613 CE"},
+  {id:"org-banu-qurayza",label:"Massacre of Banu Qurayza",group:"historical",lat:24.47,lng:39.61,founded:627,title:"Mass Execution of Jewish Tribe — Medina, 627 CE"},
+  {id:"org-heraclius",label:"Heraclius Forced Baptism",group:"historical",lat:41.01,lng:28.98,founded:632,title:"Empire-Wide Forced Baptism Decree — Byzantine Empire, 632 CE"},
+  {id:"org-granada-massacre",label:"Granada Massacre",group:"historical",lat:37.19,lng:-3.61,founded:1066,title:"First Pogrom on European Soil — ~4,000 Jews Killed, 1066 CE"},
+  {id:"org-blood-libel-norwich",label:"Blood Libel of Norwich",group:"historical",lat:52.63,lng:1.30,founded:1144,title:"First Blood Libel in History — Norwich, England, 1144 CE"},
+  {id:"org-france-expulsion",label:"Expulsion from France",group:"historical",lat:48.86,lng:2.35,founded:1182,title:"Philip II Expels Jews from France — 1182 CE"},
+  // Modern era
   {id:"org-nazi-germany",label:"Nazi Germany",group:"historical",lat:52.52,lng:13.41,founded:1933,title:"Nazi Germany (Third Reich) — 1933-1945"},
   {id:"org-soviet-union",label:"Soviet Union",group:"historical",lat:55.76,lng:37.62,founded:1917,title:"Soviet Union — 1917-1991"},
   {id:"org-russian-empire",label:"Russian Empire",group:"historical",lat:59.93,lng:30.32,founded:1721,title:"Russian Empire — ~1791-1917 (Pale of Settlement)"},
@@ -545,7 +564,15 @@ var ORG_EDGES = [
   {from:"org-nazi-germany",to:"org-buf",type:"ideology",label:"Inspired",title:"Nazi ideology influenced British Union of Fascists"},
   {from:"org-nazi-germany",to:"org-farhud",type:"ideology",label:"Incited",title:"Nazi propaganda incited Baghdad's Farhud pogrom"},
   {from:"org-soviet-union",to:"org-doctors-plot",type:"membership",label:"Campaign",title:"Stalin's Doctors' Plot was state antisemitic campaign"},
-  {from:"org-antisemiten-liga",to:"org-nazi-germany",type:"ideology",label:"Precursor",title:"Antisemiten-Liga coined 'antisemitism' — ideological precursor to Nazism"}
+  {from:"org-antisemiten-liga",to:"org-nazi-germany",type:"ideology",label:"Precursor",title:"Antisemiten-Liga coined 'antisemitism' — ideological precursor to Nazism"},
+  // Ancient connections
+  {from:"org-chrysostom",to:"org-crusaders",type:"ideology",label:"Foundation",title:"Chrysostom's sermons became theological foundation for Crusader massacres"},
+  {from:"org-codex-theodosianus",to:"org-justinian",type:"ideology",label:"Expanded",title:"Justinian expanded Theodosian anti-Jewish laws"},
+  {from:"org-visigoth-toledo",to:"org-sisebut",type:"ideology",label:"Escalated",title:"Toledo decrees escalated to full forced conversion under Sisebut"},
+  {from:"org-blood-libel-norwich",to:"org-english-expulsion",type:"ideology",label:"Led to",title:"Blood libel accusations led to eventual expulsion from England"},
+  {from:"org-chrysostom",to:"org-codex-theodosianus",type:"ideology",label:"Influenced",title:"Church Father rhetoric influenced Roman anti-Jewish legislation"},
+  {from:"org-france-expulsion",to:"org-dreyfus-affair",type:"ideology",label:"Legacy",title:"French antisemitism from medieval expulsions to Dreyfus"},
+  {from:"org-banu-qurayza",to:"org-arab-states-expulsion",type:"ideology",label:"Legacy",title:"Early Islamic violence against Jews echoed in modern Arab expulsions"}
 ];
 
 var ORG_GROUPS = {
