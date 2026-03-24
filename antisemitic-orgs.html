@@ -4274,9 +4274,10 @@ function togglePlay() {
     var slider = document.getElementById('timeline-slider');
     var ticker = document.getElementById('map-ticker');
     var tickerContent = document.getElementById('map-ticker-content');
-    if (playInterval) { clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; ticker.style.display = 'none'; return; }
+    if (playInterval) { clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; tickerContent.style.animation = 'none'; return; }
     btn.innerHTML = '&#9646;&#9646;';
     ticker.style.display = 'block';
+    tickerContent.style.animation = '';
     tickerItems = [];
     tickerContent.textContent = '';
     slider.value = -473; filterTimeline(-473);
