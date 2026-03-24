@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v101';
+var CACHE_NAME = 'tal-v102';
 var ASSETS = [
     './',
     'index.html',
@@ -93,7 +93,9 @@ var ASSETS = [
     'mishpacha.html',
     'mishpacha-en.html',
     'zivug.html',
-    'zivug-en.html'
+    'zivug-en.html',
+    'islam-judaism.html',
+    'islam-judaism-en.html'
 ];
 
 // Install: cache all assets
