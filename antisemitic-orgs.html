@@ -3934,7 +3934,12 @@
     <div class="section-header">
         <h2>מפת עולם — רשת האנטישמיות הגלובלית</h2>
         <div class="section-divider"></div>
-        <p>מפת עולם אינטראקטיבית המציגה 233 ארגונים אנטישמיים במיקומם הגיאוגרפי האמיתי. לחצו על סמן כדי לגלול לכרטיס הארגון.</p>
+        <p>מפת עולם אינטראקטיבית המציגה <span id="map-stats" style="color:#e2b714;font-weight:bold;">245</span> ארגונים אנטישמיים במיקומם הגיאוגרפי האמיתי. לחצו על סמן כדי לגלול לכרטיס הארגון.</p>
+    </div>
+    <!-- Search -->
+    <div style="margin-bottom: 12px; text-align: center;">
+        <input type="text" id="map-search" placeholder="&#128269; חפש ארגון במפה..." style="background:#1a1a2e;border:1px solid #555;color:#e0e0e0;padding:6px 14px;border-radius:50px;font-size:0.82em;width:60%;max-width:350px;outline:none;" oninput="searchMap(this.value)">
+        <div id="map-search-results" style="position:relative;z-index:600;"></div>
     </div>
     <!-- Group filters -->
     <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
@@ -3971,13 +3976,15 @@
         <label style="font-size:0.82em;color:#888;">ציר זמן: <span id="timeline-year" style="color:#e2b714;font-weight:bold;">2025</span></label>
         <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:4px;">
             <span style="font-size:0.75em;color:#666;">600</span>
-            <input type="range" id="timeline-slider" min="600" max="2025" value="2025" style="width:60%;max-width:400px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
+            <input type="range" id="timeline-slider" min="600" max="2025" value="2025" style="width:50%;max-width:350px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
             <span style="font-size:0.75em;color:#666;">2025</span>
+            <button id="play-btn" onclick="togglePlay()" style="background:transparent;border:1px solid #e2b714;color:#e2b714;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:0.9em;display:flex;align-items:center;justify-content:center;" title="הפעל אנימציה">&#9654;</button>
         </div>
     </div>
     <!-- Map container -->
-    <div id="network-map" style="width:100%;height:600px;background:#0a0a1a;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
+    <div id="network-map" style="width:100%;height:600px;background:#0a1628;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
         <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;z-index:500;">טוען מפת עולם...</div>
+        <button onclick="toggleFullscreen()" style="position:absolute;top:10px;left:50px;z-index:500;background:#1a1a2e;border:1px solid #333;color:#e0e0e0;border-radius:4px;width:30px;height:30px;cursor:pointer;font-size:1em;" title="מסך מלא">&#x26F6;</button>
     </div>
     <!-- Legend -->
     <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 0.75em; color: #888;">
@@ -4015,6 +4022,10 @@
 .leaflet-control-zoom a:hover { background: #2a2a3e; }
 .leaflet-control-attribution { background: rgba(10,10,26,0.7); color: #666; font-size: 0.65em; }
 .leaflet-control-attribution a { color: #888; }
+#map-search-results { max-height: 200px; overflow-y: auto; }
+#map-search-results .sr-item { background: #1a1a2e; border: 1px solid #333; padding: 6px 12px; cursor: pointer; font-size: 0.8em; color: #e0e0e0; margin-top: -1px; }
+#map-search-results .sr-item:hover { background: #2a2a3e; color: #e2b714; }
+#network-map:fullscreen, #network-map:-webkit-full-screen { height: 100vh !important; width: 100vw !important; }
 @media (max-width: 768px) { #network-map { height: 400px !important; } }
 </style>
 
@@ -4068,7 +4079,7 @@ document.addEventListener('click', function(e) {
 /* === WORLD MAP (lazy-loaded with Leaflet) === */
 var mapInstance = null, markerLayer = null, heatLayer = null, connectionLayer = null;
 var allMarkers = [], allConnections = [], activeGroup = 'all', hiddenEdgeTypes = {};
-var timelineMax = 2025;
+var timelineMax = 2025, playInterval = null;
 var layerState = { markers: true, heat: false, connections: true };
 
 function initMap() {
@@ -4122,11 +4133,17 @@ function initMap() {
         }
     });
 
+    // Count connections per org for variable marker size
+    var edgeCounts = {};
+    ORG_EDGES.forEach(function(e) { edgeCounts[e.from] = (edgeCounts[e.from]||0)+1; edgeCounts[e.to] = (edgeCounts[e.to]||0)+1; });
+
     ORG_NODES.forEach(function(n) {
         var g = ORG_GROUPS[n.group] || {};
         var color = g.color ? g.color.background : '#e74c3c';
+        var conns = edgeCounts[n.id] || 0;
+        var radius = Math.max(5, Math.min(14, 5 + conns * 1.2));
         var marker = L.circleMarker([n.lat, n.lng], {
-            radius: 6, fillColor: color, fillOpacity: 0.85,
+            radius: radius, fillColor: color, fillOpacity: 0.85,
             color: g.color ? g.color.border : '#c0392b', weight: 1.5,
             _orgId: n.id, _orgGroup: n.group, _orgFounded: n.founded
         });
@@ -4218,6 +4235,52 @@ function applyAllFilters() {
         var show = visibleIds[line.options._from] && visibleIds[line.options._to] && !hiddenEdgeTypes[line.options._edgeType];
         if (show) connectionLayer.addLayer(line);
     });
+    // Update stats
+    var count = Object.keys(visibleIds).length;
+    var el = document.getElementById('map-stats');
+    if (el) el.textContent = count + '/' + allMarkers.length;
+}
+
+// Search
+function searchMap(query) {
+    var box = document.getElementById('map-search-results');
+    if (!query || query.length < 2 || !allMarkers.length) { box.innerHTML = ''; return; }
+    var q = query.toLowerCase();
+    var matches = allMarkers.filter(function(m) { return m._orgData && m._orgData.label.toLowerCase().indexOf(q) !== -1; }).slice(0, 8);
+    box.innerHTML = matches.map(function(m) {
+        return '<div class="sr-item" onclick="flyToOrg(\'' + m._orgData.id + '\')">' + m._orgData.label + ' <span style="color:#666;font-size:0.85em;">(' + (GROUP_LABELS[m._orgData.group]||m._orgData.group) + ')</span></div>';
+    }).join('');
+}
+function flyToOrg(orgId) {
+    document.getElementById('map-search-results').innerHTML = '';
+    document.getElementById('map-search').value = '';
+    var m = allMarkers.find(function(mk) { return mk.options._orgId === orgId; });
+    if (m && mapInstance) {
+        mapInstance.setView(m.getLatLng(), 6, {animate: true});
+        setTimeout(function() { m.openPopup(); }, 500);
+    }
+}
+
+// Play animation
+function togglePlay() {
+    var btn = document.getElementById('play-btn');
+    var slider = document.getElementById('timeline-slider');
+    if (playInterval) { clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; return; }
+    btn.innerHTML = '&#9646;&#9646;';
+    slider.value = 600; filterTimeline(600);
+    playInterval = setInterval(function() {
+        var v = parseInt(slider.value) + 10;
+        if (v > 2025) { v = 2025; clearInterval(playInterval); playInterval = null; btn.innerHTML = '&#9654;'; }
+        slider.value = v; filterTimeline(v);
+    }, 80);
+}
+
+// Fullscreen
+function toggleFullscreen() {
+    var el = document.getElementById('network-map');
+    if (!document.fullscreenElement) { el.requestFullscreen ? el.requestFullscreen() : el.webkitRequestFullscreen && el.webkitRequestFullscreen(); }
+    else { document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen(); }
+    setTimeout(function() { if (mapInstance) mapInstance.invalidateSize(); }, 200);
 }
 
 // Lazy-load Leaflet: load EN data first (edges/groups), then HE data (labels), then Leaflet + plugins

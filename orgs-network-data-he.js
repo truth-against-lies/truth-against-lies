@@ -1,5 +1,5 @@
 /* Network map data for antisemitic organizations — Hebrew */
-/* 233 org nodes, 13 categories */
+/* 245 org nodes, 13 categories */
 var ORG_NODES = [
   // ═══════════════════════════════════════════════════════════════
   // Category 1: Islamist Terror (43 nodes)
@@ -44,7 +44,7 @@ var ORG_NODES = [
   {id:"org-fpi",label:"FPI",group:"islamist",lat:-6.21,lng:106.85,founded:1998,title:"חזית מגני האסלאם — אינדונזיה, 1998"},
   {id:"org-grey-wolves",label:"הזאבים האפורים",group:"islamist",lat:39.93,lng:32.87,founded:1968,title:"הזאבים האפורים — טורקיה, 1968"},
   {id:"org-milli-gorus",label:"מילי גורוש",group:"islamist",lat:41.01,lng:28.98,founded:1969,title:"מילי גורוש — טורקיה/אירופה, 1969"},
-  {id:"org-black-september",label:"ספטמבר השחור",group:"islamist",lat:31.95,lng:35.93,founded:1970,title:"ספטמבר השחור — אש\"ף, 1970"},
+  {id:"org-black-september",label:"ספטמבר השחור",group:"islamist",lat:31.95,lng:35.93,founded:1971,title:"ספטמבר השחור — אש\"ף, 1971"},
   {id:"org-sharia4",label:"שריעה4",group:"islamist",lat:50.85,lng:4.35,founded:2010,title:"שריעה4בלגיה/בריטניה — אירופה, ~2010"},
   {id:"org-tablighi",label:"תבליגי ג'מאעת",group:"islamist",lat:28.61,lng:77.23,founded:1926,title:"תבליגי ג'מאעת — דרום אסיה/גלובלי, 1926"},
 
@@ -116,7 +116,7 @@ var ORG_NODES = [
   {id:"org-icgjc",label:"ICGJC",group:"bhi",lat:40.71,lng:-74.01,founded:2002,title:"הכנסייה הישראלית של אלוהים — ארה\"ב, ~2002"},
   {id:"org-sspx",label:"SSPX",group:"bhi",lat:46.20,lng:6.14,founded:1970,title:"אגודת פיוס X — שווייץ/גלובלי, 1970"},
   {id:"org-sedevacantist",label:"סדוואקנטיסטים",group:"bhi",lat:41.90,lng:12.50,founded:1965,title:"תנועה סדוואקנטיסטית — מפלגי קתולים, ~1965"},
-  {id:"org-rad-trad",label:"רדיקלים קתולים",group:"bhi",lat:38.91,lng:-77.04,founded:2000,title:"קתולים רדיקלים מסורתיים — ארה\"ב/אינטרנט, ~2000"},
+  {id:"org-rad-trad",label:"רדיקלים קתולים",group:"bhi",lat:38.91,lng:-77.04,founded:1965,title:"קתולים רדיקלים מסורתיים — ארה\"ב/אינטרנט, ~1965"},
 
   // ═══════════════════════════════════════════════════════════════
   // Category 4: Anti-Zionist / BDS (12 nodes)
@@ -151,7 +151,7 @@ var ORG_NODES = [
   {id:"org-china",label:"סין",group:"govts",lat:39.90,lng:116.40,founded:1949,title:"סין, 1949"},
 
   // ═══════════════════════════════════════════════════════════════
-  // Category 6: Historical (18 nodes)
+  // Category 6: Historical (30 nodes)
   // ═══════════════════════════════════════════════════════════════
   {id:"org-nazi-germany",label:"גרמניה הנאצית",group:"historical",lat:52.52,lng:13.41,founded:1933,title:"גרמניה הנאצית — 1933-1945"},
   {id:"org-soviet-union",label:"ברית המועצות",group:"historical",lat:55.76,lng:37.62,founded:1917,title:"ברית המועצות — 1917-1991"},
@@ -171,6 +171,18 @@ var ORG_NODES = [
   {id:"org-khmelnytsky",label:"חמלניצקי",group:"historical",lat:50.45,lng:30.52,founded:1648,title:"מרד חמלניצקי — אוקראינה, 1648-1649"},
   {id:"org-english-expulsion",label:"הגירוש מאנגליה",group:"historical",lat:51.51,lng:-0.13,founded:1290,title:"גירוש יהודי אנגליה — 1290"},
   {id:"org-romania-pogrom",label:"פרעות רומניה",group:"historical",lat:47.16,lng:27.58,founded:1941,title:"פוגרום יאשי ופרעות רומניה — 1941"},
+  {id:"org-antisemiten-liga",label:"ליגת האנטישמים",group:"historical",lat:52.52,lng:13.40,founded:1879,title:"ליגת האנטישמים — ברלין, 1879 (הארגון האנטישמי הראשון בהיסטוריה)"},
+  {id:"org-dreyfus-affair",label:"פרשת דרייפוס",group:"historical",lat:48.86,lng:2.35,founded:1894,title:"פרשת דרייפוס — צרפת, 1894-1906"},
+  {id:"org-action-francaise",label:"אקסיון פרנסז",group:"historical",lat:48.86,lng:2.35,founded:1899,title:"אקסיון פרנסז — צרפת, 1899-1944"},
+  {id:"org-kishinev-pogrom",label:"פוגרום קישינב",group:"historical",lat:47.01,lng:28.86,founded:1903,title:"פוגרום קישינב — מולדובה, 1903"},
+  {id:"org-black-hundreds",label:"המאות השחורות",group:"historical",lat:59.93,lng:30.34,founded:1905,title:"המאות השחורות — רוסיה, 1905-1917"},
+  {id:"org-buf",label:"הפשיסטים הבריטיים",group:"historical",lat:51.51,lng:-0.13,founded:1932,title:"איגוד הפשיסטים הבריטי — לונדון, 1932-1940"},
+  {id:"org-silver-shirts",label:"החולצות הכסופות",group:"historical",lat:35.60,lng:-82.55,founded:1933,title:"לגיון הכסף של אמריקה — ארה״ב, 1933-1941"},
+  {id:"org-german-american-bund",label:"הבונד הגרמני-אמריקאי",group:"historical",lat:40.71,lng:-74.01,founded:1936,title:"הבונד הגרמני-אמריקאי — ניו יורק, 1936-1941"},
+  {id:"org-einsatzgruppen",label:"אינזצגרופן",group:"historical",lat:52.52,lng:13.41,founded:1939,title:"אינזצגרופן (יחידות ההרג הנודדות של ה-SS) — 1939-1945"},
+  {id:"org-farhud",label:"פרהוד (בגדד)",group:"historical",lat:33.31,lng:44.36,founded:1941,title:"פרהוד — פוגרום בגדד, יוני 1941"},
+  {id:"org-kielce-pogrom",label:"פוגרום קילצה",group:"historical",lat:50.87,lng:20.63,founded:1946,title:"פוגרום קילצה — פולין, יולי 1946"},
+  {id:"org-doctors-plot",label:"פרשת הרופאים",group:"historical",lat:55.76,lng:37.62,founded:1953,title:"פרשת הרופאים — ברית המועצות, מסע אנטישמי של סטלין, 1953"},
 
   // ═══════════════════════════════════════════════════════════════
   // Category 7: Media & Propaganda (18 nodes)
@@ -210,7 +222,7 @@ var ORG_NODES = [
   {id:"org-afd",label:"AfD",group:"political",lat:52.52,lng:13.41,founded:2013,title:"AfD — גרמניה, 2013"},
   {id:"org-fpoe",label:"FPÖ",group:"political",lat:48.21,lng:16.37,founded:1956,title:"FPÖ — אוסטריה, 1956"},
   {id:"org-fidesz",label:"פידס",group:"political",lat:47.50,lng:19.04,founded:1988,title:"פידס — הונגריה, 1988"},
-  {id:"org-labour-uk-corbyn",label:"לייבור (קורבין)",group:"political",lat:51.51,lng:-0.13,founded:1900,title:"לייבור בריטניה — עידן קורבין 2015-2020"},
+  {id:"org-labour-uk-corbyn",label:"לייבור (קורבין)",group:"political",lat:51.51,lng:-0.13,founded:2015,title:"לייבור בריטניה — עידן קורבין, 2015-2020"},
   {id:"org-national-rally-france",label:"העצרת הלאומית",group:"political",lat:48.86,lng:2.35,founded:1972,title:"העצרת הלאומית — צרפת, 1972"},
   {id:"org-bnp-national-front",label:"BNP",group:"political",lat:51.51,lng:-0.13,founded:1982,title:"BNP / החזית הלאומית — בריטניה, 1982"},
   {id:"org-sinn-fein",label:"שין פיין",group:"political",lat:53.35,lng:-6.26,founded:1905,title:"שין פיין — אירלנד, 1905"},
@@ -229,13 +241,13 @@ var ORG_NODES = [
   // Category 10: Individuals & Internet (29 nodes)
   // ═══════════════════════════════════════════════════════════════
   {id:"org-kanye-west",label:"קניה ווסט",group:"individuals",lat:34.05,lng:-118.24,founded:2022,title:"קניה ווסט — ארה\"ב, 2022"},
-  {id:"org-david-duke",label:"דייוויד דיוק",group:"individuals",lat:30.00,lng:-90.17,founded:1970,title:"דייוויד דיוק — ארה\"ב, ראש KKK לשעבר"},
+  {id:"org-david-duke",label:"דייוויד דיוק",group:"individuals",lat:30.00,lng:-90.17,founded:1974,title:"דייוויד דיוק — ארה\"ב, ראש KKK לשעבר, 1974"},
   {id:"org-louis-farrakhan",label:"לואיס פרחאן",group:"individuals",lat:41.88,lng:-87.63,founded:1981,title:"לואיס פרחאן — ארה\"ב, מנהיג NOI"},
   {id:"org-antisemitic-shootings",label:"ירי 2018-22",group:"individuals",lat:40.44,lng:-79.99,founded:2018,title:"פיגועי ירי אנטישמיים 2018-2022"},
   {id:"org-nick-fuentes",label:"ניק פואנטס",group:"individuals",lat:41.88,lng:-87.63,founded:2017,title:"ניק פואנטס — ארה\"ב, מנהיג גרויפרס"},
   {id:"org-andrew-tate",label:"אנדרו טייט",group:"individuals",lat:44.43,lng:26.10,founded:2022,title:"אנדרו טייט — רומניה/אינטרנט, ~2022+"},
   {id:"org-incel-movement",label:"תנועת אינסל",group:"individuals",lat:40.71,lng:-74.01,founded:2014,title:"תנועת אינסל — מקוון, ~2014+"},
-  {id:"org-sovereign-citizens",label:"אזרחים ריבוניים",group:"individuals",lat:38.91,lng:-77.04,founded:1970,title:"אזרחים ריבוניים — ארה\"ב, ~1970+"},
+  {id:"org-sovereign-citizens",label:"אזרחים ריבוניים",group:"individuals",lat:38.91,lng:-77.04,founded:1971,title:"אזרחים ריבוניים — ארה\"ב, ~1971+"},
   {id:"org-david-irving",label:"דייוויד אירווינג",group:"individuals",lat:51.51,lng:-0.13,founded:1963,title:"דייוויד אירווינג — בריטניה, מכחיש שואה"},
   {id:"org-ernst-zundel",label:"ארנסט צונדל",group:"individuals",lat:43.65,lng:-79.38,founded:1976,title:"ארנסט צונדל — קנדה/גרמניה, מכחיש שואה"},
   {id:"org-faurisson",label:"רובר פוריסון",group:"individuals",lat:48.86,lng:2.35,founded:1978,title:"רובר פוריסון — צרפת, מכחיש שואה"},
@@ -251,7 +263,7 @@ var ORG_NODES = [
   {id:"org-candace-owens",label:"קנדייס אואנס",group:"individuals",lat:38.91,lng:-77.04,founded:2022,title:"קנדייס אואנס — ארה\"ב, ~2022+"},
   {id:"org-tucker-carlson",label:"טאקר קרלסון",group:"individuals",lat:38.91,lng:-77.04,founded:2023,title:"טאקר קרלסון — ארה\"ב, ~2023+"},
   {id:"org-jackson-hinkle",label:"ג'קסון הינקל",group:"individuals",lat:34.05,lng:-118.24,founded:2023,title:"ג'קסון הינקל — ארה\"ב, ~2023+"},
-  {id:"org-richard-spencer",label:"ריצ'רד ספנסר",group:"individuals",lat:38.91,lng:-77.04,founded:2010,title:"ריצ'רד ספנסר — ארה\"ב, מנהיג אלט-רייט"},
+  {id:"org-richard-spencer",label:"ריצ'רד ספנסר",group:"individuals",lat:38.91,lng:-77.04,founded:2008,title:"ריצ'רד ספנסר — ארה\"ב, מנהיג אלט-רייט, 2008"},
   {id:"org-matthew-heimbach",label:"מתיו היימבך",group:"individuals",lat:38.25,lng:-85.76,founded:2015,title:"מתיו היימבך — ארה\"ב, מייסד TWP"},
   {id:"org-tom-metzger",label:"טום מצגר",group:"individuals",lat:33.84,lng:-117.86,founded:1983,title:"טום מצגר — קליפורניה, מייסד WAR"},
   {id:"org-andrew-anglin",label:"אנדרו אנגלין",group:"individuals",lat:40.10,lng:-82.95,founded:2013,title:"אנדרו אנגלין — אוהיו, מייסד Daily Stormer"},

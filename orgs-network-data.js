@@ -1,5 +1,5 @@
 /* Network map data for antisemitic organizations — English */
-/* 233 org nodes, 13 categories, ~100 edges */
+/* 245 org nodes, 13 categories, ~150 edges */
 var ORG_NODES = [
   // ═══════════════════════════════════════════════════════════════
   // Category 1: Islamist Terror (43 nodes)
@@ -44,7 +44,7 @@ var ORG_NODES = [
   {id:"org-fpi",label:"FPI",group:"islamist",lat:-6.21,lng:106.85,founded:1998,title:"Front Pembela Islam — Indonesia, Founded 1998"},
   {id:"org-grey-wolves",label:"Grey Wolves",group:"islamist",lat:39.93,lng:32.87,founded:1968,title:"Grey Wolves — Turkey, Founded 1968"},
   {id:"org-milli-gorus",label:"Milli Görüş",group:"islamist",lat:41.01,lng:28.98,founded:1969,title:"Milli Görüş — Turkey/Europe, Founded 1969"},
-  {id:"org-black-september",label:"Black September",group:"islamist",lat:31.95,lng:35.93,founded:1970,title:"Black September — PLO, Founded 1970"},
+  {id:"org-black-september",label:"Black September",group:"islamist",lat:31.95,lng:35.93,founded:1971,title:"Black September — PLO, Founded 1971"},
   {id:"org-sharia4",label:"Sharia4",group:"islamist",lat:50.85,lng:4.35,founded:2010,title:"Sharia4Belgium/UK/etc — Europe, Founded ~2010"},
   {id:"org-tablighi",label:"Tablighi Jamaat",group:"islamist",lat:28.61,lng:77.23,founded:1926,title:"Tablighi Jamaat — South Asia/Global, Founded 1926"},
 
@@ -116,7 +116,7 @@ var ORG_NODES = [
   {id:"org-icgjc",label:"ICGJC",group:"bhi",lat:40.71,lng:-74.01,founded:2002,title:"Israelite Church of God in Jesus Christ — USA, Founded ~2002"},
   {id:"org-sspx",label:"SSPX",group:"bhi",lat:46.20,lng:6.14,founded:1970,title:"Society of St. Pius X — Switzerland/Global, Founded 1970"},
   {id:"org-sedevacantist",label:"Sedevacantists",group:"bhi",lat:41.90,lng:12.50,founded:1965,title:"Sedevacantist Movement — Catholic dissenters, Active ~1965+"},
-  {id:"org-rad-trad",label:"Radical Traditionalism",group:"bhi",lat:38.91,lng:-77.04,founded:2000,title:"Radical Traditionalist Catholics — USA/Internet, Active ~2000+"},
+  {id:"org-rad-trad",label:"Radical Traditionalism",group:"bhi",lat:38.91,lng:-77.04,founded:1965,title:"Radical Traditionalist Catholics — Post-Vatican II, ~1965"},
 
   // ═══════════════════════════════════════════════════════════════
   // Category 4: Anti-Zionist / BDS (12 nodes)
@@ -151,7 +151,7 @@ var ORG_NODES = [
   {id:"org-china",label:"China",group:"govts",lat:39.90,lng:116.40,founded:1949,title:"China — Beijing"},
 
   // ═══════════════════════════════════════════════════════════════
-  // Category 6: Historical (18 nodes)
+  // Category 6: Historical (30 nodes)
   // ═══════════════════════════════════════════════════════════════
   {id:"org-nazi-germany",label:"Nazi Germany",group:"historical",lat:52.52,lng:13.41,founded:1933,title:"Nazi Germany (Third Reich) — 1933-1945"},
   {id:"org-soviet-union",label:"Soviet Union",group:"historical",lat:55.76,lng:37.62,founded:1917,title:"Soviet Union — 1917-1991"},
@@ -171,6 +171,18 @@ var ORG_NODES = [
   {id:"org-khmelnytsky",label:"Khmelnytsky",group:"historical",lat:50.45,lng:30.52,founded:1648,title:"Khmelnytsky Uprising — Ukraine, 1648-1649"},
   {id:"org-english-expulsion",label:"English Expulsion",group:"historical",lat:51.51,lng:-0.13,founded:1290,title:"Expulsion of Jews from England — 1290"},
   {id:"org-romania-pogrom",label:"Romania Pogroms",group:"historical",lat:47.16,lng:27.58,founded:1941,title:"Iași Pogrom & Romania Pogroms — 1941"},
+  {id:"org-antisemiten-liga",label:"Antisemiten-Liga",group:"historical",lat:52.52,lng:13.40,founded:1879,title:"League of Antisemites — Berlin, 1879 (first antisemitic org in history)"},
+  {id:"org-dreyfus-affair",label:"Dreyfus Affair",group:"historical",lat:48.86,lng:2.35,founded:1894,title:"Dreyfus Affair — France, 1894-1906"},
+  {id:"org-action-francaise",label:"Action Française",group:"historical",lat:48.86,lng:2.35,founded:1899,title:"Action Française — France, 1899-1944"},
+  {id:"org-kishinev-pogrom",label:"Kishinev Pogrom",group:"historical",lat:47.01,lng:28.86,founded:1903,title:"Kishinev Pogrom — Moldova, 1903"},
+  {id:"org-black-hundreds",label:"Black Hundreds",group:"historical",lat:59.93,lng:30.34,founded:1905,title:"Black Hundreds / Union of Russian People — Russia, 1905-1917"},
+  {id:"org-buf",label:"British Fascists (BUF)",group:"historical",lat:51.51,lng:-0.13,founded:1932,title:"British Union of Fascists — London, 1932-1940"},
+  {id:"org-silver-shirts",label:"Silver Shirts",group:"historical",lat:35.60,lng:-82.55,founded:1933,title:"Silver Legion of America — USA, 1933-1941"},
+  {id:"org-german-american-bund",label:"German American Bund",group:"historical",lat:40.71,lng:-74.01,founded:1936,title:"German American Bund — New York, 1936-1941"},
+  {id:"org-einsatzgruppen",label:"Einsatzgruppen",group:"historical",lat:52.52,lng:13.41,founded:1939,title:"Einsatzgruppen (SS Mobile Killing Squads) — 1939-1945"},
+  {id:"org-farhud",label:"Farhud (Baghdad)",group:"historical",lat:33.31,lng:44.36,founded:1941,title:"Farhud — Baghdad Pogrom, June 1941"},
+  {id:"org-kielce-pogrom",label:"Kielce Pogrom",group:"historical",lat:50.87,lng:20.63,founded:1946,title:"Kielce Pogrom — Poland, July 1946"},
+  {id:"org-doctors-plot",label:"Doctors' Plot",group:"historical",lat:55.76,lng:37.62,founded:1953,title:"Doctors' Plot — USSR, Stalin's Final Antisemitic Campaign, 1953"},
 
   // ═══════════════════════════════════════════════════════════════
   // Category 7: Media & Propaganda (18 nodes)
@@ -210,7 +222,7 @@ var ORG_NODES = [
   {id:"org-afd",label:"AfD",group:"political",lat:52.52,lng:13.41,founded:2013,title:"AfD — Germany, Founded 2013"},
   {id:"org-fpoe",label:"FPÖ",group:"political",lat:48.21,lng:16.37,founded:1956,title:"FPÖ — Austria, Founded 1956"},
   {id:"org-fidesz",label:"Fidesz",group:"political",lat:47.50,lng:19.04,founded:1988,title:"Fidesz — Hungary, Founded 1988"},
-  {id:"org-labour-uk-corbyn",label:"Labour (Corbyn)",group:"political",lat:51.51,lng:-0.13,founded:1900,title:"Labour UK — Corbyn Era 2015-2020"},
+  {id:"org-labour-uk-corbyn",label:"Labour (Corbyn)",group:"political",lat:51.51,lng:-0.13,founded:2015,title:"Labour UK — Corbyn Era 2015-2020"},
   {id:"org-national-rally-france",label:"National Rally",group:"political",lat:48.86,lng:2.35,founded:1972,title:"National Rally (ex-Front National) — France, Founded 1972"},
   {id:"org-bnp-national-front",label:"BNP",group:"political",lat:51.51,lng:-0.13,founded:1982,title:"BNP / National Front — UK, Founded 1982"},
   {id:"org-sinn-fein",label:"Sinn Féin",group:"political",lat:53.35,lng:-6.26,founded:1905,title:"Sinn Féin — Ireland, Founded 1905"},
@@ -229,13 +241,13 @@ var ORG_NODES = [
   // Category 10: Individuals & Internet (24 nodes)
   // ═══════════════════════════════════════════════════════════════
   {id:"org-kanye-west",label:"Kanye West",group:"individuals",lat:34.05,lng:-118.24,founded:2022,title:"Kanye West (Ye) — Los Angeles, 2022 antisemitic statements"},
-  {id:"org-david-duke",label:"David Duke",group:"individuals",lat:30.00,lng:-90.17,founded:1970,title:"David Duke — Louisiana, Former KKK Grand Wizard"},
+  {id:"org-david-duke",label:"David Duke",group:"individuals",lat:30.00,lng:-90.17,founded:1974,title:"David Duke — Louisiana, Former KKK Grand Wizard"},
   {id:"org-louis-farrakhan",label:"Louis Farrakhan",group:"individuals",lat:41.88,lng:-87.63,founded:1981,title:"Louis Farrakhan — Chicago, NOI Leader since 1981"},
   {id:"org-antisemitic-shootings",label:"Shootings 2018-22",group:"individuals",lat:40.44,lng:-79.99,founded:2018,title:"Antisemitic Shooting Attacks 2018-2022 (Pittsburgh, Poway, etc.)"},
   {id:"org-nick-fuentes",label:"Nick Fuentes",group:"individuals",lat:41.88,lng:-87.63,founded:2017,title:"Nick Fuentes — Chicago, Groyper Leader"},
   {id:"org-andrew-tate",label:"Andrew Tate",group:"individuals",lat:44.43,lng:26.10,founded:2022,title:"Andrew Tate — Romania/Internet, Influence ~2022+"},
   {id:"org-incel-movement",label:"Incel Movement",group:"individuals",lat:40.71,lng:-74.01,founded:2014,title:"Incel Movement — Online, Radicalized ~2014+"},
-  {id:"org-sovereign-citizens",label:"Sovereign Citizens",group:"individuals",lat:38.91,lng:-77.04,founded:1970,title:"Sovereign Citizens — USA, Active ~1970s+"},
+  {id:"org-sovereign-citizens",label:"Sovereign Citizens",group:"individuals",lat:38.91,lng:-77.04,founded:1971,title:"Sovereign Citizens — USA, Founded 1971"},
   {id:"org-david-irving",label:"David Irving",group:"individuals",lat:51.51,lng:-0.13,founded:1963,title:"David Irving — UK, Holocaust denier/author"},
   {id:"org-ernst-zundel",label:"Ernst Zündel",group:"individuals",lat:43.65,lng:-79.38,founded:1976,title:"Ernst Zündel — Canada/Germany, Holocaust denier"},
   {id:"org-faurisson",label:"Robert Faurisson",group:"individuals",lat:48.86,lng:2.35,founded:1978,title:"Robert Faurisson — France, Holocaust denier"},
@@ -251,7 +263,7 @@ var ORG_NODES = [
   {id:"org-candace-owens",label:"Candace Owens",group:"individuals",lat:38.91,lng:-77.04,founded:2022,title:"Candace Owens — USA, Antisemitic rhetoric ~2022+"},
   {id:"org-tucker-carlson",label:"Tucker Carlson",group:"individuals",lat:38.91,lng:-77.04,founded:2023,title:"Tucker Carlson — USA, Platform for antisemites ~2023+"},
   {id:"org-jackson-hinkle",label:"Jackson Hinkle",group:"individuals",lat:34.05,lng:-118.24,founded:2023,title:"Jackson Hinkle — USA, Internet personality ~2023+"},
-  {id:"org-richard-spencer",label:"Richard Spencer",group:"individuals",lat:38.91,lng:-77.04,founded:2010,title:"Richard Spencer — USA, Alt-right leader"},
+  {id:"org-richard-spencer",label:"Richard Spencer",group:"individuals",lat:38.91,lng:-77.04,founded:2008,title:"Richard Spencer — USA, Alt-right leader, Active 2008+"},
   {id:"org-matthew-heimbach",label:"Matthew Heimbach",group:"individuals",lat:38.25,lng:-85.76,founded:2015,title:"Matthew Heimbach — USA, TWP founder"},
   {id:"org-tom-metzger",label:"Tom Metzger",group:"individuals",lat:33.84,lng:-117.86,founded:1983,title:"Tom Metzger — California, WAR founder"},
   {id:"org-andrew-anglin",label:"Andrew Anglin",group:"individuals",lat:40.10,lng:-82.95,founded:2013,title:"Andrew Anglin — Ohio, Daily Stormer founder"},
@@ -520,7 +532,20 @@ var ORG_EDGES = [
   {from:"org-nazi-germany",to:"org-arrow-cross",type:"cooperation",label:"Puppet",title:"Nazi Germany supported Arrow Cross takeover in Hungary"},
   {from:"org-nazi-germany",to:"org-ustase",type:"cooperation",label:"Puppet",title:"Nazi Germany backed Ustaše regime in Croatia"},
   {from:"org-nazi-germany",to:"org-vichy-france",type:"cooperation",label:"Puppet",title:"Vichy France collaborated with Nazi Germany"},
-  {from:"org-nazi-germany",to:"org-fascist-italy",type:"cooperation",label:"Axis",title:"Nazi Germany and Fascist Italy formed the Axis"}
+  {from:"org-nazi-germany",to:"org-fascist-italy",type:"cooperation",label:"Axis",title:"Nazi Germany and Fascist Italy formed the Axis"},
+
+  // Historical connections
+  {from:"org-dreyfus-affair",to:"org-action-francaise",type:"ideology",label:"Sparked",title:"Dreyfus Affair spawned Action Française"},
+  {from:"org-action-francaise",to:"org-vichy-france",type:"ideology",label:"Influenced",title:"Action Française ideology influenced Vichy France"},
+  {from:"org-black-hundreds",to:"org-kishinev-pogrom",type:"ideology",label:"Climate",title:"Black Hundreds created climate for pogroms"},
+  {from:"org-protocols",to:"org-black-hundreds",type:"ideology",label:"Promoted",title:"Protocols spread by Black Hundreds"},
+  {from:"org-nazi-germany",to:"org-einsatzgruppen",type:"membership",label:"Unit",title:"Einsatzgruppen were SS mobile killing units"},
+  {from:"org-nazi-germany",to:"org-german-american-bund",type:"ideology",label:"Inspired",title:"Nazi Germany inspired German American Bund"},
+  {from:"org-nazi-germany",to:"org-silver-shirts",type:"ideology",label:"Inspired",title:"Hitler's rise inspired Silver Shirts founding"},
+  {from:"org-nazi-germany",to:"org-buf",type:"ideology",label:"Inspired",title:"Nazi ideology influenced British Union of Fascists"},
+  {from:"org-nazi-germany",to:"org-farhud",type:"ideology",label:"Incited",title:"Nazi propaganda incited Baghdad's Farhud pogrom"},
+  {from:"org-soviet-union",to:"org-doctors-plot",type:"membership",label:"Campaign",title:"Stalin's Doctors' Plot was state antisemitic campaign"},
+  {from:"org-antisemiten-liga",to:"org-nazi-germany",type:"ideology",label:"Precursor",title:"Antisemiten-Liga coined 'antisemitism' — ideological precursor to Nazism"}
 ];
 
 var ORG_GROUPS = {
