@@ -4086,6 +4086,9 @@ function initMap() {
     var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
         attribution: '&copy; Esri', maxZoom: 19
     });
+    var labels = L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19, pane: 'overlayPane'
+    });
     var topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
         attribution: '&copy; Esri', maxZoom: 19
     });
@@ -4093,7 +4096,12 @@ function initMap() {
         attribution: '&copy; <a href="https://carto.com/">CARTO</a>', subdomains: 'abcd', maxZoom: 20
     });
     satellite.addTo(mapInstance);
+    labels.addTo(mapInstance);
     L.control.layers({'\u{1F6F0}\uFE0F לוויין': satellite, '\u{1F30D} טופוגרפי': topo, '\u{1F319} כהה': dark}).addTo(mapInstance);
+    mapInstance.on('baselayerchange', function(e) {
+        if (e.name.indexOf('\u{1F6F0}') !== -1) { if (!mapInstance.hasLayer(labels)) mapInstance.addLayer(labels); }
+        else { if (mapInstance.hasLayer(labels)) mapInstance.removeLayer(labels); }
+    });
 
     markerLayer = L.markerClusterGroup({
         maxClusterRadius: 40, spiderfyOnMaxZoom: true,
