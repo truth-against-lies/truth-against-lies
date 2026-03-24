@@ -2075,4 +2075,502 @@ var SEARCH_INDEX = [
     { title: "LaRouche Movement Conspiracy Movement", url: "antisemitic-orgs-en.html#org-larouche", text: "LaRouche Movement תנועת לארוש", page: "Antisemitic Orgs (EN)" },
     { title: "Protocols of the Elders of Zion Distributors Conspiracy Movement", url: "antisemitic-orgs-en.html#org-protocols", text: "Protocols of the Elders of Zion Distributors מפיצי \"פרוטוקולי זקני ציון\"", page: "Antisemitic Orgs (EN)" },
     { title: "Hezbollah Latin America Terror Network", url: "antisemitic-orgs-en.html#org-hezbollah-latam", text: "Hezbollah Latin America חיזבאללה בדרום אמריקה", page: "Antisemitic Orgs (EN)" },
+
+    // ==================== consciousness.html (HE) ====================
+    { title: "דור המדבר — המודל הפסיכולוגי", url: "consciousness.html#content-start", text: "דור המדבר חוסר אונים נלמד סליגמן רמב\"ם עבדים יציאת מצרים פסיכולוגיה", page: "שינוי תודעה" },
+    { title: "7 באוקטובר — שינוי התודעה המודרני", url: "consciousness.html#content-start", text: "7 באוקטובר שינוי תודעה מודרני סליגמן רמב\"ם", page: "שינוי תודעה" },
+    { title: "ניסי ההגנה — 30,000 טילים", url: "consciousness.html#defense", text: "ניסי הגנה טילים כיפת ברזל איראן חיזבאללה חות'ים מערך הגנה רב-שכבתי", page: "שינוי תודעה" },
+    { title: "הסינתזה — פסיכולוגיה מודרנית + חכמה יהודית", url: "consciousness.html#synthesis", text: "סינתזה פסיכולוגיה חכמה יהודית ויקטור פרנקל לוגותרפיה צמיחה פוסט-טראומטית CBT", page: "שינוי תודעה" },
+    { title: "ספירות הנפש — קבלה כפסיכולוגיה", url: "consciousness.html#sefirot", text: "ספירות קבלה פסיכולוגיה גבורה שבירת הכלים תיקון", page: "שינוי תודעה" },
+    { title: "נצח ישראל — חוסן, אמונה וסיבולת", url: "consciousness.html#netzach", text: "נצח ישראל חוסן אמונה מהר\"ל השגחה פרטית מסירות נפש", page: "שינוי תודעה" },
+    { title: "שינוי תודעה אישי — 7 צעדים", url: "consciousness.html#action", text: "שינוי תודעה אישי 7 צעדים ברית שינוי תודעה פעולה", page: "שינוי תודעה" },
+
+    // ==================== consciousness-en.html (EN) ====================
+    { title: "The Desert Generation — Psychological Model", url: "consciousness-en.html#content-start", text: "Desert Generation learned helplessness Seligman Maimonides slaves Exodus psychology", page: "Consciousness Change (EN)" },
+    { title: "October 7 — Modern Consciousness Shift", url: "consciousness-en.html#content-start", text: "October 7 consciousness shift modern Seligman Maimonides", page: "Consciousness Change (EN)" },
+    { title: "Miracles of Defense — 30,000 Missiles", url: "consciousness-en.html#defense", text: "miracles defense missiles Iron Dome Iran Hezbollah Houthis multi-layered defense", page: "Consciousness Change (EN)" },
+    { title: "The Synthesis — Modern Psychology + Jewish Wisdom", url: "consciousness-en.html#synthesis", text: "synthesis psychology Jewish wisdom Viktor Frankl logotherapy post-traumatic growth CBT", page: "Consciousness Change (EN)" },
+    { title: "Sefirot of the Soul — Kabbalah as Psychology", url: "consciousness-en.html#sefirot", text: "Sefirot Kabbalah psychology Gevurah shattering vessels Tikkun transformation", page: "Consciousness Change (EN)" },
+    { title: "Netzach Yisrael — Resilience Faith Endurance", url: "consciousness-en.html#netzach", text: "Netzach Yisrael resilience faith Maharal Hashgacha Pratit Mesirut Nefesh unbreakable", page: "Consciousness Change (EN)" },
+    { title: "Personal Consciousness Shift — 7 Steps", url: "consciousness-en.html#action", text: "personal consciousness shift 7 steps covenant action", page: "Consciousness Change (EN)" },
+
+    // ==================== facts-court-en.html (EN) ====================
+    { title: "Supreme Court Rulings and Security Impact", url: "facts-court-en.html#content-start", text: "Supreme Court rulings security impact Bagatz High Court Israel", page: "Supreme Court Facts (EN)" },
+    { title: "Ban on Physical Pressure in Shin Bet", url: "facts-court-en.html#fact-1", text: "Shin Bet interrogation physical pressure ban torture ruling", page: "Supreme Court Facts (EN)" },
+    { title: "Rerouting the Security Barrier", url: "facts-court-en.html#fact-2", text: "security barrier fence rerouting separation wall West Bank", page: "Supreme Court Facts (EN)" },
+    { title: "Restrictions on Targeted Killings", url: "facts-court-en.html#fact-4", text: "targeted killings restrictions assassination policy court ruling", page: "Supreme Court Facts (EN)" },
+    { title: "The Reasonableness Standard — Judicial Activism", url: "facts-court-en.html#fact-7", text: "reasonableness standard judicial activism Aharon Barak court", page: "Supreme Court Facts (EN)" },
+    { title: "Sde Teiman Facility — Wartime Intervention", url: "facts-court-en.html#fact-11", text: "Sde Teiman facility wartime intervention prisoners detention", page: "Supreme Court Facts (EN)" },
+    { title: "Striking Down Reasonableness Law During Wartime", url: "facts-court-en.html#fact-14", text: "reasonableness law judicial reform wartime striking down", page: "Supreme Court Facts (EN)" },
+    { title: "The Barak Doctrine — Everything Is Justiciable", url: "facts-court-en.html#fact-15", text: "Barak doctrine everything justiciable judicial activism", page: "Supreme Court Facts (EN)" },
+    { title: "ICC Arrest Warrant and Prosecutor Scandal", url: "facts-court-en.html#fact-16", text: "ICC arrest warrant prosecutor scandal international criminal court", page: "Supreme Court Facts (EN)" },
+    { title: "UN Human Rights Council Disproportionate Treatment", url: "facts-court-en.html#fact-17", text: "UNHRC Human Rights Council disproportionate resolutions Israel bias", page: "Supreme Court Facts (EN)" },
+    { title: "UNESCO Erases Jewish History", url: "facts-court-en.html#fact-21", text: "UNESCO Jewish history Temple Mount erasure heritage", page: "Supreme Court Facts (EN)" },
+    { title: "Francesca Albanese — UN Special Rapporteur", url: "facts-court-en.html#fact-22", text: "Francesca Albanese UN Special Rapporteur bias anti-Israel", page: "Supreme Court Facts (EN)" },
+
+    // ==================== facts-knesset-en.html (EN) ====================
+    { title: "Knesset Members — Documented Statements", url: "facts-knesset-en.html#content-start", text: "Knesset members MKs statements documented anti-Israel", page: "Knesset Facts (EN)" },
+    { title: "Haneen Zoabi — Mavi Marmara", url: "facts-knesset-en.html#content-start", text: "Haneen Zoabi Mavi Marmara flotilla Balad MK", page: "Knesset Facts (EN)" },
+    { title: "Basel Ghattas — Phone Smuggling to Terrorists", url: "facts-knesset-en.html#fact-2", text: "Basel Ghattas phone smuggling terrorists prison conviction", page: "Knesset Facts (EN)" },
+    { title: "Azmi Bishara — Espionage for Hezbollah", url: "facts-knesset-en.html#fact-3", text: "Azmi Bishara espionage Hezbollah fled Israel intelligence", page: "Knesset Facts (EN)" },
+    { title: "Ofer Cassif — Suspension and Controversies", url: "facts-knesset-en.html#fact-4", text: "Ofer Cassif suspension Hadash left wing controversies", page: "Knesset Facts (EN)" },
+    { title: "Ahmad Tibi — Arafat's Advisor", url: "facts-knesset-en.html#fact-5", text: "Ahmad Tibi Arafat advisor Wye River negotiations", page: "Knesset Facts (EN)" },
+    { title: "Collective Events — Joint Actions", url: "facts-knesset-en.html#fact-23", text: "collective events joint actions Balad MKs terrorist families visit", page: "Knesset Facts (EN)" },
+    { title: "MKs Who Called Terrorists Martyrs", url: "facts-knesset-en.html#fact-27", text: "MKs terrorists martyrs shahids praise glorification", page: "Knesset Facts (EN)" },
+
+    // ==================== facts-media-en.html (EN) ====================
+    { title: "Israeli Journalists — Anti-Israel Bias", url: "facts-media-en.html#content-start", text: "Israeli journalists Gideon Levy Amira Hass Amos Schocken Haaretz bias", page: "Media Facts (EN)" },
+    { title: "Al Jazeera — Hamas Connections", url: "facts-media-en.html#fact-4", text: "Al Jazeera Hamas connections journalists operatives cooperation", page: "Media Facts (EN)" },
+    { title: "BBC Documented Bias — Balen Report", url: "facts-media-en.html#fact-6", text: "BBC bias Balen Report 330000 pounds violations guidelines", page: "Media Facts (EN)" },
+    { title: "BBC Refused to Call Hamas Terrorists", url: "facts-media-en.html#fact-8", text: "BBC Hamas terrorists refusal terminology editorial policy", page: "Media Facts (EN)" },
+    { title: "Pallywood — Muhammad al-Durrah Fabrication", url: "facts-media-en.html#fact-9", text: "Pallywood Muhammad al-Durrah fabrication staged scenes propaganda", page: "Media Facts (EN)" },
+    { title: "Al-Ahli Hospital Explosion — Media Failure", url: "facts-media-en.html#fact-11", text: "Al-Ahli hospital explosion Islamic Jihad media failure Gaza", page: "Media Facts (EN)" },
+    { title: "Photographers with Hamas on October 7", url: "facts-media-en.html#fact-12", text: "photographers Hamas October 7 AP Reuters journalists embedded", page: "Media Facts (EN)" },
+    { title: "Hamas Casualty Figures Reliability", url: "facts-media-en.html#fact-15", text: "Hamas casualty figures reliability combatants civilians media 84%", page: "Media Facts (EN)" },
+    { title: "BBC Arabic Staff Celebrated October 7", url: "facts-media-en.html#fact-16", text: "BBC Arabic staff celebrated October 7 massacre social media", page: "Media Facts (EN)" },
+    { title: "CNN Christiane Amanpour Documented Bias", url: "facts-media-en.html#media-bias-extended", text: "CNN Christiane Amanpour bias Israel coverage documented", page: "Media Facts (EN)" },
+
+    // ==================== facts-myths-en.html (EN) ====================
+    { title: "Claims Debunked by Facts", url: "facts-myths-en.html#content-start", text: "claims debunked facts myths refuted Israel security peace", page: "Myths Debunked (EN)" },
+    { title: "Land for Peace — Debunked", url: "facts-myths-en.html#fact-1", text: "land for peace debunked territory withdrawal failed", page: "Myths Debunked (EN)" },
+    { title: "Leave Gaza and There Will Be Quiet — Debunked", url: "facts-myths-en.html#fact-2", text: "leave Gaza quiet debunked disengagement rockets Hamas", page: "Myths Debunked (EN)" },
+    { title: "Palestinian Authority Peace Partner — Debunked", url: "facts-myths-en.html#fact-4", text: "Palestinian Authority peace partner debunked PA incitement Pay for Slay", page: "Myths Debunked (EN)" },
+    { title: "BDS Equals Human Rights — Debunked", url: "facts-myths-en.html#fact-12", text: "BDS human rights debunked boycott movement anti-Israel", page: "Myths Debunked (EN)" },
+    { title: "Two States End of Conflict — Debunked", url: "facts-myths-en.html#fact-11", text: "two states solution end conflict debunked rejection", page: "Myths Debunked (EN)" },
+    { title: "Palestinian Textbooks — Math with Martyrs", url: "facts-myths-en.html#fact-15", text: "Palestinian textbooks math martyrs education incitement children", page: "Myths Debunked (EN)" },
+    { title: "UNRWA — 133 Inciting Teachers", url: "facts-myths-en.html#fact-18", text: "UNRWA inciting teachers October 7 participants fired UN", page: "Myths Debunked (EN)" },
+    { title: "Hamas Summer Camps — 100,000 Children", url: "facts-myths-en.html#fact-17", text: "Hamas summer camps 100000 children weapons training military", page: "Myths Debunked (EN)" },
+    { title: "Farfour the Mouse — Hamas Teaches Children to Kill", url: "facts-myths-en.html#fact-21", text: "Farfour mouse Hamas children TV show kill indoctrination", page: "Myths Debunked (EN)" },
+
+    // ==================== facts-netanyahu-en.html (EN) ====================
+    { title: "Netanyahu Achievements — What Strengthened Israel", url: "facts-netanyahu-en.html#content-start", text: "Netanyahu achievements Iron Dome Abraham Accords economy cyber defense", page: "Netanyahu Paradox (EN)" },
+    { title: "Iron Dome — Life-Saving Defense", url: "facts-netanyahu-en.html#fact-1", text: "Iron Dome defense system missiles interception life-saving", page: "Netanyahu Paradox (EN)" },
+    { title: "Abraham Accords — Diplomatic Breakthrough", url: "facts-netanyahu-en.html#fact-4", text: "Abraham Accords UAE Bahrain Morocco Sudan diplomacy peace", page: "Netanyahu Paradox (EN)" },
+    { title: "Elimination of Nasrallah + Hezbollah Leadership", url: "facts-netanyahu-en.html#fact-8", text: "Nasrallah elimination Hezbollah leadership Lebanon operation", page: "Netanyahu Paradox (EN)" },
+    { title: "Operation Rising Lion — Iran Nuclear Program", url: "facts-netanyahu-en.html#fact-9", text: "Operation Rising Lion Iran nuclear program destruction strike", page: "Netanyahu Paradox (EN)" },
+    { title: "Netanyahu Failures — What Harmed Israel", url: "facts-netanyahu-en.html#failures", text: "Netanyahu failures Qatar Hamas money October 7 warnings ignored", page: "Netanyahu Paradox (EN)" },
+    { title: "Qatar-Hamas Money Pipeline — $1 Billion", url: "facts-netanyahu-en.html#fact-13", text: "Qatar Hamas money pipeline billion suitcases cash approval", page: "Netanyahu Paradox (EN)" },
+    { title: "Strengthening Hamas as Declared Policy", url: "facts-netanyahu-en.html#fact-14", text: "Hamas strengthening declared policy divide and conquer PA", page: "Netanyahu Paradox (EN)" },
+    { title: "Direct War Warning 10 Weeks Before 10/7", url: "facts-netanyahu-en.html#fact-15", text: "war warning 10 weeks before October 7 intelligence failure", page: "Netanyahu Paradox (EN)" },
+    { title: "Shalit Deal — Release of Sinwar", url: "facts-netanyahu-en.html#fact-18", text: "Shalit deal Sinwar release prisoners exchange Hamas leader", page: "Netanyahu Paradox (EN)" },
+
+    // ==================== facts-orgs-en.html (EN) ====================
+    { title: "Foreign-Funded Organizations Against Israel", url: "facts-orgs-en.html#content-start", text: "foreign funded organizations B'Tselem Breaking Silence Yesh Din", page: "Organizations BDS (EN)" },
+    { title: "B'Tselem — Foreign Funding", url: "facts-orgs-en.html#fact-1", text: "B'Tselem foreign funding NGO European governments anti-Israel", page: "Organizations BDS (EN)" },
+    { title: "Breaking the Silence — Foreign Funding", url: "facts-orgs-en.html#fact-2", text: "Breaking the Silence foreign funding soldiers testimonies", page: "Organizations BDS (EN)" },
+    { title: "Ilan Pappe — Academic Anti-Zionism", url: "facts-orgs-en.html#fact-5", text: "Ilan Pappe academic anti-Zionism historian ethnic cleansing narrative", page: "Organizations BDS (EN)" },
+    { title: "Qatar $6.6 Billion to Universities", url: "facts-orgs-en.html#fact-8", text: "Qatar universities funding 6.6 billion Hamas 1.8 billion influence", page: "Organizations BDS (EN)" },
+    { title: "Iran Propaganda Budget $480M", url: "facts-orgs-en.html#fact-9", text: "Iran propaganda budget 480 million cyber operations influence", page: "Organizations BDS (EN)" },
+    { title: "Campus Antisemitism 477% Increase", url: "facts-orgs-en.html#fact-11", text: "campus antisemitism 477% increase universities students hatred", page: "Organizations BDS (EN)" },
+    { title: "BDS Movement Deep Analysis", url: "facts-orgs-en.html#bds-deep", text: "BDS movement boycott Omar Barghouti terror ties funding failure", page: "Organizations BDS (EN)" },
+    { title: "BDS Terror Ties — 30+ Terrorists", url: "facts-orgs-en.html#fact-16", text: "BDS terror ties 30 terrorists organizations connections", page: "Organizations BDS (EN)" },
+    { title: "38 US States Banned BDS", url: "facts-orgs-en.html#fact-20", text: "38 US states banned BDS anti-boycott legislation law", page: "Organizations BDS (EN)" },
+
+    // ==================== facts-policies-en.html (EN) ====================
+    { title: "Policy Decisions Security Impact", url: "facts-policies-en.html#content-start", text: "policy decisions security impact Oslo disengagement Gaza failures", page: "Failed Policies (EN)" },
+    { title: "The Oslo Accords — Failed Policy", url: "facts-policies-en.html#fact-1", text: "Oslo Accords failed policy peace process Arafat Rabin", page: "Failed Policies (EN)" },
+    { title: "The Jibril Deal — Released Yassin", url: "facts-policies-en.html#fact-2", text: "Jibril deal prisoner exchange Ahmed Yassin Hamas founded", page: "Failed Policies (EN)" },
+    { title: "The Gaza Disengagement", url: "facts-policies-en.html#fact-5", text: "Gaza disengagement 2005 withdrawal settlements rockets Hamas", page: "Failed Policies (EN)" },
+    { title: "Rejection of Jericho Wall Plan", url: "facts-policies-en.html#fact-7", text: "Jericho Wall plan rejection Gaza border security failure", page: "Failed Policies (EN)" },
+    { title: "Deep Analysis: Oslo Accords", url: "facts-policies-en.html#oslo-deep", text: "Oslo deep analysis Karine A Arafat Camp David Clinton double language", page: "Failed Policies (EN)" },
+    { title: "Arafat Rejects Everything — Camp David", url: "facts-policies-en.html#fact-11", text: "Arafat rejects Camp David Clinton parameters peace offer", page: "Failed Policies (EN)" },
+    { title: "Second Intifada — Post-Oslo Attacks", url: "facts-policies-en.html#fact-13", text: "Second Intifada attacks post-Oslo terror bombings suicide", page: "Failed Policies (EN)" },
+    { title: "Deep Analysis: Gaza Disengagement", url: "facts-policies-en.html#disengage-deep", text: "Gaza disengagement deep analysis 8600 evacuees 22000 rockets 5 wars", page: "Failed Policies (EN)" },
+    { title: "Hamas Takes Over Gaza", url: "facts-policies-en.html#fact-21", text: "Hamas takeover Gaza elections coup 2006 2007", page: "Failed Policies (EN)" },
+
+    // ==================== facts.html (HE) ====================
+    { title: "עובדות ומספרים — דף ראשי", url: "facts.html", text: "עובדות מספרים נתונים מסמכים ביטחון מדיניות ישראל", page: "עובדות" },
+    { title: "בית משפט עליון — פסיקות", url: "facts.html", text: "בג\"ץ בית משפט עליון פסיקות ביטחון אקטיביזם שיפוטי", page: "עובדות" },
+    { title: "חברי כנסת — אמירות מתועדות", url: "facts.html", text: "חברי כנסת אמירות מתועדות ערביים רשימה משותפת", page: "עובדות" },
+    { title: "תקשורת — כשלים ודיסאינפורמציה", url: "facts.html", text: "תקשורת כשלים דיסאינפורמציה אלג'זירה BBC פאליווד", page: "עובדות" },
+    { title: "מיתוסים שהופרכו", url: "facts.html", text: "מיתוסים הופרכו שלום שטח חמאס מרותע שתי מדינות BDS", page: "עובדות" },
+    { title: "כספי קטאר לחמאס", url: "facts.html", text: "כספי קטאר חמאס מזוודות מזומנים ערוץ כסף", page: "עובדות" },
+
+    // ==================== facts-court.html (HE) ====================
+    { title: "פסיקות בג\"ץ — השלכות ביטחוניות", url: "facts-court.html#content-start", text: "בג\"ץ פסיקות ביטחון בית משפט עליון ישראל", page: "עובדות בג\"ץ" },
+    { title: "איסור לחץ פיזי בחקירות שב\"כ", url: "facts-court.html#fact-1", text: "שב\"כ חקירות לחץ פיזי איסור עינויים פסיקה", page: "עובדות בג\"ץ" },
+    { title: "שינוי מסלול גדר ההפרדה", url: "facts-court.html#fact-2", text: "גדר הפרדה מסלול שינוי חומה ביטחון גדר", page: "עובדות בג\"ץ" },
+    { title: "ביטול נוהל השכן", url: "facts-court.html#fact-3", text: "נוהל השכן ביטול מגן אנושי צה\"ל פלסטינים", page: "עובדות בג\"ץ" },
+    { title: "הגבלת חיסולים ממוקדים", url: "facts-court.html#fact-4", text: "חיסולים ממוקדים הגבלה פסיקה מטרות טרור", page: "עובדות בג\"ץ" },
+    { title: "תקן הסבירות — אקטיביזם שיפוטי", url: "facts-court.html#fact-7", text: "סבירות אקטיביזם שיפוטי אהרון ברק בג\"ץ", page: "עובדות בג\"ץ" },
+    { title: "מתקן שדה תימן — התערבות בזמן מלחמה", url: "facts-court.html#fact-11", text: "שדה תימן מתקן מעצר מלחמה התערבות שיפוטית", page: "עובדות בג\"ץ" },
+    { title: "פסיקת ביטול חוק הסבירות בזמן מלחמה", url: "facts-court.html#fact-14", text: "חוק סבירות ביטול רפורמה משפטית מלחמה", page: "עובדות בג\"ץ" },
+    { title: "לוחמה משפטית בינלאומית", url: "facts-court.html#lawfare", text: "לוחמה משפטית בינלאומית ICC UNHRC UNESCO אלבנזה", page: "עובדות בג\"ץ" },
+    { title: "צו מעצר ICC — שערוריית התובע", url: "facts-court.html#fact-16", text: "ICC צו מעצר תובע בינלאומי שערורייה האג", page: "עובדות בג\"ץ" },
+
+    // ==================== facts-knesset.html (HE) ====================
+    { title: "חברי כנסת — אמירות מתועדות", url: "facts-knesset.html#content-start", text: "חברי כנסת ח\"כ אמירות מתועדות ערבים כנסת ישראל", page: "עובדות כנסת" },
+    { title: "חנין זועבי — מרמרה ובל\"ד", url: "facts-knesset.html#content-start", text: "חנין זועבי מרמרה בל\"ד ח\"כ ערבית", page: "עובדות כנסת" },
+    { title: "באסל גטאס — הברחת טלפונים לרוצח", url: "facts-knesset.html#fact-2", text: "באסל גטאס הברחת טלפונים רוצח חייל כלא הרשעה", page: "עובדות כנסת" },
+    { title: "עזמי בשארה — ריגול לחיזבאללה", url: "facts-knesset.html#fact-3", text: "עזמי בשארה ריגול חיזבאללה בריחה ח\"כ", page: "עובדות כנסת" },
+    { title: "אופר כסיף — השעיה חסרת תקדים", url: "facts-knesset.html#fact-4", text: "אופר כסיף השעיה חד\"ש שמאל", page: "עובדות כנסת" },
+    { title: "אחמד טיבי — יועץ ערפאת בוויי ריבר", url: "facts-knesset.html#fact-5", text: "אחמד טיבי יועץ ערפאת וויי ריבר משא ומתן", page: "עובדות כנסת" },
+    { title: "ח\"כים שכינו מחבלים שהידים", url: "facts-knesset.html#fact-27", text: "ח\"כים מחבלים שהידים קדושים שבח הלל טרור", page: "עובדות כנסת" },
+    { title: "אירועים קולקטיביים — פעולות משותפות", url: "facts-knesset.html#fact-23", text: "ח\"כים בל\"ד ביקור משפחות מחבלים פעולות משותפות", page: "עובדות כנסת" },
+
+    // ==================== facts-media.html (HE) ====================
+    { title: "עיתונאים ישראלים — הטיה נגד ישראל", url: "facts-media.html#content-start", text: "עיתונאים ישראלים גדעון לוי עמירה הס עמוס שוקן הארץ הטיה", page: "עובדות תקשורת" },
+    { title: "אלג'זירה — קשרים מתועדים עם חמאס", url: "facts-media.html#fact-4", text: "אלג'זירה חמאס קשרים עיתונאים פעילים טרור", page: "עובדות תקשורת" },
+    { title: "BBC — דו\"ח בלן והטיה מתועדת", url: "facts-media.html#fact-6", text: "BBC דו\"ח בלן הטיה הפרות הנחיות 1553", page: "עובדות תקשורת" },
+    { title: "פאליווד — מוחמד אל-דורה", url: "facts-media.html#fact-9", text: "פאליווד אל-דורה בימוי סצנות מזויפות תעמולה", page: "עובדות תקשורת" },
+    { title: "פיצוץ בית חולים אל-אהלי", url: "facts-media.html#fact-11", text: "אל-אהלי בית חולים פיצוץ ג'יהאד אסלאמי כשל תקשורתי", page: "עובדות תקשורת" },
+    { title: "צלמים עם חמאס ב-7 באוקטובר", url: "facts-media.html#fact-12", text: "צלמים חמאס 7 באוקטובר AP רויטרס עיתונאים", page: "עובדות תקשורת" },
+    { title: "נתוני הרוגים של חמאס — אמינות", url: "facts-media.html#media-bias-extended", text: "נתוני הרוגים חמאס אמינות לוחמים אזרחים תקשורת 84%", page: "עובדות תקשורת" },
+    { title: "דפוסי הטיה בתקשורת העולמית", url: "facts-media.html#media-bias-extended", text: "הטיה תקשורת עולמית BBC CNN ניו יורק טיימס דפוסים", page: "עובדות תקשורת" },
+
+    // ==================== facts-money.html (HE) ====================
+    { title: "חקירה מעמיקה: כספי קטאר לחמאס", url: "facts-money.html#content-start", text: "קטאר חמאס כסף מזוודות מזומנים ארז חקירה", page: "עובדות כספים" },
+    { title: "המנגנון הפיזי — מזוודות דרך ארז", url: "facts-money.html#fact-1", text: "מנגנון פיזי מזוודות מזומנים מעבר ארז קטאר", page: "עובדות כספים" },
+    { title: "$30 מיליון בחודש — חלוקת הכסף", url: "facts-money.html#fact-2", text: "30 מיליון חודש חלוקה כסף חמאס קטאר", page: "עובדות כספים" },
+    { title: "שרשרת האישורים — מי אישר", url: "facts-money.html#fact-3", text: "אישורים שרשרת נתניהו ממשלה מוסד שב\"כ", page: "עובדות כספים" },
+    { title: "הקונספציה — חמאס מרותע", url: "facts-money.html#fact-8", text: "קונספציה חמאס מרותע נכס הרגעה כשל", page: "עובדות כספים" },
+    { title: "ספטמבר 2023 — תגדילו את הכסף", url: "facts-money.html#fact-9", text: "ספטמבר 2023 הגדלת כסף חודש לפני 7 אוקטובר", page: "עובדות כספים" },
+    { title: "חקירת שב\"כ — קשר ישיר למדיניות", url: "facts-money.html#fact-10", text: "שב\"כ חקירה קשר ישיר מדיניות כספים 2025", page: "עובדות כספים" },
+    { title: "ציר הזמן המלא — 2012 עד 7 באוקטובר", url: "facts-money.html#fact-12", text: "ציר זמן 2012 אוקטובר כרונולוגיה כסף קטאר", page: "עובדות כספים" },
+
+    // ==================== facts-myths.html (HE) ====================
+    { title: "טענות שהופרכו על ידי העובדות", url: "facts-myths.html#content-start", text: "טענות הופרכו עובדות מיתוסים שלום ביטחון ישראל", page: "עובדות מיתוסים" },
+    { title: "שלום תמורת שטח — הופרך", url: "facts-myths.html#fact-1", text: "שלום תמורת שטח הופרך נסיגה כשלון", page: "עובדות מיתוסים" },
+    { title: "נעזוב את עזה ויהיה שקט — הופרך", url: "facts-myths.html#fact-2", text: "עזה שקט התנתקות רקטות חמאס הופרך", page: "עובדות מיתוסים" },
+    { title: "הרשות הפלסטינית שותפה לשלום — הופרך", url: "facts-myths.html#fact-4", text: "רשות פלסטינית שותפה שלום הופרך הסתה תשלום למחבלים", page: "עובדות מיתוסים" },
+    { title: "שתי מדינות סוף הסכסוך — הופרך", url: "facts-myths.html#fact-11", text: "שתי מדינות סוף סכסוך הופרך דחייה", page: "עובדות מיתוסים" },
+    { title: "BDS זכויות אדם — הופרך", url: "facts-myths.html#fact-12", text: "BDS זכויות אדם הופרך חרם תנועה אנטי ישראלית", page: "עובדות מיתוסים" },
+    { title: "ספרי לימוד פלסטיניים — חשבון עם שהידים", url: "facts-myths.html#fact-15", text: "ספרי לימוד פלסטיניים חשבון שהידים חינוך הסתה ילדים", page: "עובדות מיתוסים" },
+    { title: "אונר\"א — 133 מורים מסיתים", url: "facts-myths.html#fact-18", text: "אונר\"א מורים מסיתים 7 באוקטובר פוטרו UNRWA", page: "עובדות מיתוסים" },
+
+    // ==================== facts-netanyahu.html (HE) ====================
+    { title: "נתניהו — הישגים שחיזקו את ישראל", url: "facts-netanyahu.html#content-start", text: "נתניהו הישגים כיפת ברזל אברהם כלכלה סייבר הגנה", page: "עובדות נתניהו" },
+    { title: "כיפת ברזל — מערכת הגנה מצילת חיים", url: "facts-netanyahu.html#fact-1", text: "כיפת ברזל הגנה טילים יירוט הצלת חיים", page: "עובדות נתניהו" },
+    { title: "הסכמי אברהם — פריצת דרך דיפלומטית", url: "facts-netanyahu.html#fact-4", text: "הסכמי אברהם איחוד אמירויות בחריין מרוקו סודן שלום", page: "עובדות נתניהו" },
+    { title: "חיסול נסראללה + מנהיגות חיזבאללה", url: "facts-netanyahu.html#fact-8", text: "נסראללה חיסול חיזבאללה מנהיגות לבנון מבצע", page: "עובדות נתניהו" },
+    { title: "מבצע אריה עולה — השמדת הגרעין האיראני", url: "facts-netanyahu.html#fact-9", text: "אריה עולה גרעין איראני השמדה מבצע תקיפה", page: "עובדות נתניהו" },
+    { title: "הכשלים — מה שפגע בישראל", url: "facts-netanyahu.html#failures", text: "כשלים נתניהו קטאר חמאס כסף אזהרות 7 באוקטובר", page: "עובדות נתניהו" },
+    { title: "צינור כספי קטאר-חמאס — מיליארד דולר", url: "facts-netanyahu.html#fact-13", text: "קטאר חמאס כסף מיליארד מזוודות מזומנים אישור", page: "עובדות נתניהו" },
+    { title: "עסקת שליט — שחרור סינוואר", url: "facts-netanyahu.html#fact-18", text: "עסקת שליט סינוואר שחרור אסירים חמאס מנהיג", page: "עובדות נתניהו" },
+
+    // ==================== facts-orgs.html (HE) ====================
+    { title: "ארגונים ממומנים מבחוץ", url: "facts-orgs.html#content-start", text: "ארגונים מימון זר בצלם שוברים שתיקה יש דין", page: "עובדות ארגונים" },
+    { title: "בצלם — מימון זר", url: "facts-orgs.html#fact-1", text: "בצלם מימון זר ארגון אירופי ממשלות אנטי ישראלי", page: "עובדות ארגונים" },
+    { title: "שוברים שתיקה — מימון זר", url: "facts-orgs.html#fact-2", text: "שוברים שתיקה מימון זר חיילים עדויות", page: "עובדות ארגונים" },
+    { title: "אילן פפה — אנטי ציונות אקדמית", url: "facts-orgs.html#fact-5", text: "אילן פפה אנטי ציונות אקדמיה היסטוריון טיהור אתני", page: "עובדות ארגונים" },
+    { title: "קטאר $6.6 מיליארד לאוניברסיטאות", url: "facts-orgs.html#fact-8", text: "קטאר אוניברסיטאות מימון 6.6 מיליארד חמאס 1.8 מיליארד השפעה", page: "עובדות ארגונים" },
+    { title: "אנטישמיות בקמפוסים — עלייה של 477%", url: "facts-orgs.html#fact-11", text: "אנטישמיות קמפוסים עלייה 477% אוניברסיטאות סטודנטים שנאה", page: "עובדות ארגונים" },
+    { title: "מבצעי השפעה זרים", url: "facts-orgs.html#influence", text: "השפעה זרה קטאר איראן טורקיה קמפוסים תעמולה סייבר", page: "עובדות ארגונים" },
+    { title: "תנועת BDS — ניתוח מעמיק", url: "facts-orgs.html#bds-deep", text: "BDS תנועת חרם ברגותי טרור מימון כשלון", page: "עובדות ארגונים" },
+
+    // ==================== facts-policies.html (HE) ====================
+    { title: "החלטות מדיניות — השפעות ביטחוניות", url: "facts-policies.html#content-start", text: "החלטות מדיניות ביטחון אוסלו התנתקות עזה כשלים", page: "עובדות מדיניות" },
+    { title: "הסכמי אוסלו — מדיניות שנכשלה", url: "facts-policies.html#fact-1", text: "אוסלו הסכמים כשלון שלום ערפאת רבין", page: "עובדות מדיניות" },
+    { title: "עסקת ג'יבריל — שחרור יאסין", url: "facts-policies.html#fact-2", text: "ג'יבריל עסקה שחרור אחמד יאסין חמאס הקמה", page: "עובדות מדיניות" },
+    { title: "ההתנתקות מעזה", url: "facts-policies.html#fact-5", text: "התנתקות עזה 2005 נסיגה התנחלויות רקטות חמאס", page: "עובדות מדיניות" },
+    { title: "דחיית תוכנית חומת יריחו", url: "facts-policies.html#fact-7", text: "חומת יריחו תוכנית דחייה גבול עזה ביטחון כשל", page: "עובדות מדיניות" },
+    { title: "ניתוח מעמיק: הסכמי אוסלו", url: "facts-policies.html#oslo-deep", text: "אוסלו ניתוח קארין A ערפאת קמפ דיוויד קלינטון דו-לשוניות", page: "עובדות מדיניות" },
+    { title: "ערפאת דוחה הכל — קמפ דיוויד", url: "facts-policies.html#fact-11", text: "ערפאת דחייה קמפ דיוויד קלינטון הצעת שלום", page: "עובדות מדיניות" },
+    { title: "האינתיפאדה השנייה — פיגועים אחרי אוסלו", url: "facts-policies.html#fact-13", text: "אינתיפאדה שנייה פיגועים אוסלו טרור התאבדות פיצוצים", page: "עובדות מדיניות" },
+    { title: "ניתוח מעמיק: ההתנתקות מעזה", url: "facts-policies.html#disengage-deep", text: "התנתקות עזה ניתוח 8600 מפונים 22000 רקטות 5 מלחמות", page: "עובדות מדיניות" },
+
+    // ==================== facts-west.html (HE) ====================
+    { title: "מדיניות מערבית — פערים בין הצהרות לפעולות", url: "facts-west.html#content-start", text: "מדיניות מערבית פערים הצהרות פעולות בגידה ישראל", page: "עובדות מערב" },
+    { title: "בריטניה — אמברגו בזמן מלחמה", url: "facts-west.html#fact-1", text: "בריטניה אמברגו נשק מלחמה F-35 חלקים", page: "עובדות מערב" },
+    { title: "אובמה — JCPOA + $1.7B מזומן", url: "facts-west.html#fact-2", text: "אובמה JCPOA איראן 1.7 מיליארד מזומן החלטה 2334", page: "עובדות מערב" },
+    { title: "ביידן — $6B + עיכוב נשק", url: "facts-west.html#fact-3", text: "ביידן 6 מיליארד עיכוב נשק הדלפות ישראל", page: "עובדות מערב" },
+    { title: "UNHRC — 108 החלטות נגד ישראל, 0 נגד סין", url: "facts-west.html#fact-5", text: "UNHRC החלטות ישראל סין סטנדרטים כפולים", page: "עובדות מערב" },
+    { title: "הצלב האדום — ללא גישה לחטופים", url: "facts-west.html#fact-7", text: "צלב אדום חטופים גישה 7 באוקטובר כשל הומניטרי", page: "עובדות מערב" },
+    { title: "UNIFIL — 18 שנות פעילות", url: "facts-west.html#fact-9", text: "UNIFIL לבנון 18 שנים פעילות חיזבאללה כשל", page: "עובדות מערב" },
+    { title: "סטנדרטים כפולים — טורקיה, סין, רוסיה", url: "facts-west.html#fact-11", text: "סטנדרטים כפולים טורקיה סין רוסיה סעודיה צביעות", page: "עובדות מערב" },
+
+    // ==================== facts-iran.html (HE) ====================
+    { title: "איראן — ציר הטרור", url: "facts-iran.html#content-start", text: "איראן טרור ציר חיזבאללה חמאס ג'יהאד חות'ים פרוקסים", page: "עובדות איראן" },
+    { title: "חיזבאללה — הצבא הגדול ביותר של איראן", url: "facts-iran.html#content-start", text: "חיזבאללה איראן צבא לבנון טילים נשק", page: "עובדות איראן" },
+    { title: "חמאס — $350 מיליון בשנה מאיראן", url: "facts-iran.html#fact-2", text: "חמאס איראן 350 מיליון מימון טרור עזה", page: "עובדות איראן" },
+    { title: "החות'ים — תקיפת ישראל מ-2,000 ק\"מ", url: "facts-iran.html#fact-4", text: "חות'ים תימן תקיפה ישראל 2000 קילומטר טילים", page: "עובדות איראן" },
+    { title: "JCPOA — $100 מיליארד+ נכסים שוחררו", url: "facts-iran.html#fact-6", text: "JCPOA הסכם גרעין איראן 100 מיליארד נכסים", page: "עובדות איראן" },
+    { title: "הגרעין האיראני — ימים מפצצה", url: "facts-iran.html#fact-7", text: "גרעין איראן פצצה אטומית העשרה אורניום", page: "עובדות איראן" },
+    { title: "קאסם סולימאני — אדריכל הטבח", url: "facts-iran.html#fact-8", text: "קאסם סולימאני כוח קודס איראן חיסול טרור", page: "עובדות איראן" },
+    { title: "תוכנית הטילים והמל\"טים של איראן", url: "facts-iran.html#fact-9", text: "טילים מל\"טים איראן ארסנל מזרח תיכון", page: "עובדות איראן" },
+    { title: "לוחמת סייבר איראנית", url: "facts-iran.html#fact-11", text: "סייבר איראן מתקפות ישראל לוחמה אלקטרונית", page: "עובדות איראן" },
+    { title: "יחידה 840 — מנגנון התנקשויות עולמי", url: "facts-iran.html#fact-12", text: "יחידה 840 כוח קודס התנקשויות עולמי איראן", page: "עובדות איראן" },
+
+    // ==================== facts-command.html (HE) ====================
+    { title: "אנשי צבא ומודיעין — תיעוד", url: "facts-command.html#content-start", text: "צבא מודיעין אנשי ביטחון רמטכ\"ל שב\"כ מוסד", page: "עובדות פיקוד" },
+    { title: "אביב כוכבי — רמטכ\"ל", url: "facts-command.html#fact-1", text: "אביב כוכבי רמטכ\"ל צה\"ל כשל 7 באוקטובר", page: "עובדות פיקוד" },
+    { title: "תמיר הימן — ראש אמ\"ן", url: "facts-command.html#fact-2", text: "תמיר הימן אמ\"ן מודיעין צבאי כשל", page: "עובדות פיקוד" },
+    { title: "אהרון חליוה — ראש אגף המודיעין", url: "facts-command.html#fact-3", text: "אהרון חליוה מודיעין התפטרות כשל 7 באוקטובר", page: "עובדות פיקוד" },
+    { title: "הרצי הלוי — רמטכ\"ל", url: "facts-command.html#fact-4", text: "הרצי הלוי רמטכ\"ל צה\"ל מלחמה חרבות ברזל", page: "עובדות פיקוד" },
+    { title: "אהוד ברק — ראש ממשלה לשעבר", url: "facts-command.html#fact-5", text: "אהוד ברק ראש ממשלה צבא מודיעין", page: "עובדות פיקוד" },
+    { title: "יובל דיסקין — ראש שב\"כ לשעבר", url: "facts-command.html#fact-11", text: "יובל דיסקין שב\"כ ביטחון פנים", page: "עובדות פיקוד" },
+    { title: "מאיר דגן — ראש המוסד לשעבר", url: "facts-command.html#fact-13", text: "מאיר דגן מוסד מודיעין חוץ", page: "עובדות פיקוד" },
+
+    // ==================== gallery.html (HE) ====================
+    { title: "גלריית תמונות — השואה", url: "gallery.html#cat-holocaust", text: "גלריה תמונות שואה 1933-1945 מחנות השמדה", page: "גלריה" },
+    { title: "גלריה — פוגרומים", url: "gallery.html#cat-pogroms", text: "גלריה פוגרומים אלימות יהודים מאות שנים", page: "גלריה" },
+    { title: "גלריה — 7 באוקטובר 2023", url: "gallery.html#cat-oct7", text: "גלריה 7 באוקטובר 2023 טבח חמאס", page: "גלריה" },
+    { title: "גלריה — פיגועי טרור", url: "gallery.html#cat-terror", text: "גלריה פיגועי טרור ישראל מחבלים", page: "גלריה" },
+    { title: "גלריה — אנטישמיות בעולם", url: "gallery.html#cat-antisemitism", text: "גלריה אנטישמיות עולם שנאה גזענות", page: "גלריה" },
+    { title: "גלריה — מלחמות ישראל", url: "gallery.html#cat-wars", text: "גלריה מלחמות ישראל צה\"ל לחימה", page: "גלריה" },
+    { title: "גלריה — תרומות יהודיות לעולם", url: "gallery.html#cat-contributions", text: "גלריה תרומות יהודיות עולם מדע רפואה טכנולוגיה נובל", page: "גלריה" },
+    { title: "גלריה — צה\"ל הצד האנושי", url: "gallery.html#cat-idf-human", text: "גלריה צה\"ל אנושי סיוע הומניטרי חיילים", page: "גלריה" },
+    { title: "גלריה — ישראל היפה", url: "gallery.html#cat-beautiful", text: "גלריה ישראל יפה נוף טבע ערים", page: "גלריה" },
+    { title: "גלריה — תקומה מאפר לאומה", url: "gallery.html#cat-revival", text: "גלריה תקומה עצמאות מדינה הקמה", page: "גלריה" },
+
+    // ==================== statistics.html (HE) ====================
+    { title: "תקריות אנטישמיות — ארה\"ב (ADL)", url: "statistics.html#content-start", text: "תקריות אנטישמיות ארה\"ב ADL סטטיסטיקה נתונים", page: "סטטיסטיקה" },
+    { title: "אנטישמיות באירופה (FRA)", url: "statistics.html#content-start", text: "אנטישמיות אירופה FRA האיחוד האירופי נתונים", page: "סטטיסטיקה" },
+    { title: "קמפוסים אמריקאיים — אנטישמיות", url: "statistics.html#content-start", text: "קמפוסים אמריקאיים אנטישמיות אוניברסיטאות סטודנטים", page: "סטטיסטיקה" },
+    { title: "אנטישמיות ברשת", url: "statistics.html#content-start", text: "אנטישמיות רשת אינטרנט מדיה חברתית שנאה אונליין", page: "סטטיסטיקה" },
+    { title: "הגדרת IHRA — מי מאמץ", url: "statistics.html#content-start", text: "IHRA הגדרה אנטישמיות אימוץ מדינות", page: "סטטיסטיקה" },
+    { title: "השוואה גלובלית — אנטישמיות מול גודל אוכלוסייה", url: "statistics.html#content-start", text: "השוואה גלובלית אנטישמיות אוכלוסייה יהודים עולם", page: "סטטיסטיקה" },
+
+    // ==================== holocaust-denial.html (HE) ====================
+    { title: "6 מיליון זה מספר מוגזם — הפרכה", url: "holocaust-denial.html#card-1", text: "6 מיליון מוגזם הפרכה שואה מספרים ראיות מתועדים", page: "הכחשת השואה" },
+    { title: "לא היו תאי גזים — הפרכה", url: "holocaust-denial.html#card-2", text: "תאי גזים הפרכה אושוויץ מחנות השמדה ראיות", page: "הכחשת השואה" },
+    { title: "היהודים מנצלים את השואה — הפרכה", url: "holocaust-denial.html#card-3", text: "ניצול שואה רווח כסף הפרכה פיצויים", page: "הכחשת השואה" },
+    { title: "השואה הייתה רק מלחמה — הפרכה", url: "holocaust-denial.html#card-4", text: "שואה מלחמה הפרכה רצח עם שיטתי תעשייתי", page: "הכחשת השואה" },
+    { title: "היטלר לא ידע / לא ציווה — הפרכה", url: "holocaust-denial.html#card-5", text: "היטלר ידע ציווה הפרכה פתרון סופי ראיות", page: "הכחשת השואה" },
+    { title: "זה היה מזמן — הפרכה", url: "holocaust-denial.html#card-6", text: "מזמן להמשיך הלאה הפרכה זיכרון חשיבות שואה", page: "הכחשת השואה" },
+
+    // ==================== videos.html (HE) ====================
+    { title: "סרטונים — שורשי השנאה", url: "videos.html#youtube", text: "סרטונים שורשי שנאה עת עתיקה אנטישמיות היסטוריה", page: "סרטונים" },
+    { title: "סרטונים — מיתוסים וקונספירציות", url: "videos.html#youtube", text: "סרטונים מיתוסים קונספירציות פוליטיקה פרוטוקולים", page: "סרטונים" },
+    { title: "סרטונים — השואה וזיכרון", url: "videos.html#youtube", text: "סרטונים שואה זיכרון עדויות ניצולים תיעוד", page: "סרטונים" },
+    { title: "סרטונים — ישראל והיסטוריה יהודית", url: "videos.html#youtube", text: "סרטונים ישראל היסטוריה יהודית ציונות מדינה", page: "סרטונים" },
+    { title: "ערוצים מומלצים בעברית", url: "videos.html#youtube", text: "ערוצים מומלצים עברית יוטיוב תוכן ישראלי", page: "סרטונים" },
+    { title: "ערוצים מומלצים באנגלית", url: "videos.html#youtube", text: "ערוצים מומלצים אנגלית יוטיוב תוכן", page: "סרטונים" },
+    { title: "קולות ייחודיים — לא יהודים שמגנים על ישראל", url: "videos.html#youtube", text: "לא יהודים מגנים ישראל קולות ייחודיים תמיכה", page: "סרטונים" },
+
+    // ==================== action-en.html (EN) ====================
+    { title: "The Recurring Historical Pattern", url: "action-en.html#the-cycle", text: "recurring historical pattern antisemitism cycle persecution exile", page: "Action (EN)" },
+    { title: "Lessons of the Holocaust", url: "action-en.html#holocaust-lessons", text: "Holocaust lessons historical analysis never again prevention", page: "Action (EN)" },
+    { title: "Israel's Role as National Refuge", url: "action-en.html#why-israel", text: "Israel national refuge homeland safety Jewish state", page: "Action (EN)" },
+    { title: "Jewish Communal Success Mechanisms", url: "action-en.html#jewish-success", text: "Jewish communal success mechanisms education unity community", page: "Action (EN)" },
+    { title: "5 Practical Pillars of Action", url: "action-en.html#action-pillars", text: "5 pillars action practical fight antisemitism educate", page: "Action (EN)" },
+    { title: "10 Key Conclusions from History", url: "action-en.html#never-again", text: "10 conclusions historical analysis never again principles", page: "Action (EN)" },
+    { title: "Organizations Fighting Antisemitism", url: "action-en.html#never-again", text: "ADL Simon Wiesenthal Yad Vashem USHMM organizations fight antisemitism", page: "Action (EN)" },
+
+    // ==================== daat-dat-en.html (EN) ====================
+    { title: "The Hebrew Language — Linguistic and Spiritual Structure", url: "daat-dat-en.html#content-start", text: "Hebrew language linguistic spiritual structure letters root", page: "Daat & Dat (EN)" },
+    { title: "Daat — The Hidden Sefirah", url: "daat-dat-en.html#daat-knowledge", text: "Daat hidden Sefirah knowledge Kabbalah experiential", page: "Daat & Dat (EN)" },
+    { title: "Dat — A Word That Changed", url: "daat-dat-en.html#dat-religion", text: "Dat religion word changed meaning law framework", page: "Daat & Dat (EN)" },
+    { title: "Critical Difference — Daat vs Dat", url: "daat-dat-en.html#critical-difference", text: "critical difference Daat experience Dat framework religion knowledge", page: "Daat & Dat (EN)" },
+    { title: "Letter Analysis — Dalet Ayin Tav", url: "daat-dat-en.html#letter-analysis", text: "letter analysis Dalet Ayin Tav Hebrew mystical meaning", page: "Daat & Dat (EN)" },
+    { title: "Tree of Life — Place of Daat", url: "daat-dat-en.html#tree-of-life", text: "Tree of Life Daat Kabbalah Sefirot structure", page: "Daat & Dat (EN)" },
+    { title: "Dat Without Daat — Practical Problems", url: "daat-dat-en.html#dat-without-daat", text: "Dat without Daat practical problems religion empty ritual", page: "Daat & Dat (EN)" },
+    { title: "Religious-Secular Divide Analysis", url: "daat-dat-en.html#religious-secular", text: "religious secular divide analysis Israel society conflict", page: "Daat & Dat (EN)" },
+    { title: "From Dat to Daat — Practical Path", url: "daat-dat-en.html#from-dat-to-daat", text: "Dat to Daat practical path 6 steps covenant knowledge", page: "Daat & Dat (EN)" },
+
+    // ==================== fact-cards-en.html (EN) ====================
+    { title: "Israel Committed Genocide — Debunked", url: "fact-cards-en.html#fc-genocide", text: "genocide Israel Gaza debunked false claim", page: "Fact Cards (EN)" },
+    { title: "Israel Is Apartheid — Debunked", url: "fact-cards-en.html#fc-apartheid", text: "apartheid Israel debunked equal rights Arab citizens", page: "Fact Cards (EN)" },
+    { title: "Jews Control the Media — Debunked", url: "fact-cards-en.html#fc-media-control", text: "Jews media control conspiracy debunked stereotype", page: "Fact Cards (EN)" },
+    { title: "No Historical Connection to Land — Debunked", url: "fact-cards-en.html#fc-no-connection", text: "historical connection land Israel archaeology debunked", page: "Fact Cards (EN)" },
+    { title: "Israel Created Hamas — Debunked", url: "fact-cards-en.html#fc-hamas-created", text: "Israel created Hamas debunked false claim", page: "Fact Cards (EN)" },
+    { title: "From River to Sea — Decoded", url: "fact-cards-en.html#fc-river-to-sea", text: "river to sea Palestine freedom decoded destruction Israel", page: "Fact Cards (EN)" },
+    { title: "Blood Libel — Debunked", url: "fact-cards-en.html#fc-blood-libel", text: "blood libel debunked medieval false accusation", page: "Fact Cards (EN)" },
+    { title: "Jews Control Banks — Debunked", url: "fact-cards-en.html#fc-banks", text: "Jews banks control conspiracy Rothschild debunked", page: "Fact Cards (EN)" },
+    { title: "Protocols of Elders of Zion — Debunked", url: "fact-cards-en.html#fc-protocols", text: "Protocols Elders Zion forgery debunked conspiracy", page: "Fact Cards (EN)" },
+    { title: "Holocaust Denial — Debunked", url: "fact-cards-en.html#fc-holocaust-denial", text: "Holocaust denial debunked evidence gas chambers 6 million", page: "Fact Cards (EN)" },
+
+    // ==================== facts-en.html (EN) ====================
+    { title: "Facts & Numbers — Main Hub", url: "facts-en.html", text: "facts numbers data documents security policy Israel", page: "Facts Hub (EN)" },
+    { title: "Supreme Court — Rulings", url: "facts-en.html", text: "Supreme Court rulings security judicial activism Israel", page: "Facts Hub (EN)" },
+    { title: "Knesset Members — Statements", url: "facts-en.html", text: "Knesset members MKs documented statements anti-Israel", page: "Facts Hub (EN)" },
+    { title: "Media — Failures and Disinformation", url: "facts-en.html", text: "media failures disinformation Al Jazeera BBC Pallywood", page: "Facts Hub (EN)" },
+    { title: "Myths Debunked by Facts", url: "facts-en.html", text: "myths debunked facts peace land Hamas two states BDS", page: "Facts Hub (EN)" },
+    { title: "Qatar Money to Hamas", url: "facts-en.html", text: "Qatar money Hamas cash pipeline investigation", page: "Facts Hub (EN)" },
+
+    // ==================== facts-command-en.html (EN) ====================
+    { title: "Military and Intelligence Figures", url: "facts-command-en.html#content-start", text: "military intelligence figures IDF chiefs Shin Bet Mossad", page: "Command Facts (EN)" },
+    { title: "Aviv Kochavi — IDF Chief of Staff", url: "facts-command-en.html#fact-1", text: "Aviv Kochavi IDF Chief of Staff October 7 failure", page: "Command Facts (EN)" },
+    { title: "Tamir Hayman — Military Intelligence", url: "facts-command-en.html#fact-2", text: "Tamir Hayman military intelligence failure Aman", page: "Command Facts (EN)" },
+    { title: "Herzi Halevi — IDF Chief of Staff", url: "facts-command-en.html#fact-4", text: "Herzi Halevi IDF Chief Swords of Iron war", page: "Command Facts (EN)" },
+    { title: "Ehud Barak — Former PM", url: "facts-command-en.html#fact-5", text: "Ehud Barak former Prime Minister military intelligence", page: "Command Facts (EN)" },
+    { title: "Yuval Diskin — Former Shin Bet Chief", url: "facts-command-en.html#fact-11", text: "Yuval Diskin Shin Bet internal security chief", page: "Command Facts (EN)" },
+    { title: "Meir Dagan — Former Mossad Chief", url: "facts-command-en.html#fact-13", text: "Meir Dagan Mossad intelligence foreign operations", page: "Command Facts (EN)" },
+    { title: "Qatari Money to Hamas $1.8 Billion", url: "facts-command-en.html#fact-14", text: "Qatar money Hamas 1.8 billion military chain responsibility", page: "Command Facts (EN)" },
+
+    // ==================== facts-iran-en.html (EN) ====================
+    { title: "Iran — Axis of Terror", url: "facts-iran-en.html#content-start", text: "Iran terror axis Hezbollah Hamas Jihad Houthis proxies", page: "Iran Facts (EN)" },
+    { title: "Hezbollah — Iran's Largest Army", url: "facts-iran-en.html#content-start", text: "Hezbollah Iran army Lebanon missiles weapons", page: "Iran Facts (EN)" },
+    { title: "Hamas — $350 Million/Year from Iran", url: "facts-iran-en.html#fact-2", text: "Hamas Iran 350 million funding terror Gaza", page: "Iran Facts (EN)" },
+    { title: "Houthis — Attacking Israel from 2,000 km", url: "facts-iran-en.html#fact-4", text: "Houthis Yemen attacking Israel 2000 km missiles", page: "Iran Facts (EN)" },
+    { title: "JCPOA — $100 Billion+ Assets Released", url: "facts-iran-en.html#fact-6", text: "JCPOA nuclear deal Iran 100 billion assets released", page: "Iran Facts (EN)" },
+    { title: "Iran Nuclear Program — Days from Bomb", url: "facts-iran-en.html#fact-7", text: "Iran nuclear program bomb atomic enrichment uranium", page: "Iran Facts (EN)" },
+    { title: "Qasem Soleimani — Architect of Massacre", url: "facts-iran-en.html#fact-8", text: "Qasem Soleimani Quds Force Iran elimination terror", page: "Iran Facts (EN)" },
+    { title: "Iran Missiles and Drones Arsenal", url: "facts-iran-en.html#fact-9", text: "Iran missiles drones arsenal Middle East largest", page: "Iran Facts (EN)" },
+    { title: "Iranian Cyber Warfare", url: "facts-iran-en.html#fact-11", text: "Iran cyber warfare attacks Israel electronic operations", page: "Iran Facts (EN)" },
+    { title: "Quds Force Unit 840 — Assassination Apparatus", url: "facts-iran-en.html#fact-12", text: "Quds Force Unit 840 assassination apparatus global Iran", page: "Iran Facts (EN)" },
+
+    // ==================== facts-money-en.html (EN) ====================
+    { title: "Deep Investigation: Qatar Money to Hamas", url: "facts-money-en.html#content-start", text: "Qatar Hamas money investigation suitcases cash Erez", page: "Money Facts (EN)" },
+    { title: "Suitcases of Cash Through Erez", url: "facts-money-en.html#fact-1", text: "physical mechanism suitcases cash Erez crossing Qatar", page: "Money Facts (EN)" },
+    { title: "$30 Million Per Month — Breakdown", url: "facts-money-en.html#fact-2", text: "30 million month breakdown money Hamas Qatar", page: "Money Facts (EN)" },
+    { title: "Chain of Authorization — Who Approved", url: "facts-money-en.html#fact-3", text: "authorization chain Netanyahu government Mossad Shin Bet approved", page: "Money Facts (EN)" },
+    { title: "The Conception — Hamas Is Deterred", url: "facts-money-en.html#fact-8", text: "conception Hamas deterred asset calm failure", page: "Money Facts (EN)" },
+    { title: "September 2023 — Increase the Money", url: "facts-money-en.html#fact-9", text: "September 2023 increase money month before October 7", page: "Money Facts (EN)" },
+    { title: "Shin Bet Investigation 2025", url: "facts-money-en.html#fact-10", text: "Shin Bet investigation direct link money policy 2025", page: "Money Facts (EN)" },
+    { title: "Full Timeline 2012 to October 7", url: "facts-money-en.html#fact-12", text: "timeline 2012 October chronology money Qatar Hamas", page: "Money Facts (EN)" },
+
+    // ==================== facts-west-en.html (EN) ====================
+    { title: "Western Policy — Gaps Between Words and Actions", url: "facts-west-en.html#content-start", text: "Western policy gaps declarations actions betrayal Israel", page: "Western Facts (EN)" },
+    { title: "Britain — Arms Embargo During War", url: "facts-west-en.html#fact-1", text: "Britain arms embargo war F-35 parts weapons", page: "Western Facts (EN)" },
+    { title: "Obama — JCPOA + $1.7B Cash", url: "facts-west-en.html#fact-2", text: "Obama JCPOA Iran 1.7 billion cash Resolution 2334", page: "Western Facts (EN)" },
+    { title: "Biden — $6B + Weapons Delay", url: "facts-west-en.html#fact-3", text: "Biden 6 billion weapons delay leaks Israel", page: "Western Facts (EN)" },
+    { title: "UNHRC — 108 Resolutions vs Israel, 0 vs China", url: "facts-west-en.html#fact-5", text: "UNHRC resolutions Israel China double standards bias", page: "Western Facts (EN)" },
+    { title: "Red Cross — No Access to Hostages", url: "facts-west-en.html#fact-7", text: "Red Cross hostages access October 7 humanitarian failure", page: "Western Facts (EN)" },
+    { title: "UNIFIL — 18 Years of Operations", url: "facts-west-en.html#fact-9", text: "UNIFIL Lebanon 18 years operations Hezbollah failure", page: "Western Facts (EN)" },
+    { title: "Double Standards — Turkey China Russia", url: "facts-west-en.html#fact-11", text: "double standards Turkey China Russia Saudi Arabia hypocrisy", page: "Western Facts (EN)" },
+    { title: "France — From Ally to Betrayer", url: "facts-west-en.html#fact-12", text: "France ally betrayer 1967 2024 weapons embargo", page: "Western Facts (EN)" },
+
+    // ==================== gallery-en.html (EN) ====================
+    { title: "Gallery — The Holocaust 1933-1945", url: "gallery-en.html#cat-holocaust", text: "gallery Holocaust 1933 1945 extermination camps photos", page: "Gallery (EN)" },
+    { title: "Gallery — Pogroms", url: "gallery-en.html#cat-pogroms", text: "gallery pogroms violence Jews centuries historical", page: "Gallery (EN)" },
+    { title: "Gallery — October 7 2023", url: "gallery-en.html#cat-oct7", text: "gallery October 7 2023 massacre Hamas attack", page: "Gallery (EN)" },
+    { title: "Gallery — Terror Attacks", url: "gallery-en.html#cat-terror", text: "gallery terror attacks Israel terrorism", page: "Gallery (EN)" },
+    { title: "Gallery — Antisemitism Worldwide", url: "gallery-en.html#cat-antisemitism", text: "gallery antisemitism worldwide hatred racism", page: "Gallery (EN)" },
+    { title: "Gallery — Israel's Wars", url: "gallery-en.html#cat-wars", text: "gallery Israel wars IDF military", page: "Gallery (EN)" },
+    { title: "Gallery — Jewish Contributions", url: "gallery-en.html#cat-contributions", text: "gallery Jewish contributions science medicine technology Nobel", page: "Gallery (EN)" },
+    { title: "Gallery — IDF Human Side", url: "gallery-en.html#cat-idf-human", text: "gallery IDF human side humanitarian aid soldiers", page: "Gallery (EN)" },
+    { title: "Gallery — Beautiful Israel", url: "gallery-en.html#cat-beautiful", text: "gallery Israel beautiful landscape nature cities", page: "Gallery (EN)" },
+    { title: "Gallery — Revival From Ashes", url: "gallery-en.html#cat-revival", text: "gallery revival independence nation building state", page: "Gallery (EN)" },
+
+    // ==================== glossary-en.html (EN) ====================
+    { title: "Anti-Zionism — Definition", url: "glossary-en.html#term-1", text: "anti-Zionism definition term glossary", page: "Glossary (EN)" },
+    { title: "Antisemitism — Definition", url: "glossary-en.html#term-2", text: "antisemitism definition term hatred Jews", page: "Glossary (EN)" },
+    { title: "Apartheid — Definition", url: "glossary-en.html#term-3", text: "apartheid definition term South Africa Israel claim", page: "Glossary (EN)" },
+    { title: "BDS — Boycott Divestment Sanctions", url: "glossary-en.html#term-4", text: "BDS boycott divestment sanctions definition movement", page: "Glossary (EN)" },
+    { title: "IHRA Definition of Antisemitism", url: "glossary-en.html#term-6", text: "IHRA definition antisemitism international adopted", page: "Glossary (EN)" },
+    { title: "Holocaust Denial — Definition", url: "glossary-en.html#term-7", text: "Holocaust denial definition term deniers", page: "Glossary (EN)" },
+    { title: "Intifada — Definition", url: "glossary-en.html#term-9", text: "Intifada definition term uprising violence terror", page: "Glossary (EN)" },
+    { title: "Nakba — Definition", url: "glossary-en.html#term-12", text: "Nakba definition term catastrophe 1948 refugees", page: "Glossary (EN)" },
+    { title: "Protocols of the Elders of Zion", url: "glossary-en.html#term-15", text: "Protocols Elders Zion forgery conspiracy antisemitic text", page: "Glossary (EN)" },
+    { title: "Zionism — Definition", url: "glossary-en.html#term-17", text: "Zionism definition term movement Jewish state homeland", page: "Glossary (EN)" },
+
+    // ==================== holocaust-denial-en.html (EN) ====================
+    { title: "6 Million Is Exaggerated — Debunked", url: "holocaust-denial-en.html#card-1", text: "6 million exaggerated debunked Holocaust numbers evidence documented", page: "Holocaust Denial (EN)" },
+    { title: "No Gas Chambers — Debunked", url: "holocaust-denial-en.html#card-2", text: "gas chambers debunked Auschwitz extermination camps evidence", page: "Holocaust Denial (EN)" },
+    { title: "Jews Exploit Holocaust for Profit — Debunked", url: "holocaust-denial-en.html#card-3", text: "exploit Holocaust profit debunked reparations memory", page: "Holocaust Denial (EN)" },
+    { title: "Holocaust Was Just War — Debunked", url: "holocaust-denial-en.html#card-4", text: "Holocaust just war debunked systematic genocide industrial", page: "Holocaust Denial (EN)" },
+    { title: "Hitler Didn't Know — Debunked", url: "holocaust-denial-en.html#card-5", text: "Hitler know order debunked Final Solution evidence", page: "Holocaust Denial (EN)" },
+    { title: "It Was Long Ago Move On — Debunked", url: "holocaust-denial-en.html#card-6", text: "long ago move on debunked remembrance importance Holocaust", page: "Holocaust Denial (EN)" },
+
+    // ==================== left-narrative-en.html (EN) ====================
+    { title: "The Historical Pattern — Left Narrative", url: "left-narrative-en.html#content-start", text: "historical pattern left narrative Israel self-criticism", page: "Left Narrative (EN)" },
+    { title: "Psychology of Internal Opposition", url: "left-narrative-en.html#psychology", text: "psychology internal opposition self-criticism phenomenon analysis", page: "Left Narrative (EN)" },
+    { title: "Organizations — Funding Activities Results", url: "left-narrative-en.html#organizations", text: "organizations funding activities results B'Tselem Breaking Silence", page: "Left Narrative (EN)" },
+    { title: "Public Figures — Documentation", url: "left-narrative-en.html#individuals", text: "public figures documentation individuals academics journalists", page: "Left Narrative (EN)" },
+    { title: "Post-Zionism — Undermining Legitimacy", url: "left-narrative-en.html#post-zionism", text: "post-Zionism undermining legitimacy new historians narrative", page: "Left Narrative (EN)" },
+    { title: "Media and Academia Distribution", url: "left-narrative-en.html#media-academia", text: "media academia distribution mechanisms narrative influence", page: "Left Narrative (EN)" },
+    { title: "Consequences — Measurable Results", url: "left-narrative-en.html#damage", text: "consequences measurable results damage delegitimization impact", page: "Left Narrative (EN)" },
+    { title: "Legitimate Criticism vs Harmful Action", url: "left-narrative-en.html#distinction-response", text: "legitimate criticism harmful action distinction response responsibility", page: "Left Narrative (EN)" },
+
+    // ==================== lies-en.html (EN) ====================
+    { title: "Israel Committed Genocide — Debunked", url: "lies-en.html#card-1", text: "Israel genocide Gaza debunked false accusation lie", page: "Lies Debunked (EN)" },
+    { title: "Israel Pushed Trump to Fight Iran — Debunked", url: "lies-en.html#card-2", text: "Israel Trump Iran pushed debunked false claim", page: "Lies Debunked (EN)" },
+    { title: "Israel Is Apartheid State — Debunked", url: "lies-en.html#card-3", text: "Israel apartheid state debunked Arab citizens equal rights", page: "Lies Debunked (EN)" },
+    { title: "Jews Control Media and Economy — Debunked", url: "lies-en.html#card-4", text: "Jews control media economy debunked conspiracy stereotype", page: "Lies Debunked (EN)" },
+    { title: "No Historical Connection to Land — Debunked", url: "lies-en.html#card-5", text: "historical connection land Israel debunked archaeology", page: "Lies Debunked (EN)" },
+    { title: "Israel Created Hamas — Debunked", url: "lies-en.html#card-6", text: "Israel created Hamas debunked Muslim Brotherhood", page: "Lies Debunked (EN)" },
+    { title: "From River to Sea — Decoded", url: "lies-en.html#card-7", text: "river to sea decoded call destruction Israel elimination", page: "Lies Debunked (EN)" },
+    { title: "Israel Steals Organs — Debunked", url: "lies-en.html#card-9", text: "Israel steals organs Palestinians debunked blood libel modern", page: "Lies Debunked (EN)" },
+    { title: "Israel Targets Journalists — Debunked", url: "lies-en.html#card-10", text: "Israel targets journalists debunked media war zone", page: "Lies Debunked (EN)" },
+
+    // ==================== mind-en.html (EN) ====================
+    { title: "Cognitive Biases — Built-in Errors", url: "mind-en.html#content-start", text: "cognitive biases thinking errors confirmation bias psychology", page: "Mind (EN)" },
+    { title: "12 Documented Propaganda Techniques", url: "mind-en.html#manipulation-playbook", text: "12 propaganda techniques manipulation playbook documented", page: "Mind (EN)" },
+    { title: "Media Literacy — Verification Tools", url: "mind-en.html#media-literacy", text: "media literacy information verification tools fact-check", page: "Mind (EN)" },
+    { title: "Psychology of Mass Control", url: "mind-en.html#mass-control", text: "psychology mass control crowd manipulation authority obedience", page: "Mind (EN)" },
+    { title: "Digital Self-Defense Tools", url: "mind-en.html#digital-defense", text: "digital self-defense practical tools online safety", page: "Mind (EN)" },
+    { title: "Jewish Tradition and Critical Thinking", url: "mind-en.html#jewish-thinking", text: "Jewish tradition critical thinking 3500 years Talmud debate", page: "Mind (EN)" },
+    { title: "5 Questions Before You Share", url: "mind-en.html#mental-shield", text: "5 questions share critical thinking practical steps media diet", page: "Mind (EN)" },
+
+    // ==================== october7-en.html (EN) ====================
+    { title: "Background — Gaza Under Hamas", url: "october7-en.html#background", text: "background Gaza Hamas 2007 2023 charter rockets Iran", page: "October 7 (EN)" },
+    { title: "The Conception — Failure Before Attack", url: "october7-en.html#conception", text: "conception failure warnings dismissed Sinwar Nukhba Jericho Wall", page: "October 7 (EN)" },
+    { title: "Minute-by-Minute Timeline October 7", url: "october7-en.html#timeline-section", text: "timeline minute by minute October 7 2023 attack chronology", page: "October 7 (EN)" },
+    { title: "Community-by-Community Breakdown", url: "october7-en.html#communities", text: "communities breakdown Be'eri Kfar Aza Nir Oz Nova festival", page: "October 7 (EN)" },
+    { title: "Acts of Defense and Rescue", url: "october7-en.html#communities", text: "defense rescue heroism October 7 IDF soldiers civilians", page: "October 7 (EN)" },
+    { title: "The Hostage Crisis", url: "october7-en.html#communities", text: "hostage crisis deals military rescue Noa Argamani", page: "October 7 (EN)" },
+    { title: "Sexual Violence — UN Findings", url: "october7-en.html#communities", text: "sexual violence UN findings Pramila Patten report October 7", page: "October 7 (EN)" },
+    { title: "Intelligence Failure — Comparison to 1973", url: "october7-en.html#communities", text: "intelligence failure comparison 1973 Yom Kippur War warnings", page: "October 7 (EN)" },
+    { title: "Operation Swords of Iron", url: "october7-en.html#communities", text: "Swords of Iron operation Gaza war tunnels metro", page: "October 7 (EN)" },
+
+    // ==================== regions-en.html (EN) ====================
+    { title: "Antisemitism — Muslim and Arab World", url: "regions-en.html#content-start", text: "antisemitism Muslim Arab world Islam Middle East hatred", page: "Regions (EN)" },
+    { title: "Antisemitism — Poland and Eastern Europe", url: "regions-en.html#content-start", text: "antisemitism Poland Eastern Europe pogroms history", page: "Regions (EN)" },
+    { title: "Antisemitism — Nazi Germany", url: "regions-en.html#content-start", text: "antisemitism Nazi Germany Holocaust Third Reich Hitler", page: "Regions (EN)" },
+    { title: "Antisemitism — Modern Western Europe", url: "regions-en.html#content-start", text: "antisemitism modern Western Europe France UK incidents", page: "Regions (EN)" },
+    { title: "Antisemitism — United States", url: "regions-en.html#content-start", text: "antisemitism United States America incidents ADL", page: "Regions (EN)" },
+    { title: "Antisemitism — Iran Islamic Regime", url: "regions-en.html#content-start", text: "antisemitism Iran Islamic regime ayatollahs destruction Israel", page: "Regions (EN)" },
+    { title: "Antisemitism — Japan South Korea East Asia", url: "regions-en.html#content-start", text: "antisemitism Japan South Korea East Asia stereotypes", page: "Regions (EN)" },
+
+    // ==================== statistics-en.html (EN) ====================
+    { title: "Antisemitic Incidents — US (ADL)", url: "statistics-en.html#content-start", text: "antisemitic incidents United States ADL statistics data", page: "Statistics (EN)" },
+    { title: "Antisemitism in Europe (FRA)", url: "statistics-en.html#content-start", text: "antisemitism Europe FRA EU Agency data statistics", page: "Statistics (EN)" },
+    { title: "American Campuses — Antisemitism", url: "statistics-en.html#content-start", text: "American campuses antisemitism universities students", page: "Statistics (EN)" },
+    { title: "Online Antisemitism Statistics", url: "statistics-en.html#content-start", text: "online antisemitism internet social media hatred digital", page: "Statistics (EN)" },
+    { title: "IHRA Definition Adoption Worldwide", url: "statistics-en.html#content-start", text: "IHRA definition adoption worldwide countries governments", page: "Statistics (EN)" },
+    { title: "Global Comparison — Antisemitism vs Population", url: "statistics-en.html#content-start", text: "global comparison antisemitism population size Jews world", page: "Statistics (EN)" },
+
+    // ==================== videos-en.html (EN) ====================
+    { title: "Videos — Roots of Hatred", url: "videos-en.html#youtube", text: "videos roots hatred antiquity antisemitism history", page: "Videos (EN)" },
+    { title: "Videos — Myths Conspiracies Politics", url: "videos-en.html#youtube", text: "videos myths conspiracies politics Protocols", page: "Videos (EN)" },
+    { title: "Videos — Holocaust and Remembrance", url: "videos-en.html#youtube", text: "videos Holocaust remembrance testimonies survivors documentation", page: "Videos (EN)" },
+    { title: "Videos — Israel and Jewish History", url: "videos-en.html#youtube", text: "videos Israel Jewish history Zionism state", page: "Videos (EN)" },
+    { title: "Recommended Channels — Hebrew", url: "videos-en.html#youtube", text: "recommended channels Hebrew YouTube Israeli content", page: "Videos (EN)" },
+    { title: "Recommended Channels — English", url: "videos-en.html#youtube", text: "recommended channels English YouTube content", page: "Videos (EN)" },
+    { title: "Non-Jews Defending Israel — Unique Voices", url: "videos-en.html#youtube", text: "non-Jews defending Israel unique voices support allies", page: "Videos (EN)" },
+
+    // ==================== unity-en.html (EN) ====================
+    { title: "One Body One Soul — Jewish Unity", url: "unity-en.html#content-start", text: "one body soul Jewish unity people nation Israel", page: "Unity (EN)" },
+    { title: "The Great Lie — Divisions They Invented", url: "unity-en.html#great-lie", text: "great lie divisions invented Ashkenazi Sephardi left right secular religious", page: "Unity (EN)" },
+    { title: "Science Says One People", url: "unity-en.html#science", text: "science genetics DNA one people Jewish population studies", page: "Unity (EN)" },
+    { title: "3,500 Years of Wisdom on Unity", url: "unity-en.html#wisdom", text: "3500 years wisdom unity Torah Talmud sources tradition", page: "Unity (EN)" },
+    { title: "The Cost of Division", url: "unity-en.html#cost", text: "cost division destruction Temple exile consequences", page: "Unity (EN)" },
+    { title: "Power of Unity — When We Stood Together", url: "unity-en.html#power", text: "power unity stood together victories strength Israel", page: "Unity (EN)" },
+    { title: "Covenant of Unity — Your Step", url: "unity-en.html#covenant", text: "covenant unity personal community actions 5 steps", page: "Unity (EN)" },
+
+    // ==================== the-schism-en.html (EN) ====================
+    { title: "Real Spectrum — Not What You Thought", url: "the-schism-en.html#spectrum", text: "spectrum religious secular Zionist anti-Zionist real complexity", page: "The Schism (EN)" },
+    { title: "Roots — What Happened in 1897", url: "the-schism-en.html#roots", text: "roots 1897 Herzl Zionism Orthodox opposition history", page: "The Schism (EN)" },
+    { title: "Herzl — The Man Behind the Myth", url: "the-schism-en.html#herzl", text: "Herzl man myth Zionism founder vision state", page: "The Schism (EN)" },
+    { title: "The Three Oaths — Halakhic Debate", url: "the-schism-en.html#three-oaths", text: "three oaths halakhic debate Talmud return Israel forbidden", page: "The Schism (EN)" },
+    { title: "Key Figures in the Debate", url: "the-schism-en.html#figures", text: "key figures debate rabbis Kook Satmar religious Zionism", page: "The Schism (EN)" },
+    { title: "Religious Zionism Responds", url: "the-schism-en.html#religious-zionism", text: "Religious Zionism response Rav Kook beginning redemption", page: "The Schism (EN)" },
+    { title: "What Zionism Got Right and Wrong", url: "the-schism-en.html#right-and-wrong", text: "Zionism right wrong achievements failures criticism analysis", page: "The Schism (EN)" },
+    { title: "Torah Zohar Kabbalah View", url: "the-schism-en.html#torah-kabbalah", text: "Torah Zohar Kabbalah view redemption exile return", page: "The Schism (EN)" },
+    { title: "Path to Unity", url: "the-schism-en.html#unity-path", text: "path unity reconciliation secular religious together", page: "The Schism (EN)" },
+
+    // ==================== sword-prayer-en.html (EN) ====================
+    { title: "Meaning of the Name Israel", url: "sword-prayer-en.html#content-start", text: "meaning name Israel wrestled God Jacob angel", page: "Sword & Prayer (EN)" },
+    { title: "12 Stories of Heroism from the Bible", url: "sword-prayer-en.html#heroism-stories", text: "12 stories heroism Bible Joshua David Samson warriors", page: "Sword & Prayer (EN)" },
+    { title: "King David — Leader Warrior Poet", url: "sword-prayer-en.html#king-david", text: "King David leader warrior poet Psalms Goliath", page: "Sword & Prayer (EN)" },
+    { title: "Commandments of Self-Defense", url: "sword-prayer-en.html#self-defense", text: "commandments self-defense rodef pursuer Jewish law halakha", page: "Sword & Prayer (EN)" },
+    { title: "Torah and Action — The Balance", url: "sword-prayer-en.html#torah-action", text: "Torah action balance prayer physical spiritual warfare", page: "Sword & Prayer (EN)" },
+    { title: "Three Oaths — The Sensitive Issue", url: "sword-prayer-en.html#three-oaths", text: "three oaths sensitive majority minority positions validity", page: "Sword & Prayer (EN)" },
+    { title: "Summary — Core Principles Sword Prayer", url: "sword-prayer-en.html#united-lesson", text: "summary core principles united lesson strength faith action", page: "Sword & Prayer (EN)" },
+
+    // ==================== antisemitism-en.html (EN) — Expand ====================
+    { title: "A Hatred That Changes Shape", url: "antisemitism-en.html#content-start", text: "hatred changes shape antisemitism history religious racial political", page: "Antisemitism (EN)" },
+    { title: "34 Libels — 34 Refutations", url: "antisemitism-en.html#claims", text: "34 libels refutations antisemitic claims debunked", page: "Antisemitism (EN)" },
+    { title: "Religious and Theological Antisemitism", url: "antisemitism-en.html#cat-1", text: "religious theological antisemitism Christianity deicide blood libel", page: "Antisemitism (EN)" },
+    { title: "Racial and Biological Antisemitism", url: "antisemitism-en.html#cat-2", text: "racial biological antisemitism Nazis eugenics race science", page: "Antisemitism (EN)" },
+    { title: "Economic and Financial Stereotypes", url: "antisemitism-en.html#cat-3", text: "economic financial stereotypes banks money control Rothschild", page: "Antisemitism (EN)" },
+
+    // ==================== revolving-door-en.html (EN) — Expand ====================
+    { title: "Major Prisoner Deals — Table of Horror", url: "revolving-door-en.html#deals", text: "prisoner deals exchanges table horror Shalit Jibril", page: "Revolving Door (EN)" },
+    { title: "Revolving Door — Documented Cycles", url: "revolving-door-en.html#revolving", text: "revolving door documented cycles release re-arrest terror", page: "Revolving Door (EN)" },
+    { title: "Samir Kuntar — Child Killer Released", url: "revolving-door-en.html#kuntar", text: "Samir Kuntar child killer released hero prisoner exchange", page: "Revolving Door (EN)" },
+    { title: "82% Return to Terror — The Data", url: "revolving-door-en.html#statistics", text: "82% return terror data recidivism released prisoners", page: "Revolving Door (EN)" },
+    { title: "International Comparison — Israel Stands Alone", url: "revolving-door-en.html#comparison", text: "international comparison Israel prisoner exchanges alone", page: "Revolving Door (EN)" },
+    { title: "Halakha — Captives Not Ransomed for More", url: "revolving-door-en.html#halacha", text: "halakha captives ransomed Talmud Jewish law principle", page: "Revolving Door (EN)" },
+    { title: "Shamgar Commission — Ignored Recommendations", url: "revolving-door-en.html#shamgar", text: "Shamgar Commission recommendations ignored government prisoner", page: "Revolving Door (EN)" },
+
+    // ==================== index-en.html (EN) — Expand ====================
+    { title: "Before We Begin — Introduction", url: "index-en.html#welcome", text: "introduction truth lies antisemitism website about credibility sources", page: "Home (EN)" },
+    { title: "Frequently Asked Questions", url: "index-en.html#faq", text: "FAQ frequently asked questions about site purpose audience", page: "Home (EN)" },
+    { title: "2,500+ Years of Documented Persecution", url: "index-en.html#timeline", text: "2500 years persecution timeline antisemitism history documented", page: "Home (EN)" },
+    { title: "The Psychology of Hatred", url: "index-en.html#psychology", text: "psychology hatred scapegoat confirmation bias projection", page: "Home (EN)" },
+    { title: "Common Libels and Lies", url: "index-en.html#explore-more", text: "common libels lies antisemitic claims debunked refuted", page: "Home (EN)" },
+    { title: "October 7 In-Depth Analysis", url: "index-en.html#explore-more", text: "October 7 in-depth analysis massacre Hamas attack", page: "Home (EN)" },
+    { title: "What Is Antisemitism — Explore", url: "index-en.html#explore-more", text: "what is antisemitism explore learn definition history", page: "Home (EN)" },
 ];
