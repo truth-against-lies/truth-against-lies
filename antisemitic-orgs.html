@@ -10,7 +10,7 @@
       gtag('config', 'G-Z2408LQ9YR');
     </script>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co; connect-src 'self' *.supabase.co *.google-analytics.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; frame-ancestors 'self'; form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co *.basemaps.cartocdn.com *.tile.openstreetmap.org server.arcgisonline.com services.arcgisonline.com unpkg.com; connect-src 'self' *.supabase.co *.google-analytics.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' unpkg.com; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ארגונים אנטישמיים וקבוצות טרור | האמת נגד השקר</title>
     <meta name="description" content="מיפוי מקיף של 237 ארגונים, תנועות וממשלות הפועלים נגד היהודים — מטרור איסלאמיסטי ועד ניאו-נאצים, ממוסדות בינלאומיים ועד תנועות אינטרנט">
@@ -3928,47 +3928,93 @@
 </section>
 
 <!-- ═══════════════════════════════════════════ -->
-<!-- NETWORK MAP -->
+<!-- WORLD MAP -->
 <!-- ═══════════════════════════════════════════ -->
 <section style="margin-top: 50px; margin-bottom: 40px;" id="network-section">
     <div class="section-header">
-        <h2>מפת קשרים — איך הם מחוברים</h2>
+        <h2>מפת עולם — רשת האנטישמיות הגלובלית</h2>
         <div class="section-divider"></div>
-        <p>ויזואליזציה אינטראקטיבית של הקשרים בין ארגונים אנטישמיים. לחצו על נקודה כדי לגלול לכרטיס הארגון.</p>
+        <p>מפת עולם אינטראקטיבית המציגה 233 ארגונים אנטישמיים במיקומם הגיאוגרפי האמיתי. לחצו על סמן כדי לגלול לכרטיס הארגון.</p>
     </div>
-    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+    <!-- Group filters -->
+    <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
         <button class="net-filter active" data-group="all" onclick="filterNetwork('all',this)">הכל</button>
-        <button class="net-filter" data-group="islamist" onclick="filterNetwork('islamist',this)" style="border-color:#e74c3c;color:#e74c3c">טרור אסלאמיסטי</button>
-        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#e67e22;color:#e67e22">ניאו-נאצים</button>
-        <button class="net-filter" data-group="bhi" onclick="filterNetwork('bhi',this)" style="border-color:#9b59b6;color:#9b59b6">עברים שחורים</button>
+        <button class="net-filter" data-group="islamist" onclick="filterNetwork('islamist',this)" style="border-color:#e74c3c;color:#e74c3c">אסלאמיסטי</button>
+        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#e67e22;color:#e67e22">ניאו-נאצי</button>
+        <button class="net-filter" data-group="bhi" onclick="filterNetwork('bhi',this)" style="border-color:#9b59b6;color:#9b59b6">כתות</button>
         <button class="net-filter" data-group="antizionist" onclick="filterNetwork('antizionist',this)" style="border-color:#2ecc71;color:#2ecc71">אנטי-ציונות</button>
         <button class="net-filter" data-group="govts" onclick="filterNetwork('govts',this)" style="border-color:#3498db;color:#3498db">ממשלות</button>
+        <button class="net-filter" data-group="historical" onclick="filterNetwork('historical',this)" style="border-color:#7f8c8d;color:#7f8c8d">היסטורי</button>
         <button class="net-filter" data-group="media" onclick="filterNetwork('media',this)" style="border-color:#f1c40f;color:#f1c40f">תקשורת</button>
+        <button class="net-filter" data-group="institutions" onclick="filterNetwork('institutions',this)" style="border-color:#95a5a6;color:#95a5a6">מוסדות</button>
+        <button class="net-filter" data-group="political" onclick="filterNetwork('political',this)" style="border-color:#1abc9c;color:#1abc9c">מפלגות</button>
+        <button class="net-filter" data-group="individuals" onclick="filterNetwork('individuals',this)" style="border-color:#e74c3c;color:#e74c3c">יחידים</button>
+        <button class="net-filter" data-group="ngos" onclick="filterNetwork('ngos',this)" style="border-color:#e91e63;color:#e91e63">NGO</button>
+        <button class="net-filter" data-group="denial" onclick="filterNetwork('denial',this)" style="border-color:#795548;color:#795548">הכחשה</button>
+        <button class="net-filter" data-group="conspiracy" onclick="filterNetwork('conspiracy',this)" style="border-color:#ff9800;color:#ff9800">קונספירציה</button>
     </div>
-    <div style="margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+    <!-- Edge type toggles -->
+    <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
         <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('funding',this.checked)" style="accent-color:#f1c40f"> <span style="color:#f1c40f">מימון</span></label>
         <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('ideology',this.checked)" style="accent-color:#95a5a6"> <span style="color:#95a5a6">אידיאולוגיה</span></label>
         <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('cooperation',this.checked)" style="accent-color:#3498db"> <span style="color:#3498db">שיתוף פעולה</span></label>
         <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('membership',this.checked)" style="accent-color:#e74c3c"> <span style="color:#e74c3c">חברות</span></label>
     </div>
-    <div id="network-map" style="width:100%;height:600px;background:#0a0a1a;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
-        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;">טוען מפת קשרים...</div>
+    <!-- Layer toggles -->
+    <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+        <button class="layer-toggle active" id="layer-markers" onclick="toggleLayer('markers',this)">&#128204; סמנים</button>
+        <button class="layer-toggle" id="layer-heat" onclick="toggleLayer('heat',this)">&#128293; מפת חום</button>
+        <button class="layer-toggle active" id="layer-connections" onclick="toggleLayer('connections',this)">&#128279; קשרים</button>
     </div>
-    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; font-size: 0.78em; color: #888;">
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-right:4px;vertical-align:middle;"></span>אסלאמיסטי</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;margin-right:4px;vertical-align:middle;"></span>ניאו-נאצי</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;margin-right:4px;vertical-align:middle;"></span>כתות</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2ecc71;margin-right:4px;vertical-align:middle;"></span>אנטי-ציונות</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;margin-right:4px;vertical-align:middle;"></span>ממשלות</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;margin-right:4px;vertical-align:middle;"></span>תקשורת</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#95a5a6;margin-right:4px;vertical-align:middle;"></span>מוסדות</span>
-        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1abc9c;margin-right:4px;vertical-align:middle;"></span>מפלגות</span>
+    <!-- Timeline slider -->
+    <div style="margin-bottom: 16px; text-align: center;">
+        <label style="font-size:0.82em;color:#888;">ציר זמן: <span id="timeline-year" style="color:#e2b714;font-weight:bold;">2025</span></label>
+        <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:4px;">
+            <span style="font-size:0.75em;color:#666;">600</span>
+            <input type="range" id="timeline-slider" min="600" max="2025" value="2025" style="width:60%;max-width:400px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
+            <span style="font-size:0.75em;color:#666;">2025</span>
+        </div>
+    </div>
+    <!-- Map container -->
+    <div id="network-map" style="width:100%;height:600px;background:#0a0a1a;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
+        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;z-index:500;">טוען מפת עולם...</div>
+    </div>
+    <!-- Legend -->
+    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 0.75em; color: #888;">
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-left:3px;vertical-align:middle;"></span>אסלאמיסטי</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;margin-left:3px;vertical-align:middle;"></span>ניאו-נאצי</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;margin-left:3px;vertical-align:middle;"></span>כתות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#2ecc71;margin-left:3px;vertical-align:middle;"></span>אנטי-ציונות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#3498db;margin-left:3px;vertical-align:middle;"></span>ממשלות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#7f8c8d;margin-left:3px;vertical-align:middle;"></span>היסטורי</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#f1c40f;margin-left:3px;vertical-align:middle;"></span>תקשורת</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#95a5a6;margin-left:3px;vertical-align:middle;"></span>מוסדות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#1abc9c;margin-left:3px;vertical-align:middle;"></span>מפלגות</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-left:3px;vertical-align:middle;"></span>יחידים</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e91e63;margin-left:3px;vertical-align:middle;"></span>NGO</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#795548;margin-left:3px;vertical-align:middle;"></span>הכחשה</span>
+        <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ff9800;margin-left:3px;vertical-align:middle;"></span>קונספירציה</span>
     </div>
 </section>
 <style>
-.net-filter { background: transparent; border: 1px solid #555; color: #888; padding: 5px 14px; border-radius: 50px; cursor: pointer; font-size: 0.82em; transition: all 0.2s; }
+.net-filter { background: transparent; border: 1px solid #555; color: #888; padding: 4px 10px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
 .net-filter:hover { border-color: #e2b714; color: #e2b714; }
 .net-filter.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
+.layer-toggle { background: transparent; border: 1px solid #555; color: #888; padding: 4px 12px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
+.layer-toggle:hover { border-color: #e2b714; color: #e2b714; }
+.layer-toggle.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
+.leaflet-container { background: #0a1628; }
+.leaflet-control-layers { background: #1a1a2e !important; color: #e0e0e0 !important; border: 1px solid #333 !important; border-radius: 4px !important; }
+.leaflet-control-layers label { color: #e0e0e0; }
+.leaflet-control-layers-separator { border-color: #333 !important; }
+.leaflet-popup-content-wrapper { background: #1a1a2e; color: #e0e0e0; border-radius: 4px; }
+.leaflet-popup-tip { background: #1a1a2e; }
+.leaflet-popup-content { margin: 8px 12px; font-size: 0.85em; }
+.leaflet-popup-content a { color: #e2b714; }
+.leaflet-control-zoom a { background: #1a1a2e; color: #e0e0e0; border-color: #333; }
+.leaflet-control-zoom a:hover { background: #2a2a3e; }
+.leaflet-control-attribution { background: rgba(10,10,26,0.7); color: #666; font-size: 0.65em; }
+.leaflet-control-attribution a { color: #888; }
 @media (max-width: 768px) { #network-map { height: 400px !important; } }
 </style>
 
@@ -4019,68 +4065,154 @@ document.addEventListener('click', function(e) {
     if (link) { e.preventDefault(); e.stopPropagation(); scrollToOrg(link.getAttribute('data-target')); }
 });
 
-/* === NETWORK MAP (lazy-loaded) === */
-var netInstance = null, netData = null, allEdges = [], activeGroup = 'all', hiddenEdgeTypes = {};
-function initNetwork() {
-    if (netInstance) return;
+/* === WORLD MAP (lazy-loaded with Leaflet) === */
+var mapInstance = null, markerLayer = null, heatLayer = null, connectionLayer = null;
+var allMarkers = [], allConnections = [], activeGroup = 'all', hiddenEdgeTypes = {};
+var timelineMax = 2025;
+var layerState = { markers: true, heat: false, connections: true };
+
+function initMap() {
+    if (mapInstance) return;
     var container = document.getElementById('network-map');
     if (!container) return;
-    var nodes = new vis.DataSet(ORG_NODES.map(function(n) {
-        var g = ORG_GROUPS[n.group] || {};
-        return {id:n.id, label:n.label, title:n.title, group:n.group,
-            color:g.color, shape:g.shape||'dot', font:Object.assign({size:11},g.font||{}), size:14};
-    }));
-    allEdges = ORG_EDGES.map(function(e,i) {
-        var t = EDGE_TYPES[e.type] || {};
-        return {id:i, from:e.from, to:e.to, label:e.label||'', title:e.title||'',
-            color:{color:t.color||'#555',highlight:t.color||'#888'},
-            dashes:t.dashes||false, width:t.width||1, _type:e.type,
-            font:{size:9,color:'#888',strokeWidth:0}};
-    });
-    var edges = new vis.DataSet(allEdges);
-    netData = {nodes:nodes, edges:edges};
-    var options = {
-        physics:{barnesHut:{gravitationalConstant:-4000,centralGravity:0.1,springLength:120,damping:0.15},stabilization:{iterations:200}},
-        interaction:{hover:true,tooltipDelay:200,zoomView:true,dragView:true,navigationButtons:false},
-        layout:{improvedLayout:true},
-        edges:{smooth:{type:'continuous'},arrows:{to:{enabled:true,scaleFactor:0.4}}},
-        nodes:{borderWidth:2}
-    };
     document.getElementById('network-loading').style.display = 'none';
-    netInstance = new vis.Network(container, netData, options);
-    netInstance.on('click', function(p) {
-        if (p.nodes.length > 0) scrollToOrg(p.nodes[0]);
+
+    mapInstance = L.map(container, {
+        center: [25, 20], zoom: 2, minZoom: 1, maxZoom: 18,
+        zoomControl: true, attributionControl: true,
+        worldCopyJump: true
     });
+
+    var satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri', maxZoom: 19
+    });
+    var topo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; Esri', maxZoom: 19
+    });
+    var dark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://carto.com/">CARTO</a>', subdomains: 'abcd', maxZoom: 20
+    });
+    satellite.addTo(mapInstance);
+    L.control.layers({'\u{1F6F0}\uFE0F לוויין': satellite, '\u{1F30D} טופוגרפי': topo, '\u{1F319} כהה': dark}).addTo(mapInstance);
+
+    markerLayer = L.markerClusterGroup({
+        maxClusterRadius: 40, spiderfyOnMaxZoom: true,
+        showCoverageOnHover: false, zoomToBoundsOnClick: true,
+        iconCreateFunction: function(cluster) {
+            var markers = cluster.getAllChildMarkers();
+            var groupCounts = {};
+            markers.forEach(function(m) {
+                var g = m.options._orgGroup || 'individuals';
+                groupCounts[g] = (groupCounts[g] || 0) + 1;
+            });
+            var dominant = Object.keys(groupCounts).sort(function(a,b){return groupCounts[b]-groupCounts[a]})[0];
+            var color = (ORG_GROUPS[dominant] && ORG_GROUPS[dominant].color) ? ORG_GROUPS[dominant].color.background : '#e74c3c';
+            return L.divIcon({
+                html: '<div style="background:'+color+';color:#fff;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:bold;border:2px solid rgba(255,255,255,0.3);box-shadow:0 0 8px '+color+';">'+markers.length+'</div>',
+                className: '', iconSize: [36, 36]
+            });
+        }
+    });
+
+    ORG_NODES.forEach(function(n) {
+        var g = ORG_GROUPS[n.group] || {};
+        var color = g.color ? g.color.background : '#e74c3c';
+        var marker = L.circleMarker([n.lat, n.lng], {
+            radius: 6, fillColor: color, fillOpacity: 0.85,
+            color: g.color ? g.color.border : '#c0392b', weight: 1.5,
+            _orgId: n.id, _orgGroup: n.group, _orgFounded: n.founded
+        });
+        var groupLabel = GROUP_LABELS[n.group] || n.group;
+        marker.bindPopup('<strong>' + n.label + '</strong><br><span style="color:' + color + ';">' + groupLabel + '</span><br>' + n.founded + '<br><a href="#" onclick="scrollToOrg(\'' + n.id + '\');return false;" style="color:#e2b714;">&#8593; לכרטיס הארגון</a>');
+        marker._orgData = n;
+        allMarkers.push(marker);
+        markerLayer.addLayer(marker);
+    });
+    mapInstance.addLayer(markerLayer);
+
+    connectionLayer = L.layerGroup();
+    ORG_EDGES.forEach(function(e) {
+        var fromNode = ORG_NODES.find(function(n){return n.id===e.from});
+        var toNode = ORG_NODES.find(function(n){return n.id===e.to});
+        if (!fromNode || !toNode) return;
+        var t = EDGE_TYPES[e.type] || {};
+        var line = L.polyline([[fromNode.lat, fromNode.lng], [toNode.lat, toNode.lng]], {
+            color: t.color || '#555', weight: t.width || 1, opacity: 0.4,
+            dashArray: t.dashes ? '5 5' : null,
+            _edgeType: e.type, _from: e.from, _to: e.to
+        });
+        if (e.title) line.bindTooltip(e.title, {sticky: true});
+        allConnections.push(line);
+        connectionLayer.addLayer(line);
+    });
+    mapInstance.addLayer(connectionLayer);
+
+    var heatPoints = ORG_NODES.map(function(n){ return [n.lat, n.lng, 0.5]; });
+    heatLayer = L.heatLayer(heatPoints, {
+        radius: 25, blur: 15, maxZoom: 10,
+        gradient: {0.2:'#1a0a0a',0.4:'#8b0000',0.6:'#dc2626',0.8:'#f97316',1.0:'#fbbf24'}
+    });
+
+    setTimeout(function(){ mapInstance.invalidateSize(); }, 100);
 }
+
 function filterNetwork(group, btn) {
     activeGroup = group;
     document.querySelectorAll('.net-filter').forEach(function(b){b.classList.remove('active')});
     if (btn) btn.classList.add('active');
-    if (!netInstance || !netData) return;
-    var visibleNodes = [];
-    netData.nodes.forEach(function(n) {
-        var show = group === 'all' || n.group === group;
-        netData.nodes.update({id:n.id, hidden:!show});
-        if (show) visibleNodes.push(n.id);
-    });
-    applyEdgeFilters(visibleNodes);
+    applyAllFilters();
 }
 function toggleEdgeType(type, show) {
     if (show) delete hiddenEdgeTypes[type]; else hiddenEdgeTypes[type] = true;
-    if (!netInstance || !netData) return;
-    var visibleNodes = [];
-    netData.nodes.forEach(function(n){ if (!n.hidden) visibleNodes.push(n.id); });
-    applyEdgeFilters(visibleNodes);
+    applyAllFilters();
 }
-function applyEdgeFilters(visibleNodes) {
-    var vSet = {};
-    visibleNodes.forEach(function(id){ vSet[id]=true; });
-    allEdges.forEach(function(e) {
-        var show = vSet[e.from] && vSet[e.to] && !hiddenEdgeTypes[e._type];
-        netData.edges.update({id:e.id, hidden:!show});
+function filterTimeline(val) {
+    timelineMax = parseInt(val);
+    document.getElementById('timeline-year').textContent = val;
+    applyAllFilters();
+}
+function toggleLayer(layer, btn) {
+    layerState[layer] = !layerState[layer];
+    btn.classList.toggle('active');
+    if (layer === 'markers') {
+        if (layerState.markers) mapInstance.addLayer(markerLayer);
+        else mapInstance.removeLayer(markerLayer);
+    } else if (layer === 'heat') {
+        if (layerState.heat) mapInstance.addLayer(heatLayer);
+        else mapInstance.removeLayer(heatLayer);
+    } else if (layer === 'connections') {
+        if (layerState.connections) mapInstance.addLayer(connectionLayer);
+        else mapInstance.removeLayer(connectionLayer);
+    }
+}
+function applyAllFilters() {
+    if (!mapInstance) return;
+    var visibleIds = {};
+    markerLayer.clearLayers();
+    allMarkers.forEach(function(m) {
+        var show = (activeGroup === 'all' || m.options._orgGroup === activeGroup) && m.options._orgFounded <= timelineMax;
+        if (show) { markerLayer.addLayer(m); visibleIds[m.options._orgId] = true; }
+    });
+    if (layerState.heat && heatLayer) {
+        mapInstance.removeLayer(heatLayer);
+        var hp = [];
+        allMarkers.forEach(function(m) {
+            if (visibleIds[m.options._orgId]) hp.push([m.getLatLng().lat, m.getLatLng().lng, 0.5]);
+        });
+        heatLayer = L.heatLayer(hp, {
+            radius:25,blur:15,maxZoom:10,
+            gradient:{0.2:'#1a0a0a',0.4:'#8b0000',0.6:'#dc2626',0.8:'#f97316',1.0:'#fbbf24'}
+        });
+        mapInstance.addLayer(heatLayer);
+    }
+    connectionLayer.clearLayers();
+    allConnections.forEach(function(line) {
+        var show = visibleIds[line.options._from] && visibleIds[line.options._to] && !hiddenEdgeTypes[line.options._edgeType];
+        if (show) connectionLayer.addLayer(line);
     });
 }
-// Lazy-load vis-network: load EN data (edges/groups) first, then HE data (labels)
+
+// Lazy-load Leaflet: load EN data first (edges/groups), then HE data (labels), then Leaflet + plugins
 (function(){
     var sec = document.getElementById('network-section');
     if (!sec) return;
@@ -4094,10 +4226,32 @@ function applyEdgeFilters(visibleNodes) {
                 var ds2 = document.createElement('script');
                 ds2.src = 'orgs-network-data-he.js';
                 ds2.onload = function() {
-                    var s = document.createElement('script');
-                    s.src = 'https://unpkg.com/vis-network@9.1.6/standalone/umd/vis-network.min.js';
-                    s.onload = initNetwork;
-                    document.head.appendChild(s);
+                    var css = document.createElement('link');
+                    css.rel = 'stylesheet';
+                    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+                    document.head.appendChild(css);
+                    var mccss = document.createElement('link');
+                    mccss.rel = 'stylesheet';
+                    mccss.href = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css';
+                    document.head.appendChild(mccss);
+                    var mccss2 = document.createElement('link');
+                    mccss2.rel = 'stylesheet';
+                    mccss2.href = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css';
+                    document.head.appendChild(mccss2);
+                    var ljs = document.createElement('script');
+                    ljs.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+                    ljs.onload = function() {
+                        var mcjs = document.createElement('script');
+                        mcjs.src = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js';
+                        mcjs.onload = function() {
+                            var hjs = document.createElement('script');
+                            hjs.src = 'https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js';
+                            hjs.onload = initMap;
+                            document.head.appendChild(hjs);
+                        };
+                        document.head.appendChild(mcjs);
+                    };
+                    document.head.appendChild(ljs);
                 };
                 document.head.appendChild(ds2);
             };
