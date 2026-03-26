@@ -705,6 +705,7 @@
         .timeline {
             position: relative;
             padding: 20px 0;
+            overflow: visible;
         }
         .timeline::before {
             content: '';
@@ -765,26 +766,30 @@
             font-size: 0.85em;
             margin-top: 5px;
         }
-        .timeline-image {
-            position: relative;
-            width: 100%;
-            text-align: center;
-            margin: 10px 0;
-            z-index: 1;
-        }
-        .timeline-image img {
-            max-width: 300px;
+        .tl-side-img {
+            position: absolute;
+            top: 10px;
             width: 90%;
+            text-align: center;
+        }
+        .timeline-item:nth-child(odd) .tl-side-img {
+            left: calc(100% + 25%);
+        }
+        .timeline-item:nth-child(even) .tl-side-img {
+            right: calc(100% + 25%);
+        }
+        .tl-side-img img {
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             border: 3px solid #e2b714;
         }
-        .timeline-image .tl-img-caption {
+        .tl-side-img .tl-img-caption {
             display: block;
-            font-size: 0.78em;
+            font-size: 0.72em;
             color: #5a6a7a;
-            margin-top: 6px;
+            margin-top: 4px;
             font-style: italic;
         }
 
@@ -853,7 +858,17 @@
                 left: -27px !important;
                 right: auto !important;
             }
-            .timeline-image img { max-width: 220px; }
+            .tl-side-img {
+                position: static;
+                width: 100%;
+                margin-top: 12px;
+            }
+            .timeline-item:nth-child(odd) .tl-side-img,
+            .timeline-item:nth-child(even) .tl-side-img {
+                left: auto;
+                right: auto;
+            }
+            .tl-side-img img { max-width: 220px; }
             .section-header h2 { font-size: 1.7em; }
             .intro-card { padding: 25px; }
         }
@@ -1710,16 +1725,15 @@
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg/600px-Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg" alt="Ahasuerus, Haman and Esther — Rembrandt, 1660" loading="lazy">
-            <span class="tl-img-caption">Ahasuerus, Haman and Esther — Rembrandt, 1660 | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">486&ndash;465 BCE</div>
                 <div class="timeline-title">Haman and Persia &mdash; The First Genocide Plan</div>
                 <div class="timeline-desc">Haman, vizier to King Ahasuerus (Xerxes I), planned genocide of all Jews in the Persian Empire &mdash; because Mordecai refused to bow to him. Esther exposed the plot. The story of Purim.</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg/600px-Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg" alt="Ahasuerus, Haman and Esther — Rembrandt, 1660" loading="lazy">
+                <span class="tl-img-caption">Rembrandt, 1660</span>
             </div>
         </div>
 
@@ -1756,11 +1770,6 @@
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG/600px-Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG" alt="Arch of Titus relief — Carrying the Menorah from the Temple" loading="lazy">
-            <span class="tl-img-caption">Arch of Titus, Rome — Carrying the Menorah from the Temple, 70 CE | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">70 CE</div>
@@ -1768,11 +1777,10 @@
                 <div class="timeline-desc">Rome destroyed the center of Jewish life. The siege began in April 70, during Passover. Commander: Titus. <strong>1,100,000+ killed</strong> (Josephus), 97,000 taken captive. The victory scene is engraved on the Arch of Titus in Rome. The beginning of the exile.</div>
                 <div class="timeline-victims">Hundreds of thousands</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Israel-2013-Masada-Aerial_01.JPG/600px-Israel-2013-Masada-Aerial_01.JPG" alt="Masada — Aerial view" loading="lazy">
-            <span class="tl-img-caption">Masada — Aerial view | Wikimedia Commons, CC BY-SA 4.0, Godot13</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG/600px-Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG" alt="Arch of Titus relief" loading="lazy">
+                <span class="tl-img-caption">Arch of Titus, Rome</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1781,6 +1789,10 @@
                 <div class="timeline-title">Masada &mdash; The Last Fortress</div>
                 <div class="timeline-desc">967 Jews &mdash; men, women, and children &mdash; against 8,000&ndash;9,000 Romans. The Romans built a ramp of ~500,000 tons of earth. On April 16, 73, they breached the wall. 960 died in mass suicide; only 2 women and 5 children survived.</div>
                 <div class="timeline-victims">967 killed</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Israel-2013-Masada-Aerial_01.JPG/600px-Israel-2013-Masada-Aerial_01.JPG" alt="Masada — Aerial view" loading="lazy">
+                <span class="tl-img-caption">Masada, aerial view</span>
             </div>
         </div>
 
@@ -1809,11 +1821,10 @@
                 <div class="timeline-desc">Crusaders on their way to the Holy Land massacred Jewish communities. <strong>Speyer</strong> (May 3): 11&ndash;12 murdered. <strong>Worms</strong> (May 18&ndash;25): 800&ndash;1,000 massacred. <strong>Mainz</strong> (May 27): ~1,000 murdered in one day. <strong>Cologne</strong> (June): community dispersed, many murdered. Many chose <strong>Kiddush Hashem</strong> &mdash; death rather than conversion.</div>
                 <div class="timeline-victims">~10,000 killed</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Massacre_of_Jews.jpg" alt="Massacre of Jews in Metz — First Crusade, 1096" loading="lazy">
-            <span class="tl-img-caption">Massacre of Jews in Metz, First Crusade — Auguste Migette | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Massacre_of_Jews.jpg" alt="Massacre of Jews in Metz, 1096" loading="lazy">
+                <span class="tl-img-caption">Massacre in Metz — Migette</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1847,11 +1858,10 @@
                 <div class="timeline-desc">Jews were accused of poisoning wells. <strong>350 incidents of violence, 200+ Jewish communities destroyed.</strong> Strasbourg (February 14, 1349): 2,000 Jews burned alive &mdash; the plague had not yet reached the city. Mainz (August 24, 1349): 6,000 Jews murdered in one day. Erfurt 1349: 3,000 murdered (the entire community).</div>
                 <div class="timeline-victims">Tens of thousands</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Doutielt1.jpg/600px-Doutielt1.jpg" alt="Persecution of Jews during the Black Death — miniature, c. 1353" loading="lazy">
-            <span class="tl-img-caption">Persecution of Jews during the Black Death — Pierart dou Tielt, ~1353 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Doutielt1.jpg/600px-Doutielt1.jpg" alt="Persecution of Jews, Black Death" loading="lazy">
+                <span class="tl-img-caption">Miniature, ~1353</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1861,11 +1871,10 @@
                 <div class="timeline-desc">Established November 1, 1478. Targeted "conversos" (Jews who had converted to Christianity). Grand Inquisitor: Tomas de Torquemada (1483). <strong>Approximately 150,000 accused, 3,000&ndash;5,000 executed.</strong> First auto-da-fe: February 6, 1481, Seville &mdash; 6 conversos burned alive. Tortures: waterboarding, the rack, hanging with weights. <strong>Not officially abolished until July 15, 1834 &mdash; 356 years.</strong></div>
                 <div class="timeline-victims">3,000&ndash;5,000 executed</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_rizi-auto_de_fe.jpg/600px-Francisco_rizi-auto_de_fe.jpg" alt="Auto de Fe — Francisco Rizi, 1683" loading="lazy">
-            <span class="tl-img-caption">Auto de Fe, Madrid 1680 — Francisco Rizi, 1683 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_rizi-auto_de_fe.jpg/600px-Francisco_rizi-auto_de_fe.jpg" alt="Auto de Fe, Madrid 1680" loading="lazy">
+                <span class="tl-img-caption">Auto de Fe — Rizi, 1683</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1892,11 +1901,10 @@
                 <div class="timeline-title">The First Ghetto &mdash; Venice</div>
                 <div class="timeline-desc">March 29, 1516: The Doge ordered Jews to live in a single quarter only. "Ghetto Nuovo" &mdash; from an iron foundry ("geto" in Venetian). Gates locked at night, opened in the morning. Only 3 professions allowed: moneylending, textiles, medicine.</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Street_in_the_Venetian_Ghetto.JPG/600px-Street_in_the_Venetian_Ghetto.JPG" alt="Street in the Venetian Ghetto" loading="lazy">
-            <span class="tl-img-caption">Street in the Venetian Ghetto, Venice | Wikimedia Commons, CC BY-SA 4.0, Ethan Doyle White</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Street_in_the_Venetian_Ghetto.JPG/600px-Street_in_the_Venetian_Ghetto.JPG" alt="Street in the Venetian Ghetto" loading="lazy">
+                <span class="tl-img-caption">Venetian Ghetto</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1926,16 +1934,15 @@
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Degradation_alfred_dreyfus.jpg/600px-Degradation_alfred_dreyfus.jpg" alt="Degradation of Dreyfus — Le Petit Journal, 1895" loading="lazy">
-            <span class="tl-img-caption">Degradation of Captain Dreyfus — Le Petit Journal, January 1895 | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1894&ndash;1906</div>
                 <div class="timeline-title">The Dreyfus Affair &mdash; Birth of Zionism</div>
                 <div class="timeline-desc">Captain Alfred Dreyfus was arrested on fabricated espionage charges (the real traitor: Major Esterhazy). Public humiliation on January 5, 1895. Emile Zola published "J'Accuse!" (January 1898). Dreyfus acquitted 1906. <strong>The impact:</strong> Theodor Herzl, in Paris, heard shouts of "Death to Jews." 1896: published "The Jewish State." 1897: The First Zionist Congress in Basel. Israel was established 51 years later.</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Degradation_alfred_dreyfus.jpg/600px-Degradation_alfred_dreyfus.jpg" alt="Degradation of Dreyfus, 1895" loading="lazy">
+                <span class="tl-img-caption">Dreyfus degradation, 1895</span>
             </div>
         </div>
 
@@ -1946,11 +1953,10 @@
                 <div class="timeline-desc"><strong>937 passengers</strong>, almost all Jewish refugees, sailed from Hamburg to Cuba. Cuba refused. The United States refused. Canada refused. The ship returned to Europe. <strong>254 passengers were ultimately murdered in the Holocaust.</strong> The British White Paper (May 1939) limited Jewish immigration to only 75,000 over 5 years. <strong>The Struma</strong> (1942): sank with 769 refugees &mdash; only one survived.</div>
                 <div class="timeline-victims">254 murdered in the Holocaust</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/StLouisHavana.jpg" alt="MS St. Louis in Havana harbor, 1939" loading="lazy">
-            <span class="tl-img-caption">MS St. Louis in Havana harbor, 1939 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/StLouisHavana.jpg" alt="MS St. Louis, 1939" loading="lazy">
+                <span class="tl-img-caption">St. Louis, Havana 1939</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1960,11 +1966,10 @@
                 <div class="timeline-desc"><strong>Nuremberg Laws (1935):</strong> Stripping of citizenship, prohibition of mixed marriages. <strong>Kristallnacht (Nov 9&ndash;10, 1938):</strong> 1,400+ synagogues destroyed, 30,000 arrested, one billion Reichsmark fine on the Jewish community. <strong>Evian Conference (1938):</strong> 32 countries. Only the Dominican Republic agreed to accept refugees. <strong>Wannsee Conference (1942):</strong> 90 minutes, 15 senior Nazis, a list of 11,000,000 Jews in Europe. <strong>Extermination camps:</strong> Auschwitz-Birkenau (1,100,000), Treblinka (700,000&ndash;925,000), Belzec (600,000), Chelmno (300,000), Sobibor (250,000), Majdanek (78,000&ndash;360,000). <strong>Babi Yar (September 1941):</strong> 33,771 murdered in two days &mdash; 36 hours of continuous shooting. Einsatzgruppen: 1.3&ndash;2 million murdered.</div>
                 <div class="timeline-victims" style="font-size:1em; font-weight:bold;">6,000,000 killed</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg/600px-Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg" alt="Auschwitz gate — Arbeit macht frei" loading="lazy">
-            <span class="tl-img-caption">Auschwitz gate — "Arbeit macht frei" | Wikimedia Commons, CC BY-SA 2.0, Tulio Bertorini</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg/600px-Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg" alt="Auschwitz gate" loading="lazy">
+                <span class="tl-img-caption">Auschwitz gate</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">

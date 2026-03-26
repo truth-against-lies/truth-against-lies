@@ -704,6 +704,7 @@
         .timeline {
             position: relative;
             padding: 20px 0;
+            overflow: visible;
         }
         .timeline::before {
             content: '';
@@ -764,26 +765,30 @@
             font-size: 0.85em;
             margin-top: 5px;
         }
-        .timeline-image {
-            position: relative;
-            width: 100%;
-            text-align: center;
-            margin: 10px 0;
-            z-index: 1;
-        }
-        .timeline-image img {
-            max-width: 300px;
+        .tl-side-img {
+            position: absolute;
+            top: 10px;
             width: 90%;
+            text-align: center;
+        }
+        .timeline-item:nth-child(odd) .tl-side-img {
+            left: calc(100% + 25%);
+        }
+        .timeline-item:nth-child(even) .tl-side-img {
+            right: calc(100% + 25%);
+        }
+        .tl-side-img img {
+            max-width: 100%;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             border: 3px solid #e2b714;
         }
-        .timeline-image .tl-img-caption {
+        .tl-side-img .tl-img-caption {
             display: block;
-            font-size: 0.78em;
+            font-size: 0.72em;
             color: #5a6a7a;
-            margin-top: 6px;
+            margin-top: 4px;
             font-style: italic;
         }
 
@@ -852,7 +857,17 @@
                 right: -27px !important;
                 left: auto !important;
             }
-            .timeline-image img { max-width: 220px; }
+            .tl-side-img {
+                position: static;
+                width: 100%;
+                margin-top: 12px;
+            }
+            .timeline-item:nth-child(odd) .tl-side-img,
+            .timeline-item:nth-child(even) .tl-side-img {
+                left: auto;
+                right: auto;
+            }
+            .tl-side-img img { max-width: 220px; }
             .section-header h2 { font-size: 1.7em; }
             .intro-card { padding: 25px; }
         }
@@ -1854,16 +1869,15 @@ function goOriginal() {
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg/600px-Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg" alt="אחשוורוש, המן ואסתר — רמברנדט, 1660" loading="lazy">
-            <span class="tl-img-caption">אחשוורוש, המן ואסתר — רמברנדט, 1660 | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">486-465 לפנה"ס</div>
                 <div class="timeline-title">המן ופרס &mdash; תכנית ההשמדה הראשונה</div>
                 <div class="timeline-desc">המן, משנה למלך אחשוורוש (כסרכסס הראשון), תכנן רצח עם של כל היהודים באימפריה הפרסית &mdash; כי מרדכי סירב להשתחוות לו. אסתר חשפה את המזימה. סיפור פורים.</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg/600px-Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg" alt="אחשוורוש, המן ואסתר — רמברנדט, 1660" loading="lazy">
+                <span class="tl-img-caption">רמברנדט, 1660</span>
             </div>
         </div>
 
@@ -1900,11 +1914,6 @@ function goOriginal() {
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG/600px-Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG" alt="תבליט שער טיטוס — נשיאת המנורה מבית המקדש" loading="lazy">
-            <span class="tl-img-caption">תבליט שער טיטוס, רומא — נשיאת המנורה מבית המקדש, 70 לספירה | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">70 לספירה</div>
@@ -1912,11 +1921,10 @@ function goOriginal() {
                 <div class="timeline-desc">רומא השמידה את מרכז החיים היהודיים. המצור החל באפריל 70, בפסח. מפקד: טיטוס. <strong>1,100,000+ נהרגו</strong> (יוספוס), 97,000 נלקחו בשבי. סצנת הניצחון חרוטה על שער טיטוס ברומא. תחילת הגלות.</div>
                 <div class="timeline-victims">מאות אלפים</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Israel-2013-Masada-Aerial_01.JPG/600px-Israel-2013-Masada-Aerial_01.JPG" alt="מצדה — צילום אווירי" loading="lazy">
-            <span class="tl-img-caption">מצדה — צילום אווירי | Wikimedia Commons, CC BY-SA 4.0, Godot13</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG/600px-Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG" alt="תבליט שער טיטוס" loading="lazy">
+                <span class="tl-img-caption">שער טיטוס, רומא</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1925,6 +1933,10 @@ function goOriginal() {
                 <div class="timeline-title">מצדה &mdash; המבצר האחרון</div>
                 <div class="timeline-desc">967 יהודים — גברים, נשים וילדים — מול 8,000-9,000 רומאים. הרומאים בנו סוללה של ~500,000 טון אדמה. ב-16 באפריל 73 פרצו את החומה. 960 מתו בהתאבדות המונית; שרדו 2 נשים ו-5 ילדים בלבד.</div>
                 <div class="timeline-victims">967 הרוגים</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Israel-2013-Masada-Aerial_01.JPG/600px-Israel-2013-Masada-Aerial_01.JPG" alt="מצדה — צילום אווירי" loading="lazy">
+                <span class="tl-img-caption">מצדה, צילום אווירי</span>
             </div>
         </div>
 
@@ -1953,11 +1965,10 @@ function goOriginal() {
                 <div class="timeline-desc">צלבנים בדרך לארץ הקודש טבחו בקהילות יהודיות. <strong>שפייר</strong> (3 במאי): 11-12 נרצחו. <strong>וורמס</strong> (18-25 במאי): 800-1,000 נטבחו. <strong>מיינץ</strong> (27 במאי): ~1,000 נרצחו ביום אחד. <strong>קלן</strong> (יוני): הקהילה פוזרה, רבים נרצחו. רבים בחרו ב<strong>קידוש השם</strong> &mdash; מוות ולא המרה.</div>
                 <div class="timeline-victims">~10,000 הרוגים</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Massacre_of_Jews.jpg" alt="טבח היהודים במץ — מסע הצלב הראשון, 1096" loading="lazy">
-            <span class="tl-img-caption">טבח היהודים במץ, מסע הצלב הראשון — Auguste Migette | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Massacre_of_Jews.jpg" alt="טבח היהודים במץ, 1096" loading="lazy">
+                <span class="tl-img-caption">טבח היהודים במץ — Migette</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1991,11 +2002,10 @@ function goOriginal() {
                 <div class="timeline-desc">יהודים הואשמו בהרעלת בארות. <strong>350 אירועי אלימות, 200+ קהילות יהודיות הושמדו.</strong> שטרסבורג (14 בפברואר 1349): 2,000 יהודים נשרפו חיים &mdash; המגפה עוד לא הגיעה לעיר. מיינץ (24 באוגוסט 1349): 6,000 יהודים נרצחו ביום אחד. ארפורט 1349: 3,000 נרצחו (כל הקהילה).</div>
                 <div class="timeline-victims">עשרות אלפים</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Doutielt1.jpg/600px-Doutielt1.jpg" alt="רדיפת יהודים בתקופת המוות השחור — מיניאטורה מ-1353" loading="lazy">
-            <span class="tl-img-caption">רדיפת יהודים בתקופת המוות השחור — Pierart dou Tielt, ~1353 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Doutielt1.jpg/600px-Doutielt1.jpg" alt="רדיפת יהודים בתקופת המוות השחור" loading="lazy">
+                <span class="tl-img-caption">מיניאטורה, ~1353</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -2005,11 +2015,10 @@ function goOriginal() {
                 <div class="timeline-desc">הוקמה 1 בנובמבר 1478. כוונה נגד &laquo;קונברסוס&raquo; (יהודים שהתנצרו). אינקוויזיטור ראשי: תומאס דה טורקמדה (1483). <strong>כ-150,000 נאשמו, 3,000-5,000 הוצאו להורג.</strong> אוטו-דה-פה ראשון: 6 בפברואר 1481, סביליה &mdash; 6 קונברסוס נשרפו חיים. עינויים: טביעה, גלגל מתיחה, תלייה במשקולות. <strong>לא בוטלה רשמית עד 15 ביולי 1834 &mdash; 356 שנה.</strong></div>
                 <div class="timeline-victims">3,000-5,000 הוצאו להורג</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_rizi-auto_de_fe.jpg/600px-Francisco_rizi-auto_de_fe.jpg" alt="אוטו-דה-פה — Francisco Rizi, 1683" loading="lazy">
-            <span class="tl-img-caption">אוטו-דה-פה, מדריד 1680 — Francisco Rizi, 1683 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_rizi-auto_de_fe.jpg/600px-Francisco_rizi-auto_de_fe.jpg" alt="אוטו-דה-פה, מדריד 1680" loading="lazy">
+                <span class="tl-img-caption">אוטו-דה-פה — Rizi, 1683</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -2036,11 +2045,10 @@ function goOriginal() {
                 <div class="timeline-title">הגטו הראשון &mdash; ונציה</div>
                 <div class="timeline-desc">29 במרץ 1516: הדוג'ה הורה ליהודים להתגורר ברובע אחד בלבד. &laquo;גטו נואבו&raquo; &mdash; מבית יציקת ברזל (&laquo;גטו&raquo; בוונציאנית). שערים ננעלו בלילה, נפתחו בבוקר. רק 3 מקצועות מותרים: הלוואות, טקסטיל, רפואה.</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Street_in_the_Venetian_Ghetto.JPG/600px-Street_in_the_Venetian_Ghetto.JPG" alt="רחוב בגטו הוונציאני" loading="lazy">
-            <span class="tl-img-caption">רחוב בגטו הוונציאני, ונציה | Wikimedia Commons, CC BY-SA 4.0, Ethan Doyle White</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Street_in_the_Venetian_Ghetto.JPG/600px-Street_in_the_Venetian_Ghetto.JPG" alt="רחוב בגטו הוונציאני" loading="lazy">
+                <span class="tl-img-caption">הגטו הוונציאני</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -2070,16 +2078,15 @@ function goOriginal() {
             </div>
         </div>
 
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Degradation_alfred_dreyfus.jpg/600px-Degradation_alfred_dreyfus.jpg" alt="השפלת דרייפוס — Le Petit Journal, 1895" loading="lazy">
-            <span class="tl-img-caption">השפלת קפטן דרייפוס — Le Petit Journal, ינואר 1895 | Wikimedia Commons, Public Domain</span>
-        </div>
-
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1894-1906</div>
                 <div class="timeline-title">פרשת דרייפוס &mdash; לידת הציונות</div>
                 <div class="timeline-desc">קפטן אלפרד דרייפוס נעצר בעלילת ריגול (הבוגד האמיתי: מיור אסטרהזי). השפלה פומבית ב-5 בינואר 1895. אמיל זולא פרסם &laquo;J'Accuse!&raquo; (ינואר 1898). דרייפוס זוכה 1906. <strong>ההשפעה:</strong> תאודור הרצל, בפריז, שמע צעקות &laquo;מוות ליהודים&raquo;. 1896: פרסם &laquo;מדינת היהודים&raquo;. 1897: הקונגרס הציוני הראשון בבאזל. ישראל הוקמה 51 שנה אחר כך.</div>
+            </div>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Degradation_alfred_dreyfus.jpg/600px-Degradation_alfred_dreyfus.jpg" alt="השפלת דרייפוס, 1895" loading="lazy">
+                <span class="tl-img-caption">השפלת דרייפוס, 1895</span>
             </div>
         </div>
 
@@ -2090,11 +2097,10 @@ function goOriginal() {
                 <div class="timeline-desc"><strong>937 נוסעים</strong>, כמעט כולם פליטים יהודים, הפליגו מהמבורג לקובה. קובה סירבה. ארה"ב סירבה. קנדה סירבה. הספינה חזרה לאירופה. <strong>254 מהנוסעים נרצחו בסופו של דבר בשואה.</strong> הספר הלבן הבריטי (מאי 1939) הגביל עלייה יהודית ל-75,000 בלבד תוך 5 שנים. <strong>אוניית סטרומה</strong> (1942): טבעה עם 769 פליטים &mdash; ניצל אחד בלבד.</div>
                 <div class="timeline-victims">254 נרצחו בשואה</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/StLouisHavana.jpg" alt="אוניית סנט לואיס בנמל הוואנה, 1939" loading="lazy">
-            <span class="tl-img-caption">אוניית סנט לואיס בנמל הוואנה, 1939 | Wikimedia Commons, Public Domain</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/StLouisHavana.jpg" alt="אוניית סנט לואיס, 1939" loading="lazy">
+                <span class="tl-img-caption">סנט לואיס, הוואנה 1939</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
@@ -2104,11 +2110,10 @@ function goOriginal() {
                 <div class="timeline-desc"><strong>חוקי נירנברג (1935):</strong> הפשטת אזרחות, איסור נישואים מעורבים. <strong>ליל הבדולח (9-10.11.1938):</strong> 1,400+ בתי כנסת הושמדו, 30,000 נעצרו, קנס מיליארד רייכסמרק על הקהילה היהודית. <strong>ועידת אוויאן (1938):</strong> 32 מדינות. רק דומיניקנה הסכימה לקלוט פליטים. <strong>ועידת ואנזה (1942):</strong> 90 דקות, 15 נאצים בכירים, רשימה של 11,000,000 יהודים באירופה. <strong>מחנות השמדה:</strong> אושוויץ-בירקנאו (1,100,000), טרבלינקה (700,000-925,000), בלז'ץ (600,000), חלמנו (300,000), סוביבור (250,000), מיידנק (78,000-360,000). <strong>באבי יאר (ספטמבר 1941):</strong> 33,771 נרצחו ביומיים &mdash; 36 שעות ירי רצוף. אינזצגרופן: 1.3-2 מיליון נרצחו.</div>
                 <div class="timeline-victims" style="font-size:1em; font-weight:bold;">6,000,000 הרוגים</div>
             </div>
-        </div>
-
-        <div class="timeline-image fade-in">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg/600px-Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg" alt="שער אושוויץ — Arbeit macht frei" loading="lazy">
-            <span class="tl-img-caption">שער אושוויץ — "Arbeit macht frei" | Wikimedia Commons, CC BY-SA 2.0, Tulio Bertorini</span>
+            <div class="tl-side-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg/600px-Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg" alt="שער אושוויץ" loading="lazy">
+                <span class="tl-img-caption">שער אושוויץ</span>
+            </div>
         </div>
 
         <div class="timeline-item fade-in">
