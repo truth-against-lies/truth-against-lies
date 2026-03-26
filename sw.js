@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v110';
+var CACHE_NAME = 'tal-v111';
 var ASSETS = [
     './',
     'index.html',

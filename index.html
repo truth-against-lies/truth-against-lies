@@ -764,6 +764,28 @@
             font-size: 0.85em;
             margin-top: 5px;
         }
+        .timeline-image {
+            position: relative;
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+            z-index: 1;
+        }
+        .timeline-image img {
+            max-width: 300px;
+            width: 90%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border: 3px solid #e2b714;
+        }
+        .timeline-image .tl-img-caption {
+            display: block;
+            font-size: 0.78em;
+            color: #5a6a7a;
+            margin-top: 6px;
+            font-style: italic;
+        }
 
         /* === PSYCHOLOGY SECTION === */
         .psych-grid {
@@ -830,6 +852,7 @@
                 right: -27px !important;
                 left: auto !important;
             }
+            .timeline-image img { max-width: 220px; }
             .section-header h2 { font-size: 1.7em; }
             .intro-card { padding: 25px; }
         }
@@ -1831,6 +1854,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg/600px-Rembrandt_Harmensz_van_Rijn_-_Ahasuerus%2C_Haman_and_Esther_-_Google_Art_Project.jpg" alt="אחשוורוש, המן ואסתר — רמברנדט, 1660" loading="lazy">
+            <span class="tl-img-caption">אחשוורוש, המן ואסתר — רמברנדט, 1660 | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">486-465 לפנה"ס</div>
@@ -1872,6 +1900,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG/600px-Carrying_off_the_Menorah_from_the_Temple_in_Jerusalem_depicted_on_a_frieze_on_the_Arch_of_Titus_in_the_Forum_Romanum.JPG" alt="תבליט שער טיטוס — נשיאת המנורה מבית המקדש" loading="lazy">
+            <span class="tl-img-caption">תבליט שער טיטוס, רומא — נשיאת המנורה מבית המקדש, 70 לספירה | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">70 לספירה</div>
@@ -1879,6 +1912,11 @@ function goOriginal() {
                 <div class="timeline-desc">רומא השמידה את מרכז החיים היהודיים. המצור החל באפריל 70, בפסח. מפקד: טיטוס. <strong>1,100,000+ נהרגו</strong> (יוספוס), 97,000 נלקחו בשבי. סצנת הניצחון חרוטה על שער טיטוס ברומא. תחילת הגלות.</div>
                 <div class="timeline-victims">מאות אלפים</div>
             </div>
+        </div>
+
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Israel-2013-Masada-Aerial_01.JPG/600px-Israel-2013-Masada-Aerial_01.JPG" alt="מצדה — צילום אווירי" loading="lazy">
+            <span class="tl-img-caption">מצדה — צילום אווירי | Wikimedia Commons, CC BY-SA 4.0, Godot13</span>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1917,6 +1955,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Massacre_of_Jews.jpg" alt="טבח היהודים במץ — מסע הצלב הראשון, 1096" loading="lazy">
+            <span class="tl-img-caption">טבח היהודים במץ, מסע הצלב הראשון — Auguste Migette | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1144</div>
@@ -1950,6 +1993,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Doutielt1.jpg/600px-Doutielt1.jpg" alt="רדיפת יהודים בתקופת המוות השחור — מיניאטורה מ-1353" loading="lazy">
+            <span class="tl-img-caption">רדיפת יהודים בתקופת המוות השחור — Pierart dou Tielt, ~1353 | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1478</div>
@@ -1957,6 +2005,11 @@ function goOriginal() {
                 <div class="timeline-desc">הוקמה 1 בנובמבר 1478. כוונה נגד &laquo;קונברסוס&raquo; (יהודים שהתנצרו). אינקוויזיטור ראשי: תומאס דה טורקמדה (1483). <strong>כ-150,000 נאשמו, 3,000-5,000 הוצאו להורג.</strong> אוטו-דה-פה ראשון: 6 בפברואר 1481, סביליה &mdash; 6 קונברסוס נשרפו חיים. עינויים: טביעה, גלגל מתיחה, תלייה במשקולות. <strong>לא בוטלה רשמית עד 15 ביולי 1834 &mdash; 356 שנה.</strong></div>
                 <div class="timeline-victims">3,000-5,000 הוצאו להורג</div>
             </div>
+        </div>
+
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Francisco_rizi-auto_de_fe.jpg/600px-Francisco_rizi-auto_de_fe.jpg" alt="אוטו-דה-פה — Francisco Rizi, 1683" loading="lazy">
+            <span class="tl-img-caption">אוטו-דה-פה, מדריד 1680 — Francisco Rizi, 1683 | Wikimedia Commons, Public Domain</span>
         </div>
 
         <div class="timeline-item fade-in">
@@ -1983,6 +2036,11 @@ function goOriginal() {
                 <div class="timeline-title">הגטו הראשון &mdash; ונציה</div>
                 <div class="timeline-desc">29 במרץ 1516: הדוג'ה הורה ליהודים להתגורר ברובע אחד בלבד. &laquo;גטו נואבו&raquo; &mdash; מבית יציקת ברזל (&laquo;גטו&raquo; בוונציאנית). שערים ננעלו בלילה, נפתחו בבוקר. רק 3 מקצועות מותרים: הלוואות, טקסטיל, רפואה.</div>
             </div>
+        </div>
+
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Street_in_the_Venetian_Ghetto.JPG/600px-Street_in_the_Venetian_Ghetto.JPG" alt="רחוב בגטו הוונציאני" loading="lazy">
+            <span class="tl-img-caption">רחוב בגטו הוונציאני, ונציה | Wikimedia Commons, CC BY-SA 4.0, Ethan Doyle White</span>
         </div>
 
         <div class="timeline-item fade-in">
@@ -2012,6 +2070,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Degradation_alfred_dreyfus.jpg/600px-Degradation_alfred_dreyfus.jpg" alt="השפלת דרייפוס — Le Petit Journal, 1895" loading="lazy">
+            <span class="tl-img-caption">השפלת קפטן דרייפוס — Le Petit Journal, ינואר 1895 | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1894-1906</div>
@@ -2029,6 +2092,11 @@ function goOriginal() {
             </div>
         </div>
 
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/StLouisHavana.jpg" alt="אוניית סנט לואיס בנמל הוואנה, 1939" loading="lazy">
+            <span class="tl-img-caption">אוניית סנט לואיס בנמל הוואנה, 1939 | Wikimedia Commons, Public Domain</span>
+        </div>
+
         <div class="timeline-item fade-in">
             <div class="timeline-content">
                 <div class="timeline-date">1933-1945</div>
@@ -2036,6 +2104,11 @@ function goOriginal() {
                 <div class="timeline-desc"><strong>חוקי נירנברג (1935):</strong> הפשטת אזרחות, איסור נישואים מעורבים. <strong>ליל הבדולח (9-10.11.1938):</strong> 1,400+ בתי כנסת הושמדו, 30,000 נעצרו, קנס מיליארד רייכסמרק על הקהילה היהודית. <strong>ועידת אוויאן (1938):</strong> 32 מדינות. רק דומיניקנה הסכימה לקלוט פליטים. <strong>ועידת ואנזה (1942):</strong> 90 דקות, 15 נאצים בכירים, רשימה של 11,000,000 יהודים באירופה. <strong>מחנות השמדה:</strong> אושוויץ-בירקנאו (1,100,000), טרבלינקה (700,000-925,000), בלז'ץ (600,000), חלמנו (300,000), סוביבור (250,000), מיידנק (78,000-360,000). <strong>באבי יאר (ספטמבר 1941):</strong> 33,771 נרצחו ביומיים &mdash; 36 שעות ירי רצוף. אינזצגרופן: 1.3-2 מיליון נרצחו.</div>
                 <div class="timeline-victims" style="font-size:1em; font-weight:bold;">6,000,000 הרוגים</div>
             </div>
+        </div>
+
+        <div class="timeline-image fade-in">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg/600px-Arbeit_macht_frei_sign%2C_main_gate_of_the_Auschwitz_I_concentration_camp%2C_Poland_-_20051127.jpg" alt="שער אושוויץ — Arbeit macht frei" loading="lazy">
+            <span class="tl-img-caption">שער אושוויץ — "Arbeit macht frei" | Wikimedia Commons, CC BY-SA 2.0, Tulio Bertorini</span>
         </div>
 
         <div class="timeline-item fade-in">
