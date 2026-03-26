@@ -43,37 +43,58 @@
             padding: 80px 20px 40px;
         }
         .warning-box {
-            max-width: 650px;
-            background: #E2DFD9;
-            border: 2px solid #e74c3c;
-            border-radius: 3px;
+            max-width: 700px;
+            background: rgba(180, 20, 20, 0.08);
+            border: 3px solid #c0392b;
+            border-radius: 8px;
             padding: 50px 40px;
             text-align: center;
+            box-shadow: 0 0 30px rgba(180, 20, 20, 0.12);
         }
         .warning-icon {
-            font-size: 4em;
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            color: #c0392b;
+        }
+        .warning-box h2 {
+            color: #a91b0d;
+            font-size: 2em;
+            font-weight: 900;
             margin-bottom: 20px;
         }
-        .warning-box h1 {
-            color: #e74c3c;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .warning-box p {
-            color: #3a4a5a;
-            font-size: 1.05em;
+        .warning-box > p {
+            color: #1a1a1a;
+            font-size: 1.15em;
+            font-weight: 600;
             margin-bottom: 15px;
             line-height: 1.7;
         }
         .warning-box .warning-detail {
-            background: rgba(231, 76, 60, 0.1);
-            border-right: 3px solid #e74c3c;
-            border-radius: 3px;
-            padding: 15px 20px;
+            background: rgba(180, 20, 20, 0.07);
+            border-right: 4px solid #c0392b;
+            border-radius: 6px;
+            padding: 20px 25px;
             margin: 25px 0;
             text-align: right;
-            color: #e0a0a0;
-            font-size: 0.95em;
+            color: #2a2a2a;
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        .warning-modesty {
+            background: rgba(180, 20, 20, 0.1);
+            border: 2px dashed #c0392b;
+            border-radius: 6px;
+            padding: 18px 25px;
+            margin: 20px 0;
+            text-align: right;
+            color: #8b1a1a;
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+        .warning-modesty strong {
+            color: #a91b0d;
+            font-weight: 800;
         }
         .warning-enter {
             display: inline-block;
@@ -358,12 +379,17 @@
 <div class="warning-gate" id="warningGate">
     <div class="warning-box">
         <div class="warning-icon">&#9888;</div>
-        <h2>&#9888; אזהרה: תוכן קשה</h2>
-        <p>עמוד זה מכיל תמונות קשות ומזעזעות של פיגועים, שואה, ואירועי טרור.</p>
+        <h2>&#9888; אזהרה: תוכן קשה ביותר</h2>
+        <p>עמוד זה מכיל <strong>תמונות קשות ומזעזעות</strong> של פיגועים, שואה, טבח, ואירועי טרור.</p>
         <div class="warning-detail">
             התמונות מוצגות <strong>לצורך תיעוד היסטורי ומודעות בלבד</strong>.<br>
-            כל התמונות מגיעות ממקורות רשמיים ופומביים: Wikimedia Commons, יד ושם, USHMM, לשכת העיתונות הממשלתית, ארכיון צה"ל.<br><br>
-            <strong style="color: #e74c3c;">אם אינך מסוגל לצפות בתמונות קשות &mdash; אל תכנס.</strong>
+            כל התמונות מגיעות ממקורות רשמיים ופומביים: <strong>Wikimedia Commons</strong>, <strong>יד ושם</strong>, <strong>USHMM</strong>, לשכת העיתונות הממשלתית, ארכיון צה"ל.<br><br>
+            <strong style="color: #a91b0d; font-size: 1.1em;">אם אינך מסוגל לצפות בתמונות קשות &mdash; אל תכנס.</strong>
+        </div>
+        <div class="warning-modesty">
+            &#9758; <strong>לתשומת לב הציבור החרדי ושומרי המצוות:</strong><br>
+            עמוד זה מכיל תמונות של <strong>גופות חשופות של אסירים ונרצחים</strong> (תמונות שואה ופוגרומים היסטוריים), וכן תמונות נוספות <strong>שאינן עומדות בסטנדרט של צניעות</strong>.<br>
+            התמונות מוצגות לתיעוד היסטורי בלבד &mdash; <strong>הכניסה על אחריותכם</strong>.
         </div>
         <button class="warning-enter" onclick="enterGallery()">&#10003; אני מבין ובוחר להיכנס</button>
         <a class="warning-back" href="index.html">&#8592; חזרה לאתר הראשי</a>

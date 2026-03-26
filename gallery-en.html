@@ -45,37 +45,58 @@
             padding: 80px 20px 40px;
         }
         .warning-box {
-            max-width: 650px;
-            background: #E2DFD9;
-            border: 2px solid #e74c3c;
-            border-radius: 3px;
+            max-width: 700px;
+            background: rgba(180, 20, 20, 0.08);
+            border: 3px solid #c0392b;
+            border-radius: 8px;
             padding: 50px 40px;
             text-align: center;
+            box-shadow: 0 0 30px rgba(180, 20, 20, 0.12);
         }
         .warning-icon {
-            font-size: 4em;
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            color: #c0392b;
+        }
+        .warning-box h2 {
+            color: #a91b0d;
+            font-size: 2em;
+            font-weight: 900;
             margin-bottom: 20px;
         }
-        .warning-box h1 {
-            color: #e74c3c;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-        }
-        .warning-box p {
-            color: #3a4a5a;
-            font-size: 1.05em;
+        .warning-box > p {
+            color: #1a1a1a;
+            font-size: 1.15em;
+            font-weight: 600;
             margin-bottom: 15px;
             line-height: 1.7;
         }
         .warning-box .warning-detail {
-            background: rgba(231, 76, 60, 0.1);
-            border-left: 3px solid #e74c3c;
-            border-radius: 3px;
-            padding: 15px 20px;
+            background: rgba(180, 20, 20, 0.07);
+            border-left: 4px solid #c0392b;
+            border-radius: 6px;
+            padding: 20px 25px;
             margin: 25px 0;
             text-align: left;
-            color: #e0a0a0;
-            font-size: 0.95em;
+            color: #2a2a2a;
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        .warning-modesty {
+            background: rgba(180, 20, 20, 0.1);
+            border: 2px dashed #c0392b;
+            border-radius: 6px;
+            padding: 18px 25px;
+            margin: 20px 0;
+            text-align: left;
+            color: #8b1a1a;
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 1.8;
+        }
+        .warning-modesty strong {
+            color: #a91b0d;
+            font-weight: 800;
         }
         .warning-enter {
             display: inline-block;
@@ -361,12 +382,17 @@
 <div class="warning-gate" id="warningGate">
     <div class="warning-box">
         <div class="warning-icon">&#9888;</div>
-        <h2>&#9888; Warning: Disturbing Content</h2>
-        <p>This page contains disturbing and shocking images of terror attacks, the Holocaust, and other violent events.</p>
+        <h2>&#9888; Warning: Extremely Disturbing Content</h2>
+        <p>This page contains <strong>disturbing and shocking images</strong> of terror attacks, the Holocaust, massacres, and violent events.</p>
         <div class="warning-detail">
             The images are displayed <strong>for historical documentation and awareness purposes only</strong>.<br>
-            All images come from official and public sources: Wikimedia Commons, Yad Vashem, USHMM, Israel Government Press Office, IDF Archives.<br><br>
-            <strong style="color: #e74c3c;">If you are unable to view disturbing images &mdash; do not enter.</strong>
+            All images come from official and public sources: <strong>Wikimedia Commons</strong>, <strong>Yad Vashem</strong>, <strong>USHMM</strong>, Israel Government Press Office, IDF Archives.<br><br>
+            <strong style="color: #a91b0d; font-size: 1.1em;">If you are unable to view disturbing images &mdash; do not enter.</strong>
+        </div>
+        <div class="warning-modesty">
+            &#9758; <strong>Notice for religiously observant viewers:</strong><br>
+            This page contains images of <strong>exposed bodies of prisoners and victims</strong> (Holocaust and historical pogrom documentation), as well as other images that <strong>may not meet standards of modesty</strong>.<br>
+            All images are shown for historical documentation only &mdash; <strong>enter at your own discretion</strong>.
         </div>
         <button class="warning-enter" onclick="enterGallery()">&#10003; I understand and choose to enter</button>
         <a class="warning-back" href="index-en.html">&#8592; Back to homepage</a>
