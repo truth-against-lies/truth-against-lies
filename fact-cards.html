@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>כרטיסי עובדות | האמת נגד השקר</title>
     <meta name="description" content="18 כרטיסי עובדות לשיתוף — מיתוס, עובדה, מקורות. הפרכת שקרים אנטישמיים בפורמט קצר וויזואלי. עברית + English.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -35,47 +35,47 @@
     <style>
         /* === HERO === */
         .fc-hero { text-align: center; padding: 100px 20px 30px; }
-        .fc-hero h1 { color: #e2b714; font-size: 2.4em; margin-bottom: 10px; }
-        .fc-hero .subtitle { color: #c0c0c0; font-size: 1.05em; max-width: 600px; margin: 0 auto 10px; line-height: 1.7; }
+        .fc-hero h1 { color: #8a6b08; font-size: 2.4em; margin-bottom: 10px; }
+        .fc-hero .subtitle { color: #3a4a5a; font-size: 1.05em; max-width: 600px; margin: 0 auto 10px; line-height: 1.7; }
         .fc-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 15px; }
 
         /* === LANG TOGGLE === */
         .fc-lang-toggle { display: flex; gap: 8px; justify-content: center; margin: 20px 0 15px; }
-        .fc-lang-btn { padding: 6px 18px; background: rgba(226,183,20,0.08); border: 1px solid rgba(226,183,20,0.25); color: #e2b714; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.9em; transition: all 0.2s; }
-        .fc-lang-btn.active { background: #e2b714; color: #0a0a1a; font-weight: bold; }
+        .fc-lang-btn { padding: 6px 18px; background: rgba(226,183,20,0.08); border: 1px solid rgba(226,183,20,0.25); color: #8a6b08; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.9em; transition: all 0.2s; }
+        .fc-lang-btn.active { background: #e2b714; color: #EFEEEF; font-weight: bold; }
 
         /* === FILTER BUTTONS === */
         .fc-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; padding: 0 20px; }
-        .fc-filter-btn { padding: 7px 16px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #999; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
-        .fc-filter-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #e2b714; }
+        .fc-filter-btn { padding: 7px 16px; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); color: #5a6a7a; border-radius: 3px; cursor: pointer; font-family: inherit; font-size: 0.85em; transition: all 0.2s; }
+        .fc-filter-btn.active { background: rgba(226,183,20,0.18); border-color: #e2b714; color: #8a6b08; }
 
         /* === CARDS GRID === */
         .fc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
 
         /* === INDIVIDUAL CARD === */
-        .fc-card { background: #12172b; border-radius: 3px; border-top: 4px solid #e2b714; padding: 24px 22px 16px; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+        .fc-card { background: #E2DFD9; border-radius: 3px; border-top: 4px solid #e2b714; padding: 24px 22px 16px; position: relative; transition: transform 0.2s, box-shadow 0.2s; }
         .fc-card:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
 
         /* Brand watermark top */
-        .fc-brand { text-align: center; color: #e2b714; font-size: 0.7em; letter-spacing: 2px; margin-bottom: 14px; opacity: 0.6; }
+        .fc-brand { text-align: center; color: #8a6b08; font-size: 0.7em; letter-spacing: 2px; margin-bottom: 14px; opacity: 0.6; }
 
         /* Myth box (red) */
         .fc-myth { background: rgba(231,76,60,0.08); border-right: 3px solid #e74c3c; padding: 12px 16px; margin-bottom: 14px; border-radius: 3px; }
         .fc-myth-label { color: #e74c3c; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
-        .fc-myth-text { color: #e0e0e0; font-size: 0.95em; line-height: 1.5; margin: 0; }
+        .fc-myth-text { color: #1a2a3a; font-size: 0.95em; line-height: 1.5; margin: 0; }
 
         /* Fact box (green) */
         .fc-fact { background: rgba(46,204,113,0.08); border-right: 3px solid #2ecc71; padding: 12px 16px; margin-bottom: 14px; border-radius: 3px; }
-        .fc-fact-label { color: #2ecc71; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
-        .fc-fact-text { color: #c0c0c0; font-size: 0.88em; line-height: 1.65; margin: 0; }
+        .fc-fact-label { color: #15803d; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
+        .fc-fact-text { color: #3a4a5a; font-size: 0.88em; line-height: 1.65; margin: 0; }
 
         /* Sources */
-        .fc-source { font-size: 0.75em; color: #777; font-style: italic; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; margin-bottom: 10px; line-height: 1.5; }
+        .fc-source { font-size: 0.75em; color: #5a6a7a; font-style: italic; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 10px; margin-bottom: 10px; line-height: 1.5; }
 
         /* Actions row */
-        .fc-actions { display: flex; gap: 6px; align-items: center; justify-content: center; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; }
-        .fc-actions a, .fc-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.1); background: transparent; color: #888; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
-        .fc-actions a:hover, .fc-actions button:hover { border-color: #e2b714; color: #e2b714; }
+        .fc-actions { display: flex; gap: 6px; align-items: center; justify-content: center; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.08); flex-wrap: wrap; }
+        .fc-actions a, .fc-actions button { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); background: transparent; color: #5a6a7a; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.8em; transition: all 0.2s; text-decoration: none; font-family: inherit; }
+        .fc-actions a:hover, .fc-actions button:hover { border-color: #e2b714; color: #8a6b08; }
         .fc-actions .wa:hover { border-color: #25D366; color: #25D366; }
         .fc-actions .tw:hover { border-color: #1DA1F2; color: #1DA1F2; }
         .fc-actions .tg:hover { border-color: #0088cc; color: #0088cc; }
@@ -90,9 +90,9 @@
 
         /* === BOTTOM LINKS === */
         .fc-links { max-width: 700px; margin: 0 auto; padding: 20px 20px 40px; }
-        .fc-link-box { display: block; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #e2b714; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+        .fc-link-box { display: block; background: rgba(226,183,20,0.06); border: 1px solid rgba(226,183,20,0.15); border-radius: 8px; padding: 18px 22px; margin: 12px 0; color: #8a6b08; text-decoration: none; font-weight: bold; transition: background 0.2s; }
         .fc-link-box:hover { background: rgba(226,183,20,0.12); }
-        .fc-link-box .link-desc { color: #999; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
+        .fc-link-box .link-desc { color: #5a6a7a; font-weight: normal; font-size: 0.85em; display: block; margin-top: 4px; }
 
         /* === RESPONSIVE === */
         @media (max-width: 768px) {
@@ -468,7 +468,7 @@ function downloadFC(btn) {
     var actions = card.querySelector('.fc-actions');
     function doCapture() {
         actions.style.display = 'none';
-        html2canvas(card, { backgroundColor: '#0a0a1a', scale: 2, useCORS: true }).then(function(canvas) {
+        html2canvas(card, { backgroundColor: '#EFEEEF', scale: 2, useCORS: true }).then(function(canvas) {
             actions.style.display = '';
             var link = document.createElement('a');
             link.download = card.id + '.png';

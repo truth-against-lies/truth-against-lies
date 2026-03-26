@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הפילוג הפנימי — כשעם ישראל שונא את עצמו | האמת נגד השקר</title>
     <meta name="description" content="מפה מקיפה של קווי השבר הפנימיים בעם ישראל — אשכנזים מול מזרחים, חילונים מול חרדים, שמאל מול ימין. לא שופטים — חושפים ומרפאים.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -35,68 +35,68 @@
     <style>
         /* === HERO === */
         .is-hero { text-align: center; padding: 100px 20px 50px; background: linear-gradient(135deg, rgba(230,126,34,0.15) 0%, rgba(211,84,0,0.08) 50%, transparent 100%); }
-        .is-hero h1 { color: #e67e22; font-size: 2.5em; margin-bottom: 15px; }
-        .is-hero .subtitle { color: #c0c0c0; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
-        .is-hero .opening-quote { font-size: 1.4em; color: #ffeaa7; font-weight: bold; margin: 30px auto; max-width: 650px; line-height: 1.6; font-style: italic; }
-        .is-hero .quote-source { color: #888; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; font-style: normal; }
+        .is-hero h1 { color: #b45309; font-size: 2.5em; margin-bottom: 15px; }
+        .is-hero .subtitle { color: #3a4a5a; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+        .is-hero .opening-quote { font-size: 1.4em; color: #8a6b08; font-weight: bold; margin: 30px auto; max-width: 650px; line-height: 1.6; font-style: italic; }
+        .is-hero .quote-source { color: #5a6a7a; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; font-style: normal; }
         .is-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 20px; }
 
         /* === STATS === */
         .is-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 900px; margin: 30px auto; padding: 0 20px; }
         .is-stat-box { text-align: center; padding: 20px 16px; background: rgba(230,126,34,0.06); border: 1px solid rgba(230,126,34,0.15); border-radius: 3px; flex: 1 1 140px; min-width: 120px; }
-        .is-stat-num { font-size: 2em; color: #e67e22; font-weight: bold; display: block; }
-        .is-stat-label { color: #888; font-size: 0.82em; margin-top: 5px; }
+        .is-stat-num { font-size: 2em; color: #b45309; font-weight: bold; display: block; }
+        .is-stat-label { color: #5a6a7a; font-size: 0.82em; margin-top: 5px; }
 
         /* === SECTIONS === */
         .is-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .is-section h2 { color: #e2b714; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(230,126,34,0.3); }
-        .is-section .section-intro { color: #999; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
+        .is-section h2 { color: #8a6b08; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(230,126,34,0.3); }
+        .is-section .section-intro { color: #5a6a7a; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
 
         /* === CARDS — base === */
-        .is-card { background: #12172b; padding: 22px; margin-bottom: 16px; border-radius: 3px; }
-        .is-card h3 { color: #e2b714; margin-bottom: 10px; font-size: 1.05em; }
-        .is-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .is-card { background: #E2DFD9; padding: 22px; margin-bottom: 16px; border-radius: 3px; }
+        .is-card h3 { color: #8a6b08; margin-bottom: 10px; font-size: 1.05em; }
+        .is-card p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; }
         .is-card .is-source { font-size: 0.82em; color: #666; margin-top: 10px; font-style: italic; }
 
         /* === CARD VARIANTS (by border color) === */
         .ethnic-card { border-right: 3px solid #9b59b6; }
         .ethnic-card h3 { color: #9b59b6; }
         .secular-haredi-card { border-right: 3px solid #3498db; }
-        .secular-haredi-card h3 { color: #3498db; }
+        .secular-haredi-card h3 { color: #1d4ed8; }
         .dati-haredi-card { border-right: 3px solid #2ecc71; }
-        .dati-haredi-card h3 { color: #2ecc71; }
+        .dati-haredi-card h3 { color: #15803d; }
         .hasidic-card { border-right: 3px solid #8e44ad; }
         .hasidic-card h3 { color: #8e44ad; }
         .political-card { border-right: 3px solid #e74c3c; }
         .political-card h3 { color: #e74c3c; }
         .elite-card { border-right: 3px solid #e2b714; }
-        .elite-card h3 { color: #e2b714; }
+        .elite-card h3 { color: #8a6b08; }
         .ethiopia-card { border-right: 3px solid #1abc9c; }
         .ethiopia-card h3 { color: #1abc9c; }
         .propaganda-card { border-right: 3px solid #95a5a6; }
-        .propaganda-card h3 { color: #95a5a6; }
+        .propaganda-card h3 { color: #607080; }
         .healing-card { border-right: 3px solid #27ae60; background: linear-gradient(135deg, rgba(39,174,96,0.05), rgba(39,174,96,0.02)); }
         .healing-card h3 { color: #27ae60; }
 
         /* === QUOTE BOXES === */
-        .is-quote { border-right: 3px solid #e2b714; padding: 15px 20px; margin: 15px 0; background: rgba(226,183,20,0.04); font-style: italic; color: #ffeaa7; }
-        .is-quote cite { display: block; margin-top: 8px; font-size: 0.85em; color: #888; font-style: normal; }
+        .is-quote { border-right: 3px solid #e2b714; padding: 15px 20px; margin: 15px 0; background: rgba(226,183,20,0.04); font-style: italic; color: #8a6b08; }
+        .is-quote cite { display: block; margin-top: 8px; font-size: 0.85em; color: #5a6a7a; font-style: normal; }
 
         /* === TORAH BOX === */
         .is-torah { border-right: 3px solid #27ae60; padding: 14px 18px; margin: 20px 0; background: rgba(39,174,96,0.06); border-radius: 3px; }
         .is-torah .torah-header { color: #27ae60; font-weight: bold; margin-bottom: 5px; font-size: 0.95em; }
-        .is-torah p { color: #c0c0c0; font-size: 0.92em; line-height: 1.7; }
+        .is-torah p { color: #3a4a5a; font-size: 0.92em; line-height: 1.7; }
 
         /* === PAIN/WARNING BOX === */
         .is-pain { background: rgba(231,76,60,0.08); border-right: 3px solid #e74c3c; padding: 12px 16px; margin: 10px 0; color: #e74c3c; font-weight: 600; font-size: 0.9em; border-radius: 3px; }
 
         /* === FRACTURE MAP === */
         .fracture-map { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .fracture-item { background: #12172b; padding: 20px; text-align: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.05); border-radius: 3px; transition: border-color 0.3s, transform 0.2s; text-decoration: none; display: block; }
-        .fracture-item:hover { border-color: #e67e22; transform: translateY(-2px); }
+        .fracture-item { background: #E2DFD9; padding: 20px; text-align: center; cursor: pointer; border: 1px solid rgba(0,0,0,0.08); border-radius: 3px; transition: border-color 0.3s, transform 0.2s; text-decoration: none; display: block; }
+        .fracture-item:hover { border-color: #b45309; transform: translateY(-2px); }
         .fracture-icon { font-size: 2em; margin-bottom: 8px; display: block; }
-        .fracture-label { color: #e2b714; font-weight: bold; display: block; font-size: 1em; }
-        .fracture-desc { color: #aaa; font-size: 0.82em; margin-top: 5px; display: block; }
+        .fracture-label { color: #8a6b08; font-weight: bold; display: block; font-size: 1em; }
+        .fracture-desc { color: #5a6a7a; font-size: 0.82em; margin-top: 5px; display: block; }
 
         /* === SECTION DIVIDER === */
         .section-divider { text-align: center; color: rgba(230,126,34,0.3); letter-spacing: 10px; padding: 20px; font-size: 1.1em; }
@@ -104,11 +104,11 @@
         /* === TOC === */
         .toc-fab { position: fixed; left: 20px; bottom: 80px; z-index: 997; }
         .toc-fab-btn { background: #d35400; color: #fff; border: none; width: 48px; height: 48px; border-radius: 50%; font-size: 1.3em; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-        .toc-panel { position: fixed; left: -300px; top: 60px; width: 260px; height: calc(100vh - 120px); background: #0d1117; border-right: 2px solid rgba(230,126,34,0.3); padding: 20px 15px; overflow-y: auto; z-index: 997; transition: left 0.3s; }
+        .toc-panel { position: fixed; left: -300px; top: 60px; width: 260px; height: calc(100vh - 120px); background: #EFEEEF; border-right: 2px solid rgba(230,126,34,0.3); padding: 20px 15px; overflow-y: auto; z-index: 997; transition: left 0.3s; }
         .toc-panel.open { left: 0; }
-        .toc-panel h3 { color: #e67e22; font-size: 0.95em; margin-bottom: 15px; }
-        .toc-link { display: block; color: #888; font-size: 0.85em; padding: 6px 0; text-decoration: none; border-right: 2px solid transparent; padding-right: 10px; transition: all 0.2s; }
-        .toc-link:hover, .toc-link.active { color: #e67e22; border-right-color: #e67e22; }
+        .toc-panel h3 { color: #b45309; font-size: 0.95em; margin-bottom: 15px; }
+        .toc-link { display: block; color: #5a6a7a; font-size: 0.85em; padding: 6px 0; text-decoration: none; border-right: 2px solid transparent; padding-right: 10px; transition: all 0.2s; }
+        .toc-link:hover, .toc-link.active { color: #b45309; border-right-color: #b45309; }
 
         /* === RESPONSIVE === */
         @media (max-width: 768px) {
@@ -281,11 +281,11 @@
     <h2>&#9889; בקצרה</h2>
     <div class="is-card" style="border-right: 3px solid #e67e22;">
         <p>
-            <strong style="color: #e67e22;">1.</strong> עם ישראל סובל מפילוג פנימי עמוק שחוצה כל ממד: עדתי, דתי, פוליטי ומעמדי.<br><br>
-            <strong style="color: #e67e22;">2.</strong> האליטה האשכנזית-שמאלנית שלטה במוסדות המדינה (צבא, משפט, אקדמיה, תקשורת) מ-1948 ועד היום, תוך הדרה שיטתית של מזרחים, חרדים ודתיים לאומיים.<br><br>
-            <strong style="color: #e67e22;">3.</strong> גורמים חיצוניים (EU, NIF, סורוס, חמאס, איראן) מנצלים את הפילוגים ומעמיקים אותם באמצעות מימון ותעמולה.<br><br>
-            <strong style="color: #e67e22;">4.</strong> התורה מגדירה את שנאת החינם כסיבה לחורבן — לא כתופעת לוואי, אלא כסיבה ישירה.<br><br>
-            <strong style="color: #e67e22;">5.</strong> העמוד הזה הוא מראה. אנחנו לא שופטים צד — אנחנו חושפים ושואלים: <strong style="color: #fff;">"האם ככה אנחנו רוצים להיות?"</strong>
+            <strong style="color: #b45309;">1.</strong> עם ישראל סובל מפילוג פנימי עמוק שחוצה כל ממד: עדתי, דתי, פוליטי ומעמדי.<br><br>
+            <strong style="color: #b45309;">2.</strong> האליטה האשכנזית-שמאלנית שלטה במוסדות המדינה (צבא, משפט, אקדמיה, תקשורת) מ-1948 ועד היום, תוך הדרה שיטתית של מזרחים, חרדים ודתיים לאומיים.<br><br>
+            <strong style="color: #b45309;">3.</strong> גורמים חיצוניים (EU, NIF, סורוס, חמאס, איראן) מנצלים את הפילוגים ומעמיקים אותם באמצעות מימון ותעמולה.<br><br>
+            <strong style="color: #b45309;">4.</strong> התורה מגדירה את שנאת החינם כסיבה לחורבן — לא כתופעת לוואי, אלא כסיבה ישירה.<br><br>
+            <strong style="color: #b45309;">5.</strong> העמוד הזה הוא מראה. אנחנו לא שופטים צד — אנחנו חושפים ושואלים: <strong style="color: #1a2a3a;">"האם ככה אנחנו רוצים להיות?"</strong>
         </p>
     </div>
 </div>
@@ -446,10 +446,10 @@
     <div class="is-card secular-haredi-card">
         <h3>&#128737; פטור גיוס — המספרים המלאים</h3>
         <p>
-            <strong style="color: #3498db;">1.7%</strong> — שיעור החרדים המתגייסים לצה"ל (2023)<br>
-            <strong style="color: #3498db;">88%</strong> — שיעור הגיוס של חילונים ודתיים לאומיים<br>
-            <strong style="color: #3498db;">40%</strong> — שיעור הנפגעים בקרב שהם דתיים לאומיים<br>
-            <strong style="color: #3498db;">66,000</strong> — חרדים בגיל גיוס שלא משרתים (2024)<br><br>
+            <strong style="color: #1d4ed8;">1.7%</strong> — שיעור החרדים המתגייסים לצה"ל (2023)<br>
+            <strong style="color: #1d4ed8;">88%</strong> — שיעור הגיוס של חילונים ודתיים לאומיים<br>
+            <strong style="color: #1d4ed8;">40%</strong> — שיעור הנפגעים בקרב שהם דתיים לאומיים<br>
+            <strong style="color: #1d4ed8;">66,000</strong> — חרדים בגיל גיוס שלא משרתים (2024)<br><br>
             ההסדר התחיל ב-1948 כאשר בן-גוריון פטר 400 תלמידי ישיבות "עילויים". המספר תפח ל-66,000.<br><br>
             בנובמבר 2024, בג"ץ פסק שעל המדינה לגייס חרדים — אך ביצוע הפסיקה נתקל בהתנגדות פוליטית.</p>
         <div class="is-source">מקורות: IDF Manpower Directorate, Annual Report 2024; Supreme Court Ruling (HCJ 1877/14); CBS Israel 2024</div>
@@ -458,11 +458,11 @@
     <div class="is-card secular-haredi-card">
         <h3>&#128200; סקרים — מה חושבים אחד על השני</h3>
         <p>
-            <strong style="color: #3498db;">44%</strong> מהיהודים הישראלים בעלי עמדה שלילית כלפי חרדים (Pew 2016)<br>
-            <strong style="color: #3498db;">23%</strong> מהחילונים מרגישים "שנאה" כלפי חרדים (IDI 2023)<br>
-            <strong style="color: #3498db;">89%</strong> מהחילונים לא יסכימו שילדם יתחתן עם חרדי/ת (Pew)<br>
-            <strong style="color: #3498db;">71%</strong> מהחרדים מאמינים שחילונים "לא מבינים מה זה יהדות"<br>
-            <strong style="color: #3498db;">62%</strong> מהחרדים סבורים שההלכה צריכה להיות מעל חוקי המדינה (Pew 2016)</p>
+            <strong style="color: #1d4ed8;">44%</strong> מהיהודים הישראלים בעלי עמדה שלילית כלפי חרדים (Pew 2016)<br>
+            <strong style="color: #1d4ed8;">23%</strong> מהחילונים מרגישים "שנאה" כלפי חרדים (IDI 2023)<br>
+            <strong style="color: #1d4ed8;">89%</strong> מהחילונים לא יסכימו שילדם יתחתן עם חרדי/ת (Pew)<br>
+            <strong style="color: #1d4ed8;">71%</strong> מהחרדים מאמינים שחילונים "לא מבינים מה זה יהדות"<br>
+            <strong style="color: #1d4ed8;">62%</strong> מהחרדים סבורים שההלכה צריכה להיות מעל חוקי המדינה (Pew 2016)</p>
         <div class="is-source">מקורות: Pew Research Center, "Israel's Religiously Divided Society" (2016); Israel Democracy Institute, Religion Report (2023)</div>
     </div>
 
@@ -988,7 +988,7 @@
         <strong style="color: #27ae60; font-size: 1.2em; font-style: normal;">השורה התחתונה:</strong><br><br>
         בית המקדש חרב בגלל שנאת חינם.<br>
         הוא ייבנה מחדש רק באהבת חינם.<br><br>
-        <strong style="color: #fff; font-style: normal; font-size: 1.1em;">אנחנו לא שונאים אף צד. אנחנו מראה.<br>
+        <strong style="color: #1a2a3a; font-style: normal; font-size: 1.1em;">אנחנו לא שונאים אף צד. אנחנו מראה.<br>
         ועכשיו, אחרי שראינו — מה אנחנו בוחרים לעשות?</strong>
         <cite>— האמת נגד השקר</cite>
     </div>
@@ -1001,7 +1001,7 @@
     <h2>&#128218; מקורות מרכזיים</h2>
 
     <div class="is-card" style="border-right: 3px solid #555;">
-        <h3 style="color: #888;">מקורות תורניים</h3>
+        <h3 style="color: #5a6a7a;">מקורות תורניים</h3>
         <p>
             תלמוד בבלי, יומא ט:ב (שנאת חינם) &bull;
             תלמוד בבלי, גיטין נה:ב (קמצא ובר קמצא) &bull;
@@ -1019,7 +1019,7 @@
     </div>
 
     <div class="is-card" style="border-right: 3px solid #555;">
-        <h3 style="color: #888;">מחקר אקדמי ונתונים</h3>
+        <h3 style="color: #5a6a7a;">מחקר אקדמי ונתונים</h3>
         <p>
             Tom Segev, "1949: The First Israelis" (1986) &bull;
             Ella Shohat, "Sephardim in Israel: Zionism from the Standpoint of Its Jewish Victims" (1988) &bull;
@@ -1046,10 +1046,10 @@
 <div class="page-footer">
     <p><a href="index.html">&#8594; חזרה לאתר הראשי</a></p>
     <p style="margin-top: 10px;">
-        <a href="the-schism.html" style="color: #e2b714;">&#9878; הפילוג הגדול</a> &nbsp;|&nbsp;
-        <a href="streams.html" style="color: #e2b714;">&#127907; זרמים ומגזרים</a> &nbsp;|&nbsp;
-        <a href="unity.html" style="color: #e2b714;">&#128170; חיזוק העם</a> &nbsp;|&nbsp;
-        <a href="revolving-door.html" style="color: #e2b714;">&#128274; הדלת המסתובבת</a>
+        <a href="the-schism.html" style="color: #8a6b08;">&#9878; הפילוג הגדול</a> &nbsp;|&nbsp;
+        <a href="streams.html" style="color: #8a6b08;">&#127907; זרמים ומגזרים</a> &nbsp;|&nbsp;
+        <a href="unity.html" style="color: #8a6b08;">&#128170; חיזוק העם</a> &nbsp;|&nbsp;
+        <a href="revolving-door.html" style="color: #8a6b08;">&#128274; הדלת המסתובבת</a>
     </p>
     <p style="margin-top: 15px;">נבנה על ידי נתנאל אסיס | 2026</p>
 </div>

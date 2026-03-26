@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>האמת נגד השקר - מאבק באנטישמיות</title>
     <meta name="description" content="פלטפורמה מבוססת מקורות לבחינת 34 עלילות אנטישמיות לאור עובדות, מדע והיסטוריה.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <meta name="google-site-verification" content="Io50XTnq_qBOYXYwBhq7DtaVWNcVE8eDOfeZXNVWZTQ" />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -37,9 +37,9 @@
         :root {
             --gold: #e2b714;
             --gold-dim: rgba(226, 183, 20, 0.3);
-            --bg-dark: #0a0a1a;
-            --card-bg: #12172b;
-            --text: #e0e0e0;
+            --bg-dark: #EFEEEF;
+            --card-bg: #E2DFD9;
+            --text: #1a2a3a;
             --text-dim: #888;
             --red: #e74c3c;
         }
@@ -48,7 +48,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 26, 0.95);
+            background: rgba(74, 106, 138, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(226, 183, 20, 0.3);
@@ -63,7 +63,7 @@
             gap: 12px;
         }
         .nav-logo {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.3em;
             font-weight: bold;
             text-decoration: none;
@@ -79,7 +79,7 @@
             justify-content: center;
             background: none;
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             width: 44px;
             height: 40px;
@@ -96,7 +96,7 @@
             position: absolute;
             top: 50px;
             right: 0;
-            background: rgba(10, 10, 26, 0.98);
+            background: rgba(74, 106, 138, 0.98);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 0 0 3px 3px;
             padding: 8px 0;
@@ -111,7 +111,7 @@
             flex-direction: column;
         }
         .nav-links li a {
-            color: #c0c0c0;
+            color: #ffffff;
             text-decoration: none;
             font-size: 0.95em;
             padding: 11px 25px;
@@ -121,14 +121,14 @@
         }
         .nav-links li:last-child a { border-bottom: none; }
         .nav-links li a:hover {
-            color: #e2b714;
+            color: #8a6b08;
             background: rgba(226, 183, 20, 0.08);
         }
         .nav-donate {
             padding: 6px 14px;
             background: rgba(226, 183, 20, 0.15);
             border: 1px solid rgba(226, 183, 20, 0.4);
-            color: #e2b714;
+            color: #8a6b08;
             text-decoration: none;
             font-size: 0.85em;
             font-weight: bold;
@@ -144,7 +144,7 @@
             padding: 6px 14px;
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.25);
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.85em;
             font-weight: bold;
             border-radius: 3px;
@@ -162,7 +162,7 @@
             display: none;
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10, 10, 26, 0.97);
+            background: rgba(74, 106, 138, 0.97);
             z-index: 2000;
             overflow-y: auto;
             padding: 30px 20px;
@@ -176,7 +176,7 @@
             left: 20px;
             background: none;
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             width: 40px; height: 40px;
             border-radius: 50%;
             font-size: 1.3em;
@@ -184,13 +184,13 @@
         }
         .auth-tab { display: none; max-width: 400px; width: 100%; }
         .auth-tab.active { display: block; }
-        .auth-tab h2 { color: #e2b714; text-align: center; margin-bottom: 25px; }
+        .auth-tab h2 { color: #8a6b08; text-align: center; margin-bottom: 25px; }
         .auth-form { display: flex; flex-direction: column; gap: 15px; }
         .auth-form input {
             padding: 12px 16px;
             background: rgba(226, 183, 20, 0.06);
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e0e0e0;
+            color: #1a2a3a;
             border-radius: 3px;
             font-size: 1em;
             font-family: inherit;
@@ -199,7 +199,7 @@
         .auth-form button {
             padding: 14px;
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border: none;
             border-radius: 3px;
             font-size: 1.1em;
@@ -208,22 +208,22 @@
             font-family: inherit;
         }
         .auth-form button:hover { background: #f0c830; }
-        .auth-switch { color: #888; text-align: center; font-size: 0.9em; }
-        .auth-switch a { color: #e2b714; cursor: pointer; text-decoration: underline; }
+        .auth-switch { color: #5a6a7a; text-align: center; font-size: 0.9em; }
+        .auth-switch a { color: #8a6b08; cursor: pointer; text-decoration: underline; }
         .auth-msg { text-align: center; font-size: 0.9em; min-height: 1.2em; }
         .auth-msg.error { color: #e74c3c; }
-        .auth-msg.success { color: #2ecc71; }
+        .auth-msg.success { color: #15803d; }
         /* PROTECTED CONTENT */
         .protected-card {
-            background: #12172b;
+            background: #E2DFD9;
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-right: 3px solid #e2b714;
             border-radius: 3px;
             padding: 25px;
             margin-bottom: 20px;
         }
-        .protected-card h3 { color: #e2b714; margin-bottom: 10px; }
-        .protected-card p { color: #c0c0c0; }
+        .protected-card h3 { color: #8a6b08; margin-bottom: 10px; }
+        .protected-card p { color: #3a4a5a; }
         .search-highlight {
             outline: 2px solid #e2b714;
             outline-offset: 4px;
@@ -239,7 +239,7 @@
             align-items: center;
             text-align: center;
             padding: 64px 20px 40px;
-            background: #0a0a1a;
+            background: #EFEEEF;
             position: relative;
             overflow: hidden;
         }
@@ -255,14 +255,13 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background:
-                radial-gradient(circle at 50% 30%, rgba(0, 56, 184, 0.08) 0%, transparent 50%),
                 linear-gradient(180deg,
-                    rgba(10, 10, 26, 0.2) 0%,
-                    rgba(10, 10, 26, 0.15) 20%,
-                    rgba(10, 10, 26, 0.25) 40%,
-                    rgba(10, 10, 26, 0.45) 60%,
-                    rgba(10, 10, 26, 0.7) 78%,
-                    rgba(10, 10, 26, 1) 92%
+                    rgba(239, 238, 239, 0) 0%,
+                    rgba(239, 238, 239, 0) 30%,
+                    rgba(239, 238, 239, 0.15) 50%,
+                    rgba(239, 238, 239, 0.45) 65%,
+                    rgba(239, 238, 239, 0.75) 80%,
+                    rgba(239, 238, 239, 1) 95%
                 );
             z-index: 1;
         }
@@ -275,7 +274,7 @@
         }
         .hero .subtitle {
             font-size: 1.4em;
-            color: #e2b714;
+            color: #8a6b08;
             font-weight: bold;
             margin: 0 0 230px 0;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
@@ -287,7 +286,7 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
         .hero .hero-meta {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.8em;
             margin-top: 10px;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -309,11 +308,11 @@
         .stat-number {
             font-size: 1.4em;
             font-weight: bold;
-            color: #e2b714;
+            color: #8a6b08;
         }
         .stat-label {
             font-size: 0.7em;
-            color: #ccc;
+            color: #5a6a7a;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
         }
         .hero-cta {
@@ -321,7 +320,7 @@
             margin-top: 30px;
             padding: 15px 40px;
             background: linear-gradient(135deg, #e2b714, #c9a012);
-            color: #0a0a1a;
+            color: #EFEEEF;
             font-size: 1.1em;
             font-weight: bold;
             border-radius: 3px;
@@ -350,28 +349,28 @@
             margin-bottom: 40px;
         }
         .welcome-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 2em;
             margin-bottom: 12px;
         }
         .welcome-header p {
-            color: #999;
+            color: #5a6a7a;
             font-size: 1.05em;
             line-height: 1.8;
         }
         .welcome-letter {
-            background: rgba(22, 33, 62, 0.6);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-radius: 6px;
             padding: 35px 30px;
             margin-bottom: 30px;
             line-height: 1.9;
-            color: #ccc;
+            color: #5a6a7a;
             font-size: 1.02em;
         }
         .welcome-letter p { margin-bottom: 14px; }
         .welcome-letter p:last-child { margin-bottom: 0; }
-        .welcome-letter strong { color: #e2b714; }
+        .welcome-letter strong { color: #8a6b08; }
         .welcome-topics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -379,25 +378,25 @@
             margin: 30px 0;
         }
         .welcome-topic {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.12);
             border-radius: 4px;
             padding: 18px 15px;
             text-align: center;
         }
         .welcome-topic .wt-icon { font-size: 1.6em; margin-bottom: 8px; }
-        .welcome-topic .wt-title { color: #e2b714; font-size: 0.95em; font-weight: bold; margin-bottom: 5px; }
-        .welcome-topic .wt-desc { color: #999; font-size: 0.82em; line-height: 1.5; }
+        .welcome-topic .wt-title { color: #8a6b08; font-size: 0.95em; font-weight: bold; margin-bottom: 5px; }
+        .welcome-topic .wt-desc { color: #5a6a7a; font-size: 0.82em; line-height: 1.5; }
         .welcome-note {
             background: rgba(226, 183, 20, 0.04);
             border-right: 3px solid #e2b714;
             padding: 20px 22px;
             margin-top: 25px;
-            color: #bbb;
+            color: #5a6a7a;
             font-size: 0.95em;
             line-height: 1.8;
         }
-        .welcome-note .note-sign { color: #e2b714; font-weight: bold; margin-top: 12px; }
+        .welcome-note .note-sign { color: #8a6b08; font-weight: bold; margin-top: 12px; }
 
         /* Trust Box */
         .trust-box {
@@ -408,7 +407,7 @@
             margin: 25px 0;
         }
         .trust-box h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.2em;
             margin-bottom: 18px;
             text-align: center;
@@ -425,8 +424,8 @@
             text-align: center;
             padding-top: 2px;
         }
-        .trust-point strong { color: #e2b714; display: block; margin-bottom: 4px; }
-        .trust-point p { color: #bbb; font-size: 0.93em; line-height: 1.7; margin: 0; }
+        .trust-point strong { color: #8a6b08; display: block; margin-bottom: 4px; }
+        .trust-point p { color: #5a6a7a; font-size: 0.93em; line-height: 1.7; margin: 0; }
         @media (max-width: 768px) {
             .trust-box { padding: 20px 16px; }
         }
@@ -439,7 +438,7 @@
             display: inline-block;
             padding: 14px 40px;
             background: linear-gradient(135deg, #e2b714, #c9a012);
-            color: #0a0a1a;
+            color: #EFEEEF;
             font-size: 1.1em;
             font-weight: bold;
             border-radius: 4px;
@@ -462,13 +461,13 @@
             border-top: 1px solid rgba(124, 77, 255, 0.15);
         }
         .psych-title {
-            color: #7c4dff;
+            color: #6d28d9;
             font-size: 1.5em;
             margin-bottom: 12px;
             text-align: center;
         }
         .psych-intro {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.97em;
             line-height: 1.8;
             text-align: center;
@@ -483,27 +482,27 @@
             gap: 18px;
         }
         .psych-card {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             padding: 28px 24px;
-            border-right: 4px solid #7c4dff;
+            border-right: 4px solid #9b7bff;
         }
         .psych-card h4 {
-            color: #7c4dff;
+            color: #6d28d9;
             font-size: 1.15em;
             margin-bottom: 12px;
         }
         .psych-card p {
             font-size: 0.97em;
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             margin-bottom: 10px;
         }
         .psych-card p:last-child { margin-bottom: 0; }
-        .psych-card strong { color: #d4c4ff; }
-        .psych-card em { color: #e2b714; font-style: normal; }
+        .psych-card strong { color: #7c3aed; }
+        .psych-card em { color: #8a6b08; font-style: normal; }
         .psych-closing {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
             line-height: 1.8;
             text-align: center;
@@ -516,7 +515,7 @@
             padding: 50px 0 30px;
         }
         .faq-item {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             border-right: 4px solid #e2b714;
             margin-bottom: 12px;
@@ -530,12 +529,12 @@
             align-items: center;
         }
         .faq-question h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.05em;
             margin: 0;
         }
         .faq-question .faq-arrow {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.8em;
             transition: transform 0.3s;
         }
@@ -547,7 +546,7 @@
         }
         .faq-answer p {
             padding: 0 22px 18px;
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 0.95em;
             line-height: 1.8;
             margin: 0;
@@ -561,20 +560,20 @@
             padding: 60px 0;
         }
         .intro-card {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             padding: 40px;
             border-right: 4px solid #e2b714;
             margin-bottom: 25px;
         }
         .intro-card h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             margin-bottom: 15px;
         }
         .intro-card p {
             font-size: 1.05em;
-            color: #c0c0c0;
+            color: #3a4a5a;
         }
 
         /* === CATEGORY === */
@@ -583,7 +582,7 @@
         }
 
         .category-header {
-            background: linear-gradient(135deg, #1a1a3e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #D5D0C8 0%, #E2DFD9 100%);
             border-radius: 3px;
             padding: 18px 22px;
             margin-bottom: 20px;
@@ -591,23 +590,23 @@
             cursor: pointer;
         }
         .category-number {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.85em;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 5px;
         }
         .category-header h3 {
-            color: #fff;
+            color: #1a2a3a;
             font-size: 1.5em;
             margin-bottom: 8px;
         }
         .category-header p {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
         }
         .category-toggle {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.9em;
             margin-top: 10px;
         }
@@ -620,7 +619,7 @@
             display: block;
         }
         .claim-card {
-            background: #111128;
+            background: #E2DFD9;
             border-radius: 3px;
             margin-bottom: 15px;
             overflow: hidden;
@@ -643,7 +642,7 @@
             flex: 1;
         }
         .claim-arrow {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.2em;
             margin-right: 15px;
         }
@@ -653,7 +652,7 @@
         .copy-link-btn {
             background: none;
             border: none;
-            color: #888;
+            color: #5a6a7a;
             cursor: pointer;
             font-size: 0.85em;
             padding: 2px 6px;
@@ -661,7 +660,7 @@
             transition: opacity 0.2s;
             float: left;
         }
-        .copy-link-btn:hover { opacity: 1; color: #e2b714; }
+        .copy-link-btn:hover { opacity: 1; color: #8a6b08; }
         .claim-body {
             display: none;
             padding: 0 25px 25px;
@@ -677,7 +676,7 @@
             border-right: 3px solid #2ecc71;
         }
         .refutation-label {
-            color: #2ecc71;
+            color: #15803d;
             font-weight: bold;
             font-size: 0.9em;
             margin-bottom: 8px;
@@ -690,7 +689,7 @@
             border-right: 3px solid #3498db;
         }
         .psychology-label {
-            color: #3498db;
+            color: #1d4ed8;
             font-weight: bold;
             font-size: 0.9em;
             margin-bottom: 8px;
@@ -742,22 +741,22 @@
             right: -37px;
         }
         .timeline-content {
-            background: #16213e;
+            background: #D5D5D5;
             border-radius: 3px;
             padding: 20px;
         }
         .timeline-date {
-            color: #e2b714;
+            color: #8a6b08;
             font-weight: bold;
             font-size: 1.1em;
         }
         .timeline-title {
-            color: #fff;
+            color: #1a2a3a;
             font-size: 1em;
             margin: 5px 0;
         }
         .timeline-desc {
-            color: #999;
+            color: #5a6a7a;
             font-size: 0.9em;
         }
         .timeline-victims {
@@ -774,18 +773,18 @@
             margin-top: 30px;
         }
         .psych-card {
-            background: #12172b;
+            background: #E2DFD9;
             border-radius: 3px;
             padding: 25px;
             border-top: 3px solid #3498db;
         }
         .psych-card h4 {
-            color: #3498db;
+            color: #1d4ed8;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
         .psych-card p {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
         }
 
@@ -799,11 +798,11 @@
             text-align: center;
         }
         .key-insight h3 {
-            color: #e2b714;
+            color: #8a6b08;
             margin-bottom: 10px;
         }
         .key-insight p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 1.05em;
         }
 
@@ -863,7 +862,7 @@
             .section-header h2 { color: #000; }
             h3, h4 { color: #333; }
             .str-highlight { border-color: #000; background: #f5f5f5; color: #000; }
-            .unity-quote { border-color: #ccc; background: #f9f9f9; color: #000; }
+            .unity-quote { border-color: #5a6a7a; background: #f9f9f9; color: #000; }
             * { box-shadow: none !important; text-shadow: none !important; }
         }
 
@@ -878,7 +877,7 @@
             width: 50px;
             height: 50px;
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border: none;
             border-radius: 50%;
             font-size: 1.4em;
@@ -939,7 +938,7 @@
         .lang-toggle {
             background: rgba(226, 183, 20, 0.2);
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             padding: 6px 14px;
             border-radius: 3px;
             cursor: pointer;
@@ -949,7 +948,7 @@
         }
         .lang-toggle:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
         .lang-menu {
             display: none;
@@ -958,7 +957,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(10, 10, 26, 0.97);
+            background: rgba(74, 106, 138, 0.97);
             z-index: 2000;
             overflow-y: auto;
             padding: 30px 20px;
@@ -971,12 +970,12 @@
             margin-bottom: 25px;
         }
         .lang-menu-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.5em;
             margin-bottom: 5px;
         }
         .lang-menu-header p {
-            color: #aaa;
+            color: #5a6a7a;
         }
         .lang-close {
             position: absolute;
@@ -984,7 +983,7 @@
             left: 20px;
             background: none;
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -994,7 +993,7 @@
         }
         .lang-close:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
         .lang-grid {
             display: grid;
@@ -1006,7 +1005,7 @@
         .lang-option {
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.15);
-            color: #e0e0e0;
+            color: #1a2a3a;
             padding: 12px 15px;
             border-radius: 3px;
             text-align: center;
@@ -1017,7 +1016,7 @@
         }
         .lang-option:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border-color: #e2b714;
         }
         @media (max-width: 768px) {
@@ -1034,7 +1033,7 @@
             margin-top: 30px;
         }
         .report-card {
-            background: #12172b;
+            background: #E2DFD9;
             border-radius: 3px;
             padding: 25px;
             border-right: 3px solid #e2b714;
@@ -1044,7 +1043,7 @@
             margin-bottom: 10px;
         }
         .report-card h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.1em;
             margin-bottom: 8px;
         }
@@ -1056,7 +1055,7 @@
         }
         .report-card a.report-link {
             display: inline-block;
-            color: #e2b714;
+            color: #8a6b08;
             border: 1px solid rgba(226,183,20,0.3);
             padding: 6px 16px;
             border-radius: 3px;
@@ -1066,7 +1065,7 @@
         }
         .report-card a.report-link:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
 
         /* === GATEWAY CARDS === */
@@ -1079,7 +1078,7 @@
         }
         .gateway-card {
             display: block;
-            background: linear-gradient(135deg, #1a1a3e, #16213e);
+            background: linear-gradient(135deg, #D5D0C8, #E2DFD9);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 3px;
             padding: 30px 25px;
@@ -1092,13 +1091,13 @@
             transform: translateY(-3px);
         }
         .gateway-icon { font-size: 2em; margin-bottom: 12px; }
-        .gateway-card h3 { color: #e2b714; font-size: 1.15em; margin-bottom: 8px; }
-        .gateway-card p { color: #999; font-size: 0.9em; line-height: 1.5; }
+        .gateway-card h3 { color: #8a6b08; font-size: 1.15em; margin-bottom: 8px; }
+        .gateway-card p { color: #5a6a7a; font-size: 0.9em; line-height: 1.5; }
         .gateway-arrow {
             position: absolute;
             bottom: 15px;
             left: 15px;
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.3em;
             opacity: 0;
             transition: opacity 0.3s;
@@ -1120,12 +1119,12 @@
             margin-bottom: 50px;
         }
         #strengthen .section-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 2.2em;
             margin-bottom: 10px;
         }
         #strengthen .section-header p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 1.1em;
             max-width: 700px;
             margin: 0 auto;
@@ -1140,7 +1139,7 @@
         .str-tab {
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.25);
-            color: #c0c0c0;
+            color: #3a4a5a;
             padding: 10px 22px;
             border-radius: 3px;
             cursor: pointer;
@@ -1150,7 +1149,7 @@
         }
         .str-tab:hover, .str-tab.active {
             background: rgba(226, 183, 20, 0.2);
-            color: #e2b714;
+            color: #8a6b08;
             border-color: #e2b714;
         }
         .str-panel {
@@ -1160,31 +1159,31 @@
         .str-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
         .str-topic {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-radius: 3px;
             padding: 30px;
             margin-bottom: 25px;
         }
         .str-topic h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             margin-bottom: 15px;
             border-bottom: 1px solid rgba(226, 183, 20, 0.15);
             padding-bottom: 10px;
         }
         .str-topic h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.1em;
             margin: 20px 0 10px;
         }
         .str-topic p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             margin-bottom: 12px;
         }
         .str-topic ul {
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             padding-right: 25px;
             margin-bottom: 12px;
@@ -1195,7 +1194,7 @@
             padding: 15px 20px;
             margin: 15px 0;
             border-radius: 0 3px 3px 0;
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.05em;
         }
         [dir="ltr"] .str-highlight {
@@ -1219,12 +1218,12 @@
             text-align: center;
         }
         .str-stat .num {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.6em;
             font-weight: bold;
         }
         .str-stat .label {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 0.85em;
             margin-top: 5px;
         }
@@ -1236,7 +1235,7 @@
             margin-bottom: 30px;
         }
         .unity-card {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 6px;
             padding: 30px 25px;
@@ -1250,14 +1249,14 @@
             transform: translateY(-3px);
         }
         .unity-icon { font-size: 2.5em; margin-bottom: 12px; }
-        .unity-card h4 { color: #e2b714; font-size: 1.15em; margin-bottom: 8px; }
-        .unity-card p { color: #999; font-size: 0.9em; line-height: 1.5; margin: 0; }
+        .unity-card h4 { color: #8a6b08; font-size: 1.15em; margin-bottom: 8px; }
+        .unity-card p { color: #5a6a7a; font-size: 0.9em; line-height: 1.5; margin: 0; }
         .unity-sub { display: none !important; }
         .unity-sub.active { display: block !important; animation: fadeIn 0.4s; }
         .unity-back {
             background: rgba(226, 183, 20, 0.1);
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e2b714;
+            color: #8a6b08;
             padding: 8px 20px;
             border-radius: 3px;
             cursor: pointer;
@@ -1274,11 +1273,11 @@
             margin: 20px 0;
             border-radius: 0 3px 3px 0;
             font-style: italic;
-            color: #ccc;
+            color: #5a6a7a;
             line-height: 1.7;
         }
         [dir="ltr"] .unity-quote { border-right: none; border-left: 3px solid #e2b714; }
-        .unity-quote cite { display: block; margin-top: 8px; font-style: normal; color: #e2b714; font-size: 0.9em; }
+        .unity-quote cite { display: block; margin-top: 8px; font-style: normal; color: #8a6b08; font-size: 0.9em; }
         @media (max-width: 600px) {
             #strengthen { padding: 50px 15px; }
             .str-tabs { gap: 6px; }
@@ -1498,7 +1497,7 @@
     </div>
     <div id="authLoggedIn" class="auth-tab">
         <h2>&#128075; שלום, <span id="authUserName"></span></h2>
-        <p style="text-align:center;color:#888;margin-bottom:20px;">אתה מחובר ויכול לראות תוכן בלעדי</p>
+        <p style="text-align:center;color: #5a6a7a;margin-bottom:20px;">אתה מחובר ויכול לראות תוכן בלעדי</p>
         <div style="text-align:center;">
             <button onclick="handleLogout()" style="padding:12px 30px;background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;border-radius:3px;cursor:pointer;font-family:inherit;font-size:1em;">התנתק</button>
         </div>
@@ -1508,7 +1507,7 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h1><span style="color:#0038b8">האמת</span> נגד <span style="color:#cc0000">השקר</span></h1>
+        <h1><span style="color:#4488cc">האמת</span> נגד <span style="color:#e04040">השקר</span></h1>
     </div>
     <div class="hero-stats">
         <div class="stat">
@@ -1603,8 +1602,8 @@ function goOriginal() {
 
 <span id="content-start"></span>
 <div style="text-align: center; padding: 40px 20px 30px; max-width: 700px; margin: 0 auto;">
-    <p style="font-size: 1.4em; color: #e2b714; font-weight: bold; margin-bottom: 10px;">בחינת טענות אנטישמיות לאור מקורות היסטוריים ואקדמיים</p>
-    <p style="font-size: 1em; color: #aaa;">The Truth Against The Lie &mdash; Examining Antisemitism</p>
+    <p style="font-size: 1.4em; color: #8a6b08; font-weight: bold; margin-bottom: 10px;">בחינת טענות אנטישמיות לאור מקורות היסטוריים ואקדמיים</p>
+    <p style="font-size: 1em; color: #5a6a7a;">The Truth Against The Lie &mdash; Examining Antisemitism</p>
     <a href="lies.html" class="hero-cta" style="margin-top: 20px;">לתוכן המלא</a>
 </div>
 
@@ -1658,7 +1657,7 @@ function goOriginal() {
     </div>
 
     <div style="text-align: center; margin-bottom: 10px;">
-        <h3 style="color: #e2b714; font-size: 1.3em;">מה תמצאו באתר</h3>
+        <h3 style="color: #8a6b08; font-size: 1.3em;">מה תמצאו באתר</h3>
     </div>
 
     <div class="welcome-topics">
@@ -1809,7 +1808,7 @@ function goOriginal() {
                 <span class="faq-arrow">&#9660;</span>
             </div>
             <div class="faq-answer">
-                <p>מעולה! דיוק הוא הערך הכי חשוב כאן. שלחו מייל ל-<a href="mailto:truthagainstlies3@gmail.com" style="color: #e2b714;">truthagainstlies3@gmail.com</a> עם תיקונים, הצעות לעלילות חדשות, או כל פידבק אחר. כל פנייה נקראת.</p>
+                <p>מעולה! דיוק הוא הערך הכי חשוב כאן. שלחו מייל ל-<a href="mailto:truthagainstlies3@gmail.com" style="color: #8a6b08;">truthagainstlies3@gmail.com</a> עם תיקונים, הצעות לעלילות חדשות, או כל פידבק אחר. כל פנייה נקראת.</p>
             </div>
         </div>
     </div>
@@ -2199,7 +2198,7 @@ function goOriginal() {
         <h2>חיזוק העם</h2>
         <div class="section-divider"></div>
         <p>סקירת מנגנוני הלכידות, התרומה ההיסטורית וגורמי ההישרדות של העם היהודי</p>
-        <a href="unity.html" style="display:inline-block;margin-top:12px;padding:10px 28px;background:linear-gradient(135deg,#e2b714,#f5d74e);color:#0a0a1a;border-radius:25px;font-weight:bold;font-size:1.05em;text-decoration:none;">&#x2192; לעמוד חיזוק העם היהודי המלא</a>
+        <a href="unity.html" style="display:inline-block;margin-top:12px;padding:10px 28px;background:linear-gradient(135deg,#e2b714,#f5d74e);color: #0d1520;border-radius:25px;font-weight:bold;font-size:1.05em;text-decoration:none;">&#x2192; לעמוד חיזוק העם היהודי המלא</a>
     </div>
 
     <div class="str-tabs">
@@ -2376,7 +2375,7 @@ function goOriginal() {
 
             <div class="str-topic">
                 <h3>מה אומרים עלינו &mdash; ציטוטים מפורסמים</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 4, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 4, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
 
                 <div class="unity-quote">&laquo;המצרי, הבבלי והפרסי קמו, מילאו את העולם ברעש ובזוהר, ואז נמוגו; היווני והרומאי עשו המון רעש, והם חלפו; עמים אחרים צצו והחזיקו את הלפיד שלהם לזמן, אבל הוא כבה, והם יושבים בדמדומים עכשיו, או נעלמו. <strong>היהודי ראה את כולם, ניצח את כולם, והוא עכשיו מה שהיה תמיד</strong>, ללא דעיכה, ללא חולשת גיל, ללא האטה של אנרגיות. כל הדברים בני תמותה חוץ מהיהודי; כל הכוחות האחרים חולפים, אבל הוא נשאר. מה סוד אלמותו?&raquo;<cite>&mdash; מארק טוויין, &laquo;Concerning the Jews&raquo;, 1899</cite></div>
 
@@ -2389,7 +2388,7 @@ function goOriginal() {
 
             <div class="str-topic">
                 <h3>פרדוקס הגירוש &mdash; כל מדינה שגירשה יהודים נחלשה</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 4, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 4, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
                 <ul>
                     <li><strong>ספרד (1492):</strong> גירוש היהודים סימן את תחילת הדעיכה של האימפריה הספרדית &mdash; ומעולם לא חזרה לגדולתה.</li>
                     <li><strong>פורטוגל (1497):</strong> אותו דפוס. המרה כפויה של כמעט כל היהודים. דעיכה.</li>
@@ -2422,7 +2421,7 @@ function goOriginal() {
             <p>הציל <strong>669 ילדים</strong> יהודים מצ'כוסלובקיה ב-1939 ע"י ארגון רכבות ילדים לבריטניה. <strong>לא סיפר לאיש במשך 50 שנה</strong> &mdash; עד שאשתו מצאה פנקס עם השמות.</p>
 
             <h4>גיבורים נוספים</h4>
-            <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 7, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+            <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 7, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
             <p><strong>ג'ורג'ו פרלסקה</strong> (1910-1992) &mdash; איש עסקים איטלקי בבודפשט. כשהקונסול הספרדי ברח, פרלסקה <strong>התחזה לדיפלומט ספרדי</strong> &mdash; והגרמנים וההונגרים האמינו לו. זייף דרכונים ספרדיים, שכר &laquo;בתים מוגנים&raquo;, <strong>והציל 5,218 יהודים.</strong> אחרי המלחמה חי באלמוניות &mdash; עד שניצולה מצאה אותו ב-1987.</p>
             <p><strong>אריסטידס דה סוזה מנדס</strong> (1885-1954) &mdash; קונסול פורטוגלי בבורדו, צרפת. <strong>הפר פקודה ישירה</strong> מהדיקטטור סלזר שאסר מתן ויזות ליהודים. במשך 3 ימים הנפיק ~30,000 ויזות, <strong>הציל ~10,000 יהודים.</strong> העונש: פוטר, הפנסיה בוטלה, משפחתו חיה בעוני. מת שבור ועני ב-1954.</p>
             <p><strong>יאן קרסקי</strong> (1914-2000) &mdash; שליח מחתרת פולנית. ב-1942 הוברח לגטו ורשה ולמחנה מעבר <strong>כדי לראות בעיניו.</strong> יצא עם ההוכחות, נפגש עם הנשיא רוזוולט ומנהיגי העולם. <strong>סיפר להם על הרצח ההמוני. הם לא האמינו. הם לא עשו דבר.</strong></p>
@@ -2592,7 +2591,7 @@ function goOriginal() {
 
             <div class="str-topic">
                 <h3>תורת &laquo;קורי העכביש&raquo; &mdash; האויב מבין אותנו</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 2, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 2, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
 
                 <h4>נאום בינת ג'ביל &mdash; 26 במאי 2000</h4>
                 <p>חסן נסראללה, מזכ"ל חיזבאללה, אחרי נסיגת ישראל מלבנון:</p>
@@ -2738,9 +2737,9 @@ function goOriginal() {
             <div class="str-topic">
                 <h3>הסכנה הקיומית &mdash; המספרים שצריך לדעת</h3>
                 <p>המספרים האלה הם לא סיסמאות. הם נתונים מאומתים ממחקרים בינלאומיים. והם מציירים תמונה שכל יהודי חייב להכיר.</p>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 7, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 7, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
 
-                <h4 style="color:#cc0000;">15.8 מיליון מול 2.2 מיליארד</h4>
+                <h4 style="color:#e04040;">15.8 מיליון מול 2.2 מיליארד</h4>
                 <div class="str-stat-row">
                     <div class="str-stat"><div class="num">15.8M</div><div class="label">אוכלוסייה יהודית בעולם (0.2% מהאנושות)</div></div>
                     <div class="str-stat"><div class="num">2.2B</div><div class="label">אנשים עם עמדות אנטישמיות (סקר ADL 2025)</div></div>
@@ -2777,13 +2776,13 @@ function goOriginal() {
 
                 <p style="margin-top:15px;"><strong>70%</strong> מכל פשעי השנאה על רקע דתי בארה"ב מכוונים נגד יהודים &mdash; למרות שיהודים הם <strong>2%</strong> מאוכלוסיית ארה"ב.</p>
 
-                <div class="str-highlight" style="border-right-color:#cc0000; color:#ff6b6b;">הנתונים הדמוגרפיים מצביעים על פער ניכר בין גודל האוכלוסייה היהודית לבין היקף העוינות כלפיה &mdash; נתון המדגיש את חשיבות הלכידות הקהילתית.</div>
+                <div class="str-highlight" style="border-right-color:#e04040; color:#dc2626;">הנתונים הדמוגרפיים מצביעים על פער ניכר בין גודל האוכלוסייה היהודית לבין היקף העוינות כלפיה &mdash; נתון המדגיש את חשיבות הלכידות הקהילתית.</div>
             </div>
 
             <div class="str-topic">
                 <h3>7 גורמי ההישרדות &mdash; למה אנחנו עדיין כאן</h3>
                 <p>איך עם של 15.8 מיליון שרד 4,000 שנות רדיפה, גלות ושואה? איך כל אימפריה שניסתה להשמיד אותנו &mdash; נעלמה? <strong>7 גורמים.</strong> ביחד, הם יוצרים את הנס הגדול ביותר בהיסטוריה.</p>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 2, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 2, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
 
                 <h4>1. טקסטים קדושים ותרבות ניידת</h4>
                 <p>העם היהודי הוא &laquo;עם הספר&raquo;. כשבתי מקדש נחרבו וערים נפלו &mdash; <strong>התורה, המשנה, התלמוד נשארו.</strong> אפשר לשאת ספר תורה ממדינה למדינה. אי אפשר לשאת פירמידה. <strong>תרבות יהודית היא ניידת &mdash; ולכן בלתי ניתנת להשמדה.</strong></p>
@@ -2874,7 +2873,7 @@ function goOriginal() {
         <div class="str-topic">
             <h4>7 באוקטובר 2023 &mdash; היום שהכל השתנה</h4>
             <p>ב-7 באוקטובר 2023, ~3,000 מחבלי חמאס חדרו לישראל (מתוך ~6,000 שגויסו) וביצעו את פיגוע הטרור הקטלני ביותר בתולדות המדינה. 1,139-1,219 נרצחו, 251 נחטפו, 4,834 נפצעו. 20+ יישובים הותקפו בו-זמנית. פיגוע הטרור ההרסני ביותר ביחס לאוכלוסייה מאז שמתועדים נתונים גלובליים.</p>
-            <p><a href="october7.html" style="color:#e2b714; font-weight:bold; text-decoration:underline;">&#8594; ניתוח מעמיק מלא: רקע, ציר זמן דקה-דקה, פירוט לפי יישוב, חטופים, כשלון מודיעין, סיפורי גבורה</a></p>
+            <p><a href="october7.html" style="color:#8a6b08; font-weight:bold; text-decoration:underline;">&#8594; ניתוח מעמיק מלא: רקע, ציר זמן דקה-דקה, פירוט לפי יישוב, חטופים, כשלון מודיעין, סיפורי גבורה</a></p>
         </div>
 
         <div class="str-topic">
@@ -2887,10 +2886,10 @@ function goOriginal() {
             <p>מבחינה דמוגרפית, קליטת 5.9 מיליון אנשים בישראל תשנה את האיזון הדמוגרפי באופן שימנע את קיומה כמדינת לאום יהודית &mdash; עובדה המוכרת גם על ידי אנליסטים ניטרליים.</p>
 
             <h4>הפליטים שאף אחד לא מזכיר</h4>
-            <p>850,000 יהודים גורשו מארצות ערב (1948-1970). קהילות של אלפי שנים נהרסו. כמעט כולם נקלטו בישראל. אף אחד לא קיבל פיצוי. אין UNRWA ליהודים. אין &laquo;זכות שיבה&raquo; ליהודי בגדאד. (פירוט מלא לפי מדינות &mdash; בטאב <a href="#" onclick="showStrPanel(0);return false;" style="color:#e2b714;">מי אנחנו</a>)</p>
+            <p>850,000 יהודים גורשו מארצות ערב (1948-1970). קהילות של אלפי שנים נהרסו. כמעט כולם נקלטו בישראל. אף אחד לא קיבל פיצוי. אין UNRWA ליהודים. אין &laquo;זכות שיבה&raquo; ליהודי בגדאד. (פירוט מלא לפי מדינות &mdash; בטאב <a href="#" onclick="showStrPanel(0);return false;" style="color:#8a6b08;">מי אנחנו</a>)</p>
 
             <h4>"אפרטהייד" &mdash; מופרך</h4>
-            <p>2 מיליון ערבים ישראלים הם <strong>אזרחים מלאים</strong> עם זכויות מלאות. (<a href="lies.html" style="color:#e2b714;">הפרכה מפורטת עם מקורות &#8594;</a>)</p>
+            <p>2 מיליון ערבים ישראלים הם <strong>אזרחים מלאים</strong> עם זכויות מלאות. (<a href="lies.html" style="color:#8a6b08;">הפרכה מפורטת עם מקורות &#8594;</a>)</p>
 
             <h4 style="margin-top:20px;">אש"ף נוסד ב-1964 &mdash; 3 שנים לפני &laquo;הכיבוש&raquo;</h4>
             <p>אש"ף (ארגון השחרור הפלסטיני) נוסד ב-1964 &mdash; <strong>3 שנים לפני מלחמת ששת הימים.</strong> ב-1964 הגדה המערבית הייתה תחת שלטון ירדן ועזה תחת שלטון מצרים. <strong>19 שנה של כיבוש ירדני (1948-1967) &mdash; ואף אחד לא דרש מדינה פלסטינית.</strong> אש"ף דיבר על &laquo;שחרור&raquo; של <strong>כל</strong> פלסטין &mdash; כלומר ישראל עצמה.</p>
@@ -2899,7 +2898,7 @@ function goOriginal() {
         <div class="str-topic">
             <h3>הצעות שלום שנדחו &mdash; 1937 עד 2020</h3>
             <p>הציטוט המפורסם של אבא אבן (שר החוץ): <strong>&laquo;הפלסטינים לא מחמיצים אף הזדמנות להחמיץ הזדמנות.&raquo;</strong> הנה ההוכחה:</p>
-            <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(מקור: פרק 5, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
+            <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(מקור: פרק 5, &laquo;הפנים הפנימיים של ישראל&raquo; &mdash; נתנאל לינדר)</p>
 
             <h4>1937 &mdash; ועדת פיל: חלוקת הארץ</h4>
             <p>הצעה בריטית לחלוקת הארץ למדינה יהודית ומדינה ערבית. <strong>היהודים קיבלו (בהסתייגויות). הערבים דחו.</strong></p>
@@ -3030,7 +3029,7 @@ function goOriginal() {
 <!-- PROTECTED CONTENT (visible only to logged-in users) -->
 <section id="protectedContentArea" style="display:none; max-width: 900px; margin: 60px auto; padding: 0 20px;">
     <div class="section-header">
-        <h2 style="color: #e2b714;">&#128274; תוכן בלעדי לחברים</h2>
+        <h2 style="color: #8a6b08;">&#128274; תוכן בלעדי לחברים</h2>
         <div class="section-divider"></div>
     </div>
 </section>
@@ -3054,7 +3053,7 @@ function goOriginal() {
 </div>
 
 <footer>
-    <p style="color: #e2b714; font-size: 1.2em; margin-bottom: 10px;">מידע מבוסס מקורות לצורך מודעות וחינוך</p>
+    <p style="color: #8a6b08; font-size: 1.2em; margin-bottom: 10px;">מידע מבוסס מקורות לצורך מודעות וחינוך</p>
     <p>Evidence-based information for awareness and education</p>
     <div class="footer-sources">
         <p style="margin-top: 20px;">מקורות: ADL, Yad Vashem, USHMM, UNESCO, מחקר אקדמי מבוסס</p>
@@ -3062,17 +3061,17 @@ function goOriginal() {
     </div>
     <p style="margin-top: 25px; font-size: 0.85em; color: #555;">אתר זה מתעד עלילות אנטישמיות למטרת חינוך והפרכה בלבד. שום טענה המתועדת כאן אינה מאושרת. הן מוצגות כדי שניתן יהיה לפרק אותן.</p>
     <!-- DONATION SECTION -->
-    <div style="margin: 40px auto 30px; max-width: 600px; background: #12172b; border: 2px solid rgba(226, 183, 20, 0.4); border-radius: 3px; padding: 35px; text-align: center;">
-        <h3 style="color: #e2b714; font-size: 1.5em; margin-bottom: 8px;">תמיכה בפרויקט</h3>
-        <p style="color: #e2b714; opacity: 0.8; font-size: 1em; margin-bottom: 15px;">תרומתכם מאפשרת המשך פעילות ופיתוח</p>
-        <p style="color: #c0c0c0; font-size: 0.95em; line-height: 1.7; margin-bottom: 25px;">אתר זה נוצר ומתוחזק על ידי אדם פרטי. כל תרומה &mdash; קטנה ככל שתהיה &mdash; מסייעת בהמשך ייצור תוכן, תרגום לשפות נוספות והנגשת המידע לקהלים נוספים.</p>
-        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" style="display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #e2b714, #c9a012); color: #0a0a1a; font-size: 1.15em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(226,183,20,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">קנה לי קפה &#9749;</a>
+    <div style="margin: 40px auto 30px; max-width: 600px; background: #E2DFD9; border: 2px solid rgba(226, 183, 20, 0.4); border-radius: 3px; padding: 35px; text-align: center;">
+        <h3 style="color: #8a6b08; font-size: 1.5em; margin-bottom: 8px;">תמיכה בפרויקט</h3>
+        <p style="color: #8a6b08; opacity: 0.8; font-size: 1em; margin-bottom: 15px;">תרומתכם מאפשרת המשך פעילות ופיתוח</p>
+        <p style="color: #3a4a5a; font-size: 0.95em; line-height: 1.7; margin-bottom: 25px;">אתר זה נוצר ומתוחזק על ידי אדם פרטי. כל תרומה &mdash; קטנה ככל שתהיה &mdash; מסייעת בהמשך ייצור תוכן, תרגום לשפות נוספות והנגשת המידע לקהלים נוספים.</p>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" style="display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #e2b714, #c9a012); color: #EFEEEF; font-size: 1.15em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(226,183,20,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">קנה לי קפה &#9749;</a>
     </div>
 
     <!-- CONTACT -->
     <div style="margin-top: 30px;">
-        <a href="mailto:truthagainstlies3@gmail.com?subject=פנייה מהאתר — Truth Against Lies" style="display: inline-block; padding: 12px 30px; border: 2px solid #7c4dff; color: #7c4dff; font-size: 1em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.background='#7c4dff';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#7c4dff'">&#9993; צרו קשר</a>
-        <p style="color: #aaa; font-size: 0.8em; margin-top: 8px;">הצעות, תיקונים, או עלילות חדשות להוסיף? נשמח לשמוע</p>
+        <a href="mailto:truthagainstlies3@gmail.com?subject=פנייה מהאתר — Truth Against Lies" style="display: inline-block; padding: 12px 30px; border: 2px solid #6d28d9; color: #6d28d9; font-size: 1em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.background='#9b7bff';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#9b7bff'">&#9993; צרו קשר</a>
+        <p style="color: #5a6a7a; font-size: 0.8em; margin-top: 8px;">הצעות, תיקונים, או עלילות חדשות להוסיף? נשמח לשמוע</p>
     </div>
 
     <p style="margin-top: 20px;">נבנה על ידי נתנאל אסיס | 2026</p>

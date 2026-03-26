@@ -10,11 +10,11 @@
       gtag('config', 'G-Z2408LQ9YR');
     </script>
     <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net unpkg.com www.googletagmanager.com translate.google.com; img-src 'self' data: img.youtube.com upload.wikimedia.org *.supabase.co *.basemaps.cartocdn.com *.tile.openstreetmap.org server.arcgisonline.com services.arcgisonline.com unpkg.com; connect-src 'self' *.supabase.co *.google-analytics.com cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' unpkg.com; frame-ancestors 'self'; form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://www.googletagmanager.com https://translate.google.com; img-src 'self' data: https://img.youtube.com https://upload.wikimedia.org https://*.supabase.co https://*.basemaps.cartocdn.com https://*.tile.openstreetmap.org https://server.arcgisonline.com https://services.arcgisonline.com https://unpkg.com; connect-src 'self' https://*.supabase.co https://*.google-analytics.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://unpkg.com; frame-ancestors 'self'; form-action 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Antisemitic Organizations &amp; Terror Groups | Truth Against Lies</title>
     <meta name="description" content="Comprehensive mapping of 237 organizations, movements and governments acting against Jews — from Islamist terror to neo-Nazis, from international institutions to internet movements">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -38,7 +38,7 @@
         /* === ORG CARDS === */
         .org-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
         .org-card {
-            background: #111128;
+            background: #E2DFD9;
             border-radius: 3px;
             overflow: hidden;
             border: 1px solid rgba(226,183,20,0.1);
@@ -52,8 +52,8 @@
             justify-content: space-between;
             align-items: center;
         }
-        .org-header h4 { color: #e2b714; font-size: 1.05em; flex: 1; }
-        .org-arrow { color: #e2b714; font-size: 1.2em; margin-left: 12px; transition: transform 0.3s; }
+        .org-header h4 { color: #8a6b08; font-size: 1.05em; flex: 1; }
+        .org-arrow { color: #8a6b08; font-size: 1.2em; margin-left: 12px; transition: transform 0.3s; }
         .org-card.open .org-arrow { transform: rotate(180deg); }
         .org-body { display: none; padding: 0 22px 22px; }
         .org-card.open .org-body { display: block; }
@@ -67,24 +67,24 @@
             vertical-align: middle;
         }
         .badge-terror { background: rgba(231,76,60,0.2); color: #e74c3c; }
-        .badge-hate { background: rgba(230,126,34,0.2); color: #e67e22; }
+        .badge-hate { background: rgba(230,126,34,0.2); color: #b45309; }
         .badge-state { background: rgba(155,89,182,0.2); color: #9b59b6; }
-        .badge-media { background: rgba(52,152,219,0.2); color: #3498db; }
-        .badge-political { background: rgba(46,204,113,0.2); color: #2ecc71; }
-        .badge-institution { background: rgba(149,165,166,0.2); color: #95a5a6; }
+        .badge-media { background: rgba(52,152,219,0.2); color: #1d4ed8; }
+        .badge-political { background: rgba(46,204,113,0.2); color: #15803d; }
+        .badge-institution { background: rgba(149,165,166,0.2); color: #607080; }
         .badge-digital { background: rgba(241,196,15,0.2); color: #f1c40f; }
         .badge-historical { background: rgba(127,140,141,0.2); color: #7f8c8d; }
-        .org-meta { font-size: 0.85em; color: #888; margin-bottom: 12px; }
+        .org-meta { font-size: 0.85em; color: #5a6a7a; margin-bottom: 12px; }
         .org-meta span { margin-right: 15px; }
-        .org-desc { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; margin-bottom: 12px; }
-        .org-sources { font-size: 0.82em; color: #666; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 10px; margin-top: 10px; }
-        .org-sources a { color: #3498db; text-decoration: none; }
+        .org-desc { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; margin-bottom: 12px; }
+        .org-sources { font-size: 0.82em; color: #666; border-top: 1px solid rgba(0,0,0,0.08); padding-top: 10px; margin-top: 10px; }
+        .org-sources a { color: #1d4ed8; text-decoration: none; }
         .org-sources a:hover { text-decoration: underline; }
 
         /* === CATEGORY SECTIONS === */
         .cat-section { margin-bottom: 40px; }
         .cat-header {
-            background: linear-gradient(135deg, #1a1a3e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #D5D0C8 0%, #E2DFD9 100%);
             border-radius: 3px;
             padding: 20px 25px;
             margin-bottom: 18px;
@@ -95,10 +95,10 @@
             align-items: center;
         }
         .cat-header:hover { border-right-color: #f0d060; }
-        .cat-info h3 { color: #fff; font-size: 1.4em; margin-bottom: 6px; }
-        .cat-info .cat-count { color: #e2b714; font-size: 0.85em; }
-        .cat-info .cat-desc { color: #888; font-size: 0.9em; margin-top: 4px; }
-        .cat-toggle { color: #e2b714; font-size: 1.3em; transition: transform 0.3s; }
+        .cat-info h3 { color: #1a2a3a; font-size: 1.4em; margin-bottom: 6px; }
+        .cat-info .cat-count { color: #8a6b08; font-size: 0.85em; }
+        .cat-info .cat-desc { color: #5a6a7a; font-size: 0.9em; margin-top: 4px; }
+        .cat-toggle { color: #8a6b08; font-size: 1.3em; transition: transform 0.3s; }
         .cat-section.open .cat-toggle { transform: rotate(180deg); }
         .cat-body { display: none; }
         .cat-section.open .cat-body { display: block; }
@@ -111,14 +111,14 @@
             margin-bottom: 40px;
         }
         .stat-item {
-            background: linear-gradient(135deg, #16213e, #1a1a3e);
+            background: linear-gradient(135deg, #E2DFD9, #D5D0C8);
             border-radius: 3px;
             padding: 18px 14px;
             text-align: center;
             border-top: 3px solid #e2b714;
         }
-        .stat-num { color: #e2b714; font-size: 2em; font-weight: bold; }
-        .stat-label { color: #888; font-size: 0.82em; margin-top: 4px; }
+        .stat-num { color: #8a6b08; font-size: 2em; font-weight: bold; }
+        .stat-label { color: #5a6a7a; font-size: 0.82em; margin-top: 4px; }
 
         /* === DISCLAIMER === */
         .disclaimer-box {
@@ -128,30 +128,30 @@
             margin-bottom: 30px;
             border-left: 3px solid #3498db;
             font-size: 0.9em;
-            color: #aaa;
+            color: #5a6a7a;
             line-height: 1.7;
         }
-        .disclaimer-box strong { color: #3498db; }
+        .disclaimer-box strong { color: #1d4ed8; }
 
         /* === MODUS OPERANDI === */
         .org-mo { border-top: 1px solid rgba(226,183,20,0.15); margin-top: 14px; padding-top: 14px; }
-        .mo-label { color: #e2b714; font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .mo-label { color: #8a6b08; font-size: 0.78em; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
         .mo-tactics { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
         .mo-tag { display: inline-block; font-size: 0.72em; padding: 3px 10px; border-radius: 50px; font-weight: 600; }
         .tag-violence { background: rgba(231,76,60,0.15); color: #e74c3c; }
-        .tag-propaganda { background: rgba(230,126,34,0.15); color: #e67e22; }
+        .tag-propaganda { background: rgba(230,126,34,0.15); color: #b45309; }
         .tag-finance { background: rgba(241,196,15,0.15); color: #f1c40f; }
-        .tag-political { background: rgba(46,204,113,0.15); color: #2ecc71; }
+        .tag-political { background: rgba(46,204,113,0.15); color: #15803d; }
         .tag-legal { background: rgba(155,89,182,0.15); color: #9b59b6; }
-        .tag-cyber { background: rgba(52,152,219,0.15); color: #3498db; }
-        .tag-academic { background: rgba(149,165,166,0.15); color: #95a5a6; }
+        .tag-cyber { background: rgba(52,152,219,0.15); color: #1d4ed8; }
+        .tag-academic { background: rgba(149,165,166,0.15); color: #607080; }
         .mo-events { list-style: none; padding: 0; margin: 0 0 12px; }
-        .mo-events li { color: #c0c0c0; font-size: 0.88em; padding: 4px 0; padding-left: 16px; position: relative; line-height: 1.6; }
-        .mo-events li::before { content: "\25B8"; color: #e2b714; position: absolute; left: 0; }
-        .mo-events .ev-date { color: #e2b714; font-weight: 600; }
-        .mo-funding { color: #c0c0c0; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
+        .mo-events li { color: #3a4a5a; font-size: 0.88em; padding: 4px 0; padding-left: 16px; position: relative; line-height: 1.6; }
+        .mo-events li::before { content: "\25B8"; color: #8a6b08; position: absolute; left: 0; }
+        .mo-events .ev-date { color: #8a6b08; font-weight: 600; }
+        .mo-funding { color: #3a4a5a; font-size: 0.88em; line-height: 1.6; margin-bottom: 12px; }
         .mo-connections { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
-        .mo-conn-link { display: inline-block; font-size: 0.78em; padding: 4px 12px; border: 1px solid rgba(226,183,20,0.3); border-radius: 50px; color: #e2b714; cursor: pointer; transition: all 0.2s; text-decoration: none; }
+        .mo-conn-link { display: inline-block; font-size: 0.78em; padding: 4px 12px; border: 1px solid rgba(226,183,20,0.3); border-radius: 50px; color: #8a6b08; cursor: pointer; transition: all 0.2s; text-decoration: none; }
         .mo-conn-link:hover { background: rgba(226,183,20,0.1); border-color: #e2b714; }
         .org-card.flash-highlight { border-color: #e2b714 !important; box-shadow: 0 0 20px rgba(226,183,20,0.3); transition: border-color 0.3s, box-shadow 0.3s; }
 
@@ -3932,21 +3932,21 @@
     <div class="section-header">
         <h2>World Map — Global Antisemitism Network</h2>
         <div class="section-divider"></div>
-        <p>Interactive world map showing <span id="map-stats" style="color:#e2b714;font-weight:bold;">262</span> antisemitic organizations at their real geographic locations. Click a marker to scroll to its card.</p>
+        <p>Interactive world map showing <span id="map-stats" style="color:#8a6b08;font-weight:bold;">262</span> antisemitic organizations at their real geographic locations. Click a marker to scroll to its card.</p>
     </div>
     <!-- Search -->
     <div style="margin-bottom: 12px; text-align: center;">
-        <input type="text" id="map-search" placeholder="&#128269; Search organization on map..." style="background:#1a1a2e;border:1px solid #555;color:#e0e0e0;padding:6px 14px;border-radius:50px;font-size:0.82em;width:60%;max-width:350px;outline:none;" oninput="searchMap(this.value)">
+        <input type="text" id="map-search" placeholder="&#128269; Search organization on map..." style="background:#E2DFD9;border:1px solid #555;color: #1a2a3a;padding:6px 14px;border-radius:50px;font-size:0.82em;width:60%;max-width:350px;outline:none;" oninput="searchMap(this.value)">
         <div id="map-search-results" style="position:relative;z-index:600;"></div>
     </div>
     <!-- Group filters -->
     <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; justify-content: center;">
         <button class="net-filter active" data-group="all" onclick="filterNetwork('all',this)">All</button>
         <button class="net-filter" data-group="islamist" onclick="filterNetwork('islamist',this)" style="border-color:#e74c3c;color:#e74c3c">Islamist</button>
-        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#e67e22;color:#e67e22">Neo-Nazi</button>
+        <button class="net-filter" data-group="neonazi" onclick="filterNetwork('neonazi',this)" style="border-color:#b45309;color:#b45309">Neo-Nazi</button>
         <button class="net-filter" data-group="bhi" onclick="filterNetwork('bhi',this)" style="border-color:#9b59b6;color:#9b59b6">BHI/Cults</button>
-        <button class="net-filter" data-group="antizionist" onclick="filterNetwork('antizionist',this)" style="border-color:#2ecc71;color:#2ecc71">Anti-Zionist</button>
-        <button class="net-filter" data-group="govts" onclick="filterNetwork('govts',this)" style="border-color:#3498db;color:#3498db">Governments</button>
+        <button class="net-filter" data-group="antizionist" onclick="filterNetwork('antizionist',this)" style="border-color:#15803d;color:#15803d">Anti-Zionist</button>
+        <button class="net-filter" data-group="govts" onclick="filterNetwork('govts',this)" style="border-color:#1d4ed8;color:#1d4ed8">Governments</button>
         <button class="net-filter" data-group="historical" onclick="filterNetwork('historical',this)" style="border-color:#7f8c8d;color:#7f8c8d">Historical</button>
         <button class="net-filter" data-group="media" onclick="filterNetwork('media',this)" style="border-color:#f1c40f;color:#f1c40f">Media</button>
         <button class="net-filter" data-group="institutions" onclick="filterNetwork('institutions',this)" style="border-color:#95a5a6;color:#95a5a6">Institutions</button>
@@ -3958,10 +3958,10 @@
     </div>
     <!-- Edge type toggles -->
     <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
-        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('funding',this.checked)" style="accent-color:#f1c40f"> <span style="color:#f1c40f">Funding</span></label>
-        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('ideology',this.checked)" style="accent-color:#95a5a6"> <span style="color:#95a5a6">Ideology</span></label>
-        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('cooperation',this.checked)" style="accent-color:#3498db"> <span style="color:#3498db">Cooperation</span></label>
-        <label style="font-size:0.82em;color:#888;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('membership',this.checked)" style="accent-color:#e74c3c"> <span style="color:#e74c3c">Membership</span></label>
+        <label style="font-size:0.82em;color: #5a6a7a;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('funding',this.checked)" style="accent-color:#f1c40f"> <span style="color:#f1c40f">Funding</span></label>
+        <label style="font-size:0.82em;color: #5a6a7a;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('ideology',this.checked)" style="accent-color:#95a5a6"> <span style="color:#95a5a6">Ideology</span></label>
+        <label style="font-size:0.82em;color: #5a6a7a;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('cooperation',this.checked)" style="accent-color:#1d4ed8"> <span style="color:#1d4ed8">Cooperation</span></label>
+        <label style="font-size:0.82em;color: #5a6a7a;display:flex;align-items:center;gap:4px"><input type="checkbox" checked onchange="toggleEdgeType('membership',this.checked)" style="accent-color:#e74c3c"> <span style="color:#e74c3c">Membership</span></label>
     </div>
     <!-- Layer toggles -->
     <div style="margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
@@ -3971,25 +3971,25 @@
     </div>
     <!-- Timeline slider -->
     <div style="margin-bottom: 16px; text-align: center;">
-        <label style="font-size:0.82em;color:#888;">Timeline: <span id="timeline-year" style="color:#e2b714;font-weight:bold;">2025</span></label>
+        <label style="font-size:0.82em;color: #5a6a7a;">Timeline: <span id="timeline-year" style="color:#8a6b08;font-weight:bold;">2025</span></label>
         <div style="display:flex;align-items:center;gap:8px;justify-content:center;margin-top:4px;">
-            <span style="font-size:0.75em;color:#666;">473 BCE</span>
-            <input type="range" id="timeline-slider" min="-473" max="2025" value="2025" style="width:50%;max-width:350px;accent-color:#e2b714;" oninput="filterTimeline(this.value)">
-            <span style="font-size:0.75em;color:#666;">2025</span>
-            <button id="play-btn" onclick="togglePlay()" style="background:transparent;border:1px solid #e2b714;color:#e2b714;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:0.9em;display:flex;align-items:center;justify-content:center;" title="Play animation">&#9654;</button>
+            <span style="font-size:0.75em;color: #5a6a7a;">473 BCE</span>
+            <input type="range" id="timeline-slider" min="-473" max="2025" value="2025" style="width:50%;max-width:350px;accent-color:#8a6b08;" oninput="filterTimeline(this.value)">
+            <span style="font-size:0.75em;color: #5a6a7a;">2025</span>
+            <button id="play-btn" onclick="togglePlay()" style="background:transparent;border:1px solid #e2b714;color:#8a6b08;border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:0.9em;display:flex;align-items:center;justify-content:center;" title="Play animation">&#9654;</button>
         </div>
     </div>
     <!-- Map container -->
     <div id="network-map" style="width:100%;height:600px;background:#0a1628;border-radius:3px;border:1px solid rgba(226,183,20,0.1);position:relative;">
-        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#888;font-size:0.9em;z-index:500;">Loading world map...</div>
-        <button onclick="toggleFullscreen()" style="position:absolute;top:10px;left:50px;z-index:500;background:#1a1a2e;border:1px solid #333;color:#e0e0e0;border-radius:4px;width:30px;height:30px;cursor:pointer;font-size:1em;" title="Fullscreen">&#x26F6;</button>
+        <div id="network-loading" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color: #5a6a7a;font-size:0.9em;z-index:500;">Loading world map...</div>
+        <button onclick="toggleFullscreen()" style="position:absolute;top:10px;left:50px;z-index:500;background:#E2DFD9;border:1px solid #333;color: #1a2a3a;border-radius:4px;width:30px;height:30px;cursor:pointer;font-size:1em;" title="Fullscreen">&#x26F6;</button>
     </div>
     <!-- Ticker -->
-    <div id="map-ticker" style="height:28px;overflow:hidden;background:rgba(10,10,26,0.8);border:1px solid #333;border-radius:3px;margin-top:4px;display:none;">
-        <div id="map-ticker-content" style="white-space:nowrap;color:#e2b714;font-size:0.78em;line-height:28px;padding:0 12px;animation:ticker-scroll 20s linear infinite;"></div>
+    <div id="map-ticker" style="height:28px;overflow:hidden;background:rgba(74,106,138,0.8);border:1px solid #333;border-radius:3px;margin-top:4px;display:none;">
+        <div id="map-ticker-content" style="white-space:nowrap;color:#8a6b08;font-size:0.78em;line-height:28px;padding:0 12px;animation:ticker-scroll 20s linear infinite;"></div>
     </div>
     <!-- Legend -->
-    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 0.75em; color: #888;">
+    <div style="margin-top: 12px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 0.75em; color: #5a6a7a;">
         <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e74c3c;margin-right:3px;vertical-align:middle;"></span>Islamist</span>
         <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#e67e22;margin-right:3px;vertical-align:middle;"></span>Neo-Nazi</span>
         <span><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#9b59b6;margin-right:3px;vertical-align:middle;"></span>BHI/Cults</span>
@@ -4007,28 +4007,28 @@
 </section>
 
 <style>
-.net-filter { background: transparent; border: 1px solid #555; color: #888; padding: 4px 10px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
-.net-filter:hover { border-color: #e2b714; color: #e2b714; }
-.net-filter.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
-.layer-toggle { background: transparent; border: 1px solid #555; color: #888; padding: 4px 12px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
-.layer-toggle:hover { border-color: #e2b714; color: #e2b714; }
-.layer-toggle.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #e2b714; }
+.net-filter { background: transparent; border: 1px solid #555; color: #5a6a7a; padding: 4px 10px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
+.net-filter:hover { border-color: #e2b714; color: #8a6b08; }
+.net-filter.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #8a6b08; }
+.layer-toggle { background: transparent; border: 1px solid #555; color: #5a6a7a; padding: 4px 12px; border-radius: 50px; cursor: pointer; font-size: 0.78em; transition: all 0.2s; }
+.layer-toggle:hover { border-color: #e2b714; color: #8a6b08; }
+.layer-toggle.active { background: rgba(226,183,20,0.15); border-color: #e2b714; color: #8a6b08; }
 /* Leaflet dark theme overrides */
 .leaflet-container { background: #0a1628; }
-.leaflet-control-layers { background: #1a1a2e !important; color: #e0e0e0 !important; border: 1px solid #333 !important; border-radius: 4px !important; }
-.leaflet-control-layers label { color: #e0e0e0; }
+.leaflet-control-layers { background: #E2DFD9 !important; color: #1a2a3a !important; border: 1px solid #333 !important; border-radius: 4px !important; }
+.leaflet-control-layers label { color: #1a2a3a; }
 .leaflet-control-layers-separator { border-color: #333 !important; }
-.leaflet-popup-content-wrapper { background: #1a1a2e; color: #e0e0e0; border-radius: 4px; }
-.leaflet-popup-tip { background: #1a1a2e; }
+.leaflet-popup-content-wrapper { background: #E2DFD9; color: #1a2a3a; border-radius: 4px; }
+.leaflet-popup-tip { background: #E2DFD9; }
 .leaflet-popup-content { margin: 8px 12px; font-size: 0.85em; }
-.leaflet-popup-content a { color: #e2b714; }
-.leaflet-control-zoom a { background: #1a1a2e; color: #e0e0e0; border-color: #333; }
+.leaflet-popup-content a { color: #8a6b08; }
+.leaflet-control-zoom a { background: #E2DFD9; color: #1a2a3a; border-color: #333; }
 .leaflet-control-zoom a:hover { background: #2a2a3e; }
-.leaflet-control-attribution { background: rgba(10,10,26,0.7); color: #666; font-size: 0.65em; }
-.leaflet-control-attribution a { color: #888; }
+.leaflet-control-attribution { background: rgba(74,106,138,0.7); color: #666; font-size: 0.65em; }
+.leaflet-control-attribution a { color: #5a6a7a; }
 #map-search-results { max-height: 200px; overflow-y: auto; }
-#map-search-results .sr-item { background: #1a1a2e; border: 1px solid #333; padding: 6px 12px; cursor: pointer; font-size: 0.8em; color: #e0e0e0; margin-top: -1px; }
-#map-search-results .sr-item:hover { background: #2a2a3e; color: #e2b714; }
+#map-search-results .sr-item { background: #E2DFD9; border: 1px solid #333; padding: 6px 12px; cursor: pointer; font-size: 0.8em; color: #1a2a3a; margin-top: -1px; }
+#map-search-results .sr-item:hover { background: #2a2a3e; color: #8a6b08; }
 @keyframes ticker-scroll { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 #network-map:fullscreen, #network-map:-webkit-full-screen { height: 100vh !important; width: 100vw !important; }
 @media (max-width: 768px) { #network-map { height: 400px !important; } }
@@ -4043,12 +4043,12 @@
         <div class="section-divider"></div>
     </div>
 
-    <div class="disclaimer-box" style="border-left-color: #e2b714;">
+    <div class="disclaimer-box" style="border-left-color: #8a6b08;">
         <p><strong>237 entities. 13 categories. One continent? No — all of them.</strong></p>
         <p style="margin-top: 12px;">Antisemitism is not a phenomenon of the "right" or the "left," of "Muslims" or "Christians," of "Europe" or the "Middle East." It exists everywhere: in governments and at the UN, on campuses and on Telegram, in churches and mosques, on YouTube and in parliaments.</p>
         <p style="margin-top: 12px;">What unites all 237 of these entities &mdash; from Hamas to the KKK, from Iran to QAnon &mdash; is a belief that Jews are guilty. Guilty of everything. Always.</p>
         <p style="margin-top: 12px;">The fact that such different groups agree on this single point &mdash; despite disagreeing on everything else &mdash; is the best proof that antisemitism is not rational criticism but irrational hatred that shapeshifts according to culture and era.</p>
-        <p style="margin-top: 15px;"><strong>What can you do?</strong> <a href="action-en.html" style="color: #e2b714;">&#8592; Take Action</a> | <a href="fact-cards-en.html" style="color: #e2b714;">&#8592; Share Fact Cards</a></p>
+        <p style="margin-top: 15px;"><strong>What can you do?</strong> <a href="action-en.html" style="color: #8a6b08;">&#8592; Take Action</a> | <a href="fact-cards-en.html" style="color: #8a6b08;">&#8592; Share Fact Cards</a></p>
     </div>
 </section>
 
@@ -4170,7 +4170,7 @@ function initMap() {
             _orgFounded: n.founded
         });
         var groupLabel = GROUP_LABELS[n.group] || n.group;
-        marker.bindPopup('<strong>' + n.label + '</strong><br><span style="color:' + color + ';">' + groupLabel + '</span><br>Founded: ' + n.founded + '<br><a href="#" onclick="scrollToOrg(\'' + n.id + '\');return false;" style="color:#e2b714;">View details &darr;</a>');
+        marker.bindPopup('<strong>' + n.label + '</strong><br><span style="color:' + color + ';">' + groupLabel + '</span><br>Founded: ' + n.founded + '<br><a href="#" onclick="scrollToOrg(\'' + n.id + '\');return false;" style="color:#8a6b08;">View details &darr;</a>');
         marker._orgData = n;
         allMarkers.push(marker);
         markerLayer.addLayer(marker);
@@ -4296,7 +4296,7 @@ function searchMap(query) {
     var q = query.toLowerCase();
     var matches = allMarkers.filter(function(m) { return m._orgData && m._orgData.label.toLowerCase().indexOf(q) !== -1; }).slice(0, 8);
     box.innerHTML = matches.map(function(m) {
-        return '<div class="sr-item" onclick="flyToOrg(\'' + m._orgData.id + '\')">' + m._orgData.label + ' <span style="color:#666;font-size:0.85em;">(' + (GROUP_LABELS[m._orgData.group]||m._orgData.group) + ')</span></div>';
+        return '<div class="sr-item" onclick="flyToOrg(\'' + m._orgData.id + '\')">' + m._orgData.label + ' <span style="color: #5a6a7a;font-size:0.85em;">(' + (GROUP_LABELS[m._orgData.group]||m._orgData.group) + ')</span></div>';
     }).join('');
 }
 function flyToOrg(orgId) {

@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Streams &amp; Sectors of the Jewish People | Truth Against Lies</title>
     <meta name="description" content="A comprehensive map of all Jewish denominations, streams, ethnic communities, and political identities — from Haredi to secular, Ashkenazi to Yemenite. What existed before the Holocaust and what remains today.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -36,63 +36,63 @@
     <style>
         .str-hero { text-align: center; padding: 100px 20px 50px; background: linear-gradient(180deg, rgba(30,74,138,0.15) 0%, rgba(226,183,20,0.05) 50%, transparent 100%); }
         .str-hero h1 { color: #1e4a8a; font-size: 2.6em; margin-bottom: 15px; }
-        .str-hero .subtitle { color: #c0c0c0; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
-        .str-hero .opening-quote { font-size: 1.4em; color: #e2b714; font-weight: bold; margin: 30px auto; max-width: 700px; line-height: 1.6; }
-        .str-hero .quote-source { color: #888; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
+        .str-hero .subtitle { color: #3a4a5a; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+        .str-hero .opening-quote { font-size: 1.4em; color: #8a6b08; font-weight: bold; margin: 30px auto; max-width: 700px; line-height: 1.6; }
+        .str-hero .quote-source { color: #5a6a7a; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
         .str-hero .hero-meta { color: #555; font-size: 0.85em; margin-top: 20px; }
         .str-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .str-section h2 { color: #e2b714; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(30,74,138,0.3); }
-        .str-section .section-intro { color: #999; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
-        .stream-card { background: #12172b; border-left: 3px solid #e2b714; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
-        .stream-card h4 { color: #e2b714; margin-bottom: 8px; font-size: 1.1em; }
-        .stream-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .str-section h2 { color: #8a6b08; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(30,74,138,0.3); }
+        .str-section .section-intro { color: #5a6a7a; margin-bottom: 30px; font-size: 0.95em; line-height: 1.7; }
+        .stream-card { background: #E2DFD9; border-left: 3px solid #e2b714; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .stream-card h4 { color: #8a6b08; margin-bottom: 8px; font-size: 1.1em; }
+        .stream-card p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; }
         .stream-card .card-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
         .stream-card .badge { padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: bold; }
-        .badge-orthodox { background: rgba(226,183,20,0.15); color: #e2b714; }
-        .badge-reform { background: rgba(52,152,219,0.15); color: #3498db; }
+        .badge-orthodox { background: rgba(226,183,20,0.15); color: #8a6b08; }
+        .badge-reform { background: rgba(52,152,219,0.15); color: #1d4ed8; }
         .badge-ethnic { background: rgba(26,188,156,0.15); color: #1abc9c; }
         .badge-political { background: rgba(39,174,96,0.15); color: #27ae60; }
-        .badge-size { background: rgba(255,255,255,0.06); color: #888; }
-        .card-orthodox { border-left-color: #e2b714; }
-        .card-orthodox h4 { color: #e2b714; }
-        .card-nonorthodox { border-left-color: #3498db; }
-        .card-nonorthodox h4 { color: #3498db; }
+        .badge-size { background: rgba(0,0,0,0.08); color: #5a6a7a; }
+        .card-orthodox { border-left-color: #8a6b08; }
+        .card-orthodox h4 { color: #8a6b08; }
+        .card-nonorthodox { border-left-color: #1d4ed8; }
+        .card-nonorthodox h4 { color: #1d4ed8; }
         .card-ethnic { border-left-color: #1abc9c; }
         .card-ethnic h4 { color: #1abc9c; }
         .card-political { border-left-color: #27ae60; }
         .card-political h4 { color: #27ae60; }
-        .destroyed-card { background: #12172b; border-left: 3px solid #8b0000; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .destroyed-card { background: #E2DFD9; border-left: 3px solid #8b0000; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
         .destroyed-card h4 { color: #cd5c5c; margin-bottom: 8px; font-size: 1.1em; }
-        .destroyed-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .destroyed-card p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; }
         .destroyed-badge { background: rgba(139,0,0,0.2); color: #cd5c5c; padding: 3px 10px; border-radius: 12px; font-size: 0.75em; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-        .tension-card { background: #12172b; border-left: 3px solid #e67e22; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
-        .tension-card h4 { color: #e67e22; margin-bottom: 8px; font-size: 1.05em; }
-        .tension-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
-        .tension-card .view-quote { color: #e67e22; font-style: italic; margin: 8px 0; font-size: 0.9em; }
+        .tension-card { background: #E2DFD9; border-left: 3px solid #e67e22; padding: 25px; margin-bottom: 18px; border-radius: 3px; }
+        .tension-card h4 { color: #b45309; margin-bottom: 8px; font-size: 1.05em; }
+        .tension-card p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; }
+        .tension-card .view-quote { color: #b45309; font-style: italic; margin: 8px 0; font-size: 0.9em; }
         .unity-callout { border: 2px solid #e2b714; padding: 35px; text-align: center; margin: 30px 0; border-radius: 5px; background: rgba(226,183,20,0.04); }
-        .unity-callout p { color: #e2b714; font-size: 1.1em; line-height: 1.9; }
-        .unity-callout strong { color: #fff; }
+        .unity-callout p { color: #8a6b08; font-size: 1.1em; line-height: 1.9; }
+        .unity-callout strong { color: #1a2a3a; }
         .family-message { background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(226,183,20,0.08)); border: 2px solid #e2b714; border-radius: 8px; padding: 40px 30px; margin: 30px 0; text-align: center; }
-        .family-message h3 { color: #e2b714; font-size: 1.5em; margin-bottom: 20px; }
-        .family-message p { color: #c0c0c0; font-size: 1.05em; line-height: 2; margin-bottom: 15px; }
-        .family-message .highlight { color: #fff; font-weight: bold; }
+        .family-message h3 { color: #8a6b08; font-size: 1.5em; margin-bottom: 20px; }
+        .family-message p { color: #3a4a5a; font-size: 1.05em; line-height: 2; margin-bottom: 15px; }
+        .family-message .highlight { color: #1a2a3a; font-weight: bold; }
         .family-message .nazi-text { color: #cd5c5c; font-weight: bold; }
-        .family-message .am-ehad { color: #e2b714; font-size: 1.8em; font-weight: bold; display: block; margin-top: 25px; }
+        .family-message .am-ehad { color: #8a6b08; font-size: 1.8em; font-weight: bold; display: block; margin-top: 25px; }
         .pop-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .pop-table th { background: rgba(30,74,138,0.15); color: #e2b714; padding: 10px; text-align: left; font-size: 0.9em; }
-        .pop-table td { padding: 8px 10px; color: #c0c0c0; font-size: 0.9em; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .pop-table tr:hover td { background: rgba(255,255,255,0.03); }
+        .pop-table th { background: rgba(30,74,138,0.15); color: #8a6b08; padding: 10px; text-align: left; font-size: 0.9em; }
+        .pop-table td { padding: 8px 10px; color: #3a4a5a; font-size: 0.9em; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .pop-table tr:hover td { background: rgba(0,0,0,0.06); }
         .section-divider { text-align: center; color: rgba(30,74,138,0.3); letter-spacing: 10px; padding: 20px; font-size: 1.1em; }
         .closing-quote { text-align: center; margin: 40px 0 20px; }
-        .closing-quote blockquote { color: #e2b714; font-size: 1.3em; line-height: 1.7; border: none; margin: 0; padding: 0; }
+        .closing-quote blockquote { color: #8a6b08; font-size: 1.3em; line-height: 1.7; border: none; margin: 0; padding: 0; }
         .closing-quote .quote-author { color: #666; font-size: 0.85em; margin-top: 10px; }
         .toc-fab { position: fixed; right: 20px; bottom: 80px; z-index: 997; }
         .toc-fab-btn { background: #1e4a8a; color: #fff; border: none; width: 48px; height: 48px; border-radius: 50%; font-size: 1.3em; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-        .toc-panel { position: fixed; right: -300px; top: 60px; width: 260px; height: calc(100vh - 120px); background: #0d1117; border-left: 2px solid rgba(30,74,138,0.3); padding: 20px 15px; overflow-y: auto; z-index: 997; transition: right 0.3s; }
+        .toc-panel { position: fixed; right: -300px; top: 60px; width: 260px; height: calc(100vh - 120px); background: #EFEEEF; border-left: 2px solid rgba(30,74,138,0.3); padding: 20px 15px; overflow-y: auto; z-index: 997; transition: right 0.3s; }
         .toc-panel.open { right: 0; }
-        .toc-panel h3 { color: #e2b714; font-size: 0.95em; margin-bottom: 15px; }
-        .toc-link { display: block; color: #888; font-size: 0.85em; padding: 6px 0; text-decoration: none; border-left: 2px solid transparent; padding-left: 10px; transition: all 0.2s; }
-        .toc-link:hover, .toc-link.active { color: #e2b714; border-left-color: #e2b714; }
+        .toc-panel h3 { color: #8a6b08; font-size: 0.95em; margin-bottom: 15px; }
+        .toc-link { display: block; color: #5a6a7a; font-size: 0.85em; padding: 6px 0; text-decoration: none; border-left: 2px solid transparent; padding-left: 10px; transition: all 0.2s; }
+        .toc-link:hover, .toc-link.active { color: #8a6b08; border-left-color: #8a6b08; }
         @media (max-width: 768px) {
             .str-hero { padding: 80px 16px 40px; }
             .str-hero h1 { font-size: 1.6em; }
@@ -239,12 +239,12 @@
 <!-- TL;DR -->
 <div class="str-section">
     <div class="callout-box" style="border-color: #1e4a8a;">
-        <h3 style="color: #e2b714; margin-bottom: 12px;">&#128218; In Brief</h3>
-        <ul style="color: #c0c0c0; line-height: 2; padding-left: 20px;">
-            <li>The Jewish people contain <strong style="color:#fff;">dozens of streams, sectors, and ethnic communities</strong> &mdash; religious, secular, ethnic, and political</li>
+        <h3 style="color: #8a6b08; margin-bottom: 12px;">&#128218; In Brief</h3>
+        <ul style="color: #3a4a5a; line-height: 2; padding-left: 20px;">
+            <li>The Jewish people contain <strong style="color:#1a2a3a;">dozens of streams, sectors, and ethnic communities</strong> &mdash; religious, secular, ethnic, and political</li>
             <li>From Satmar Hasidim who reject the State to Religious Zionists who see it as &ldquo;the beginning of redemption&rdquo;</li>
-            <li>Before the Holocaust, <strong style="color:#fff;">entire streams were erased</strong> &mdash; the Bund, Salonika Jewry, entire Hasidic courts</li>
-            <li>Despite all internal differences &mdash; <strong style="color:#e2b714;">for our enemies, there is no difference. A Jew is a Jew.</strong></li>
+            <li>Before the Holocaust, <strong style="color:#1a2a3a;">entire streams were erased</strong> &mdash; the Bund, Salonika Jewry, entire Hasidic courts</li>
+            <li>Despite all internal differences &mdash; <strong style="color:#8a6b08;">for our enemies, there is no difference. A Jew is a Jew.</strong></li>
         </ul>
     </div>
 </div>
@@ -573,12 +573,12 @@
         <tr><td><strong>World Jewish Population</strong></td><td>~15.8 million</td><td>&#8599; Slow growth</td></tr>
         <tr><td>Israel</td><td>~7.42 million Jews</td><td>&#8599; Growing</td></tr>
         <tr><td>United States</td><td>~7.46 million Jews</td><td>&#8596; Stable/declining</td></tr>
-        <tr><td colspan="3" style="color:#e2b714; font-weight:bold; padding-top:12px;">Orthodox</td></tr>
-        <tr><td>Haredi (Global)</td><td>~2-2.5 million</td><td style="color:#2ecc71;">&#8599; Rapid growth (4%/yr)</td></tr>
-        <tr><td>Religious Zionist / Dati</td><td>~2 million</td><td style="color:#2ecc71;">&#8599; Growing</td></tr>
-        <tr><td>Satmar</td><td>~300,000</td><td style="color:#2ecc71;">&#8599; Rapid growth</td></tr>
-        <tr><td>Chabad</td><td>~90,000 core</td><td style="color:#2ecc71;">&#8599; Growing</td></tr>
-        <tr><td colspan="3" style="color:#3498db; font-weight:bold; padding-top:12px;">Non-Orthodox</td></tr>
+        <tr><td colspan="3" style="color:#8a6b08; font-weight:bold; padding-top:12px;">Orthodox</td></tr>
+        <tr><td>Haredi (Global)</td><td>~2-2.5 million</td><td style="color:#15803d;">&#8599; Rapid growth (4%/yr)</td></tr>
+        <tr><td>Religious Zionist / Dati</td><td>~2 million</td><td style="color:#15803d;">&#8599; Growing</td></tr>
+        <tr><td>Satmar</td><td>~300,000</td><td style="color:#15803d;">&#8599; Rapid growth</td></tr>
+        <tr><td>Chabad</td><td>~90,000 core</td><td style="color:#15803d;">&#8599; Growing</td></tr>
+        <tr><td colspan="3" style="color:#1d4ed8; font-weight:bold; padding-top:12px;">Non-Orthodox</td></tr>
         <tr><td>Reform</td><td>~2 million</td><td style="color:#cd5c5c;">&#8600; Declining</td></tr>
         <tr><td>Conservative</td><td>~1.1-2 million</td><td style="color:#cd5c5c;">&#8600; Declining significantly</td></tr>
         <tr><td>Reconstructionist</td><td>~100,000</td><td>&#8596; Small/stable</td></tr>
@@ -627,7 +627,7 @@
         </p>
 
         <span class="am-ehad">&#10077; All of Israel are responsible for one another &#10078;</span>
-        <p style="color: #888; font-size: 0.85em; margin-top: 5px;">Talmud Bavli, Shevuot 39a</p>
+        <p style="color: #5a6a7a; font-size: 0.85em; margin-top: 5px;">Talmud Bavli, Shevuot 39a</p>
 
         <p style="margin-top: 20px;">
             <span class="highlight" style="font-size: 1.3em;">Bnei Yisrael. One People. A Hundred Faces.</span>
@@ -641,7 +641,7 @@
 <div class="str-section" id="sources">
     <h2>&#128218; Sources</h2>
     <div class="stream-card" style="border-left-color: #555;">
-        <h4 style="color: #888;">Torah Sources</h4>
+        <h4 style="color: #5a6a7a;">Torah Sources</h4>
         <p>
             Talmud Bavli, Sanhedrin 38a (creation of Man as unique) &bull;
             Talmud Bavli, Shevuot 39a (all Israel are responsible) &bull;
@@ -651,7 +651,7 @@
         </p>
     </div>
     <div class="stream-card" style="border-left-color: #555;">
-        <h4 style="color: #888;">Research &amp; Data</h4>
+        <h4 style="color: #5a6a7a;">Research &amp; Data</h4>
         <p>
             Pew Research Center, &ldquo;Israel&rsquo;s Religiously Divided Society&rdquo; (2016, 2025 updates) &bull;
             Israel Democracy Institute, Statistical Report on Ultra-Orthodox Society (2022) &bull;
@@ -668,7 +668,7 @@
 <!-- FOOTER -->
 <div class="page-footer">
     <p><a href="index-en.html">&larr; Back to Main Site</a></p>
-    <p style="margin-top: 10px;"><a href="bnei-yisrael-en.html" style="color: #e2b714;">&#128220; Children of Israel</a> &nbsp;|&nbsp; <a href="unity-en.html" style="color: #e2b714;">&#128170; Strengthening the People</a> &nbsp;|&nbsp; <a href="the-schism-en.html" style="color: #e2b714;">&#9878; The Great Schism</a></p>
+    <p style="margin-top: 10px;"><a href="bnei-yisrael-en.html" style="color: #8a6b08;">&#128220; Children of Israel</a> &nbsp;|&nbsp; <a href="unity-en.html" style="color: #8a6b08;">&#128170; Strengthening the People</a> &nbsp;|&nbsp; <a href="the-schism-en.html" style="color: #8a6b08;">&#9878; The Great Schism</a></p>
     <p style="margin-top: 15px;">Built by Nathanael Assis | 2026</p>
 </div>
 

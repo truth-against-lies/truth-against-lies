@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>הזיווג — כשהפילוג הורס את המשפחה | האמת נגד השקר</title>
     <meta name="description" content="איך מחיצות שבני אדם בנו הורסות את מה שהתורה ציוותה. חקירה מעמיקה על משבר הזיווג בעם היהודי — אפליה עדתית, משבר השידוכים, מחסומים חוקיים והקטסטרופה הדמוגרפית.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -34,25 +34,25 @@
     <style>
         .zv-hero { text-align: center; padding: 100px 20px 50px; background: linear-gradient(180deg, rgba(30,27,75,0.18) 0%, rgba(91,33,182,0.08) 50%, transparent 100%); }
         .zv-hero h1 { color: #a78bfa; font-size: 2.5em; margin-bottom: 15px; }
-        .zv-hero .subtitle { color: #c0c0c0; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+        .zv-hero .subtitle { color: #3a4a5a; font-size: 1.15em; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
         .zv-hero .opening-quote { font-size: 1.4em; color: #f59e0b; font-weight: bold; margin: 30px auto; max-width: 650px; line-height: 1.6; }
-        .zv-hero .quote-source { color: #888; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
+        .zv-hero .quote-source { color: #5a6a7a; font-size: 0.55em; font-weight: normal; display: block; margin-top: 10px; }
         .zv-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 900px; margin: 30px auto; }
         .zv-stat-box { text-align: center; padding: 20px; background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.15); border-radius: 3px; flex: 1 1 140px; min-width: 130px; }
         .zv-stat-num { font-size: 2em; color: #f59e0b; font-weight: bold; display: block; }
-        .zv-stat-label { color: #aaa; font-size: 0.85em; margin-top: 5px; display: block; }
+        .zv-stat-label { color: #5a6a7a; font-size: 0.85em; margin-top: 5px; display: block; }
         .zv-section { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        .zv-section h2 { color: #e2b714; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(167,139,250,0.3); }
-        .zv-section .section-intro { color: #999; margin-bottom: 25px; font-size: 0.95em; line-height: 1.7; }
-        .zv-card { background: #12172b; padding: 22px; margin-bottom: 16px; border-radius: 3px; cursor: pointer; transition: background 0.2s; }
-        .zv-card:hover { background: #161d33; }
+        .zv-section h2 { color: #8a6b08; font-size: 1.7em; margin-bottom: 8px; padding-bottom: 12px; border-bottom: 2px solid rgba(167,139,250,0.3); }
+        .zv-section .section-intro { color: #5a6a7a; margin-bottom: 25px; font-size: 0.95em; line-height: 1.7; }
+        .zv-card { background: #E2DFD9; padding: 22px; margin-bottom: 16px; border-radius: 3px; cursor: pointer; transition: background 0.2s; }
+        .zv-card:hover { background: #D5D0C8; }
         .zv-card h3 { margin-bottom: 10px; font-size: 1.1em; display: flex; justify-content: space-between; align-items: center; }
-        .zv-card h3::after { content: '+'; color: #888; font-size: 1.3em; transition: transform 0.3s; }
+        .zv-card h3::after { content: '+'; color: #5a6a7a; font-size: 1.3em; transition: transform 0.3s; }
         .zv-card.open h3::after { content: '−'; }
         .zv-card .zv-card-body { display: none; }
         .zv-card.open .zv-card-body { display: block; }
-        .zv-card p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; margin-bottom: 10px; }
-        .zv-card .source-ref { font-size: 0.82em; color: #888; margin-top: 10px; font-style: italic; }
+        .zv-card p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; margin-bottom: 10px; }
+        .zv-card .source-ref { font-size: 0.82em; color: #5a6a7a; margin-top: 10px; font-style: italic; }
         .zv-card .zv-share { margin-top: 12px; display: flex; gap: 8px; }
         .zv-card .zv-share a { display: inline-block; padding: 4px 10px; border-radius: 3px; font-size: 0.8em; cursor: pointer; text-decoration: none; }
         .zv-card .zv-share .wa { background: #25D366; color: #fff; }
@@ -73,18 +73,18 @@
         .zv-action-card { border-right: 3px solid #10b981; }
         .zv-action-card h3 { color: #10b981; }
         .zv-quote { border-right: 3px solid #f59e0b; padding: 15px 20px; margin: 15px 0; background: rgba(245,158,11,0.04); font-style: italic; color: #f59e0b; }
-        .zv-quote cite { display: block; margin-top: 8px; font-size: 0.85em; color: #888; font-style: normal; }
+        .zv-quote cite { display: block; margin-top: 8px; font-size: 0.85em; color: #5a6a7a; font-style: normal; }
         .zv-warning { background: rgba(220,38,38,0.08); border-right: 3px solid #DC2626; padding: 12px 16px; margin: 15px 0; color: #DC2626; font-weight: 600; font-size: 0.95em; }
         .zv-scandal { background: rgba(185,28,28,0.06); border-right: 3px solid #991b1b; padding: 12px 16px; margin: 15px 0; color: #fca5a5; font-size: 0.95em; }
         .zv-transition { text-align: center; color: #a78bfa; font-size: 1.2em; padding: 15px 0; letter-spacing: 8px; opacity: 0.5; }
         .zv-highlight { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15); padding: 18px; margin: 15px 0; border-radius: 3px; }
         .zv-highlight strong { color: #f59e0b; }
-        .zv-highlight p { color: #c0c0c0; font-size: 0.95em; line-height: 1.7; }
+        .zv-highlight p { color: #3a4a5a; font-size: 0.95em; line-height: 1.7; }
         .zv-story-box { background: rgba(236,72,153,0.04); border-right: 3px solid #ec4899; padding: 15px 20px; margin: 15px 0; font-style: italic; color: #f9a8d4; }
         .toc-panel { position: fixed; top: 60px; left: -260px; width: 240px; background: #0d1022; border-left: 1px solid rgba(167,139,250,0.15); padding: 20px 15px; z-index: 100; transition: left 0.3s; max-height: calc(100vh - 80px); overflow-y: auto; }
         .toc-panel.open { left: 0; }
         .toc-panel h3 { color: #a78bfa; font-size: 1em; margin-bottom: 12px; }
-        .toc-panel .toc-link { display: block; color: #aaa; font-size: 0.85em; padding: 5px 0; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.03); }
+        .toc-panel .toc-link { display: block; color: #5a6a7a; font-size: 0.85em; padding: 5px 0; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,0.06); }
         .toc-panel .toc-link:hover { color: #a78bfa; }
         .toc-fab { position: fixed; bottom: 80px; left: 15px; z-index: 101; }
         .toc-fab-btn { background: #7c3aed; color: #fff; border: none; width: 44px; height: 44px; border-radius: 50%; font-size: 1.3em; cursor: pointer; box-shadow: 0 2px 10px rgba(124,58,237,0.3); }
@@ -236,7 +236,7 @@
         <div class="zv-stat-box"><span class="zv-stat-num">450,000+</span><span class="zv-stat-label">ישראלים שלא יכולים להתחתן בישראל</span></div>
         <div class="zv-stat-box"><span class="zv-stat-num">93%</span><span class="zv-stat-label">לא ישאו מעדה/מגזר אחר</span></div>
     </div>
-    <div style="color:#555;font-size:0.85em;margin-top:20px;">עודכן: מרץ 2026</div>
+    <div style="color: #5a6a7a;font-size:0.85em;margin-top:20px;">עודכן: מרץ 2026</div>
 </div>
 
 <div class="zv-transition">&#10038; &#10038; &#10038;</div>

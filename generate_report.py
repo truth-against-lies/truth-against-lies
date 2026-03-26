@@ -198,7 +198,7 @@ def main():
     pdf.bullet('Domain: truth-against-lies.github.io/truth-against-lies/')
 
     pdf.sub_title('Design')
-    pdf.bullet('Dark theme: #0a0a1a background')
+    pdf.bullet('Dark theme: #EFEEEF background')
     pdf.bullet('Gold accent: #e2b714')
     pdf.bullet('Professional, serious tone')
     pdf.bullet('Responsive (mobile-first)')

@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Truth Against Lies &mdash; Fighting Antisemitism with Facts</title>
     <meta name="description" content="A source-based platform examining 34 antisemitic libels in light of facts, science, and history.">
-    <meta name="theme-color" content="#0a0a1a">
+    <meta name="theme-color" content="#EFEEEF">
     <meta name="google-site-verification" content="Io50XTnq_qBOYXYwBhq7DtaVWNcVE8eDOfeZXNVWZTQ" />
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -38,9 +38,9 @@
         :root {
             --gold: #e2b714;
             --gold-dim: rgba(226, 183, 20, 0.3);
-            --bg-dark: #0a0a1a;
-            --card-bg: #12172b;
-            --text: #e0e0e0;
+            --bg-dark: #EFEEEF;
+            --card-bg: #E2DFD9;
+            --text: #1a2a3a;
             --text-dim: #888;
             --red: #e74c3c;
         }
@@ -49,7 +49,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 26, 0.95);
+            background: rgba(74, 106, 138, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             border-bottom: 1px solid rgba(226, 183, 20, 0.3);
@@ -64,7 +64,7 @@
             gap: 12px;
         }
         .nav-logo {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.3em;
             font-weight: bold;
             text-decoration: none;
@@ -80,7 +80,7 @@
             justify-content: center;
             background: none;
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             width: 44px;
             height: 40px;
@@ -97,7 +97,7 @@
             position: absolute;
             top: 50px;
             left: 0;
-            background: rgba(10, 10, 26, 0.98);
+            background: rgba(74, 106, 138, 0.98);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 0 0 3px 3px;
             padding: 8px 0;
@@ -112,7 +112,7 @@
             flex-direction: column;
         }
         .nav-links li a {
-            color: #c0c0c0;
+            color: #ffffff;
             text-decoration: none;
             font-size: 0.95em;
             padding: 11px 25px;
@@ -122,14 +122,14 @@
         }
         .nav-links li:last-child a { border-bottom: none; }
         .nav-links li a:hover {
-            color: #e2b714;
+            color: #8a6b08;
             background: rgba(226, 183, 20, 0.08);
         }
         .nav-donate {
             padding: 6px 14px;
             background: rgba(226, 183, 20, 0.15);
             border: 1px solid rgba(226, 183, 20, 0.4);
-            color: #e2b714;
+            color: #8a6b08;
             text-decoration: none;
             font-size: 0.85em;
             font-weight: bold;
@@ -145,7 +145,7 @@
             padding: 6px 14px;
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.25);
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.85em;
             font-weight: bold;
             border-radius: 3px;
@@ -163,7 +163,7 @@
             display: none;
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10, 10, 26, 0.97);
+            background: rgba(74, 106, 138, 0.97);
             z-index: 2000;
             overflow-y: auto;
             padding: 30px 20px;
@@ -177,7 +177,7 @@
             right: 20px;
             background: none;
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             width: 40px; height: 40px;
             border-radius: 50%;
             font-size: 1.3em;
@@ -185,13 +185,13 @@
         }
         .auth-tab { display: none; max-width: 400px; width: 100%; }
         .auth-tab.active { display: block; }
-        .auth-tab h2 { color: #e2b714; text-align: center; margin-bottom: 25px; }
+        .auth-tab h2 { color: #8a6b08; text-align: center; margin-bottom: 25px; }
         .auth-form { display: flex; flex-direction: column; gap: 15px; }
         .auth-form input {
             padding: 12px 16px;
             background: rgba(226, 183, 20, 0.06);
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e0e0e0;
+            color: #1a2a3a;
             border-radius: 3px;
             font-size: 1em;
             font-family: inherit;
@@ -200,7 +200,7 @@
         .auth-form button {
             padding: 14px;
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border: none;
             border-radius: 3px;
             font-size: 1.1em;
@@ -209,22 +209,22 @@
             font-family: inherit;
         }
         .auth-form button:hover { background: #f0c830; }
-        .auth-switch { color: #888; text-align: center; font-size: 0.9em; }
-        .auth-switch a { color: #e2b714; cursor: pointer; text-decoration: underline; }
+        .auth-switch { color: #5a6a7a; text-align: center; font-size: 0.9em; }
+        .auth-switch a { color: #8a6b08; cursor: pointer; text-decoration: underline; }
         .auth-msg { text-align: center; font-size: 0.9em; min-height: 1.2em; }
         .auth-msg.error { color: #e74c3c; }
-        .auth-msg.success { color: #2ecc71; }
+        .auth-msg.success { color: #15803d; }
         /* PROTECTED CONTENT */
         .protected-card {
-            background: #12172b;
+            background: #E2DFD9;
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-left: 3px solid #e2b714;
             border-radius: 3px;
             padding: 25px;
             margin-bottom: 20px;
         }
-        .protected-card h3 { color: #e2b714; margin-bottom: 10px; }
-        .protected-card p { color: #c0c0c0; }
+        .protected-card h3 { color: #8a6b08; margin-bottom: 10px; }
+        .protected-card p { color: #3a4a5a; }
         .search-highlight {
             outline: 2px solid #e2b714;
             outline-offset: 4px;
@@ -240,7 +240,7 @@
             align-items: center;
             text-align: center;
             padding: 64px 20px 40px;
-            background: #0a0a1a;
+            background: #EFEEEF;
             position: relative;
             overflow: hidden;
         }
@@ -256,14 +256,13 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background:
-                radial-gradient(circle at 50% 30%, rgba(0, 56, 184, 0.08) 0%, transparent 50%),
                 linear-gradient(180deg,
-                    rgba(10, 10, 26, 0.2) 0%,
-                    rgba(10, 10, 26, 0.15) 20%,
-                    rgba(10, 10, 26, 0.25) 40%,
-                    rgba(10, 10, 26, 0.45) 60%,
-                    rgba(10, 10, 26, 0.7) 78%,
-                    rgba(10, 10, 26, 1) 92%
+                    rgba(239, 238, 239, 0) 0%,
+                    rgba(239, 238, 239, 0) 30%,
+                    rgba(239, 238, 239, 0.15) 50%,
+                    rgba(239, 238, 239, 0.45) 65%,
+                    rgba(239, 238, 239, 0.75) 80%,
+                    rgba(239, 238, 239, 1) 95%
                 );
             z-index: 1;
         }
@@ -276,7 +275,7 @@
         }
         .hero .subtitle {
             font-size: 1.4em;
-            color: #e2b714;
+            color: #8a6b08;
             font-weight: bold;
             margin: 0 0 230px 0;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
@@ -288,7 +287,7 @@
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
         .hero .hero-meta {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.8em;
             margin-top: 10px;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -310,11 +309,11 @@
         .stat-number {
             font-size: 1.4em;
             font-weight: bold;
-            color: #e2b714;
+            color: #8a6b08;
         }
         .stat-label {
             font-size: 0.7em;
-            color: #ccc;
+            color: #5a6a7a;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
         }
         .hero-cta {
@@ -322,7 +321,7 @@
             margin-top: 30px;
             padding: 15px 40px;
             background: linear-gradient(135deg, #e2b714, #c9a012);
-            color: #0a0a1a;
+            color: #EFEEEF;
             font-size: 1.1em;
             font-weight: bold;
             border-radius: 3px;
@@ -351,28 +350,28 @@
             margin-bottom: 40px;
         }
         .welcome-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 2em;
             margin-bottom: 12px;
         }
         .welcome-header p {
-            color: #999;
+            color: #5a6a7a;
             font-size: 1.05em;
             line-height: 1.8;
         }
         .welcome-letter {
-            background: rgba(22, 33, 62, 0.6);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-radius: 6px;
             padding: 35px 30px;
             margin-bottom: 30px;
             line-height: 1.9;
-            color: #ccc;
+            color: #5a6a7a;
             font-size: 1.02em;
         }
         .welcome-letter p { margin-bottom: 14px; }
         .welcome-letter p:last-child { margin-bottom: 0; }
-        .welcome-letter strong { color: #e2b714; }
+        .welcome-letter strong { color: #8a6b08; }
         .welcome-topics {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -380,25 +379,25 @@
             margin: 30px 0;
         }
         .welcome-topic {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.12);
             border-radius: 4px;
             padding: 18px 15px;
             text-align: center;
         }
         .welcome-topic .wt-icon { font-size: 1.6em; margin-bottom: 8px; }
-        .welcome-topic .wt-title { color: #e2b714; font-size: 0.95em; font-weight: bold; margin-bottom: 5px; }
-        .welcome-topic .wt-desc { color: #999; font-size: 0.82em; line-height: 1.5; }
+        .welcome-topic .wt-title { color: #8a6b08; font-size: 0.95em; font-weight: bold; margin-bottom: 5px; }
+        .welcome-topic .wt-desc { color: #5a6a7a; font-size: 0.82em; line-height: 1.5; }
         .welcome-note {
             background: rgba(226, 183, 20, 0.04);
             border-left: 3px solid #e2b714;
             padding: 20px 22px;
             margin-top: 25px;
-            color: #bbb;
+            color: #5a6a7a;
             font-size: 0.95em;
             line-height: 1.8;
         }
-        .welcome-note .note-sign { color: #e2b714; font-weight: bold; margin-top: 12px; }
+        .welcome-note .note-sign { color: #8a6b08; font-weight: bold; margin-top: 12px; }
 
         /* Trust Box */
         .trust-box {
@@ -409,7 +408,7 @@
             margin: 25px 0;
         }
         .trust-box h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.2em;
             margin-bottom: 18px;
             text-align: center;
@@ -426,8 +425,8 @@
             text-align: center;
             padding-top: 2px;
         }
-        .trust-point strong { color: #e2b714; display: block; margin-bottom: 4px; }
-        .trust-point p { color: #bbb; font-size: 0.93em; line-height: 1.7; margin: 0; }
+        .trust-point strong { color: #8a6b08; display: block; margin-bottom: 4px; }
+        .trust-point p { color: #5a6a7a; font-size: 0.93em; line-height: 1.7; margin: 0; }
         @media (max-width: 768px) {
             .trust-box { padding: 20px 16px; }
         }
@@ -440,7 +439,7 @@
             display: inline-block;
             padding: 14px 40px;
             background: linear-gradient(135deg, #e2b714, #c9a012);
-            color: #0a0a1a;
+            color: #EFEEEF;
             font-size: 1.1em;
             font-weight: bold;
             border-radius: 4px;
@@ -463,13 +462,13 @@
             border-top: 1px solid rgba(124, 77, 255, 0.15);
         }
         .psych-title {
-            color: #7c4dff;
+            color: #6d28d9;
             font-size: 1.5em;
             margin-bottom: 12px;
             text-align: center;
         }
         .psych-intro {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.97em;
             line-height: 1.8;
             text-align: center;
@@ -484,27 +483,27 @@
             gap: 18px;
         }
         .psych-card {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             padding: 28px 24px;
-            border-left: 4px solid #7c4dff;
+            border-left: 4px solid #9b7bff;
         }
         .psych-card h4 {
-            color: #7c4dff;
+            color: #6d28d9;
             font-size: 1.15em;
             margin-bottom: 12px;
         }
         .psych-card p {
             font-size: 0.97em;
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             margin-bottom: 10px;
         }
         .psych-card p:last-child { margin-bottom: 0; }
-        .psych-card strong { color: #d4c4ff; }
-        .psych-card em { color: #e2b714; font-style: normal; }
+        .psych-card strong { color: #7c3aed; }
+        .psych-card em { color: #8a6b08; font-style: normal; }
         .psych-closing {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
             line-height: 1.8;
             text-align: center;
@@ -517,7 +516,7 @@
             padding: 50px 0 30px;
         }
         .faq-item {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             border-left: 4px solid #e2b714;
             margin-bottom: 12px;
@@ -531,12 +530,12 @@
             align-items: center;
         }
         .faq-question h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.05em;
             margin: 0;
         }
         .faq-question .faq-arrow {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.8em;
             transition: transform 0.3s;
         }
@@ -548,7 +547,7 @@
         }
         .faq-answer p {
             padding: 0 22px 18px;
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 0.95em;
             line-height: 1.8;
             margin: 0;
@@ -562,20 +561,20 @@
             padding: 60px 0;
         }
         .intro-card {
-            background: linear-gradient(135deg, #16213e 0%, #1a1a3e 100%);
+            background: linear-gradient(135deg, #E2DFD9 0%, #D5D0C8 100%);
             border-radius: 3px;
             padding: 40px;
             border-left: 4px solid #e2b714;
             margin-bottom: 25px;
         }
         .intro-card h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             margin-bottom: 15px;
         }
         .intro-card p {
             font-size: 1.05em;
-            color: #c0c0c0;
+            color: #3a4a5a;
         }
 
         /* === CATEGORY === */
@@ -584,7 +583,7 @@
         }
 
         .category-header {
-            background: linear-gradient(135deg, #1a1a3e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #D5D0C8 0%, #E2DFD9 100%);
             border-radius: 3px;
             padding: 18px 22px;
             margin-bottom: 20px;
@@ -592,23 +591,23 @@
             cursor: pointer;
         }
         .category-number {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.85em;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 5px;
         }
         .category-header h3 {
-            color: #fff;
+            color: #1a2a3a;
             font-size: 1.5em;
             margin-bottom: 8px;
         }
         .category-header p {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
         }
         .category-toggle {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 0.9em;
             margin-top: 10px;
         }
@@ -621,7 +620,7 @@
             display: block;
         }
         .claim-card {
-            background: #111128;
+            background: #E2DFD9;
             border-radius: 3px;
             margin-bottom: 15px;
             overflow: hidden;
@@ -644,7 +643,7 @@
             flex: 1;
         }
         .claim-arrow {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.2em;
             margin-left: 15px;
         }
@@ -654,7 +653,7 @@
         .copy-link-btn {
             background: none;
             border: none;
-            color: #888;
+            color: #5a6a7a;
             cursor: pointer;
             font-size: 0.85em;
             padding: 2px 6px;
@@ -662,7 +661,7 @@
             transition: opacity 0.2s;
             float: right;
         }
-        .copy-link-btn:hover { opacity: 1; color: #e2b714; }
+        .copy-link-btn:hover { opacity: 1; color: #8a6b08; }
         .claim-body {
             display: none;
             padding: 0 25px 25px;
@@ -678,7 +677,7 @@
             border-left: 3px solid #2ecc71;
         }
         .refutation-label {
-            color: #2ecc71;
+            color: #15803d;
             font-weight: bold;
             font-size: 0.9em;
             margin-bottom: 8px;
@@ -691,7 +690,7 @@
             border-left: 3px solid #3498db;
         }
         .psychology-label {
-            color: #3498db;
+            color: #1d4ed8;
             font-weight: bold;
             font-size: 0.9em;
             margin-bottom: 8px;
@@ -743,22 +742,22 @@
             left: -37px;
         }
         .timeline-content {
-            background: #16213e;
+            background: #D5D5D5;
             border-radius: 3px;
             padding: 20px;
         }
         .timeline-date {
-            color: #e2b714;
+            color: #8a6b08;
             font-weight: bold;
             font-size: 1.1em;
         }
         .timeline-title {
-            color: #fff;
+            color: #1a2a3a;
             font-size: 1em;
             margin: 5px 0;
         }
         .timeline-desc {
-            color: #999;
+            color: #5a6a7a;
             font-size: 0.9em;
         }
         .timeline-victims {
@@ -775,18 +774,18 @@
             margin-top: 30px;
         }
         .psych-card {
-            background: #12172b;
+            background: #E2DFD9;
             border-radius: 3px;
             padding: 25px;
             border-top: 3px solid #3498db;
         }
         .psych-card h4 {
-            color: #3498db;
+            color: #1d4ed8;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
         .psych-card p {
-            color: #aaa;
+            color: #5a6a7a;
             font-size: 0.95em;
         }
 
@@ -800,11 +799,11 @@
             text-align: center;
         }
         .key-insight h3 {
-            color: #e2b714;
+            color: #8a6b08;
             margin-bottom: 10px;
         }
         .key-insight p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 1.05em;
         }
 
@@ -864,7 +863,7 @@
             .section-header h2 { color: #000; }
             h3, h4 { color: #333; }
             .str-highlight { border-color: #000; background: #f5f5f5; color: #000; }
-            .unity-quote { border-color: #ccc; background: #f9f9f9; color: #000; }
+            .unity-quote { border-color: #5a6a7a; background: #f9f9f9; color: #000; }
             * { box-shadow: none !important; text-shadow: none !important; }
         }
 
@@ -879,7 +878,7 @@
             width: 50px;
             height: 50px;
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border: none;
             border-radius: 50%;
             font-size: 1.4em;
@@ -940,7 +939,7 @@
         .lang-toggle {
             background: rgba(226, 183, 20, 0.2);
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             padding: 6px 14px;
             border-radius: 3px;
             cursor: pointer;
@@ -950,7 +949,7 @@
         }
         .lang-toggle:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
         .lang-menu {
             display: none;
@@ -959,7 +958,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(10, 10, 26, 0.97);
+            background: rgba(74, 106, 138, 0.97);
             z-index: 2000;
             overflow-y: auto;
             padding: 30px 20px;
@@ -972,12 +971,12 @@
             margin-bottom: 25px;
         }
         .lang-menu-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.5em;
             margin-bottom: 5px;
         }
         .lang-menu-header p {
-            color: #aaa;
+            color: #5a6a7a;
         }
         .lang-close {
             position: absolute;
@@ -985,7 +984,7 @@
             right: 20px;
             background: none;
             border: 1px solid #e2b714;
-            color: #e2b714;
+            color: #8a6b08;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -995,7 +994,7 @@
         }
         .lang-close:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
         .lang-grid {
             display: grid;
@@ -1007,7 +1006,7 @@
         .lang-option {
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.15);
-            color: #e0e0e0;
+            color: #1a2a3a;
             padding: 12px 15px;
             border-radius: 3px;
             text-align: center;
@@ -1018,7 +1017,7 @@
         }
         .lang-option:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
             border-color: #e2b714;
         }
         @media (max-width: 768px) {
@@ -1035,7 +1034,7 @@
             margin-top: 30px;
         }
         .report-card {
-            background: #12172b;
+            background: #E2DFD9;
             border-radius: 3px;
             padding: 25px;
             border-left: 3px solid #e2b714;
@@ -1045,7 +1044,7 @@
             margin-bottom: 10px;
         }
         .report-card h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.1em;
             margin-bottom: 8px;
         }
@@ -1057,7 +1056,7 @@
         }
         .report-card a.report-link {
             display: inline-block;
-            color: #e2b714;
+            color: #8a6b08;
             border: 1px solid rgba(226,183,20,0.3);
             padding: 6px 16px;
             border-radius: 3px;
@@ -1067,7 +1066,7 @@
         }
         .report-card a.report-link:hover {
             background: #e2b714;
-            color: #0a0a1a;
+            color: #EFEEEF;
         }
 
         /* === GATEWAY CARDS === */
@@ -1080,7 +1079,7 @@
         }
         .gateway-card {
             display: block;
-            background: linear-gradient(135deg, #1a1a3e, #16213e);
+            background: linear-gradient(135deg, #D5D0C8, #E2DFD9);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 3px;
             padding: 30px 25px;
@@ -1093,13 +1092,13 @@
             transform: translateY(-3px);
         }
         .gateway-icon { font-size: 2em; margin-bottom: 12px; }
-        .gateway-card h3 { color: #e2b714; font-size: 1.15em; margin-bottom: 8px; }
-        .gateway-card p { color: #999; font-size: 0.9em; line-height: 1.5; }
+        .gateway-card h3 { color: #8a6b08; font-size: 1.15em; margin-bottom: 8px; }
+        .gateway-card p { color: #5a6a7a; font-size: 0.9em; line-height: 1.5; }
         .gateway-arrow {
             position: absolute;
             bottom: 15px;
             right: 15px;
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.3em;
             opacity: 0;
             transition: opacity 0.3s;
@@ -1121,12 +1120,12 @@
             margin-bottom: 50px;
         }
         #strengthen .section-header h2 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 2.2em;
             margin-bottom: 10px;
         }
         #strengthen .section-header p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 1.1em;
             max-width: 700px;
             margin: 0 auto;
@@ -1141,7 +1140,7 @@
         .str-tab {
             background: rgba(226, 183, 20, 0.08);
             border: 1px solid rgba(226, 183, 20, 0.25);
-            color: #c0c0c0;
+            color: #3a4a5a;
             padding: 10px 22px;
             border-radius: 3px;
             cursor: pointer;
@@ -1151,7 +1150,7 @@
         }
         .str-tab:hover, .str-tab.active {
             background: rgba(226, 183, 20, 0.2);
-            color: #e2b714;
+            color: #8a6b08;
             border-color: #e2b714;
         }
         .str-panel {
@@ -1161,31 +1160,31 @@
         .str-panel.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
         .str-topic {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.15);
             border-radius: 3px;
             padding: 30px;
             margin-bottom: 25px;
         }
         .str-topic h3 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.4em;
             margin-bottom: 15px;
             border-bottom: 1px solid rgba(226, 183, 20, 0.15);
             padding-bottom: 10px;
         }
         .str-topic h4 {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.1em;
             margin: 20px 0 10px;
         }
         .str-topic p {
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             margin-bottom: 12px;
         }
         .str-topic ul {
-            color: #c0c0c0;
+            color: #3a4a5a;
             line-height: 1.8;
             padding-left: 25px;
             margin-bottom: 12px;
@@ -1196,7 +1195,7 @@
             padding: 15px 20px;
             margin: 15px 0;
             border-radius: 3px 0 0 3px;
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.05em;
         }
         .str-stat-row {
@@ -1215,12 +1214,12 @@
             text-align: center;
         }
         .str-stat .num {
-            color: #e2b714;
+            color: #8a6b08;
             font-size: 1.6em;
             font-weight: bold;
         }
         .str-stat .label {
-            color: #c0c0c0;
+            color: #3a4a5a;
             font-size: 0.85em;
             margin-top: 5px;
         }
@@ -1232,7 +1231,7 @@
             margin-bottom: 30px;
         }
         .unity-card {
-            background: rgba(18, 23, 43, 0.8);
+            background: rgba(226, 223, 217, 0.8);
             border: 1px solid rgba(226, 183, 20, 0.2);
             border-radius: 6px;
             padding: 30px 25px;
@@ -1246,14 +1245,14 @@
             transform: translateY(-3px);
         }
         .unity-icon { font-size: 2.5em; margin-bottom: 12px; }
-        .unity-card h4 { color: #e2b714; font-size: 1.15em; margin-bottom: 8px; }
-        .unity-card p { color: #999; font-size: 0.9em; line-height: 1.5; margin: 0; }
+        .unity-card h4 { color: #8a6b08; font-size: 1.15em; margin-bottom: 8px; }
+        .unity-card p { color: #5a6a7a; font-size: 0.9em; line-height: 1.5; margin: 0; }
         .unity-sub { display: none !important; }
         .unity-sub.active { display: block !important; animation: fadeIn 0.4s; }
         .unity-back {
             background: rgba(226, 183, 20, 0.1);
             border: 1px solid rgba(226, 183, 20, 0.3);
-            color: #e2b714;
+            color: #8a6b08;
             padding: 8px 20px;
             border-radius: 3px;
             cursor: pointer;
@@ -1270,10 +1269,10 @@
             margin: 20px 0;
             border-radius: 3px 0 0 3px;
             font-style: italic;
-            color: #ccc;
+            color: #5a6a7a;
             line-height: 1.7;
         }
-        .unity-quote cite { display: block; margin-top: 8px; font-style: normal; color: #e2b714; font-size: 0.9em; }
+        .unity-quote cite { display: block; margin-top: 8px; font-style: normal; color: #8a6b08; font-size: 0.9em; }
         @media (max-width: 600px) {
             #strengthen { padding: 50px 15px; }
             .str-tabs { gap: 6px; }
@@ -1406,7 +1405,7 @@
     </div>
     <div id="authLoggedIn" class="auth-tab">
         <h2>&#128075; Hello, <span id="authUserName"></span></h2>
-        <p style="text-align:center;color:#888;margin-bottom:20px;">You are signed in and can view exclusive content</p>
+        <p style="text-align:center;color: #5a6a7a;margin-bottom:20px;">You are signed in and can view exclusive content</p>
         <div style="text-align:center;">
             <button onclick="handleLogout()" style="padding:12px 30px;background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.4);color:#e74c3c;border-radius:3px;cursor:pointer;font-family:inherit;font-size:1em;">Sign Out</button>
         </div>
@@ -1416,7 +1415,7 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h1><span style="color:#0038b8">Truth</span> Against <span style="color:#cc0000">Lies</span></h1>
+        <h1><span style="color:#4488cc">Truth</span> Against <span style="color:#e04040">Lies</span></h1>
     </div>
     <div class="hero-stats">
         <div class="stat">
@@ -1459,8 +1458,8 @@
 
 <span id="content-start"></span>
 <div style="text-align: center; padding: 40px 20px 30px; max-width: 700px; margin: 0 auto;">
-    <p style="font-size: 1.4em; color: #e2b714; font-weight: bold; margin-bottom: 10px;">Examining Antisemitic Claims in Light of Historical and Academic Sources</p>
-    <p style="font-size: 1em; color: #aaa;">Truth Against Lies &mdash; Fighting Antisemitism with Facts</p>
+    <p style="font-size: 1.4em; color: #8a6b08; font-weight: bold; margin-bottom: 10px;">Examining Antisemitic Claims in Light of Historical and Academic Sources</p>
+    <p style="font-size: 1em; color: #5a6a7a;">Truth Against Lies &mdash; Fighting Antisemitism with Facts</p>
     <a href="lies-en.html" class="hero-cta" style="margin-top: 20px;">View Full Content</a>
 </div>
 
@@ -1514,7 +1513,7 @@
     </div>
 
     <div style="text-align: center; margin-bottom: 10px;">
-        <h3 style="color: #e2b714; font-size: 1.3em;">What You'll Find on This Site</h3>
+        <h3 style="color: #8a6b08; font-size: 1.3em;">What You'll Find on This Site</h3>
     </div>
 
     <div class="welcome-topics">
@@ -1665,7 +1664,7 @@
                 <span class="faq-arrow">&#9660;</span>
             </div>
             <div class="faq-answer">
-                <p>Excellent! Accuracy is the most important value here. Send an email to <a href="mailto:truthagainstlies3@gmail.com" style="color: #e2b714;">truthagainstlies3@gmail.com</a> with corrections, suggestions for new libels, or any other feedback. Every message is read.</p>
+                <p>Excellent! Accuracy is the most important value here. Send an email to <a href="mailto:truthagainstlies3@gmail.com" style="color: #8a6b08;">truthagainstlies3@gmail.com</a> with corrections, suggestions for new libels, or any other feedback. Every message is read.</p>
             </div>
         </div>
     </div>
@@ -2055,7 +2054,7 @@
         <h2>Strengthening the People</h2>
         <div class="section-divider"></div>
         <p>A survey of cohesion mechanisms, historical contributions, and survival factors of the Jewish people</p>
-        <a href="unity-en.html" style="display:inline-block;margin-top:12px;padding:10px 28px;background:linear-gradient(135deg,#e2b714,#f5d74e);color:#0a0a1a;border-radius:25px;font-weight:bold;font-size:1.05em;text-decoration:none;">&#x2192; Full Strengthening the Jewish People Page</a>
+        <a href="unity-en.html" style="display:inline-block;margin-top:12px;padding:10px 28px;background:linear-gradient(135deg,#e2b714,#f5d74e);color: #0d1520;border-radius:25px;font-weight:bold;font-size:1.05em;text-decoration:none;">&#x2192; Full Strengthening the Jewish People Page</a>
     </div>
 
     <div class="str-tabs">
@@ -2232,7 +2231,7 @@
 
             <div class="str-topic">
                 <h3>What They Say About Us &mdash; Famous Quotes</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 4, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 4, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
 
                 <div class="unity-quote">"The Egyptian, the Babylonian, and the Persian rose, filled the planet with sound and splendor, then faded to dream-stuff and passed away; the Greek and the Roman followed, and made a vast noise, and they are gone; other peoples have sprung up and held their torch high for a time, but it burned out, and they sit in twilight now, or have vanished. <strong>The Jew saw them all, beat them all, and is now what he always was</strong>, exhibiting no decadence, no infirmities of age, no weakening of his parts, no slowing of his energies. All things are mortal but the Jew; all other forces pass, but he remains. What is the secret of his immortality?"<cite>&mdash; Mark Twain, "Concerning the Jews," 1899</cite></div>
 
@@ -2245,7 +2244,7 @@
 
             <div class="str-topic">
                 <h3>The Expulsion Paradox &mdash; Every Country That Expelled Jews Weakened</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 4, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 4, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
                 <ul>
                     <li><strong>Spain (1492):</strong> The expulsion of the Jews marked the beginning of the decline of the Spanish Empire &mdash; it never returned to its greatness.</li>
                     <li><strong>Portugal (1497):</strong> Same pattern. Forced conversion of nearly all Jews. Decline.</li>
@@ -2277,7 +2276,7 @@
                 <p>Saved <strong>669 Jewish children</strong> from Czechoslovakia in 1939 by organizing Kindertransport trains to Britain. <strong>He told no one for 50 years</strong> &mdash; until his wife found a notebook with the names.</p>
 
                 <h4>Additional Heroes</h4>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 7, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 7, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
                 <p><strong>Giorgio Perlasca</strong> (1910&ndash;1992) &mdash; an Italian businessman in Budapest. When the Spanish consul fled, Perlasca <strong>impersonated a Spanish diplomat</strong> &mdash; and the Germans and Hungarians believed him. He forged Spanish passports, rented "safe houses," <strong>and saved 5,218 Jews.</strong> After the war he lived in obscurity &mdash; until a survivor found him in 1987.</p>
                 <p><strong>Aristides de Sousa Mendes</strong> (1885&ndash;1954) &mdash; Portuguese consul in Bordeaux, France. <strong>Defied a direct order</strong> from dictator Salazar that forbade granting visas to Jews. Over 3 days he issued ~30,000 visas, <strong>saving ~10,000 Jews.</strong> The punishment: he was fired, his pension revoked, and his family lived in poverty. He died broken and poor in 1954.</p>
                 <p><strong>Jan Karski</strong> (1914&ndash;2000) &mdash; a Polish underground courier. In 1942 he was smuggled into the Warsaw Ghetto and a transit camp <strong>to see with his own eyes.</strong> He came out with the evidence, met with President Roosevelt and world leaders. <strong>He told them about the mass murder. They did not believe. They did nothing.</strong></p>
@@ -2299,7 +2298,7 @@
         <div class="str-topic">
             <h3>7 Survival Factors &mdash; Why We Are Still Here</h3>
             <p>How did a people of 15.8 million survive 4,000 years of persecution, exile, and Holocaust? How did every empire that tried to destroy us &mdash; vanish? <strong>7 factors.</strong> Together, they create the greatest miracle in history.</p>
-            <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 2, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+            <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 2, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
 
             <h4>1. Sacred Texts and Portable Culture</h4>
             <p>The Jewish people are the "People of the Book." When temples were destroyed and cities fell &mdash; <strong>the Torah, the Mishnah, the Talmud remained.</strong> You can carry a Torah scroll from country to country. You cannot carry a pyramid. <strong>Jewish culture is portable &mdash; and therefore indestructible.</strong></p>
@@ -2477,7 +2476,7 @@
 
             <div class="str-topic">
                 <h3>"Spider Web" Theory &mdash; The Enemy Understands Us</h3>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 2, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 2, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
 
                 <h4>Bint Jbeil Speech &mdash; May 26, 2000</h4>
                 <p>Hassan Nasrallah, Secretary-General of Hezbollah, after Israel's withdrawal from Lebanon:</p>
@@ -2623,9 +2622,9 @@
             <div class="str-topic">
                 <h3>The Existential Danger &mdash; Numbers You Need to Know</h3>
                 <p>These numbers are not slogans. They are verified data from international research. And they paint a picture every Jew must know.</p>
-                <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 7, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+                <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 7, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
 
-                <h4 style="color:#cc0000;">15.8 Million vs. 2.2 Billion</h4>
+                <h4 style="color:#e04040;">15.8 Million vs. 2.2 Billion</h4>
                 <div class="str-stat-row">
                     <div class="str-stat"><div class="num">15.8M</div><div class="label">Jewish population worldwide (0.2% of humanity)</div></div>
                     <div class="str-stat"><div class="num">2.2B</div><div class="label">People with antisemitic attitudes (ADL 2025 survey)</div></div>
@@ -2662,7 +2661,7 @@
 
                 <p style="margin-top:15px;"><strong>70%</strong> of all religiously motivated hate crimes in the USA target Jews &mdash; despite Jews being <strong>2%</strong> of the U.S. population.</p>
 
-                <div class="str-highlight" style="border-left-color:#cc0000; color:#ff6b6b;">Demographic data points to a significant gap between the size of the Jewish population and the scale of hostility toward it &mdash; a fact underscoring the importance of community cohesion.</div>
+                <div class="str-highlight" style="border-left-color:#e04040; color:#dc2626;">Demographic data points to a significant gap between the size of the Jewish population and the scale of hostility toward it &mdash; a fact underscoring the importance of community cohesion.</div>
             </div>
 
             <div class="str-highlight">A shared language, collective memory, mutual responsibility, scientific and cultural achievements, and a shared experience of fate &mdash; a combination of factors that explains the unique survival of the Jewish people over 3,500 years.</div>
@@ -2732,7 +2731,7 @@
         <div class="str-topic">
             <h4>October 7, 2023 &mdash; The Day Everything Changed</h4>
             <p>On October 7, 2023, ~3,000 Hamas terrorists infiltrated Israel (out of ~6,000 recruited) and carried out the deadliest terrorist attack in the nation's history. 1,139&ndash;1,219 murdered, 251 kidnapped, 4,834 wounded. 20+ communities attacked simultaneously. The most devastating terrorist attack relative to population since global data has been recorded.</p>
-            <p><a href="october7-en.html" style="color:#e2b714; font-weight:bold; text-decoration:underline;">&#8594; Full in-depth analysis: background, minute-by-minute timeline, breakdown by community, hostages, intelligence failure, stories of heroism</a></p>
+            <p><a href="october7-en.html" style="color:#8a6b08; font-weight:bold; text-decoration:underline;">&#8594; Full in-depth analysis: background, minute-by-minute timeline, breakdown by community, hostages, intelligence failure, stories of heroism</a></p>
         </div>
 
         <div class="str-topic">
@@ -2745,10 +2744,10 @@
             <p>Demographically, absorbing 5.9 million people into Israel would change the demographic balance in a way that would prevent its existence as a Jewish nation-state &mdash; a fact recognized even by neutral analysts.</p>
 
             <h4>The Refugees No One Mentions</h4>
-            <p>850,000 Jews were expelled from Arab countries (1948&ndash;1970). Communities of thousands of years were destroyed. Almost all were absorbed in Israel. No one received compensation. No UNRWA for Jews. No "right of return" for the Jews of Baghdad. (Full details by country &mdash; in the <a href="#" onclick="showStrPanel(0);return false;" style="color:#e2b714;">Who We Are</a> tab)</p>
+            <p>850,000 Jews were expelled from Arab countries (1948&ndash;1970). Communities of thousands of years were destroyed. Almost all were absorbed in Israel. No one received compensation. No UNRWA for Jews. No "right of return" for the Jews of Baghdad. (Full details by country &mdash; in the <a href="#" onclick="showStrPanel(0);return false;" style="color:#8a6b08;">Who We Are</a> tab)</p>
 
             <h4>"Apartheid" &mdash; Debunked</h4>
-            <p>2 million Israeli Arabs are <strong>full citizens</strong> with full rights. (<a href="lies-en.html" style="color:#e2b714;">Detailed refutation with sources &#8594;</a>)</p>
+            <p>2 million Israeli Arabs are <strong>full citizens</strong> with full rights. (<a href="lies-en.html" style="color:#8a6b08;">Detailed refutation with sources &#8594;</a>)</p>
 
             <h4 style="margin-top:20px;">PLO Founded in 1964 &mdash; 3 Years Before the "Occupation"</h4>
             <p>The PLO (Palestine Liberation Organization) was founded in 1964 &mdash; <strong>3 years before the Six-Day War.</strong> In 1964 the West Bank was under Jordanian rule and Gaza under Egyptian rule. <strong>19 years of Jordanian occupation (1948&ndash;1967) &mdash; and no one demanded a Palestinian state.</strong> The PLO spoke of "liberating" <strong>all</strong> of Palestine &mdash; meaning Israel itself.</p>
@@ -2757,7 +2756,7 @@
         <div class="str-topic">
             <h3>Peace Proposals Rejected &mdash; 1937 to 2020</h3>
             <p>The famous quote from Abba Eban (Foreign Minister): <strong>"The Palestinians never miss an opportunity to miss an opportunity."</strong> Here is the proof:</p>
-            <p style="font-size:0.85em; color:#999; margin-bottom:15px;">(Source: Chapter 5, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
+            <p style="font-size:0.85em; color: #5a6a7a; margin-bottom:15px;">(Source: Chapter 5, "The Inner Faces of Israel" &mdash; Nathanael Linder)</p>
 
             <h4>1937 &mdash; Peel Commission: Partition of the Land</h4>
             <p>A British proposal to partition the land into a Jewish state and an Arab state. <strong>The Jews accepted (with reservations). The Arabs rejected.</strong></p>
@@ -2889,7 +2888,7 @@
 <!-- PROTECTED CONTENT (visible only to logged-in users) -->
 <section id="protectedContentArea" style="display:none; max-width: 900px; margin: 60px auto; padding: 0 20px;">
     <div class="section-header">
-        <h2 style="color: #e2b714;">&#128274; Exclusive Content for Members</h2>
+        <h2 style="color: #8a6b08;">&#128274; Exclusive Content for Members</h2>
         <div class="section-divider"></div>
     </div>
 </section>
@@ -2913,7 +2912,7 @@
 </div>
 
 <footer>
-    <p style="color: #e2b714; font-size: 1.2em; margin-bottom: 10px;">Evidence-based information for awareness and education</p>
+    <p style="color: #8a6b08; font-size: 1.2em; margin-bottom: 10px;">Evidence-based information for awareness and education</p>
     <p>Source-based documentation against antisemitism</p>
     <div class="footer-sources">
         <p style="margin-top: 20px;">Sources: ADL, Yad Vashem, USHMM, UNESCO, peer-reviewed academic research</p>
@@ -2921,17 +2920,17 @@
     </div>
     <p style="margin-top: 25px; font-size: 0.85em; color: #555;">This site documents antisemitic libels for the purpose of education and refutation only. No claim documented here is endorsed. They are presented so they can be dismantled.</p>
     <!-- DONATION SECTION -->
-    <div style="margin: 40px auto 30px; max-width: 600px; background: #12172b; border: 2px solid rgba(226, 183, 20, 0.4); border-radius: 3px; padding: 35px; text-align: center;">
-        <h3 style="color: #e2b714; font-size: 1.5em; margin-bottom: 8px;">Support the Project</h3>
-        <p style="color: #e2b714; opacity: 0.8; font-size: 1em; margin-bottom: 15px;">Your donation enables continued activity and development</p>
-        <p style="color: #c0c0c0; font-size: 0.95em; line-height: 1.7; margin-bottom: 25px;">This site is created and maintained by a private individual. Every donation &mdash; however small &mdash; helps with continued content creation, translation into additional languages, and making the information accessible to wider audiences.</p>
-        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" style="display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #e2b714, #c9a012); color: #0a0a1a; font-size: 1.15em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(226,183,20,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Buy Me a Coffee &#9749;</a>
+    <div style="margin: 40px auto 30px; max-width: 600px; background: #E2DFD9; border: 2px solid rgba(226, 183, 20, 0.4); border-radius: 3px; padding: 35px; text-align: center;">
+        <h3 style="color: #8a6b08; font-size: 1.5em; margin-bottom: 8px;">Support the Project</h3>
+        <p style="color: #8a6b08; opacity: 0.8; font-size: 1em; margin-bottom: 15px;">Your donation enables continued activity and development</p>
+        <p style="color: #3a4a5a; font-size: 0.95em; line-height: 1.7; margin-bottom: 25px;">This site is created and maintained by a private individual. Every donation &mdash; however small &mdash; helps with continued content creation, translation into additional languages, and making the information accessible to wider audiences.</p>
+        <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" style="display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #e2b714, #c9a012); color: #EFEEEF; font-size: 1.15em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 30px rgba(226,183,20,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Buy Me a Coffee &#9749;</a>
     </div>
 
     <!-- CONTACT -->
     <div style="margin-top: 30px;">
-        <a href="mailto:truthagainstlies3@gmail.com?subject=Contact from website — Truth Against Lies" style="display: inline-block; padding: 12px 30px; border: 2px solid #7c4dff; color: #7c4dff; font-size: 1em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.background='#7c4dff';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#7c4dff'">&#9993; Contact Us</a>
-        <p style="color: #aaa; font-size: 0.8em; margin-top: 8px;">Suggestions, corrections, or new libels to add? We'd love to hear</p>
+        <a href="mailto:truthagainstlies3@gmail.com?subject=Contact from website — Truth Against Lies" style="display: inline-block; padding: 12px 30px; border: 2px solid #6d28d9; color: #6d28d9; font-size: 1em; font-weight: bold; border-radius: 3px; text-decoration: none; transition: all 0.3s;" onmouseover="this.style.background='#9b7bff';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='#9b7bff'">&#9993; Contact Us</a>
+        <p style="color: #5a6a7a; font-size: 0.8em; margin-top: 8px;">Suggestions, corrections, or new libels to add? We'd love to hear</p>
     </div>
 
     <p style="margin-top: 20px;">Built by Nathanael Assis | 2026</p>

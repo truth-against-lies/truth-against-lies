@@ -30,7 +30,7 @@ document.addEventListener('click', function(e) {
     if (!parents.length) return;
     var flyouts = [];
     var isRTL = document.documentElement.dir === 'rtl' || getComputedStyle(document.body).direction === 'rtl';
-    var MOBILE_BP = 900; // breakpoint: <= this = mobile (inline), > this = desktop (flyout)
+    var MOBILE_BP = 480; // breakpoint: <= this = mobile (inline), > this = desktop (flyout)
 
     function isMobile() { return window.innerWidth <= MOBILE_BP; }
 
