@@ -766,10 +766,14 @@
             transform: scale(1.3);
         }
         .timeline-item:nth-child(odd) .tl-icon {
-            left: -45px;
+            left: auto;
+            right: -5px;
+            transform: translateX(100%);
         }
         .timeline-item:nth-child(even) .tl-icon {
-            right: -45px;
+            right: auto;
+            left: -5px;
+            transform: translateX(-100%);
         }
         .timeline-content {
             background: rgba(213, 213, 213, 0.2);
@@ -1363,6 +1367,60 @@
             .unity-menu { grid-template-columns: 1fr; }
             .unity-card { padding: 20px 15px; }
         }
+        /* === SIDEBAR === */
+        .site-sidebar {
+            position: fixed;
+            top: 60px;
+            right: 10px;
+            width: 160px;
+            height: calc(100vh - 60px);
+            background: rgba(74, 106, 138, 0.1);
+            backdrop-filter: blur(10px);
+            overflow-y: auto;
+            z-index: 50;
+            padding: 15px 12px;
+            border-left: 1px solid rgba(226,183,20,0.15);
+            scrollbar-width: thin;
+            scrollbar-color: rgba(226,183,20,0.3) transparent;
+        }
+        .site-sidebar::-webkit-scrollbar { width: 4px; }
+        .site-sidebar::-webkit-scrollbar-thumb { background: rgba(226,183,20,0.3); border-radius: 2px; }
+        .sb-section { margin-bottom: 20px; }
+        .sb-title {
+            color: #1a1a1a;
+            font-size: 0.95em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid rgba(226,183,20,0.2);
+        }
+        .sb-links { list-style: none; padding: 0; margin: 0; }
+        .sb-links li { margin-bottom: 2px; }
+        .sb-links a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 0.85em;
+            display: block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            transition: all 0.2s;
+        }
+        .sb-links a:hover {
+            background: rgba(226,183,20,0.15);
+            color: #e2b714;
+        }
+        .sb-links a.active {
+            background: rgba(226,183,20,0.2);
+            color: #8a6b08;
+            font-weight: bold;
+        }
+        .sb-toc-link { font-size: 0.82em !important; padding: 5px 8px !important; }
+        /* Sidebar does NOT push content - it overlays the empty margin */
+        @media (max-width: 1200px) {
+            .site-sidebar { display: none; }
+            body { margin-right: 0; }
+            nav { width: 100%; }
+        }
     </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.99.1" integrity="sha384-nBSomYN4UWX4we7Pw5GsQDkjtwLh2Wde+3szWl5Lzf0zuN9XncHIZLNoucos4C7f" crossorigin="anonymous"></script>
 <script src="supabase-config.js"></script>
@@ -1459,6 +1517,99 @@
         <a href="https://buymeacoffee.com/nathaniellinder" target="_blank" rel="noopener" class="nav-donate">&#9749; תמוך</a>
     </div>
 </nav>
+
+<!-- SIDEBAR -->
+<aside class="site-sidebar">
+    <div class="sb-section">
+        <div class="sb-title">📍 בדף הזה</div>
+        <ul class="sb-links">
+            <li><a href="#timeline" class="sb-toc-link">ציר זמן היסטורי</a></li>
+            <li><a href="#psychology" class="sb-toc-link">הפסיכולוגיה של השנאה</a></li>
+            <li><a href="#explore-more" class="sb-toc-link">חקרו עוד</a></li>
+            <li><a href="#strengthen" class="sb-toc-link">חיזוק ומחשבה</a></li>
+            <li><a href="#report" class="sb-toc-link">דיווח על אנטישמיות</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">🔍 אנטישמיות</div>
+        <ul class="sb-links">
+            <li><a href="antisemitism.html">מה זה אנטישמיות?</a></li>
+            <li><a href="antisemitism.html#claims">עלילות והפרכות</a></li>
+            <li><a href="holocaust-denial.html">הכחשת השואה</a></li>
+            <li><a href="statistics.html">נתוני אנטישמיות</a></li>
+            <li><a href="antisemitic-orgs.html">ארגונים אנטישמיים</a></li>
+            <li><a href="islam-judaism.html">אסלאם ויהדות</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">❌ שקרים והפרכות</div>
+        <ul class="sb-links">
+            <li><a href="lies.html">34 שקרים נפוצים</a></li>
+            <li><a href="fact-cards.html">כרטיסי עובדות</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">📅 היסטוריה ותיעוד</div>
+        <ul class="sb-links">
+            <li><a href="timeline.html">ציר זמן מלא</a></li>
+            <li><a href="october7.html">7 באוקטובר</a></li>
+            <li><a href="regions.html">שנאה לפי עמים</a></li>
+            <li><a href="stories.html">סיפורים אישיים</a></li>
+            <li><a href="gallery.html">תיעוד היסטורי</a></li>
+            <li><a href="videos.html">סרטונים</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">💡 עובדות שלא מספרים לך</div>
+        <ul class="sb-links">
+            <li><a href="facts.html">סקירה כללית</a></li>
+            <li><a href="facts-command.html">פיקוד כושל ובוגד</a></li>
+            <li><a href="facts-knesset.html">חברי כנסת</a></li>
+            <li><a href="facts-court.html">בג"ץ ומערכת המשפט</a></li>
+            <li><a href="facts-policies.html">חוקים ומדיניות כושלת</a></li>
+            <li><a href="facts-media.html">תקשורת שקרנית</a></li>
+            <li><a href="facts-orgs.html">ארגונים, אקדמיה ו-BDS</a></li>
+            <li><a href="facts-money.html">הכסף — מימון הטרור</a></li>
+            <li><a href="facts-iran.html">ציר ההרס של איראן</a></li>
+            <li><a href="facts-west.html">בגידות המערב</a></li>
+            <li><a href="facts-myths.html">שקרים שהמציאות הפריכה</a></li>
+            <li><a href="facts-netanyahu.html">הפרדוקס של נתניהו</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">💪 חיזוק ומחשבה</div>
+        <ul class="sb-links">
+            <li><a href="unity.html">חיזוק העם היהודי</a></li>
+            <li><a href="consciousness.html">שינוי תודעה</a></li>
+            <li><a href="mind.html">חיזוק המוח</a></li>
+            <li><a href="mind-liberation.html">שחרור התודעה</a></li>
+            <li><a href="left-narrative.html">הנרטיב של השמאל</a></li>
+            <li><a href="daat-dat.html">דעת vs דת</a></li>
+            <li><a href="bnei-yisrael.html">בני ישראל</a></li>
+            <li><a href="streams.html">זרמים ומגזרים</a></li>
+            <li><a href="internal-schism.html">הפילוג הפנימי</a></li>
+            <li><a href="mishpacha.html">המשפחה</a></li>
+            <li><a href="zivug.html">הזיווג</a></li>
+            <li><a href="sword-prayer.html">חרב ותפילה</a></li>
+            <li><a href="the-schism.html">הפילוג הגדול</a></li>
+            <li><a href="revolving-door.html">הדלת המסתובבת</a></li>
+        </ul>
+    </div>
+
+    <div class="sb-section">
+        <div class="sb-title">🔧 כלים</div>
+        <ul class="sb-links">
+            <li><a href="glossary.html">מילון מונחים</a></li>
+            <li><a href="action.html">מה אפשר לעשות?</a></li>
+            <li><a href="#report">דווח על אנטישמיות</a></li>
+        </ul>
+    </div>
+</aside>
 
 <!-- LANGUAGE MENU (Full Screen) -->
 <div id="langMenu" class="lang-menu">
