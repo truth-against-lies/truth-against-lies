@@ -154,11 +154,23 @@
     aside.className = 'site-sidebar';
     aside.innerHTML = tocHtml + catHtml;
 
+    // Create toggle button
+    var btn = document.createElement('button');
+    btn.className = 'sb-toggle';
+    btn.innerHTML = '☰';
+    btn.title = isHebrew ? 'תפריט ניווט' : 'Navigation menu';
+    btn.onclick = function() {
+        aside.classList.toggle('sb-closed');
+        btn.innerHTML = aside.classList.contains('sb-closed') ? '☰' : '✕';
+    };
+
     // Insert after nav
     var nav = document.querySelector('nav');
     if (nav) {
         nav.parentNode.insertBefore(aside, nav.nextSibling);
+        nav.parentNode.insertBefore(btn, aside);
     } else {
         document.body.insertBefore(aside, document.body.firstChild);
+        document.body.insertBefore(btn, aside);
     }
 })();
