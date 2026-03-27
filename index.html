@@ -704,9 +704,22 @@
         #timeline .section-header p { color: #000000; }
         .tl-side-img .tl-img-caption { color: #000000; }
         #timeline {
+            position: relative;
             background-color: #e8e0d4;
             background-image: url("assets/brick-wall-dark.png");
             background-repeat: repeat;
+        }
+        #timeline .tl-fade {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+            background:
+                linear-gradient(180deg, #EFEEEF 0%, transparent 80px),
+                linear-gradient(0deg, #EFEEEF 0%, transparent 80px);
         }
         .timeline {
             position: relative;
@@ -1879,6 +1892,7 @@ function goOriginal() {
 
 <!-- TIMELINE -->
 <section id="timeline">
+    <div class="tl-fade"></div>
     <div class="section-header">
         <h2>2,500+ שנות רדיפה מתועדת</h2>
         <div class="section-divider"></div>
