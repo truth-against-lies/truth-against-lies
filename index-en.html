@@ -702,6 +702,11 @@
         }
 
         /* === TIMELINE === */
+        #timeline {
+            background-color: #e8e0d4;
+            background-image: url("assets/brick-wall-dark.png");
+            background-repeat: repeat;
+        }
         .timeline {
             position: relative;
             padding: 20px 0;
@@ -743,9 +748,11 @@
             left: -37px;
         }
         .timeline-content {
-            background: #D5D5D5;
+            background: rgba(213, 213, 213, 0.2);
+            backdrop-filter: blur(1px);
             border-radius: 3px;
             padding: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
         .timeline-date {
             color: #8a6b08;
