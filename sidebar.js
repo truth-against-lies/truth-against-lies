@@ -8,6 +8,12 @@
     var isHebrew = document.documentElement.dir !== 'ltr';
     var currentPage = location.pathname.split('/').pop() || 'index.html';
 
+    function esc(str) {
+        var d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+    }
+
     var categories = isHebrew ? [
         { title: '🔍 אנטישמיות', links: [
             ['antisemitism.html', 'מה זה אנטישמיות?'],
@@ -124,13 +130,13 @@
     var tocHtml = '';
     var sections = document.querySelectorAll('section[id]');
     if (sections.length > 0) {
-        var isIndex = (currentPage === 'index.html' || currentPage === 'index-en.html' || currentPage === '');
+        var isIndex = (currentPage === 'index.html' || currentPage === 'index-en.html');
         var tocTitle = isHebrew ? (isIndex ? '📍 בדף הראשי' : '📍 בדף הזה') : (isIndex ? '📍 Main Page' : '📍 On This Page');
         tocHtml = '<div class="sb-section"><div class="sb-title">' + tocTitle + '</div><ul class="sb-links">';
         sections.forEach(function(s) {
             var h2 = s.querySelector('h2');
             if (h2) {
-                tocHtml += '<li><a href="#' + s.id + '" class="sb-toc-link">' + h2.textContent.trim() + '</a></li>';
+                tocHtml += '<li><a href="#' + esc(s.id) + '" class="sb-toc-link">' + esc(h2.textContent.trim()) + '</a></li>';
             }
         });
         tocHtml += '</ul></div>';
