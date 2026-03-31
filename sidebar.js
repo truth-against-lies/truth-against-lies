@@ -25,6 +25,7 @@
         ]},
         { title: '❌ שקרים והפרכות', links: [
             ['lies.html', '34 שקרים נפוצים'],
+            ['conspiracies.html', '69 קונספירציות'],
             ['fact-cards.html', 'כרטיסי עובדות']
         ]},
         { title: '📅 היסטוריה ותיעוד', links: [
@@ -80,6 +81,7 @@
         ]},
         { title: '❌ Lies & Refutations', links: [
             ['lies-en.html', '34 Common Lies'],
+            ['conspiracies-en.html', '69 Conspiracies'],
             ['fact-cards-en.html', 'Fact Cards']
         ]},
         { title: '📅 History & Documentation', links: [
