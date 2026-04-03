@@ -266,6 +266,7 @@
 <div class="lib-layout">
     <!-- Book Sidebar -->
     <div class="lib-sidebar" id="bookSidebar">
+        <input type="text" id="bookSearch" placeholder="🔍 חפש ספר..." oninput="filterBooks(this.value)" style="width:100%; padding:8px 12px; border:1px solid rgba(226,183,20,0.3); border-radius:3px; font-family:inherit; font-size:0.85em; margin-bottom:10px; background:#f5f0e8; direction:rtl;">
         <h3>📚 ספרי קודש</h3>
         <div id="sidebarContent">טוען ספרייה...</div>
     </div>
@@ -501,6 +502,88 @@ async function loadSidebar() {
 }
 loadSidebar();
 
+// Filter books in sidebar by search
+function filterBooks(query) {
+    query = query.trim();
+    var sidebar = document.getElementById('sidebarContent');
+
+    if (!query) {
+        sidebar.querySelectorAll('a').forEach(function(a) { a.style.display = ''; });
+        sidebar.querySelectorAll('.lib-cat').forEach(function(c) { c.style.display = ''; });
+        sidebar.querySelectorAll('.lib-cat-items').forEach(function(i) { i.classList.remove('open'); });
+        sidebar.querySelectorAll('.lib-cat-title').forEach(function(t) { t.classList.remove('open'); });
+        return;
+    }
+
+    var q = query.toLowerCase();
+    var variants = [q];
+    if (q.length > 1 && 'הובלמשכ'.indexOf(q[0]) !== -1) variants.push(q.substring(1));
+    if (q[0] !== 'ה') variants.push('ה' + q);
+
+    function matches(text) {
+        text = text.toLowerCase();
+        for (var i = 0; i < variants.length; i++) {
+            if (text.indexOf(variants[i]) !== -1) return true;
+        }
+        return false;
+    }
+
+    function openParents(el) {
+        var node = el.parentElement;
+        while (node && node !== sidebar) {
+            if (node.classList && node.classList.contains('lib-cat-items')) {
+                node.classList.add('open');
+                var prev = node.previousElementSibling;
+                if (prev && prev.classList.contains('lib-cat-title')) prev.classList.add('open');
+            }
+            node = node.parentElement;
+        }
+    }
+
+    // Hide all links, close all categories
+    sidebar.querySelectorAll('a').forEach(function(a) { a.style.display = 'none'; });
+    sidebar.querySelectorAll('.lib-cat-items').forEach(function(i) { i.classList.remove('open'); });
+    sidebar.querySelectorAll('.lib-cat-title').forEach(function(t) { t.classList.remove('open'); });
+
+    // Find matching links
+    sidebar.querySelectorAll('a').forEach(function(a) {
+        if (matches(a.textContent)) {
+            a.style.display = '';
+            openParents(a);
+        }
+    });
+
+    // Find matching category titles — open them and show ALL children
+    sidebar.querySelectorAll('.lib-cat-title').forEach(function(t) {
+        if (matches(t.textContent)) {
+            t.classList.add('open');
+            var items = t.nextElementSibling;
+            if (items && items.classList.contains('lib-cat-items')) {
+                items.classList.add('open');
+                items.querySelectorAll('a').forEach(function(a) { a.style.display = ''; });
+                items.querySelectorAll('.lib-cat-items').forEach(function(i) { i.classList.add('open'); });
+                items.querySelectorAll('.lib-cat-title').forEach(function(tt) { tt.classList.add('open'); });
+            }
+            openParents(t);
+        }
+    });
+
+    // Hide categories that have no visible children
+    sidebar.querySelectorAll('.lib-cat').forEach(function(cat) {
+        var visibleLinks = cat.querySelectorAll('a[style=""], a:not([style])');
+        var hasVisible = false;
+        cat.querySelectorAll('a').forEach(function(a) {
+            if (a.style.display !== 'none') hasVisible = true;
+        });
+        // Also check if category title itself matched
+        var title = cat.querySelector(':scope > .lib-cat-title');
+        if (title && title.classList.contains('open')) hasVisible = true;
+
+        cat.style.display = hasVisible ? '' : 'none';
+    });
+}
+
+
 // Open a book
 async function openBook(book) {
     currentBook = book;
@@ -515,25 +598,60 @@ async function openBook(book) {
         var heTitle = data.heTitle || book;
         document.getElementById('navTitle').textContent = heTitle;
 
+        var firstRef = '';
         if (data.schema && data.schema.nodes) {
-            // Complex text (Talmud, Mishnah with chapters)
+            // Complex text (Talmud with masekhtot, Zohar, Tanya, Shulchan Arukh)
             data.schema.nodes.forEach(function(node) {
-                if (node.heTitle) {
-                    navHtml += '<a href="#" onclick="loadChapter(\'' + book + '.' + (node.key || node.title) + '\'); return false;">' + node.heTitle + '</a>';
+                var nodeTitle = node.heTitle || node.title || '';
+                if (!nodeTitle) return;
+
+                if (node.nodes) {
+                    // Two-level (like Tanya: Part > Chapters)
+                    navHtml += '<div style="margin-bottom:5px;"><strong style="color:#8a6b08; font-size:0.85em;">' + nodeTitle + '</strong></div>';
+                    node.nodes.forEach(function(sub) {
+                        var subTitle = sub.heTitle || sub.title || '';
+                        var ref = book + ',' + (sub.title || sub.key || '').replace(/ /g, '_') + '.1';
+                        if (subTitle) {
+                            navHtml += '<a href="#" onclick="loadChapter(\'' + ref.replace(/'/g, "\\'") + '\'); return false;">' + subTitle + '</a>';
+                            if (!firstRef) firstRef = ref;
+                        }
+                    });
+                } else if (node.nodeType === 'JaggedArrayNode' || node.depth) {
+                    // Section with chapters (like Mishneh Torah sections)
+                    var ref = book + ',' + (node.title || node.key || '').replace(/ /g, '_') + '.1';
+                    navHtml += '<a href="#" onclick="loadChapter(\'' + ref.replace(/'/g, "\\'") + '\'); return false;">' + nodeTitle + '</a>';
+                    if (!firstRef) firstRef = ref;
+                } else {
+                    // Simple node
+                    var ref = book + ',' + (node.title || node.key || '').replace(/ /g, '_');
+                    navHtml += '<a href="#" onclick="loadChapter(\'' + ref.replace(/'/g, "\\'") + '\'); return false;">' + nodeTitle + '</a>';
+                    if (!firstRef) firstRef = ref;
                 }
             });
         } else {
-            // Simple text (Torah - chapters)
-            var chapters = data.schema ? data.schema.lengths : [];
-            var numChapters = chapters.length > 0 ? chapters[0] : 50;
-            for (var i = 1; i <= numChapters; i++) {
-                navHtml += '<a href="#" onclick="loadChapter(\'' + book + '.' + i + '\'); return false;">פרק ' + i + '</a>';
+            // Simple text (Torah, Psalms - chapters)
+            var lengths = data.schema ? data.schema.lengths : [];
+            var numChapters = lengths.length > 0 ? lengths[0] : 50;
+            // Talmud uses daf notation (2a, 2b, 3a...)
+            var isTalmud = data.categories && data.categories.indexOf('Bavli') !== -1;
+            if (isTalmud) {
+                for (var i = 2; i <= Math.min(numChapters, 180); i++) {
+                    navHtml += '<a href="#" onclick="loadChapter(\'' + book + '.' + i + 'a\'); return false;">דף ' + i + ' ע"א</a>';
+                    navHtml += '<a href="#" onclick="loadChapter(\'' + book + '.' + i + 'b\'); return false;">דף ' + i + ' ע"ב</a>';
+                }
+                firstRef = book + '.2a';
+            } else {
+                for (var i = 1; i <= numChapters; i++) {
+                    navHtml += '<a href="#" onclick="loadChapter(\'' + book + '.' + i + '\'); return false;">פרק ' + i + '</a>';
+                }
+                firstRef = book + '.1';
             }
         }
         document.getElementById('navLinks').innerHTML = navHtml;
 
-        // Load first chapter
-        loadChapter(book + '.1');
+        // Load first section
+        if (firstRef) loadChapter(firstRef);
+        else loadChapter(book + '.1');
     } catch(e) {
         document.getElementById('textContent').innerHTML = '<div class="lib-loading">שגיאה בטעינה. נסה שוב.</div>';
     }
