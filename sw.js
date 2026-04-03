@@ -1,4 +1,4 @@
-var CACHE_NAME = 'tal-v114';
+var CACHE_NAME = 'tal-v115';
 var ASSETS = [
     './',
     'index.html',
@@ -44,6 +44,7 @@ var ASSETS = [
     'lies-en.html',
     'conspiracies.html',
     'conspiracies-en.html',
+    'library.html',
     'fact-cards-en.html',
     'october7-en.html',
     'antisemitism-en.html',

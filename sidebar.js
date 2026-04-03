@@ -66,6 +66,9 @@
             ['the-schism.html', 'הפילוג הגדול'],
             ['revolving-door.html', 'הדלת המסתובבת']
         ]},
+        { title: '📚 לימוד', links: [
+            ['library.html', 'ספרייה']
+        ]},
         { title: '🔧 כלים', links: [
             ['glossary.html', 'מילון מונחים'],
             ['action.html', 'מה אפשר לעשות?']
@@ -121,6 +124,9 @@
             ['sword-prayer-en.html', 'Sword & Prayer'],
             ['the-schism-en.html', 'The Great Schism'],
             ['revolving-door-en.html', 'The Revolving Door']
+        ]},
+        { title: '📚 Study', links: [
+            ['library.html', 'Library']
         ]},
         { title: '🔧 Tools', links: [
             ['glossary-en.html', 'Glossary'],

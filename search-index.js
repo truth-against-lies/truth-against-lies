@@ -2586,4 +2586,6 @@ var SEARCH_INDEX = [
     { title: "69 Conspiracies Debunked", url: "conspiracies-en.html", text: "conspiracies Protocols Rothschild Illuminati Freemasons Satan QAnon Soros debunked", page: "Conspiracies (EN)" },
     { title: "Israel Did 9/11 — Debunked", url: "conspiracies-en.html#con-b1", text: "Israel 9/11 Mossad conspiracy debunked false flag", page: "Conspiracies (EN)" },
     { title: "Jews Behind Everything — Debunked", url: "conspiracies-en.html#con-m1", text: "Jews behind communism capitalism wars revolution conspiracy debunked", page: "Conspiracies (EN)" },
+    { title: "ספרייה — ספרי קודש דיגיטליים", url: "library.html", text: "ספרייה תנך גמרא משנה זוהר רמבם קבלה חסידות הלכה שולחן ערוך תלמוד פירושים רשי", page: "ספרייה" },
+    { title: "Library — Digital Torah Library", url: "library.html", text: "library Torah Talmud Mishnah Zohar Rambam Kabbalah Chassidut Halacha study", page: "Library" },
 ];
