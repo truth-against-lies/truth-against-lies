@@ -258,8 +258,11 @@
 <!-- DAILY STUDY BAR -->
 <div class="lib-daily" id="dailyBar">
     <div class="lib-daily-item" id="dailyParasha">📖 <strong>פרשה:</strong> <span>טוען...</span></div>
+    <div class="lib-daily-item" id="dailyHaftara">📜 <strong>הפטרה:</strong> <span>טוען...</span></div>
     <div class="lib-daily-item" id="dailyDaf">📜 <strong>דף יומי:</strong> <span>טוען...</span></div>
     <div class="lib-daily-item" id="dailyMishna">📕 <strong>משנה יומית:</strong> <span>טוען...</span></div>
+    <div class="lib-daily-item" id="daily929">📗 <strong>929:</strong> <span>טוען...</span></div>
+    <div class="lib-daily-item" id="dailyRambam">⚖ <strong>רמב"ם יומי:</strong> <span>טוען...</span></div>
 </div>
 
 <!-- MAIN LAYOUT: SIDEBAR + CONTENT -->
@@ -444,9 +447,39 @@ async function loadDaily() {
         items.forEach(function(item) {
             var he = item.displayValue && item.displayValue.he ? item.displayValue.he : '';
             var title = item.title && item.title.he ? item.title.he : '';
-            if (title.includes('פרשת')) document.querySelector('#dailyParasha span').textContent = he;
-            if (title.includes('דף יומי')) document.querySelector('#dailyDaf span').textContent = he;
-            if (title.includes('משנה יומית')) document.querySelector('#dailyMishna span').textContent = he;
+            var enTitle = item.title && item.title.en ? item.title.en : '';
+            var ref = item.url ? item.url.replace('https://www.sefaria.org/', '') : '';
+
+            if (title.includes('פרשת') || enTitle.includes('Parashat')) {
+                var el = document.querySelector('#dailyParasha span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
+            if (title.includes('הפטרה') || enTitle.includes('Haftarah')) {
+                var el = document.querySelector('#dailyHaftara span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
+            if (title.includes('דף יומי') || enTitle.includes('Daf Yomi')) {
+                var el = document.querySelector('#dailyDaf span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
+            if (title.includes('משנה יומית') || enTitle.includes('Daily Mishnah')) {
+                var el = document.querySelector('#dailyMishna span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
+            if (enTitle.includes('929')) {
+                var el = document.querySelector('#daily929 span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
+            if (title.includes('רמב"ם') || enTitle.includes('Rambam')) {
+                var el = document.querySelector('#dailyRambam span');
+                el.textContent = he;
+                el.parentElement.onclick = function() { if(ref) loadChapter(decodeURIComponent(ref)); };
+            }
         });
     } catch(e) { console.log('Calendar error:', e); }
 }
