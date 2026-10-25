@@ -31,6 +31,8 @@
         { title: '📅 היסטוריה ותיעוד', links: [
             ['timeline.html', 'ציר זמן מלא'],
             ['october7.html', '7 באוקטובר'],
+            ['oct7-victims-memorial.html', '🕯 לזכר קורבנות 7.10'],
+            ['fallen-soldiers-memorial.html', '🕯 לזכר חללי המלחמה'],
             ['regions.html', 'שנאה לפי עמים'],
             ['stories.html', 'סיפורים אישיים'],
             ['gallery.html', 'תיעוד היסטורי'],
@@ -90,6 +92,8 @@
         { title: '📅 History & Documentation', links: [
             ['timeline-en.html', 'Full Timeline'],
             ['october7-en.html', 'October 7'],
+            ['oct7-victims-memorial-en.html', '🕯 Oct 7 Victims Memorial'],
+            ['fallen-soldiers-memorial-en.html', '🕯 Fallen Soldiers Memorial'],
             ['regions-en.html', 'Hatred by Nation'],
             ['stories-en.html', 'Personal Stories'],
             ['gallery-en.html', 'Historical Documentation'],

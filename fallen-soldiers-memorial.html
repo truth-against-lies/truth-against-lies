@@ -364,13 +364,23 @@
     <style>
         .mem-notice{background:rgba(226,183,20,0.12);border:1px solid rgba(226,183,20,0.35);border-radius:3px;padding:18px 22px;margin:0 0 30px;color:#6b5405;font-size:0.98em;line-height:1.7}
         .mem-notice a{color:#8a6b08;font-weight:bold}
-        .victim-list{list-style:none;padding:0;margin:14px 0 0}
-        .victim-list .victim{background:rgba(255,255,255,0.45);border-radius:3px;padding:12px 15px;margin-bottom:10px;border-inline-start:3px solid rgba(231,76,60,0.55)}
-        .victim-list .victim strong{color:#3a4a5a;font-size:1.05em}
-        .vrole{display:inline-block;margin-inline-start:8px;font-size:0.72em;color:#8a6b08;background:rgba(226,183,20,0.15);border-radius:3px;padding:2px 8px;vertical-align:middle}
-        .vnote{color:#555;font-size:0.88em;margin-top:5px}
-        .victim-list .victim .source{font-size:0.78em;margin-top:7px;padding-top:7px}
-        .victim-list .victim .source a{color:#666}
+        /* === FALLEN "WALL" — responsive card grid (photo or dignified candle) === */
+        .fallen-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin:16px 0 0}
+        .fallen-card{background:#E2DFD9;border-radius:3px;border-top:3px solid rgba(231,76,60,0.55);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+        .fallen-card:hover{border-color:#e2b714;transform:translateY(-3px)}
+        .fallen-photo-wrap{position:relative;width:100%;aspect-ratio:1/1;background:linear-gradient(180deg,rgba(74,106,138,0.12),rgba(226,183,20,0.08));display:flex;align-items:center;justify-content:center;overflow:hidden}
+        .fallen-photo-wrap img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+        .fallen-candle{font-size:3.6em;line-height:1}
+        .fallen-photo-credit{font-size:0.66em;color:#777;text-align:center;padding:5px 10px 0;font-style:italic}
+        .fallen-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
+        .fallen-name{color:#3a4a5a;font-size:1.08em;font-weight:bold;line-height:1.3}
+        .fallen-name .fallen-rank{color:#8a6b08}
+        .fallen-name .fallen-age{color:#777;font-weight:normal;font-size:0.9em}
+        .fallen-meta{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px}
+        .fallen-tag{font-size:0.72em;color:#8a6b08;background:rgba(226,183,20,0.15);border-radius:3px;padding:2px 8px}
+        .fallen-note{color:#555;font-size:0.88em;line-height:1.6;margin-top:10px}
+        .fallen-card .source{font-size:0.76em;margin-top:auto;padding-top:10px;color:#666;font-style:italic;border-top:1px solid rgba(0,0,0,0.08)}
+        .fallen-card .source a{color:#666}
     </style>
 </head>
 <body>
@@ -509,26 +519,47 @@
 (function(){
   var wrap=document.getElementById('fallen-list');
   if(!wrap || typeof FALLEN_SOLDIERS==='undefined') return;
-  var SRC='מקור: ', TOI='Times of Israel';
+  var SRC='מקור: ';
+  function hostLabel(url){ try{ return new URL(url).hostname.replace(/^www\./,''); }catch(e){ return 'מקור'; } }
   function makeSource(src){
     var d=document.createElement('div'); d.className='source';
     if(/^https?:\/\//.test(src)){
       var a=document.createElement('a'); a.href=src; a.target='_blank'; a.rel='noopener noreferrer';
-      a.textContent=TOI; d.appendChild(document.createTextNode(SRC)); d.appendChild(a);
+      a.textContent=hostLabel(src); d.appendChild(document.createTextNode(SRC)); d.appendChild(a);
     } else { d.textContent=SRC+src; }
     return d;
   }
-  var list=FALLEN_SOLDIERS.slice().sort(function(a,b){ return (a.name||'').localeCompare(b.name||''); });
-  var ul=document.createElement('ul'); ul.className='victim-list';
-  list.forEach(function(s){
-    var li=document.createElement('li'); li.className='victim'; li.setAttribute('dir','auto');
-    var nm=document.createElement('strong'); nm.textContent=(s.rank?s.rank+' ':'')+s.name+(s.age!=null?' ('+s.age+')':''); li.appendChild(nm);
-    if(s.unit){ var u=document.createElement('span'); u.className='vrole'; u.setAttribute('dir','auto'); u.textContent=s.unit; li.appendChild(u); }
-    if(s.note){ var nt=document.createElement('div'); nt.className='vnote'; nt.setAttribute('dir','auto'); nt.textContent=s.note; li.appendChild(nt); }
-    li.appendChild(makeSource(s.source));
-    ul.appendChild(li);
+  // Oldest-fallen first (chronological honor roll); fall back to name.
+  var list=FALLEN_SOLDIERS.slice().sort(function(a,b){
+    return (a.dateISO||'').localeCompare(b.dateISO||'') || (a.name||'').localeCompare(b.name||'');
   });
-  wrap.appendChild(ul);
+  var grid=document.createElement('div'); grid.className='fallen-grid';
+  list.forEach(function(s){
+    var card=document.createElement('div'); card.className='fallen-card'; card.setAttribute('dir','auto');
+    var pw=document.createElement('div'); pw.className='fallen-photo-wrap';
+    if(s.photo){
+      var img=document.createElement('img'); img.src=s.photo; img.alt=s.name||''; img.loading='lazy'; pw.appendChild(img);
+    } else {
+      var cnd=document.createElement('div'); cnd.className='fallen-candle'; cnd.setAttribute('aria-hidden','true'); cnd.textContent='🕯'; pw.appendChild(cnd);
+    }
+    card.appendChild(pw);
+    if(s.photo && s.photoCredit){ var pc=document.createElement('div'); pc.className='fallen-photo-credit'; pc.setAttribute('dir','auto'); pc.textContent=s.photoCredit; card.appendChild(pc); }
+    var body=document.createElement('div'); body.className='fallen-body';
+    var nm=document.createElement('div'); nm.className='fallen-name';
+    if(s.rank){ var r=document.createElement('span'); r.className='fallen-rank'; r.textContent=s.rank+' '; nm.appendChild(r); }
+    nm.appendChild(document.createTextNode(s.name||''));
+    if(s.age!=null){ var ag=document.createElement('span'); ag.className='fallen-age'; ag.textContent=' ('+s.age+')'; nm.appendChild(ag); }
+    body.appendChild(nm);
+    var meta=document.createElement('div'); meta.className='fallen-meta';
+    function tag(t){ if(!t) return; var e=document.createElement('span'); e.className='fallen-tag'; e.setAttribute('dir','auto'); e.textContent=t; meta.appendChild(e); }
+    tag(s.unit); tag(s.date); tag(s.hometown);
+    if(meta.childNodes.length) body.appendChild(meta);
+    if(s.note){ var nt=document.createElement('div'); nt.className='fallen-note'; nt.setAttribute('dir','auto'); nt.textContent=s.note; body.appendChild(nt); }
+    if(s.source) body.appendChild(makeSource(s.source));
+    card.appendChild(body);
+    grid.appendChild(card);
+  });
+  wrap.appendChild(grid);
 })();
 </script>
 
