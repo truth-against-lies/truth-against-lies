@@ -40,20 +40,26 @@
   function monthLabel(ym, he){ var p=ym.split('-'); var y=+p[0],m=+p[1]; return he ? (MONTHS_HE[m-1]+' '+y) : (MONTHS_EN[m-1]+' '+y); }
 
   // ---- branch / category derivation ----
+  // Order = priority (first match wins). Specific brigades before generic "infantry".
+  // Hebrew patterns use medial letter-forms (e.g. צנחנ matches צנחנים/הצנחנים).
   var BRANCHES=[
     ['borderpolice',/border|משמר הגבול|מג"ב|magav/i,            'Border Police','משמר הגבול'],
     ['golani',      /golani|גולני/i,                            'Golani','גולני'],
-    ['paratroopers',/paratroop|צנחן/i,                          'Paratroopers','צנחנים'],
+    ['paratroopers',/paratroop|צנחנ/i,                          'Paratroopers','צנחנים'],
     ['nahal',       /nahal|נח"ל|נחל/i,                          'Nahal','נח"ל'],
     ['givati',      /givati|גבעתי/i,                            'Givati','גבעתי'],
-    ['armored',     /armor|שריון|tank|טנק/i,                    'Armored Corps','שריון'],
+    ['armored',     /armor|שריון|tank|טנק|שיריון/i,             'Armored Corps','שריון'],
     ['commando',    /commando|קומנדו|maglan|מגלן/i,             'Commando','קומנדו'],
-    ['intelligence',/intelligence|observ|תצפית|איסוף|414/i,     'Intelligence','מודיעין'],
-    ['medical',     /medical|רפוא/i,                            'Medical Corps','חיל הרפואה'],
-    ['airforce',    /air\s*force|air\s*traffic|חיל האוויר|אווir|אוויר/i,'Air Force','חיל האוויר'],
+    ['intelligence',/intelligence|observ|תצפית|איסוף|מודיעין|414/i,'Intelligence','מודיעין'],
+    ['medical',     /medical|medic|רפוא|רופא|חובש|כירורג/i,      'Medical Corps','חיל הרפואה'],
+    ['airforce',    /air\s*force|air\s*traffic|חיל האוויר|אוויר/i,'Air Force','חיל האוויר'],
     ['homefront',   /home front|פיקוד העורף|חילוץ/i,            'Home Front','פיקוד העורף'],
-    ['engineering', /engineer|הנדס/i,                           'Engineering','הנדסה'],
-    ['artillery',   /artillery|תותחן|ארטילר/i,                  'Artillery','תותחנים']
+    ['engineering', /engineer|הנדס|חבלה/i,                       'Engineering','הנדסה'],
+    ['artillery',   /artillery|תותחנ|ארטילר/i,                  'Artillery','תותחנים'],
+    ['navy',        /\bnavy|naval|חיל הים|שייטת/i,              'Navy','חיל הים'],
+    ['logistics',   /logistic|לוגיסטי|אספקה/i,                  'Logistics','לוגיסטיקה'],
+    ['tech',        /technolog|maintenance|אחזקה|תחזוקה|טכנולוג|ציוד/i,'Technology & Maintenance','טכנולוגיה ואחזקה'],
+    ['infantry',    /infantry|חיל רגלים|חי"ר/i,                 'Infantry','חיל רגלים']
   ];
   function deriveBranch(txt){ var s=txt||''; for(var i=0;i<BRANCHES.length;i++){ if(BRANCHES[i][1].test(s)) return BRANCHES[i][0]; } return 'other'; }
   function branchLabel(key, he){ for(var i=0;i<BRANCHES.length;i++){ if(BRANCHES[i][0]===key) return he?BRANCHES[i][3]:BRANCHES[i][2]; } return he?'אחר':'Other'; }
