@@ -48,6 +48,7 @@
     ['paratroopers',/paratroop|צנחנ/i,                          'Paratroopers','צנחנים'],
     ['nahal',       /nahal|נח"ל|נחל/i,                          'Nahal','נח"ל'],
     ['givati',      /givati|גבעתי/i,                            'Givati','גבעתי'],
+    ['kfir',        /kfir|כפיר/i,                               'Kfir Brigade','כפיר'],
     ['armored',     /armor|שריון|tank|טנק|שיריון/i,             'Armored Corps','שריון'],
     ['commando',    /commando|קומנדו|maglan|מגלן/i,             'Commando','קומנדו'],
     ['intelligence',/intelligence|observ|תצפית|איסוף|מודיעין|414/i,'Intelligence','מודיעין'],
