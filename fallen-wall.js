@@ -115,7 +115,9 @@
       photo: photo, photoCredit: 'אתר יזכור — משרד הביטחון', photoAvailable: !!r.photo_available,
       source: r.source_url_en||'',
       gender: r.gender_label||'', genderFlag: r.gender_note||null,
-      pending: pending, enStoryThin: enBoiler
+      pending: pending, enStoryThin: enBoiler,
+      // full Hebrew bio lives in a lazy-loaded shard (fallen-stories/NN.json); EN stays blank per lock.
+      hasFullStory: he && !!r.has_full_story
     };
   }
 
@@ -155,6 +157,26 @@
   function el(tag, cls){ var e=document.createElement(tag); if(cls) e.className=cls; return e; }
   var CANDLE='🕯';
 
+  // ---- lazy, sharded full-story loader ----
+  // Full Hebrew bios are split into fallen-stories/NN.json by (legacy_id % STORY_SHARDS), fetched on
+  // demand when a visitor opens a story and cached per shard. Same-origin -> CSP connect-src 'self'.
+  var STORY_SHARDS=32;              // keep in lockstep with regen pipeline
+  var STORY_BASE='fallen-stories/';
+  var _shardCache={}, _shardPromise={};
+  function shardOf(legacyId){ var n=parseInt(legacyId,10); if(isNaN(n)) return null;
+    var id=((n%STORY_SHARDS)+STORY_SHARDS)%STORY_SHARDS; return (id<10?'0':'')+id; }
+  function loadStory(legacyId){
+    var sh=shardOf(legacyId);
+    if(sh===null || typeof fetch==='undefined') return Promise.reject(new Error('unavailable'));
+    if(_shardCache[sh]) return Promise.resolve(_shardCache[sh][legacyId]||null);
+    if(!_shardPromise[sh]){
+      _shardPromise[sh]=fetch(STORY_BASE+sh+'.json').then(function(res){
+        if(!res.ok) throw new Error('http '+res.status); return res.json();
+      }).then(function(j){ _shardCache[sh]=j||{}; return _shardCache[sh]; });
+    }
+    return _shardPromise[sh].then(function(map){ return map[legacyId]||null; });
+  }
+
   function buildCard(m, he){
     var card=el('div','fallen-card'); card.setAttribute('dir','auto');
     var pw=el('div','fallen-photo-wrap');
@@ -178,6 +200,25 @@
     tag(m.unit); tag(m.date); tag(m.hometown);
     if(meta.childNodes.length) body.appendChild(meta);
     if(m.story){ var nt=el('div','fallen-note'); nt.setAttribute('dir','auto'); nt.textContent=m.story; body.appendChild(nt); }
+    // lazy "read full story" — only for bulk souls whose Hebrew bio is longer than the excerpt
+    if(m.hasFullStory && m.legacyId){
+      var full=el('div','fallen-full'); full.setAttribute('dir','auto'); full.style.display='none';
+      var more=el('button','fallen-more'); more.type='button'; more.setAttribute('dir','auto');
+      var LBL_MORE=he?'קרא את הסיפור המלא':'Read full story', LBL_HIDE=he?'הצג פחות':'Show less';
+      more.textContent=LBL_MORE;
+      var loaded=false, loading=false;
+      more.addEventListener('click', function(){
+        if(full.style.display!=='none'){ full.style.display='none'; more.textContent=LBL_MORE; return; }
+        if(loaded){ full.style.display='block'; more.textContent=LBL_HIDE; return; }
+        if(loading) return; loading=true; more.textContent=he?'טוען…':'Loading…';
+        loadStory(m.legacyId).then(function(txt){
+          loading=false; loaded=true;
+          if(txt){ full.textContent=txt; full.style.display='block'; more.textContent=LBL_HIDE; }
+          else { more.textContent=LBL_MORE; loaded=false; } // nothing to show; let the izkor source link stand
+        }).catch(function(){ loading=false; more.style.display='none'; }); // fall back to the izkor source link below
+      });
+      body.appendChild(more); body.appendChild(full);
+    }
     if(m.source){ var sd=el('div','source');
       if(/^https?:\/\//.test(m.source)){ var a=el('a'); a.href=m.source; a.target='_blank'; a.rel='noopener noreferrer';
         try{ a.textContent=new URL(m.source).hostname.replace(/^www\./,''); }catch(e){ a.textContent=(he?'מקור':'source'); }
