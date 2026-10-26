@@ -381,6 +381,16 @@
         .fallen-note{color:#555;font-size:0.88em;line-height:1.6;margin-top:10px}
         .fallen-card .source{font-size:0.76em;margin-top:auto;padding-top:10px;color:#666;font-style:italic;border-top:1px solid rgba(0,0,0,0.08)}
         .fallen-card .source a{color:#666}
+        /* === WALL CONTROLS: search + filters + count === */
+        .fallen-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 2px}
+        .fallen-search{flex:1 1 240px;min-width:170px;padding:9px 12px;border:1px solid rgba(226,183,20,0.35);border-radius:3px;background:rgba(255,255,255,0.65);color:#3a4a5a;font-size:0.95em;font-family:inherit}
+        .fallen-search::placeholder{color:#8a8578}
+        .fallen-filter{padding:9px 10px;border:1px solid rgba(226,183,20,0.3);border-radius:3px;background:rgba(255,255,255,0.65);color:#3a4a5a;font-size:0.9em;font-family:inherit;cursor:pointer}
+        .fallen-search:focus,.fallen-filter:focus{outline:2px solid rgba(226,183,20,0.5);border-color:#e2b714}
+        .fallen-count{margin-inline-start:auto;color:#8a6b08;font-size:0.85em;font-family:monospace;white-space:nowrap;padding-inline-start:6px}
+        .fallen-empty{text-align:center;color:#666;padding:34px 10px;font-style:italic}
+        .fallen-sentinel{height:1px;width:100%}
+        @media (max-width:480px){ .fallen-search{flex-basis:100%} .fallen-count{margin-inline-start:0} }
     </style>
 </head>
 <body>
@@ -515,58 +525,10 @@
 <script>trackPageView('fallen-soldiers-memorial');</script>
 
 <script src="fallen-soldiers-data.js"></script>
-<script>
-(function(){
-  var wrap=document.getElementById('fallen-list');
-  if(!wrap || typeof FALLEN_SOLDIERS==='undefined') return;
-  var SRC='מקור: ';
-  function hostLabel(url){ try{ return new URL(url).hostname.replace(/^www\./,''); }catch(e){ return 'מקור'; } }
-  function makeSource(src){
-    var d=document.createElement('div'); d.className='source';
-    if(/^https?:\/\//.test(src)){
-      var a=document.createElement('a'); a.href=src; a.target='_blank'; a.rel='noopener noreferrer';
-      a.textContent=hostLabel(src); d.appendChild(document.createTextNode(SRC)); d.appendChild(a);
-    } else { d.textContent=SRC+src; }
-    return d;
-  }
-  // Oldest-fallen first (chronological honor roll); fall back to name.
-  var list=FALLEN_SOLDIERS.slice().sort(function(a,b){
-    return (a.dateISO||'').localeCompare(b.dateISO||'') || (a.name||'').localeCompare(b.name||'');
-  });
-  var grid=document.createElement('div'); grid.className='fallen-grid';
-  list.forEach(function(s){
-    var card=document.createElement('div'); card.className='fallen-card'; card.setAttribute('dir','auto');
-    var pw=document.createElement('div'); pw.className='fallen-photo-wrap';
-    function addCandle(){ var cnd=document.createElement('div'); cnd.className='fallen-candle'; cnd.setAttribute('aria-hidden','true'); cnd.textContent='🕯'; pw.appendChild(cnd); }
-    var creditEl=null;
-    if(s.photo){
-      var img=document.createElement('img'); img.src=s.photo; img.alt=s.name||''; img.loading='lazy';
-      // If the portrait file isn't present/loadable, degrade gracefully to a candle (and hide its credit).
-      img.onerror=function(){ if(img.parentNode) pw.removeChild(img); addCandle(); if(creditEl&&creditEl.parentNode) creditEl.parentNode.removeChild(creditEl); };
-      pw.appendChild(img);
-    } else {
-      addCandle();
-    }
-    card.appendChild(pw);
-    if(s.photo && s.photoCredit){ creditEl=document.createElement('div'); creditEl.className='fallen-photo-credit'; creditEl.setAttribute('dir','auto'); creditEl.textContent=s.photoCredit; card.appendChild(creditEl); }
-    var body=document.createElement('div'); body.className='fallen-body';
-    var nm=document.createElement('div'); nm.className='fallen-name';
-    if(s.rank){ var r=document.createElement('span'); r.className='fallen-rank'; r.textContent=s.rank+' '; nm.appendChild(r); }
-    nm.appendChild(document.createTextNode(s.name||''));
-    if(s.age!=null){ var ag=document.createElement('span'); ag.className='fallen-age'; ag.textContent=' ('+s.age+')'; nm.appendChild(ag); }
-    body.appendChild(nm);
-    var meta=document.createElement('div'); meta.className='fallen-meta';
-    function tag(t){ if(!t) return; var e=document.createElement('span'); e.className='fallen-tag'; e.setAttribute('dir','auto'); e.textContent=t; meta.appendChild(e); }
-    tag(s.unit); tag(s.date); tag(s.hometown);
-    if(meta.childNodes.length) body.appendChild(meta);
-    if(s.note){ var nt=document.createElement('div'); nt.className='fallen-note'; nt.setAttribute('dir','auto'); nt.textContent=s.note; body.appendChild(nt); }
-    if(s.source) body.appendChild(makeSource(s.source));
-    card.appendChild(body);
-    grid.appendChild(card);
-  });
-  wrap.appendChild(grid);
-})();
-</script>
+<!-- Phase 1: the izkor bulk manifest (optional). When present, fallen-wall.js merges it
+     with the curated souls above — dedupe by legacy_id, curated wins. -->
+<!-- <script src="fallen-manifest.js"></script> -->
+<script src="fallen-wall.js" defer></script>
 
 <script>
 window.addEventListener('scroll', function(){ var b=document.querySelector('.back-to-top'); if(window.scrollY>500) b.classList.add('visible'); else b.classList.remove('visible'); });
