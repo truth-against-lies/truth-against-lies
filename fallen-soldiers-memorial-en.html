@@ -540,13 +540,18 @@
   list.forEach(function(s){
     var card=document.createElement('div'); card.className='fallen-card'; card.setAttribute('dir','auto');
     var pw=document.createElement('div'); pw.className='fallen-photo-wrap';
+    function addCandle(){ var cnd=document.createElement('div'); cnd.className='fallen-candle'; cnd.setAttribute('aria-hidden','true'); cnd.textContent='🕯'; pw.appendChild(cnd); }
+    var creditEl=null;
     if(s.photo){
-      var img=document.createElement('img'); img.src=s.photo; img.alt=s.name||''; img.loading='lazy'; pw.appendChild(img);
+      var img=document.createElement('img'); img.src=s.photo; img.alt=s.name||''; img.loading='lazy';
+      // If the portrait file isn't present/loadable, degrade gracefully to a candle (and hide its credit).
+      img.onerror=function(){ if(img.parentNode) pw.removeChild(img); addCandle(); if(creditEl&&creditEl.parentNode) creditEl.parentNode.removeChild(creditEl); };
+      pw.appendChild(img);
     } else {
-      var cnd=document.createElement('div'); cnd.className='fallen-candle'; cnd.setAttribute('aria-hidden','true'); cnd.textContent='🕯'; pw.appendChild(cnd);
+      addCandle();
     }
     card.appendChild(pw);
-    if(s.photo && s.photoCredit){ var pc=document.createElement('div'); pc.className='fallen-photo-credit'; pc.setAttribute('dir','auto'); pc.textContent=s.photoCredit; card.appendChild(pc); }
+    if(s.photo && s.photoCredit){ creditEl=document.createElement('div'); creditEl.className='fallen-photo-credit'; creditEl.setAttribute('dir','auto'); creditEl.textContent=s.photoCredit; card.appendChild(creditEl); }
     var body=document.createElement('div'); body.className='fallen-body';
     var nm=document.createElement('div'); nm.className='fallen-name';
     if(s.rank){ var r=document.createElement('span'); r.className='fallen-rank'; r.textContent=s.rank+' '; nm.appendChild(r); }
